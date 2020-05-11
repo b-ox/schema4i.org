@@ -1,0 +1,19 @@
+{
+    "name": "@box/schema.b-ox.org",
+    "version": "1.0.0",
+    "description": "Semantic Data Model for Insurances",
+    "private": true,
+    "scripts": {
+        "build": "echo no build script configured!",
+    },
+    "keywords": [
+        "semantic",
+        "data",
+        "model",
+        "schema",
+        "json-ld"
+    ],
+    "author": "b-tix GmbH",
+    "dependencies": {},
+    "devDependencies": {}
+}
