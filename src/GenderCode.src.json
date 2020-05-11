@@ -1,0 +1,71 @@
+{
+    "type": "GenderCode",
+    "uri": "http://schema.b-ox.org/GenderCode",
+    "description": "The code represents the gender of a contact, e.g. 1 = male.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumGenderCode.jsonld",
+        "description": "Enumeration with keys and values"
+    }, {
+        "url": "http://schema.b-ox.org/EnumGenderCode_DE.jsonld",
+        "description": "German key translation of GenderCode"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Person#GenderCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "GenderCode": {
+                "@id": "box:GenderCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumGenderCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Gender code for the person is female.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "GenderCode": "2"
+        },
+        "context": {}
+    }, {
+        "title": "Gender code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "GenderCode": "2"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Gender": {
+                    "@id": "box:GenderCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumGenderCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Gender code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "GenderCode": "2"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Geschlecht": {
+                    "@id": "box:GenderCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumGenderCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

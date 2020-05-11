@@ -1,0 +1,29 @@
+{
+    "type": "BrokerIDSubAgent",
+    "uri": "http://schema.b-ox.org/BrokerIDSubAgent",
+    "description": "Identification of a sub agent of the insurance broker, e.g. NV10. Usually this is the internal registration number of a broker within the company or in case of pooling business the ID of the agent of the Pool.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#BrokerIDSubAgent"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "BrokerIDSubAgent": {
+                "@id": "box:BrokerIDSubAgent",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BrokerID of the sub agent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "BrokerIDSubAgent": "NV10"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,28 @@
+{
+    "type": "ReminderDate",
+    "uri": "http://schema.b-ox.org/ReminderDate",
+    "description": "Indicates the date of a reminder like payment reminder, e.g. 2020-01-01.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Payment#ReminderDate"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "schema": "http://schema.org/",
+            "ReminderDate": {
+                "@id": "box:ReminderDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ReminderDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ReminderDate": "2020-01-01"
+        },
+        "context": {}
+    }]
+}

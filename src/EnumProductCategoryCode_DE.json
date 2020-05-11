@@ -1,0 +1,2769 @@
+[{
+        "ID": "JAGD-SNOOPR",
+        "Bezeichnung": "Jagdhaftpflichtversicherung",
+        "Kurzbezeichnung": "Jagdhaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "PHV-SNOOPR",
+        "Bezeichnung": "Privathaftpflichtversicherung",
+        "Kurzbezeichnung": "Privathaftpflicht",
+        "HatLeistungen": true,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "haftpflicht",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Privathaftpflichtversicherung</h1><p>Sie ist eine der wichtigsten Versicherungen überhaupt. Die private Haftpflichtversicherung bezahlt Schäden, die du anderen schuldhaft zugefügt hast. Sie hilft dir auch, wenn jemand unberechtigt Schadenersatz von dir verlangt.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du stößt mit deinem Fahrrad gegen ein Auto und zerkratzt den Lack. Diesen Schaden zahlt deine Haftpflichtversicherung für dich.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Jemand läuft dir unachtsam ins Fahrrad. Dabei geht sein Handy kaputt und er will, dass du es bezahlst. Deine Haftpflichtversicherung lehnt das notfalls gerichtlich für dich ab.</li></ul><div></div></div>",
+        "Leistungen": [{
+                "Titel": "Allgemein",
+                "Fakten": {
+                    "PHV_ALLG_AL": {
+                        "Text": "Prämienbefreiung bei Arbeitslosigkeit",
+                        "Hilfe": ""
+                    },
+                    "PHV_ALLG_REGRESS": {
+                        "Text": "Regressansprüche von Sozialversicherungsträgern",
+                        "Hilfe": "Durch deine Schuld passiert einer deiner mitversicherten Personen etwas. Die Krankenkasse will das Geld für die Behandlung von dir zurück haben."
+                    },
+                    "PHV_ALLG_VV_PERSON": {
+                        "Text": "Vorsorgeversicherung (Personen- und Sachschäden)",
+                        "Hilfe": "Aufgrund einer wechselnden Lebenssituation kommen neue Risiken zu deiner Versicherung hinzu. Falls du vergisst, deinen Versicherer zu informieren, deckt die Vorsorgeversicherung diese neuen Risiken ab."
+                    },
+                    "PHV_ALLG_GDV_MUSTER": {
+                        "Text": "Leistungsgarantie nach GDV-Musterbedingungen",
+                        "Hilfe": "Der Gesamtverband der Versicherungswirtschaft (GDV) erstellt für Versicherungen empfohlene Bedingungen. Der Versicherer bestätigt, dass diese Bedingungen im Versicherungsschutz enthalten sind."
+                    },
+                    "PHV_ALLG_VERBESSERUNG": {
+                        "Text": "Künftige Leistungsverbesserungen gelten automatisch",
+                        "Hilfe": "Verbessert der Versicherer in Zukunft die Leistungen des gewählten Tarifs, so gelten diese Verbesserungen automatisch auch für Ihren Versicherungsschutz."
+                    },
+                    "PHV_ALLG_VV_VERMOEGEN": {
+                        "Text": "Vorsorgeversicherung (Vermögensschäden)",
+                        "Hilfe": "Aufgrund einer wechselnden Lebenssituation kommen neue Risiken zu deiner Versicherung hinzu. Falls du vergisst, deinen Versicherer zu informieren, deckt die Vorsorgeversicherung diese neuen Risiken ab."
+                    }
+                }
+            },
+            {
+                "Titel": "Versicherte Personen",
+                "Fakten": {
+                    "PHV_VP_VN": {
+                        "Text": "Versicherungsnehmer",
+                        "Hilfe": ""
+                    },
+                    "PHV_VP_ALLEIN": {
+                        "Text": "Alleinstehendes Elternteil im Haushalt",
+                        "Hilfe": "Alleinstehende Eltern oder Großeltern aus dem gleichen Haushalt können mitversichert werden"
+                    },
+                    "PHV_VP_PERSONAL": {
+                        "Text": "Hausangestellte im Rahmen ihrer Tätigkeit (Schäden an Dritten)",
+                        "Hilfe": ""
+                    },
+                    "PHV_VP_KINDER_VOLL": {
+                        "Text": "Kinder volljährig, unverheiratet während ihrer Ausbildung",
+                        "Hilfe": ""
+                    },
+                    "PHV_VP_KINDER_MINDER": {
+                        "Text": "Kinder minderjährig, unverheiratet (Stief-, Adoptiv- und Pflegekinder)",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Mitversicherte Tätigkeiten",
+                "Fakten": {
+                    "PHV_TAETIG_JOB": {
+                        "Text": "Betriebspraktika, Ferienjobs",
+                        "Hilfe": ""
+                    },
+                    "PHV_TAETIG_KFZ": {
+                        "Text": "Be- und Entladeschäden an fremden Kfz",
+                        "Hilfe": ""
+                    },
+                    "PHV_TAETIG_BABY": {
+                        "Text": "Tätigkeiten als Tagesmutter/-vater bzw. Babysitter",
+                        "Hilfe": ""
+                    },
+                    "PHV_TAETIG_LABOR": {
+                        "Text": "Fachpraktischer Unterricht (Laborarbeiten) ",
+                        "Hilfe": ""
+                    },
+                    "PHV_TAETIG_SELBST": {
+                        "Text": "Selbstständige, nebenberufliche Tätigkeit",
+                        "Hilfe": ""
+                    },
+                    "PHV_TAETIG_EHRENAMT": {
+                        "Text": "Ehrenamtliche Tätigkeiten",
+                        "Hilfe": ""
+                    },
+                    "PHV_TAETIG_GEFALLEN": {
+                        "Text": "Unbezahlte Hilfeleistung (Gefälligkeitsdienste)",
+                        "Hilfe": "Du hilfst einem Freund beim Umzug, ohne dafür bezahlt zu werden. Dabei beschädigst du einen Glastisch. Der Schaden ist hierüber abgedeckt."
+                    }
+                }
+            },
+            {
+                "Titel": "Ausfalldeckung",
+                "Fakten": {
+                    "PHV_AUSFALL_RS": {
+                        "Text": "Rechtsschutz zur Geltendmachung des Anspruchs",
+                        "Hilfe": "Um einen Forderungsausfall geltend zu machen, sind manchmal rechtliche Schritte notwendig. Ist die Rechtsschutz eingeschlossen, zahlt die Versicherung die rechtliche Erstreitung."
+                    },
+                    "PHV_AUSFALL_FORDERUNG": {
+                        "Text": "Ausfalldeckung/Forderungsausfall",
+                        "Hilfe": "Ein Dritter fügt dir einen Schaden zu. Der Täter kann den Schaden nicht bezahlen. Hast du den Forderungsausfall eingeschlossen, zahlt deine Versicherung die Kosten."
+                    }
+                }
+            },
+            {
+                "Titel": "Geliehene Sachen & fremde Schlüssel",
+                "Fakten": {
+                    "PHV_SCHLUESSEL_LEIH": {
+                        "Text": "Schäden an geliehenen und gemieteten Sachen ",
+                        "Hilfe": ""
+                    },
+                    "PHV_SCHLUESSEL_BERUF": {
+                        "Text": "Schlüsselverlust im Beruf (z. B. Schule)",
+                        "Hilfe": ""
+                    },
+                    "PHV_SCHLUESSEL_EHRENAMT": {
+                        "Text": "Schlüsselverlust im Ehrenamt (z. B. Sportstätten)",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Freizeit & Hobby",
+                "Fakten": {
+                    "PHV_HOBBY_KITE": {
+                        "Text": "Kite-Sport",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_SPORT": {
+                        "Text": "Fußball, Fahrrad, Ski und weitere Sportarten",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_MODELL": {
+                        "Text": "Steuern von Modellfahrzeugen (Land & Wasser)",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_WAFFEN": {
+                        "Text": "Waffen, privater Besitz ohne Jagd",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_SCHLAUCHBOOT": {
+                        "Text": "Fahren von Schlauchbooten und anderen Wasserfahrzeugen ohne Motor",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_SEGELN_EIGEN": {
+                        "Text": "Segeln mit eigenem Boot",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_SEGELN_FREMD": {
+                        "Text": "Segeln im geliehenen Boot",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_SURFEN_EIGEN": {
+                        "Text": "Surfen mit eigenem Brett",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_SURFEN_FREMD": {
+                        "Text": "Surfen mit geliehenem Brett",
+                        "Hobby": ""
+                    },
+                    "PHV_HOBBY_FLUG_MIT_MOTOR": {
+                        "Text": "Steuern von Flugmodellen mit Motor (z. B. Drohnen)",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_FLUG_OHNE_MOTOR": {
+                        "Text": "Steuern von Flugmodellen ohne Motor (z. B. Drachen)",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_MOTORBOOT_EIGEN": {
+                        "Text": "Motorboot fahren im eigenen Boot",
+                        "Hilfe": ""
+                    },
+                    "PHV_HOBBY_MOTORBOOT_FREMD": {
+                        "Text": "Motorboot fahren im fremden Boot",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Mieter-Schutz",
+                "Fakten": {
+                    "PHV_MIETER_RAUM": {
+                        "Text": "Schäden an gemieteten Räumen",
+                        "Hilfe": ""
+                    },
+                    "PHV_MIETER_GEBAEUDE": {
+                        "Text": "Schäden an gemieteten Gebäuden",
+                        "Hilfe": ""
+                    },
+                    "PHV_MIETER_SCHLUESSEL": {
+                        "Text": "Schlüsselverlust Mietwohnung/-haus",
+                        "Hilfe": ""
+                    },
+                    "PHV_MIETER_ALLMAEHLICH": {
+                        "Text": "Allmählichkeitsschäden",
+                        "Hilfe": "Sachschäden, die durch Einwirkung von Feuchtigkeit/Flüssigkeiten, Niederschlag, Dämpfen, Gasen oder Temperatur über einen längeren Zeitraum hinweg entstehen (z. B. Schimmel)."
+                    },
+                    "PHV_MIETER_EINRICHTUNG": {
+                        "Text": "Schäden an gemieteter Einrichtung (z. B. in Hotels)",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Eigentümer-Schutz",
+                "Fakten": {
+                    "PHV_EIGENTUM_HAUS": {
+                        "Text": "Selbst genutztes Einfamilienhaus oder Wohnung",
+                        "Hilfe": ""
+                    },
+                    "PHV_EIGENTUM_TANK": {
+                        "Text": "Heizöltanks/Gebinde",
+                        "Hilfe": ""
+                    },
+                    "PHV_EIGENTUM_GRUND": {
+                        "Text": "Unbebautes Grundstück",
+                        "Hilfe": ""
+                    },
+                    "PHV_EIGENTUM_SOLAR": {
+                        "Text": "Betrieb einer Photovoltaikanlage",
+                        "Hilfe": ""
+                    },
+                    "PHV_EIGENTUM_BAUHHER": {
+                        "Text": "Bauherrenrisiko",
+                        "Hilfe": "Wenn du dein Eigenheim umbaust und Schäden bei diesem Umbau entstehen, zahlt die Bauherrenrisiko die entstehenden Kosten."
+                    }
+                }
+            },
+            {
+                "Titel": "Vermieter-Schutz",
+                "Fakten": {
+                    "PHV_VERMIETER_WOHNUNG": {
+                        "Text": "Vermietung einer Wohnung",
+                        "Hilfe": ""
+                    },
+                    "PHV_VERMIETER_FERIENHAUS_INL": {
+                        "Text": "Vermietung eines Ferienhauses in Deutschland",
+                        "Hilfe": ""
+                    },
+                    "PHV_VERMIETER_FERIENHAUS_AUSL": {
+                        "Text": "Vermietung eines Ferienhauses im Ausland",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Zusatzschutz Immobilien & Wohnung",
+                "Fakten": {
+                    "PHV_IMMO_ABWASSER": {
+                        "Text": "Häusliche Abwässer",
+                        "Hilfe": ""
+                    },
+                    "PHV_IMMO_SUBSTANZ": {
+                        "Text": "Lagerung gewässerschädigender Substanzen",
+                        "Hilfe": "Dazu zählen u. a. Farben oder Verdünnungsmittel, die das Grundwasser verunreinigen."
+                    }
+                }
+            },
+            {
+                "Titel": "Schäden durch Internetnutzung",
+                "Fakten": {
+                    "PHV_NET_EUROPA": {
+                        "Text": "In Europa geltend gemachte Schäden",
+                        "Hilfe": "Schäden durch Internetnutzung oder elektronischen Datenaustausch in Europa"
+                    },
+                    "PHV_NET_NICHT_EUROPA": {
+                        "Text": "Außerhalb Europa geltend gemachte Schäden",
+                        "Hilfe": "Schäden durch Internetnutzung oder elektronischen Datenaustausch außerhalb Europas"
+                    }
+                }
+            },
+            {
+                "Titel": "Tiere",
+                "Fakten": {
+                    "PHV_TIER_HUND": {
+                        "Text": "Hüten fremder Hunde",
+                        "Hilfe": ""
+                    },
+                    "PHV_TIER_ZAHM": {
+                        "Text": "Haltung zahmer Haustiere (z. B. Vögel oder Katzen, keine Hunde)",
+                        "Hilfe": ""
+                    },
+                    "PHV_TIER_BLIND": {
+                        "Text": "Blindenbegleithunde",
+                        "Hilfe": ""
+                    },
+                    "PHV_TIER_KLEIN": {
+                        "Text": "Erlaubte Haltung wilder Kleintiere (z. B. Spinnen, Skorpione, Schlangen)",
+                        "Hilfe": ""
+                    },
+                    "PHV_TIER_PFERD": {
+                        "Text": "Hüten fremder Pferde",
+                        "Hilfe": ""
+                    },
+                    "PHV_TIER_REITEN": {
+                        "Text": "Reiten fremder Pferde und Kutschfahrten",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Auslandsaufenthalte",
+                "Fakten": {
+                    "PHV_AUSL_WELT": {
+                        "Text": "weltweit versichert",
+                        "Hilfe": ""
+                    },
+                    "PHV_AUSL_MALLE": {
+                        "Text": "Mallorca-Deckung",
+                        "Hilfe": "Führen geliehener Kfz im europäischen Ausland"
+                    },
+                    "PHV_AUSL_EUROPA": {
+                        "Text": "europaweit versichert",
+                        "Hilfe": ""
+                    }
+                }
+            }
+        ],
+        "Produktvarianten": [
+            "D-QPL2-UZMX0-61.PHV.Prestige",
+            "D-JWNS-F5XWB-75.PHV.Zweiraeder",
+            "D-JWNS-F5XWB-75.PHV.Single",
+            "D-JWNS-F5XWB-75.PHV.Schluessel",
+            "D-JWNS-F5XWB-75.PHV.PrimaPlusSorglos",
+            "D-JWNS-F5XWB-75.PHV.Immobilien",
+            "D-JWNS-F5XWB-75.PHV.Flugmodelle",
+            "D-JWNS-F5XWB-75.PHV.Familie",
+            "5512.PHV.Premium",
+            "5384.PHV.KomfortPlusDrohne",
+            "5121.PHV.Opferhilfe",
+            "5121.PHV.Neuwert",
+            "1047.IPH.Exklusiv",
+            "1013.PHV.Prestige",
+            "1013.PHV.Familie",
+            "5340.PHV.XXLMitForderungsausfall",
+            "1047.IPH.Klassik",
+            "5374.PHV.Gut",
+            "5515.PHV.KomfortPremiumVermietung",
+            "5515.PHV.KomfortVermietung",
+            "5515.PHV.KomfortPremium",
+            "5384.PHV.Komfort",
+            "5311.PHV.Komfort",
+            "5374.PHV.Besser",
+            "5384.PHV.KomfortPlus",
+            "5340.PHV.XLMitForderungsausfall",
+            "5374.PHV.BesserPlus",
+            "5340.PHV.XLOhneForderungsausfall",
+            "5374.PHV.Komplett",
+            "5374.PHV.BesserBlindenHunde",
+            "5311.PHV.KomfortSicherheitsdienst",
+            "5340.PHV.XLOhneForderungsausfallGaertner",
+            "1047.IPH.KlassikEhrenamt",
+            "5311.PHV.KomfortLehrer"
+        ],
+        "MediaSet": "SNOOPR.PHV-SNOOPR"
+    },
+    {
+        "ID": "HUNDE-SNOOPR",
+        "Bezeichnung": "Hundehaftpflichtversicherung",
+        "Kurzbezeichnung": "Hundehaftpflicht",
+        "HatLeistungen": true,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "2",
+        "Controller": "hundehalterhaftpflicht",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Hundehalterhaftpflichtversicherung</h1><p>Ganz egal, ob kleiner Mops oder großer Bernhardiner. Du haftest für jeden Schaden, den dein Vierbeiner anderen zufügt. Dabei spielt es keine Rolle, ob du selbst Schuld hast. Die Hundehalterhaftpflichtversicherung ist damit eine der wichtigsten Versicherungen überhaupt. Sie zahlt die Schäden durch deinen Hund, die in deiner privaten Haftpflichtversicherung nicht mitversichert sind. Außerdem lehnt sie unberechtigte Schadenersatzansprüche Dritter - notfalls gerichtlich - für dich ab.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Dein Hund läuft plötzlich über die Straße. Ein heranfahrendes Auto muss bremsen und verursacht einen Auffahrunfall. Für diesen Schaden musst du haften, obwohl du selbst vielleicht keine Schuld daran hattest. Deine Hundehalterhaftpflichtversicherung übernimmt den Schaden für dich.</li></ul><div></div></div>",
+        "Leistungen": [{
+                "Titel": "Allgemein",
+                "Fakten": {
+                    "HUNDE_ALLG_MIETSCHAEDEN_GEBAEUDE": {
+                        "Text": "Mietsachschäden an Gebäuden",
+                        "Hilfe": "Mietsachschäden an Gebäuden umfassen alle Schäden an Räumlichkeiten, die du gemietet hast. Das kann beispielsweise die Tür einer Ferienwohnung sein, die dein Hund zerkratzt hat."
+                    },
+                    "HUNDE_ALLG_MIETSCHAEDEN_EINRICHTUNGEN": {
+                        "Text": "Mietsachschäden an Einrichtungen",
+                        "Hilfe": "Mietsachschäden an Einrichtungen umfassen alle Schäden an Möbeln in gemieteten Räumlichkeiten. Das sind insbesondere Objekte, die nicht fest zum Raum gehören - etwa ein Sofa, das dein Hund zerbissen hat."
+                    }
+                }
+            },
+            {
+                "Titel": "Forderungsausfall",
+                "Fakten": {
+                    "HUNDE_FORDERUNGSAUSFALL_RECHTSSCHUTZ": {
+                        "Text": "Rechtsschutz zur Ausfalldeckung",
+                        "Hilfe": "Eine Ausfalldeckung greift erst, wenn sämtliche Rechtsmittel ausgeschöpft sind. Hast du keine Rechtsschutzversicherung, empfiehlt sich eine Rechtsschutzversicherung zur Ausfalldeckung."
+                    },
+                    "HUNDE_FORDERUNGSAUSFALL_AUSFALLDECKUNG": {
+                        "Text": "Ausfalldeckung",
+                        "Hilfe": "Beim Einschluss einer Ausfalldeckung übernimmt der Versicherer Schäden, wenn dessen Verursacher dafür finanziell nicht aufkommen kann."
+                    }
+                }
+            },
+            {
+                "Titel": "Versicherte Personen",
+                "Fakten": {
+                    "HUNDE_VP_VN": {
+                        "Text": "Hundehalter und Familienangehörige",
+                        "Hilfe": "Zum versicherten Personenkreis zählst sowohl du selbst als auch deine Familienangehörigen."
+                    },
+                    "HUNDE_VP_DRITTE": {
+                        "Text": "Hüten durch dritte Personen (nicht gewerbsmäßig)",
+                        "Hilfe": "Die Versicherung haftet auch dann für Schäden, die dein Hund anrichtet, wenn er nicht von dir, sondern einem Freund oder Bekannten beaufsichtigt wird."
+                    }
+                }
+            },
+            {
+                "Titel": "Versicherte Aktivitäten",
+                "Fakten": {
+                    "HUNDE_AKTIVITAETEN_LEINE": {
+                        "Text": "Führen ohne Leine",
+                        "Hilfe": "Die meisten Versicherer haften auch für Schäden, die dein Hund verursacht, während er keine Leine trägt."
+                    },
+                    "HUNDE_AKTIVITAETEN_DECKAKT": {
+                        "Text": "Ungewollter Deckakt",
+                        "Hilfe": "Die Versicherung haftet für Schäden, die entstehen, indem dein Hund einen anderen Hund unbeabsichtigter Weise deckt."
+                    },
+                    "HUNDE_AKTIVITAETEN_TURNIERE": {
+                        "Text": "Turniere",
+                        "Hilfe": "Die Versicherung haftet für Schäden, die dein Hund als Teilnehmer an einem Turnier verursacht."
+                    },
+                    "HUNDE_AKTIVITAETEN_HUNDESCHULE": {
+                        "Text": "Besuch Hundeschule",
+                        "Hilfe": "Bei diesem Einschluss haftet der Versicherer auch für Schäden, die dein Hund während des Besuchs einer Hundeschule verursacht."
+                    },
+                    "HUNDE_AKTIVITAETEN_VORFUERHUNGEN": {
+                        "Text": "Schauvorführungen",
+                        "Hilfe": "Die Versicherung haftet für Schäden, die dein Hund während einer Vorführung verursacht"
+                    },
+                    "HUNDE_AKTIVITAETEN_AUSLAND_EUROPA": {
+                        "Text": "Auslandsaufenthalt Europa",
+                        "Hilfe": "Der Versicherungsschutz gilt auch für Schäden im europäischen Ausland. Die Dauer des Auslandsaufenthalts ist aber oft begrenzt."
+                    },
+                    "HUNDE_AKTIVITAETEN_AUSSCHEIDUNGEN": {
+                        "Text": "Tierische Ausscheidungen",
+                        "Hilfe": "Die Versicherung haftet für Schäden, die durch Ausscheidungen deines Hundes entstehen."
+                    },
+                    "HUNDE_AKTIVITAETEN_AUSLAND_WELTWEIT": {
+                        "Text": "Auslandsaufenthalt weltweit",
+                        "Hilfe": "Der Versicherungsschutz gilt auch für Schäden im außereuropäischen Ausland wie z.B. den USA. Die Dauer des Auslandsaufenthalts ist aber oft begrenzt."
+                    }
+                }
+            },
+            {
+                "Titel": "Vertrags- und Serviceleistungen",
+                "Fakten": {
+                    "HUNDE_TAETIG_BESTMOEGLICH": {
+                        "Text": "Bestmögliche Leistungen",
+                        "Hilfe": "Sollte eine andere Versicherung in Deutschland zum Zeitpunkt des Schadens nachweislich bessere Leistungen bieten, gelten diese automatisch auch für dich - allerdings nur bis zur maximalen Versicherungssumme des von dir abgeschlossenen Tarifs."
+                    }
+                }
+            }
+        ],
+        "Produktvarianten": [
+            "5512.THV.HundeRundumSorglos",
+            "1047.IHH.ExlusivNachbarn",
+            "1047.IHH.Exlusiv",
+            "1047.IHH.Klassik",
+            "5515.THV.HundeKomfort",
+            "5384.THV.Hunde",
+            "5374.THV.HundeStandard",
+            "5374.THV.HundeStandardRS",
+            "5311.THV.HundeKomfortBoxFlex"
+        ],
+        "MediaSet": "SNOOPR.HUNDE-SNOOPR"
+    },
+    {
+        "ID": "THV-SNOOPR",
+        "Bezeichnung": "Tierhalterhaftpflichtversicherung",
+        "Kurzbezeichnung": "Tierhalterhaftung",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "2",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "HUG-SNOOPR",
+        "Bezeichnung": "Haus- / Grundbesitzerhaftpflichtversicherung",
+        "Kurzbezeichnung": "Haus- / Grundbesitzerhaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "3",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5121.HUG.Normal"
+        ]
+    },
+    {
+        "ID": "PFERDE-SNOOPR",
+        "Bezeichnung": "Pferdehaftpflichtversicherung",
+        "Kurzbezeichnung": "Pferdehaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "3",
+        "Controller": "pferdehalterhaftpflicht",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Pferdehalterhaftpflichtversicherung</h1><p>Ganz egal, ob Pony oder ausgewachsener Hengst. Du haftest für jeden Schaden, den dein Reittier anderen zufügt. Dabei spielt es keine Rolle, ob du selbst Schuld hast. Die Pferdehalterhaftpflichtversicherung ist damit eine der wichtigsten Versicherungen überhaupt. Sie zahlt die Schäden durch dein Pferd, die in deiner privaten Haftpflichtversicherung nicht mitversichert sind. Außerdem lehnt sie unberechtigte Schadenersatzansprüche Dritter - notfalls gerichtlich - für dich ab.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du reitest aus. Plötzlich scheut dein Pferd, weil es Angst vor einem lauten Geräusch hat. Dabei berührt es ein geparktes Auto und verbeult die Tür. Für diesen Schaden musst du haften, obwohl du selbst eigentlich keine Schuld daran hast. Deine Pferdehalterhaftpflichtversicherung übernimmt den Schaden für dich.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5512.THV.PferdeRundumSorglos",
+            "5311.THV.PferdKomfortBoxflex",
+            "5515.THV.PferdKomfort",
+            "5384.THV.Pferd",
+            "5374.THV.PferdStandard",
+            "5374.THV.PferdStandardRS",
+            "5384.THV.TurnierPferd"
+        ],
+        "MediaSet": "SNOOPR.PFERDE-SNOOPR"
+    },
+    {
+        "ID": "BAUHERREN-SNOOPR",
+        "Bezeichnung": "Bauherrenhaftpflichtversicherung",
+        "Kurzbezeichnung": "Bauherrenhaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "4",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5121.BAUHERREN.Normal"
+        ]
+    },
+    {
+        "ID": "RS-SNOOPR",
+        "Bezeichnung": "Rechtsschutzversicherung",
+        "Kurzbezeichnung": "Rechtsschutz",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAFTUNG-SNOOPR",
+        "ProduktgruppenSortierung": "4",
+        "Controller": "rechtsschutz",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Für dein gutes Recht</h1><p>Streit und Missverstände gibt es in allen Lebenslagen. Die Rechtsschutzversicherung deckt Kosten, die bei juristischen Streitigkeiten entstehen. Dazu zählen Anwalts- und Gutachterhonorare oder auch Gerichtskosten. Auch für den Fall, dass du einen Prozess verlierst, zahlt deine Rechtsschutzversicherung die Kosten der Gegenseite. Dabei können viele Tarife flexibel nach deinen Bedürfnissen angepasst werden.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Ein LKW ist dir ins Auto gefahren. Dein Auto hat einen Totalschaden und du eine Verletzung am Arm. Die Haftpflichtversicherung des LKW-Fahrers sieht zu deinem Unverständnis auch bei dir eine Teilschuld am Unfall. Dir bleibt nur der Rechtsweg zur Klärung. Die Rechtschutzversicherung zahlt dir beispielsweise den Streitwert, die Kosten des Rechtsstreits und die Kosten für das Gutachten.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du arbeitest seit einigen Jahren mit Freude in einem großen Unternehmen. Doch eines Tages ruft dein Chef dich ins Büro und überreicht dir eine fristlose Kündigung, weil du angeblich mehrere Rechnungen nicht pünktlich bezahlt hast und nun Kunden verärgert sind. Du reichst eine Kündigungsschutzklage ein und gehst vor Gericht. Zu deinem Glück stellt sich heraus, dass du nichts mit dem Vorgang zu tun hattest. Die Rechtsschutzversicherung unterstützt dich hier und zahlt anfallende Kosten.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-RDL2-KAQUE-62.RS.Patentrechtschutzversicherung",
+            "D-EIVK-J2KUX-04.RS.SpezialRechtsschutzVerlage",
+            "D-EIVK-J2KUX-04.RS.Buchhandel_Rechtsschutz",
+            "5401.RS.RSUnternehmenMittelstand",
+            "5401.RS.Gewerbetreibende",
+            "5340.RS.XXL102019",
+            "1047.IRS.Standard",
+            "1047.IRS.Hausangestellte",
+            "5340.RS.XL102019"
+        ],
+        "MediaSet": "SNOOPR.RS-SNOOPR"
+    },
+    {
+        "ID": "BOOT-SNOOPR",
+        "Bezeichnung": "Bootsversicherung",
+        "Kurzbezeichnung": "Boote",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "DROHNEN-SNOOPR",
+        "Bezeichnung": "Drohnenversicherung",
+        "Kurzbezeichnung": "Drohnen",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-C8WA-0KJVX-08.DROHNEN.Drohnendeckung_Haftpflicht_ANCORA"
+        ]
+    },
+    {
+        "ID": "GARTEN-SNOOPR",
+        "Bezeichnung": "Gartenversicherung",
+        "Kurzbezeichnung": "Garten",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "KFZ-SNOOPR",
+        "Bezeichnung": "Kraftfahrzeugversicherung (sonstige)",
+        "Kurzbezeichnung": "KFZ-Versicherung",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "1013.KFZ.EScooter"
+        ]
+    },
+    {
+        "ID": "PHOTOVOLTAIK-SNOOPR",
+        "Bezeichnung": "Photovoltaikversicherung",
+        "Kurzbezeichnung": "Photovoltaik",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5140.PHOTOVOLTAIK.KlimaPro"
+        ]
+    },
+    {
+        "ID": "SCHUTZBRIEF-SNOOPR",
+        "Bezeichnung": "KFZ-Schutzbrief",
+        "Kurzbezeichnung": "Schutzbrief",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "HAUSRAT-SNOOPR",
+        "Bezeichnung": "Hausratversicherung",
+        "Kurzbezeichnung": "Hausrat",
+        "HatLeistungen": true,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "hausrat",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Hausratversicherung</h1><p>Du hast es dir zu Hause gemütlich gemacht? Sichere dir alles was lieb und teuer ist! Die Hausratversicherung sichert dein Inventar, Kleidung, Schmuck, Elektrogeräte und Bargeld, egal ob gegen Feuer, Leitungswasser, Sturm, Hagel, Einbruchdiebstahl, Raub oder Vandalismus.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Ein Moment der Unacht­samkeit - und schon stehen Advents­kranz oder Weihnachts­baum in Flammen. Du kannst den Brand zwar löschen, dennoch sind zuvor Möbel, der Boden, die Decke und der Fernseher beschädigt worden. Kein Problem, hier greift dir die Hausratversicherung unter die Arme.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Du bist im Urlaub mit deinen Liebsten und kommst nach zwei Wochen entspannt zu Hause an, siehst aber direkt, dass bei dir eingebrochen wurde. Keine Panik! Deine Hausratversicherung ersetzt dir deine entnommenen und in die Versicherung eingeschlossenen Wertgegenstände.</li></ul><div></div></div>",
+        "Leistungen": [{
+                "Titel": "Allgemein",
+                "Fakten": {
+                    "HAUSRAT_ALLG_LAUFZEIT": {
+                        "Text": "Mindestlaufzeit",
+                        "Hilfe": "Einige Versicherungen geben einen Rabatt, wenn du den Vertrag für 3 Jahre abschließst. Nach Ablauf der Laufzeit verlängert sich der Vertrag automatisch um ein weiteres Jahr."
+                    },
+                    "HAUSRAT_ALLG_UNTERVERSICHERUNGSVERZICHT": {
+                        "Text": "Unterversicherungsverzicht",
+                        "Hilfe": "Ist der tatsächliche Wert des Hausrats höher als der in der Versicherung vereinbarte, spricht man von einer Unterversicherung. Kommt es zum Schadenfall würdest du aufgrund der Unterversicherung nicht die gesamte, vereinbarte Versicherungssumme ausgezahlt bekommen, sondern nur einen Prozentteil. Mit dieser Klausel verzichtet der Versicherer auf die Prüfung ob eine Unterversicheurng vorliegt und zahlt dir die vereinbarte Versicherungssumme pauschal aus."
+                    }
+                }
+            },
+            {
+                "Titel": "Versicherte Sachen",
+                "Fakten": {
+                    "HAUSRAT_VS_EBIKE": {
+                        "Text": "E-Bikes oder Pedelecs",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_BARGELD": {
+                        "Text": "Bargeld (außerhalb Safe)",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_FAHRRAD": {
+                        "Text": "Fahrraddiebstahl",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_HAUSRAT": {
+                        "Text": "Möbel/Einrichtung, Kleidung, Haushaltsgeräte, Elektronik",
+                        "Hilfe": "Dein gesamter Hausrat, also alles, was du zum Ge- oder Verbrauch in deiner Wohnung / deinem Haus hast, ist versichert - und zwar zum Neuwert."
+                    },
+                    "HAUSRAT_VS_SCHMUCK": {
+                        "Text": "Schmuck & Uhren (außerhalb Safe)",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_URKUNDEN": {
+                        "Text": "Urkunden & Wertpapiere (außerhalb Safe)",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_UNBEWOHNT": {
+                        "Text": "Unbewohnte Wohnung",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_WERTSACHEN": {
+                        "Text": "Wertsachen",
+                        "Hilfe": "Unter Wertsachen versteht man: Bargeld, Urkunden, Sparbücher und Wertpapiere, Schmuck, alle Gegenstände aus Gold, Platin oder Silber, Briefmarken, Münzen, Medaillen, Pelze, handgeknüpfte Teppiche sowie Kunstgegenstände."
+                    },
+                    "HAUSRAT_VS_ALARMANLAGE": {
+                        "Text": "Technische und optische Sicherungsanlagen",
+                        "Hilfe": "Sirenen, Alarmanlagen, Überwachungskameras"
+                    },
+                    "HAUSRAT_VS_ARBEITSZIMMER": {
+                        "Text": "Sachen im häuslichen Arbeitszimmer",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_VS_KINDERHAUSHALT": {
+                        "Text": "Haushaltsgründung von Kindern",
+                        "Hilfe": "Zieht ein Kind von dir in die erste Eigene Wohnung, gewähren einige Versicherer für einen bestimmten Zeitraum eine Hausratversicherung für die neue Wohnung deines Kindes."
+                    },
+                    "HAUSRAT_VS_BERUFLICH_ZWEITWOHNSITZ": {
+                        "Text": "Mitversicherung des beruflich bedingten Zweitwohnsitzes",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Leistungen bei Feuer",
+                "Fakten": {
+                    "HAUSRAT_FEUER_SENG": {
+                        "Text": "Seng- & Schmorschäden",
+                        "Hilfe": "Seng- & Schmorschäden sind Schäden, die durch Hitze, aber ohne Brand oder Feuer entstehen."
+                    },
+                    "HAUSRAT_FEUER_BRAND": {
+                        "Text": "Schäden durch Brand",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_FEUER_RAUCH": {
+                        "Text": "Schäden durch Rauch & Ruß",
+                        "Hilfe": "Schäden, die von plötzlich auftretendem Rauch oder Ruß aus Heizungen, Öfen oder ähnlichen Anlagen verursacht werden, sind versichert."
+                    },
+                    "HAUSRAT_FEUER_EXPLOSION": {
+                        "Text": "Schäden durch Ex- oder Implosion",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_FEUER_NUTZWAERME": {
+                        "Text": "Schäden durch Nutzwärme",
+                        "Hilfe": "Wenn durch Wärme, die du nutzst, um andere Gegenstände zu bearbeiten, zum Beispiel beim Bügeln oder Kochen, ein Brandschaden entsteht, dann wird dies Nutzwärmeschaden genannt. Diese Art von Schaden ist versichert."
+                    },
+                    "HAUSRAT_FEUER_BLINDGAENGER": {
+                        "Text": "Schäden durch Kampfmittel aus beendeten Kriegen (Blindgänger)",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_FEUER_UEBERSPANNUNG": {
+                        "Text": "Überspannungsschäden an Elektrogeräten durch Blitz",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Leistungen bei (Einbruch-)Diebstahl",
+                "Fakten": {
+                    "HAUSRAT_DIEBSTAHL_KFZ": {
+                        "Text": "Diebstahl von Hausrat aus Kfz (keine Wertsachen, Geld, Elektrogeräte)",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_GARTEN": {
+                        "Text": "Diebstahl von Gartenmöbeln und -geräten",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_DIEBSTAHL": {
+                        "Text": "Einbruchdiebstahl / Raub / Vandalismus",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_SCHIFF_ZUG": {
+                        "Text": "Diebstahl aus Schiffskabine oder Schlafwagenabteil",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_KINDERWAGEN": {
+                        "Text": "Diebstahl von Kinderwagen",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_KREDITKARTE": {
+                        "Text": "Scheck- und Kreditkartenmissbrauch nach Einbruchdiebstahl",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_ARBEITSPLATZ": {
+                        "Text": "Diebstahl am Arbeitsplatz",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_DIEBSTAHL_KRANKENZIMMER": {
+                        "Text": "Diebstahl aus Krankenzimmer",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Leistungen bei Leitungswasserschaden",
+                "Fakten": {
+                    "HAUSRAT_LEITUNGSWASSER_AQUARIUM": {
+                        "Text": "Schäden durch Wasseraustritt aus Aquarien und Wasserbetten",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_LEITUNGSWASSER_ROHRBRUCH": {
+                        "Text": "Mehrkosten für Leitungswasser infolge Rohrbruch",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_LEITUNGSWASSER_LEITUNGSWASSER": {
+                        "Text": "Schäden durch Leitungswasser",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Leistungen bei Sturm- und Hagelschäden",
+                "Fakten": {
+                    "HAUSRAT_STURM_STURM": {
+                        "Text": "Schäden durch Sturm und Hagel",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_STURM_GRUNDSTÜCK": {
+                        "Text": "Schäden außerhalb des Gebäudes auf dem versicherten Grundstück",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Wo ist dein Hausrat versichert?",
+                "Fakten": {
+                    "HAUSRAT_WO_GARAGEN": {
+                        "Text": "Hausrat in Garagen auf dem versicherten Grundstück",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WO_HAUS_WOHNUNG": {
+                        "Text": "Hausrat in selbstgenutztem Haus oder Wohnung",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WO_NEBENGEBAEUDE": {
+                        "Text": "Hausrat im Nebengebäude auf dem versicherten Grundstück",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WO_WASCHMASCHINE": {
+                        "Text": "Diebstahl von Waschmaschinen und Trocknern aus Gemeinschaftsräumen",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WO_AUßENVERSICHERUNG": {
+                        "Text": "Hausrat in verschlossenen Räumen außerhalb des versicherten Grundstücks (Außenversicherung)",
+                        "Hilfe": "Dein Hausrat ist auch außerhalb deines eigenen Wohnraums versichert, wenn er sich in einem verschlossenem Raum befindet."
+                    },
+                    "HAUSRAT_WO_AUßENVERSICHERUNG_SPORT": {
+                        "Text": "Außenversicherung für Sportgeräte",
+                        "Hilfe": "Durch diesen Einschluss versicherst du z.B. dein Golfequitment mit."
+                    }
+                }
+            },
+            {
+                "Titel": "Weitere Gefahren",
+                "Fakten": {
+                    "HAUSRAT_WEITERE_STREIK": {
+                        "Text": "Aussperrung / Streik / Innere Unruhen",
+                        "Hilfe": "Wird dein Hausrat von einem Feuer im Rahmen innerer Unruhen beschädigt, übernimmt die Versicherung den Fall."
+                    },
+                    "HAUSRAT_WEITERE_FAHRZEUG": {
+                        "Text": "Anprall von Fahrzeugen",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WEITERE_FLUGZEUG": {
+                        "Text": "Anprall/Absturz von Luftfahrzeugen",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WEITERE_PHISHING": {
+                        "Text": "Schäden durch Phishing",
+                        "Hilfe": "Durch eine vertrauenserweckende E-Mail gibst du auf einer Internetseite deine Bankdaten bekannt. Mit diesen Daten wird Geld von Ihrem Konto abgehoben."
+                    },
+                    "HAUSRAT_WEITERE_GEFRIERGUT": {
+                        "Text": "Schäden an Tiefkühl-/Gefriergut durch Stromausfall",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_WEITERE_DAUER_UEBERSCHALLKNALL": {
+                        "Text": "Überschallknall",
+                        "Hilfe": "Kommt dein Hausrat durch die Druckwelle eines Überschallknalles zu schaden, zahlt die Versicherung."
+                    }
+                }
+            },
+            {
+                "Titel": "Versicherte Kosten nach Schadenfall",
+                "Fakten": {
+                    "HAUSRAT_KOSTENSCHADEN_BEWACHUNG": {
+                        "Text": "Bewachungskosten",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_REPARATUR": {
+                        "Text": "Gebäudereparaturkosten nach Einbruchdiebstahl",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_TRANSPORT": {
+                        "Text": "Transport- und Einlagerungskosten",
+                        "Hilfe": "Oft muss dein Hausrat in Folge eines Brandes oder Leitungswasserschadens eingelagert werden. Die Kosten dafür werden für einen bestimmten Zeitraum von dem Versicherer bezahlt."
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_AUFRAEUMEN": {
+                        "Text": "Aufräumungs- und Schutzkosten",
+                        "Hilfe": "Kosten, die durch das Aufräumen, das Wegräumen, den Abtransport, das Ablagern und das Vernichten von beschädigten oder zerstörten versicherten Sachen oder die notwendige Bewegung, Veränderung und den Schutz anderer Sachen entstehen, sind versichert."
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_HOTELKOSTEN": {
+                        "Text": "Hotelkosten",
+                        "Hilfe": "Ist deine Wohnung / dein Haus aufgrund eines Schadens (z.B. nach einem Brand) nicht bewohnbar, ersetzt der Versicherer auch deine Hotelkosten in einer bestimmten Höhe und für einen bestimmten Zeitraum."
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_DATENRETTUNG": {
+                        "Text": "Datenrettungskosten",
+                        "Hilfe": "Werden bei einem versicherten Schaden auch elektronisch gespeicherte und privat benutzte Daten beschädigt, dann übernimmt die Versicherung die Kosten für deren Rettung."
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_SCHLOSSTAUSCH": {
+                        "Text": "Schlossaustausch nach Einbruch",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_RUECKREISEURLAUB": {
+                        "Text": "Rückreisekosten aus dem Urlaub",
+                        "Hilfe": ""
+                    },
+                    "HAUSRAT_KOSTENSCHADEN_SACHVERSTAENDIGER": {
+                        "Text": "Kosten für den Sachverständiger",
+                        "Hilfe": ""
+                    }
+                }
+            }
+        ],
+        "Produktvarianten": [
+            "D-QPL2-UZMX0-61.HAUSRAT.Komfort",
+            "D-JWNS-F5XWB-75.HR.Zweiraeder",
+            "D-JWNS-F5XWB-75.HR.Wohngemeinschaften",
+            "D-JWNS-F5XWB-75.HR.Hausratschutz",
+            "D-757R-Q80BD-23.HAUSRAT.Ski2019",
+            "D-757R-Q80BD-23.HAUSRAT.HausratSmarthome",
+            "D-757R-Q80BD-23.HAUSRAT.HausratReisen",
+            "D-757R-Q80BD-23.HAUSRAT.HausratPrivatpersonen",
+            "D-757R-Q80BD-23.HAUSRAT.Fahrradversicherung",
+            "5512.HAUSRAT.Premium",
+            "5121.HAUSRAT.PremiumBike",
+            "5121.HAUSRAT.PlusReise",
+            "5121.HAUSRAT.PlusElektro",
+            "1047.IHR.Klassik",
+            "1013.HAUSRAT.Komfort",
+            "1013.HAUSRAT.Garten",
+            "1047.IHR.Exklusiv",
+            "1047.IHR.ExklusivGrill",
+            "5384.HAUSRAT.JuraPlusBestleistung",
+            "5384.HAUSRAT.UnterwegsFahrrad",
+            "5384.HAUSRAT.HausGlas",
+            "5384.HAUSRAT.Komfort",
+            "5384.HAUSRAT.Basis",
+            "5515.HAUSRAT.KomfortPremium",
+            "5515.HAUSRAT.KomfortUnterwegs",
+            "5515.HAUSRAT.Komfort",
+            "5311.HAUSRAT.KomfortPremium",
+            "5311.HAUSRAT.KomfortUnterwegs",
+            "5311.HAUSRAT.Komfort",
+            "5340.HAUSRAT.XXL",
+            "5340.HAUSRAT.XL"
+        ],
+        "MediaSet": "SNOOPR.HAUSRAT-SNOOPR"
+    },
+    {
+        "ID": "GLAS-SNOOPR",
+        "Bezeichnung": "Glasversicherung",
+        "Kurzbezeichnung": "Glas",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "2",
+        "Controller": "glas",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Glasversicherung</h1><p>Die Glasversicherung gilt häufig als eine unnötige Versicherung - aber das ist nicht immer so! In bestimmten Fällen bietet der Schutz dir echte Mehrwerte. Die Glasversicherung ersetzt Bruch- oder Rissschäden an fest mit dem Gebäude verbundenen Scheiben, Platten oder auch Spiegeln. Dabei spielt es keine Rolle, ob der Schaden durch ein kleines Missgeschick, ein Unwetter oder beispielsweise einen Einbruch verursacht wurde.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Trotz hoher Investitionen, hast du dir den Traum eines eigenen Wintergartens erfüllt. Während du im Urlaub bist wird bei dir eingebrochen. Durch das Zerschlagen einer der teuren Scheiben des Wintergartens können die Einbrecher in dein Haus einsteigen. Damit du die Kosten für die kaputte Scheibe nicht tragen musst, zahlt die Glasversicherung die anfallenden Kosten.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Dein Kind tobt fröhlich im Garten. Plötzlich hörst du Hilferufe und willst im Garten nach dem Rechten schauen. Vor lauter Eile übersiehst du die eingebaute Glastüre zwischen Küche und Wohnzimmer. Du läufst gegen die Türe, dabei zerbricht diese in viele Einzelteile. Kein Problem, deinem Kind geht es gut und um den Schaden der kaputten Türe kümmert sich die Glasversicherung.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-EIVK-J2KUX-04.GLAS.GlasVerlage",
+            "D-EIVK-J2KUX-04.GLAS.Glas",
+            "5340.GLAS.XXL",
+            "5340.GLAS.XL",
+            "5121.GLAS.Wintergarten",
+            "5515.GLAS.Komfort",
+            "5515.GLAS.KomfortMobiliar",
+            "5311.GLAS.Komfort",
+            "5311.GLAS.KomfortMobiliar"
+        ],
+        "MediaSet": "SNOOPR.GLAS-SNOOPR"
+    },
+    {
+        "ID": "VGV-SNOOPR",
+        "Bezeichnung": "Wohngebäudeversicherung",
+        "Kurzbezeichnung": "Wohngebäude",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "3",
+        "Controller": "gebaeude",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Wohngebäudeversicherung</h1><p>In dein Eigentum hast du viel Geld und Zeit investiert. Kein Wunder, dass dir die eigenen vier Wände wichtig sind. Die Wohngebäudeversicherung umfasst den Schutz für dein gesamtes Gebäude, sowie aller fest eingebauten Gegenstände. Dazu gehören beispielsweise Rohre, Wände oder das Dach. In der Regel sind Sachschäden durch Feuer, Blitzschlag, Leitungswasser, Sturm, Überspannung und Explosion Bestandteil einer Versicherungspolice. Häufig lassen sich aber auch optionale Vertragselemente wie beispielsweise Überschwemmungen miteinschließen.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">An einem Sommerabend schlägt bei dir im Dachstuhl der Blitz ein und das Dach fängt an zu brennen. Gott sei Dank ist die Feuerwehr schnell zur Hilfe und kann weitere Schäden verhindern. Die Wohngebäudeversicherung zahlt dir die Renovierung des beschädigten Daches. Das Gute: Auch die entstandenen Schäden durch Überspannung zahlt die Versicherung.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Nach einigen Jahren der zuverlässigen Nutzung reißt plötzlich ein Rohr an deiner Waschmaschine und dein Keller läuft ganz unter Wasser. Die Wohngebäudeversicherung steht dir zur Seite und hilft dir bei der Behebung des Schadens um kommt für die finanziellen Umstände auf.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-JYJP-LS9SQ-80.VGV.BESTIMMO",
+            "5512.VGV.Premium",
+            "5340.VGV.XXLWohnflaeche",
+            "5340.VGV.XLWohnflaeche",
+            "5121.VGV.Zweifamilienhaus",
+            "5121.VGV.Wochenendhaus",
+            "5121.VGV.Mehrfamilienhaus",
+            "5121.VGV.Ferienhaus",
+            "5121.VGV.Einfamilienhaus",
+            "5121.VGV.Denkmalschutz",
+            "5340.VGV.XXL",
+            "5340.VGV.XL",
+            "5384.VGV.KomfortMiete",
+            "5384.VGV.KomfortUmwelt",
+            "5384.VGV.Basis",
+            "5515.VGV.KomfortDenkmal",
+            "5515.VGV.KomfortPremiumOptimum",
+            "5311.VGV.KomfortDenkmal",
+            "5311.VGV.KomfortPremiumOptimum"
+        ],
+        "MediaSet": "SNOOPR.VGV-SNOOPR"
+    },
+    {
+        "ID": "AUTO-SNOOPR",
+        "Bezeichnung": "Autoversicherung",
+        "Kurzbezeichnung": "Autoversicherung",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "4",
+        "Controller": "auto",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Autoversicherung</h1><p>Als Halter eines PKW bist du gesetzlich verpflichtet, eine Autoversicherung abzuschließen. Hierzu gehört auf jeden Fall die KFZ-Haftpflichtversicherung. Sie übernimmt Schäden, die du anderen mit deinem Auto zufügst oder lehnt unbegründete Schadenersatzforderungen ab. Zusätzlich kannst du eine Teilkasko abschließen. Sie übernimmt Diebstahl-, Brand- oder Windschutzscheiben-Schäden an deinem Auto. Eine Vollkasko enthält die Teilkasko und zahlt zusätzlich für Unfallschäden oder wenn Dritte mutwillig dein Auto zerstören.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du passt nicht auf und fährst deinem Vordermann aufs Auto. Meist bist du in diesem Fall schuld und musst seinen Schaden bezahlen. Das übernimt für dich die KFZ-Haftpflichtversicherung. Den Schaden am eigenen Auto übernimmt deine Vollkaskoversicherung.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Der Motor deines Autos gerät durch einen technischen Defekt in Brand und dein Auto wird vollständig beschädigt. In diesem Fall hilft dir deine Teilkasko-Versicherung.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-JYJP-LS9SQ-80.AUTO.BESTDRIVE",
+            "D-EAMP-LB7AC-19.AUTO.Youngtimer",
+            "D-EAMP-LB7AC-19.AUTO.Uniquecarcover",
+            "D-EAMP-LB7AC-19.AUTO.Porsche",
+            "D-EAMP-LB7AC-19.AUTO.PKWVersicherung",
+            "D-EAMP-LB7AC-19.AUTO.Oldtimer",
+            "D-EAMP-LB7AC-19.AUTO.Newtimer",
+            "D-EAMP-LB7AC-19.AUTO.McLaren",
+            "D-EAMP-LB7AC-19.AUTO.Ferrari",
+            "D-EAMP-LB7AC-19.AUTO.Carcover",
+            "5055.AUTO.ProPremium",
+            "5055.AUTO.ProKlassik"
+        ],
+        "MediaSet": "SNOOPR.AUTO-SNOOPR"
+    },
+    {
+        "ID": "BAULEISTUNG-SNOOPR",
+        "Bezeichnung": "Bauleistungsversicherung",
+        "Kurzbezeichnung": "Bauleistung",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "5",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "MOTORRAD-SNOOPR",
+        "Bezeichnung": "Motorradversicherung",
+        "Kurzbezeichnung": "Motorrad",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "5",
+        "Controller": "motorrad",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Motorradversicherung</h1><p>Als Halter eines Motorrads bist du gesetzlich verpflichtet, eine Motorradversicherung abzuschließen. Hierzu gehört auf jeden Fall die KFZ-Haftpflichtversicherung. Sie übernimmt Schäden, die du anderen mit deinem Krad zufügst oder lehnt unbegründete Schadenersatzforderungen ab. Zusätzlich kannst du eine Teilkaso abschließen. Sie übernimmt Diebstahl-, Brand- oder Windschutzscheiben-Schäden an deinem Motorrad. Eine Vollkaso enthält die Teilkasko und zahlt zusätzlich für Unfallschäden oder wenn Dritte mutwillig dein Motorrad zerstören.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du passt einen Moment nicht auf und fährst deinem Vordermann aufs Auto. Meist bist du in diesem Fall schuld und musst seinen Schaden bezahlen. Das übernimt für dich die KFZ-Haftpflichtversicherung.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Dein Motorrad wird dir geklaut. In diesem Fall hilft dir deine Teilkasko-Versicherung und zahlt den Schaden.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5055.MOTORRAD.ProPremium",
+            "5055.MOTORRAD.ProKlassik"
+        ],
+        "MediaSet": "SNOOPR.MOTORRAD-SNOOPR"
+    },
+    {
+        "ID": "MIETAUSFALL-SNOOPR",
+        "Bezeichnung": "Mietausfallversicherung",
+        "Kurzbezeichnung": "Mietausfall",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "19",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5121.MIETAUSFALL.Mietnomanden"
+        ]
+    },
+    {
+        "ID": "LUFTFAHRT-SNOOPR",
+        "Bezeichnung": "Luftfahrtversicherung",
+        "Kurzbezeichnung": "Luftfahrt",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "21",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "REISE-SNOOPR",
+        "Bezeichnung": "Reiseversicherung",
+        "Kurzbezeichnung": "Reise",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "24",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-JP1U-RDFT8-02.REISE.Welt",
+            "D-JP1U-RDFT8-02.REISE.Visa",
+            "D-JP1U-RDFT8-02.REISE.TH",
+            "D-JP1U-RDFT8-02.REISE.St",
+            "D-JP1U-RDFT8-02.REISE.RAIO",
+            "D-JP1U-RDFT8-02.REISE.RA",
+            "D-JP1U-RDFT8-02.REISE.Karte",
+            "D-JP1U-RDFT8-02.REISE.HundAIO",
+            "D-JP1U-RDFT8-02.REISE.FLEXAKV",
+            "D-JP1U-RDFT8-02.REISE.EinreiseB",
+            "D-JP1U-RDFT8-02.REISE.EB",
+            "D-JP1U-RDFT8-02.REISE.BS",
+            "D-JP1U-RDFT8-02.REISE.Basic",
+            "D-JP1U-RDFT8-02.REISE.AIOW",
+            "D-JP1U-RDFT8-02.REISE.AIOU",
+            "D-JP1U-RDFT8-02.REISE.AIOS",
+            "D-JP1U-RDFT8-02.REISE.AIOG",
+            "D-JP1U-RDFT8-02.REISE.AIOF",
+            "D-JP1U-RDFT8-02.REISE.AIO10000",
+            "D-JP1U-RDFT8-02.REISE.AIO",
+            "D-JP1U-RDFT8-02.REISE.AIL",
+            "D-JP1U-RDFT8-02.REISE.AFPS0"
+        ]
+    },
+    {
+        "ID": "CAMPING-SNOOPR",
+        "Bezeichnung": "Campingversicherung",
+        "Kurzbezeichnung": "Camping",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "29",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5140.CAMPING.Dauercamper"
+        ]
+    },
+    {
+        "ID": "FAHRRAD-SNOOPR",
+        "Bezeichnung": "Fahrradversicherung",
+        "Kurzbezeichnung": "Fahrrad",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "HAUS-SNOOPR",
+        "ProduktgruppenSortierung": "31",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "BAV-KV-SNOOPR",
+        "Bezeichnung": "Betriebliche Krankenversicherung",
+        "Kurzbezeichnung": "bAV Kranken",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "FOLGEKOSTEN-SNOOPR",
+        "Bezeichnung": "Folgekostenversicherung",
+        "Kurzbezeichnung": "OP-Folgekosten",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "KRANKENHAUSTAGEGELD-SNOOPR",
+        "Bezeichnung": "Krankenhaustagegeldversicherung",
+        "Kurzbezeichnung": "Krankenhaustagegeld",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "VOLLVERSICHERUNG-SNOOPR",
+        "Bezeichnung": "Private Krankenversicherung",
+        "Kurzbezeichnung": "Vollkranken",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "vollversicherung",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Aber bitte privat</h1><p>Eine private Krankenversicherung verspricht bessere Leistungen im Krankheitsfall als die gesetzliche. Diejenigen, die die Möglichkeit haben, sich privat zu versichern, haben die Qual der Wahl.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du hast ein überdurchschnittliches Einkommen und liegst damit über der Versicherungspflichtgrenze. Dann kannst du dich privat versichern.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Du bist schon seit Jahren selbstständig und damit aus der gesetzlichen Krankenversicherung befreit. Der Abschluss einer privaten Krankenversicherungen garantiert dir Leistungen im Krankheitsfall.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5515.KV.ELBonusBis33",
+            "5515.KV.ELBonus",
+            "5414.KRV.Excellent",
+            "5414.KRV.AlphaOptiSelect",
+            "5414.KRV.Alpha",
+            "5340.KVV.PremiumSp2Pvn",
+            "5340.KVV.PremiumSp2Avp1PvnswAuszubildender",
+            "5340.KVV.PremiumSp2Avp1PvnAuszubildender",
+            "5340.KVV.PremiumSp2Avp1Pvn",
+            "5340.KVV.PremiumSp1Pvn",
+            "5340.KVV.PremiumSp1Avp1PvnswAuszubildender",
+            "5340.KVV.PremiumSp1Avp1PvnAuszubildender",
+            "5340.KVV.PremiumSp1Avp1Pvn",
+            "5340.KVV.PremiumPvn",
+            "5340.KVV.PremiumAvp1PvnswAuszubildender",
+            "5340.KVV.PremiumAvp1PvnAuszubildender",
+            "5340.KVV.PremiumAvp1Pvn",
+            "5340.KVV.EconomyUSp2Pvn",
+            "5340.KVV.EconomyUSp2Avp1PvnswAuszubildender",
+            "5340.KVV.EconomyUSp2Avp1PvnAuszubildender",
+            "5340.KVV.EconomyUSp2Avp1Pvn",
+            "5340.KVV.EconomyUSp1Pvn",
+            "5340.KVV.EconomyUSp1Avp1PvnswAuszubildender",
+            "5340.KVV.EconomyUSp1Avp1PvnAuszubildender",
+            "5340.KVV.EconomyUSp1Avp1Pvn",
+            "5340.KVV.EconomyUPvn",
+            "5340.KVV.EconomyUAvp1PvnswAuszubildender",
+            "5340.KVV.EconomyUAvp1PvnAuszubildender",
+            "5340.KVV.EconomyUAvp1Pvn",
+            "5340.KVV.ComfortUSp2Pvn",
+            "5340.KVV.ComfortUSp2Avp1PvnswAuszubildender",
+            "5340.KVV.ComfortUSp2Avp1PvnAuszubildender",
+            "5340.KVV.ComfortUSp2Avp1Pvn",
+            "5340.KVV.ComfortUSp1Pvn",
+            "5340.KVV.ComfortUSp1Avp1PvnswAuszubildender",
+            "5340.KVV.ComfortUSp1Avp1PvnAuszubildender",
+            "5340.KVV.ComfortUSp1Avp1Pvn",
+            "5340.KVV.ComfortUPvn",
+            "5340.KVV.ComfortUAvp1PvnswAuszubildender",
+            "5340.KVV.ComfortUAvp1PvnAuszubildender",
+            "5340.KVV.ComfortUAvp1Pvn",
+            "5340.KVV.ComfortMedSp2Pvn",
+            "5340.KVV.ComfortMedSp2Avp1PvnswAuszubildender",
+            "5340.KVV.ComfortMedSp2Avp1PvnAuszubildender",
+            "5340.KVV.ComfortMedSp2Avp1Pvn",
+            "5340.KVV.ComfortMedSp1Pvn",
+            "5340.KVV.ComfortMedSp1Avp1PvnswAuszubildender",
+            "5340.KVV.ComfortMedSp1Avp1PvnAuszubildender",
+            "5340.KVV.ComfortMedSp1Avp1Pvn",
+            "5340.KVV.ComfortMedPvn",
+            "5340.KVV.ComfortMedAvp1PvnswAuszubildender",
+            "5340.KVV.ComfortMedAvp1PvnAuszubildender",
+            "5340.KVV.ComfortMedAvp1Pvn",
+            "5340.KVV.BusinessPvn",
+            "5340.KVV.BusinessAvp1PvnswAuszubildender",
+            "5340.KVV.BusinessAvp1PvnAuszubildender",
+            "5340.KVV.BusinessAvp1Pvn",
+            "4146.PKV.TEST",
+            "5414.KRV.ClassicSB2",
+            "5414.KRV.ClassicSB1",
+            "5414.KRV.ClassicSB1OptiSelect",
+            "5414.KRV.Classic",
+            "5414.KRV.ClassicOptiSelect",
+            "5414.KRV.AdvancePlusSB2",
+            "5414.KRV.AdvancePlusSB1",
+            "5414.KRV.RoyalSB2",
+            "5414.KRV.RoyalSB1",
+            "5414.KRV.AdvancePlus"
+        ],
+        "MediaSet": "SNOOPR.VOLLVERSICHERUNG-SNOOPR"
+    },
+    {
+        "ID": "ERGAENZUNG-SNOOPR",
+        "Bezeichnung": "Zusatzversicherung",
+        "Kurzbezeichnung": "Krankenzusatz",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "2",
+        "Controller": "ergaenzung",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Im Krankheitsfall gut abgesichert</h1><p>Das Leben gesund zu meistern, bedeutet für jeden etwas anderes. Die Medizin kann dabei mit vielfältigen Leistungen unterstützen. Dabei genießen privat versicherte Personen einige Vorteile gegenüber gesetzlich versicherten Personen. Wenn du gesetzlich versichert bist und einen besseren Schutz genießen möchtest, ist das über Zusatzversicherungen möglich. Attraktive Bausteine, wie beispielsweise ein Zahn- und Krankenhauszusatztarif oder Versicherungen von Sehhilfen, können dich im Ernstfall absichern. Jetzt passenden Schutz suchen!</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du bist gesetzlich versichert und brichst dir beim Handball den Unterarm. Im Krankenhaus kommst du auf ein großes 4-Bett-Zimmer. Aufgrund der vielen Besuche und der Hektik fällt die Erholung nach einer anstrengenden Operation schwer. Um bei einem nächsten Krankenhaus-Aufenthalt nicht wieder auf einem 4-Bett-Zimmer zu liegen schließt du eine Zusatzversicherung ab, in der geregelt ist, dass du Anrecht auf ein 2-Bett-Zimmer hast.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5414.EGV.ZahnDreifacheLeistung",
+            "5414.EGV.ZahnDoppelteLeistung",
+            "5340.EGV.ZahnCezkUCej",
+            "5317.MEDIAPP.Standard",
+            "4043.DENT.Giga",
+            "1013.KZV.ZahnPrestige",
+            "5414.EGV.AmbulantStationaerZahnPremium",
+            "5414.EGV.StationaerPremium",
+            "5414.EGV.AmbulantStationaerZahnPremiumKfo",
+            "5414.EGV.AmbulantZahnPremium",
+            "5414.EGV.ZahnPremium",
+            "5340.EGV.AmbulantCekPlusU",
+            "5414.EGV.AmbulantZahnPremiumKfo",
+            "5414.EGV.AmbulantPremium",
+            "5414.EGV.StationaerZahnPremium",
+            "5414.EGV.AmbulantStationaerPremium",
+            "5414.EGV.AmbulantStationaerZahnKomfort",
+            "5414.EGV.StationaerKomfort",
+            "5414.EGV.AmbulantStationaerZahnKomfortKfo",
+            "5414.EGV.AmbulantZahnAktivDzv",
+            "5414.EGV.ZahnKomfort",
+            "5340.EGV.AmbulantCebPlusU",
+            "5414.EGV.AmbulantKompakt",
+            "5414.EGV.StationaerZahnKomfort",
+            "5414.EGV.StationaerSmart",
+            "5414.EGV.AmbulantStationaerKomfort",
+            "5414.EGV.AmbulantStationaerAktivPremium",
+            "5414.EGV.AmbulantZahnKompakt",
+            "5340.EGV.AmbulantCekPlusUAuszubildender",
+            "5414.EGV.AmbulantKrebs",
+            "5414.EGV.AmbulantStationaerAktivKomfort",
+            "5340.EGV.AmbulantCebPlusUAuszubildender",
+            "5340.EGV.StationaerSg1",
+            "5340.EGV.StationaerSg2",
+            "5340.EGV.StationaerSg1Auszubildender",
+            "5340.EGV.StationaerSg2Auszubildender",
+            "5340.EGV.ZahnCezpU",
+            "5340.EGV.ZahnCezkU",
+            "5340.EGV.ZahnCej",
+            "5340.EGV.ZahnCezpUAuszubildender",
+            "5340.EGV.ZahnCezkUAuszubildender",
+            "5340.EGV.ZahnCezpUCej",
+            "5340.EGV.AmbulantStationaerCekPlusUSg1",
+            "5340.EGV.AmbulantStationaerCekPlusUSg2",
+            "5340.EGV.AmbulantStationaerCebPlusUSg1",
+            "5340.EGV.AmbulantStationaerCebPlusUSg2",
+            "5340.EGV.AmbulantStationaerCekPlusUSg1Auszubildender",
+            "5340.EGV.AmbulantStationaerCekPlusUSg2Auszubildender",
+            "5340.EGV.AmbulantStationaerCebPlusUSg1Auszubildender",
+            "5340.EGV.AmbulantStationaerCebPlusUSg2Auszubildender",
+            "5340.EGV.AmbulantZahnCekPlusUCezpU",
+            "5340.EGV.AmbulantZahnCekPlusUCezkU",
+            "5340.EGV.AmbulantZahnCebPlusUCezpU",
+            "5340.EGV.AmbulantZahnCebPlusUCezkU",
+            "5340.EGV.AmbulantZahnCekPlusUCezpUAuszubildender",
+            "5340.EGV.AmbulantZahnCekPlusUCezkUAuszubildender",
+            "5340.EGV.AmbulantZahnCebPlusUCezpUAuszubildender",
+            "5340.EGV.AmbulantZahnCebPlusUCezkUAuszubildender",
+            "5340.EGV.AmbulantZahnCekPlusUCej",
+            "5340.EGV.AmbulantZahnCebPlusUCej",
+            "5340.EGV.StationaerZahnSg1CezpU",
+            "5340.EGV.StationaerZahnSg1CezkU",
+            "5340.EGV.StationaerZahnSg2CezpU",
+            "5340.EGV.StationaerZahnSg2CezkU",
+            "5340.EGV.StationaerZahnSg1CezpUAuszubildender",
+            "5340.EGV.StationaerZahnSg1CezkUAuszubildender",
+            "5340.EGV.StationaerZahnSg2CezpUAuszubildender",
+            "5340.EGV.StationaerZahnSg2CezkUAuszubildender",
+            "5340.EGV.StationaerZahnSg1Cej",
+            "5340.EGV.StationaerZahnSg2Cej",
+            "5340.EGV.AmbulantStationaerZahnCekPlusUSg1CezpU",
+            "5340.EGV.AmbulantStationaerZahnCebPlusUSg1CezpU",
+            "5340.EGV.AmbulantStationaerZahnCekPlusUSg1CezpUAuszubildender",
+            "5340.EGV.AmbulantStationaerZahnCebPlusUSg1CezpUAuszubildender",
+            "5340.EGV.AmbulantStationaerZahnCekPlusUSg2CezkU",
+            "5340.EGV.AmbulantStationaerZahnCebPlusUSg2CezkU",
+            "5340.EGV.AmbulantStationaerZahnCekPlusUSg2CezkUAuszubildender",
+            "5340.EGV.AmbulantStationaerZahnCebPlusUSg2CezkUAuszubildender",
+            "5340.EGV.AmbulantStationaerZahnCekPlusUSg1Cej",
+            "5340.EGV.AmbulantStationaerZahnCekPlusUSg2Cej",
+            "5340.EGV.AmbulantStationaerZahnCebPlusUSg1Cej",
+            "5340.EGV.AmbulantStationaerZahnCebPlusUSg2Cej",
+            "5515.EGV.Ambulant",
+            "5515.EGV.Stationaer",
+            "5515.EGV.Zahn",
+            "5515.EGV.AmbulantStationaer",
+            "5515.EGV.AmbulantZahn",
+            "5515.EGV.StationaerZahn",
+            "5515.EGV.AmbulantStationaerZahn"
+        ],
+        "MediaSet": "SNOOPR.ERGAENZUNG-SNOOPR"
+    },
+    {
+        "ID": "PFLEGE-SNOOPR",
+        "Bezeichnung": "Pflegeversicherung",
+        "Kurzbezeichnung": "Pflege",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "3",
+        "Controller": "pflege",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Pflegeversicherung</h1><p>Solltest du einmal pflegebedürftig werden, übernimmt die gesetzliche Pflegeversicherung nur einen Teil deiner Pflegekosten, je nachdem, wie schwer du beeinträchtigt bist. Den Rest musst du selbst bezahlen. Eine private Pflegeversicherung hilft dir dabei, diese finanzielle Lücke zu schließen.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Wenn du in Pflegegrad 3 eingestuft wirst, dann bist du in deiner Selbstständigkeit bereits schwer beeinträchtigt. In NRW betragen die Pflegekosten bei häuslicher Pflege beispielsweise rund 2500 Euro pro Monat. Aus der gesetzlichen Pflegeversicherung bekommst du aber nur ca. 1300 Euro. Du musst also über tausend Euro selbst bezahlen. Das kann eine private Pflegeversicherung übernehmen.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5414.PZV.PremiumPlus",
+            "5414.PZV.BasisPlusNurStationaer2",
+            "5414.PZV.BasisPlusNurStationaer1",
+            "4043.PFLEGE.Olgaflex",
+            "1047.IPR.Kompakt",
+            "1047.IPR.Klassik",
+            "1047.IPR.Exklusiv",
+            "1047.IPR.Basis",
+            "5515.PFLEGE.Premium",
+            "5515.PFLEGE.Komfort",
+            "5515.PFLEGE.Basis",
+            "1047.IPR.KlassikPflegeplatz",
+            "5340.PPV.PgkPlus",
+            "5340.PPV.PgkPlusMitEinmalleistung",
+            "5414.PZV.Premium",
+            "5414.PZV.Komfort",
+            "5340.PPV.Pgk",
+            "5340.PPV.PgkMitEinmalleistung",
+            "5414.PZV.Kompakt",
+            "5340.PPV.Pge",
+            "5340.PPV.PgeMitEinmalleistung",
+            "5414.PZV.Basis",
+            "5340.PPV.Pzu",
+            "5414.PZV.BasisNurStationaer1",
+            "5414.PZV.BasisNurStationaer2"
+        ],
+        "MediaSet": "SNOOPR.PFLEGE-SNOOPR"
+    },
+    {
+        "ID": "KRANKENTAGEGELD-SNOOPR",
+        "Bezeichnung": "Krankentagegeldversicherung",
+        "Kurzbezeichnung": "Krankentagegeld",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "4",
+        "Controller": "krankentagegeld",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Krankentagegeldversicherung</h1><p>Wenn du auf dein volles Einkommen angewiesen bist, ist die Krankentagegeldversicherung für dich interessant. Dein Arbeitgeber zahlt dir dein Gehalt im Krankheitsfall in der Regel für sechs Wochen weiter. Danach übernimmt deine Krankenkasse 70 Prozent deines Bruttoeinkommens. Die Krankentagegeldversicherung hilft dir dabei, die Differenz zwischen dem Krankengeld und deinem Nettogehalt auszugleichen. Besonders wichtig ist diese Versicherung für Selbstständige und sehr gut Verdienende.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Verdienst du monatlich mehr als 4425 Euro? Dann solltest du dir bewusst machen, dass du von deiner Krankenkasse maximal rund 3098 Euro erhältst. Je mehr du verdienst, desto größer ist die finanzielle Lücke.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Bist du selbstständig? Dann brauchst du unbedingt eine Krankentagegeldversicherung, denn niemand zahlt für dich im Falle eines gesundheitlichen Ausfalls dein Einkommen weiter.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5340.KT.AbTag22",
+            "5515.KT.AbTag22",
+            "5340.KT.AbTag29",
+            "5515.KT.AbTag43",
+            "5340.KT.AbTag43",
+            "5340.KT.AbTag64",
+            "5515.KT.AbTag92",
+            "5340.KT.AbTag92",
+            "5340.KT.AbTag22Med",
+            "5340.KT.AbTag29Med",
+            "5340.KT.AbTag43Med",
+            "5340.KT.AbTag64Med",
+            "5340.KT.AbTag92Med",
+            "5340.KT.AbTag22Selbststaendige"
+        ],
+        "MediaSet": "SNOOPR.KRANKENTAGEGELD-SNOOPR"
+    },
+    {
+        "ID": "AUSLANDSREISE-SNOOPR",
+        "Bezeichnung": "Auslandsreisekrankenversicherung",
+        "Kurzbezeichnung": "Auslandsreisekranken",
+        "HatLeistungen": true,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "5",
+        "Controller": "reisekranken",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Auslandsreisekrankenversicherung</h1><p>Wenn du sorglos in die Ferne touren willst, solltest du unbedingt eine private Reisekrankenversicherung im Gepäck haben. Sie ist sehr günstig und hilft dir bei Krankheit im Ausland. Denn selbst in der EU kannst du schlimmstenfalls auf den Krankheitskosten sitzen bleiben.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Wenn du im Ausland zum Arzt gehst, wirst du meist als Privatpatient behandelt. Je nach Land bleibst du aber auf deinen Kosten sitzen. Selbst in Ländern, mit denen Deutschland ein Abkommen hat, erstatten dir die deutschen Krankenkassen nur einen Teil der Kosten.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Wenn du im Ausland einen Unfall hast oder ernsthaft erkrankst, ist das ein echtes Problem. Denn ein Rücktransport nach Deutschland ist sehr teuer und wird von deiner gesetzlichen Krankenkasse nicht bezahlt.</li></ul><div></div></div>",
+        "Leistungen": [{
+                "Titel": "Allgemein",
+                "Fakten": {
+                    "AUSLANDSREISE_ALLG_DAUER": {
+                        "Text": "Maximale Reisedauer",
+                        "Hilfe": "Viele Reiseversicherer haften nicht für die gesamte Reise, sondern nur bis zu einer bestimmten Reisedauer. Versichert sind dann die ersten Tage der Reise."
+                    },
+                    "AUSLANDSREISE_ALLG_GESCHAEFTSREISEN": {
+                        "Text": "Geschäftsreisen",
+                        "Hilfe": "Einige Tarife greifen nur für private Reisen. Geschäftsreisen müssen dann durch den Arbeitgeber versichert werden."
+                    },
+                    "AUSLANDSREISE_ALLG_KUENDIGUNGSFRIST": {
+                        "Text": "Kündigungsfrist",
+                        "Hilfe": "Du kannst deine Versicherung innerhalb einer bestimmten Frist kündigen. Bleibt die Kündigung aus, verlängert sich der Vertrag um ein weiteres Jahr."
+                    },
+                    "AUSLANDSREISE_ALLG_SELBSTBETEILIGUNG": {
+                        "Text": "Selbstbeteiligung ",
+                        "Hilfe": "Bei einer Selbstbeteiligung trägst du im Versicherungsfall einen Teil der Kosten selbst."
+                    }
+                }
+            },
+            {
+                "Titel": "Reiserücktritt / -abbruch",
+                "Fakten": {
+                    "AUSLANDSREISE_ERSTATTUNG_ABBRUCH": {
+                        "Text": "Erstattungen bei Reiseabbruch",
+                        "Hilfe": "Musst du deine Reise abbrechen, werden die dadurch entstehenden Kosten bis zu einer ge­wis­sen Summe von der Ver­sich­er­ung er­stat­tet. Welche Gründe für den Reiseabbruch zulässig sind, geht aus den Versicherungsbedingungen hervor."
+                    },
+                    "AUSLANDSREISE_ERSTATTUNG_RUECKTRITT": {
+                        "Text": "Erstattungen bei Reiserücktritt",
+                        "Hilfe": "Kannst du eine Reise nicht an­tre­ten, übernimmt die Versicherung an­fal­len­de Stor­nier­ungs- und Um­buch­ungs­kos­ten bis zu einer ge­wis­sen Summe. Welche Gründe für den Nichtantritt der Reise zulässig sind, geht aus den Versicherungsbedingungen hervor."
+                    }
+                }
+            },
+            {
+                "Titel": "Reisekrankenversicherung",
+                "Fakten": {
+                    "AUSLANDSREISE_KRANKEN_ZAHN": {
+                        "Text": " Zahnbehandlung",
+                        "Hilfe": "Kosten für entstandene Schäden an Zähnen"
+                    },
+                    "AUSLANDSREISE_KRANKEN_HOTLINE": {
+                        "Text": "Hotline Reise-Assistance",
+                        "Hilfe": "Du kannst rund um die Uhr eine Hotline erreichen, die bei Fragen hilft."
+                    },
+                    "AUSLANDSREISE_KRANKEN_TRANSPORT": {
+                        "Text": "Krankenrücktransport zum Wohnort",
+                        "Hilfe": "Ein Rücktransport gilt als medizinisch sinnvoll, wenn in deinem Wohnort ein besserer Heilungsverlauf zu erwarten ist."
+                    },
+                    "AUSLANDSREISE_KRANKEN_BESTATTUNG": {
+                        "Text": "Bestattungskosten",
+                        "Hilfe": "Im Falle einer Bestattung am Sterbeort werden die Kosten teilweise oder ganz von der Versicherung übernommen."
+                    },
+                    "AUSLANDSREISE_KRANKEN_UEBERFUEHRUNG": {
+                        "Text": "Überführungskosten im Todesfall",
+                        "Hilfe": "Bei der Überführung ins Inland entstehende Kosten werden von der Versicherung übernommen."
+                    },
+                    "AUSLANDSREISE_KRANKEN_AMBULANT_STATIONAER": {
+                        "Text": "Ambulante und stationäre Behandlungen",
+                        "Hilfe": "Kosten für die stationäre Behandlung im Krankenhaus und ambulante Heilbehandlungen"
+                    }
+                }
+            }
+        ],
+        "Produktvarianten": [
+            "4043.KOLUMBUS.Standard",
+            "5414.AKV.Single",
+            "5317.TRAVEL.Reisekranken",
+            "5317.TRAVEL.ReisekrankenUndUnfall",
+            "5317.TRAVEL.ReisekrankenWorkAndTravel",
+            "5515.KVR.Single",
+            "5515.KVR.SingleZahnersatz",
+            "5414.AKV.Familie",
+            "5414.AKV.FamilieKinderbetreuung"
+        ],
+        "MediaSet": "SNOOPR.AUSLANDSREISE-SNOOPR"
+    },
+    {
+        "ID": "BEIHILFE-SNOOPR",
+        "Bezeichnung": "Beihilfeversicherung",
+        "Kurzbezeichnung": "Beihilfe",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "6",
+        "Controller": "beihilfe",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Krankenversicherungen für Beihilfeberechtigte</h1><p>Beihilfeberechtigte erhalten von ihrem Dienstherren einen Zuschuss zu ihrer Krankenversicherung. Den Rest müssen sie eigenständig absichern. Aber wie? Leider ist das deutsche Beihilferecht kompliziert. Wer bekommt was? Und welche zusätzlichen Leistungen gibt es? Hier findest Du passende Tarife auf einen Blick.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Als Student bist du noch bei deinen Eltern versichert, die beide verbeamtete Lehrer sind. Solange deine Eltern noch Kindergeld für dich beziehen, bist auch du beihilfeberechtigt und kannst dich über einen entsprechenden Tarif versichern lassen.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Du bist Polizist, gerade mit der Ausbildung fertig und frisch verbeamtet. Da du ein hohes Berufsrisiko trägst, bist du Heilfürsorgeempfänger. Die Heilfürsorge ist eng mit dem Beihilferecht verflochten. Auch hierfür findest du im Folgenden passende Tarife.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5414.BEIHILFE.WLExcellentB",
+            "5414.BEIHILFE.RLExcellentB",
+            "5414.BEIHILFE.MehrbettSnoopr",
+            "5414.BEIHILFE.MehrBettBis67Snoopr",
+            "5414.BEIHILFE.MehrbettAnwaerterSnoopr",
+            "5414.BEIHILFE.2BettSnoopr",
+            "5414.BEIHILFE.2BettAnwaerterSnoopr",
+            "5414.BEIHILFE.12BettSnoopr",
+            "5414.BEIHILFE.12BettBETSnoopr",
+            "5414.BEIHILFE.12BettBETAnwaerterSnoopr",
+            "5340.BEIHILFE.PvbBoAnwaerter",
+            "5340.BEIHILFE.MehrBettSStufeSnoopr",
+            "5340.BEIHILFE.MehrBettSnoopr",
+            "5340.BEIHILFE.BO2BettSnoopr",
+            "5340.BEIHILFE.BO1BettSnoopr",
+            "5340.BEIHILFE.2BettSStufeSnoopr",
+            "5340.BEIHILFE.2BettSnoopr",
+            "5340.BEIHILFE.1BettSStufeSnoopr",
+            "5340.BEIHILFE.1BettSnoopr",
+            "5311.BEIHILFE.Standard"
+        ],
+        "MediaSet": "SNOOPR.BEIHILFE-SNOOPR"
+    },
+    {
+        "ID": "ZAHN-SNOOPR",
+        "Bezeichnung": "Zahnversicherung",
+        "Kurzbezeichnung": "Zahn",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GESUNDHEIT-SNOOPR",
+        "ProduktgruppenSortierung": "7",
+        "Controller": "spezial",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5414.DZV.Zahnersatz90",
+            "5414.DZV.Premium",
+            "5414.DZV.Kompakt",
+            "5414.DZV.Komfort",
+            "5414.DZV.Kinder",
+            "5414.DZV.DoppelZuschuss",
+            "5129.ZAHN.20015V3"
+        ]
+    },
+    {
+        "ID": "EXISTENZSCHUTZ-SNOOPR",
+        "Bezeichnung": "Existenzschutzversicherung",
+        "Kurzbezeichnung": "Existenzschutz",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "GRUNDFAEHIGKEIT-SNOOPR",
+        "Bezeichnung": "Grundfähigkeitsversicherung",
+        "Kurzbezeichnung": "Grundfähigkeit",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "1013.GRUNDFAEHIGKEIT.Umweltbewsste",
+            "1013.GRUNDFAEHIGKEIT.Sozial",
+            "1013.GRUNDFAEHIGKEIT.Medizin",
+            "1013.GRUNDFAEHIGKEIT.Kinder",
+            "1013.GRUNDFAEHIGKEIT.JungeLeute",
+            "1013.GRUNDFAEHIGKEIT.Handwerker",
+            "1013.GRUNDFAEHIGKEIT.ExistenzPlanKreativ"
+        ]
+    },
+    {
+        "ID": "riester-SNOOPR",
+        "Bezeichnung": "Riester Rentenversicherung",
+        "Kurzbezeichnung": "Riester-Rente",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-7VCQ-U5MZT-12.riester.Riester_Wirtschaftsing",
+            "D-7VCQ-U5MZT-12.riester.Riester_Selbststaendige",
+            "D-7VCQ-U5MZT-12.riester.Riester_Lehrer",
+            "D-7VCQ-U5MZT-12.riester.Riester_Ingenieur",
+            "D-7VCQ-U5MZT-12.riester.Riester_BWLer"
+        ]
+    },
+    {
+        "ID": "BAV-BU-SNOOPR",
+        "Bezeichnung": "Berufsunfähigkeitsversicherung (bAV)",
+        "Kurzbezeichnung": "Berufsunfähigkeit (bAV)",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "berufsunfaehigkeitBAV",
+        "Highlights": "<p><br /></p>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "1062.SBUDV.Standard",
+            "1062.FSBUDV.Standard",
+            "5340.PBUDV.Standard",
+            "5340.PEUDV.Standard",
+            "5414.SBU54.Standard",
+            "5414.SBU53.Standard"
+        ]
+    },
+    {
+        "ID": "RISIKO-SNOOPR",
+        "Bezeichnung": "Risikolebensversicherung",
+        "Kurzbezeichnung": "Risikoleben",
+        "HatLeistungen": true,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "risiko",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Risikolebensversicherung</h1><p>Ganz egal, ob du deine Familie und Kinder, deinen Lebens- oder auch Geschäftspartner finanziell absichern möchtest: eine Risikolebensversicherung zahlt im Falle deines Todes in der Regel einen höheren Geldbetrag aus. Sie ist aber nicht nur als Familienabsicherung sinnvoll, sondern dient häufig auch der Kreditabsicherung.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du möchtest deine junge Familie absichern? Rechne aus, welches monatliche Einkommen im Falle deines Todes fehlen würde. Wie viele Jahre fehlt es, bevor deine Hinterbliebenen alleine klar kommen? Erhöhe die Summe um deine Kredite, die abgelöst werden sollen. Jetzt kennst du die Versicherungssumme für deine Risikolebensversicherung.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Du hast einen Kredit, den du regelmäßig abbezahlst? Dadurch sinkt der Restkredit im Laufe der Zeit. Für den Todesfall, kannst du eine Risikolebensversicherung mit fallender Todesfallsumme abschließen. Sie orientiert sich an deinem Kreditverlauf und löst das Darlehen im Falle des Falles ab.</li></ul><div></div></div>",
+        "Leistungen": [{
+                "Titel": "Allgemeine Leistungen",
+                "Fakten": {
+                    "RISIKO_ALLG_DYNAMIK": {
+                        "Text": "Dynamikoption",
+                        "Hilfe": "In der Regel wirst du eine Risikolebensversicherung über einen längeren Zeitraum abschließen. Im Laufe der Zeit kann dein Anspruch an die Versicherungssumme steigen, weil du beispielsweise Kinder bekommst oder ein Haus kaufst. Um solchen Fällen gerecht zu werden lassen sich Versicherungssumme und Beitrag um einen bestimmten Prozentsatz pro Jahr erhöhen."
+                    },
+                    "RISIKO_ALLG_AUSZAHLUNG": {
+                        "Text": "Vorgezogene Auszahlung",
+                        "Hilfe": "Unter bestimmten Voraussetzungen kann die Versicherungssumme bereits zu Lebzeiten ganz oder teilweise ausbezahlt werden. Ein Grund kann eine schwere Krankheit mit geringer Lebenserwartung sein."
+                    },
+                    "RISIKO_ALLG_TOD_AUSLAND": {
+                        "Text": "Leistung bei Todesfall im Ausland?",
+                        "Hilfe": "Eventuell gibt es beim Versicherer gesonderte Bedingungen, wenn der Versicherungsnehmer im Ausland stirbt. Das kann beispielsweise bei einem längeren Auslandsaufenthalt oder bei Aufenthalt in einem Krisengebiet der Fall sein."
+                    },
+                    "RISIKO_ALLG_VERLAENGERUNG": {
+                        "Text": "Verlängerungsoption",
+                        "Hilfe": "Bei dieser Option kannst du die Dauer des Versicherungsschutzes bei Bedarf nachträglich verlängern."
+                    },
+                    "RISIKO_ALLG_NACHVERSICHERUNGSGARANTIE": {
+                        "Text": "Nachversicherungsgarantie",
+                        "Hilfe": "Weist der Tarif eine Nachversicherungsgarantie auf, können dessen Leistungen bei speziellen Ereignissen wie Hochzeit, der Geburt eines Kindes oder beim Kauf einer Immobilie nachträglich erhöht werden."
+                    }
+                }
+            },
+            {
+                "Titel": "Tarifvoraussetzungen",
+                "Fakten": {
+                    "RISIKO_VORAUSSETZUNGEN_RAUCHER": {
+                        "Text": "Vergünstigungen für Nichtraucher",
+                        "Hilfe": "Ab wann jemand als Nichtraucher gilt, definieren die Versicherer teils unterschiedlich. Bei den meisten bist du Nichtraucher, wenn du seit einem Jahr nicht geraucht hast. Einige Versicherer verlangen aber, dass du über einen noch längeren Zeitraum nicht zur Zigarette gegriffen hast."
+                    },
+                    "RISIKO_VORAUSSETZUNGEN_BESONDERE": {
+                        "Text": "Keine besonderen Voraussetzungen",
+                        "Hilfe": "Einige Tarife verlangen nach speziellen Voraussetzungen - beispielsweise, dass du beim Versicherer bereits über eine bestimmte andere Versicherung verfügst."
+                    }
+                }
+            }
+        ],
+        "Produktvarianten": [
+            "5515.RISIKO.AT3",
+            "5515.RISIKO.ALTV2Nichtraucher",
+            "5515.RISIKO.ALTV2",
+            "5210.RISIKO.Motorrad",
+            "5210.RISIKO.Familiengruender",
+            "5210.RISIKO.Existenzgruender",
+            "5210.RISIKO.Baufinanzierer",
+            "5055.PRLV.Konstant",
+            "1167.RL4.StandardFamilie",
+            "1167.RL4.Standard",
+            "1167.RL1.Konstant",
+            "5414.RISIKO21.Konstant",
+            "5414.RISIKO21.Fallend",
+            "5340.RL.Standard",
+            "5340.RL.Premium",
+            "1167.RL1.Fallend",
+            "5055.RLV.Konstant",
+            "5472.RLV.Premium"
+        ],
+        "MediaSet": "SNOOPR.RISIKO-SNOOPR"
+    },
+    {
+        "ID": "BAV-RENTE-SNOOPR",
+        "Bezeichnung": "Rentenversicherung (bAV)",
+        "Kurzbezeichnung": "Rente (bAV)",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "2",
+        "Controller": "renteBAV",
+        "Highlights": "<p><br /></p>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "1062.RT1DV.Standard",
+            "1062.RT1DV.OhneIndex",
+            "1062.RT1DV.MitIndex",
+            "1062.FRVDV.Standard",
+            "5414.RENTE75.Standard",
+            "5414.RENTE79.Standard",
+            "5512.RK.Standard",
+            "5512.RXDV.Standard",
+            "5512.FRWXFKDV.Standard"
+        ]
+    },
+    {
+        "ID": "BU-SNOOPR",
+        "Bezeichnung": "Berufsunfähigkeitsversicherung",
+        "Kurzbezeichnung": "Berufsunfähigkeit",
+        "HatLeistungen": true,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "2",
+        "Controller": "berufsunfaehigkeit",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Berufsunfähigkeitsversicherung</h1><p>Wenn du durch Krankheit oder Unfall dauerhaft nicht mehr in der Lage bist, deinem Beruf nachzugehen, stehst du vor echten finanziellen Problemen. Die Leistungen aus der gesetzlichen Versicherung sind viel zu gering. Wenn du nach dem 01.01.1961 geboren bist, bekommst du nur noch eine Erwerbsminderungsrente. Sie liegt meist unter dem Grundsicherungsniveau. Die Berufsunfähigkeitsversicherung zahlt eine Rente, wenn du deinen Beruf dauerhaft nicht mehr ausüben kannst. Damit ist sie eine der wichtigsten Versicherungen überhaupt.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Neun von zehn Renten wegen Berufsunfähigkeit werden aufgrund von Krankheit gezahlt. Mit 27 Prozent sind psychische Erkrankungen die häufigste Ursache, gefolgt von Krebserkrankungen, die etwa 20 Prozent ausmachen. Häufig sind auch Erkrankungen des Bewegungsapparates mit ca. 19 Prozent. Unfälle sind in 12 Prozent aller Fälle Ursache für die Berufsunfähigkeit.</li></ul><div></div></div>",
+        "Leistungen": [{
+                "Titel": "Allgemein",
+                "Fakten": {
+                    "BERUFSUNFAEHIGKEIT_ALLGEMEIN_BERUF": {
+                        "Text": "Wird mein letzter Beruf versichert?",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_ALLGEMEIN_WELTWEIT": {
+                        "Text": "Weltweiter Versicherungsschutz",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_ALLGEMEIN_LEBENSLANG": {
+                        "Text": "Lebenslange Berufsunfähigkeitsrente",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_ALLGEMEIN_BEITRAGSPAUSE": {
+                        "Text": "Möglichkeit auf Pausierung der Beitragszahlung",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Wann zahlt meine Berufsunfähigkeitsversicherung?",
+                "Fakten": {
+                    "BERUFSUNFAEHIGKEIT_VERSICHERT_TERROR": {
+                        "Text": "Bei Terroranschlägen",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_VERSICHERT_FREIZEIT": {
+                        "Text": "Bei gefährlichen Hobbys",
+                        "Hilfe": "z.B. Klettern, Kampfsport, Fallschirmspringen"
+                    },
+                    "BERUFSUNFAEHIGKEIT_VERSICHERT_PSYCHISCHE": {
+                        "Text": "Bei psychischer Erkrankung",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_VERSICHERT_KRANKHEIT_KIND": {
+                        "Text": "Bei Krankheit des Kindes",
+                        "Hilfe": "Ist dein Kind z.B. durch einen Unfall schwer verletzt. Zahlt deine Versicherung auch deine \"Berufsunfähigkeit\" für diesen Zeitraum."
+                    },
+                    "BERUFSUNFAEHIGKEIT_VERSICHERT_VERKEHRSDELIKT": {
+                        "Text": "Bei Verkehrsdelikten",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_VERSICHERT_FAHRTVERANSTALTUNG": {
+                        "Text": "Bei Rennen mit dem Ziel der Höchstgeschwindigkeit",
+                        "Hilfe": "z.B. Gokart, Autorennen, Fahrradrennen. So genannte Fahrtveranstaltungen."
+                    }
+                }
+            },
+            {
+                "Titel": "Im Ernstfall...",
+                "Fakten": {
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_FRIST": {
+                        "Text": "habe ich keine Frist zur Meldung der Berufsunfähigekeit",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_ARZTWAHL": {
+                        "Text": "habe ich freie Arztwahl zur Feststellung der Berufsunfähigkeit",
+                        "Hilfe": "Einige Versicherer überlassen dir, von welchem Arzt du dir deine Berufsunfähigkeit bescheinigen lässt."
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_VERWEISUNG": {
+                        "Text": "habe ich keine Verweisung auf andere Tätigkeiten",
+                        "Hilfe": "Tritt der Ernstfall einer Berufsunfähigkeit bei dir ein, prüft der Versicherer, ob du ggf. einer anderen Tätigkeit nachkommen könntest. Wenn ja, würder der Versicherer dir keine Leistungen zahlen. Verzichtet der Versicherer jedoch auf die Verweisung, wird deine vereinbarte Leistung ausgzahlt."
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_RUECKWIRKEND": {
+                        "Text": "habe ich Anspruch auf rückwirkende Zahlungen",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_BEITRAGSBEFREIUNG": {
+                        "Text": "wird mein Tarif beitragsfrei",
+                        "Hilfe": "Tritt der Ernstfall einer Berufunfähigkeit ein, bieten einige Versicherer eine Beitragsbefreiung an."
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_WIEDEREINGLIEDERUNG": {
+                        "Text": "bietet der Versicherer mir eine Wiedereingliederungshilfe",
+                        "Hilfe": "Hast du deine Berufunfähigkeit überwunden und kannst wieder anfangen zu arbeiten, bieten Versicherer Unterstützung bei der Rückkehr in den Beruf an."
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_LEISTUNG_AB_50PROZENT": {
+                        "Text": "erhalte ich ab 50% Berufsunfähigkeit volle Leistung",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_ERNSTFALL_VERKUERZTER_PROGNOSEZEITRAUM": {
+                        "Text": "habe ich einen auf 6 Monate verkürzten Prognosezeitraum",
+                        "Hilfe": ""
+                    }
+                }
+            },
+            {
+                "Titel": "Flexibilität des Tarifs",
+                "Fakten": {
+                    "BERUFSUNFAEHIGKEIT_FLEXIBILITAET_DYNAMIK": {
+                        "Text": "Beitragsdynamik möglich",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_FLEXIBILITAET_RENTENDYNAMIK": {
+                        "Text": "Rentendynamik im Leistungsfall möglich",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_FLEXIBILITAET_DYNAMIK_AUSSETZEN": {
+                        "Text": "Aussetzen der Beitragsdynamik",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_FLEXIBILITAET_NACHVERSICHERUNGSGARANTIE": {
+                        "Text": "Nachversicherungsgarantie",
+                        "Hilfe": "auch Erhöhungsmöglichkeiten genannt"
+                    }
+                }
+            },
+            {
+                "Titel": "Beantragung",
+                "Fakten": {
+                    "BERUFSUNFAEHIGKEIT_BEANTRAGUNG_UNTERSUCHUNG": {
+                        "Text": "Keine ärztlichen Untersuchungen",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_BEANTRAGUNG_ABFRAGE_AMBULANT": {
+                        "Text": "Abfragezeitraum ambulant",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_BEANTRAGUNG_ABFRAGE_PSYCHISCHE": {
+                        "Text": "Abfragezeitraum psychische Behandlungen",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_BEANTRAGUNG_ABFRAGE_STATIONAER": {
+                        "Text": "Abfragezeitraum stationär",
+                        "Hilfe": ""
+                    },
+                    "BERUFSUNFAEHIGKEIT_BEANTRAGUNG_ABFRAGE_BEWEGUNGSAPPARAT": {
+                        "Text": "Abfragezeitraum Bewegungsapparat",
+                        "Hilfe": ""
+                    }
+                }
+            }
+        ],
+        "Produktvarianten": [
+            "D-82V9-WHWW4-42.BU.SchornsteinfegerBU",
+            "D-7VCQ-U5MZT-12.BU.BU_Wirtschaftsingenieur",
+            "D-7VCQ-U5MZT-12.BU.BU_Student",
+            "D-7VCQ-U5MZT-12.BU.BU_Lehrer",
+            "D-7VCQ-U5MZT-12.BU.BU_Ingenieur",
+            "D-7VCQ-U5MZT-12.BU.BU_BWLer",
+            "5210.BU.Youtuber",
+            "5210.BU.Studenten",
+            "5210.BU.Soldaten",
+            "5210.BU.Sicherheitsberufe",
+            "5210.BU.Mediziner",
+            "5210.BU.Kaufmann",
+            "5210.BU.Handwerker",
+            "5210.BU.EUMusiker",
+            "5210.BU.DreadDisease",
+            "5210.BU.Azubis",
+            "1062.SBUV.Standard",
+            "1062.SBU.Start",
+            "1062.SBU.Standard",
+            "1062.FSBU.Standard",
+            "1013.BU.Komnfort",
+            "5340.PBU.Standard",
+            "5340.PEU.Standard",
+            "5340.PBU.Start",
+            "5340.PBU.Schueler",
+            "5340.PEU.Start",
+            "5414.SBU56.Standard",
+            "5414.SBU55.Standard",
+            "5515.ALVSBV.Standard",
+            "5515.ALVSBV.Start",
+            "1062.SBU.StartSchueler",
+            "5515.ALVSBV.StandardWelten",
+            "5512.BV.Standard",
+            "5512.EV.Standard",
+            "5515.AEBV.Standard"
+        ],
+        "MediaSet": "SNOOPR.BU-SNOOPR"
+    },
+    {
+        "ID": "BASISRENTE-SNOOPR",
+        "Bezeichnung": "Basisrentenversicherung",
+        "Kurzbezeichnung": null,
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "3",
+        "Controller": "basisrente",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Unbesorgt in den Ruhestand</h1><p class=\"bos-salesproduct-info\">Auch im Alter braucht man Geld. Um für den Ruhestand finanziell vorzusorgen, schließen viele Leute eine Basisrente ab, die auch als Rürup-Rente bezeichnet wird. Dabei handelt es sich um eine steuerlich begünstigte Altersvorsorge, die sich vor allem an Angestellte mit hohen steuerlichen Belastungen und Selbstständige richtet. </p><h3>Beispiele:</h3><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du bist selbstständig und wirst daher im Alter keine Ansprüche aus der gesetzlichen Rentenversicherung haben. Mit einer Basisrente kannst du aber ideal fürs Alter vorsorgen.</li><li class=\"bos-salesproduct-example-1\">Du bist Angesteller in einem großen Unternehmen und hast ein überdurchschnittliches Einkommen. Zwar sorgst Du schon fürs Alter vor, du würdest aber am liebsten noch etwas mehr zurücklegen. Dann ist eine Basisrente eine gute Investition für dich, weil sie dir später nicht nur mehr Geld im Alter garantiert, sondern dir auch augenblicklich steuerliche Vorteile bringt.</li></ul></div>",
+        "Produktvarianten": [
+            "1062.FBRV.Standard",
+            "1062.FBRV.Pflegeschutz",
+            "1062.FBRV.Nettotarif",
+            "5414.RENTE85.Standard",
+            "5414.RENTE86.Standard",
+            "5414.RENTE65.Standard",
+            "5512.RXB.Standard",
+            "5515.ALVF.ALVF1",
+            "5515.ALVF.ALVF2",
+            "5515.ALVF.ALVFX5",
+            "5515.ALVIB.ALVI1",
+            "5515.ALVIB.ALVI2",
+            "5515.ALVIB.ALVIX5",
+            "5515.ALVG.ALVG1",
+            "5515.ALVG.ALVG2"
+        ],
+        "MediaSet": "SNOOPR.BASISRENTE-SNOOPR"
+    },
+    {
+        "ID": "RENTE-SNOOPR",
+        "Bezeichnung": "Private Rentenversicherung",
+        "Kurzbezeichnung": "Privatrente",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "4",
+        "Controller": "rente",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Privat vorsorgen, das Alter genießen</h1><p>Wer seine Ansprüche im Alter nicht allzu weit nach unten schrauben möchte, muss eigenständig vorsorgen, anstatt sich nur auf die gesetzliche Rentenversicherung zu verlassen. Eine private Rentenversicherung hilft dabei. Sie beinhaltet eine Rente, die nach Eintritt in den Ruhestand lebenslang gezahlt wird.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du hast teure Hobbies, bei denen du dir sicher bist, dass du sie auch im Alter noch ausführen wirst. Das kann beispielsweise das sonntägliche Golfspielen sein. Damit du dir diese Hobbies auch im Ruhestand noch leisten kannst, musst du vorsorgen, weil die gesetzliche Rentenversicherung im Allgemeinen nur das Existenzminimum sichert. Das gelingt dir mit einer privaten Rente, bei der du entscheiden kannst, wie viel du monatlich einzahlst.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-QPL2-UZMX0-61.RENTE.Nachhaltig",
+            "5515.ALVI.ALVIX5",
+            "5515.ALVI.ALVIP2",
+            "5515.ALVI.ALVI7",
+            "5515.ALVI.ALVI5",
+            "5515.ALVI.ALVI2",
+            "5515.ALVI.ALVI1",
+            "1062.RT1.Standard",
+            "1062.RT1.OhneIndex",
+            "1062.RT1.MitIndex",
+            "1062.FRV.Start",
+            "1062.FRV.Standard",
+            "1062.FRV.Nettotarif",
+            "1062.FRV.Kids",
+            "1047.RENTE.Wiederanleger",
+            "1047.IUL.Versicherungskonto",
+            "1047.IUL.Selbststaendige",
+            "1013.RENTE.Plus",
+            "5414.RENTE67.Standard",
+            "5414.RENTE87.Standard",
+            "5414.RENTE88.Standard",
+            "5414.RENTE89.Standard",
+            "5512.RX.Standard",
+            "5512.FRWX.Standard",
+            "5512.FRWXFK.Standard",
+            "5515.ALVFAV.ALVF1",
+            "5515.ALVFAV.ALVF2",
+            "5515.ALVFAV.ALVFP2",
+            "5515.ALVFAV.ALVFX5"
+        ],
+        "MediaSet": "SNOOPR.RENTE-SNOOPR"
+    },
+    {
+        "ID": "STERBEGELD-SNOOPR",
+        "Bezeichnung": "Sterbegeldversicherung",
+        "Kurzbezeichnung": "Sterbegeld",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "5",
+        "Controller": "sterbegeld",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Sterbegeldversicherung</h1><p>Seit 2004 zahlen die Krankenkassen keine Bestattungsleistungen mehr aus. Deshalb werden häufig Sterbegeldversicherungen abgeschlossen, die im Todesfall eine kleinere Geldsumme auszahlen. Dieser Betrag wird zur Deckung der Bestattungskosten verwendet, die schnell zwischen 3000 und 15000 Euro liegen.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Der Bestatter verlangt für die Überführung, Totenkleidung, den Sarg und weitere Leistungen bis zu 2500 Euro. Für Fremdleistungen wie Anzeigen, Trauerredner, Kränze, Musik und einen üblichen Kaffeetisch werden schnell 3000 Euro fällig. Hinzu kommen noch Friedhofsgebühren für die Beisetzung und Nutzungsgebühren für das Grab in Höhe von rund 4000 Euro.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "1323.STERBEGELD.Sterbeversicherung",
+            "1323.STERBEGELD.Sterbekasse",
+            "1323.STERBEGELD.Sterbegeldversicherung",
+            "1323.STERBEGELD.Sterbegeld",
+            "1323.STERBEGELD.Bestattungsvorsoge",
+            "1323.STERBEGELD.Bestattungskosten",
+            "1323.STERBEGELD.Beerdigungsversicherung",
+            "1062.VR0.Standard",
+            "1062.SV.Standard",
+            "1047.ISG.StandardReise",
+            "1047.ISG.Standard",
+            "1047.ISG.Kompakt",
+            "1047.IBV.Standard",
+            "5414.TOD90.5000",
+            "5414.TOD90.10000",
+            "5414.TOD90.15000",
+            "5340.SGC.Versicherungssumme15000",
+            "5340.SGC.Versicherungssumme7500",
+            "5340.SGC.Versicherungssumme10000",
+            "5340.SGC.Versicherungssumme5000",
+            "1062.SV.StandardSenioren"
+        ],
+        "MediaSet": "SNOOPR.STERBEGELD-SNOOPR"
+    },
+    {
+        "ID": "EINMALANLAGE-SNOOPR",
+        "Bezeichnung": "Rentenversicherung (Einmalanlage)",
+        "Kurzbezeichnung": "Einmalanlage",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "6",
+        "Controller": "einmalanlage",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Rente gegen Einmalbeitrag</h1><p>Wer einen größeren Geldbetrag für seine Altersvorsorge anlegen möchte, wird bei Einmalanlagen von Versicherern fündig. Dazu zählen Produkte, die für alle Interessierten offen sind, und Wiederanlagen, bei denen man Leistungen aus einer bestehenden Versicherung reinvestiert. Gegen Zahlung des Geldbetrags wird eine lebenslange Rente finanziert, die wahlweise sofort beginnt oder erst ab einem bestimmten Alter.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du hast einen größeren Geldbetrag geerbt. Da du das Geld gerade nicht brauchst und bis zu deinem offiziellen Rentenbeginn noch ein paar Jährchen arbeiten musst, investierst du dein Erbe in eine aufgeschobene Rente mit Einmalzahlung, die dir nach Rentenbeginn monatlich ausgezahlt werden wird.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du gehst in Frührente und bekommt fast zeitgleich von deinem Arbeitgeber eine Abfindung ausgezahlt. Um deine gesetzliche Rente aufzubessern, investierst du das Geld in eine sofortbeginnende Rente, die dir direkt im Anschluss monatlich ausgezahlt wird.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du hast vor Jahren eine kapitalbildende Lebensversicherung abgeschlossen, die dir nun kurz vor Renteneintritt ausgezahlt wird. Der Versicherer, bei dem du die Lebensversicherung damals abgeschlossen hast, bietet eine Rente als Wiederanlage an. In die kannst du die erhaltene Versicherungssumme direkt einzahlen und so besondere Konditionen in Anspruch nehmen, die nur für Wiederanlagen gelten. Der Abschluss sichert dir eine zusätzliche Rente im Ruhestand.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "1062.RT3.Standard",
+            "5414.PDC.Standard",
+            "5414.RENTE62.Standard",
+            "5414.RENTE67.Einmalbeitrag",
+            "5414.RENTE87.Einmalbeitrag",
+            "5414.RENTE88.Einmalbeitrag",
+            "5414.RENTE89.Einmalbeitrag",
+            "5512.RX.Einmalbetrag",
+            "5512.RX.ExtraEinmalbetrag",
+            "5512.FRWX.StandardEinmalbeitrag"
+        ],
+        "MediaSet": "SNOOPR.EINMALANLAGE-SNOOPR"
+    },
+    {
+        "ID": "UNFALL-SNOOPR",
+        "Bezeichnung": "Unfallversicherung",
+        "Kurzbezeichnung": "Unfall",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "7",
+        "Controller": "unfall",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Gut abgesichert im Fall der Fälle</h1><p>Das ahnst du nicht! Rund acht Millionen Menschen erleiden jedes Jahr in Deutschland einen Unfall – schwere Unfälle können bleibende körperliche Schäden und auch finanzielle Probleme hinterlassen. Die private Unfallversicherung schützt vor den finanziellen Folgen eines solchen Unfalls. Egal ob dauerhaft oder einmalige finanzielle Belastungen, körperliche oder geistige Beeinträchtigungen oder sogar Tod – die Unfallversicherung sichert dich und deine Angehörigen ab. Aber: Der beste Unfall ist der, der nicht passiert!</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du bist mit deiner Familie im Skiurlaub und stürzt plötzlich. Die Folge: Eine dauerhafte Gehbehinderung. Da du in der dritten Etage ohne Aufzug wohnst, zahlt deine Unfallversicherung dir den Umzug, die ggf. höheren Mieten, den Umbau deines Autos, Therapien oder Gehhilfen und nach Bedarf und Versicherungsschutz weitere Leistungen.</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Dein Kind ist viel auf dem Spielplatz unterwegs. Obwohl dein Kind ein geübter Kletterer ist, stürzt es von einem hohen Gerüst. Es wird dauerhaft behindert bleiben. Die Unfallversicherung unterstützt dich beim Einsatz einer Betreuungshilfe, deckt weitere Therapien ab und organisiert notwendige Fahrdienste, wenn du dein Kind einmal nicht fahren kannst.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-JWNS-F5XWB-75.UV.PrimusPlus",
+            "D-JWNS-F5XWB-75.UV.Primus",
+            "D-757R-Q80BD-23.UV.19",
+            "D-757R-Q80BD-23.UNFALL.Wintersportunfall",
+            "D-757R-Q80BD-23.UNFALL.UnfallPremium",
+            "D-757R-Q80BD-23.UNFALL.UnfallKinder",
+            "D-757R-Q80BD-23.UNFALL.UnfallErwachsene",
+            "5512.UNFALL.Basis",
+            "5340.UNFALL.XXLOhneSchutzbriefMitTopschutzRente",
+            "5340.UNFALL.XXLOhneSchutzbriefMitTopschutz",
+            "5121.UNFALL.Skilehrer",
+            "5121.UNFALL.Schornsteinfeger",
+            "5121.UNFALL.Saisonarbeiter",
+            "5121.UNFALL.Physiotherapeuten",
+            "5121.UNFALL.Musiker",
+            "5121.UNFALL.Handwerker",
+            "5121.UNFALL.Flugbegleiter",
+            "1100.UNFALL.Gleichgewicht",
+            "5340.UNFALL.XXLMitSchutzbrief",
+            "5340.UNFALL.XXLOhneSchutzbrief",
+            "5340.UNFALL.XLMitSchutzbrief",
+            "5340.UNFALL.XLOhneSchutzbrief",
+            "5384.UNFALL.Vital",
+            "5384.UNFALL.JuniorJuraTopcare",
+            "5384.UNFALL.JuraPlus",
+            "5384.UNFALL.KosmetischeOperationen"
+        ],
+        "MediaSet": "SNOOPR.UNFALL-SNOOPR"
+    },
+    {
+        "ID": "LEBEN-SNOOPR",
+        "Bezeichnung": "Lebensversicherung",
+        "Kurzbezeichnung": "Leben",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "8",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "UNFALLRENTE-SNOOPR",
+        "Bezeichnung": "Unfallrentenversicherung",
+        "Kurzbezeichnung": "Unfallrente",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "8",
+        "Controller": "unfallrente",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Unfallrente</h1><p>Unfälle können jeden treffen. Die private Unfallrente unterstützt dich nach einem Unfall mit einer vorher vereinbarten monatlichen Zahlung. Meist greift diese Zahlung ab einer Invalidität von mindestens 50 Prozent und wird häufig in Verbindung zu einer klassischen Unfallversicherung abgeschlossen. Dabei greift die private Unfallrente in viel mehr Fällen als die gesetzliche Unfallrente und versichert auch Unfälle in der Freizeit oder beim Sport.</p><h3>Beispiel:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Durch einen Unfall verlierst du ein Auge. Nach der Überprüfung der Versicherung über die Höhe der Invalidität, wird dir die Auszahlung deiner Unfallrente zugesagt. Ab diesem Zeitpunkt erhältst du monatlich eine feste vorher abgesprochene Rente, hier 1.000 €.</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5340.UNFALL.XXLMitSchutzbriefRente",
+            "1047.IUR.Klassik",
+            "1047.IUR.Exklusiv",
+            "1047.IUR.KompaktKlassik",
+            "1047.IUR.KompaktExklusiv",
+            "5340.UNFALL.XXLOhneSchutzbriefRente",
+            "5340.UNFALL.XLMitSchutzbriefRente",
+            "5340.UNFALL.XLOhneSchutzbriefRente",
+            "1047.IUR.KompaktKlassikTaucher"
+        ],
+        "MediaSet": "SNOOPR.UNFALL-SNOOPR"
+    },
+    {
+        "ID": "DREADDISEASE-SNOOPR",
+        "Bezeichnung": "Dread-Disease Versicherung",
+        "Kurzbezeichnung": "Dread-Disease",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "9",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "ALO-SNOOPR",
+        "Bezeichnung": "Arbeitslosigkeitsversicherung",
+        "Kurzbezeichnung": "Arbeitslosigkeit",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "VORSORGE-SNOOPR",
+        "ProduktgruppenSortierung": "28",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-KMEV-FU0OG-57.ALO.Einkommensschutzbrief"
+        ]
+    },
+    {
+        "ID": "DANDO-SNOOPR",
+        "Bezeichnung": "Directors & Officers Versicherung",
+        "Kurzbezeichnung": "D & O",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-JYJP-LS9SQ-80.DANDO.DUOKonzept",
+            "D-JYJP-LS9SQ-80.DANDO.BESTDUO2"
+        ]
+    },
+    {
+        "ID": "GEBAEUDE-SNOOPR",
+        "Bezeichnung": "Gewerbe-Gebäudeversicherung",
+        "Kurzbezeichnung": "Gewerbegebäude",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "GEWERBESPEZIAL-SNOOPR",
+        "Bezeichnung": "Gewerbe-Spezialversicherung",
+        "Kurzbezeichnung": "Gewerbe-Spezial",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-GXZB-5WVPN-46.GEWERBESPEZIAL.Diskothekenversicherung",
+            "D-EIVK-J2KUX-04.BHV.Deckungskonzept_Verleger",
+            "D-EIVK-J2KUX-04.BHV.Buchhandel_Deckungskonzept",
+            "D-CPVS-4R8RG-61.GEWERBESPEZIAL.Waschbetriebe_MultiRisk",
+            "5221.GEWERBESPEZIAL.Youtuber",
+            "5221.GEWERBESPEZIAL.Unternehmensberater",
+            "5221.GEWERBESPEZIAL.Personalberater",
+            "5221.GEWERBESPEZIAL.OnlineHaendler",
+            "5221.GEWERBESPEZIAL.Journalisten",
+            "5221.GEWERBESPEZIAL.Influencer",
+            "5221.GEWERBESPEZIAL.Gastronomie",
+            "5221.GEWERBESPEZIAL.Einzelhaendler",
+            "5221.GEWERBESPEZIAL.Bueropolice_Agenturen",
+            "5221.GEWERBESPEZIAL.BUEROPOLICE",
+            "5221.GEWERBESPEZIAL.Blogger",
+            "5221.GEWERBESPEZIAL.Autoren",
+            "5125.GEWERBESPEZIAL.Konditoreien3Mio",
+            "5125.GEWERBESPEZIAL.Konditoreien10",
+            "5125.GEWERBESPEZIAL.Fleischer10",
+            "5125.GEWERBESPEZIAL.Fleischer",
+            "5125.GEWERBESPEZIAL.Baeckerei",
+            "5125.GEWERBESPEZIAL.Baecker10Mio",
+            "5121.GEWERBESPEZIAL.Yogalehrer",
+            "5121.GEWERBESPEZIAL.KFZWerkstatt",
+            "5121.GEWERBESPEZIAL.Friseur",
+            "5121.GEWERBESPEZIAL.Fitnessstudios",
+            "5121.GEWERBESPEZIAL.Fingernagelstudio",
+            "5121.GEWERBESPEZIAL.Fahrschulen",
+            "5121.GEWERBESPEZIAL.Eisdiele",
+            "5121.GEWERBESPEZIAL.Cafe",
+            "5121.GEWERBESPEZIAL.Bioladen",
+            "5121.GEWERBESPEZIAL.Abschleppdienst",
+            "1099.GEWERBE.Deckungskonzept"
+        ]
+    },
+    {
+        "ID": "KREDIT-SNOOPR",
+        "Bezeichnung": "Kreditversicherung",
+        "Kurzbezeichnung": "Kredit",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "MULTIRISK-SNOOPR",
+        "Bezeichnung": "Allgefahrenversicherung",
+        "Kurzbezeichnung": "Multi-Risk",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-GXZB-5WVPN-46.MULTIRISK.Hotelversicherung",
+            "D-0PTO-DPVXB-80.MULTIRISK.MetallRecycling",
+            "D-0PTO-DPVXB-80.MULTIRISK.AutoverwerterVersicherung"
+        ]
+    },
+    {
+        "ID": "PRAXIS-SNOOPR",
+        "Bezeichnung": "Praxisausfallversicherung",
+        "Kurzbezeichnung": "Praxisausfall",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "REGRESS-SNOOPR",
+        "Bezeichnung": "Regressversicherung",
+        "Kurzbezeichnung": "Regress",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "VERTRAUEN-SNOOPR",
+        "Bezeichnung": "Vertrauensschadenversicherung",
+        "Kurzbezeichnung": "Vertrauensschaden",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "BHV-SNOOPR",
+        "Bezeichnung": "Betriebs- / Berufshaftpflichtversicherung",
+        "Kurzbezeichnung": "Betriebshaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "1",
+        "Controller": "betriebshaftpflicht",
+        "Highlights": "<div class=\"bos-salesproduct-highlight\"><h1 class=\"bos-salesproduct-title\">Die Haftpflicht für selbstständige Tätigkeiten</h1><p>Die Betriebshaftpflichtversicherung ist die wichtigste Versicherung zur finanziellen Absicherung für Selbstständige und Freiberufler bei Personen- oder Sachschäden Dritter. Denn bei aller Vorsicht kannst du nie ausschließen, dass du im Rahmen deiner Tätigkeit einen anderen Menschen verletzt oder dessen Eigentum beschädigst.</p><h3>Beispiele:</h3><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-1\">Du bist Restaurantbesitzer. Wegen Glatteis stürzt ein Kunde auf dem betriebseigenen Parkplatz und erleidet einen komplizierten Hüftgelenksbruch. Die Folge: Er bleibt für längere Zeit arbeitsunfähig. Wegen Verletzung der Verkehrssicherungspflicht verlangt der Gestürzte Schmerzensgeld und eine Entschädigung für den Verdienstausfall. Die Betriebshaftpflichtversicherung zahlt!</li></ul><p></p><ul class=\"bos-salesproduct-examples\"><li class=\"bos-salesproduct-example-2\">Ein Mitarbeiter in deinem Schreinerbetrieb fertigt ein mangelhaftes Treppengeländer an. Ein spielendes Kind verletzt sich schwer, als das Geländer an der schadhaften Stelle bricht. Als Folge muss das Kind dauerhaft in einen Rollstuhl nutzen. Die Eltern verlangen für ihr Kind Schmerzensgeld, Kostenersatz für den Umbau einer behindertengerechten Wohnung und Mehraufwendungen für die Betreuung und Pflege des Kindes. Die Krankenkasse macht Ersatz ihrer Heilbehandlungskosten geltend. Die Betriebshaftpflichtversicherung zahlt!</li></ul><div></div></div>",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-QPSI-TK1ET-23.BHV.Betriebshaftpflichtversicherung",
+            "D-EIVK-J2KUX-04.BHV.Buchhandel_Haftpflicht",
+            "D-EIVK-J2KUX-04.BHV.BHVVerlage",
+            "5414.BHV.Handwerker",
+            "5061.BHV.OhnePHV",
+            "5061.BHV.MitPHV",
+            "1099.GEWERBE.Betriebshaftpflicht",
+            "5340.BHV.XXL",
+            "5340.BHV.XL"
+        ],
+        "MediaSet": "SNOOPR.BHV-SNOOPR"
+    },
+    {
+        "ID": "KAUTION-SNOOPR",
+        "Bezeichnung": "Kautions- und Bürgschaftsversicherung",
+        "Kurzbezeichnung": "Kaution / Bürgschaft",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "10",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-CY42-YJ4YS-18.KAUTION.WKV_1",
+            "D-CY42-YJ4YS-18.KAUTION.Investitionskreditversicherung",
+            "D-CY42-YJ4YS-18.BAULEISTUNG.Buergschaft"
+        ]
+    },
+    {
+        "ID": "TRANSPORT-SNOOPR",
+        "Bezeichnung": "Transportversicherung",
+        "Kurzbezeichnung": "Transport",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "11",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-EIVK-J2KUX-04.TRANSPORT.Transportversicherung",
+            "D-EIVK-J2KUX-04.TRANSPORT.TransportVerlage"
+        ]
+    },
+    {
+        "ID": "CYBER-SNOOPR",
+        "Bezeichnung": "Cyber-Versicherung",
+        "Kurzbezeichnung": "Cyber",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "12",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-RDL2-KAQUE-62.CYBER.Einzelhandel",
+            "D-RDL2-KAQUE-62.CYBER.Cyberversicherung",
+            "D-IDER-XUPH5-91.CYBER.Markel_PRO_Cyber_fuer_Vermittler_Michaelis_Klausel",
+            "D-EIVK-J2KUX-04.CYBER.CyberVerlage",
+            "D-EIVK-J2KUX-04.BHV.Buchhandel_Cyber",
+            "D-0LLA-5ME8D-55.CYBER.Cyberkonzept",
+            "D-0LLA-5ME8D-55.CYBER.Apotheke",
+            "5405.CYBER.Lebensmittel",
+            "5405.CYBER.Kosmetiksalon",
+            "5405.CYBER.Hotels",
+            "5405.CYBER.Gewerbetreibende",
+            "5405.CYBER.Baugewerbe",
+            "5405.CYBER.Aerzte",
+            "5221.CYBER.Influencer",
+            "5221.CYBER.Cyber",
+            "5221.CYBER.Blogger"
+        ]
+    },
+    {
+        "ID": "VERMOEGEN-SNOOPR",
+        "Bezeichnung": "Vermögensschadenhaftpflichtversicherung",
+        "Kurzbezeichnung": "Vermögensschaden-HV",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "13",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-JYJP-LS9SQ-80.VERMOEGEN.BESTPROTECT",
+            "D-EIVK-J2KUX-04.VERMOEGEN.Verlage_Vermoegen"
+        ]
+    },
+    {
+        "ID": "FBU-SNOOPR",
+        "Bezeichnung": "Betriebsunterbrechungsversicherung",
+        "Kurzbezeichnung": "Betriebsunterbrechung",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "14",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-EIVK-J2KUX-04.FBU.BUVerlage",
+            "D-EIVK-J2KUX-04.BHV.Buchhandel_Unterbrechung"
+        ]
+    },
+    {
+        "ID": "INHALT-SNOOPR",
+        "Bezeichnung": "Inhaltsversicherung",
+        "Kurzbezeichnung": "Betriebsinhalt",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "15",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-EIVK-J2KUX-04.INHALT.InhaltVerlage",
+            "D-EIVK-J2KUX-04.INHALT.Inhalt",
+            "5515.SACH.Handwerker",
+            "1099.GEWERBE.GeschInhalt"
+        ]
+    },
+    {
+        "ID": "PRODUKT-SNOOPR",
+        "Bezeichnung": "Produkthaftpflichtversicherung",
+        "Kurzbezeichnung": "Produkthaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "16",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "MASCHINEN-SNOOPR",
+        "Bezeichnung": "Maschinenversicherung",
+        "Kurzbezeichnung": "Maschinenbruch",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "17",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "HRB-82244.MASCHINEN.Maschinen"
+        ]
+    },
+    {
+        "ID": "UMWELT-SNOOPR",
+        "Bezeichnung": "Umwelthaftpflichtversicherung",
+        "Kurzbezeichnung": "Umwelthaftpflicht",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "GEWERBE-SNOOPR",
+        "ProduktgruppenSortierung": "18",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "5121.UMWELT.Gewaesser"
+        ]
+    },
+    {
+        "ID": "ASSISTANCE-SNOOPR",
+        "Bezeichnung": "Assistance-Dienstleistung",
+        "Kurzbezeichnung": "Assistance",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "ERNTE-SNOOPR",
+        "Bezeichnung": "Ernteausfallversicherung",
+        "Kurzbezeichnung": "Ernteausfall",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "GARANTIE-SNOOPR",
+        "Bezeichnung": "Garantieversicherung",
+        "Kurzbezeichnung": "Garantie",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "HAGEL-SNOOPR",
+        "Bezeichnung": "Hagelversicherung",
+        "Kurzbezeichnung": "Hagel",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "HOERGERAETE-SNOOPR",
+        "Bezeichnung": "Hörgeräteversicherung",
+        "Kurzbezeichnung": "Hörgeräte",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "KOERPERTEIL-SNOOPR",
+        "Bezeichnung": "Körperteilversicherung",
+        "Kurzbezeichnung": "Körperteil",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "LOESEGELD-SNOOPR",
+        "Bezeichnung": "Entführungs- / Lösegeldversicherung",
+        "Kurzbezeichnung": "Lösegeld",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "MEHRGEFAHREN-SNOOPR",
+        "Bezeichnung": "Mehrgefahrenversicherung",
+        "Kurzbezeichnung": "Mehrgefahren",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "MONTAGE-SNOOPR",
+        "Bezeichnung": "Montageversicherung",
+        "Kurzbezeichnung": "Montage",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "MUSIK-SNOOPR",
+        "Bezeichnung": "Musikinstrumentenversicherung",
+        "Kurzbezeichnung": "Musikinstrument",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "WALD-SNOOPR",
+        "Bezeichnung": "Waldversicherung",
+        "Kurzbezeichnung": "Wald",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "WETTEN-SNOOPR",
+        "Bezeichnung": "Wettversicherung",
+        "Kurzbezeichnung": "Wetten",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "ZELTE-SNOOPR",
+        "Bezeichnung": "Zeltversicherung",
+        "Kurzbezeichnung": "Zelte",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "0",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "WERTSACHEN-SNOOPR",
+        "Bezeichnung": "Wertsachenversicherung",
+        "Kurzbezeichnung": "Wertsachen",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "6",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "KUNST-SNOOPR",
+        "Bezeichnung": "Kunstversicherung",
+        "Kurzbezeichnung": "Kunst",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "20",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "SPORTGERAETE-SNOOPR",
+        "Bezeichnung": "Sportgeräteversicherung",
+        "Kurzbezeichnung": "Sportgeräte",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "22",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "HANDY-SNOOPR",
+        "Bezeichnung": "Handyversicherung",
+        "Kurzbezeichnung": "Handypolice",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "23",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "VERANSTALTUNG-SNOOPR",
+        "Bezeichnung": "Veranstaltungsversicherung",
+        "Kurzbezeichnung": "Veranstaltung",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "25",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-NX1M-YH7U7-67.VERANSTALTUNG.VeranstaltungshaftEventAssecHVS"
+        ]
+    },
+    {
+        "ID": "ELEKTRONIK-SNOOPR",
+        "Bezeichnung": "Elektronikversicherung",
+        "Kurzbezeichnung": "Elektronik",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "26",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": [
+            "D-EIVK-J2KUX-04.ELEKTRONIK.ElektronikVerlage",
+            "D-EIVK-J2KUX-04.BHV.Buchhandel_Elektronik"
+        ]
+    },
+    {
+        "ID": "WASSERSPORT-SNOOPR",
+        "Bezeichnung": "Wassersportversicherung",
+        "Kurzbezeichnung": "Wassersport",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "27",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "SATTEL-SNOOPR",
+        "Bezeichnung": "Sattelversicherung",
+        "Kurzbezeichnung": "Sattelpolice",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "30",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "TIER-SNOOPR",
+        "Bezeichnung": "Tierversicherung",
+        "Kurzbezeichnung": "Tier",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "32",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "VEREINE-SNOOPR",
+        "Bezeichnung": "Vereinsversicherung",
+        "Kurzbezeichnung": "Vereine",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "33",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "SPORT-SNOOPR",
+        "Bezeichnung": "Sportversicherung",
+        "Kurzbezeichnung": "Sport",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "34",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "KARNEVAL-SNOOPR",
+        "Bezeichnung": "Karnevalsversicherung",
+        "Kurzbezeichnung": "Karneval",
+        "HatLeistungen": false,
+        "ProduktgruppenID": "INDIVIDUELL-SNOOPR",
+        "ProduktgruppenSortierung": "35",
+        "Controller": "individuell",
+        "Highlights": "",
+        "Leistungen": [],
+        "Produktvarianten": []
+    },
+    {
+        "ID": "NONE",
+        "Bezeichnung": "ohne Zuordung"
+    }
+]

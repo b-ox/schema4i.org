@@ -1,0 +1,29 @@
+{
+    "type": "ApplicationNumberBroker",
+    "uri": "http://schema.b-ox.org/ApplicationNumberBroker",
+    "description": "Number of an insurance application of the broker, e.g. VM-4711 A. Also applies to amendments.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#ApplicationNumberBroker"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "ApplicationNumberBroker": {
+                "@id": "box:ApplicationNumberBroker",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ApplicationNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ApplicationNumberBroker": "VM-4711 A"
+        },
+        "context": {}
+    }]
+}

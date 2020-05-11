@@ -1,0 +1,65 @@
+{
+    "type": "ContractTerminationCode",
+    "uri": "http://schema.b-ox.org/ContractTerminationCode",
+    "description": "The reason for the ending of an insurance contract, e.g. 1 = Termination by the customer to expire.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#TerminationCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "TerminationCode": {
+                "@id": "box:ContractTerminationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumContractTerminationCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Insurance contract terminated by customer",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "TerminationCode": "01"
+        },
+        "context": {}
+    }, {
+        "title": "Termination code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "TerminationCode": "01"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Termination": {
+                    "@id": "box:ContractTerminationCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumContractTerminationCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Termination code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "TerminationCode": "01"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Abgangsgrund": {
+                    "@id": "box:ContractTerminationCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumContractTerminationCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

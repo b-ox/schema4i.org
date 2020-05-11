@@ -1,0 +1,64 @@
+{
+    "type": "Recipient",
+    "uri": "http://schema.b-ox.org/Recipient",
+    "description": "The participant who is at the receiving end of the action., e.g. an insurance broker receiving business data. The recipient might be a natural person or a company.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Header#Recipient"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "Recipient": {
+                "@id": "box:Recipient",
+                "@type": "box:Recipient"
+            },
+            "Person": {
+                "@id": "box:Person",
+                "@context": "http://schema.b-ox.org/Person.jsonld"
+            },
+            "Organization": {
+                "@id": "box:Organization",
+                "@context": "http://schema.b-ox.org/Organization.jsonld"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum completed recipient on first level",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Recipient": {
+                "Person": {},
+                "Organization": {}
+            }
+        },
+        "context": {}
+    }, {
+        "title": "Recipient is a natural person",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Recipient": {
+                "Person": {
+                    "GivenName": "Markus",
+                    "FamilyName": "Heussen"
+                }
+            }
+        },
+        "context": {}
+    }, {
+        "title": "Recipient is an insurance company",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Recipient": {
+                "Organization": {
+                    "Name": "Insurance Boker Ltd."
+                }
+            }
+        },
+        "context": {}
+    }]
+}

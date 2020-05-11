@@ -1,0 +1,29 @@
+{
+    "type": "BrokerID",
+    "uri": "http://schema.b-ox.org/BrokerID",
+    "description": "Identification of the agent at the product providing company, e.g. 100-4711.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#BrokerID"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "BrokerID": {
+                "@id": "box:BrokerID",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BrokerID",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "BrokerID": "100-4711"
+        },
+        "context": {}
+    }]
+}

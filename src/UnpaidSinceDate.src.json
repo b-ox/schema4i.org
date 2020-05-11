@@ -1,0 +1,29 @@
+{
+    "type": "UnpaidSinceDate",
+    "uri": "http://schema.b-ox.org/UnpaidSinceDate",
+    "description": "Indicates since when no payments have been received, e.g. 2020-01-01.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Payment#UnpaidSinceDate"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "UnpaidSinceDate": {
+                "@id": "box:UnpaidSinceDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample UnpaidSinceDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "UnpaidSinceDate": "2022-01-01"
+        },
+        "context": {}
+    }]
+}

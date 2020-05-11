@@ -1,0 +1,57 @@
+{
+    "type": "Attachments",
+    "uri": "http://schema.b-ox.org/Attachments",
+    "description": "Downloadable files like PDF or CSV, e.g. an insurance policy as PDF document. Attachments is a container for one or more files.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Header#Attachments"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Attachments": {
+                "@id": "box:Attachments",
+                "@container": "@list",
+                "@context": {
+                    "Name": {
+                        "@id": "schema:name",
+                        "@type": "schema:Text"
+                    },
+                    "Description": {
+                        "@id": "schema:description",
+                        "@type": "schema:Text"
+                    },
+                    "URL": {
+                        "@id": "schema:url",
+                        "@type": "schema:URL"
+                    },
+                    "ContentType": {
+                        "@id": "schema:contentType",
+                        "@type": "schema:Text"
+                    }
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum completed Attachments",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Attachments": [{
+                "Name": "Letter.pdf",
+                "Description": "Letter adressing the customer",
+                "URL": "http://domain.ending/1a157764-3463-433b-87b8-e835a1daae5e",
+                "ContentType": "application/pdf"
+            }, {
+                "Name": "Policy.zip",
+                "Description": "Liability Insurance Policy",
+                "URL": "http://domain.ending/1a157764-433b-3463-87b8-e835a1dbbe4f.zip",
+                "ContentType": "application/zip"
+            }]
+        },
+        "context": {}
+    }]
+}

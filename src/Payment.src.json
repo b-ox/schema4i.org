@@ -1,0 +1,136 @@
+{
+    "type": "Payment",
+    "uri": "http://schema.b-ox.org/Payment",
+    "description": "Information about the incoming payment of the contract, e.g. premium and payment method.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#Payment"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Payment": {
+                "@id": "box:Payment",
+                "@type": "box:Payment"
+            },
+            "GrossPremium": {
+                "@id": "box:GrossPremium",
+                "@type": "schema:Number"
+            },
+            "NetPremium": {
+                "@id": "box:NetPremium",
+                "@type": "schema:Number"
+            },
+            "Currency": {
+                "@id": "schema:priceCurrency",
+                "@type": "schema:Text"
+            },
+            "PaymentFrequency": {
+                "@id": "box:PaymentFrequency",
+                "@type": "schema:Duration"
+            },
+            "UnpaidSinceDate": {
+                "@id": "box:UnpaidSinceDate",
+                "@type": "schema:Date"
+            },
+            "BankBalance": {
+                "@id": "box:BankBalance",
+                "@type": "schema:Number"
+            },
+            "DirectDebitReturnCode": {
+                "@id": "box:DirectDebitReturnCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumDirectDebitReturnCode#"
+                }
+            },
+            "DunningAmount": {
+                "@id": "box:DunningAmount",
+                "@type": "schema:Number"
+            },
+            "DunningAmountExpenses": {
+                "@id": "box:DunningAmountExpenses",
+                "@type": "schema:Number"
+            },
+            "DunningAmountAdditionalCosts": {
+                "@id": "box:DunningAmountAdditionalCosts",
+                "@type": "schema:Number"
+            },
+            "DunningAmountTotal": {
+                "@id": "box:DunningAmountTotal",
+                "@type": "schema:Number"
+            },
+            "ReminderDate": {
+                "@id": "box:ReminderDate",
+                "@type": "schema:Date"
+            },
+            "PaymentsReceptionDate": {
+                "@id": "box:PaymentsReceptionDate",
+                "@type": "schema:Date"
+            },
+            "LiabilityEndDate": {
+                "@id": "box:LiabilityEndDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum completed payment object",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Payment": {
+                "GrossPremium": "119.00",
+                "NetPremium": "100.00",
+                "Currency": "EUR",
+                "PaymentFrequency": "R/1Y",
+                "UnpaidSinceDate": "2020-01-01",
+                "BankBalance": "-119.00",
+                "DirectDebitReturnCode": "AC01",
+                "DunningAmount": "219.00",
+                "PaymentCollectionExpenses": "10.00",
+                "DunningAmountAdditionalCosts": "25.00",
+                "DunningAmountTotal": "254.00",
+                "ReminderDate": "2020-02-20",
+                "PaymentsReceptionDate": "2020-02-01",
+                "LiabilityEndDate": "2020-02-15"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "Monthly payment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Payment": {
+                "GrossPremium": "119.00",
+                "Currency": "EUR",
+                "Frequency": "R/1M"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "Translate direct debit return code to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "Payment": {
+                "DirectDebitReturnCode": "AC01"
+            }
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "schema": "http://schema.org/",
+                "Zahlung": "box:Payment",
+                "Rücklastschrift": {
+                    "@context": "http://schema.b-ox.org/EnumDirectDebitReturnCode_DE.jsonld",
+                    "@id": "box:DirectDebitReturnCode",
+                    "@type": "@vocab"
+                }
+            }
+        }
+    }]
+}

@@ -1,0 +1,48 @@
+{
+    "type": "Error",
+    "uri": "http://schema.b-ox.org/Error",
+    "description": "Describes an error with a unique identifier in the logs, a short name e. g. the action which produces the error and the message. Optional there might be an object of any kind of additional informationen like a JSON structure (as text) or any other simple description text. This error object might be occuring in the response of a semantic API.",
+    "links": [],
+    "parents": [],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Error": {
+                "@id": "box:Error",
+                "@type": "box:Error"
+            },
+            "ID": {
+                "@id": "schema:identifier",
+                "@type": "schema:Text"
+            },
+            "Name": {
+                "@id": "schema:name",
+                "@type": "schema:Text"
+            },
+            "Message": {
+                "@id": "schema:description",
+                "@type": "schema:Text"
+            },
+            "Object": {
+                "@id": "box:Object",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Error while loading SSL context",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Error": {
+                "ID": "ecf02d79.f7b46",
+                "Action": "jsonld:expand",
+                "Message": "loading remote context failed",
+                "Object": "{\"name\":\"jsonld.InvalidUrl\",\"details\":{\"code\":\"loading remote context failed\",\"url\":\"https://pending.schema.b-ox.org/Message.jsonld\",\"cause\":{\"name\":\"jsonld.LoadDocumentError\",\"details\":{\"code\":\"loading document failed\",\"url\":\"https://pending.schema.b-ox.org/Message.jsonld\",\"cause\":{\"code\":\"UNABLE_TO_VERIFY_LEAF_SIGNATURE\"}}}}}"
+            }
+        },
+        "context": {}
+    }]
+}

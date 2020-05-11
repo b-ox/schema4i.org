@@ -1,0 +1,35 @@
+{
+    "type": "Claim",
+    "uri": "http://schema.b-ox.org/Claim",
+    "description": "A claim includes one or more material or immaterial disadvantages that natural or legal persons or things suffer from a claim event.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Payload#Claim"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Claim": {
+                "@id": "box:Claim",
+                "@type": "box:Claim"
+            },
+            "ID": {
+                "@id": "schema:identifier",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An maximum completed claim",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Claim": {
+                "ID": "S 4711 / 2020"
+            }
+        },
+        "context": {}
+    }]
+}

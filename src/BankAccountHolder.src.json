@@ -1,0 +1,29 @@
+{
+    "type": "BankAccountHolder",
+    "uri": "http://schema.b-ox.org/BankAccountHolder",
+    "description": "First and last name of the account holder, e.g. Michael Muller.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/BankDetails#BankAccountHolder"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "BankAccountHolder": {
+                "@id": "box:BankAccountHolder",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BankAccountHolder",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "BankAccountHolder": "Michael Muller"
+        },
+        "context": {}
+    }]
+}

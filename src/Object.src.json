@@ -1,0 +1,37 @@
+{
+    "type": "Object",
+    "uri": "http://schema.b-ox.org/Object",
+    "description": "An unspecified object. The object can transport any kind of information, the technical meaning of which is clear from the rest of the context. In this type of objects, mostly technical information is usually transported, e.g. may be useful in troubleshooting.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Error#Object"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Object": {
+                "@id": "box:Object",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample object as text",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Object": "Some message."
+        },
+        "context": {}
+    }, {
+        "title": "Sample object as JSON",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Object": "{\"name\":\"jsonld.InvalidUrl\",\"details\":{\"code\":\"loading remote context failed\",\"url\":\"https://pending.schema.b-ox.org/Message.jsonld\",\"cause\":{\"name\":\"jsonld.LoadDocumentError\",\"details\":{\"code\":\"loading document failed\",\"url\":\"https://pending.schema.b-ox.org/Message.jsonld\",\"cause\":{\"code\":\"UNABLE_TO_VERIFY_LEAF_SIGNATURE\"}}}}}"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,72 @@
+{
+    "type": "TransactionCode",
+    "uri": "http://schema.b-ox.org/TransactionCode",
+    "description": "Nine-digit category of the business transaction, e.g. 120013000=Postponing the start of a contract.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumTransactionCode.jsonld",
+        "description": "Enumeration with keys and values"
+    }, {
+        "url": "http://schema.b-ox.org/EnumTransactionCode_DE.jsonld",
+        "description": "German key translation of EnumTransactionCode"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Transaction#TransactionCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "TransactionCode": {
+                "@id": "box:TransactionCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumTransactionCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Transaction code is postponing the start of a contract",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "TransactionCode": "120013000"
+        },
+        "context": {}
+    }, {
+        "title": "Status code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "TransactionCode": "120013000"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Transaction": {
+                    "@id": "box:TransactionCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumTransactionCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Transaction code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "TransactionCode": "120013000"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "GeschaeftsvorfallID": {
+                    "@id": "box:TransactionCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumTransactionCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

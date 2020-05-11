@@ -1,0 +1,31 @@
+{
+    "type": "Cellphone",
+    "uri": "http://schema.b-ox.org/Cellphone",
+    "description": "A mobile phone number, e.g. +491737401582.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Person#Cellphone"
+    }, {
+        "@id": "http://schema.b-ox.org/Organization#Cellphone"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Cellphone": {
+                "@id": "box:Cellphone",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Cellphone",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Cellphone": "+491737401582"
+        },
+        "context": {}
+    }]
+}

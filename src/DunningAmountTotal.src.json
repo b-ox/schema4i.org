@@ -1,0 +1,28 @@
+{
+    "type": "DunningAmountTotal",
+    "uri": "http://schema.b-ox.org/DunningAmountTotal",
+    "description": "Sum of all amounts from this reminder incl. dunning amount, expenses and addtional costs, e.g. 150.00.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Payment#DunningAmountTotal"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "schema": "http://schema.org/",
+            "DunningAmountTotal": {
+                "@id": "box:DunningAmountTotal",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DunningAmountTotal",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DunningAmountTotal": "150.00"
+        },
+        "context": {}
+    }]
+}

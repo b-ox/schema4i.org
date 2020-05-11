@@ -1,0 +1,71 @@
+{
+    "type": "InsurerCode",
+    "uri": "http://schema.b-ox.org/InsurerCode",
+    "description": "Unique identifier of an insurance company. In Germany that is the 4-digit BaFin number of the insurer, e.g. 5515 = AXA. In the context of Contract the isurer is the primary insurer of the contract. In the context of transaction the insurer is responsible for the business transaction. Most of the times the insurers are the same. ",
+    "links": [{
+        "url": "http://portal.mvp.bafin.de/database/InstInfo/",
+        "description": "Insurance company database of BaFin (Germany)"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#InsurerCode"
+    }, {
+        "@id": "http://schema.b-ox.org/Transaction#InsurerCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "InsurerCode": {
+                "@id": "box:InsurerCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumInsurerCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample InsurerCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "InsurerCode": "5515"
+        },
+        "context": {}
+    }, {
+        "title": "Insurer code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "InsurerCode": "5515"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Insurer": {
+                    "@id": "box:InsurerCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumInsurerCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Gender code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "InsurerCode": "5515"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Versicherer": {
+                    "@id": "box:InsurerCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumInsurerCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

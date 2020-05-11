@@ -1,0 +1,29 @@
+{
+    "type": "Copy",
+    "uri": "http://schema.b-ox.org/Copy",
+    "description": "Indicates whether the digitally transmitted data are original or if they are retransmitted on a conventional way via mail e.g. False=Original, True=Original comes via mail.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Transaction#Copy"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Copy": {
+                "@id": "box:Copy",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Copy",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Copy": "False"
+        },
+        "context": {}
+    }]
+}

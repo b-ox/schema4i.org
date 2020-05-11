@@ -1,0 +1,29 @@
+{
+    "type": "TerminationDate",
+    "uri": "http://schema.b-ox.org/TerminationDate",
+    "description": "Date when the contract ends, e.g. 2022-01-01.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#TerminationDate"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "TerminationDate": {
+                "@id": "box:TerminationDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample TerminationDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "TerminationDate": "2022-01-01"
+        },
+        "context": {}
+    }]
+}

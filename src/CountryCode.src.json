@@ -1,0 +1,71 @@
+{
+    "type": "CountryCode",
+    "uri": "http://schema.b-ox.org/CountryCode",
+    "description": "The status code of an insurance contract, e.g. 4 = canceled.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumCountryCodejsonld",
+        "description": "Enumeration with keys and values"
+    }, {
+        "url": "http://schema.b-ox.org/EnumCountryCode_DE.jsonld",
+        "description": "German key translation of EnumCountryCode"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/PostalAddress#CountryCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "CountryCode": {
+                "@id": "box:CountryCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumCountryCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Country code is Germany",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "CountryCode": "D"
+        },
+        "context": {}
+    }, {
+        "title": "Country code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "CountryCode": "D"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Country": {
+                    "@id": "box:CountryCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumCountryCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Country code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "CountryCode": "D"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Land": {
+                    "@id": "box:CountryCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumCountryCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

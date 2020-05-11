@@ -1,0 +1,29 @@
+{
+    "type": "DrivingLicenseIssueDate",
+    "uri": "http://schema.b-ox.org/DrivingLicenseIssueDate",
+    "description": "Date on which the driver's license was issued, e.g. 1970-10-01.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Person#DrivingLicenseIssueDate"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "DrivingLicenseIssueDate": {
+                "@id": "box:DrivingLicenseIssueDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DrivingLicenseIssueDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DrivingLicenseIssueDate": "1970-10-01"
+        },
+        "context": {}
+    }]
+}

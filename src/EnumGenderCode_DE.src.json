@@ -1,0 +1,27 @@
+{
+    "type": "EnumGenderCode_DE",
+    "uri": "http://schema.b-ox.org/EnumGenderCode_DE",
+    "description": "Ein Code, der das Geschlecht einer natürlichen Person oder eines Tieres gemäß dem deutschen GDV-Standard mit dem Veröffentlichungsdatum 01.07.2018 darstellt, hinzugefügt wurde der Code 3 = divers, z.B. 1 = männlich.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumGenderCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://schema.b-ox.org/EnumGenderCode.jsonld",
+        "description": "Englische Schlüsselwerte"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0100.htm",
+        "description": "GDV Allgemeine Daten - Adressteil, Feld 25"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/GenderCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "männlich": "box:EnumGenderCode#1",
+            "weiblich": "box:EnumGenderCode#2",
+            "divers": "box:EnumGenderCode#3"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "type": "DirectDebitReturnCode",
+    "uri": "http://schema.b-ox.org/DirectDebitReturnCode",
+    "description": "Reason for non-payment of a SEPA / direct debit according to the European ISO Standard, e.g. AC01 = Incorrect Account Number.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Payment#DirectDebitReturnCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "DirectDebitReturnCode": {
+                "@id": "box:DirectDebitReturnCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumDirectDebitReturnCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Direct depit return code is 'Incorrect Account Number'",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DirectDebitReturnCode": "AC01"
+        },
+        "context": {}
+    }, {
+        "title": "Return code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "DirectDebitReturnCode": "AC01"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Reason": {
+                    "@id": "box:DirectDebitReturnCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumDirectDebitReturnCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Return code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "DirectDebitReturnCode": "AC01"
+        },
+        "context": {
+            "@context": {
+                "box": "http://schema.b-ox.org/",
+                "Rücklastschrift": {
+                    "@id": "box:DirectDebitReturnCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema.b-ox.org/EnumDirectDebitReturnCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

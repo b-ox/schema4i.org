@@ -1,0 +1,30 @@
+{
+    "type": "EnumDirectDebitReturnCode",
+    "uri": "http://schema.b-ox.org/EnumDirectDebitReturnCode",
+    "description": "An extract of the error codes according the coresponding European ISO Standard that represents the reason why SEPA direct depits fails, e.g. AC01 = Incorrect Account Number. If you are missing a code feel free to contact us.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumDirectDebitReturnCode_DE.jsonld",
+        "description": "German key translation of EnumDirectDebitReturnCode"
+    }, {
+        "url": "http://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2019-05/EPC173-14%20v5.0%20Guidance%20on%20Reason%20Codes%20for%20SDD%20R-transactions.pdf",
+        "description": "GUIDANCE ON REASON CODES FOR SCT R-TRANSACTIONS of European Payments Council (ISO Standard)"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/DirectDebitReturnCode"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "Incorrect Account Number": "box:EnumDirectDebitReturnCode#AC01",
+            "Closed Account Number": "box:EnumDirectDebitReturnCode#AC04",
+            "Blocked account": "box:EnumDirectDebitReturnCode#AC06",
+            "Settlement Failed": "box:EnumDirectDebitReturnCode#ED05",
+            "No Mandate": "box:EnumDirectDebitReturnCode#MD01",
+            "Missing Mandatory Mandate Information in Mandate": "box:EnumDirectDebitReturnCode#MD02",
+            "Refund Request By End Customer": "box:EnumDirectDebitReturnCode#MD06",
+            "Not Specified Reason Customer Generated": "box:EnumDirectDebitReturnCode#MS02",
+            "Bank Identifier Incorrect": "box:EnumDirectDebitReturnCode#RC01"
+        }
+    }
+}

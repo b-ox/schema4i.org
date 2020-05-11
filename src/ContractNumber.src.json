@@ -1,0 +1,29 @@
+{
+    "type": "ContractNumber",
+    "uri": "http://schema.b-ox.org/ContractNumber",
+    "description": "Print-ready contract number as it is given on a document (e.g. insurance policy) including all alpha and special characters, e.g. VS-4711/1. For the non print-ready (original) contract number use ID instead.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Contract#ContractNumber"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "ContractNumber": {
+                "@id": "box:ContractNumber",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ContractNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ContractNumber": "VS-4711/1"
+        },
+        "context": {}
+    }]
+}
