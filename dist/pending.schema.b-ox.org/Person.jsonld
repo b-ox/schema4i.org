@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "schema": "http://schema.org/",
+    "Person": {
+      "@id": "box:Person",
+      "@type": "box:Person"
+    },
+    "SalutationCode": {
+      "@id": "box:SalutationCode",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "box:EnumSalutationCode#"
+      }
+    },
+    "HonorificSuffix": {
+      "@id": "schema:honorificSuffix",
+      "@type": "schema:Text"
+    },
+    "GivenName": {
+      "@id": "schema:givenName",
+      "@type": "schema:Text"
+    },
+    "FamilyName": {
+      "@id": "schema:familyName",
+      "@type": "schema:Text"
+    },
+    "AdditionalName": {
+      "@id": "schema:additionalName",
+      "@type": "schema:Text"
+    },
+    "Birthdate": {
+      "@id": "schema:birthDate",
+      "@type": "schema:Date"
+    },
+    "GenderCode": {
+      "@id": "box:GenderCode",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "box:EnumGenderCode#"
+      }
+    },
+    "Telephone": {
+      "@id": "schema:telephone",
+      "@type": "schema:Text"
+    },
+    "Cellphone": {
+      "@id": "box:Cellphone",
+      "@type": "schema:Text"
+    },
+    "Fax": {
+      "@id": "schema:faxNumber",
+      "@type": "schema:Text"
+    },
+    "Email": {
+      "@id": "schema:email",
+      "@type": "schema:Text"
+    },
+    "DrivingLicenseIssueDate": {
+      "@id": "box:DrivingLicenseIssueDate",
+      "@type": "schema:Text"
+    },
+    "TaxID": {
+      "@id": "schema:taxID",
+      "@type": "schema:Text"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "schema": "http://schema.org/",
+    "ApplicationNumber": {
+      "@id": "box:ApplicationNumber",
+      "@type": "schema:Text"
+    }
+  }
+}

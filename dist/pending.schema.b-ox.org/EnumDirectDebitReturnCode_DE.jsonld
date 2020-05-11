@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "IBAN fehlerhaft": "box:EnumDirectDebitReturnCode#AC01",
+    "Konto aufgelöst": "box:EnumDirectDebitReturnCode#AC04",
+    "Konto gesperrt": "box:EnumDirectDebitReturnCode#AC06",
+    "Abrechnung fehlgeschlagen": "box:EnumDirectDebitReturnCode#ED05",
+    "Kein gültiges Mandat": "box:EnumDirectDebitReturnCode#MD01",
+    "Infos zum Mandat fehlen oder sind inkorrekt": "box:EnumDirectDebitReturnCode#MD02",
+    "Widerspruch durch den Zahler": "box:EnumDirectDebitReturnCode#MD06",
+    "Rückgabe durch den Zahler": "box:EnumDirectDebitReturnCode#MS02",
+    "BIC ungültig": "box:EnumDirectDebitReturnCode#RC01"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "schema": "http://schema.org/",
+    "Attachments": {
+      "@id": "box:Attachments",
+      "@container": "@list",
+      "@context": {
+        "Name": {
+          "@id": "schema:name",
+          "@type": "schema:Text"
+        },
+        "Description": {
+          "@id": "schema:description",
+          "@type": "schema:Text"
+        },
+        "URL": {
+          "@id": "schema:url",
+          "@type": "schema:URL"
+        },
+        "ContentType": {
+          "@id": "schema:contentType",
+          "@type": "schema:Text"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "schema": "http://schema.org/",
+    "Error": {
+      "@id": "box:Error",
+      "@type": "box:Error"
+    },
+    "ID": {
+      "@id": "schema:identifier",
+      "@type": "schema:Text"
+    },
+    "Name": {
+      "@id": "schema:name",
+      "@type": "schema:Text"
+    },
+    "Message": {
+      "@id": "schema:description",
+      "@type": "schema:Text"
+    },
+    "Object": {
+      "@id": "box:Object",
+      "@type": "schema:Text"
+    }
+  }
+}

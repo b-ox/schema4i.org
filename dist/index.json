@@ -1,0 +1,408 @@
+{
+  "name": "schema.b-ox.org",
+  "description": "Semantic Data Model for Insurances",
+  "objects": 60,
+  "enumerations": 20,
+  "types": [
+    {
+      "id": "ApplicationNumber",
+      "uri": "http://pending.schema.b-ox.org/ApplicationNumber",
+      "url": "http://pending.schema.b-ox.org/ApplicationNumber.jsonld"
+    },
+    {
+      "id": "ApplicationNumberBroker",
+      "uri": "http://pending.schema.b-ox.org/ApplicationNumberBroker",
+      "url": "http://pending.schema.b-ox.org/ApplicationNumberBroker.jsonld"
+    },
+    {
+      "id": "Attachments",
+      "uri": "http://pending.schema.b-ox.org/Attachments",
+      "url": "http://pending.schema.b-ox.org/Attachments.jsonld"
+    },
+    {
+      "id": "BIC",
+      "uri": "http://pending.schema.b-ox.org/BIC",
+      "url": "http://pending.schema.b-ox.org/BIC.jsonld"
+    },
+    {
+      "id": "BankAccountHolder",
+      "uri": "http://pending.schema.b-ox.org/BankAccountHolder",
+      "url": "http://pending.schema.b-ox.org/BankAccountHolder.jsonld"
+    },
+    {
+      "id": "BankBalance",
+      "uri": "http://pending.schema.b-ox.org/BankBalance",
+      "url": "http://pending.schema.b-ox.org/BankBalance.jsonld"
+    },
+    {
+      "id": "BankDetails",
+      "uri": "http://pending.schema.b-ox.org/BankDetails",
+      "url": "http://pending.schema.b-ox.org/BankDetails.jsonld"
+    },
+    {
+      "id": "BrokerID",
+      "uri": "http://pending.schema.b-ox.org/BrokerID",
+      "url": "http://pending.schema.b-ox.org/BrokerID.jsonld"
+    },
+    {
+      "id": "BrokerIDSubAgent",
+      "uri": "http://pending.schema.b-ox.org/BrokerIDSubAgent",
+      "url": "http://pending.schema.b-ox.org/BrokerIDSubAgent.jsonld"
+    },
+    {
+      "id": "Cellphone",
+      "uri": "http://pending.schema.b-ox.org/Cellphone",
+      "url": "http://pending.schema.b-ox.org/Cellphone.jsonld"
+    },
+    {
+      "id": "Claim",
+      "uri": "http://pending.schema.b-ox.org/Claim",
+      "url": "http://pending.schema.b-ox.org/Claim.jsonld"
+    },
+    {
+      "id": "CommercialRegistrationNumber",
+      "uri": "http://pending.schema.b-ox.org/CommercialRegistrationNumber",
+      "url": "http://pending.schema.b-ox.org/CommercialRegistrationNumber.jsonld"
+    },
+    {
+      "id": "Contract",
+      "uri": "http://pending.schema.b-ox.org/Contract",
+      "url": "http://pending.schema.b-ox.org/Contract.jsonld"
+    },
+    {
+      "id": "ContractModificationCode",
+      "uri": "http://pending.schema.b-ox.org/ContractModificationCode",
+      "url": "http://pending.schema.b-ox.org/ContractModificationCode.jsonld"
+    },
+    {
+      "id": "ContractNumber",
+      "uri": "http://pending.schema.b-ox.org/ContractNumber",
+      "url": "http://pending.schema.b-ox.org/ContractNumber.jsonld"
+    },
+    {
+      "id": "ContractStatusCode",
+      "uri": "http://pending.schema.b-ox.org/ContractStatusCode",
+      "url": "http://pending.schema.b-ox.org/ContractStatusCode.jsonld"
+    },
+    {
+      "id": "ContractTerminationCode",
+      "uri": "http://pending.schema.b-ox.org/ContractTerminationCode",
+      "url": "http://pending.schema.b-ox.org/ContractTerminationCode.jsonld"
+    },
+    {
+      "id": "Copy",
+      "uri": "http://pending.schema.b-ox.org/Copy",
+      "url": "http://pending.schema.b-ox.org/Copy.jsonld"
+    },
+    {
+      "id": "CountryCode",
+      "uri": "http://pending.schema.b-ox.org/CountryCode",
+      "url": "http://pending.schema.b-ox.org/CountryCode.jsonld"
+    },
+    {
+      "id": "DataProvider",
+      "uri": "http://pending.schema.b-ox.org/DataProvider",
+      "url": "http://pending.schema.b-ox.org/DataProvider.jsonld"
+    },
+    {
+      "id": "DirectDebitReturnCode",
+      "uri": "http://pending.schema.b-ox.org/DirectDebitReturnCode",
+      "url": "http://pending.schema.b-ox.org/DirectDebitReturnCode.jsonld"
+    },
+    {
+      "id": "DrivingLicenseIssueDate",
+      "uri": "http://pending.schema.b-ox.org/DrivingLicenseIssueDate",
+      "url": "http://pending.schema.b-ox.org/DrivingLicenseIssueDate.jsonld"
+    },
+    {
+      "id": "DunningAmount",
+      "uri": "http://pending.schema.b-ox.org/DunningAmount",
+      "url": "http://pending.schema.b-ox.org/DunningAmount.jsonld"
+    },
+    {
+      "id": "DunningAmountAdditionalCosts",
+      "uri": "http://pending.schema.b-ox.org/DunningAmountAdditionalCosts",
+      "url": "http://pending.schema.b-ox.org/DunningAmountAdditionalCosts.jsonld"
+    },
+    {
+      "id": "DunningAmountExpenses",
+      "uri": "http://pending.schema.b-ox.org/DunningAmountExpenses",
+      "url": "http://pending.schema.b-ox.org/DunningAmountExpenses.jsonld"
+    },
+    {
+      "id": "DunningAmountTotal",
+      "uri": "http://pending.schema.b-ox.org/DunningAmountTotal",
+      "url": "http://pending.schema.b-ox.org/DunningAmountTotal.jsonld"
+    },
+    {
+      "id": "EnumContractStatusCode",
+      "uri": "http://pending.schema.b-ox.org/EnumContractStatusCode",
+      "url": "http://pending.schema.b-ox.org/EnumContractStatusCode.jsonld"
+    },
+    {
+      "id": "EnumContractStatusCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumContractStatusCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumContractStatusCode_DE.jsonld"
+    },
+    {
+      "id": "EnumContractTerminationCode",
+      "uri": "http://pending.schema.b-ox.org/EnumContractTerminationCode",
+      "url": "http://pending.schema.b-ox.org/EnumContractTerminationCode.jsonld"
+    },
+    {
+      "id": "EnumContractTerminationCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumContractTerminationCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumContractTerminationCode_DE.jsonld"
+    },
+    {
+      "id": "EnumCountryCode",
+      "uri": "http://pending.schema.b-ox.org/EnumCountryCode",
+      "url": "http://pending.schema.b-ox.org/EnumCountryCode.jsonld"
+    },
+    {
+      "id": "EnumCountryCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumCountryCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumCountryCode_DE.jsonld"
+    },
+    {
+      "id": "EnumDirectDebitReturnCode",
+      "uri": "http://pending.schema.b-ox.org/EnumDirectDebitReturnCode",
+      "url": "http://pending.schema.b-ox.org/EnumDirectDebitReturnCode.jsonld"
+    },
+    {
+      "id": "EnumDirectDebitReturnCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumDirectDebitReturnCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumDirectDebitReturnCode_DE.jsonld"
+    },
+    {
+      "id": "EnumGenderCode",
+      "uri": "http://pending.schema.b-ox.org/EnumGenderCode",
+      "url": "http://pending.schema.b-ox.org/EnumGenderCode.jsonld"
+    },
+    {
+      "id": "EnumGenderCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumGenderCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumGenderCode_DE.jsonld"
+    },
+    {
+      "id": "EnumInsurerCode",
+      "uri": "http://pending.schema.b-ox.org/EnumInsurerCode",
+      "url": "http://pending.schema.b-ox.org/EnumInsurerCode.jsonld"
+    },
+    {
+      "id": "EnumInsurerCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumInsurerCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumInsurerCode_DE.jsonld"
+    },
+    {
+      "id": "EnumLineOfBusinessCode",
+      "uri": "http://pending.schema.b-ox.org/EnumLineOfBusinessCode",
+      "url": "http://pending.schema.b-ox.org/EnumLineOfBusinessCode.jsonld"
+    },
+    {
+      "id": "EnumLineOfBusinessCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumLineOfBusinessCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumLineOfBusinessCode_DE.jsonld"
+    },
+    {
+      "id": "EnumProductCategoryCode",
+      "uri": "http://pending.schema.b-ox.org/EnumProductCategoryCode",
+      "url": "http://pending.schema.b-ox.org/EnumProductCategoryCode.jsonld"
+    },
+    {
+      "id": "EnumProductCategoryCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumProductCategoryCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumProductCategoryCode_DE.jsonld"
+    },
+    {
+      "id": "EnumSalutationCode",
+      "uri": "http://pending.schema.b-ox.org/EnumSalutationCode",
+      "url": "http://pending.schema.b-ox.org/EnumSalutationCode.jsonld"
+    },
+    {
+      "id": "EnumSalutationCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumSalutationCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumSalutationCode_DE.jsonld"
+    },
+    {
+      "id": "EnumTransactionCode",
+      "uri": "http://pending.schema.b-ox.org/EnumTransactionCode",
+      "url": "http://pending.schema.b-ox.org/EnumTransactionCode.jsonld"
+    },
+    {
+      "id": "EnumTransactionCode_DE",
+      "uri": "http://pending.schema.b-ox.org/EnumTransactionCode_DE",
+      "url": "http://pending.schema.b-ox.org/EnumTransactionCode_DE.jsonld"
+    },
+    {
+      "id": "Error",
+      "uri": "http://pending.schema.b-ox.org/Error",
+      "url": "http://pending.schema.b-ox.org/Error.jsonld"
+    },
+    {
+      "id": "GenderCode",
+      "uri": "http://pending.schema.b-ox.org/GenderCode",
+      "url": "http://pending.schema.b-ox.org/GenderCode.jsonld"
+    },
+    {
+      "id": "GrossPremium",
+      "uri": "http://pending.schema.b-ox.org/GrossPremium",
+      "url": "http://pending.schema.b-ox.org/GrossPremium.jsonld"
+    },
+    {
+      "id": "Header",
+      "uri": "http://pending.schema.b-ox.org/Header",
+      "url": "http://pending.schema.b-ox.org/Header.jsonld"
+    },
+    {
+      "id": "Highlights",
+      "uri": "http://pending.schema.b-ox.org/Highlights",
+      "url": "http://pending.schema.b-ox.org/Highlights.jsonld"
+    },
+    {
+      "id": "HouseNumber",
+      "uri": "http://pending.schema.b-ox.org/HouseNumber",
+      "url": "http://pending.schema.b-ox.org/HouseNumber.jsonld"
+    },
+    {
+      "id": "IBAN",
+      "uri": "http://pending.schema.b-ox.org/IBAN",
+      "url": "http://pending.schema.b-ox.org/IBAN.jsonld"
+    },
+    {
+      "id": "InsurerCode",
+      "uri": "http://pending.schema.b-ox.org/InsurerCode",
+      "url": "http://pending.schema.b-ox.org/InsurerCode.jsonld"
+    },
+    {
+      "id": "LiabilityEndDate",
+      "uri": "http://pending.schema.b-ox.org/LiabilityEndDate",
+      "url": "http://pending.schema.b-ox.org/LiabilityEndDate.jsonld"
+    },
+    {
+      "id": "LineOfBusinessCode",
+      "uri": "http://pending.schema.b-ox.org/LineOfBusinessCode",
+      "url": "http://pending.schema.b-ox.org/LineOfBusinessCode.jsonld"
+    },
+    {
+      "id": "Message",
+      "uri": "http://pending.schema.b-ox.org/Message",
+      "url": "http://pending.schema.b-ox.org/Message.jsonld"
+    },
+    {
+      "id": "NetPremium",
+      "uri": "http://pending.schema.b-ox.org/NetPremium",
+      "url": "http://pending.schema.b-ox.org/NetPremium.jsonld"
+    },
+    {
+      "id": "Object",
+      "uri": "http://pending.schema.b-ox.org/Object",
+      "url": "http://pending.schema.b-ox.org/Object.jsonld"
+    },
+    {
+      "id": "Organization",
+      "uri": "http://pending.schema.b-ox.org/Organization",
+      "url": "http://pending.schema.b-ox.org/Organization.jsonld"
+    },
+    {
+      "id": "Payload",
+      "uri": "http://pending.schema.b-ox.org/Payload",
+      "url": "http://pending.schema.b-ox.org/Payload.jsonld"
+    },
+    {
+      "id": "Payment",
+      "uri": "http://pending.schema.b-ox.org/Payment",
+      "url": "http://pending.schema.b-ox.org/Payment.jsonld"
+    },
+    {
+      "id": "PaymentFrequency",
+      "uri": "http://pending.schema.b-ox.org/PaymentFrequency",
+      "url": "http://pending.schema.b-ox.org/PaymentFrequency.jsonld"
+    },
+    {
+      "id": "PaymentsReceptionDate",
+      "uri": "http://pending.schema.b-ox.org/PaymentsReceptionDate",
+      "url": "http://pending.schema.b-ox.org/PaymentsReceptionDate.jsonld"
+    },
+    {
+      "id": "Person",
+      "uri": "http://pending.schema.b-ox.org/Person",
+      "url": "http://pending.schema.b-ox.org/Person.jsonld"
+    },
+    {
+      "id": "Policyholder",
+      "uri": "http://pending.schema.b-ox.org/Policyholder",
+      "url": "http://pending.schema.b-ox.org/Policyholder.jsonld"
+    },
+    {
+      "id": "PostalAddress",
+      "uri": "http://pending.schema.b-ox.org/PostalAddress",
+      "url": "http://pending.schema.b-ox.org/PostalAddress.jsonld"
+    },
+    {
+      "id": "Product",
+      "uri": "http://pending.schema.b-ox.org/Product",
+      "url": "http://pending.schema.b-ox.org/Product.jsonld"
+    },
+    {
+      "id": "ProductCategoryCode",
+      "uri": "http://pending.schema.b-ox.org/ProductCategoryCode",
+      "url": "http://pending.schema.b-ox.org/ProductCategoryCode.jsonld"
+    },
+    {
+      "id": "ProductProvider",
+      "uri": "http://pending.schema.b-ox.org/ProductProvider",
+      "url": "http://pending.schema.b-ox.org/ProductProvider.jsonld"
+    },
+    {
+      "id": "Recipient",
+      "uri": "http://pending.schema.b-ox.org/Recipient",
+      "url": "http://pending.schema.b-ox.org/Recipient.jsonld"
+    },
+    {
+      "id": "ReferenceNumberBroker",
+      "uri": "http://pending.schema.b-ox.org/ReferenceNumberBroker",
+      "url": "http://pending.schema.b-ox.org/ReferenceNumberBroker.jsonld"
+    },
+    {
+      "id": "ReminderDate",
+      "uri": "http://pending.schema.b-ox.org/ReminderDate",
+      "url": "http://pending.schema.b-ox.org/ReminderDate.jsonld"
+    },
+    {
+      "id": "SalutationCode",
+      "uri": "http://pending.schema.b-ox.org/SalutationCode",
+      "url": "http://pending.schema.b-ox.org/SalutationCode.jsonld"
+    },
+    {
+      "id": "Sender",
+      "uri": "http://pending.schema.b-ox.org/Sender",
+      "url": "http://pending.schema.b-ox.org/Sender.jsonld"
+    },
+    {
+      "id": "Tariff",
+      "uri": "http://pending.schema.b-ox.org/Tariff",
+      "url": "http://pending.schema.b-ox.org/Tariff.jsonld"
+    },
+    {
+      "id": "TerminationDate",
+      "uri": "http://pending.schema.b-ox.org/TerminationDate",
+      "url": "http://pending.schema.b-ox.org/TerminationDate.jsonld"
+    },
+    {
+      "id": "Transaction",
+      "uri": "http://pending.schema.b-ox.org/Transaction",
+      "url": "http://pending.schema.b-ox.org/Transaction.jsonld"
+    },
+    {
+      "id": "TransactionCode",
+      "uri": "http://pending.schema.b-ox.org/TransactionCode",
+      "url": "http://pending.schema.b-ox.org/TransactionCode.jsonld"
+    },
+    {
+      "id": "UnpaidSinceDate",
+      "uri": "http://pending.schema.b-ox.org/UnpaidSinceDate",
+      "url": "http://pending.schema.b-ox.org/UnpaidSinceDate.jsonld"
+    }
+  ]
+}

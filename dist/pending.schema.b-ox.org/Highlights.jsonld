@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "schema": "http://schema.org/",
+    "Highlights": {
+      "@id": "box:Highlights",
+      "@container": "@list",
+      "@context": {
+        "ID": {
+          "@id": "schema:identifier",
+          "@type": "schema:Text"
+        },
+        "Description": {
+          "@id": "schema:description",
+          "@type": "schema:Text"
+        }
+      }
+    }
+  }
+}

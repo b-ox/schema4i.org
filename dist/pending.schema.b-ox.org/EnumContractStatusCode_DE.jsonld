@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "lebend": "box:EnumContractStatusCode#1",
+    "lebend kurzfristig unterjährig": "box:EnumContractStatusCode#2",
+    "ruhend Anwartschaft": "box:EnumContractStatusCode#3",
+    "storniert": "box:EnumContractStatusCode#4",
+    "ruhend beitragsfrei": "box:EnumContractStatusCode#5",
+    "beitragsfrei": "box:EnumContractStatusCode#6",
+    "beitragsfrei durch Leistung": "box:EnumContractStatusCode#7",
+    "Beitragsstundung": "box:EnumContractStatusCode#8",
+    "Sonstiges": "box:EnumContractStatusCode#9",
+    "In Leistung": "box:EnumContractStatusCode#A",
+    "In Abrufphase": "box:EnumContractStatusCode#B",
+    "Vorläufige Deckung": "box:EnumContractStatusCode#C"
+  }
+}

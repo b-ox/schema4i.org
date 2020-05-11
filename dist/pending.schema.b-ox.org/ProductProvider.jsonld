@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "schema": "http://schema.org/",
+    "ProductProvider": {
+      "@id": "box:ProductProvider",
+      "@type": "box:ProductProvider"
+    },
+    "Organization": {
+      "@id": "box:Organization",
+      "@context": "http://pending.schema.b-ox.org/Organization.jsonld"
+    },
+    "Person": {
+      "@id": "box:Person",
+      "@context": "http://pending.schema.b-ox.org/Person.jsonld"
+    }
+  }
+}

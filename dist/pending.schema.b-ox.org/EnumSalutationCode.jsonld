@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "Mr": "box:EnumSalutationCode#1",
+    "Ms": "box:EnumSalutationCode#2",
+    "To whom it may concern": "box:EnumSalutationCode#3",
+    "Sir or Madam": "box:EnumSalutationCode#4",
+    "Miss": "box:EnumSalutationCode#5",
+    "Association": "box:EnumSalutationCode#6",
+    "Ladies": "box:EnumSalutationCode#7",
+    "Gentlemen": "box:EnumSalutationCode#8"
+  }
+}

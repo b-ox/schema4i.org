@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://pending.schema.b-ox.org/",
+    "LineOfBusinessCode": {
+      "@id": "box:LineOfBusinessCode",
+      "@type": "@vocab",
+      "@context": {
+        "@vocab": "box:EnumLineOfBusinessCode#"
+      }
+    }
+  }
+}

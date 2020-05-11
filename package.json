@@ -4,16 +4,23 @@
     "description": "Semantic Data Model for Insurances",
     "private": true,
     "scripts": {
-        "build": "echo no build script configured!",
+        "build": "node scripts/build.js test"
     },
     "keywords": [
         "semantic",
         "data",
         "model",
+        "insurance",
         "schema",
-        "json-ld"
+        "json-ld",
+        "schema.org",
+        "json-ld.org",
+        "b-ox"
     ],
     "author": "b-tix GmbH",
+    "license": "Creative Commons Attribution-ShareAlike License 3.0",
     "dependencies": {},
-    "devDependencies": {}
+    "devDependencies": {
+        "fs-extra": "^9.0.0"
+    }
 }
