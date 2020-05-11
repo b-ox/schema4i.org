@@ -2,7 +2,14 @@
     "name": "@box/schema.b-ox.org",
     "version": "1.0.0",
     "description": "Semantic Data Model for Insurances",
-    "private": true,
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/b-ox/schema.b-ox.org.git"
+    },
+    "bugs": {
+        "url": "https://github.com/b-ox/schema.b-ox.org/issues"
+    },
     "scripts": {
         "build": "node scripts/build.js test"
     },
