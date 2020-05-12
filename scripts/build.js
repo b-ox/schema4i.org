@@ -208,7 +208,7 @@ async function buildSchema(environment) {
 
             // write index.json file
             if (!error) {
-                fs.writeFileSync(toPath + 'index.json', JSON.stringify(typeIndex, null, 2));
+                fs.writeFileSync(toPath + eval(environment) + '/index.json', JSON.stringify(typeIndex, null, 2));
                 console.log('\nWrite list of ' + typeIndex.types.length + ' types to ' + toPath + 'index.json');
             }
 
