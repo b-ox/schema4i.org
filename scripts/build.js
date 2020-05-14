@@ -8,10 +8,10 @@ const fs = require("fs").promises;
 const path = require("path");
 
 // environments
-const environments = {
-    PRODUCTION: "schema.b-ox.org",
-    TEST: "pending.schema.b-ox.org"
-};
+const environments = [
+    "schema.b-ox.org",
+    "pending.schema.b-ox.org"
+];
 
 // configuration
 const fromPath = "src/";
@@ -29,7 +29,7 @@ async function buildSchema(environment) {
 
     const outputDir = path.resolve(toPath, environment);
 
-    if (Object.values(environments).includes(environments)) {
+    if (environments.includes(environment)) {
         //TODO: Throw error outside git action
     } else {
         console.log(`creating custom environment ${environment}. This can be used for testing and development purposes. The output must not be add to the repository.`);
@@ -179,7 +179,7 @@ async function buildSchema(environment) {
         typeIndex.types.length +
         " types to " +
         outputDir +
-        "index.json"
+        "/index.json"
     );
 }
 
