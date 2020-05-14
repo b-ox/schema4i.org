@@ -9,9 +9,6 @@ on:
   pull_request:
     paths: [ src/** ]
     
-env:
-  # This is necessary in order to push a commit to the repo
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
   
 jobs:
   build_pending-schema-b-ox-org:
@@ -30,3 +27,6 @@ jobs:
         add: dist/pending.schema.b-ox.org/**
         author_name: CI-Bot
         message: CI Build for pending.schema.b-ox.org
+      env:
+        # This is necessary in order to push a commit to the repo
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
