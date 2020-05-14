@@ -2,7 +2,7 @@
     "name": "@box/schema.b-ox.org",
     "version": "1.0.0",
     "description": "Semantic Data Model for Insurances",
-    "private": false,
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/b-ox/schema.b-ox.org.git"
@@ -10,8 +10,11 @@
     "bugs": {
         "url": "https://github.com/b-ox/schema.b-ox.org/issues"
     },
+    "engines" : {
+        "node" : ">=12.10"
+    },
     "scripts": {
-        "build": "node scripts/build.js test"
+        "build": "node scripts/build.js"
     },
     "keywords": [
         "semantic",
@@ -25,9 +28,5 @@
         "b-ox"
     ],
     "author": "b-tix GmbH",
-    "license": "Creative Commons Attribution-ShareAlike License 3.0",
-    "dependencies": {},
-    "devDependencies": {
-        "fs-extra": "^9.0.0"
-    }
+    "license": "Creative Commons Attribution-ShareAlike License 3.0"
 }
