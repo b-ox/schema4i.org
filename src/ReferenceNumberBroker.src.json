@@ -1,7 +1,7 @@
 {
     "type": "ReferenceNumberBroker",
     "uri": "http://schema.b-ox.org/ReferenceNumberBroker",
-    "description": "Identification number of the business transaction at the intermediary, e.g. 0815.",
+    "description": "Identification number of the business transaction at the intermediary, e.g. 4711.",
     "links": [],
     "parents": [{
         "@id": "http://schema.b-ox.org/Transaction#ReferenceNumberBroker"
@@ -21,7 +21,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "ReferenceNumberBroker": "0815"
+            "ReferenceNumberBroker": "4711"
         },
         "context": {}
     }]
