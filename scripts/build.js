@@ -7,15 +7,8 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-// environments
-const environments = [
-    "schema.b-ox.org",
-    "pending.schema.b-ox.org"
-];
-
 // configuration
 const fromPath = "src/";
-let toPath = "dist/";
 let typeIndex = {
     name: "schema.b-ox.org",
     description: "Semantic Data Model for Insurances",
@@ -24,29 +17,40 @@ let typeIndex = {
     types: [],
 };
 
-// build schema
-async function buildSchema(environment) {
-
-    const outputDir = path.resolve(toPath, environment);
-
-    if (environments.includes(environment)) {
-        //TODO: Throw error outside git action
-    } else {
-        console.log(`creating custom environment ${environment}. This can be used for testing and development purposes. The output must not be add to the repository.`);
+async function clean(dir, suffixes, consoleLike) {
+    try {
+        await fs.access(dir);
+        consoleLike.log("\nCleaning directory: " + dir);
+        const files = await fs.readdir(dir);
+        await Promise.all(files.filter(file => !suffixes || suffixes.some(suffix => file.endsWith(suffix))).map(file => {
+            return fs.unlink(path.resolve(dir, file));
+        }));
+    } catch (e) {
+        consoleLike.log("\nCreating directory: " + dir);
+        await fs.mkdir(dir);
     }
+}
 
-    //clean
-    await fs.rmdir(outputDir, { recursive: true });
+// build schema
+async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
-    console.log("\nCreating environment: " + environment);
-    await fs.mkdir(outputDir);
-    console.log('Scanning: "src"');
+    consoleLike = Object.assign({}, console, consoleLike);
+
+    await clean(outputDir, ['.jsonld', 'index.json'], consoleLike);
+
+    consoleLike.log('Scanning: "src"');
+
+    let absoluteSourceDir;
+    if (sourceDir) {
+        absoluteSourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(outputDir, sourceDir);
+        await clean(absoluteSourceDir, ['.src.json'], consoleLike);
+    }
 
     // process all jsonld files
     const files = await fs.readdir(fromPath);
     // export context from src files
     for (const file of files) {
-        console.log("\nFound: " + file);
+        consoleLike.log("\nFound: " + file);
         if (file.endsWith(".src.json")) {
             let data = await fs.readFile(fromPath + file, 'utf-8');
 
@@ -81,12 +85,12 @@ async function buildSchema(environment) {
                         parent.lastIndexOf("#")
                     );
                     attributeName = parent.substr(parent.lastIndexOf("#") + 1);
-                    console.log(
+                    consoleLike.log(
                         'Checking parent "' + objectName + "#" + attributeName + '".'
                     );
                 } else {
                     objectName = parent.substr(parent.lastIndexOf("/") + 1);
-                    console.log('Checking parent "' + objectName + '".');
+                    consoleLike.log('Checking parent "' + objectName + '".');
                 }
                 try {
                     let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
@@ -119,7 +123,7 @@ async function buildSchema(environment) {
             if (!obj.type.startsWith("Enum")) {
                 // check examples for objects and attributes
                 if (!obj.playground) {
-                    console.warn(`SYNTAX ERROR: Playground examples not found in ${file}.`);
+                    consoleLike.warn(`SYNTAX ERROR: Playground examples not found in ${file}.`);
                 }
             } else {
                 // check if their is a translation link
@@ -152,7 +156,7 @@ async function buildSchema(environment) {
             await fs.writeFile(outputDir + "/" + obj.type + ".jsonld",
                 JSON.stringify(obj["context"], null, 2)
             );
-            console.log("JSON-LD context for " + obj.type + " exported.");
+            consoleLike.log("JSON-LD context for " + obj.type + " exported.");
 
             // add to index
             if (obj.type.indexOf("Enum") !== -1) {
@@ -165,8 +169,13 @@ async function buildSchema(environment) {
                 uri: obj.uri,
                 url: obj.uri + ".jsonld",
             });
+
+            if (absoluteSourceDir) {
+                fs.copyFile(path.resolve(fromPath, file), path.resolve(absoluteSourceDir, file));
+            }
+
         } else {
-            console.log("WARNING: Ignore file.");
+            consoleLike.log("WARNING: Ignore file.");
         }
     };
 
@@ -174,24 +183,14 @@ async function buildSchema(environment) {
     await fs.writeFile(outputDir + "/index.json",
         JSON.stringify(typeIndex, null, 2)
     );
-    console.log(
+    consoleLike.log(
         "\nWrite list of " +
         typeIndex.types.length +
         " types to " +
         outputDir +
         "/index.json"
     );
+
 }
 
-(async () => {
-    const environment = process.argv[2];
-    if (!environment) {
-        throw new Error('usage: npm run build <HostURL>');
-    }
-    const hostUrl = environment.replace(/^[^:/]+:\/\//, '');
-    console.log("node build.js " + hostUrl);
-    await buildSchema(hostUrl);
-})().catch((e) => {
-    console.error('build failed with error: ', e);
-    process.exit(1);
-});
+module.exports = buildSchema;

@@ -8,13 +8,15 @@ This is the [schema.b-ox.org](https://pending.schema.b-ox.org) project repositor
 
 ### Installation
 
-Fork or check out this project and navigate to the projects root directory on your local machine then type `npm install`. You need a [Node.js](https://nodejs.org/en/) environment installed on your machine. Afterwards you can find a directory `node_modules` with some libraries used by the build process.
+Fork or check out this project and navigate to the projects root directory on your local machine then type `npm install`. You need a [Node.js](https://nodejs.org/en/) environment (version >= 12.10) installed on your machine. Afterwards you can find a directory `node_modules` with some libraries used by the build process.
 
 ### Build
 
 All our types (objects, attribute, enumerations) are desccribed in JSON files with the suffix **.src.json**. The graphical user interface of our sites works on these files because - besides the included JSON-LD context - they contain the human-readable documentation of the type, links to web ressources and examples you can use in the JSON-LD playground.
 
 The `npm run build <HostURL>` command will scan these files, extract the JSON-LD context and write it to `dist/<HostURL>`. The `HostURL` ist the URL of the page the output will be hosted on. During the build all Context-URLs referencing [schema.b-ox.org](schema.b-ox.org) will be rewritten to be relative to the `HostURL`. The build also writes the file `dist/<HostURL>/index.json` that contains a list of all types and the number of objects / attribute and enumerations.
+
+For more info on how to use the `build` command please call `npm run build -- --help`.
 
 The two officially maintained Hosts are [schema.b-ox.org](schema.b-ox.org) and [pending.schema.b-ox.org](pending.schema.b-ox.org). The output for these hosts is automatically generated during the CI process. This output is hosted on our sites. You are free to use a different `HostURL` for local builds to match your requirements during development and testing.
 
