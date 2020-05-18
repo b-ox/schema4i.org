@@ -8,15 +8,17 @@ This is the [schema.b-ox.org](https://pending.schema.b-ox.org) project repositor
 
 ### Installation
 
-Fork or check out this project and navigate to the projects root directory on your local machine then type `npm install`. You need a [Node.js](https://nodejs.org/en/) environment installed on your machine. Afterwards you can find a directory `node_modules` with some libraries used by the build process.
+Fork or check out this project and navigate to the projects root directory on your local machine then type `npm install`. You need a [Node.js](https://nodejs.org/en/) environment (version >= 12.10) installed on your machine. Afterwards you can find a directory `node_modules` with some libraries used by the build process.
 
 ### Build
 
 All our types (objects, attribute, enumerations) are desccribed in JSON files with the suffix **.src.json**. The graphical user interface of our sites works on these files because - besides the included JSON-LD context - they contain the human-readable documentation of the type, links to web ressources and examples you can use in the JSON-LD playground.
 
-The `npm run build <HostURL>` command will scan these files, extract the JSON-LD context and write it to `dist/<HostURL>`. The `HostURL` ist the URL of the page the output will be hosted on. During the build all Context-URLs referencing [schema.b-ox.org](schema.b-ox.org) will be rewritten to be relative to the `HostURL`. The build also writes the file `dist/<HostURL>/index.json` that contains a list of all types and the number of objects / attribute and enumerations.
+The `npm run build <HostURL>` command will scan these files, extract the JSON-LD context and write it to an output directory. The `HostURL` ist the URL of the page the output will be hosted on. During the build all Context-URLs referencing [schema.b-ox.org](schema.b-ox.org) will be rewritten to be relative to the `HostURL`. The build also writes the file `index.json` that contains a list of all types and the number of objects / attribute and enumerations.
 
-The two officially maintained Hosts are [schema.b-ox.org](schema.b-ox.org) and [pending.schema.b-ox.org](pending.schema.b-ox.org). The output for these hosts is automatically generated during the CI process. This output is hosted on our sites. You are free to use a different `HostURL` for local builds to match your requirements during development and testing.
+For more info on how to use the `build` command please call `npm run build -- --help`.
+
+The two officially maintained Hosts are [schema.b-ox.org](schema.b-ox.org) and [pending.schema.b-ox.org](pending.schema.b-ox.org). You are free to use a different `HostURL` for local builds to match your requirements during development and testing.
 
 ## Basic principle
 
@@ -30,7 +32,7 @@ We are always interested in practical suggestions for improvements to [schema.b-
 
 ### Contribution
 
- Issues and proposals are managed in this repository. If you want to join our work please contact us and introduce yourself. You can fork this projekt and make pull requests to add new objects, attribute and enumerations. Please note that all changes should be done in the source files. The output files in [/dist](dist) are generated via the build process and should not be modified manually.
+ Issues and proposals are managed in this repository. If you want to join our work please contact us and introduce yourself. You can fork this projekt and make pull requests to add new objects, attribute and enumerations.
 
 Due to downwards compatibility don't change existing things. Do not remove objects and attributes or change their names nor meanings. Please do also not change enumeration types. Please report these issues instead. If you are new to Git and GitHub, there's a useful [introduction to Github](https://www.w3.org/2006/tools/wiki/Github) in the W3C Wiki.
 
