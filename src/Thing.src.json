@@ -1,0 +1,37 @@
+{
+    "type": "Thing",
+    "uri": "http://schema.b-ox.org/Thing",
+    "description": "The most generic type of item.",
+    "schema": "http://schema.org/Thing",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Message#About"
+    }],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "@vocab": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Thing": {
+                "@id": "schema:Thing",
+                "@type": "schema:Thing",
+                "@context": {
+                    "Name": {
+                        "@id": "schema:name",
+                        "@type": "schema:Text"
+                    }
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Thing",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Thing",
+            "Name": "A name for a thing"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,75 @@
+{
+    "type": "Message",
+    "uri": "http://schema.b-ox.org/Message",
+    "description": "A single message from a sender to one or more organizations or people.",
+    "links": [{
+        "url": "http://schema.org/Message",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Message": {
+                "@id": "schema:Message",
+                "@type": "schema:Message"
+            },
+            "ID": {
+                "@id": "schema:identifier",
+                "@type": "schema:URL"
+            },
+            "Sender": {
+                "@id": "schema:sender",
+                "@context": "http://schema.b-ox.org/Sender.jsonld"
+            },
+            "Recipient": {
+                "@id": "schema:recipient",
+                "@context": "http://schema.b-ox.org/Recipient.jsonld"
+            },
+            "Tags": {
+                "@id": "schema:keywords",
+                "@type": "schema:Text"
+            },
+            "SentDateTime": {
+                "@id": "schema:dateSent",
+                "@type": "schema:DateTime"
+            },
+            "ReceivedDateTime": {
+                "@id": "schema:dateReceived",
+                "@type": "schema:DateTime"
+            },
+            "ReadDateTime": {
+                "@id": "schema:dateRead",
+                "@type": "schema:DateTime"
+            },
+            "DataProvider": {
+                "@id": "box:DataProvider",
+                "@context": "http://schema.b-ox.org/DataProvider.jsonld"
+            },
+            "Attachments": {
+                "@id": "box:Attachments",
+                "@context": "http://schema.b-ox.org/Attachments.jsonld"
+            },
+            "Payload": {
+                "@id": "box:Payload",
+                "@type": "box:Payload",
+                "@context": "http://schema.b-ox.org/Payload.jsonld"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum completed message",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Message": {
+                "ID": "http://api.b-ox.de/ld/postbox/items/4711",
+                "Header": {},
+                "Payload": {}
+            }
+        },
+        "context": {}
+    }]
+}

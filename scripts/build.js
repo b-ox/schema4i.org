@@ -180,7 +180,7 @@ async function buildSchema(environment) {
 
                             // stop if error
                             if (error) {
-                                console.log('\nERROR\n', 'Syntax error in JSON-LD source files.');
+                                console.log('\nERROR\n', 'Syntax error in JSON-LD source files ' + file);
                             } else {
 
                                 // write @context to file

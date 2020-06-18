@@ -12,8 +12,8 @@
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "PostalAddress": {
-                "@id": "box:PostalAddress",
-                "@type": "box:PostalAddress"
+                "@id": "schema:PostalAddress",
+                "@type": "schema:PostalAddress"
             },
             "Street": {
                 "@id": "schema:streetAddress",

@@ -16,8 +16,8 @@
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "Person": {
-                "@id": "box:Person",
-                "@type": "box:Person"
+                "@id": "schema:Person",
+                "@type": "schema:Person"
             },
             "SalutationCode": {
                 "@id": "box:SalutationCode",
@@ -42,7 +42,7 @@
                 "@id": "schema:additionalName",
                 "@type": "schema:Text"
             },
-            "Birthdate": {
+            "BirthDate": {
                 "@id": "schema:birthDate",
                 "@type": "schema:Date"
             },
@@ -90,7 +90,7 @@
                 "GivenName": "Markus",
                 "FamilyName": "Heussen",
                 "AdditionalName": "c/o b-tix GmbH",
-                "Birthdate": "1973-11-16",
+                "BirthDate": "1973-11-16",
                 "GenderCode": "1",
                 "Telephone": "0049 211 41608 400",
                 "Cellphone": "0049 172 7501385",

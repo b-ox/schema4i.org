@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://localhost:4201/",
+    "schema": "http://schema.org/",
+    "Thing": {
+      "@id": "schema:Thing",
+      "@type": "schema:Thing",
+      "@context": {
+        "Name": {
+          "@id": "schema:name",
+          "@type": "schema:Text"
+        }
+      }
+    }
+  }
+}

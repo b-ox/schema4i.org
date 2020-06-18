@@ -1,0 +1,13 @@
+{
+  "name": "schema.b-ox.org",
+  "description": "Semantic Data Model for Insurances",
+  "objects": 1,
+  "enumerations": 0,
+  "types": [
+    {
+      "id": "Thing",
+      "uri": "http://localhost:4201/Thing",
+      "url": "http://localhost:4201/Thing.jsonld"
+    }
+  ]
+}

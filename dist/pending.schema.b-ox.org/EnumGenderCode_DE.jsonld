@@ -1,9 +1,0 @@
-{
-  "@context": {
-    "@version": 1.1,
-    "box": "http://pending.schema.b-ox.org/",
-    "männlich": "box:EnumGenderCode#1",
-    "weiblich": "box:EnumGenderCode#2",
-    "divers": "box:EnumGenderCode#3"
-  }
-}
