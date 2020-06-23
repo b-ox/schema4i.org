@@ -1,238 +1,196 @@
-/**
+/*
  * This node.js build script collects the configuration files
  * of the Semantic Data Model for insurances and transforms it
  * to JSON-LD context files writing to the dist directory.
  */
 
-const fs = require('fs-extra');
-
-// environments
-const prod = "schema.b-ox.org";
-const test = "pending.schema.b-ox.org";
-const devel = "localhost:4201";
+const fs = require("fs").promises;
+const path = require("path");
 
 // configuration
 const fromPath = "src/";
-let toPath = "dist/";
 let typeIndex = {
-    "name": "schema.b-ox.org",
-    "description": "Semantic Data Model for Insurances",
-    "objects": 0,
-    "enumerations": 0,
-    "types": []
+    name: "schema.b-ox.org",
+    description: "Semantic Data Model for Insurances",
+    objects: 0,
+    enumerations: 0,
+    types: [],
 };
 
-// clean
-if (fs.existsSync(toPath)) {
-    fs.removeSync(toPath);
+async function clean(dir, suffixes, consoleLike) {
+    try {
+        await fs.access(dir);
+        consoleLike.log("\nCleaning directory: " + dir);
+        const files = await fs.readdir(dir);
+        await Promise.all(files.filter(file => !suffixes || suffixes.some(suffix => file.endsWith(suffix))).map(file => {
+            return fs.unlink(path.resolve(dir, file));
+        }));
+    } catch (e) {
+        consoleLike.log("\nCreating directory: " + dir);
+        await fs.mkdir(dir);
+    }
 }
-fs.mkdirSync(toPath);
 
 // build schema
-async function buildSchema(environment) {
+async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
-    let error = false;
-    if (environment === 'prod' || environment === 'test' || environment === 'devel') {
+    consoleLike = Object.assign({}, console, consoleLike);
 
-        console.log('\nCreating environment: ' + environment);
-        fs.mkdirSync(toPath + eval(environment));
-        console.log('Scanning: "src"');
-        let error = false;
+    await clean(outputDir, ['.jsonld', 'index.json'], consoleLike);
 
-        // process all jsonld files
-        const files = fs.readdirSync(fromPath);
-        if (!files) {
-            console.log("ERROR: Could not scan directory: ", error);
-            error = true;
-        } else {
+    consoleLike.log('Scanning: "src"');
 
-            // export context from src files
-            files.forEach(function(file, index) {
+    let absoluteSourceDir;
+    if (sourceDir) {
+        absoluteSourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(outputDir, sourceDir);
+        await clean(absoluteSourceDir, ['.src.json'], consoleLike);
+    }
 
-                console.log('\nFound: ' + file);
-                if (file.endsWith('.src.json')) {
+    // process all jsonld files
+    const files = await fs.readdir(fromPath);
+    // export context from src files
+    for (const file of files) {
+        consoleLike.log("\nFound: " + file);
+        if (file.endsWith(".src.json")) {
+            let data = await fs.readFile(fromPath + file, 'utf-8');
 
-                    let data = fs.readFileSync(fromPath + file);
-                    if (!data) {
-                        console.error("ERROR: Could not read file: ", error);
-                        error = true;
-                    } else {
-                        try {
-                            // replace namespace for testing purposes
-                            if (environment === 'test' || environment === 'devel') {
-                                data = data.toString();
-                                data = data.replace(/schema.b-ox.org\//g, (environment === 'devel' ? devel + '/' : test + '/'));
-                            }
+            // replace namespace to match environment
+            data = data.replace(/schema.b-ox.org\//g, environment + '/');
 
-                            // parse data
-                            const obj = JSON.parse(data);
+            // parse data
+            const obj = JSON.parse(data);
 
-                            // do some checks
-                            if (!obj.type) {
-                                console.log('TEST', 'SYNTAX ERROR: No "type" found.');
-                                error = true;
-                            }
-                            if (environment !== 'devel' && (!obj.uri || (!obj.uri.includes('http://schema.b-ox.org') && !obj.uri.includes('http://pending.schema.b-ox.org')))) {
-                                console.log('TEST', 'SYNTAX ERROR: No "uri" found or uri not in namespace http://schema.b-ox.org or http://pending.schema.b-ox.org.');
-                                error = true;
-                            }
-                            if (!obj.description || obj.description === "") {
-                                console.log('TEST', 'SYNTAX ERROR: No "description" found or description is empty.');
-                                error = true;
-                            }
-                            if (!obj.links) {
-                                console.log('TEST', 'SYNTAX ERROR: No "links" array found.');
-                                error = true;
-                            }
-                            if (!obj['context']) {
-                                console.log('TEST', 'SYNTAX ERROR: No "context" found.');
-                                error = true;
-                            }
-
-                            // check for parent file and attributes
-                            obj.parents.forEach(function(file, index) {
-                                const parent = file['@id'];
-                                let objectName = '';
-                                let attributeName = '';
-
-                                if (parent.lastIndexOf('#') !== -1) {
-                                    objectName = parent.substring((parent.lastIndexOf('/') + 1), parent.lastIndexOf('#'));
-                                    attributeName = parent.substr((parent.lastIndexOf('#') + 1));
-                                    console.log('Checking parent "' + objectName + '#' + attributeName + '".');
-                                } else {
-                                    objectName = parent.substr(parent.lastIndexOf('/') + 1);
-                                    console.log('Checking parent "' + objectName + '".');
-                                }
-                                try {
-                                    let parentFile = fs.readFileSync(fromPath + objectName + '.src.json');
-                                    parentFile = JSON.parse(parentFile);
-
-                                    if (!obj.type.startsWith('Enum')) {
-
-                                        // check parent of attribute 
-                                        if (!parentFile.context['@context'][attributeName]) {
-                                            if (Array.isArray(parentFile.context['@context'][objectName]['@context'])) {
-                                                let ok = false;
-                                                parentFile.context['@context'][objectName]['@context'].forEach(function(extContext) {
-                                                    if (extContext.endsWith(attributeName + '.jsonld')) {
-                                                        ok = true;
-                                                    }
-                                                })
-                                                if (!ok) {
-                                                    console.log('TEST', 'SYNTAX ERROR: No attribute "' + attributeName + '" found in object "' + objectName + '".');
-                                                    error = true;
-                                                }
-                                            } else {
-                                                console.log('TEST', 'SYNTAX ERROR: No attribute "' + attributeName + '" found in object "' + objectName + '".');
-                                                error = true;
-                                            }
-                                        }
-
-                                    }
-
-                                } catch (error) {
-                                    console.log('TEST', 'SYNTAX ERROR: No source file found for object "' + objectName + '".');
-                                    error = true;
-                                }
-
-                            });
-
-
-                            if (!obj.type.startsWith('Enum')) {
-
-                                // check examples for objects and attributes
-                                if (!obj.playground) {
-                                    console.log('TEST', 'SYNTAX ERROR: Playground examples not found.');
-                                }
-
-                            } else {
-
-                                // check if their is a translation link
-                                if (obj.type.indexOf('_DE') !== -1) {
-
-                                    // check for English documentation
-                                    let ok = false;
-                                    obj.links.forEach(function(link) {
-                                        if (link.url.indexOf(obj.type.replace('_DE', '')) !== -1) {
-                                            ok = true;
-                                        }
-                                    });
-                                    if (!ok) {
-                                        console.log('TEST', 'SYNTAX ERROR: Link to English documentation not found in "' + obj.type + '".src.json.');
-                                        error = true;
-                                    }
-                                } else {
-
-                                    // check for German documentation
-                                    let ok = false;
-                                    obj.links.forEach(function(link) {
-                                        if (link.url.indexOf(obj.type + '_DE') !== -1) {
-                                            ok = true;
-                                        }
-                                    });
-                                    if (!ok) {
-                                        console.log('TEST', 'SYNTAX ERROR: Link to German documentation not found in "' + obj.type + '".src.json.');
-                                        error = true;
-                                    }
-                                }
-
-                            }
-
-                            // stop if error
-                            if (error) {
-                                console.log('\nERROR\n', 'Syntax error in JSON-LD source files ' + file);
-                            } else {
-
-                                // write @context to file
-                                fs.writeFileSync(toPath + eval(environment) + '/' + obj.type + '.jsonld', JSON.stringify(obj['context'], null, 2));
-                                console.log('JSON-LD context for ' + obj.type + ' exported.');
-
-                                // add to index
-                                if (obj.type.indexOf('Enum') !== -1) { typeIndex.enumerations++; } else { typeIndex.objects++; }
-                                typeIndex.types.push({
-                                    id: obj.type,
-                                    uri: obj.uri,
-                                    url: obj.uri + '.jsonld'
-                                });
-                            }
-
-                        } catch (exception) {
-                            console.log('ERROR: ' + exception);
-                        }
-
-                    }
-                } else {
-                    console.log('WARNING: Ignore file.');
+            // do some checks
+            for (const field of['type', 'uri', 'description', 'links', 'context']) {
+                if (!obj[field]) {
+                    throw new Error(`SYNTAX ERROR: No "${field}" found in ${file}.`);
                 }
-            });
 
-            // write index.json file
-            if (!error) {
-                fs.writeFileSync(toPath + eval(environment) + '/index.json', JSON.stringify(typeIndex, null, 2));
-                console.log('\nWrite list of ' + typeIndex.types.length + ' types to ' + toPath + 'index.json');
             }
 
+            // do some checks
+            if (!obj.type) {
+                throw new Error(`SYNTAX ERROR: No "type" found in ${file}.`);
+            }
+
+            // check for parent file and attributes
+            for (const parentConfig of(obj.parents || [])) {
+                const parent = parentConfig["@id"];
+                let objectName = "";
+                let attributeName = "";
+
+                if (parent.lastIndexOf("#") !== -1) {
+                    objectName = parent.substring(
+                        parent.lastIndexOf("/") + 1,
+                        parent.lastIndexOf("#")
+                    );
+                    attributeName = parent.substr(parent.lastIndexOf("#") + 1);
+                    consoleLike.log(
+                        'Checking parent "' + objectName + "#" + attributeName + '".'
+                    );
+                } else {
+                    objectName = parent.substr(parent.lastIndexOf("/") + 1);
+                    consoleLike.log('Checking parent "' + objectName + '".');
+                }
+                // try {
+                //     let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
+                //     parentFile = JSON.parse(parentFile);
+
+                //     if (!obj.type.startsWith("Enum")) {
+                //         // check parent of attribute
+                //         if (!parentFile.context["@context"][attributeName]) {
+                //             if (
+                //                 Array.isArray(
+                //                     parentFile.context["@context"][objectName]["@context"]
+                //                 )
+                //             ) {
+                //                 const ok = parentFile.context["@context"][objectName][
+                //                     "@context"
+                //                 ].some((extContext) => extContext.endsWith(attributeName + ".jsonld"));
+                //                 if (!ok) {
+                //                     throw new Error(`SYNTAX ERROR: No attribute "${attributeName}" found in object "${objectName}".`);
+                //                 }
+                //             } else {
+                //                 throw new Error(`SYNTAX ERROR: No attribute "${attributeName}" found in object "${objectName}".`);
+                //             }
+                //         }
+                //     }
+                // } catch (error) {
+                //     throw new Error(`SYNTAX ERROR: source file found for object "${objectName}".`);
+                // }
+            };
+
+            if (!obj.type.startsWith("Enum")) {
+                // check examples for objects and attributes
+                if (!obj.playground) {
+                    consoleLike.warn(`SYNTAX ERROR: Playground examples not found in ${file}.`);
+                }
+            } else {
+                // check if their is a translation link
+                if (obj.type.indexOf("_DE") !== -1) {
+                    // check for English documentation
+                    let ok = false;
+                    obj.links.forEach(function(link) {
+                        if (link.url.indexOf(obj.type.replace("_DE", "")) !== -1) {
+                            ok = true;
+                        }
+                    });
+                    if (!ok) {
+                        throw new Error(`SYNTAX ERROR: Link to English documentation not found in "${obj.type}.src.json".`);
+                    }
+                } else {
+                    // check for German documentation
+                    let ok = false;
+                    obj.links.forEach(function(link) {
+                        if (link.url.indexOf(obj.type + "_DE") !== -1) {
+                            ok = true;
+                        }
+                    });
+                    if (!ok) {
+                        throw new Error(`SYNTAX ERROR: Link to German documentation not found in "${obj.type}.src.json".`);
+                    }
+                }
+            }
+
+            // write @context to file
+            await fs.writeFile(outputDir + "/" + obj.type + ".jsonld",
+                JSON.stringify(obj["context"], null, 2)
+            );
+            consoleLike.log("JSON-LD context for " + obj.type + " exported.");
+
+            // add to index
+            if (obj.type.indexOf("Enum") !== -1) {
+                typeIndex.enumerations++;
+            } else {
+                typeIndex.objects++;
+            }
+            typeIndex.types.push({
+                id: obj.type,
+                uri: obj.uri,
+                url: obj.uri + ".jsonld",
+            });
+
+            if (absoluteSourceDir) {
+                fs.copyFile(path.resolve(fromPath, file), path.resolve(absoluteSourceDir, file));
+            }
+
+        } else {
+            consoleLike.log("WARNING: Ignore file.");
         }
+    };
 
-    } else {
-        error = true;
-        console.log('ERROR: Missing parameter environment (prod, test, devel).');
-    }
-
-    if (error) {
-        console.log('BUILD FAILED');
-    } else {
-        console.log('BUILD SUCCESSFUL');
-    }
+    // write index.json file
+    await fs.writeFile(outputDir + "/index.json",
+        JSON.stringify(typeIndex, null, 2)
+    );
+    consoleLike.log(
+        "\nWrite list of " +
+        typeIndex.types.length +
+        " types to " +
+        outputDir +
+        "/index.json"
+    );
 
 }
 
-(async() => {
-    try {
-        const environment = process.argv[2];
-        console.log('node build.js ' + environment);
-        await buildSchema(environment);
-    } catch (error) {
-        console.log('ERROR: ' + error);
-    }
-})();
+module.exports = buildSchema;

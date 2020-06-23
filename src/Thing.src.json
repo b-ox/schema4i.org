@@ -2,25 +2,52 @@
     "type": "Thing",
     "uri": "http://schema.b-ox.org/Thing",
     "description": "The most generic type of item.",
-    "schema": "http://schema.org/Thing",
-    "links": [],
-    "parents": [{
-        "@id": "http://schema.b-ox.org/Message#About"
+    "links": [{
+        "url": "http://schema.org/Thing",
+        "description": "Original Schema.org type"
     }],
+    "parents": [],
+    "base": [],
+    "multipletypes": {
+        "PotentialAction": [
+            "box:Action",
+            "box:CreateAction",
+            "box:SearchAction",
+            "box:UpdateAction",
+            "box:DeleteAction"
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
-            "@vocab": "http://schema.b-ox.org/",
+            "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "Thing": {
                 "@id": "schema:Thing",
-                "@type": "schema:Thing",
-                "@context": {
-                    "Name": {
-                        "@id": "schema:name",
-                        "@type": "schema:Text"
-                    }
-                }
+                "@type": "schema:Thing"
+            },
+            "AlternateName": {
+                "@id": "schema:alternateName",
+                "@type": "schema:Text"
+            },
+            "Name": {
+                "@id": "schema:name",
+                "@type": "schema:Text"
+            },
+            "Description": {
+                "@id": "schema:description",
+                "@type": "schema:Text"
+            },
+            "Identifier": {
+                "@id": "schema:identifier",
+                "@type": "schema:Text"
+            },
+            "PotentialAction": {
+                "@id": "schema:potentialAction"
+            },
+            "URL": {
+                "@id": "@id",
+                "@type": "@id"
             }
         }
     },
@@ -30,7 +57,13 @@
         "input": {
             "@context": {},
             "@type": "Thing",
-            "Name": "A name for a thing"
+            "AlternateName": "Cola",
+            "Name": "Coca Cola",
+            "Description": "Drink with a lot of suggar.",
+            "Identifier": "CC",
+            "PotentialAction": [],
+            "SameAs": "https://api.b-ox.de/resources/drinks/cola",
+            "URL": "https://api.b-ox.de/resources/drinks/cc"
         },
         "context": {}
     }]

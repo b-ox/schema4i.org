@@ -1,0 +1,81 @@
+{
+    "type": "SearchAction",
+    "uri": "http://schema.b-ox.org/SearchAction",
+    "description": "The act of searching for specific items. The SearchAction is used on an API to find a resource. For this purpose, the SearchAction is sent to the server in the request body of an HTTP post request. However, read access is often implemented via HTTP GET. In this case no body is sent. Nevertheless, this request implicitly represents a SearchAction and the server will respond with the same. The search result is returned as Result object while the Object attribute identifies e.g. a postbox, a list of movies or anything else. Moste of the times the Result is an array of objects.",
+    "links": [{
+        "url": "http://schema.org/SearchAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        "http://schema.b-ox.org/Action"
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "SearchAction": {
+                "@id": "schema:SearchAction",
+                "@type": "schema:SearchAction"
+            },
+            "Query": {
+                "@id": "schema:query",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum SearchAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "SearchAction",
+            "Query": "The search query here"
+        },
+        "context": {}
+    }, {
+        "title": "A real SearchAction response with one item",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/SearchAction.jsonld",
+                "http://schema.b-ox.org/Action.jsonld",
+                "http://schema.b-ox.org/Thing.jsonld"
+            ],
+            "@type": "SearchAction",
+            "ActionStatus": "CompletedActionStatus",
+            "Identifier": "8cfe26d3.a879c8",
+            "Result": {
+                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@type": "Thing",
+                "Identifier": "4711"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "A real SearchAction response with two items",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/SearchAction.jsonld",
+                "http://pending.schema.b-ox.org/Action.jsonld",
+                "http://pending.schema.b-ox.org/Thing.jsonld"
+            ],
+            "@type": "SearchAction",
+            "ActionStatus": "CompletedActionStatus",
+            "Identifier": "8cfe26d3.a879c8",
+            "Result": [{
+                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@type": "Thing",
+                "Identifier": "4711"
+            }, {
+                "@id": "https://api.b-ox.de/postbox/messages/4712",
+                "@type": "Message",
+                "Identifier": "4712"
+            }]
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "box": "http://localhost:4201/",
+    "schema": "http://schema.org/",
+    "SearchAction": {
+      "@id": "schema:SearchAction",
+      "@type": "schema:SearchAction"
+    },
+    "Query": {
+      "@id": "schema:query",
+      "@type": "schema:Text"
+    }
+  }
+}

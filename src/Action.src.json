@@ -1,0 +1,118 @@
+{
+    "type": "Action",
+    "uri": "http://schema.b-ox.org/Action",
+    "description": "An action performed by an agent and / or indirect participants upon an object. The execution of the action usually produce a result. Every interaction at an API is an action even if the API does not need a JSON / JSON-LD request body, but instead is called by a simple HTTP GET request. The Action object is the most generic type of actions. Most of the time actions with a specific meaning is used instead. Typical action to do CRUD operation like create, read, update and delete are e.g. CreateAction, SearchAction, UpdateAction or DeleteAction. The Object is the thing that might be changed during the action. The results of the action is transferred to the server that answers with the same Action as response and its ActionStatus and processing times, name or further descriptions.",
+    "links": [{
+        "url": "http://schema.org/Action",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/CreateAction"
+    }, {
+        "@id": "http://schema.b-ox.org/SearchAction"
+    }, {
+        "@id": "http://schema.b-ox.org/UpdateAction"
+    }, {
+        "@id": "http://schema.b-ox.org/DeleteAction"
+    }],
+    "base": [
+        "http://schema.b-ox.org/Thing"
+    ],
+    "multipletypes": {
+        "Agent": [
+            "box:Person",
+            "box:Organization"
+        ],
+        "Error": [
+            "box:Thing"
+        ],
+        "Object": [
+            "box:Thing"
+        ],
+        "Participant": [
+            "box:Person",
+            "box:Organization"
+        ],
+        "Result": [
+            "box:Thing"
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Action": {
+                "@id": "schema:Action",
+                "@type": "schema:Action"
+            },
+            "ActionStatus": {
+                "@id": "schema:actionStatus",
+                "@type": "schema:ActionStatusType"
+            },
+            "Agent": {
+                "@id": "schema:agent"
+            },
+            "EndTime": {
+                "@id": "schema:endTime",
+                "@type": "schema:DateTime"
+            },
+            "Error": {
+                "@id": "schema:error"
+            },
+            "Object": {
+                "@id": "schema:object"
+            },
+            "Participant": {
+                "@id": "schema:participant"
+            },
+            "Result": {
+                "@id": "schema:result"
+            },
+            "StartTime": {
+                "@id": "schema:startTime",
+                "@type": "schema:DateTime"
+            },
+            "Target": {
+                "@id": "schema:target",
+                "@type": "box:EntryPoint"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Action",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Action",
+            "ActionStatus": "CompletedActionStatus",
+            "Agent": {},
+            "EndTime": "2020-07-01T00:00:10",
+            "Error": {},
+            "Object": {},
+            "Participant": {},
+            "Result": {},
+            "StartTime": "2020-07-01T00:00:00",
+            "Target": {}
+        },
+        "context": {}
+    }, {
+        "title": "An Action error response of a server",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/Action.jsonld",
+                "http://pending.schema.b-ox.org/Thing.jsonld"
+            ],
+            "@type": "Action",
+            "ActionStatus": "FailedActionStatus",
+            "EndTime": "2020-07-01T00:00:10",
+            "Error": {
+                "@type": "Thing",
+                "Name": "Service unavailable",
+                "Description": "The service backend is down. Plase try again later."
+            }
+        },
+        "context": {}
+    }]
+}

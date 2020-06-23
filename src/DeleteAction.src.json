@@ -1,0 +1,61 @@
+{
+    "type": "DeleteAction",
+    "uri": "http://schema.b-ox.org/DeleteAction",
+    "description": "The act of edipting a recipient by removing one of its objects. The attribute Object declares the Thing that will be deleted. The attribute TargetCollection might be an ItemList from that the object will be deleted. On an API the DeleteAction is sent to the server as request body of an HTTP DELETE request. The server itself answers with a DeleteAction response. Sometimes on an API you can just use a DELETE call to an endpoint that identifies the object by its ID in the path. In this case you don't need any request body. Nevertheless, it is implicitly a DeleteAction.",
+    "links": [{
+        "url": "http://schema.org/DeleteAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        "http://schema.b-ox.org/Action"
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "DeleteAction": {
+                "@id": "schema:DeleteAction",
+                "@type": "schema:DeleteAction"
+            },
+            "TargetCollection": {
+                "@id": "schema:targetCollection",
+                "@type": "box:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A minimum DeleteAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DeleteAction",
+            "TargetCollection": {
+                "@id": "https://api.b-ox.de/postbox/messages"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "Delete an Object from a collection",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/Thing.jsonld",
+                "http://pending.schema.b-ox.org/Action.jsonld",
+                "http://pending.schema.b-ox.org/DeleteAction.jsonld"
+            ],
+            "@type": "DeleteAction",
+            "Object": {
+                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@type": "Thing"
+            },
+            "TargetCollection": {
+                "@id": "https://api.b-ox.de/postbox/messages",
+                "@type": "Thing"
+            }
+        },
+        "context": {}
+    }]
+}

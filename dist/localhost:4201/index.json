@@ -1,13 +1,48 @@
 {
   "name": "schema.b-ox.org",
   "description": "Semantic Data Model for Insurances",
-  "objects": 1,
+  "objects": 8,
   "enumerations": 0,
   "types": [
+    {
+      "id": "Action",
+      "uri": "http://localhost:4201/Action",
+      "url": "http://localhost:4201/Action.jsonld"
+    },
+    {
+      "id": "CreateAction",
+      "uri": "http://localhost:4201/CreateAction",
+      "url": "http://localhost:4201/CreateAction.jsonld"
+    },
+    {
+      "id": "DeleteAction",
+      "uri": "http://localhost:4201/DeleteAction",
+      "url": "http://localhost:4201/DeleteAction.jsonld"
+    },
+    {
+      "id": "ItemList",
+      "uri": "http://localhost:4201/ItemList",
+      "url": "http://localhost:4201/ItemList.jsonld"
+    },
+    {
+      "id": "ListItem",
+      "uri": "http://localhost:4201/ListItem",
+      "url": "http://localhost:4201/ListItem.jsonld"
+    },
+    {
+      "id": "SearchAction",
+      "uri": "http://localhost:4201/SearchAction",
+      "url": "http://localhost:4201/SearchAction.jsonld"
+    },
     {
       "id": "Thing",
       "uri": "http://localhost:4201/Thing",
       "url": "http://localhost:4201/Thing.jsonld"
+    },
+    {
+      "id": "UpdateAction",
+      "uri": "http://localhost:4201/UpdateAction",
+      "url": "http://localhost:4201/UpdateAction.jsonld"
     }
   ]
 }

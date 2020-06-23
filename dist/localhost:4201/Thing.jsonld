@@ -1,17 +1,34 @@
 {
   "@context": {
     "@version": 1.1,
-    "@vocab": "http://localhost:4201/",
+    "box": "http://localhost:4201/",
     "schema": "http://schema.org/",
     "Thing": {
       "@id": "schema:Thing",
-      "@type": "schema:Thing",
-      "@context": {
-        "Name": {
-          "@id": "schema:name",
-          "@type": "schema:Text"
-        }
-      }
+      "@type": "schema:Thing"
+    },
+    "AlternateName": {
+      "@id": "schema:alternateName",
+      "@type": "schema:Text"
+    },
+    "Name": {
+      "@id": "schema:name",
+      "@type": "schema:Text"
+    },
+    "Description": {
+      "@id": "schema:description",
+      "@type": "schema:Text"
+    },
+    "Identifier": {
+      "@id": "schema:identifier",
+      "@type": "schema:Text"
+    },
+    "PotentialAction": {
+      "@id": "schema:potentialAction"
+    },
+    "URL": {
+      "@id": "@id",
+      "@type": "@id"
     }
   }
 }

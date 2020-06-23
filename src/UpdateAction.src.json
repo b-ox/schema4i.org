@@ -1,0 +1,51 @@
+{
+    "type": "UpdateAction",
+    "uri": "http://schema.b-ox.org/UpdateAction",
+    "description": "The act of managing by changing/editing the state of the object. The attribute Object declares the Thing to update. The new state is transferred in the Results attribute of the action. On an API the UpdateAction is sent to the server as request body of an HTTP UPDATE or HTTP PATCH request. The server itself answers with a UpdateAction response and might send back the updated object as attribute Object.",
+    "links": [{
+        "url": "http://schema.org/UpdateAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        "http://schema.b-ox.org/Action"
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "UpdateAction": {
+                "@id": "schema:UpdateAction",
+                "@type": "schema:UpdateAction"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum UpdateAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "UpdateAction"
+        },
+        "context": {}
+    }, {
+        "title": "A real world UpdateAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https://schema.b-ox.org/Thing.jsonld",
+                "https://schema.b-ox.org/UpdateAction.jsonld",
+                "https://schema.b-ox.org/PropertyValue.jsonld"
+            ],
+            "@type": "UpdateAction",
+            "Object": {
+                "@id": "https://api.b-ox.de/config/settings/POSTBOX/ACCOUNTS",
+                "@†ype": "PropertyValue",
+                "Value": 3
+            }
+        },
+        "context": {}
+    }]
+}

@@ -7,7 +7,7 @@ const argv = require('minimist')(process.argv.slice(2), {
     }
 });
 
-(async () => {
+(async() => {
     const environment = argv._[0];
     if (!environment || argv.help) {
         console.log('usage: npm run build [-- [-o=<OutputDir>] [-s=<SourceDir>]] <HostURL>');
