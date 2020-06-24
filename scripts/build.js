@@ -61,7 +61,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             const obj = JSON.parse(data);
 
             // do some requiredd field checks
-            console.log('Checking required attributes: type, uri, description, links, base, multipletypes, context, playground.');
+            consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context, playground.');
             for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context', 'playground']) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
@@ -69,9 +69,30 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
             }
 
-            // check for parent file and attributes
-            console.log('Checking dependencies');
-            for (const parentConfig of(obj.parents || [])) {
+            // prepare dependencies 
+            consoleLike.log('Preparing dependencies (base, parents, multipletypes, @context)');
+            const dependencies = obj.parents.concat(obj.base);
+            for (const key in obj.multipletypes) {
+                for (const object of obj.multipletypes[key]) {
+                    if (!object['@id'].startsWith('http://schema.org'))
+                        dependencies.push(object);
+                    else
+                        consoleLike.log('Skip native schema type.')
+                }
+            }
+            for (const key in obj.context['@context']) {
+                if (typeof obj.context['@context'][key] === 'object') {
+                    if (obj.context['@context'][key]['@type'] && obj.context['@context'][key]['@type'].startsWith('box:')) {
+                        dependencies.push({
+                            "@id": 'http://' + environment + '/' + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
+                        })
+                    }
+                }
+            }
+
+            // check dependencies
+            for (const parentConfig of(dependencies || [])) {
+                // for (const parentConfig of(obj.parents || [])) {
                 const parent = parentConfig["@id"];
                 let objectName = "";
                 let attributeName = "";
@@ -83,38 +104,38 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                     );
                     attributeName = parent.substr(parent.lastIndexOf("#") + 1);
                     consoleLike.log(
-                        'Checking parent "' + objectName + "#" + attributeName + '".'
+                        'Checking dependency "' + objectName + "#" + attributeName + '".'
                     );
                 } else {
                     objectName = parent.substr(parent.lastIndexOf("/") + 1);
-                    consoleLike.log('Checking parent "' + objectName + '".');
+                    consoleLike.log('Checking dependency "' + objectName + '".');
                 }
-                // try {
-                //     let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
-                //     parentFile = JSON.parse(parentFile);
+                try {
+                    let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
+                    parentFile = JSON.parse(parentFile);
 
-                //     if (!obj.type.startsWith("Enum")) {
-                //         // check parent of attribute
-                //         if (!parentFile.context["@context"][attributeName]) {
-                //             if (
-                //                 Array.isArray(
-                //                     parentFile.context["@context"][objectName]["@context"]
-                //                 )
-                //             ) {
-                //                 const ok = parentFile.context["@context"][objectName][
-                //                     "@context"
-                //                 ].some((extContext) => extContext.endsWith(attributeName + ".jsonld"));
-                //                 if (!ok) {
-                //                     throw new Error(`SYNTAX ERROR: No attribute "${attributeName}" found in object "${objectName}".`);
-                //                 }
-                //             } else {
-                //                 throw new Error(`SYNTAX ERROR: No attribute "${attributeName}" found in object "${objectName}".`);
-                //             }
-                //         }
-                //     }
-                // } catch (error) {
-                //     throw new Error(`SYNTAX ERROR: source file found for object "${objectName}".`);
-                // }
+                    if (!obj.type.startsWith("Enum") && attributeName !== '') {
+                        // check parent of attribute
+                        if (!parentFile.context["@context"][attributeName]) {
+                            if (
+                                Array.isArray(
+                                    parentFile.context["@context"][objectName]["@context"]
+                                )
+                            ) {
+                                const ok = parentFile.context["@context"][objectName][
+                                    "@context"
+                                ].some((extContext) => extContext.endsWith(attributeName + ".jsonld"));
+                                if (!ok) {
+                                    throw new Error(`No attribute "${attributeName}" found in object "${objectName}".`);
+                                }
+                            } else {
+                                throw new Error(`No attribute "${attributeName}" found in object "${objectName}".`);
+                            }
+                        }
+                    }
+                } catch (error) {
+                    throw new Error(error);
+                }
             };
 
             if (!obj.type.startsWith("Enum")) {
