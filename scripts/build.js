@@ -61,8 +61,8 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             const obj = JSON.parse(data);
 
             // do some requiredd field checks
-            consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context, playground.');
-            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context', 'playground']) {
+            consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context.');
+            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
                 }
@@ -82,10 +82,20 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             }
             for (const key in obj.context['@context']) {
                 if (typeof obj.context['@context'][key] === 'object') {
-                    if (obj.context['@context'][key]['@type'] && obj.context['@context'][key]['@type'].startsWith('box:')) {
-                        dependencies.push({
-                            "@id": 'http://' + environment + '/' + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
-                        })
+                    if (obj.context['@context'][key]['@type']) {
+                        if (obj.context['@context'][key]['@type'].startsWith('box:')) {
+                            dependencies.push({
+                                "@id": "http://" + environment + "/" + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
+                            })
+                        } else if (obj.context['@context'][key]['@type'] === '@vocab') {
+                            const vocab = obj.context['@context'][key]['@context']['@vocab'];
+                            dependencies.push({
+                                "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#'))
+                            });
+                            dependencies.push({
+                                "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE"
+                            });
+                        }
                     }
                 }
             }
@@ -139,9 +149,9 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             };
 
             if (!obj.type.startsWith("Enum")) {
-                // check examples for objects and attributes
+                // check examples for objects
                 if (!obj.playground) {
-                    consoleLike.warn(`SYNTAX ERROR: Playground examples not found in ${file}.`);
+                    consoleLike.warn(`Playground examples not found in ${file}.`);
                 }
             } else {
                 // check if their is a translation link
@@ -154,7 +164,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                         }
                     });
                     if (!ok) {
-                        throw new Error(`SYNTAX ERROR: Link to English documentation not found in "${obj.type}.src.json".`);
+                        throw new Error(`Link to English documentation not found in "${obj.type}.src.json".`);
                     }
                 } else {
                     // check for German documentation
@@ -165,7 +175,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                         }
                     });
                     if (!ok) {
-                        throw new Error(`SYNTAX ERROR: Link to German documentation not found in "${obj.type}.src.json".`);
+                        throw new Error(`Link to German documentation not found in "${obj.type}.src.json".`);
                     }
                 }
             }
