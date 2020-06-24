@@ -1,0 +1,42 @@
+{
+    "type": "AdditionalName",
+    "uri": "http://schema.b-ox.org/AdditionalName",
+    "description": "An additional name for an Organization. In Schema.org the additional name is only supported for a Person where it might be used for a middle name. For a company sometimes its important to have more than just one legal name and one name attribute. Especially in the Germasn GDV standard there are three fields for it.",
+    "links": [{
+        "url": "http://schema.org/additionalName",
+        "description": "Original Schema.org type (used in Person)"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Organization#AdditionalName" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "AdditionalName": {
+                "@id": "box:AdditionalName",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum AdditionalName",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "AdditionalName": "c/o b-tix GmbH"
+        },
+        "context": {}
+    }, {
+        "title": "A sample ItemList",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "AdditionalName": ["c/o b-tix GmbH", "4. Etage"]
+        },
+        "context": {}
+    }]
+}
