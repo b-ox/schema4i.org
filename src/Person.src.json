@@ -104,5 +104,29 @@
             "Telephone": "+49 211 41608 400"
         },
         "context": {}
+    }, {
+        "title": "A realistic Person",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/Thing.jsonld",
+                "http://pending.schema.b-ox.org/Person.jsonld",
+                "http://pending.schema.b-ox.org/PostalAddress.jsonld"
+            ],
+            "@type": "Person",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressCountry": "D",
+                "AddressLocality": "Düsseldorf",
+                "PostalCode": "40233",
+                "StreetAddress": "Düsseldorf"
+            },
+            "BirthDate": "1973-11-16",
+            "Email": "noreply@b-tix.de",
+            "FamilyName": "Heussen",
+            "GivenName": "Markus",
+            "Telephone": "+49 211 41608 400"
+        },
+        "context": {}
     }]
 }
