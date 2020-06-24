@@ -1,0 +1,71 @@
+{
+    "type": "EntryPoint",
+    "uri": "http://schema.b-ox.org/EntryPoint",
+    "description": "An entry point, within some Web-based protocol. Most of the times an entry point is an endpoint of a web API. But it also can be a link to a website. An EntryPoint describes the location of the target and how to use it. It is described in a manner that some client software can automatically use the API or Website.",
+    "links": [{
+        "url": "http://schema.org/EntryPoint",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Action#Target" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {
+        "ActionPlatform": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/URL" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "EntryPoint": {
+                "@id": "schema:EntryPoint",
+                "@type": "schema:EntryPoint"
+            },
+            "ActionPlatform": {
+                "@id": "schema:actionPlatform"
+            },
+            "ContentType": {
+                "@id": "schema:contentType",
+                "@type": "schema:Text"
+            },
+            "EncodingType": {
+                "@id": "schema:encodingType",
+                "@type": "schema:Text"
+            },
+            "HTTPMethod": {
+                "@id": "schema:httpMethod",
+                "@type": "schema:Text"
+            },
+            "URLTemplate": {
+                "@id": "schema:urlTemplate",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum EntryPoint for a Website (URL)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/EntryPoint.jsonld",
+                {
+                    "ActionPlatform": {
+                        "@id": "http://schema.org/actionPlatform",
+                        "@type": "http://schema.org/URL"
+                    }
+                }
+            ],
+            "@type": "EntryPoint",
+            "ActionPlatform": "http://www.b-ox.de/kostenlos-registrieren",
+            "ContentType": "text/html",
+            "HTTPMethod": "GET"
+        },
+        "context": {}
+    }]
+}

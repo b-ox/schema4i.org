@@ -1,0 +1,67 @@
+{
+    "type": "PostalAddress",
+    "uri": "http://schema.b-ox.org/PostalAddress",
+    "description": "The mailing address.",
+    "links": [{
+        "url": "http://schema.org/PostalAddress",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Person#Address" },
+        { "@id": "http://schema.b-ox.org/Organization#Address" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/ContactPoint" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "PostalAddress": {
+                "@id": "schema:PostalAddress",
+                "@type": "schema:PostalAddress"
+            },
+            "AddressCountry": {
+                "@id": "schema:addressCountry",
+                "@type": "schema:Text"
+            },
+            "AddressLocality": {
+                "@id": "schema:addressLocality",
+                "@type": "schema:Text"
+            },
+            "AddressRegion": {
+                "@id": "schema:addressRegion",
+                "@type": "schema:Text"
+            },
+            "PostOfficeBoxNumber": {
+                "@id": "schema:postOfficeBoxNumber",
+                "@type": "schema:Text"
+            },
+            "PostalCode": {
+                "@id": "schema:postalCode",
+                "@type": "schema:Text"
+            },
+            "StreetAddress": {
+                "@id": "schema:streetAddress",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum PostalAddress",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "PostalAddress",
+            "AddressCountry": "D",
+            "AddressLocality": "Düsseldorf",
+            "AddressRegion": "NRW",
+            "PostOfficeBoxNumber": "Postfach 4711",
+            "PostalCode": "40233",
+            "StreetAddress": "Düsseldorf"
+        },
+        "context": {}
+    }]
+}

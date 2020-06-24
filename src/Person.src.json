@@ -1,0 +1,108 @@
+{
+    "type": "Person",
+    "uri": "http://schema.b-ox.org/Person",
+    "description": "A person (alive, dead, undead, or fictional). In the insurance industry a person usually is a natural person on a life cycle of an insurance contract like a policyholder, the insured person or someone who claims. It can also be an insurance broker or an employee of an insurance company.",
+    "links": [{
+        "url": "http://schema.org/Person",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Action#Agent" },
+        { "@id": "http://schema.b-ox.org/Action#Participant" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://pending.schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Person": {
+                "@id": "schema:Person",
+                "@type": "schema:Person"
+            },
+            "AdditionalName": {
+                "@id": "schema:additionalName",
+                "@type": "schema:Text"
+            },
+            "Address": {
+                "@id": "schema:address",
+                "@type": "box:PostalAddress"
+            },
+            "BirthDate": {
+                "@id": "schema:birthDate",
+                "@type": "schema:Date"
+            },
+            "ContactPoint": {
+                "@id": "schema:contactPoint",
+                "@type": "box:ContactPoint"
+            },
+            "Email": {
+                "@id": "schema:email",
+                "@type": "schema:Text"
+            },
+            "FamilyName": {
+                "@id": "schema:familyName",
+                "@type": "schema:Text"
+            },
+            "FaxNumber": {
+                "@id": "schema:faxNumber",
+                "@type": "schema:Text"
+            },
+            "Gender": {
+                "@id": "schema:gender",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumGenderCode#"
+                }
+            },
+            "GivenName": {
+                "@id": "schema:givenName",
+                "@type": "schema:Text"
+            },
+            "HonorificPrefix": {
+                "@id": "schema:honorificPrefix",
+                "@type": "schema:Text"
+            },
+            "Nationality": {
+                "@id": "schema:nationality",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumCountryCode#"
+                }
+            },
+            "RelatedTo": {
+                "@id": "schema:relatedTo",
+                "@type": "box:Person"
+            },
+            "Telephone": {
+                "@id": "schema:telephone",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Person",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Person",
+            "AdditionalName": "c/o b-tix GmbH",
+            "Address": {},
+            "BirthDate": "1973-11-16",
+            "ContactPoint": {},
+            "Email": "noreply@b-tix.de",
+            "FamilyName": "Heussen",
+            "FaxNumber": "0211 41608 100",
+            "Gender": "1",
+            "GivenName": "Markus",
+            "HonorificPrefix": "Dr.",
+            "Nationality": "D",
+            "RelatedTo": {},
+            "Telephone": "+49 211 41608 400"
+        },
+        "context": {}
+    }]
+}
