@@ -55,6 +55,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             let data = await fs.readFile(fromPath + file, 'utf-8');
 
             // replace namespace to match environment
+            data = data.replace(/pending.schema.b-ox.org\//g, environment + '/');
             data = data.replace(/schema.b-ox.org\//g, environment + '/');
 
             // parse data
