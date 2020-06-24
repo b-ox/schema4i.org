@@ -81,8 +81,9 @@
                 }
             ],
             "@type": "EntryPoint",
-            "ActionPlatform": "http://www.b-ox.de/kostenlos-registrieren",
-            "ContentType": "text/html",
+            "ContentType": "application/ld+json",
+            "EncodingType": "application/ld+json",
+            "URLTemplate": "https://api.b-ox.de/postbox/messages",
             "HTTPMethod": "GET"
         },
         "context": {}
