@@ -60,20 +60,17 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             // parse data
             const obj = JSON.parse(data);
 
-            // do some checks
-            for (const field of['type', 'uri', 'description', 'links', 'context']) {
+            // do some requiredd field checks
+            console.log('Checking required attributes: type, uri, description, links, base, multipletypes, context, playground.');
+            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context', 'playground']) {
                 if (!obj[field]) {
-                    throw new Error(`SYNTAX ERROR: No "${field}" found in ${file}.`);
+                    throw new Error(`No attribute "${field}" found in ${file}.`);
                 }
 
             }
 
-            // do some checks
-            if (!obj.type) {
-                throw new Error(`SYNTAX ERROR: No "type" found in ${file}.`);
-            }
-
             // check for parent file and attributes
+            console.log('Checking dependencies');
             for (const parentConfig of(obj.parents || [])) {
                 const parent = parentConfig["@id"];
                 let objectName = "";

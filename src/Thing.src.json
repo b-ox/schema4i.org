@@ -9,13 +9,17 @@
     "parents": [],
     "base": [],
     "multipletypes": {
-        "PotentialAction": [
-            "box:Action",
-            "box:CreateAction",
-            "box:SearchAction",
-            "box:UpdateAction",
-            "box:DeleteAction"
-        ]
+        "PotentialAction": [{
+            "@id": "http://schema.b-ox.org/Action"
+        }, {
+            "@id": "http://schema.b-ox.org/CreateAction"
+        }, {
+            "@id": "http://schema.b-ox.org/SearchAction"
+        }, {
+            "@id": "http://schema.b-ox.org/UpdateAction"
+        }, {
+            "@id": "http://schema.b-ox.org/DeleteAction"
+        }]
     },
     "context": {
         "@context": {

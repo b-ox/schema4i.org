@@ -7,9 +7,9 @@
         "description": "Original Schema.org type"
     }],
     "parents": [],
-    "base": [
-        "http://schema.b-ox.org/Action"
-    ],
+    "base": [{
+        "@id": "http://schema.b-ox.org/Action"
+    }],
     "multipletypes": {},
     "context": {
         "@context": {
