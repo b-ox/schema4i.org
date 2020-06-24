@@ -6,12 +6,12 @@
         "url": "http://schema.org/ListItem",
         "description": "Original Schema.org type"
     }],
-    "parents": [{
-        "@id": "http://schema.b-ox.org/ItemList#ItemListElement"
-    }],
-    "base": [{
-        "@id": "http://schema.b-ox.org/Thing"
-    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/ItemList#ItemListElement" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

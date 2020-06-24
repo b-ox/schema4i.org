@@ -6,38 +6,33 @@
         "url": "http://schema.org/Action",
         "description": "Original Schema.org type"
     }],
-    "parents": [{
-        "@id": "http://schema.b-ox.org/CreateAction"
-    }, {
-        "@id": "http://schema.b-ox.org/SearchAction"
-    }, {
-        "@id": "http://schema.b-ox.org/UpdateAction"
-    }, {
-        "@id": "http://schema.b-ox.org/DeleteAction"
-    }],
-    "base": [{
-        "@id": "http://schema.b-ox.org/Thing"
-    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/CreateAction" },
+        { "@id": "http://schema.b-ox.org/SearchAction" },
+        { "@id": "http://schema.b-ox.org/UpdateAction" },
+        { "@id": "http://schema.b-ox.org/DeleteAction" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
     "multipletypes": {
-        "Agent": [{
-            "@id": "http://schema.b-ox.org/Person"
-        }, {
-            "@id": "http://schema.b-ox.org/Organization"
-        }],
-        "Error": [{
-            "@id": "http://schema.b-ox.org/Thing"
-        }],
-        "Object": [{
-            "@id": "http://schema.b-ox.org/Thing"
-        }],
-        "Participant": [{
-            "@id": "http://schema.b-ox.org/Person"
-        }, {
-            "@id": "http://schema.b-ox.org/Organization"
-        }],
-        "Result": [{
-            "@id": "http://schema.b-ox.org/Thing"
-        }]
+        "Agent": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "Error": [
+            { "@id": "http://schema.b-ox.org/Thing" }
+        ],
+        "Object": [
+            { "@id": "http://schema.b-ox.org/Thing" }
+        ],
+        "Participant": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "Result": [
+            { "@id": "http://schema.b-ox.org/Thing" }
+        ]
     },
     "context": {
         "@context": {

@@ -6,10 +6,12 @@
         "url": "http://schema.org/UpdateAction",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
-    "base": [{
-        "@id": "http://schema.b-ox.org/Action"
-    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Action" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

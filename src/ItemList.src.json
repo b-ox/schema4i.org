@@ -7,17 +7,15 @@
         "description": "Original Schema.org type"
     }],
     "parents": [],
-    "base": [{
-        "@id": "http://schema.b-ox.org/Thing"
-    }],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
     "multipletypes": {
-        "ItemListElement": [{
-            "@id": "http://schema.org/Text"
-        }, {
-            "@id": "http://schema.b-ox.org/Thing"
-        }, {
-            "@id": "http://schema.b-ox.org/ListItem"
-        }]
+        "ItemListElement": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.b-ox.org/Thing" },
+            { "@id": "http://schema.b-ox.org/ListItem" }
+        ]
     },
     "context": {
         "@context": {
