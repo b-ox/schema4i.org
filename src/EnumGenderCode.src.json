@@ -1,0 +1,29 @@
+{
+    "type": "EnumGenderCode",
+    "uri": "http://schema.b-ox.org/EnumGenderCode",
+    "description": "A code that represents the gender of a natural person or animal according to the German GDV standard with release date 01.07.2018 added by a code 3 = diverse, e.g. 1 = male.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumGenderCode_DE",
+        "description": "German keys documentation"
+    }, {
+        "url": "http://schema.b-ox.org/EnumGenderCode_DE.jsonld",
+        "description": "German key translation of EnumGenderCode"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0100.htm",
+        "description": "GDV general data - part address, field 25"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Person#Gender" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "male": "box:EnumGenderCode#1",
+            "female": "box:EnumGenderCode#2",
+            "diverse": "box:EnumGenderCode#3"
+        }
+    }
+}

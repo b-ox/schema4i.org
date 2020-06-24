@@ -49,7 +49,26 @@
         }
     },
     "playground": [{
-        "title": "A maximum EntryPoint for a Website (URL)",
+        "title": "An EntryPoint for a Website (URL)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/EntryPoint.jsonld",
+                {
+                    "ActionPlatform": {
+                        "@id": "http://schema.org/actionPlatform",
+                        "@type": "http://schema.org/URL"
+                    }
+                }
+            ],
+            "@type": "EntryPoint",
+            "ActionPlatform": "http://www.b-ox.de/kostenlos-registrieren",
+            "ContentType": "text/html",
+            "HTTPMethod": "GET"
+        },
+        "context": {}
+    }, {
+        "title": "An EntryPoint for an API",
         "tab": "tab-expanded",
         "input": {
             "@context": [

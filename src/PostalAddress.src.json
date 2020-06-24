@@ -25,7 +25,10 @@
             },
             "AddressCountry": {
                 "@id": "schema:addressCountry",
-                "@type": "schema:Text"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumCountryCode#"
+                }
             },
             "AddressLocality": {
                 "@id": "schema:addressLocality",
