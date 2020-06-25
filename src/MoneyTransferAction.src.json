@@ -1,0 +1,69 @@
+{
+    "type": "MoneyTransferAction",
+    "uri": "http://schema.b-ox.org/MoneyTransferAction",
+    "description": "The act of transferring money from one place to another place. This may occur electronically or physically. In the insurance industry it might be also used to just report transations even if there is in fact no money transferation from one account to another that does exactly match. So if there is sent a settlement from one business party to another there might be only one collective transaction but the need to report what the individual amounts are behind this.",
+    "links": [{
+        "url": "http://schema.org/MoneyTransfer",
+        "description": "Original Schema.org type (ATTENTION: Still pending and wrong spelling.)"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "MoneyTransferAction": {
+                "@id": "schema:MoneyTransferAction",
+                "@type": "schema:MoneyTransferAction"
+            },
+            "Amount": {
+                "@id": "schema:amount",
+                "@type": "box:MonetaryAmount"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum MoneyTransferAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MoneyTransferAction",
+            "Amount": {}
+        },
+        "context": {}
+    }, {
+        "title": "A realistic MoneyTransferAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/Thing.jsonld",
+                "http://pending.schema.b-ox.org/Action.jsonld",
+                "http://pending.schema.b-ox.org/MoneyTransferAction.jsonld",
+                "http://pending.schema.b-ox.org/MonetaryAmount.jsonld",
+                "http://pending.schema.b-ox.org/Person.jsonld",
+                "http://pending.schema.b-ox.org/Organization.jsonld"
+            ],
+            "@type": "MoneyTransferAction",
+            "Identifier": "4711",
+            "StartTime": "2020-04-11T13:13:13",
+            "Agent": {
+                "@type": "Person",
+                "Name": "Max Mustermann"
+            },
+            "Participant": {
+                "@type": "Organization",
+                "Name": "Muster AG"
+            },
+            "Amount": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": "3332.00"
+            }
+        },
+        "context": {}
+    }]
+}
