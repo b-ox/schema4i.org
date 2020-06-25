@@ -24,7 +24,7 @@ The two officially maintained Hosts are [schema.b-ox.org](schema.b-ox.org) and [
 
 We use things that are already defined elsewhere to prevent reinventing the wheel. Our base vocabulary is [Schema.org](https://schema.org). We always search there for objects (types) like [schema.org/Person](https://schema.org/Person), attributes (properties) like [schema.org/givenName](https://schema.org/givenName)) or data types like [schema.org/Text](https://schema.org/Text)) before we add new things into our vocabulary.
 
-Only those objects, attributes oder data types are "part of the Semantic Data Model for Insurances" that have been declared in our JSON-LD context files. Of cause you can use everything else in your data exchange by justing adding your own context to the JSON-LD document.
+Only those objects, attributes oder data types are "part of the Semantic Data Model for Insurances" that have been declared in our JSON-LD context files. Of cause you can use everything else in your data exchange by just adding context to the JSON-LD document.
 
 ## Improving the Semantic Data Model
 
@@ -77,11 +77,19 @@ After this you have to put additional attributes to the context and define their
     {
         "type": "PostalAddress",
         "uri": "http://schema.b-ox.org/PostalAddress",
-        "description": "Mailing address ...",
-        "links": [],
-        "parents": [{
-            "@id": "http://schema.b-ox.org/Policyholder#PostalAddress"
+        "description": "The mailing address.",
+        "links": [{
+            "url": "http://schema.org/PostalAddress",
+            "description": "Original Schema.org type"
         }],
+        "parents": [
+            { "@id": "http://schema.b-ox.org/Person#Address" },
+            { "@id": "http://schema.b-ox.org/Organization#Address" }
+        ],
+        "base": [
+            { "@id": "http://schema.b-ox.org/ContactPoint" }
+        ],
+        "multipletypes": {},
         "context": {
             "@context": {
                 "@version": 1.1,
@@ -91,43 +99,47 @@ After this you have to put additional attributes to the context and define their
                     "@id": "schema:PostalAddress",
                     "@type": "schema:PostalAddress"
                 },
-                "Street": {
-                    "@id": "schema:streetAddress",
+                "AddressCountry": {
+                    "@id": "schema:addressCountry",
+                    "@type": "@vocab",
+                    "@context": {
+                        "@vocab": "box:EnumCountryCode#"
+                    }
+                },
+                "AddressLocality": {
+                    "@id": "schema:addressLocality",
                     "@type": "schema:Text"
                 },
-                "HouseNumber": {
-                    "@id": "box:HouseNumber",
+                "AddressRegion": {
+                    "@id": "schema:addressRegion",
+                    "@type": "schema:Text"
+                },
+                "PostOfficeBoxNumber": {
+                    "@id": "schema:postOfficeBoxNumber",
                     "@type": "schema:Text"
                 },
                 "PostalCode": {
                     "@id": "schema:postalCode",
                     "@type": "schema:Text"
                 },
-                "City": {
-                    "@id": "schema:addressLocality",
+                "StreetAddress": {
+                    "@id": "schema:streetAddress",
                     "@type": "schema:Text"
-                },
-                "CountryCode": {
-                    "@id": "box:CountryCode",
-                    "@type": "@vocab",
-                    "@context": {
-                        "@vocab": "box:EnumCountryCode#"
-                    }
                 }
             }
         },
         "playground": [{
-            "title": "A maximum completed postal address",
+            "title": "A maximum PostalAddress",
             "tab": "tab-expanded",
             "input": {
                 "@context": {},
-                "PostalAddress": {
-                    "Street": "Lindenstr.",
-                    "HouseNumber": "48-52",
-                    "PostalCode": "40233",
-                    "City": "Düsseldorf",
-                    "CountryCode": "D"
-                }
+                "@type": "PostalAddress",
+                "AddressCountry": "D",
+                "AddressLocality": "Düsseldorf",
+                "AddressRegion": "NRW",
+                "PostOfficeBoxNumber": "Postfach 4711",
+                "PostalCode": "40233",
+                "StreetAddress": "Düsseldorf"
             },
             "context": {}
         }]
@@ -142,61 +154,49 @@ Modelling attributes follow the nearly the same rules like shown above when mode
 #### Example attribute source file
 
     {
-        "type": "GenderCode",
-        "uri": "http://schema.b-ox.org/GenderCode",
-        "description": "The code represents..., e.g. 1 = male.",
+        "type": "AdditionalName",
+        "uri": "http://schema.b-ox.org/AdditionalName",
+        "description": "An additional name for an Organization. In Schema.org the additional name is only supported for a Person where it might be used for a middle name. For a company sometimes its important to have more than just one legal name and one name attribute. Especially in the Germasn GDV standard there are three fields for it.",
         "links": [{
-            "url": "http://schema.b-ox.org/EnumGenderCode.jsonld",
-            "description": "Enumeration with keys and values"
-        }, {
-            "url": "http://schema.b-ox.org/EnumGenderCode_DE.jsonld",
-            "description": "German key translation of GenderCode"
+            "url": "http://schema.org/additionalName",
+            "description": "Original Schema.org type (used in Person)"
         }],
-        "parents": [{
-            "@id": "http://schema.b-ox.org/Person#GenderCode"
-        }],
+        "parents": [
+            { "@id": "http://schema.b-ox.org/Organization#AdditionalName" }
+        ],
+        "base": [],
+        "multipletypes": {},
         "context": {
             "@context": {
                 "@version": 1.1,
                 "box": "http://schema.b-ox.org/",
-                "GenderCode": {
-                    "@id": "box:GenderCode",
-                    "@type": "@vocab",
-                    "@context": {
-                        "@vocab": "box:EnumGenderCode#"
-                    }
+                "schema": "http://schema.org/",
+                "AdditionalName": {
+                    "@id": "box:AdditionalName",
+                    "@type": "schema:Text"
                 }
             }
         },
         "playground": [{
-            "title": "Gender code for the person is female.",
+            "title": "A maximum AdditionalName",
             "tab": "tab-expanded",
             "input": {
                 "@context": {},
-                "GenderCode": "2"
+                "AdditionalName": "c/o b-tix GmbH"
             },
             "context": {}
         }, {
-            "title": "Gender code translated to English",
-            "tab": "tab-compacted",
+            "title": "Array of AdditionalName",
+            "tab": "tab-expanded",
             "input": {
                 "@context": {},
-                "GenderCode": "2"
+                "AdditionalName": ["c/o b-tix GmbH", "4. Etage"]
             },
-            "context": {
-                "@context": {
-                    "box": "http://schema.b-ox.org/",
-                    "Gender": {
-                        "@id": "box:GenderCode",
-                        "@type": "@vocab",
-                        "@context": "http://schema.b-ox.org/EnumGenderCode.jsonld"
-                    }
-                }
-            }
+            "context": {}
         }]
     }
 
-If the attribute defines a key / value list as data type (@vocab) that it's strongly recommended to add another example showing a translation of the key to its human-readable value.
+If the attribute defines a key / value list as data type (@vocab) that it's strongly recommended to add an example showing a translation of the key to its human-readable value.
 
 ### Modelling enumerations
 
@@ -209,7 +209,7 @@ In the `@context` you do not have to define the name of the type and there is no
     {
         "type": "EnumGenderCode",
         "uri": "http://schema.b-ox.org/EnumGenderCode",
-        "description": "A code that ...",
+        "description": "A code that represents the gender of a natural person or animal according to the German GDV standard with release date 01.07.2018 added by a code 3 = diverse, e.g. 1 = male.",
         "links": [{
             "url": "http://schema.b-ox.org/EnumGenderCode_DE",
             "description": "German keys documentation"
@@ -220,9 +220,11 @@ In the `@context` you do not have to define the name of the type and there is no
             "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0100.htm",
             "description": "GDV general data - part address, field 25"
         }],
-        "parents": [{
-            "@id": "http://schema.b-ox.org/GenderCode"
-        }],
+        "parents": [
+            { "@id": "http://schema.b-ox.org/Person#Gender" }
+        ],
+        "base": [],
+        "multipletypes": {},
         "context": {
             "@context": {
                 "@version": 1.1,
