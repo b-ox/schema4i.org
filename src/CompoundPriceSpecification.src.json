@@ -1,0 +1,43 @@
+{
+    "type": "CompoundPriceSpecification",
+    "uri": "http://schema.b-ox.org/CompoundPriceSpecification",
+    "description": "A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use the name property of the attached unit price specification for indicating the dimension of a price component (e.g. 'electricity' or 'final cleaning'). In the insurance industry you can use this type to specify a price of an insurance contract splitted in its parts like insurance tax, costs, etc.",
+    "links": [{
+        "url": "http://schema.org/CompoundPriceSpecification",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Invoice#TotalPaymentDue" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/PriceSpecification" }
+    ],
+    "multipletypes": {
+
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "CompoundPriceSpecification": {
+                "@id": "schema:CompoundPriceSpecification",
+                "@type": "schema:CompoundPriceSpecification"
+            },
+            "PriceComponent": {
+                "@id": "schema:priceComponent",
+                "@type": "box:UnitPriceSpecification"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum CompoundPriceSpecification",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "CompoundPriceSpecification",
+            "PriceComponent": []
+        },
+        "context": {}
+    }]
+}

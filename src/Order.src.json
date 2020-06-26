@@ -1,0 +1,87 @@
+{
+    "type": "Order",
+    "uri": "http://schema.b-ox.org/Order",
+    "description": "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer. In the insurance industry this type can be used to transfer data of an insurance contract. For insurance applications use the type Offer instead.",
+    "links": [{
+        "url": "http://schema.org/Order",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Invoice#ReferencesOrder" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {
+        "Broker": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "Customer": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "OrderedItem": [
+            { "@id": "http://schema.b-ox.org/OrderItem" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Order": {
+                "@id": "schema:Order",
+                "@type": "schema:Order"
+            },
+            "BillingAddress": {
+                "@id": "schema:billingAddress",
+                "@type": "box:PostalAddress"
+            },
+            "ConfirmationNumber": {
+                "@id": "schema:confirmationNumber",
+                "@type": "schema:Text"
+            },
+            "Customer": {
+                "@id": "schema:customer"
+            },
+            "Discount": {
+                "@id": "schema:discount",
+                "@type": "schema:Number"
+            },
+            "DiscountCode": {
+                "@id": "schema:discountCode",
+                "@type": "schema:Text"
+            },
+            "DiscountCurrency": {
+                "@id": "schema:discountCurrency",
+                "@type": "schema:Text"
+            },
+            "OrderDate": {
+                "@id": "schema:orderDate",
+                "@type": "schema:Date"
+            },
+            "OrderNumber": {
+                "@id": "schema:orderNumber",
+                "@type": "schema:Text"
+            },
+            "OrderedItem": {
+                "@id": "schema:orderedItem"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Order",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Order",
+            "ConfirmationNumber": "BELEG-03 -0000014",
+            "OrderNumber": "VSNR-NG070420-003",
+            "OrderDate": "2020",
+            "BillingAddress": {},
+            "OrderedItem": {}
+        },
+        "context": {}
+    }]
+}

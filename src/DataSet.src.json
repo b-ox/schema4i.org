@@ -1,0 +1,36 @@
+{
+    "type": "DataSet",
+    "uri": "http://schema.b-ox.org/DataSet",
+    "description": "A body of structured information describing some topic(s) of interest.",
+    "links": [{
+        "url": "http://schema.org/DataSet",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/DataFeed" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "DataSet": {
+                "@id": "schema:DataSet",
+                "@type": "schema:DataSet"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DataSet",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DataSet"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,97 @@
+{
+    "type": "Invoice",
+    "uri": "http://schema.b-ox.org/Invoice",
+    "description": "A statement of the money due for goods or services; a bill. In the insurance industry you can use this type also for transferring settlements between brokers and insurers or between insurers.",
+    "links": [{
+        "url": "http://schema.org/Invoice",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {
+        "Broker": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "Customer": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "Provider": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "TotalPaymentDue": [
+            { "@id": "http://schema.b-ox.org/MonetaryAmount" },
+            { "@id": "http://schema.b-ox.org/CompoundPriceSpecification" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Invoice": {
+                "@id": "schema:Invoice",
+                "@type": "schema:Invoice"
+            },
+            "AccountID": {
+                "@id": "schema:accountId",
+                "@type": "schema:Text"
+            },
+            "BillingPeriod": {
+                "@id": "schema:billingPeriod",
+                "@type": "schema:Duration"
+            },
+            "Broker": {
+                "@id": "schema:broker"
+            },
+            "Category": {
+                "@id": "schema:category",
+                "@type": "schema:Text"
+            },
+            "ConfirmationNumber": {
+                "@id": "schema:confirmationNumber",
+                "@type": "schema:Text"
+            },
+            "Customer": {
+                "@id": "schema:customer"
+            },
+            "PaymentStatus": {
+                "@id": "schema:paymentStatus",
+                "@type": "schema:PaymentStatusType"
+            },
+            "Provider": {
+                "@id": "schema:provider"
+            },
+            "ReferencesOrder": {
+                "@id": "schema:referencesOrder",
+                "@type": "box:Order"
+            },
+            "TotalPaymentDue": {
+                "@id": "schema:totalPaymentDue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Invoice",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Invoice",
+            "AccountID": "KUNDEKTO-10424147",
+            "Category": "PREMIUM",
+            "BillingPeriod": "2020-04",
+            "TotalPaymentDue": {},
+            "ConfirmationNumber": "ABRECHNUNG-15 -0000028",
+            "PaymentStatus": "PaymentComplete",
+            "Broker": {},
+            "Provider": {},
+            "Customer": {},
+            "ReferencesOrder": []
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,62 @@
+{
+    "type": "PriceSpecification",
+    "uri": "http://schema.b-ox.org/PriceSpecification",
+    "description": "A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use MonetaryAmount to describe independent amounts of money such as a salary, credit card limits, etc.",
+    "links": [{
+        "url": "http://schema.org/PriceSpecification",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/CompoundPriceSpecification" },
+        { "@id": "http://schema.org/UnitPriceSpecification" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "PriceSpecification": {
+                "@id": "schema:PriceSpecification",
+                "@type": "schema:PriceSpecification"
+            },
+            "Price": {
+                "@id": "schema:price",
+                "@type": "schema:Number"
+            },
+            "PriceCurrency": {
+                "@id": "schema:priceCurrency",
+                "@type": "schema:Text"
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:Date"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:Date"
+            },
+            "ValueAddedTaxIncluded": {
+                "@id": "schema:valueAddedTaxIncluded",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum PriceSpecification",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "PriceSpecification",
+            "Price": 4200.00,
+            "PriceCurrency": "EUR",
+            "ValidFrom": "2020-06-01",
+            "ValidThrough": "2020-07-01",
+            "ValueAddedTaxIncluded": true
+        },
+        "context": {}
+    }]
+}

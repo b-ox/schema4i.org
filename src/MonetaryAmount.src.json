@@ -7,7 +7,8 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/MoneyTransferAction#Amount" }
+        { "@id": "http://schema.b-ox.org/MoneyTransferAction#Amount" },
+        { "@id": "http://schema.b-ox.org/Invoice#TotalPaymentDue" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
@@ -40,7 +41,7 @@
             "@id": "http://example.com/list/id-2",
             "@type": "MonetaryAmount",
             "Currency": "EUR",
-            "Value": "3332.00"
+            "Value": 3332.00
         },
         "context": {}
     }]

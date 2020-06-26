@@ -1,0 +1,71 @@
+{
+    "type": "DataFeed",
+    "uri": "http://schema.b-ox.org/DataFeed",
+    "description": "A single feed providing structured information about one or more entities or topics.",
+    "links": [{
+        "url": "http://schema.org/DataFeed",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Action#Result" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Dataset" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "DataFeed": {
+                "@id": "schema:DataFeed",
+                "@type": "schema:DataFeed"
+            },
+            "DataFeedElement": {
+                "@id": "schema:dataFeedElement",
+                "@type": "box:DataFeedItem"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DataFeed",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DataFeed",
+            "DataFeedElement": []
+        },
+        "context": {}
+    }, {
+        "title": "A realistic DataFeed",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/Thing.jsonld",
+                "http://pending.schema.b-ox.org/DataFeed.jsonld",
+                "http://pending.schema.b-ox.org/DataFeedItem.jsonld",
+                "http://pending.schema.b-ox.org/CreativeWork.jsonld",
+                "http://pending.schema.b-ox.org/Organization.jsonld"
+            ],
+            "@type": "DataFeed",
+            "DataFeedElement": [{
+                "@type": ["DataFeedItem", "Thing"],
+                "DateCreated": "2020-06-26T14:48:13",
+                "Name": "Target A",
+                "URL": "http://www.b-ox.de/target-a"
+            }],
+            "About": {
+                "@type": "Thing",
+                "Name": "Click Report"
+            },
+            "DateCreated": "2020-06-26T14:48:13",
+            "Creator": {
+                "@type": "Organization",
+                "Identifier": "YSI",
+                "Name": "YSI GmbH"
+            }
+        },
+        "context": {}
+    }]
+}

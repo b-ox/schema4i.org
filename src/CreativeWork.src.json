@@ -1,0 +1,73 @@
+{
+    "type": "CreativeWork",
+    "uri": "http://schema.b-ox.org/CreativeWork",
+    "description": "The most generic kind of creative work, including books, movies, photographs, software programs, etc. Also every kind of data or dataset / datafeed can be described with this type.",
+    "links": [{
+        "url": "http://schema.org/CreativeWork",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/DataSet" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {
+        "About": [
+            { "@id": "http://schema.b-ox.org/Thing" }
+        ],
+        "Creator": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "CreativeWork": {
+                "@id": "schema:CreativeWork",
+                "@type": "schema:CreativeWork"
+            },
+            "About": {
+                "@id": "schema:about"
+            },
+            "Creator": {
+                "@id": "schema:creator"
+            },
+            "DateCreated": {
+                "@id": "schema:dateCreated",
+                "@type": "schema:DateTime"
+            },
+            "DateModified": {
+                "@id": "schema:dateModified",
+                "@type": "schema:DateTime"
+            },
+            "DatePublished": {
+                "@id": "schema:datePublished",
+                "@type": "schema:DateTime"
+            },
+            "Keywords": {
+                "@id": "schema:keywords",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum CreativeWork",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@id": "http://example.com/list/id-2",
+            "@type": "CreativeWork",
+            "About": {},
+            "Creator": {},
+            "DateCreated": "2020-06-26T14:48:13",
+            "DateModified": "2020-06-26T15:18:30",
+            "DatePublished": "2020-06-26T16:00:01",
+            "Keywords": "Posteingang,Wichtig"
+        },
+        "context": {}
+    }]
+}

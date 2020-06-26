@@ -8,7 +8,8 @@
     }],
     "parents": [
         { "@id": "http://schema.b-ox.org/Person#Address" },
-        { "@id": "http://schema.b-ox.org/Organization#Address" }
+        { "@id": "http://schema.b-ox.org/Organization#Address" },
+        { "@id": "http://schema.b-ox.org/Order#BillingAddress" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/ContactPoint" }

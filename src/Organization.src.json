@@ -8,7 +8,11 @@
     }],
     "parents": [
         { "@id": "http://schema.b-ox.org/Action#Agent" },
-        { "@id": "http://schema.b-ox.org/Action#Participant" }
+        { "@id": "http://schema.b-ox.org/Action#Participant" },
+        { "@id": "http://schema.b-ox.org/Invoice#Broker" },
+        { "@id": "http://schema.b-ox.org/Invoice#Customer" },
+        { "@id": "http://schema.b-ox.org/Invoice#Provider" },
+        { "@id": "http://schema.b-ox.org/Order#Customer" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }

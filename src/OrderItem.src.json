@@ -1,0 +1,60 @@
+{
+    "type": "OrderItem",
+    "uri": "http://schema.b-ox.org/OrderItem",
+    "description": "An order item is a line of an order. It includes the quantity and shipping details of a bought offer. In the insurance industry this type is used to express parts on an insurance contract.",
+    "links": [{
+        "url": "http://schema.org/OrderItem",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Order#OrderedItem" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "OrderItem": {
+                "@id": "schema:OrderItem",
+                "@type": "schema:OrderItem"
+            },
+            "OrderItemNumber": {
+                "@id": "schema:orderItemNumber",
+                "@type": "schema:Text"
+            },
+            "OrderQuantity": {
+                "@id": "schema:orderQuantity",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum OrderItem",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "OrderItem",
+            "OrderItemNumber": "4711",
+            "OrderQuantity": 1
+        },
+        "context": {}
+    }, {
+        "title": "A maximum OrderItem",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://pending.schema.b-ox.org/Thing.jsonld",
+                "http://pending.schema.b-ox.org/OrderItem.jsonld"
+            ],
+            "@type": "OrderItem",
+            "Identifier": "VSNR-NG070420-003",
+            "Name": "Werkverkehr",
+            "OrderItemNumber": "50"
+        },
+        "context": {}
+    }]
+}

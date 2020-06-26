@@ -12,7 +12,11 @@
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Item": [
+            { "@id": "http://schema.b-ox.org/Thing" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -23,8 +27,7 @@
                 "@type": "schema:ListItem"
             },
             "Item": {
-                "@id": "schema:item",
-                "@type": "box:Thing"
+                "@id": "schema:item"
             },
             "NextItem": {
                 "@id": "schema:nextItem",

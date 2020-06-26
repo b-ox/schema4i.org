@@ -1,0 +1,58 @@
+{
+    "type": "DataFeedItem",
+    "uri": "http://schema.b-ox.org/DataFeedItem",
+    "description": "A single item within a larger data feed.",
+    "links": [{
+        "url": "http://schema.org/DataFeedItem",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/DataFeed#DataFeedElement" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {
+        "Item": [
+            { "@id": "http://schema.b-ox.org/Thing" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "DataFeedItem": {
+                "@id": "schema:DataFeedItem",
+                "@type": "schema:DataFeedItem"
+            },
+            "DateCreated": {
+                "@id": "schema:dateCreated",
+                "@type": "schema:DateTime"
+            },
+            "DateDeleted": {
+                "@id": "schema:dateDeleted",
+                "@type": "schema:DateTime"
+            },
+            "DateModified": {
+                "@id": "schema:dateModified",
+                "@type": "schema:DateTime"
+            },
+            "Item": {
+                "@id": "schema:item"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DataFeedItem",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DataFeedItem",
+            "DateCreated": "2020-06-26T14:33:12",
+            "DateModified": "2020-06-26T14:35:01",
+            "Item": {}
+        },
+        "context": {}
+    }]
+}
