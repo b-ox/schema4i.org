@@ -36,14 +36,14 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
     consoleLike = Object.assign({}, console, consoleLike);
 
-    await clean(outputDir, ['.jsonld', 'index.json'], consoleLike);
+    await clean(outputDir, ['.jsonld', 'index.json', '.md'], consoleLike);
 
     consoleLike.log('Scanning: "src"');
 
     let absoluteSourceDir;
     if (sourceDir) {
         absoluteSourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(outputDir, sourceDir);
-        await clean(absoluteSourceDir, ['.src.json'], consoleLike);
+        await clean(absoluteSourceDir, ['.src.json', '.md'], consoleLike);
     }
 
     // process all jsonld files
@@ -51,7 +51,14 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
     // export context from src files
     for (const file of files) {
         consoleLike.log("\nFound: " + file);
-        if (file.endsWith(".src.json")) {
+        if (file.endsWith(".md")) {
+
+            // move docs to json-ld/docs
+            let data = await fs.readFile(fromPath + file, 'utf-8');
+            consoleLike.log('Write documentation to ' + absoluteSourceDir + '/' + file);
+            await fs.writeFile(absoluteSourceDir + '/' + file, data);
+
+        } else if (file.endsWith(".src.json")) {
             let data = await fs.readFile(fromPath + file, 'utf-8');
 
             // replace namespace to match environment
