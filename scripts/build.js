@@ -100,6 +100,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                     }
                 }
             }
+            // console.log(dependencies);
 
             // check dependencies
             for (const parentConfig of(dependencies || [])) {
