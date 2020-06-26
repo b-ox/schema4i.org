@@ -51,14 +51,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
     // export context from src files
     for (const file of files) {
         consoleLike.log("\nFound: " + file);
-        if (file.endsWith(".md")) {
-
-            // move docs to json-ld/docs
-            let data = await fs.readFile(fromPath + file, 'utf-8');
-            consoleLike.log('Write documentation to ' + absoluteSourceDir + '/' + file);
-            await fs.writeFile(absoluteSourceDir + '/' + file, data);
-
-        } else if (file.endsWith(".src.json")) {
+        if (file.endsWith(".src.json")) {
             let data = await fs.readFile(fromPath + file, 'utf-8');
 
             // replace namespace to match environment
