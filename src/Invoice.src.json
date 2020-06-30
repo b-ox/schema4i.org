@@ -61,7 +61,10 @@
             },
             "PaymentStatus": {
                 "@id": "schema:paymentStatus",
-                "@type": "schema:PaymentStatusType"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "schema:"
+                }
             },
             "Provider": {
                 "@id": "schema:provider"

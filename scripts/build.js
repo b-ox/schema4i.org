@@ -90,12 +90,14 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                             })
                         } else if (obj.context['@context'][key]['@type'] === '@vocab') {
                             const vocab = obj.context['@context'][key]['@context']['@vocab'];
-                            dependencies.push({
-                                "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#'))
-                            });
-                            dependencies.push({
-                                "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE"
-                            });
+                            if (!vocab.startsWith('schema')) {
+                                dependencies.push({
+                                    "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#'))
+                                });
+                                dependencies.push({
+                                    "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE"
+                                });
+                            }
                         }
                     }
                 }

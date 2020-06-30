@@ -45,7 +45,10 @@
             },
             "ActionStatus": {
                 "@id": "schema:actionStatus",
-                "@type": "schema:ActionStatusType"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "schema:"
+                }
             },
             "Agent": {
                 "@id": "schema:agent"
