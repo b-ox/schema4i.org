@@ -6,6 +6,8 @@ Inspired by the work of [JSON for Linked Data](https://json-ld.org/) and [Schema
 
 This is the [schema.b-ox.org](https://pending.schema.b-ox.org) project repository. It contains all the types (objects, attributes and enumerations) and the JSON-LD context files used to publish on [schema.b-ox.org](https://schema.b-ox.org) (comming soon) and [pending.schema.b-ox.org](https://pending.schema.b-ox.org) (already live). While the first site hosts official releases of the Semantic Data Model, the second one is updated more frequently containing the data models waiting for official release deployment. Follow the URLs to open the sites.
 
+**If you just want to learn more about how to use the Semantic Data Model for Insurances, this repo is not the right place for you. Please visit [schema.b-ox.org](https://pending.schema.b-ox.org) instead for more informationen.**
+
 ### Installation
 
 Fork or check out this project and navigate to the projects root directory on your local machine then type `npm install`. You need a [Node.js](https://nodejs.org/en/) environment (version >= 12.10) installed on your machine. Afterwards you can find a directory `node_modules` with some libraries used by the build process.
