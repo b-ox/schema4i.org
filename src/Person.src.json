@@ -21,7 +21,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://pending.schema.b-ox.org/",
+            "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "Person": {
                 "@id": "schema:Person",
@@ -57,10 +57,7 @@
             },
             "Gender": {
                 "@id": "schema:gender",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "box:EnumGenderCode#"
-                }
+                "@type": "schema:GenderType"
             },
             "GivenName": {
                 "@id": "schema:givenName",
@@ -113,9 +110,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/Thing.jsonld",
-                "http://pending.schema.b-ox.org/Person.jsonld",
-                "http://pending.schema.b-ox.org/PostalAddress.jsonld"
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/Person.jsonld",
+                "http://schema.b-ox.org/PostalAddress.jsonld"
             ],
             "@type": "Person",
             "Address": {

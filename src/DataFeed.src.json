@@ -42,11 +42,11 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/Thing.jsonld",
-                "http://pending.schema.b-ox.org/DataFeed.jsonld",
-                "http://pending.schema.b-ox.org/DataFeedItem.jsonld",
-                "http://pending.schema.b-ox.org/CreativeWork.jsonld",
-                "http://pending.schema.b-ox.org/Organization.jsonld"
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/DataFeed.jsonld",
+                "http://schema.b-ox.org/DataFeedItem.jsonld",
+                "http://schema.b-ox.org/CreativeWork.jsonld",
+                "http://schema.b-ox.org/Organization.jsonld"
             ],
             "@type": "DataFeed",
             "DataFeedElement": [{

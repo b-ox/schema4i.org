@@ -72,7 +72,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/EntryPoint.jsonld",
+                "http://schema.b-ox.org/EntryPoint.jsonld",
                 {
                     "ActionPlatform": {
                         "@id": "http://schema.org/actionPlatform",

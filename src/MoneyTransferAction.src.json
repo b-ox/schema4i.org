@@ -40,12 +40,12 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/Thing.jsonld",
-                "http://pending.schema.b-ox.org/Action.jsonld",
-                "http://pending.schema.b-ox.org/MoneyTransferAction.jsonld",
-                "http://pending.schema.b-ox.org/MonetaryAmount.jsonld",
-                "http://pending.schema.b-ox.org/Person.jsonld",
-                "http://pending.schema.b-ox.org/Organization.jsonld"
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/Action.jsonld",
+                "http://schema.b-ox.org/MoneyTransferAction.jsonld",
+                "http://schema.b-ox.org/MonetaryAmount.jsonld",
+                "http://schema.b-ox.org/Person.jsonld",
+                "http://schema.b-ox.org/Organization.jsonld"
             ],
             "@type": "MoneyTransferAction",
             "Identifier": "4711",

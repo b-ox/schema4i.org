@@ -21,7 +21,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://pending.schema.b-ox.org/",
+            "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "Organization": {
                 "@id": "schema:Organization",
@@ -82,9 +82,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/Thing.jsonld",
-                "http://pending.schema.b-ox.org/Organization.jsonld",
-                "http://pending.schema.b-ox.org/PostalAddress.jsonld"
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/Organization.jsonld",
+                "http://schema.b-ox.org/PostalAddress.jsonld"
             ],
             "@type": "Organization",
             "Address": {

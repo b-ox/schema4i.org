@@ -44,9 +44,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/Thing.jsonld",
-                "http://pending.schema.b-ox.org/Action.jsonld",
-                "http://pending.schema.b-ox.org/DeleteAction.jsonld"
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/Action.jsonld",
+                "http://schema.b-ox.org/DeleteAction.jsonld"
             ],
             "@type": "DeleteAction",
             "Object": {

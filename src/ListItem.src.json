@@ -67,9 +67,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/ItemList.jsonld",
-                "http://pending.schema.b-ox.org/ListItem.jsonld",
-                "http://pending.schema.b-ox.org/Thing.jsonld"
+                "http://schema.b-ox.org/ItemList.jsonld",
+                "http://schema.b-ox.org/ListItem.jsonld",
+                "http://schema.b-ox.org/Thing.jsonld"
             ],
             "@type": "ItemList",
             "ItemListElement": [{

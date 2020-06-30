@@ -47,8 +47,8 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/Thing.jsonld",
-                "http://pending.schema.b-ox.org/OrderItem.jsonld"
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/OrderItem.jsonld"
             ],
             "@type": "OrderItem",
             "Identifier": "VSNR-NG070420-003",
