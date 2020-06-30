@@ -59,7 +59,6 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@id": "http://example.com/list/id-2",
             "@type": "CreativeWork",
             "About": {},
             "Creator": {},
