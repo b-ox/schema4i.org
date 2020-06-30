@@ -1,0 +1,36 @@
+{
+    "type": "FinancialProduct",
+    "uri": "http://schema.b-ox.org/FinancialProduct",
+    "description": "A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.",
+    "links": [{
+        "url": "http://schema.org/FinancialProduct",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://scchema.b-ox.org/InsuranceProduct" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Service" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "FinancialProduct": {
+                "@id": "schema:FinancialProduct",
+                "@type": "schema:FinancialProduct"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum FinancialProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "FinancialProduct"
+        },
+        "context": {}
+    }]
+}

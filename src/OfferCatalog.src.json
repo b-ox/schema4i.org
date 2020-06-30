@@ -1,0 +1,36 @@
+{
+    "type": "OfferCatalog",
+    "uri": "http://schema.b-ox.org/OfferCatalog",
+    "description": "An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider. In the insurance industry it can be used to describe the highlights of an insurancec product.",
+    "links": [{
+        "url": "http://schema.org/OfferCatalog",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://scchema.b-ox.org/Service#HasOfferCatalog" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/ItemList" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "OfferCatalog": {
+                "@id": "schema:OfferCatalog",
+                "@type": "schema:OfferCatalog"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum OfferCatalog",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "OfferCatalog"
+        },
+        "context": {}
+    }]
+}

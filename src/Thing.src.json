@@ -45,6 +45,10 @@
             "PotentialAction": {
                 "@id": "schema:potentialAction"
             },
+            "SubjectOf": {
+                "@id": "schema:subjectOf",
+                "@type": "box:CreativeWork"
+            },
             "URL": {
                 "@id": "@id",
                 "@type": "@id"

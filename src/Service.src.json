@@ -1,0 +1,102 @@
+{
+    "type": "Service",
+    "uri": "http://schema.b-ox.org/Service",
+    "description": "A service provided by an organization, e.g. delivery service, print services, etc.",
+    "links": [{
+        "url": "http://schema.org/Service",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://scchema.b-ox.org/FinancialProduct" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {
+        "Category": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode#" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Service": {
+                "@id": "schema:Service",
+                "@type": "schema:Service"
+            },
+            "Award": {
+                "@id": "schema:award",
+                "@type": "schema:Text"
+            },
+            "Category": {
+                "@id": "schema:category"
+            },
+            "HasOfferCatalog": {
+                "@id": "schema:hasOfferCatalog",
+                "@type": "box:OfferCatalog"
+            },
+            "Logo": {
+                "@id": "schema:logo",
+                "@type": "schema:URL"
+            },
+            "Provider": {
+                "@id": "schema:provider",
+                "@type": "schema:Organization"
+            },
+            "Slogan": {
+                "@id": "schema:slogan",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Service with Category of type Text",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/Service.jsonld",
+                {
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "schema:Text"
+                    }
+                }
+            ],
+            "@type": "Service",
+            "Award": "Testsieger 01.20 bei Stiftung Warentest",
+            "Category": {
+                "@value": "Testsiegertarife",
+                "@type": "schema:Text"
+            },
+            "HasOfferCatalog": {},
+            "Logo": "http://domain.de/logo.png",
+            "Provider": {},
+            "Slogan": "Die beste Rentenversicherung der Welt"
+        },
+        "context": {}
+    }, {
+        "title": "A Service with Category of type EnumInsuranceProductCategoryCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/Service.jsonld",
+                {
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "box:EnumInsuranceProductCategoryCode#"
+                        }
+                    }
+                }
+            ],
+            "@type": "Service",
+            "Award": "Testsieger 01.20 bei Stiftung Warentest",
+            "Category": "RENTE"
+        },
+        "context": {}
+    }]
+}
