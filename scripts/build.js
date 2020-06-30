@@ -200,9 +200,14 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                 url: obj.uri + ".jsonld",
             });
 
-            if (absoluteSourceDir) {
-                fs.copyFile(path.resolve(fromPath, file), path.resolve(absoluteSourceDir, file));
-            }
+            // write source file 
+            await fs.writeFile(outputDir + "/jsonld-src/" + obj.type + ".src.json",
+                JSON.stringify(obj, null, 2)
+            );
+            // copy readme source file
+            // if (absoluteSourceDir) {
+            //     fs.copyFile(path.resolve(fromPath, 'README.md'), path.resolve(absoluteSourceDir, 'README.md'));
+            // }
 
         } else {
             consoleLike.log("WARNING: Ignore file.");
