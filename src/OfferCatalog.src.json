@@ -18,10 +18,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "OfferCatalog": {
-                "@id": "schema:OfferCatalog",
-                "@type": "schema:OfferCatalog"
-            }
+            "OfferCatalog": "schema:OfferCatalog"
         }
     },
     "playground": [{

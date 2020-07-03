@@ -18,10 +18,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "OrderItem": {
-                "@id": "schema:OrderItem",
-                "@type": "schema:OrderItem"
-            },
+            "OrderItem": "schema:OrderItem",
             "OrderItemNumber": {
                 "@id": "schema:orderItemNumber",
                 "@type": "schema:Text"

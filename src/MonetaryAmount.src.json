@@ -19,10 +19,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "MonetaryAmount": {
-                "@id": "schema:MonetaryAmount",
-                "@type": "schema:MonetaryAmount"
-            },
+            "MonetaryAmount": "schema:MonetaryAmount",
             "Currency": {
                 "@id": "schema:currency",
                 "@type": "schema:Text"

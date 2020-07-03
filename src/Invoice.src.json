@@ -33,10 +33,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "Invoice": {
-                "@id": "schema:Invoice",
-                "@type": "schema:Invoice"
-            },
+            "Invoice": "schema:Invoice",
             "AccountID": {
                 "@id": "schema:accountId",
                 "@type": "schema:Text"

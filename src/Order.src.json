@@ -30,10 +30,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "Order": {
-                "@id": "schema:Order",
-                "@type": "schema:Order"
-            },
+            "Order": "schema:Order",
             "BillingAddress": {
                 "@id": "schema:billingAddress",
                 "@type": "box:PostalAddress"

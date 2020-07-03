@@ -18,10 +18,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "UnitPriceSpecification": {
-                "@id": "schema:UnitPriceSpecification",
-                "@type": "schema:UnitPriceSpecification"
-            },
+            "UnitPriceSpecification": "schema:UnitPriceSpecification",
             "PriceType": {
                 "@id": "schema:priceType",
                 "@type": "schema:Text"

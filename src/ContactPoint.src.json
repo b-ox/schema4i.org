@@ -18,10 +18,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "ContactPoint": {
-                "@id": "schema:ContactPoint",
-                "@type": "schema:ContactPoint"
-            },
+            "ContactPoint": "schema:ContactPoint",
             "Email": {
                 "@id": "schema:email",
                 "@type": "schema:Text"

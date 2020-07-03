@@ -18,10 +18,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "CreateAction": {
-                "@id": "schema:CreateAction",
-                "@type": "schema:CreateAction"
-            }
+            "CreateAction": "schema:CreateAction"
         }
     },
     "playground": [{

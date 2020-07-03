@@ -26,10 +26,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "CreativeWork": {
-                "@id": "schema:CreativeWork",
-                "@type": "schema:CreativeWork"
-            },
+            "CreativeWork": "schema:CreativeWork",
             "About": {
                 "@id": "schema:about"
             },

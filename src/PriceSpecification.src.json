@@ -19,10 +19,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "PriceSpecification": {
-                "@id": "schema:PriceSpecification",
-                "@type": "schema:PriceSpecification"
-            },
+            "PriceSpecification": "schema:PriceSpecification",
             "Price": {
                 "@id": "schema:price",
                 "@type": "schema:Number"
