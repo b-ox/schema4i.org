@@ -1,7 +1,7 @@
 {
     "type": "Service",
     "uri": "http://schema.b-ox.org/Service",
-    "description": "A service provided by an organization, e.g. delivery service, print services, etc.",
+    "description": "A service provided by an organization, e.g. delivery service, print services, etc. A service can also be provided via an API. If you want to describe the service behind an API use this type.",
     "links": [{
         "url": "http://schema.org/Service",
         "description": "Original Schema.org type"
