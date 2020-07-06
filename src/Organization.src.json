@@ -12,6 +12,7 @@
         { "@id": "http://schema.b-ox.org/Invoice#Broker" },
         { "@id": "http://schema.b-ox.org/Invoice#Customer" },
         { "@id": "http://schema.b-ox.org/Invoice#Provider" },
+        { "@id": "http://schema.b-ox.org/Service#Provider" },
         { "@id": "http://schema.b-ox.org/Order#Customer" }
     ],
     "base": [
