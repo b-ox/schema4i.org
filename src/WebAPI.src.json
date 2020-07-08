@@ -1,0 +1,36 @@
+{
+    "type": "WebAPI",
+    "uri": "http://schema.b-ox.org/WebAPI",
+    "description": "An Application Programming Interface (API) accessible over Web/Internet technologies.",
+    "links": [{
+        "url": "http://schema.org/WebAPI",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [{
+        "@id": "http://schema.b-ox.org/Service"
+    }],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "WebAPI": "schema:WebAPI",
+            "Documentation": {
+                "@id": "schema:documentation",
+                "@type": "schema:URL"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum WebAPI",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "WebAPI",
+            "Documentation": "http://api-test.b-ox.de/docs/config.json"
+        },
+        "context": {}
+    }]
+}
