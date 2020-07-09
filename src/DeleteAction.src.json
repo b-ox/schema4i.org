@@ -10,7 +10,7 @@
         { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema.b-ox.org/UpdateAction" }
     ],
     "multipletypes": {},
     "context": {
