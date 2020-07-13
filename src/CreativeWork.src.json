@@ -7,7 +7,8 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/DataSet" }
+        { "@id": "http://schema.b-ox.org/DataSet" },
+        { "@id": "http://schema.b-ox.org/Message" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
@@ -45,6 +46,10 @@
                 "@id": "schema:datePublished",
                 "@type": "schema:DateTime"
             },
+            "InteractionStatistic": {
+                "@id": "schema:interactionStatistic",
+                "@type": "box:InteractionCounter"
+            },
             "Keywords": {
                 "@id": "schema:keywords",
                 "@type": "schema:Text"
@@ -62,6 +67,7 @@
             "DateCreated": "2020-06-26T14:48:13",
             "DateModified": "2020-06-26T15:18:30",
             "DatePublished": "2020-06-26T16:00:01",
+            "InteractionStatistic": {},
             "Keywords": "Posteingang,Wichtig"
         },
         "context": {}

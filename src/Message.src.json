@@ -1,0 +1,88 @@
+{
+    "type": "Message",
+    "uri": "http://schema.b-ox.org/Message",
+    "description": "A single message from a sender to one or more organizations or people. In APIs a Message object can also be used as a transport comtainer for information sending between technical components.",
+    "links": [{
+        "url": "http://schema.org/Message",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/CreativeWork" }
+    ],
+    "multipletypes": {
+        "BCCRecipient": [
+            { "@id": "http://schema.b-ox.org/ContactPoint" },
+            { "@id": "http://schema.b-ox.org/Organization" },
+            { "@id": "http://schema.b-ox.org/Person" }
+        ],
+        "CCRecipient": [
+            { "@id": "http://schema.b-ox.org/ContactPoint" },
+            { "@id": "http://schema.b-ox.org/Organization" },
+            { "@id": "http://schema.b-ox.org/Person" }
+        ],
+        "Recipient": [
+            { "@id": "http://schema.b-ox.org/ContactPoint" },
+            { "@id": "http://schema.b-ox.org/Organization" },
+            { "@id": "http://schema.b-ox.org/Person" }
+        ],
+        "Sender": [
+            { "@id": "http://schema.b-ox.org/ContactPoint" },
+            { "@id": "http://schema.b-ox.org/Organization" },
+            { "@id": "http://schema.b-ox.org/Person" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Message": "schema:Message",
+            "BCCRecipient": {
+                "@id": "schema:bccRecipient"
+            },
+            "CCRecipient": {
+                "@id": "schema:ccRecipient"
+            },
+            "DateRead": {
+                "@id": "schema:dateRead",
+                "@type": "schema:DateTime"
+            },
+            "DateReceived": {
+                "@id": "schema:dateReceived",
+                "@type": "schema:DateTime"
+            },
+            "DateSent": {
+                "@id": "schema:dateSent",
+                "@type": "schema:DateTime"
+            },
+            "MessageAttachment": {
+                "@id": "schema:messageAttachment",
+                "@type": "box:CreativeWork"
+            },
+            "Recipient": {
+                "@id": "schema:recipient"
+            },
+            "Sender": {
+                "@id": "schema:sender"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Message",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Message",
+            "BCCRecipient": {},
+            "CCRecipient": {},
+            "DateRead": "2020-07-13T17:33:21",
+            "DateReceived": "2020-07-13T17:32:01",
+            "DateSent": "2020-07-12T12:01:40",
+            "MessageAttachment": {},
+            "Recipient": {},
+            "Sender": {}
+        },
+        "context": {}
+    }]
+}

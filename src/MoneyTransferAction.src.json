@@ -6,7 +6,10 @@
         "url": "http://schema.org/MoneyTransfer",
         "description": "Original Schema.org type (ATTENTION: Still pending and wrong spelling.)"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+    ],
     "base": [
         { "@id": "http://schema.b-ox.org/Action" }
     ],

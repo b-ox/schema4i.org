@@ -1,0 +1,65 @@
+{
+    "type": "InteractionCounter",
+    "uri": "http://schema.b-ox.org/InteractionCounter",
+    "description": "A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.",
+    "links": [{
+        "url": "http://schema.org/InteractionCounter",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/CreativeWork#InteractionStatistic" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "InteractionCounter": "schema:InteractionCounter",
+            "InteractionType": {
+                "@id": "schema:interactionType",
+                "@type": "box:Action"
+            },
+            "UserInteractionCount": {
+                "@id": "schema:userInteractionCount",
+                "@type": "schema:Integer"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum InteractionCounter",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "InteractionCounter",
+            "InteractionType": {},
+            "UserInteractionCount": 1
+        },
+        "context": {}
+    }, {
+        "title": "A realistic InteractionCounter for message views",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/Action.jsonld",
+                "http://schema.b-ox.org/ViewAction.jsonld",
+                "http://schema.b-ox.org/Message.jsonld",
+                "http://schema.b-ox.org/CreativeWork.jsonld",
+                "http://schema.b-ox.org/InteractionCounter.jsonld"
+            ],
+            "@type": "Message",
+            "InteractionStatistic": {
+                "@type": "InteractionCounter",
+                "InteractionType": {
+                    "@type": "ViewAction"
+                },
+                "UserInteractionCount": 1
+            }
+        },
+        "context": {}
+    }]
+}

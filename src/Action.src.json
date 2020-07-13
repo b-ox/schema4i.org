@@ -7,10 +7,14 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
+        { "@id": "http://schema.b-ox.org/AssessAction" },
+        { "@id": "http://schema.b-ox.org/ConsumeAction" },
         { "@id": "http://schema.b-ox.org/CreateAction" },
+        { "@id": "http://schema.b-ox.org/IgnoreAction" },
+        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
         { "@id": "http://schema.b-ox.org/SearchAction" },
-        { "@id": "http://schema.b-ox.org/UpdateAction" },
-        { "@id": "http://schema.b-ox.org/DeleteAction" }
+        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" },
+        { "@id": "http://schema.b-ox.org/UpdateAction" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
