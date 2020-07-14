@@ -8,6 +8,7 @@
     }],
     "parents": [
         { "@id": "http://schema.b-ox.org/DataSet" },
+        { "@id": "http://schema.b-ox.org/DigitalDocument" },
         { "@id": "http://schema.b-ox.org/Message" }
     ],
     "base": [
@@ -42,9 +43,9 @@
                 "@id": "schema:dateModified",
                 "@type": "schema:DateTime"
             },
-            "DatePublished": {
-                "@id": "schema:datePublished",
-                "@type": "schema:DateTime"
+            "EncodingFormat": {
+                "@id": "schema:encodingFormat",
+                "@type": "schema:Text"
             },
             "InteractionStatistic": {
                 "@id": "schema:interactionStatistic",
@@ -53,6 +54,10 @@
             "Keywords": {
                 "@id": "schema:keywords",
                 "@type": "schema:Text"
+            },
+            "ThumbnailUrl": {
+                "@id": "schema:thumbnailUrl",
+                "@type": "schema:URL"
             }
         }
     },
@@ -68,7 +73,8 @@
             "DateModified": "2020-06-26T15:18:30",
             "DatePublished": "2020-06-26T16:00:01",
             "InteractionStatistic": {},
-            "Keywords": "Posteingang,Wichtig"
+            "Keywords": "Posteingang,Wichtig",
+            "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
         },
         "context": {}
     }]

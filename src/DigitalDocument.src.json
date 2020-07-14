@@ -1,0 +1,35 @@
+{
+    "type": "DigitalDocument",
+    "uri": "http://schema.b-ox.org/DigitalDocument",
+    "description": "An electronic file or document.",
+    "links": [{
+        "url": "http://schema.org/DigitalDocument",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "DigitalDocument": "schema:DigitalDocument",
+            "Item": {
+                "@id": "schema:item"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DigitalDocument",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DigitalDocument",
+            "Item": {}
+        },
+        "context": {}
+    }]
+}
