@@ -1,0 +1,57 @@
+{
+    "type": "ShareAction",
+    "uri": "http://schema.b-ox.org/ShareAction",
+    "description": "The act of distributing content to people for their amusement or edification.",
+    "links": [{
+        "url": "http://schema.org/ShareAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/CommunicateAction" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "ShareAction": "schema:ShareAction"
+        }
+    },
+    "playground": [{
+        "title": "A minimum ShareAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "ShareAction"
+        },
+        "context": {}
+    }, {
+        "title": "Share an Object",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https://schema.b-ox.org/Action.jsonld",
+                "https://schema.b-ox.org/CommunicateAction.jsonld",
+                "https://schema.b-ox.org/Message.jsonld",
+                "https://schema.b-ox.org/Thing.jsonld",
+                "https://schema.b-ox.org/ShareAction.jsonld"
+            ],
+            "@type": "ShareAction",
+            "About": {
+                "@type": "Thing",
+                "Name": "Eine Nachricht für Sie"
+            },
+            "Object": {
+                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@type": "Message"
+            },
+            "Recipient": {
+                "@type": "ContactPoint",
+                "Email": "max@muster.tld"
+            }
+        },
+        "context": {}
+    }]
+}
