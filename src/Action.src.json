@@ -67,6 +67,10 @@
             "Participant": {
                 "@id": "schema:participant"
             },
+            "Query-input": {
+                "@id": "schema:query-input",
+                "@type": "box:PropertyValueSpecification"
+            },
             "Result": {
                 "@id": "schema:result"
             },
@@ -77,6 +81,10 @@
             "Target": {
                 "@id": "schema:target",
                 "@type": "box:EntryPoint"
+            },
+            "URL-input": {
+                "@id": "schema:url-input",
+                "@type": "schema:Text"
             }
         }
     },
@@ -90,8 +98,12 @@
             "Agent": {},
             "EndTime": "2020-07-01T00:00:10",
             "Error": {},
-            "Object": {},
+            "Object": {
+                "@type": "Thing",
+                "URL-input": "https://api.b-ox.de/thing/4711"
+            },
             "Participant": {},
+            "Query-input": {},
             "Result": {},
             "StartTime": "2020-07-01T00:00:00",
             "Target": {}
