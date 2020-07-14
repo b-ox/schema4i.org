@@ -1,0 +1,81 @@
+{
+    "type": "PropertyValueSpecification",
+    "uri": "http://schema.b-ox.org/PropertyValueSpecification",
+    "description": "A Property value specification.",
+    "links": [{
+        "url": "http://schema.org/PropertyValueSpecification",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "PropertyValueSpecification": "schema:PropertyValueSpecification",
+            "DefaultValue": {
+                "@id": "schema:defaultValue",
+                "@type": "schema:Text"
+            },
+            "MaxValue": {
+                "@id": "schema:maxValue",
+                "@type": "schema:Number"
+            },
+            "MinValue": {
+                "@id": "schema:minValue",
+                "@type": "schema:Number"
+            },
+            "ReadonlyValue": {
+                "@id": "schema:readonlyValue",
+                "@type": "schema:Boolean"
+            },
+            "StepValue": {
+                "@id": "schema:stepValue",
+                "@type": "schema:Number"
+            },
+            "ValueMaxLength": {
+                "@id": "schema:valueMaxLength",
+                "@type": "schema:Number"
+            },
+            "ValueMinLength": {
+                "@id": "schema:valueMinLength",
+                "@type": "schema:Number"
+            },
+            "ValueName": {
+                "@id": "schema:valueName",
+                "@type": "schema:Text"
+            },
+            "ValuePattern": {
+                "@id": "schema:valuePattern",
+                "@type": "schema:Text"
+            },
+            "ValueRequired": {
+                "@id": "schema:valueRequired",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum PropertyValueSpecification",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "PropertyValueSpecification",
+            "DefaultValue": "Vorgabe",
+            "MaxValue": 100,
+            "MinValue": 1,
+            "ReadonlyValue": false,
+            "StepValue": 5,
+            "ValueMaxLength": 10,
+            "ValueMinLength": 5,
+            "ValueName": "Feldname",
+            "ValuePattern": "[a-z]{5,10}",
+            "ValueRequired": true
+        },
+        "context": {}
+    }]
+}
