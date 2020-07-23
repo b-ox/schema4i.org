@@ -12,6 +12,8 @@ const fromPath = "src/";
 let typeIndex = {
     name: "schema.b-ox.org",
     description: "Semantic Data Model for Insurances",
+    release: 0.49,
+    modified: new Date(),
     objects: 0,
     enumerations: 0,
     types: [],
@@ -75,7 +77,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             const dependencies = obj.parents.concat(obj.base);
             for (const key in obj.multipletypes) {
                 for (const object of obj.multipletypes[key]) {
-                    if (!object['@id'].startsWith('http://schema.org'))
+                    if (!object['@id'].startsWith('http://schema.org') && !object['@id'].startsWith('https://openontology.org'))
                         dependencies.push(object);
                     else
                         consoleLike.log('Skip native schema type.')
@@ -220,13 +222,24 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
     await fs.writeFile(outputDir + "/index.json",
         JSON.stringify(typeIndex, null, 2)
     );
-    consoleLike.log(
-        "\nWrite list of " +
-        typeIndex.types.length +
-        " types to " +
-        outputDir +
-        "/index.json"
-    );
+    consoleLike.log("Write list of " + typeIndex.types.length + " types to " + outputDir + "/index.json");
+
+    // write sitemap file
+    let sitemap = 'https://' + environment + '\n';
+    sitemap += 'https://' + environment + '/home\n';
+    sitemap += 'https://' + environment + '/documentation\n';
+    sitemap += 'https://' + environment + '/models\n';
+    sitemap += 'https://' + environment + '/about\n';
+    for (const type of typeIndex.types) {
+        sitemap += type.uri.replace('http', 'https') + '\n';
+        sitemap += type.url.replace('http', 'https') + '\n';
+    }
+    await fs.writeFile(outputDir + "/sitemap.txt", sitemap);
+    consoleLike.log("Write sitemap.txt to " + outputDir + "/sitemap.txt");
+
+    let robots = 'Sitemap: https://' + environment + '/sitemap.txt';
+    await fs.writeFile(outputDir + "/robots.txt", robots);
+    consoleLike.log("Write robots.txt to " + outputDir + "/robots.txt");
 
 }
 
