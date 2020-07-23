@@ -55,6 +55,10 @@
                 "@id": "schema:keywords",
                 "@type": "schema:Text"
             },
+            "Text": {
+                "@id": "schema:text",
+                "@type": "schema:Text"
+            },
             "ThumbnailUrl": {
                 "@id": "schema:thumbnailUrl",
                 "@type": "schema:URL"
@@ -74,6 +78,7 @@
             "DatePublished": "2020-06-26T16:00:01",
             "InteractionStatistic": {},
             "Keywords": "Posteingang,Wichtig",
+            "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
             "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
         },
         "context": {}
