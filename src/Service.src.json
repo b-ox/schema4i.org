@@ -16,7 +16,8 @@
     "multipletypes": {
         "Category": [
             { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode#" }
+            { "@id": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode" },
+            { "@id": "http://schema.b-ox.org/EnumLineOfBusinessCode" }
         ]
     },
     "context": {
@@ -29,6 +30,10 @@
                 "@id": "schema:award",
                 "@type": "schema:Text"
             },
+            "BusinessFunction": {
+                "@id": "schema:businessFunction",
+                "@type": "schema:BusinessFunction"
+            },
             "Category": {
                 "@id": "schema:category"
             },
@@ -39,6 +44,10 @@
             "Logo": {
                 "@id": "schema:logo",
                 "@type": "schema:URL"
+            },
+            "Offers": {
+                "@id": "schema:offers",
+                "@type": "box:Offer"
             },
             "Provider": {
                 "@id": "schema:provider",
