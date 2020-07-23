@@ -1,0 +1,26 @@
+{
+    "type": "EnumVehicleCode_DE",
+    "uri": "http://schema.b-ox.org/EnumVehicleCode_DE",
+    "description": "A German 3-digit code for identifying any kind of vehicle.",
+    "links": [{
+            "url": "http://schema.b-ox.org/EnumVehicleCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        },
+        {
+            "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl110.htm",
+            "description": "GDV Standard Anlage 110"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Vehicle#VehicleType" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "Personenkraftwagen": "box:EnumLineOfBusinessCode#112"
+        }
+    }
+}
