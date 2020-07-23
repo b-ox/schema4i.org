@@ -1,0 +1,101 @@
+{
+    "type": "Vehicle",
+    "uri": "http://schema.b-ox.org/Vehicle",
+    "description": "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.",
+    "links": [{
+        "url": "http://schema.org/Vehicle",
+        "description": "Original Schema.org type"
+    }, {
+        "url": "https://github.com/riskine/ontology/blob/master/schemas/core/vehicle.json",
+        "description": "OpenOntology for Insurances type"
+    }, {
+        "url": "https://raw.githubusercontent.com/riskine/ontology/master/schemas/core/vehicle.json",
+        "description": "OpenOntology for Insurances type (JSON Schema)"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Car" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Product" }
+    ],
+    "multipletypes": {
+        "RegistrationArea": [
+            { "@id": "https://openontology.org/definitions.json#/string" },
+            { "@id": "http://schema.b-ox.org/EnumCountryCode" }
+        ],
+        "Holder": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "VehicleType": [
+            { "@id": "https://openontology.org/definitions.json#/vehicle-type" },
+            { "@id": "http://schema.b-ox.org/EnumVehicleCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "ooi": "https://openontology.org/",
+            "Vehicle": "schema:Vehicle",
+            "DateHolderFirstRegistered": {
+                "@id": "box:DateHolderFirstRegistered",
+                "@type": "schema:Date"
+            },
+            "DateVehicleFirstRegistered": {
+                "@id": "schema:dateVehicleFirstRegistered",
+                "@type": "schema:Date"
+            },
+            "Garage": {
+                "@id": "ooi:vehicle.json#/garage",
+                "@type": "ooi:definitions.json#/boolean"
+            },
+            "Holder": {
+                "@id": "box:Holder"
+            },
+            "HSN": {
+                "@id": "ooi:vehicle.json#/hsn",
+                "@type": "ooi:definitions.json#/string"
+            },
+            "NumberPlate": {
+                "@id": "ooi:vehicle.json#/number-plate",
+                "@type": "ooi:definitions.json#/string"
+            },
+            "RegistrationArea": {
+                "@id": "ooi:vehicle.json#/registration-area"
+            },
+            "TSN": {
+                "@id": "ooi:vehicle.json#/tsn",
+                "@type": "ooi:definitions.json#/string"
+            },
+            "VehicleIdentificationNumber": {
+                "@id": "schema:vehicleIdentificationNumber",
+                "@type": "schema:Text"
+            },
+            "VehicleType": {
+                "@id": "ooi:vehicle.json#/vehicle-type"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Vehicle",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/Vehicle"
+            ],
+            "@type": "Vehicle",
+            "DateHolderFirstRegistered": "2020-07-16",
+            "DateVehicleFirstRegistered": "2020-07-16",
+            "Garage": false,
+            "HSN": "0583",
+            "NumberPlate": "D-TX 718",
+            "NumberPlateCountryCode": "D",
+            "TSN": "AJM",
+            "VehicleIdentificationNumber": "D676SDA8",
+            "VehicleType": 5
+        },
+        "context": {}
+    }]
+}

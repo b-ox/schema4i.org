@@ -1,0 +1,65 @@
+{
+    "type": "Car",
+    "uri": "http://schema.b-ox.org/Car",
+    "description": "A car is a wheeled, self-powered motor vehicle used for transportation.",
+    "links": [{
+        "url": "http://schema.org/Car",
+        "description": "Original Schema.org type"
+    }, {
+        "url": "https://github.com/riskine/ontology/blob/master/schemas/core/vehicle.json",
+        "description": "OpenOntology for Insurances type"
+    }, {
+        "url": "https://raw.githubusercontent.com/riskine/ontology/master/schemas/core/vehicle.json",
+        "description": "OpenOntology for Insurances type (JSON Schema)"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "ooi": "https://openontology.org/",
+            "Car": "schema:Car"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Car",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Car"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic Car",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/Car",
+                "http://schema.b-ox.org/Organization",
+                "http://schema.b-ox.org/Product",
+                "http://schema.b-ox.org/Thing",
+                "http://schema.b-ox.org/Vehicle"
+            ],
+            "@type": "Car",
+            "DateHolderFirstRegistered": "2020-07-16",
+            "DateVehicleFirstRegistered": "2020-07-16",
+            "Garage": true,
+            "HSN": "0583",
+            "Manufacturer": {
+                "@type": "Organization",
+                "Name": "Porsche"
+            },
+            "Model": "718 Caymen S",
+            "NumberPlate": "D-TX 718",
+            "TSN": "AJM",
+            "VehicleIdentificationNumber": "D676SDA8",
+            "VehicleType": "112"
+        },
+        "context": {}
+    }]
+}
