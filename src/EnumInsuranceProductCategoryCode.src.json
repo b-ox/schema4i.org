@@ -6,9 +6,9 @@
         "url": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode_DE",
         "description": "Original German documentation"
     }],
-    "parents": [{
-        "@id": "http://schema.b-ox.org/Service#Category"
-    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Service#Category" }
+    ],
     "base": [],
     "multipletypes": {},
     "context": {
