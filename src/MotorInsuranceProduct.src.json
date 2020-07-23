@@ -1,0 +1,43 @@
+{
+    "type": "MotorInsuranceProduct",
+    "uri": "http://schema.b-ox.org/MotorInsuranceProduct",
+    "description": "TODO",
+    "links": [{
+        "url": "https://github.com/riskine/ontology/blob/master/schemas/products/motor.json",
+        "description": "Parts are used from the Insurance Ontology"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/FinancialProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "MotorInsuranceProduct": "box:MotorInsuranceProduct"
+        }
+    },
+    "playground": [{
+        "title": "A maximum MotorInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MotorInsuranceProduct"
+        },
+        "context": {}
+    }, {
+        "title": "A real MotorInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MotorInsuranceProduct",
+            "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
+            "Offers": {
+                "@type": "Offer"
+            }
+        },
+        "context": {}
+    }]
+}

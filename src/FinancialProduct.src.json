@@ -6,7 +6,9 @@
         "url": "http://schema.org/FinancialProduct",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/MotorInsuranceProduct" }
+    ],
     "base": [
         { "@id": "http://schema.b-ox.org/Service" }
     ],
