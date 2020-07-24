@@ -1,0 +1,35 @@
+{
+    "type": "EnumMotorInsuranceLiabilityCoverageCode",
+    "uri": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode",
+    "description": "A German 2-digit code for the coverage in motor insurances.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode_DE",
+        "description": "Original German documentation"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0220.051.htm#12",
+        "description": "GDV standard motor liability insurance field 12"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Vehicle#VehicleType" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "Unlimited coverage": "box:EnumMotorInsuranceLiabilityCoverageCode#11",
+            "Statutory minimum cover amounts": "box:EnumMotorInsuranceLiabilityCoverageCode#13",
+            "Coverage amounts that do not fall under 11, 13, 17 and 18": "box:EnumMotorInsuranceLiabilityCoverageCode#16",
+            "Statutory coverage amounts for passenger transport by bus": "box:EnumMotorInsuranceLiabilityCoverageCode#17",
+            "5,000,000 personal injuries, 2,000,000 flat property and pecuniary damage, 2,500,000 euros (converted), 1,000,000 euros (converted)": "box:EnumMotorInsuranceLiabilityCoverageCode#18",
+            "50,000,000 euros (flat rate), 8,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode51",
+            "100,000,000 euros (flat rate), 8,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode#52",
+            "100,000,000 euros (flat rate), 10,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode#53",
+            "100,000,000 euros (flat rate), 12,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode#54",
+            "100,000,000 euros (flat rate), 15,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode#55",
+            "100,000,000 euros (flat rate), 14,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode#56",
+            "100,000,000 euros (flat rate), 16,000,000 euros maximum per person": "box:EnumMotorInsuranceLiabilityCoverageCode#57"
+        }
+    }
+}
