@@ -1,7 +1,7 @@
 {
     "type": "MotorInsuranceProduct",
     "uri": "http://schema.b-ox.org/MotorInsuranceProduct",
-    "description": "TODO",
+    "description": "Motor insurance for cars, motorbikes, trucks, quads, etc.",
     "links": [{
         "url": "https://github.com/riskine/ontology/blob/master/schemas/products/motor.json",
         "description": "Parts are used from the Insurance Ontology"
@@ -34,9 +34,9 @@
             "@context": {},
             "@type": "MotorInsuranceProduct",
             "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
-            "Offers": {
-                "@type": "Offer"
-            }
+            "Offers": [{
+                "@type": "MotorInsuranceLiabilityCoverage"
+            }]
         },
         "context": {}
     }]

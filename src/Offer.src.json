@@ -7,18 +7,74 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Service#Offers" }
+        { "@id": "http://schema.b-ox.org/Service#Offers" },
+        { "@id": "http://schema.b-ox.org/Coverage" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "OfferedBy": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ],
+        "Seller": [
+            { "@id": "http://schema.b-ox.org/Person" },
+            { "@id": "http://schema.b-ox.org/Organization" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "Offer": "schema:Offer"
+            "Offer": "schema:Offer",
+            "AcceptedPaymentMethod": {
+                "@id": "schema:acceptedPaymentMethod",
+                "@type": "schema:PaymentMethod"
+            },
+            "BusinessFunction": {
+                "@id": "schema:businessFunction",
+                "@type": "schema:BusinessFunction"
+            },
+            "Category": {
+                "@id": "schema:category",
+                "@type": "schema:Text"
+            },
+            "ItemOffered": {
+                "@id": "schema:itemOffered",
+                "@type": "box:FinancialProduct"
+            },
+            "OfferedBy": {
+                "@id": "schema:offeredBy"
+            },
+            "Price": {
+                "@id": "schema:price",
+                "@type": "schema:Number"
+            },
+            "PriceCurrency": {
+                "@id": "schema:priceCurrency",
+                "@type": "schema:Text"
+            },
+            "PriceSpecification": {
+                "@id": "schema:priceSpecification",
+                "@type": "box:PriceSpecification"
+            },
+            "Seller": {
+                "@id": "schema:seller"
+            },
+            "SerialNumber": {
+                "@id": "schema:serialNumber",
+                "@type": "schema:Text"
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:DateTime"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:DateTime"
+            }
         }
     },
     "playground": [{
@@ -26,7 +82,22 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "Offer"
+            "@type": "Offer",
+            "AcceptedPaymentMethod": [
+                "http://purl.org/goodrelations/v1#ByInvoice",
+                "http://purl.org/goodrelations/v1#DirectDebit",
+                "http://purl.org/goodrelations/v1#PayPal"
+            ],
+            "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
+            "Category": "Insurance",
+            "ItemOffered": {},
+            "OfferedBy": {},
+            "Price": 100.00,
+            "PriceCurrency": "EUR",
+            "PriceSpecification": [],
+            "SerialNumber": "A4711BC",
+            "ValidFrom": "2021-01-01T00:00:00",
+            "ValidThrough": "2022-01-01T00:00:00"
         },
         "context": {}
     }]

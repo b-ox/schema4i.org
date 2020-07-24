@@ -1,0 +1,30 @@
+{
+    "type": "Coverage",
+    "uri": "http://schema.b-ox.org/Coverage",
+    "description": "Provides insurance cover for damage to an object or person.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Offer" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "Coverage": "schema:Coverage"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Coverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Coverage"
+        },
+        "context": {}
+    }]
+}

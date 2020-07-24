@@ -1,0 +1,28 @@
+{
+    "type": "MotorInsuranceLiabilityCoverage",
+    "uri": "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage",
+    "description": "Provides coverage for liability insurance damage in the context of motor insurance.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "MotorInsuranceLiabilityCoverage": "box:MotorInsuranceLiabilityCoverage"
+        }
+    },
+    "playground": [{
+        "title": "A maximum MotorInsuranceLiabilityCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MotorInsuranceLiabilityCoverage"
+        },
+        "context": {}
+    }]
+}
