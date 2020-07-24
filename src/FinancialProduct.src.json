@@ -1,7 +1,7 @@
 {
     "type": "FinancialProduct",
     "uri": "http://schema.b-ox.org/FinancialProduct",
-    "description": "A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.",
+    "description": "A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry. In the insurance industry an insurance is e. g. a MotorInsuranceProduct that is a specialized FinancialProduct that is a Service. An insurance company provider a coverage for a damage to an object or person. In the sense of Schema.org this is the Offer of the provider. If somebody confirmes this Offer by an Order, then an insurance contract is established.",
     "links": [{
         "url": "http://schema.org/FinancialProduct",
         "description": "Original Schema.org type"
