@@ -31,11 +31,38 @@
         "title": "A real MotorInsuranceProduct",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema.b-ox.org/MotorInsuranceProduct.jsonld",
+                "http://schema.b-ox.org/FinancialProduct.jsonld",
+                "http://schema.b-ox.org/Service.jsonld",
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/Offer.jsonld",
+                "http://schema.b-ox.org/Coverage.jsonld",
+                "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
+                "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
+                "http://schema.b-ox.org/MotorInsurancePassengerAccidentCoverage.jsonld",
+                {
+                    "SumInsured": {
+                        "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "box:http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode#"
+                        }
+                    }
+                }
+            ],
             "@type": "MotorInsuranceProduct",
-            "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
             "Offers": [{
-                "@type": "MotorInsuranceLiabilityCoverage"
+                "@type": "MotorInsuranceLiabilityCoverage",
+                "ClaimFreeYears": 7,
+                "NoClaimsDiscountLevel": "7",
+                "SumInsured": "00"
+            }, {
+                "@type": "MotorInsuranceFullyComprehensiveCoverage",
+                "ClaimFreeYears": 7,
+                "NoClaimsDiscountLevel": "7"
+            }, {
+                "@type": "MotorInsurancePassengerAccidentCoverage"
             }]
         },
         "context": {}
