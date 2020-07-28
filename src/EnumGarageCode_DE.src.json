@@ -1,0 +1,31 @@
+{
+    "type": "EnumGarageCode_DE",
+    "uri": "http://schema.b-ox.org/EnumGarageCode_DE",
+    "description": "A German 3-digit code for identifying any kind of vehicle.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumGarageCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0210.050.htm#21",
+        "description": "GDV Standard KFZ-Fahrzeugdaten, Teilsatz 2, Feld 21"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Vehicle#Garage" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "unbekannt": "box:EnumGarageCode#00",
+            "Garage (beliebiger Typ)": "box:EnumGarageCode#01",
+            "nicht vorhanden": "box:EnumGarageCode#02",
+            "abschließbare Einzel- und Doppelgarage": "box:EnumGarageCode#03",
+            "Mehrfach / Tiefgarage (nicht abschließbar)": "box:EnumGarageCode#04",
+            "gesichertes Grundstück / Carport": "box:EnumGarageCode#05",
+            "gesichertes Grundstück": "box:EnumGarageCode#06",
+            "Carport": "box:EnumGarageCode#07"
+        }
+    }
+}
