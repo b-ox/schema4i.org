@@ -12,7 +12,7 @@ const fromPath = "src/";
 let typeIndex = {
     name: "schema.b-ox.org",
     description: "Semantic Data Model for Insurances",
-    release: 0.49,
+    release: 0.50,
     modified: new Date(),
     objects: 0,
     enumerations: 0,
