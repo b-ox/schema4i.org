@@ -4,7 +4,10 @@
     "description": "Provides insurance cover for damage to an object or person.",
     "links": [],
     "parents": [
-        { "@id": "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage" }
+        { "@id": "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage" },
+        { "@id": "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage" },
+        { "@id": "http://schema.b-ox.org/MotorInsurancePartialComprehensiveCoverage" },
+        { "@id": "http://schema.b-ox.org/MotorInsurancePassengerAccidentCoverage" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Offer" }
@@ -15,7 +18,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "Coverage": "schema:Coverage"
+            "Coverage": "box:Coverage"
         }
     },
     "playground": [{
