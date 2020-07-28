@@ -1,0 +1,29 @@
+{
+    "type": "MotorInsurancePassengerAccidentCoverage",
+    "uri": "http://schema.b-ox.org/MotorInsurancePassengerAccidentCoverage",
+    "description": "Provides accidence insurance coverage for persons in the car when crashing.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://openontology.org/",
+            "MotorInsurancePassengerAccidentCoverage": "oo:motor.json#/product.motor.coverage.passenger-cover"
+        }
+    },
+    "playground": [{
+        "title": "A maximum MotorInsurancePassengerAccidentCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MotorInsurancePassengerAccidentCoverage"
+        },
+        "context": {}
+    }]
+}

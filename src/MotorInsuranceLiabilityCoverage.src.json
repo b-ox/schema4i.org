@@ -7,13 +7,30 @@
     "base": [
         { "@id": "http://schema.b-ox.org/Coverage" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "SumInsured": [
+            { "@id": "https://openontology.org/motor.json#/product.motor.coverage.liability.sum-insured" },
+            { "@id": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "MotorInsuranceLiabilityCoverage": "box:MotorInsuranceLiabilityCoverage"
+            "oo": "https://openontology.org/",
+            "MotorInsuranceLiabilityCoverage": "oo:motor.json#/product.motor.coverage.liability",
+            "ClaimFreeYears": {
+                "@id": "oo:motor.json#/product.motor.no-claims-discount-liability.claim-free-years",
+                "@type": "oo:definitions.json#/nonnegative-integer"
+            },
+            "NoClaimsDiscountLevel": {
+                "@id": "oo:motor.json#/product.motor.no-claims-discount-liability.level",
+                "@type": "oo:definitions.json#/string"
+            },
+            "SumInsured": {
+                "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured"
+            }
         }
     },
     "playground": [{
@@ -21,7 +38,10 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "MotorInsuranceLiabilityCoverage"
+            "@type": "MotorInsuranceLiabilityCoverage",
+            "ClaimFreeYears": 7,
+            "NoClaimsDiscountLevel": "7",
+            "SumInsured": "15.000.000"
         },
         "context": {}
     }]

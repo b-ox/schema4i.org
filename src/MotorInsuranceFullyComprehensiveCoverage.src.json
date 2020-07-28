@@ -1,0 +1,39 @@
+{
+    "type": "MotorInsuranceFullyComprehensiveCoverage",
+    "uri": "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage",
+    "description": "Provides coverage for a fully comprehensive insurance damage in the context of motor insurance.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://openontology.org/",
+            "MotorInsuranceFullyComprehensiveCoverage": "oo:motor.json#/product.motor.coverage.comprehensive.fully",
+            "ClaimFreeYears": {
+                "@id": "oo:motor.json#/product.motor.no-claims-discount-comprehensive.claim-free-years",
+                "@type": "oo:definitions.json#/nonnegative-integer"
+            },
+            "NoClaimsDiscountLevel": {
+                "@id": "oo:motor.json#/product.motor.no-claims-discount-comprehensive.level",
+                "@type": "oo:definitions.json#/string"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum MotorInsuranceFullyComprehensiveCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MotorInsuranceFullyComprehensiveCoverage",
+            "ClaimFreeYears": 7,
+            "NoClaimsDiscountLevel": "1/2"
+        },
+        "context": {}
+    }]
+}

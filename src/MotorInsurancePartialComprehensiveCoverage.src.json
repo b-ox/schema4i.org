@@ -1,0 +1,29 @@
+{
+    "type": "MotorInsurancePartialComprehensiveCoverage",
+    "uri": "http://schema.b-ox.org/MotorInsurancePartialComprehensiveCoverage",
+    "description": "Provides coverage for a partial comprehensive insurance damage in the context of motor insurance.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://openontology.org/",
+            "MotorInsurancePartialComprehensiveCoverage": "oo:motor.json#/product.motor.coverage.comprehensive.partial"
+        }
+    },
+    "playground": [{
+        "title": "A maximum MotorInsurancePartialComprehensiveCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MotorInsurancePartialComprehensiveCoverage"
+        },
+        "context": {}
+    }]
+}
