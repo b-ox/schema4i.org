@@ -23,6 +23,10 @@
             { "@id": "https://openontology.org/definitions.json#/string" },
             { "@id": "http://schema.b-ox.org/EnumCountryCode" }
         ],
+        "Garage": [
+            { "@id": "https://openontology.org/definitions.json#/boolean" },
+            { "@id": "http://schema.b-ox.org/EnumGarageCode" }
+        ],
         "Holder": [
             { "@id": "http://schema.b-ox.org/Person" },
             { "@id": "http://schema.b-ox.org/Organization" }
@@ -37,7 +41,7 @@
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
-            "ooi": "https://openontology.org/",
+            "oo": "https://openontology.org/",
             "Vehicle": "schema:Vehicle",
             "DateHolderFirstRegistered": {
                 "@id": "box:DateHolderFirstRegistered",
@@ -48,33 +52,32 @@
                 "@type": "schema:Date"
             },
             "Garage": {
-                "@id": "ooi:vehicle.json#/garage",
-                "@type": "ooi:definitions.json#/boolean"
+                "@id": "oo:vehicle.json#/garage"
             },
             "Holder": {
                 "@id": "box:Holder"
             },
             "HSN": {
-                "@id": "ooi:vehicle.json#/hsn",
-                "@type": "ooi:definitions.json#/string"
+                "@id": "oo:vehicle.json#/hsn",
+                "@type": "oo:definitions.json#/string"
             },
             "NumberPlate": {
-                "@id": "ooi:vehicle.json#/number-plate",
-                "@type": "ooi:definitions.json#/string"
+                "@id": "oo:vehicle.json#/number-plate",
+                "@type": "oo:definitions.json#/string"
             },
             "RegistrationArea": {
-                "@id": "ooi:vehicle.json#/registration-area"
+                "@id": "oo:vehicle.json#/registration-area"
             },
             "TSN": {
-                "@id": "ooi:vehicle.json#/tsn",
-                "@type": "ooi:definitions.json#/string"
+                "@id": "oo:vehicle.json#/tsn",
+                "@type": "oo:definitions.json#/string"
             },
             "VehicleIdentificationNumber": {
                 "@id": "schema:vehicleIdentificationNumber",
                 "@type": "schema:Text"
             },
             "VehicleType": {
-                "@id": "ooi:vehicle.json#/vehicle-type"
+                "@id": "oo:vehicle.json#/vehicle-type"
             }
         }
     },
