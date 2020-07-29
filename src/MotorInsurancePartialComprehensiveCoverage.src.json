@@ -14,7 +14,11 @@
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
-            "MotorInsurancePartialComprehensiveCoverage": "oo:motor.json#/product.motor.coverage.comprehensive.partial"
+            "MotorInsurancePartialComprehensiveCoverage": "box:MotorInsurancePartialComprehensiveCoverage",
+            "Deductible": {
+                "@id": "oo:motor.json#/product.motor.coverage.comprehensive.partial.deductible",
+                "@type": "oo:definitions.json#/money"
+            }
         }
     },
     "playground": [{
@@ -22,7 +26,8 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "MotorInsurancePartialComprehensiveCoverage"
+            "@type": "MotorInsurancePartialComprehensiveCoverage",
+            "Deductible": 150.00
         },
         "context": {}
     }]

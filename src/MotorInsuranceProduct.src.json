@@ -40,8 +40,10 @@
                 "http://schema.b-ox.org/Coverage.jsonld",
                 "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
+                "http://schema.b-ox.org/MotorInsurancePartialComprehensiveCoverage.jsonld",
                 "http://schema.b-ox.org/MotorInsurancePassengerAccidentCoverage.jsonld",
                 {
+                    "oo": "https://openontology.org/",
                     "SumInsured": {
                         "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured",
                         "@type": "@vocab",
@@ -55,11 +57,14 @@
             "Offers": [{
                 "@type": "MotorInsuranceLiabilityCoverage",
                 "ClaimFreeYears": 7,
+                "NoClaimsDiscount": 41,
                 "NoClaimsDiscountLevel": "7",
                 "SumInsured": "00"
             }, {
                 "@type": "MotorInsuranceFullyComprehensiveCoverage",
                 "ClaimFreeYears": 7,
+                "Deductible": 500.00,
+                "NoClaimsDiscount": 41,
                 "NoClaimsDiscountLevel": "7"
             }, {
                 "@type": "MotorInsurancePassengerAccidentCoverage"

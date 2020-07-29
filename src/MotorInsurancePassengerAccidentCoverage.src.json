@@ -14,7 +14,11 @@
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
-            "MotorInsurancePassengerAccidentCoverage": "oo:motor.json#/product.motor.coverage.passenger-cover"
+            "MotorInsurancePassengerAccidentCoverage": "box:MotorInsurancePassengerAccidentCoverage",
+            "Deductible": {
+                "@id": "oo:motor.json#/product.motor.coverage.passenger-cover.deductible",
+                "@type": "oo:definitions.json#/money"
+            }
         }
     },
     "playground": [{
@@ -22,7 +26,8 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "MotorInsurancePassengerAccidentCoverage"
+            "@type": "MotorInsurancePassengerAccidentCoverage",
+            "Deductible": 150.00
         },
         "context": {}
     }]

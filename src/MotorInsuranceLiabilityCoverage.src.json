@@ -19,10 +19,18 @@
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
-            "MotorInsuranceLiabilityCoverage": "oo:motor.json#/product.motor.coverage.liability",
+            "MotorInsuranceLiabilityCoverage": "box:MotorInsuranceLiabilityCoverage",
             "ClaimFreeYears": {
                 "@id": "oo:motor.json#/product.motor.no-claims-discount-liability.claim-free-years",
                 "@type": "oo:definitions.json#/nonnegative-integer"
+            },
+            "Deductible": {
+                "@id": "oo:motor.json#/product.motor.coverage.liability.deductible",
+                "@type": "oo:definitions.json#/money"
+            },
+            "NoClaimsDiscount": {
+                "@id": "box:NoClaimsDiscount",
+                "@type": "schema:Number"
             },
             "NoClaimsDiscountLevel": {
                 "@id": "oo:motor.json#/product.motor.no-claims-discount-liability.level",
@@ -40,6 +48,8 @@
             "@context": {},
             "@type": "MotorInsuranceLiabilityCoverage",
             "ClaimFreeYears": 7,
+            "Deductible": 0.00,
+            "NoClaimsDiscount": 41,
             "NoClaimsDiscountLevel": "7",
             "SumInsured": "15.000.000"
         },

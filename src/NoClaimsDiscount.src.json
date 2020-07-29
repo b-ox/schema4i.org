@@ -1,0 +1,32 @@
+{
+    "type": "NoClaimsDiscount",
+    "uri": "http://schema.b-ox.org/NoClaimsDiscount",
+    "description": "Discount in percent on the insurance premium, which increases depending on the damage-free years. It is usually used in motor liability and comprehensive insurance, but is also increasingly used in other lines.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage#NoClaimsDiscount" },
+        { "@id": "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage#NoClaimsDiscount" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "AdditionalName": {
+                "@id": "box:AdditionalName",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum NoClaimsDiscount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "NoClaimsDiscount": 60
+        },
+        "context": {}
+    }]
+}
