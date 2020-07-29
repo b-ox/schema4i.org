@@ -48,7 +48,7 @@
                         "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "box:http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode#"
+                            "@vocab": "box:EnumMotorInsuranceLiabilityCoverageCode#"
                         }
                     }
                 }
@@ -59,7 +59,7 @@
                 "ClaimFreeYears": 7,
                 "NoClaimsDiscount": 41,
                 "NoClaimsDiscountLevel": "7",
-                "SumInsured": "00"
+                "SumInsured": "11"
             }, {
                 "@type": "MotorInsuranceFullyComprehensiveCoverage",
                 "ClaimFreeYears": 7,
