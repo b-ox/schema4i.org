@@ -1,0 +1,97 @@
+{
+    "type": "BusinessTransaction",
+    "uri": "http://schema.b-ox.org/BusinessTransaction",
+    "description": "A business transaction is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/CreativeWork#About" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "BusinessTransaction": "box:BusinessTransaction",
+            "Order": {
+                "@id": "box:Order",
+                "@type": "box:Order"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:DateTime"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum BusinessTransaction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "BusinessTransaction",
+            "Order": {},
+            "ValidThrough": "2020-10-01T00:00:00"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic BusinessTransaction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema.b-ox.org/Thing.jsonld",
+                "http://schema.b-ox.org/BusinessTransaction.jsonld",
+                "http://schema.b-ox.org/Order.jsonld",
+                "http://schema.b-ox.org/Person.jsonld",
+                "http://schema.b-ox.org/PostalAddress.jsonld",
+                "http://schema.b-ox.org/MotorInsuranceProduct.jsonld",
+                "http://schema.b-ox.org/FinancialProduct.jsonld",
+                "http://schema.b-ox.org/Service.jsonld",
+                "http://schema.b-ox.org/Coverage.jsonld",
+                "http://schema.b-ox.org/Offer.jsonld"
+            ],
+            "@type": "BusinessTransaction",
+            "Identifier": "100007000",
+            "Name": "Policierung / Dokument erstellt",
+            "Description": "VN: Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",
+            "ValidThrough": "2022-01-01T00:00:00",
+            "Order": {
+                "@type": "Order",
+                "ConfirmationNumber": "VS-Nr.4711",
+                "Customer": {
+                    "@type": "Person",
+                    "GivenName": "Markus",
+                    "FamilyName": "Heussen",
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "StreetAddress": "Lindenstr. 48-52",
+                        "PostalCode": "40233",
+                        "AddressLocality": "Düsseldorf"
+                    }
+                },
+                "OrderedItem": {
+                    "@type": "MotorInsuranceProduct",
+                    "Category": "050",
+                    "Offers": [{
+                        "@type": "MotorInsuranceLiabilityCoverage",
+                        "ClaimFreeYears": 7,
+                        "NoClaimsDiscount": 41,
+                        "NoClaimsDiscountLevel": "7",
+                        "SumInsured": "11"
+                    }, {
+                        "@type": "MotorInsuranceFullyComprehensiveCoverage",
+                        "ClaimFreeYears": 7,
+                        "Deductible": 500.00,
+                        "NoClaimsDiscount": 41,
+                        "NoClaimsDiscountLevel": "7"
+                    }]
+                },
+                "OrderedNumber": "Antragsnr.4711/1",
+                "OrderStatus": "1"
+            }
+        },
+        "context": {}
+    }]
+}
