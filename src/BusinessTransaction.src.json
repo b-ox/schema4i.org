@@ -49,6 +49,7 @@
                 "http://schema.b-ox.org/MotorInsuranceProduct.jsonld",
                 "http://schema.b-ox.org/FinancialProduct.jsonld",
                 "http://schema.b-ox.org/Service.jsonld",
+                "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema.b-ox.org/Coverage.jsonld",
                 "http://schema.b-ox.org/Offer.jsonld"
             ],
@@ -80,12 +81,6 @@
                         "NoClaimsDiscount": 41,
                         "NoClaimsDiscountLevel": "7",
                         "SumInsured": "11"
-                    }, {
-                        "@type": "MotorInsuranceFullyComprehensiveCoverage",
-                        "ClaimFreeYears": 7,
-                        "Deductible": 500.00,
-                        "NoClaimsDiscount": 41,
-                        "NoClaimsDiscountLevel": "7"
                     }]
                 },
                 "OrderedNumber": "Antragsnr.4711/1",
