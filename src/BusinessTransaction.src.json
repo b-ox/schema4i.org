@@ -68,7 +68,7 @@
                 "http://schema.b-ox.org/FinancialProduct.jsonld",
                 "http://schema.b-ox.org/Service.jsonld",
                 "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
-                "http://schema.b-ox.org/Coverage.jsonld",
+                "http://schema.b-ox.org/Organization.jsonld",
                 "http://schema.b-ox.org/Offer.jsonld"
             ],
             "@type": "BusinessTransaction",
