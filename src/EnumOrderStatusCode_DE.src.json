@@ -1,0 +1,35 @@
+{
+    "type": "EnumOrderStatusCode_DE",
+    "uri": "http://schema.b-ox.org/EnumOrderStatusCode_DE",
+    "description": "Ein Code, der den Status eines Versicherungsvertrags gemäß dem deutschen GDV Standard mit Releasedatum 01.07.2018 darstellt, z.B. 4 = storniert.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumOrderStatusCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl24.htm",
+        "description": "GDV Vertragsstatus"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/Order#OrderStatus" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "lebend": "box:EnumContractStatusCode#1",
+            "lebend kurzfristig unterjährig": "box:EnumContractStatusCode#2",
+            "ruhend Anwartschaft": "box:EnumContractStatusCode#3",
+            "storniert": "box:EnumContractStatusCode#4",
+            "ruhend beitragsfrei": "box:EnumContractStatusCode#5",
+            "beitragsfrei": "box:EnumContractStatusCode#6",
+            "beitragsfrei durch Leistung": "box:EnumContractStatusCode#7",
+            "Beitragsstundung": "box:EnumContractStatusCode#8",
+            "Sonstiges": "box:EnumContractStatusCode#9",
+            "In Leistung": "box:EnumContractStatusCode#A",
+            "In Abrufphase": "box:EnumContractStatusCode#B",
+            "Vorläufige Deckung": "box:EnumContractStatusCode#C"
+        }
+    }
+}

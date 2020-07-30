@@ -1,0 +1,35 @@
+{
+    "type": "EnumOrderStatusCode",
+    "uri": "http://schema.b-ox.org/EnumOrderStatusCode",
+    "description": "A code that represents the status of an insurance contract according to the German GDV standard with release date 01.07.2018, e.g. 4 = canceled. An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumOrderStatusCode_DE",
+        "description": "Original German documentation"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl24.htm",
+        "description": "GDV contract status"
+    }],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Order#OrderStatus"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "live": "box:EnumOrderStatusCode#1",
+            "live short term during the year": "box:EnumOrderStatusCode#2",
+            "dormant entitlement": "box:EnumOrderStatusCode#3",
+            "canceled": "box:EnumOrderStatusCode#4",
+            "dormant no contribution": "box:EnumOrderStatusCode#5",
+            "free of charge": "box:EnumOrderStatusCode#6",
+            "non-contributory through performance": "box:EnumOrderStatusCode#7",
+            "Deferral of premium": "box:EnumOrderStatusCode#8",
+            "miscellaneous": "box:EnumOrderStatusCode#9",
+            "In performance": "box:EnumOrderStatusCode#A",
+            "On call": "box:EnumOrderStatusCode#B",
+            "Provisional coverage": "box:EnumOrderStatusCode#C"
+        }
+    }
+}
