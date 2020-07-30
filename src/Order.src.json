@@ -1,22 +1,19 @@
 {
     "type": "Order",
     "uri": "http://schema.b-ox.org/Order",
-    "description": "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer. In the insurance industry this type can be used to transfer data of an insurance contract. For insurance applications use the type Offer instead.",
+    "description": "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer. In the insurance industry this type is used to transfer data of an insurance contract. Adopting the basic principles of Schema.org an insurance contract is an Order with Order.OrderedItem referencing a FinancialProduct that is a Service where Service.Offers references different Offer objects that in the insurance context are different coverages (Coverage).",
     "links": [{
         "url": "http://schema.org/Order",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Invoice#ReferencesOrder" }
+        { "@id": "http://schema.b-ox.org/Invoice#ReferencesOrder" },
+        { "@id": "http://schema.b-ox.org/BusinessTransaction#Order" }
     ],
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
     ],
     "multipletypes": {
-        "Broker": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
-        ],
         "Customer": [
             { "@id": "http://schema.b-ox.org/Person" },
             { "@id": "http://schema.b-ox.org/Organization" }
@@ -46,10 +43,6 @@
                 "@id": "schema:discount",
                 "@type": "schema:Number"
             },
-            "DiscountCode": {
-                "@id": "schema:discountCode",
-                "@type": "schema:Text"
-            },
             "DiscountCurrency": {
                 "@id": "schema:discountCurrency",
                 "@type": "schema:Text"
@@ -58,12 +51,20 @@
                 "@id": "schema:orderDate",
                 "@type": "schema:Date"
             },
+            "OrderedItem": {
+                "@id": "schema:orderedItem",
+                "@type": "box:Service"
+            },
             "OrderNumber": {
                 "@id": "schema:orderNumber",
                 "@type": "schema:Text"
             },
-            "OrderedItem": {
-                "@id": "schema:orderedItem"
+            "OrderStatus": {
+                "@id": "schema:orderStatus",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumOrderStatusCode#"
+                }
             }
         }
     },
@@ -73,11 +74,15 @@
         "input": {
             "@context": {},
             "@type": "Order",
-            "ConfirmationNumber": "BELEG-03 -0000014",
-            "OrderNumber": "VSNR-NG070420-003",
-            "OrderDate": "2020",
             "BillingAddress": {},
-            "OrderedItem": {}
+            "ConfirmationNumber": "BELEG-03 -0000014",
+            "Customer": {},
+            "Discount": 100.00,
+            "DiscountCurrency": "EUR",
+            "OrderDate": "2020-07-30",
+            "OrderedItem": {},
+            "OrderNumber": "A-Nr.4711",
+            "OrderStatus": "1"
         },
         "context": {}
     }]

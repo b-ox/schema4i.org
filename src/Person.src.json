@@ -17,12 +17,18 @@
     "base": [
         { "@id": "http://schema.b-ox.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "DrivingLicenseIssueCountry": [
+            { "@id": "https://openontology.org/definitions.json#/string" },
+            { "@id": "http://schema.b-ox.org/EnumCountryCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "box": "http://schema.b-ox.org/",
             "schema": "http://schema.org/",
+            "oo": "https://openontology.org/",
             "Person": "schema:Person",
             "AdditionalName": {
                 "@id": "schema:additionalName",
@@ -32,6 +38,10 @@
                 "@id": "schema:address",
                 "@type": "box:PostalAddress"
             },
+            "BankAccount": {
+                "@id": "box:BankAccount",
+                "@type": "box:BankAccount"
+            },
             "BirthDate": {
                 "@id": "schema:birthDate",
                 "@type": "schema:Date"
@@ -39,6 +49,25 @@
             "ContactPoint": {
                 "@id": "schema:contactPoint",
                 "@type": "box:ContactPoint"
+            },
+            "DrivingLicenseExpires": {
+                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.expiration-date",
+                "@type": "oo:definitions.json#/date"
+            },
+            "DrivingLicenseID": {
+                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.id-number",
+                "@type": "oo:definitions.json#/string"
+            },
+            "DrivingLicenseIssueAuthority": {
+                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.issue-authority",
+                "@type": "oo:definitions.json#/string"
+            },
+            "DrivingLicenseIssueCountry": {
+                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.issue-country"
+            },
+            "DrivingLicenseIssueDate": {
+                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.issue-date",
+                "@type": "oo:definitions.json#/date"
             },
             "Email": {
                 "@id": "schema:email",
@@ -78,6 +107,10 @@
                 "@id": "schema:relatedTo",
                 "@type": "box:Person"
             },
+            "TaxID": {
+                "@id": "schema:taxID",
+                "@type": "schema:Text"
+            },
             "Telephone": {
                 "@id": "schema:telephone",
                 "@type": "schema:Text"
@@ -92,8 +125,14 @@
             "@type": "Person",
             "AdditionalName": "c/o b-tix GmbH",
             "Address": {},
+            "BankAccount": {},
             "BirthDate": "1973-11-16",
             "ContactPoint": {},
+            "DrivingLicenseExpires": "2022-04-01",
+            "DrivingLicenseID": "4711",
+            "DrivingLicenseIssueAuthority": "Düsseldorf",
+            "DrivingLicenseIssueCountry": "D",
+            "DrivingLicenseIssueDate": "1990-11-11",
             "Email": "noreply@b-tix.de",
             "FamilyName": "Heussen",
             "FaxNumber": "0211 41608 100",
@@ -102,6 +141,7 @@
             "HonorificPrefix": "Dr.",
             "Nationality": "D",
             "RelatedTo": {},
+            "TaxID": "DE123123123",
             "Telephone": "+49 211 41608 400"
         },
         "context": {}
