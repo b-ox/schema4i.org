@@ -40,8 +40,6 @@
                 "http://schema.b-ox.org/Coverage.jsonld",
                 "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
-                "http://schema.b-ox.org/MotorInsurancePartialComprehensiveCoverage.jsonld",
-                "http://schema.b-ox.org/MotorInsurancePassengerAccidentCoverage.jsonld",
                 {
                     "oo": "https://openontology.org/",
                     "SumInsured": {
@@ -66,8 +64,6 @@
                 "Deductible": 500.00,
                 "NoClaimsDiscount": 41,
                 "NoClaimsDiscountLevel": "7"
-            }, {
-                "@type": "MotorInsurancePassengerAccidentCoverage"
             }]
         },
         "context": {}
