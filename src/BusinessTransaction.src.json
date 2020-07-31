@@ -20,6 +20,10 @@
                 "@id": "schema:category",
                 "@type": "schema:Text"
             },
+            "Copy": {
+                "@id": "box:Copy",
+                "@type": "box:Copy"
+            },
             "Order": {
                 "@id": "box:Order",
                 "@type": "box:Order"
@@ -35,6 +39,13 @@
                     "@vocab": "box:EnumTransactionCode#"
                 }
             },
+            "TransactionTrigger": {
+                "@id": "box:TransactionTrigger",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "box:EnumTransactionTriggerCode#"
+                }
+            },
             "ValidThrough": {
                 "@id": "schema:validThrough",
                 "@type": "schema:DateTime"
@@ -48,6 +59,7 @@
             "@context": {},
             "@type": "BusinessTransaction",
             "Category": "Antrag/Neugeschäft",
+            "Copy": true,
             "Order": {},
             "TrackingNumber": "4711",
             "TransactionCode": "100007000",
@@ -73,11 +85,13 @@
             ],
             "@type": "BusinessTransaction",
             "TransactionCode": "100007000",
+            "TransactionTrigger": "001",
             "Category": "Antrag/Neugeschäft",
             "Name": "Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",
             "Description": "Policierung / Dokument erstellt",
             "ValidThrough": "2022-01-01T00:00:00",
             "TrackingNumber": "4711",
+            "Copy": true,
             "Order": {
                 "@type": "Order",
                 "ConfirmationNumber": [

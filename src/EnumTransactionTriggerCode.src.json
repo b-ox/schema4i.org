@@ -1,0 +1,30 @@
+{
+    "type": "EnumTransactionTriggerCode",
+    "uri": "http://schema.b-ox.org/EnumTransactionTriggerCode",
+    "description": "A German 3-digit code that describes which party triggered a business transaction.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumTransactionTriggerCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/BusinessTransaction#TransactionTrigger" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "Insurance company": "box:EnumTransactionTriggerCode_DE#001",
+            "Policyholder": "box:EnumTransactionTriggerCode_DE#002",
+            "Insured person": "box:EnumTransactionTriggerCode_DE#003",
+            "Broker": "box:EnumTransactionTriggerCode_DE#004",
+            "Premium payer": "box:EnumTransactionTriggerCode_DE#005",
+            "Creditor": "box:EnumTransactionTriggerCode_DE#006",
+            "Beneficial owner": "box:EnumTransactionTriggerCode_DE#007",
+            "Mail recipient": "box:EnumTransactionTriggerCode_DE#008",
+            "Beneficiary": "box:EnumTransactionTriggerCode_DE#009",
+            "Benefit recipient": "box:EnumTransactionTriggerCode_DE#010"
+        }
+    }
+}

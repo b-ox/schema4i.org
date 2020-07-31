@@ -1,0 +1,30 @@
+{
+    "type": "EnumTransactionTriggerCode_DE",
+    "uri": "http://schema.b-ox.org/EnumTransactionTriggerCode_DE",
+    "description": "Ein deutscher 3-stelliger Code, der beschreibt, welche Partei einen Geschäftsvorfall ausgelöst hat.",
+    "links": [{
+        "url": "http://schema.b-ox.org/EnumTransactionTriggerCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/BusinessTransaction#TransactionTrigger" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "Versicherungsunternehmen": "box:EnumTransactionTriggerCode_DE#001",
+            "Versicherungsnehmer": "box:EnumTransactionTriggerCode_DE#002",
+            "Versicherte Person": "box:EnumTransactionTriggerCode_DE#003",
+            "Vermittler": "box:EnumTransactionTriggerCode_DE#004",
+            "Beitragszahler": "box:EnumTransactionTriggerCode_DE#005",
+            "Gläubiger": "box:EnumTransactionTriggerCode_DE#006",
+            "Wirtschaftlich Berechtigter": "box:EnumTransactionTriggerCode_DE#007",
+            "Postempfänger": "box:EnumTransactionTriggerCode_DE#008",
+            "Bezugsberechtigter": "box:EnumTransactionTriggerCode_DE#009",
+            "Leistungsempfänger": "box:EnumTransactionTriggerCode_DE#010"
+        }
+    }
+}
