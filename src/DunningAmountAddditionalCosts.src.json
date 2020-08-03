@@ -1,0 +1,30 @@
+{
+    "type": "DunningAmountAddditionalCosts",
+    "uri": "http://schema.b-ox.org/DunningAmountAddditionalCosts",
+    "description": "In addition to the dunning amount and costs, specifies any additional dunning amounts, e.g. 25.00.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema.b-ox.org/Invoice#DunningAmountAddditionalCosts"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "schema": "http://schema.org/",
+            "DunningAmountAddditionalCosts": {
+                "@id": "box:DunningAmountAddditionalCosts",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DunningAmountAddditionalCosts",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DunningAmountAddditionalCosts": 25.00
+        },
+        "context": {}
+    }]
+}

@@ -56,6 +56,26 @@
             "Customer": {
                 "@id": "schema:customer"
             },
+            "DunningAmount": {
+                "@id": "box:DunningAmount",
+                "@type": "schema:Number"
+            },
+            "DunningAmountExpenses": {
+                "@id": "box:DunningAmountExpenses",
+                "@type": "schema:Number"
+            },
+            "DunningAmountAddditionalCosts": {
+                "@id": "box:DunningAmountAddditionalCosts",
+                "@type": "schema:Number"
+            },
+            "PaymentDueDate": {
+                "@id": "schema:paymentDueDate",
+                "@type": "schema:Date"
+            },
+            "PaymentMethod": {
+                "@id": "schema:paymentMethod",
+                "@type": "schema:PaymentMethod"
+            },
             "PaymentStatus": {
                 "@id": "schema:paymentStatus",
                 "@type": "@vocab",
@@ -82,14 +102,19 @@
             "@context": {},
             "@type": "Invoice",
             "AccountID": "KUNDEKTO-10424147",
-            "Category": "PREMIUM",
             "BillingPeriod": "2020-04",
-            "TotalPaymentDue": {},
-            "ConfirmationNumber": "ABRECHNUNG-15 -0000028",
-            "PaymentStatus": "PaymentComplete",
             "Broker": {},
-            "Provider": {},
+            "Category": "PREMIUM",
+            "ConfirmationNumber": "ABRECHNUNG-15 -0000028",
             "Customer": {},
+            "DunningAmount": 100.00,
+            "DunningAmountExpenses": 25.00,
+            "DunningAmountAddditionalCosts": 25.00,
+            "TotalPaymentDue": {},
+            "PaymentDueDate": "2020-04-01",
+            "PaymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+            "PaymentStatus": "PaymentComplete",
+            "Provider": {},
             "ReferencesOrder": []
         },
         "context": {}
