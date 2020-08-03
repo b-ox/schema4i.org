@@ -2,7 +2,10 @@
     "type": "MotorInsuranceFullyComprehensiveCoverage",
     "uri": "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage",
     "description": "Provides coverage for a fully comprehensive insurance damage in the context of motor insurance.",
-    "links": [],
+    "links": [{
+        "url": "https://openontology.org",
+        "description": "Global data model for insurance"
+    }],
     "parents": [],
     "base": [
         { "@id": "http://schema.b-ox.org/Coverage" }

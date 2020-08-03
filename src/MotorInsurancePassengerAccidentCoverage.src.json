@@ -2,7 +2,10 @@
     "type": "MotorInsurancePassengerAccidentCoverage",
     "uri": "http://schema.b-ox.org/MotorInsurancePassengerAccidentCoverage",
     "description": "Provides accidence insurance coverage for persons in the car when crashing.",
-    "links": [],
+    "links": [{
+        "url": "https://openontology.org",
+        "description": "Global data model for insurance"
+    }],
     "parents": [],
     "base": [
         { "@id": "http://schema.b-ox.org/Coverage" }
