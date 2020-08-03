@@ -1,0 +1,52 @@
+{
+    "type": "ParcelDelivery",
+    "uri": "http://schema.b-ox.org/ParcelDelivery",
+    "description": "The delivery of a parcel either via the postal service or a commercial service.",
+    "links": [{
+        "url": "http://schema.org/ParcelDelivery",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema.b-ox.org/BusinessTransactionDelivery" }
+    ],
+    "base": [
+        { "@id": "http://schema.b-ox.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "box": "http://schema.b-ox.org/",
+            "schema": "http://schema.org/",
+            "ParcelDelivery": "schema:ParcelDelivery",
+            "HasDeliveryMethod": {
+                "@id": "schema:hasDeliveryMethod",
+                "@type": "DeliveryMethod"
+            },
+            "Provider": {
+                "@id": "schema:provider",
+                "@type": "schema:Organization"
+            },
+            "TrackingNumber": {
+                "@id": "schema:trackingNumber",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ParcelDelivery",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "BusinessTransactionDelivery",
+            "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
+            "Provider": {
+                "@type": "Organization",
+                "Identifier": "1047",
+                "Name": "IDEAL Versicherungsgruppe"
+            },
+            "TrackingNumber": "LID-4711"
+        },
+        "context": {}
+    }]
+}

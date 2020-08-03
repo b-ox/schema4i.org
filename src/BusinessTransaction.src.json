@@ -24,13 +24,13 @@
                 "@id": "box:Copy",
                 "@type": "box:Copy"
             },
+            "Delivery": {
+                "@id": "box:BusinessTransactionDelivery",
+                "@type": "box:BusinessTransactionDelivery"
+            },
             "Order": {
                 "@id": "box:Order",
                 "@type": "box:Order"
-            },
-            "TrackingNumber": {
-                "@id": "schema:trackingNumber",
-                "@type": "schema:Text"
             },
             "TransactionCode": {
                 "@id": "box:TransactionCode",
@@ -60,8 +60,8 @@
             "@type": "BusinessTransaction",
             "Category": "Antrag/Neugeschäft",
             "Copy": true,
+            "Delivery": {},
             "Order": {},
-            "TrackingNumber": "4711",
             "TransactionCode": "100007000",
             "ValidThrough": "2020-10-01T00:00:00"
         },
@@ -89,8 +89,17 @@
             "Category": "Antrag/Neugeschäft",
             "Name": "Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",
             "Description": "Policierung / Dokument erstellt",
+            "Delivery": {
+                "@type": "BusinessTransactionDelivery",
+                "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
+                "Provider": {
+                    "@type": "Organization",
+                    "Identifier": "VEMA",
+                    "Name": "VEMA e.G."
+                },
+                "TrackingNumber": "LID-4711"
+            },
             "ValidThrough": "2022-01-01T00:00:00",
-            "TrackingNumber": "4711",
             "Copy": true,
             "Order": {
                 "@type": "Order",
@@ -100,6 +109,7 @@
                 ],
                 "Customer": {
                     "@type": "Person",
+                    "Identifier": "KNR-4711",
                     "GivenName": "Markus",
                     "FamilyName": "Heussen",
                     "Address": {
@@ -107,25 +117,66 @@
                         "StreetAddress": "Lindenstr. 48-52",
                         "PostalCode": "40233",
                         "AddressLocality": "Düsseldorf"
+                    },
+                    "BankAccount": {
+                        "@type": "BankAccount",
+                        "BIC": "PBNKDEFF",
+                        "IBAN": "DE41500105170123456789",
+                        "Name": "Markus Heussen",
+                        "Provider": {
+                            "@type": "Organization",
+                            "Name": "Postbank"
+                        }
                     }
                 },
                 "OrderedItem": {
                     "@type": "MotorInsuranceProduct",
+                    "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
                     "Category": "050",
                     "Offers": [{
                         "@type": "MotorInsuranceLiabilityCoverage",
                         "ClaimFreeYears": 7,
                         "NoClaimsDiscount": 41,
                         "NoClaimsDiscountLevel": "7",
+                        "PriceSpecification": {
+                            "@type": "CompoundPriceSpecification",
+                            "Price": 119.00,
+                            "PriceCurrency": "EUR",
+                            "ValidFrom": "2020-01-01",
+                            "ValidThrough": "2021-01-01",
+                            "PriceComponent": [{
+                                "@type": "UnitPriceSpecification",
+                                "Price": 119.00,
+                                "PriceCurrency": "EUR",
+                                "PriceType": "01",
+                                "UnitText": "Bruttobeitrag",
+                                "ValidFrom": "2020-01-01",
+                                "ValidThrough": "2021-01-01"
+                            }]
+                        },
                         "SumInsured": "11"
                     }],
                     "Provider": {
                         "@type": "Organization",
-                        "Identifier": "5515"
+                        "Identifier": "5515",
+                        "Name": "AXA Allgemeine Versicherungs AG"
                     }
                 },
-                "OrderedNumber": "Antragsnr.4711/1",
-                "OrderStatus": "1"
+                "OrderNumber": "Antragsnr.4711/1",
+                "OrderStatus": "1",
+                "PartOfInvoice": {
+                    "@type": "Invoice",
+                    "PaymentStatus": "PaymentPastDue",
+                    "PaymentMethod": "http://purl.org/goodrelations/v1#DirectDebithttp://purl.org/goodrelations/v1#DirectDebit",
+                    "TotalPaymentDue": {
+                        "@type": "CompoundPriceSpecification",
+                        "Price": 134.00,
+                        "PriceCurrency": "EUR",
+                        "PriceComponent": {
+                            "@type": "UnitPriceSpecification"
+                        }
+                    }
+                }
             }
         },
         "context": {}
