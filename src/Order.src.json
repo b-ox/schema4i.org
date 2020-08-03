@@ -65,6 +65,10 @@
                 "@context": {
                     "@vocab": "box:EnumOrderStatusCode#"
                 }
+            },
+            "PartOfInvoice": {
+                "@id": "schema:partOfInvoice",
+                "@type": "box:Invoice"
             }
         }
     },
@@ -82,7 +86,8 @@
             "OrderDate": "2020-07-30",
             "OrderedItem": {},
             "OrderNumber": "A-Nr.4711",
-            "OrderStatus": "1"
+            "OrderStatus": "1",
+            "PartOfInvoice": {}
         },
         "context": {}
     }]
