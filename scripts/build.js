@@ -38,6 +38,15 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
     consoleLike = Object.assign({}, console, consoleLike);
 
+    let buildDir = '../build';
+    consoleLike.log('Build directory: ' + buildDir);
+    try {
+        await fs.access(buildDir);
+    } catch (e) {
+        consoleLike.log('Create missing build directory.');
+        await fs.mkdir(buildDir);
+    }
+
     await clean(outputDir, ['.jsonld', 'index.json', '.md'], consoleLike);
 
     consoleLike.log('Scanning: "src"');
