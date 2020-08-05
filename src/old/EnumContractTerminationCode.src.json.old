@@ -1,10 +1,10 @@
 {
   "type": "EnumContractTerminationCode",
-  "uri": "http://schema.b-ox.org/EnumContractTerminationCode",
+  "uri": "http://schema4i.org/EnumContractTerminationCode",
   "description": "Reason of termination of a contract according to the German GDV standard with release date 01.07.2018, e.g. 01 = Termination by the customer for the expiry. An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumContractTerminationCode_DE",
+      "url": "http://schema4i.org/EnumContractTerminationCode_DE",
       "description": "Original German documentation"
     },
     {
@@ -14,13 +14,13 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/ContractTerminationCode"
+      "@id": "http://schema4i.org/ContractTerminationCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "VN termination to expiry": "box:EnumContractTerminationCode#01",
       "Termination VN general differences in the event of a claim": "box:EnumContractTerminationCode#02",
       "VN termination in the event of an increase in the tariff": "box:EnumContractTerminationCode#03",

@@ -1,10 +1,10 @@
 {
   "type": "EnumInsurerCode_DE",
-  "uri": "http://schema.b-ox.org/EnumInsurerCode_DE",
+  "uri": "http://schema4i.org/EnumInsurerCode_DE",
   "description": "Eindeutige ID eines deutschen Versicherungsunternehmens. In Deutschland handelt es sich um die vierstellige BaFin-Nummer, e.g. 5515 = AXA.",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumInsurerCode",
+      "url": "http://schema4i.org/EnumInsurerCode",
       "description": "Englische Dokumentation der Schlüsselwerte"
     },
     {
@@ -14,13 +14,13 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/InsurerCode"
+      "@id": "http://schema4i.org/InsurerCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "Bulgarian Export Insurance AgencyBAEZEAD First Floor": "box:EnumInsurerCode#9224",
       "AG 1824 SA": "box:EnumInsurerCode#7293",
       "AachenMünchener Lebensversicherung AG": "box:EnumInsurerCode#1001",

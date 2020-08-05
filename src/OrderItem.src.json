@@ -1,22 +1,22 @@
 {
     "type": "OrderItem",
-    "uri": "http://schema.b-ox.org/OrderItem",
+    "uri": "http://schema4i.org/OrderItem",
     "description": "An order item is a line of an order. It includes the quantity and shipping details of a bought offer. In the insurance industry this type is used to express parts on an insurance contract.",
     "links": [{
         "url": "http://schema.org/OrderItem",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Order#OrderedItem" }
+        { "@id": "http://schema4i.org/Order#OrderedItem" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "OrderItem": "schema:OrderItem",
             "OrderItemNumber": {
@@ -44,8 +44,8 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/OrderItem.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/OrderItem.jsonld"
             ],
             "@type": "OrderItem",
             "Identifier": "VSNR-NG070420-003",

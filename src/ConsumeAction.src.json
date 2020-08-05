@@ -1,24 +1,24 @@
 {
     "type": "ConsumeAction",
-    "uri": "http://schema.b-ox.org/ConsumeAction",
+    "uri": "http://schema4i.org/ConsumeAction",
     "description": "The act of ingesting information/resources/food.",
     "links": [{
         "url": "http://schema.org/ConsumeAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" },
-        { "@id": "http://schema.b-ox.org/ViewAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" },
+        { "@id": "http://schema4i.org/ViewAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ConsumeAction": "schema:ConsumeAction"
         }

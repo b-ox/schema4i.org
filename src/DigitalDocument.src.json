@@ -1,6 +1,6 @@
 {
     "type": "DigitalDocument",
-    "uri": "http://schema.b-ox.org/DigitalDocument",
+    "uri": "http://schema4i.org/DigitalDocument",
     "description": "An electronic file or document.",
     "links": [{
         "url": "http://schema.org/DigitalDocument",
@@ -8,13 +8,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/CreativeWork" }
+        { "@id": "http://schema4i.org/CreativeWork" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DigitalDocument": "schema:DigitalDocument",
             "Item": {

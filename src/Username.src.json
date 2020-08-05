@@ -1,17 +1,17 @@
 {
     "type": "Username",
-    "uri": "http://schema.b-ox.org/Username",
+    "uri": "http://schema4i.org/Username",
     "description": "The name of a user. Often this name is also a unique ID of the user. The username is needed for login typically in combination with a Password or OneTimePassword.",
     "links": [],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Credentials#Username" }
+        { "@id": "http://schema4i.org/Credentials#Username" }
     ],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Username": {
                 "@id": "box:Username",

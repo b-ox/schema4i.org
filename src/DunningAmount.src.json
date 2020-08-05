@@ -1,17 +1,17 @@
 {
     "type": "DunningAmount",
-    "uri": "http://schema.b-ox.org/DunningAmount",
+    "uri": "http://schema4i.org/DunningAmount",
     "description": "Amount of money owed, the main claim without interest and fees, e.g. 100.00.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Invoice#DunningAmount"
+        "@id": "http://schema4i.org/Invoice#DunningAmount"
     }],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DunningAmount": {
                 "@id": "box:DunningAmount",

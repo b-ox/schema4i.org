@@ -1,15 +1,15 @@
 {
     "type": "Highlights",
-    "uri": "http://schema.b-ox.org/Highlights",
+    "uri": "http://schema4i.org/Highlights",
     "description": "Highlights of a business entity, e.g. the properties of an insurance product like 'Best Price Guarantee'.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Product#Highlights"
+        "@id": "http://schema4i.org/Product#Highlights"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Highlights": {
                 "@id": "box:Highlights",

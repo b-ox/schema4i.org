@@ -1,21 +1,21 @@
 {
     "type": "SalutationCode",
-    "uri": "http://schema.b-ox.org/SalutationCode",
+    "uri": "http://schema4i.org/SalutationCode",
     "description": "The code represents the salutation of a contact that is used in letters, e.g. 1 = Mr.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumSalutationCode.jsonld",
+        "url": "http://schema4i.org/EnumSalutationCode.jsonld",
         "description": "Enumeration with keys and values"
     }, {
-        "url": "http://schema.b-ox.org/EnumSalutationCode_DE.jsonld",
+        "url": "http://schema4i.org/EnumSalutationCode_DE.jsonld",
         "description": "German key translation of SalutationCode"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Person#SalutationCode"
+        "@id": "http://schema4i.org/Person#SalutationCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "SalutationCode": {
                 "@id": "box:SalutationCode",
                 "@type": "@vocab",
@@ -42,11 +42,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Salutation": {
                     "@id": "box:SalutationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumSalutationCode.jsonld"
+                    "@context": "http://schema4i.org/EnumSalutationCode.jsonld"
                 }
             }
         }
@@ -59,11 +59,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Anrede": {
                     "@id": "box:SalutationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumSalutationCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumSalutationCode_DE.jsonld"
                 }
             }
         }

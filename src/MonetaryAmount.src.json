@@ -1,23 +1,23 @@
 {
     "type": "MonetaryAmount",
-    "uri": "http://schema.b-ox.org/MonetaryAmount",
+    "uri": "http://schema4i.org/MonetaryAmount",
     "description": "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc.",
     "links": [{
         "url": "http://schema.org/MonetaryAmount",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/MoneyTransferAction#Amount" },
-        { "@id": "http://schema.b-ox.org/Invoice#TotalPaymentDue" }
+        { "@id": "http://schema4i.org/MoneyTransferAction#Amount" },
+        { "@id": "http://schema4i.org/Invoice#TotalPaymentDue" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "MonetaryAmount": "schema:MonetaryAmount",
             "Currency": {

@@ -1,15 +1,15 @@
 {
     "type": "ProductProvider",
-    "uri": "http://schema.b-ox.org/ProductProvider",
+    "uri": "http://schema4i.org/ProductProvider",
     "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Product#ProductProvider"
+        "@id": "http://schema4i.org/Product#ProductProvider"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ProductProvider": {
                 "@id": "box:ProductProvider",
@@ -17,11 +17,11 @@
             },
             "Organization": {
                 "@id": "box:Organization",
-                "@context": "http://schema.b-ox.org/Organization.jsonld"
+                "@context": "http://schema4i.org/Organization.jsonld"
             },
             "Person": {
                 "@id": "box:Person",
-                "@context": "http://schema.b-ox.org/Person.jsonld"
+                "@context": "http://schema4i.org/Person.jsonld"
             }
         }
     },

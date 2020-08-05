@@ -1,10 +1,10 @@
 {
   "type": "EnumTransactionCode_DE",
-  "uri": "http://schema.b-ox.org/EnumTransactionCode_DE",
+  "uri": "http://schema4i.org/EnumTransactionCode_DE",
   "description": "Neunstelliger Identifikationscode eines Geschäftsvorfalls gemäß GDV-Norm mit dem Veröffentlichungsdatum 01.07.2018, ergänzt um Codes, die von Versicherern gemeldet wurden , z.B. 100008020 = Änderungsangebote - Aufnahme von Zusatzversicherung / Änderungswunsch. Er dient z.B. zur Schlüsselung eines Änderungsgrundes eines Versicherungsvertrages (Contract#ModificationCode) oder als eindeutige Kennung eines Geschäftsvorfalls (Transaction#TransactionCode).",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumTransactionCode",
+      "url": "http://schema4i.org/EnumTransactionCode",
       "description": "Englische Dokumentation der Schlüsselwerte"
     },
     {
@@ -14,16 +14,16 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/TransactionCode"
+      "@id": "http://schema4i.org/TransactionCode"
     },
     {
-      "@id": "http://schema.b-ox.org/ContractModificationCode"
+      "@id": "http://schema4i.org/ContractModificationCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "Sonstiges": "box:EnumTransactionCode#999999999",
       "Antragsversand": "box:EnumTransactionCode#100001000",
       "Neuantrag": "box:EnumTransactionCode#100001011",

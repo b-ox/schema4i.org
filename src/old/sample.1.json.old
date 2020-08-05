@@ -1,7 +1,7 @@
 {
     "@context": {
         "schema": "http://schema.org/",
-        "box": "http://pending.schema.b-ox.org/",
+        "box": "http://pending.schema4i.org/",
         "Message": {
             "@id": "schema:Message",
             "@type": "schema:Message"

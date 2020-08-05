@@ -1,9 +1,9 @@
 {
     "type": "EnumInsurerCode",
-    "uri": "http://schema.b-ox.org/EnumInsurerCode",
+    "uri": "http://schema4i.org/EnumInsurerCode",
     "description": "Unique identifier of a German insurance company. In Germany that is the 4-digit BaFin number of the insurer, e.g. 5515 = AXA.",
     "links": [{
-            "url": "http://schema.b-ox.org/EnumInsurerCode_DE",
+            "url": "http://schema4i.org/EnumInsurerCode_DE",
             "description": "Original German documentation"
         },
         {
@@ -17,7 +17,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Bulgarian Export Insurance AgencyBAEZEAD First Floor": "box:EnumInsurerCode#9224",
             "AG 1824 SA": "box:EnumInsurerCode#7293",
             "AachenMünchener Lebensversicherung AG": "box:EnumInsurerCode#1001",

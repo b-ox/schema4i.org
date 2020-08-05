@@ -1,6 +1,6 @@
 {
     "type": "Vehicle",
-    "uri": "http://schema.b-ox.org/Vehicle",
+    "uri": "http://schema4i.org/Vehicle",
     "description": "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.",
     "links": [{
         "url": "http://schema.org/Vehicle",
@@ -13,33 +13,33 @@
         "description": "OpenOntology for Insurances type (JSON Schema)"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Car" }
+        { "@id": "http://schema4i.org/Car" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Product" }
+        { "@id": "http://schema4i.org/Product" }
     ],
     "multipletypes": {
         "RegistrationArea": [
             { "@id": "https://openontology.org/definitions.json#/string" },
-            { "@id": "http://schema.b-ox.org/EnumCountryCode" }
+            { "@id": "http://schema4i.org/EnumCountryCode" }
         ],
         "Garage": [
             { "@id": "https://openontology.org/definitions.json#/boolean" },
-            { "@id": "http://schema.b-ox.org/EnumGarageCode" }
+            { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
         "Holder": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ],
         "VehicleType": [
             { "@id": "https://openontology.org/definitions.json#/vehicle-type" },
-            { "@id": "http://schema.b-ox.org/EnumVehicleCode" }
+            { "@id": "http://schema4i.org/EnumVehicleCode" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
             "Vehicle": "schema:Vehicle",
@@ -86,7 +86,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Vehicle"
+                "http://schema4i.org/Vehicle"
             ],
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",

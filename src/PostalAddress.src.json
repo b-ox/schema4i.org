@@ -1,24 +1,24 @@
 {
     "type": "PostalAddress",
-    "uri": "http://schema.b-ox.org/PostalAddress",
+    "uri": "http://schema4i.org/PostalAddress",
     "description": "The mailing address.",
     "links": [{
         "url": "http://schema.org/PostalAddress",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Person#Address" },
-        { "@id": "http://schema.b-ox.org/Organization#Address" },
-        { "@id": "http://schema.b-ox.org/Order#BillingAddress" }
+        { "@id": "http://schema4i.org/Person#Address" },
+        { "@id": "http://schema4i.org/Organization#Address" },
+        { "@id": "http://schema4i.org/Order#BillingAddress" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/ContactPoint" }
+        { "@id": "http://schema4i.org/ContactPoint" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "PostalAddress": "schema:PostalAddress",
             "AddressCountry": {

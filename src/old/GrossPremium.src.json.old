@@ -1,10 +1,10 @@
 {
     "type": "GrossPremium",
-    "uri": "http://schema.b-ox.org/GrossPremium",
+    "uri": "http://schema4i.org/GrossPremium",
     "description": "Price for the insurance contract according to the frequency of payment, e.g. 119.00 euro per year. A gross premium includes debits or credits and tax.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payment#GrossPremium"
+        "@id": "http://schema4i.org/Payment#GrossPremium"
     }],
     "context": {
         "@context": {

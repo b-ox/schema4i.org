@@ -1,6 +1,6 @@
 {
     "type": "Thing",
-    "uri": "http://schema.b-ox.org/Thing",
+    "uri": "http://schema4i.org/Thing",
     "description": "The most generic type of item.",
     "links": [{
         "url": "http://schema.org/Thing",
@@ -10,17 +10,17 @@
     "base": [],
     "multipletypes": {
         "PotentialAction": [
-            { "@id": "http://schema.b-ox.org/Action" },
-            { "@id": "http://schema.b-ox.org/CreateAction" },
-            { "@id": "http://schema.b-ox.org/SearchAction" },
-            { "@id": "http://schema.b-ox.org/UpdateAction" },
-            { "@id": "http://schema.b-ox.org/DeleteAction" }
+            { "@id": "http://schema4i.org/Action" },
+            { "@id": "http://schema4i.org/CreateAction" },
+            { "@id": "http://schema4i.org/SearchAction" },
+            { "@id": "http://schema4i.org/UpdateAction" },
+            { "@id": "http://schema4i.org/DeleteAction" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Thing": "schema:Thing",
             "AlternateName": {

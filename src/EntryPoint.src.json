@@ -1,16 +1,16 @@
 {
     "type": "EntryPoint",
-    "uri": "http://schema.b-ox.org/EntryPoint",
+    "uri": "http://schema4i.org/EntryPoint",
     "description": "An entry point, within some Web-based protocol. Most of the times an entry point is an endpoint of a web API. But it also can be a link to a website. An EntryPoint describes the location of the target and how to use it. It is described in a manner that some client software can automatically use the API or Website.",
     "links": [{
         "url": "http://schema.org/EntryPoint",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Action#Target" }
+        { "@id": "http://schema4i.org/Action#Target" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "ActionPlatform": [
@@ -21,7 +21,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "EntryPoint": "schema:EntryPoint",
             "ActionPlatform": {
@@ -50,7 +50,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://pending.schema.b-ox.org/EntryPoint.jsonld",
+                "http://pending.schema4i.org/EntryPoint.jsonld",
                 {
                     "ActionPlatform": {
                         "@id": "http://schema.org/actionPlatform",
@@ -69,7 +69,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/EntryPoint.jsonld",
+                "http://schema4i.org/EntryPoint.jsonld",
                 {
                     "ActionPlatform": {
                         "@id": "http://schema.org/actionPlatform",

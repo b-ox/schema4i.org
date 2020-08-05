@@ -1,6 +1,6 @@
 {
     "type": "MotorInsuranceProduct",
-    "uri": "http://schema.b-ox.org/MotorInsuranceProduct",
+    "uri": "http://schema4i.org/MotorInsuranceProduct",
     "description": "Motor insurance for cars, motorbikes, trucks, quads, etc.",
     "links": [{
         "url": "https://github.com/riskine/ontology/blob/master/schemas/products/motor.json",
@@ -11,13 +11,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/FinancialProduct" }
+        { "@id": "http://schema4i.org/FinancialProduct" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "MotorInsuranceProduct": "box:MotorInsuranceProduct"
         }
@@ -35,14 +35,14 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/MotorInsuranceProduct.jsonld",
-                "http://schema.b-ox.org/FinancialProduct.jsonld",
-                "http://schema.b-ox.org/Service.jsonld",
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/Offer.jsonld",
-                "http://schema.b-ox.org/Coverage.jsonld",
-                "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
-                "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
+                "http://schema4i.org/MotorInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
+                "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
                 {
                     "oo": "https://openontology.org/",
                     "SumInsured": {

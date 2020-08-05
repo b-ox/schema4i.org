@@ -1,10 +1,10 @@
 {
     "type": "DunningAmountExpenses",
-    "uri": "http://schema.b-ox.org/DunningAmountExpenses",
+    "uri": "http://schema4i.org/DunningAmountExpenses",
     "description": "Amount of interest and fees according to OLG regulation, e.g. 25.00.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payment#DunningAmountExpenses"
+        "@id": "http://schema4i.org/Payment#DunningAmountExpenses"
     }],
     "context": {
         "@context": {

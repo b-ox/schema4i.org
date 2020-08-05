@@ -1,23 +1,23 @@
 {
     "type": "ViewAction",
-    "uri": "http://schema.b-ox.org/ViewAction",
+    "uri": "http://schema4i.org/ViewAction",
     "description": "The act of consuming static visual content.",
     "links": [{
         "url": "http://schema.org/ViewAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/ConsumeAction" }
+        { "@id": "http://schema4i.org/ConsumeAction" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ViewAction": "schema:ViewAction"
         }

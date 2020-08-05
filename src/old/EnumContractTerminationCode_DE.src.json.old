@@ -1,14 +1,14 @@
 {
   "type": "EnumContractTerminationCode_DE",
-  "uri": "http://schema.b-ox.org/EnumContractTerminationCode_DE",
+  "uri": "http://schema4i.org/EnumContractTerminationCode_DE",
   "description": "Code für die Schlüsselung des Abgangs eines Vertrages (Abgangsgrund) gemäß dem deutschen GDV Standard mit Releasedatum 01.07.2018, z.B. 01 = Kündigung durch den Kunden zum Ablauf.",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumContractTerminationCode",
+      "url": "http://schema4i.org/EnumContractTerminationCode",
       "description": "Englische Dokumentation der Schlüsselwerte"
     },
     {
-      "url": "http://schema.b-ox.org/EnumContractTerminationCode.jsonld",
+      "url": "http://schema4i.org/EnumContractTerminationCode.jsonld",
       "description": "Englische Version der GDV Schlüssel (automatisch übersetzt)"
     },
     {
@@ -18,13 +18,13 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/ContractTerminationCode"
+      "@id": "http://schema4i.org/ContractTerminationCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "Kündigung VN zum Ablauf": "box:EnumContractTerminationCode#01",
       "Kündigung VN im Schadenfall allgemeine Differenzen": "box:EnumContractTerminationCode#02",
       "Kündigung VN bei Beitragserhöhung Tarifaktion": "box:EnumContractTerminationCode#03",

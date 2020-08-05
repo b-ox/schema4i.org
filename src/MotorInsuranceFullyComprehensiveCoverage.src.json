@@ -1,6 +1,6 @@
 {
     "type": "MotorInsuranceFullyComprehensiveCoverage",
-    "uri": "http://schema.b-ox.org/MotorInsuranceFullyComprehensiveCoverage",
+    "uri": "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage",
     "description": "Provides coverage for a fully comprehensive insurance damage in the context of motor insurance.",
     "links": [{
         "url": "https://openontology.org",
@@ -8,13 +8,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/Coverage" }
+        { "@id": "http://schema4i.org/Coverage" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
             "MotorInsuranceFullyComprehensiveCoverage": "box:MotorInsuranceFullyComprehensiveCoverage",

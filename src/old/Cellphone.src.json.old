@@ -1,17 +1,17 @@
 {
     "type": "Cellphone",
-    "uri": "http://schema.b-ox.org/Cellphone",
+    "uri": "http://schema4i.org/Cellphone",
     "description": "A mobile phone number, e.g. +491737401582.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Person#Cellphone"
+        "@id": "http://schema4i.org/Person#Cellphone"
     }, {
-        "@id": "http://schema.b-ox.org/Organization#Cellphone"
+        "@id": "http://schema4i.org/Organization#Cellphone"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Cellphone": {
                 "@id": "box:Cellphone",

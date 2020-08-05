@@ -1,10 +1,10 @@
 {
   "type": "EnumTransactionCode",
-  "uri": "http://schema.b-ox.org/EnumTransactionCode",
+  "uri": "http://schema4i.org/EnumTransactionCode",
   "description": "Nine-digit identification code of a business transaction  according to the German GDV standard with release date 01.07.2018 added by codes reported by insurers, e.g. 100008020 = Change offers - inclusion of supplementary insurance / change request. It serves e.g. to code a reason for changing an insurance contract (Contract#ModificationCode) or as a unique identifier for a business transaction (Transaction#TransactionCode). An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumTransactionCode_DE",
+      "url": "http://schema4i.org/EnumTransactionCode_DE",
       "description": "Original German documentation"
     },
     {
@@ -14,16 +14,16 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/TransactionCode"
+      "@id": "http://schema4i.org/TransactionCode"
     },
     {
-      "@id": "http://schema.b-ox.org/ContractModificationCode"
+      "@id": "http://schema4i.org/ContractModificationCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "miscellaneous": "box:EnumTransactionCode#999999999",
       "Application dispatch": "box:EnumTransactionCode#100001000",
       "New application": "box:EnumTransactionCode#100001011",

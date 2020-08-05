@@ -1,6 +1,6 @@
 {
     "type": "WebAPI",
-    "uri": "http://schema.b-ox.org/WebAPI",
+    "uri": "http://schema4i.org/WebAPI",
     "description": "An Application Programming Interface (API) accessible over Web/Internet technologies.",
     "links": [{
         "url": "http://schema.org/WebAPI",
@@ -8,13 +8,13 @@
     }],
     "parents": [],
     "base": [{
-        "@id": "http://schema.b-ox.org/Service"
+        "@id": "http://schema4i.org/Service"
     }],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "WebAPI": "schema:WebAPI",
             "Documentation": {

@@ -1,23 +1,23 @@
 {
     "type": "IgnoreAction",
-    "uri": "http://schema.b-ox.org/IgnoreAction",
+    "uri": "http://schema4i.org/IgnoreAction",
     "description": "The act of intentionally disregarding the object. An agent ignores an object.",
     "links": [{
         "url": "http://schema.org/IgnoreAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/AssessAction" }
+        { "@id": "http://schema4i.org/AssessAction" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "IgnoreAction": "schema:IgnoreAction"
         }

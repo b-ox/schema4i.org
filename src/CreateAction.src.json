@@ -1,23 +1,23 @@
 {
     "type": "CreateAction",
-    "uri": "http://schema.b-ox.org/CreateAction",
+    "uri": "http://schema4i.org/CreateAction",
     "description": "The act of deliberately creating/producing/generating/building a result out of the agent. The CreateAction is used on an API to register a new resource. The CreateAction is usually sent to the server in the request body of an HTTP post request. The created ressource has to be transferred as Result of the Action. The Object might be used to identiy a ressource where you want create something.",
     "links": [{
         "url": "http://schema.org/CreateAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "CreateAction": "schema:CreateAction"
         }

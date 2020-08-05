@@ -1,15 +1,15 @@
 {
     "type": "Claim",
-    "uri": "http://schema.b-ox.org/Claim",
+    "uri": "http://schema4i.org/Claim",
     "description": "A claim includes one or more material or immaterial disadvantages that natural or legal persons or things suffer from a claim event.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payload#Claim"
+        "@id": "http://schema4i.org/Payload#Claim"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Claim": {
                 "@id": "box:Claim",

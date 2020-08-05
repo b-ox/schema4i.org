@@ -1,26 +1,26 @@
 {
     "type": "DataFeedItem",
-    "uri": "http://schema.b-ox.org/DataFeedItem",
+    "uri": "http://schema4i.org/DataFeedItem",
     "description": "A single item within a larger data feed.",
     "links": [{
         "url": "http://schema.org/DataFeedItem",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/DataFeed#DataFeedElement" }
+        { "@id": "http://schema4i.org/DataFeed#DataFeedElement" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "Item": [
-            { "@id": "http://schema.b-ox.org/Thing" }
+            { "@id": "http://schema4i.org/Thing" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DataFeedItem": "schema:DataFeedItem",
             "DateCreated": {

@@ -1,9 +1,9 @@
 {
     "type": "EnumVehicleCode",
-    "uri": "http://schema.b-ox.org/EnumVehicleCode",
+    "uri": "http://schema4i.org/EnumVehicleCode",
     "description": "A German 3-digit code for identifying any kind of vehicle.",
     "links": [{
-            "url": "http://schema.b-ox.org/EnumVehicleCode_DE",
+            "url": "http://schema4i.org/EnumVehicleCode_DE",
             "description": "Original German documentation"
         },
         {
@@ -12,14 +12,14 @@
         }
     ],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Vehicle#VehicleType" }
+        { "@id": "http://schema4i.org/Vehicle#VehicleType" }
     ],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Passengers cars": "box:EnumLineOfBusinessCode#112"
         }
     }

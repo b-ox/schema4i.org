@@ -1,15 +1,15 @@
 {
     "type": "ContractTerminationCode",
-    "uri": "http://schema.b-ox.org/ContractTerminationCode",
+    "uri": "http://schema4i.org/ContractTerminationCode",
     "description": "The reason for the ending of an insurance contract, e.g. 1 = Termination by the customer to expire.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Contract#TerminationCode"
+        "@id": "http://schema4i.org/Contract#TerminationCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "TerminationCode": {
                 "@id": "box:ContractTerminationCode",
                 "@type": "@vocab",
@@ -36,11 +36,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Termination": {
                     "@id": "box:ContractTerminationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractTerminationCode.jsonld"
+                    "@context": "http://schema4i.org/EnumContractTerminationCode.jsonld"
                 }
             }
         }
@@ -53,11 +53,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Abgangsgrund": {
                     "@id": "box:ContractTerminationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractTerminationCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumContractTerminationCode_DE.jsonld"
                 }
             }
         }

@@ -1,19 +1,19 @@
 {
     "type": "BusinessTransaction",
-    "uri": "http://schema.b-ox.org/BusinessTransaction",
+    "uri": "http://schema4i.org/BusinessTransaction",
     "description": "A business transaction is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.",
     "links": [],
     "parents": [
-        { "@id": "http://schema.b-ox.org/CreativeWork#About" }
+        { "@id": "http://schema4i.org/CreativeWork#About" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "BusinessTransaction": "box:BusinessTransaction",
             "Category": {
@@ -71,17 +71,17 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/BusinessTransaction.jsonld",
-                "http://schema.b-ox.org/Order.jsonld",
-                "http://schema.b-ox.org/Person.jsonld",
-                "http://schema.b-ox.org/PostalAddress.jsonld",
-                "http://schema.b-ox.org/MotorInsuranceProduct.jsonld",
-                "http://schema.b-ox.org/FinancialProduct.jsonld",
-                "http://schema.b-ox.org/Service.jsonld",
-                "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage.jsonld",
-                "http://schema.b-ox.org/Organization.jsonld",
-                "http://schema.b-ox.org/Offer.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/BusinessTransaction.jsonld",
+                "http://schema4i.org/Order.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/MotorInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Offer.jsonld"
             ],
             "@type": "BusinessTransaction",
             "TransactionCode": "100007000",

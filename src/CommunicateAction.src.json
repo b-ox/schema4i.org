@@ -1,28 +1,28 @@
 {
     "type": "CommunicateAction",
-    "uri": "http://schema.b-ox.org/CommunicateAction",
+    "uri": "http://schema4i.org/CommunicateAction",
     "description": "The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.",
     "links": [{
         "url": "http://schema.org/CommunicateAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/ShareAction" }
+        { "@id": "http://schema4i.org/ShareAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {
         "Recipient": [
-            { "@id": "http://schema.b-ox.org/ContactPoint" },
-            { "@id": "http://schema.b-ox.org/Organization" },
-            { "@id": "http://schema.b-ox.org/Person" }
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "CommunicateAction": "schema:CommunicateAction",
             "About": {

@@ -1,15 +1,15 @@
 {
     "type": "Product",
-    "uri": "http://schema.b-ox.org/Product",
+    "uri": "http://schema4i.org/Product",
     "description": "Information that describes an insurance product with not only legal significance for the insurance contract, but also any additional marketing information.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payload#Product"
+        "@id": "http://schema4i.org/Payload#Product"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Product": {
                 "@id": "box:Product",
@@ -36,7 +36,7 @@
             },
             "Highlights": {
                 "@id": "box:Highlights",
-                "@context": "http://schema.b-ox.org/Highlights.jsonld"
+                "@context": "http://schema4i.org/Highlights.jsonld"
             },
             "Tags": {
                 "@id": "schema:keywords",
@@ -48,7 +48,7 @@
             },
             "ProductProvider": {
                 "@id": "box:ProductProvider",
-                "@context": "http://schema.b-ox.org/ProductProvider.jsonld"
+                "@context": "http://schema4i.org/ProductProvider.jsonld"
             }
         }
     },

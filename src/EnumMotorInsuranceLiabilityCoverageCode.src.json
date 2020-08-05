@@ -1,23 +1,23 @@
 {
     "type": "EnumMotorInsuranceLiabilityCoverageCode",
-    "uri": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode",
+    "uri": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode",
     "description": "A German 2-digit code for the coverage in motor insurances.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode_DE",
+        "url": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode_DE",
         "description": "Original German documentation"
     }, {
         "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0220.051.htm#12",
         "description": "GDV standard motor liability insurance field 12"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Vehicle#VehicleType" }
+        { "@id": "http://schema4i.org/Vehicle#VehicleType" }
     ],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Unlimited coverage": "box:EnumMotorInsuranceLiabilityCoverageCode#11",
             "Statutory minimum cover amounts": "box:EnumMotorInsuranceLiabilityCoverageCode#13",
             "Coverage amounts that do not fall under 11, 13, 17 and 18": "box:EnumMotorInsuranceLiabilityCoverageCode#16",

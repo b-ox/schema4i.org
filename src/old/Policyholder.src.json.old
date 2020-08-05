@@ -1,15 +1,15 @@
 {
     "type": "Policyholder",
-    "uri": "http://schema.b-ox.org/Policyholder",
+    "uri": "http://schema4i.org/Policyholder",
     "description": "A policyholder is a customer of an insurance company and in this capacity a contractual partner of the company and holder of an insurance contract.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payload#Policyholder"
+        "@id": "http://schema4i.org/Payload#Policyholder"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Policyholder": {
                 "@id": "box:Policyholder",
@@ -21,15 +21,15 @@
             },
             "Person": {
                 "@id": "box:Person",
-                "@context": "http://schema.b-ox.org/Person.jsonld"
+                "@context": "http://schema4i.org/Person.jsonld"
             },
             "Organization": {
                 "@id": "box:Organization",
-                "@context": "http://schema.b-ox.org/Organization.jsonld"
+                "@context": "http://schema4i.org/Organization.jsonld"
             },
             "PostalAddress": {
                 "@id": "box:PostalAddress",
-                "@context": "http://schema.b-ox.org/PostalAddress.jsonld"
+                "@context": "http://schema4i.org/PostalAddress.jsonld"
             }
         }
     },
@@ -79,13 +79,13 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Payload": {
                     "@id": "box:Payload",
                     "@context": {
                         "Policyholder": {
                             "@id": "box:Policyholder",
-                            "@context": "http://schema.b-ox.org/Policyholder.jsonld"
+                            "@context": "http://schema4i.org/Policyholder.jsonld"
                         }
                     }
                 }

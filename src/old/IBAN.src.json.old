@@ -1,10 +1,10 @@
 {
     "type": "IBAN",
-    "uri": "http://schema.b-ox.org/IBAN",
+    "uri": "http://schema4i.org/IBAN",
     "description": "International Bank Account Number (IBAN) of the customer (policyholder), z.B. DE41500105170123456789",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/BankDetails#IBAN"
+        "@id": "http://schema4i.org/BankDetails#IBAN"
     }],
     "context": {
         "@context": {

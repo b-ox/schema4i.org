@@ -1,17 +1,17 @@
 {
     "type": "Copy",
-    "uri": "http://schema.b-ox.org/Copy",
+    "uri": "http://schema4i.org/Copy",
     "description": "Indicates whether the digitally transmitted data are original or if they are retransmitted on a conventional way via mail e.g. false=Original, true=Original comes via mail.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/BusinessTransaction#Copy"
+        "@id": "http://schema4i.org/BusinessTransaction#Copy"
     }],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Copy": {
                 "@id": "box:Copy",

@@ -1,23 +1,23 @@
 {
     "type": "DeleteAction",
-    "uri": "http://schema.b-ox.org/DeleteAction",
+    "uri": "http://schema4i.org/DeleteAction",
     "description": "The act of edipting a recipient by removing one of its objects. The attribute Object declares the Thing that will be deleted. The attribute TargetCollection might be an ItemList from that the object will be deleted. On an API the DeleteAction is sent to the server as request body of an HTTP DELETE request. The server itself answers with a DeleteAction response. Sometimes on an API you can just use a DELETE call to an endpoint that identifies the object by its ID in the path. In this case you don't need any request body. Nevertheless, it is implicitly a DeleteAction.",
     "links": [{
         "url": "http://schema.org/DeleteAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/UpdateAction" }
+        { "@id": "http://schema4i.org/UpdateAction" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DeleteAction": "schema:DeleteAction",
             "TargetCollection": {
@@ -42,9 +42,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/Action.jsonld",
-                "http://schema.b-ox.org/DeleteAction.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/DeleteAction.jsonld"
             ],
             "@type": "DeleteAction",
             "Object": {

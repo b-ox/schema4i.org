@@ -1,21 +1,21 @@
 {
     "type": "ContractModificationCode",
-    "uri": "http://schema.b-ox.org/ContractModificationCode",
+    "uri": "http://schema4i.org/ContractModificationCode",
     "description": "Cause of the last change of the contract, e.g. 110011003=Address of the partner removed.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumTransactionCode.jsonld",
+        "url": "http://schema4i.org/EnumTransactionCode.jsonld",
         "description": "Enumeration of keys of EnumTransactionCode"
     }, {
-        "url": "http://schema.b-ox.org/EnumTransactionCode_DE.jsonld",
+        "url": "http://schema4i.org/EnumTransactionCode_DE.jsonld",
         "description": "German key translation of EnumTransactionCode"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Contract#ModificationCode"
+        "@id": "http://schema4i.org/Contract#ModificationCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "ModificationCode": {
                 "@id": "box:ContractModificationCode",
                 "@type": "@vocab",
@@ -42,11 +42,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Änderungsgrund": {
                     "@id": "box:ContractModificationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumTransactionCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumTransactionCode_DE.jsonld"
                 }
             }
         }

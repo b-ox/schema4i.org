@@ -1,19 +1,19 @@
 {
     "type": "Person",
-    "uri": "http://schema.b-ox.org/Person",
+    "uri": "http://schema4i.org/Person",
     "description": "A natural person (alive, dead or fictional). A sole proprietorship that is not a legal person is considered a natural person.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Sender#Person"
+        "@id": "http://schema4i.org/Sender#Person"
     }, {
-        "@id": "http://schema.b-ox.org/Recipient#Person"
+        "@id": "http://schema4i.org/Recipient#Person"
     }, {
-        "@id": "http://schema.b-ox.org/Policyholder#Person"
+        "@id": "http://schema4i.org/Policyholder#Person"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Person": {
                 "@id": "schema:Person",
@@ -112,7 +112,7 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Person": "box:Person",
                 "Gender": {
@@ -138,18 +138,18 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Person": "box:Person",
                 "Anrede": {
                     "@id": "box:SalutationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumSalutationCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumSalutationCode_DE.jsonld"
                 },
                 "Geschlecht": {
                     "@id": "box:GenderCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumGenderCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumGenderCode_DE.jsonld"
                 }
             }
         }

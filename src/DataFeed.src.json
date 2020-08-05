@@ -1,22 +1,22 @@
 {
     "type": "DataFeed",
-    "uri": "http://schema.b-ox.org/DataFeed",
+    "uri": "http://schema4i.org/DataFeed",
     "description": "A single feed providing structured information about one or more entities or topics.",
     "links": [{
         "url": "http://schema.org/DataFeed",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Action#Result" }
+        { "@id": "http://schema4i.org/Action#Result" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Dataset" }
+        { "@id": "http://schema4i.org/Dataset" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DataFeed": "schema:DataFeed",
             "DataFeedElement": {
@@ -39,11 +39,11 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/DataFeed.jsonld",
-                "http://schema.b-ox.org/DataFeedItem.jsonld",
-                "http://schema.b-ox.org/CreativeWork.jsonld",
-                "http://schema.b-ox.org/Organization.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DataFeed.jsonld",
+                "http://schema4i.org/DataFeedItem.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Organization.jsonld"
             ],
             "@type": "DataFeed",
             "DataFeedElement": [{

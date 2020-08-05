@@ -1,6 +1,6 @@
 {
     "type": "Message",
-    "uri": "http://schema.b-ox.org/Message",
+    "uri": "http://schema4i.org/Message",
     "description": "A single message from a sender to one or more organizations or people.",
     "links": [{
         "url": "http://schema.org/Message",
@@ -10,7 +10,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Message": {
                 "@id": "schema:Message",
@@ -22,11 +22,11 @@
             },
             "Sender": {
                 "@id": "schema:sender",
-                "@context": "http://schema.b-ox.org/Sender.jsonld"
+                "@context": "http://schema4i.org/Sender.jsonld"
             },
             "Recipient": {
                 "@id": "schema:recipient",
-                "@context": "http://schema.b-ox.org/Recipient.jsonld"
+                "@context": "http://schema4i.org/Recipient.jsonld"
             },
             "Tags": {
                 "@id": "schema:keywords",
@@ -46,16 +46,16 @@
             },
             "DataProvider": {
                 "@id": "box:DataProvider",
-                "@context": "http://schema.b-ox.org/DataProvider.jsonld"
+                "@context": "http://schema4i.org/DataProvider.jsonld"
             },
             "Attachments": {
                 "@id": "box:Attachments",
-                "@context": "http://schema.b-ox.org/Attachments.jsonld"
+                "@context": "http://schema4i.org/Attachments.jsonld"
             },
             "Payload": {
                 "@id": "box:Payload",
                 "@type": "box:Payload",
-                "@context": "http://schema.b-ox.org/Payload.jsonld"
+                "@context": "http://schema4i.org/Payload.jsonld"
             }
         }
     },

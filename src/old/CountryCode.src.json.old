@@ -1,21 +1,21 @@
 {
     "type": "CountryCode",
-    "uri": "http://schema.b-ox.org/CountryCode",
+    "uri": "http://schema4i.org/CountryCode",
     "description": "The status code of an insurance contract, e.g. 4 = canceled.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumCountryCodejsonld",
+        "url": "http://schema4i.org/EnumCountryCodejsonld",
         "description": "Enumeration with keys and values"
     }, {
-        "url": "http://schema.b-ox.org/EnumCountryCode_DE.jsonld",
+        "url": "http://schema4i.org/EnumCountryCode_DE.jsonld",
         "description": "German key translation of EnumCountryCode"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/PostalAddress#CountryCode"
+        "@id": "http://schema4i.org/PostalAddress#CountryCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "CountryCode": {
                 "@id": "box:CountryCode",
                 "@type": "@vocab",
@@ -42,11 +42,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Country": {
                     "@id": "box:CountryCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumCountryCode.jsonld"
+                    "@context": "http://schema4i.org/EnumCountryCode.jsonld"
                 }
             }
         }
@@ -59,11 +59,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Land": {
                     "@id": "box:CountryCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumCountryCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumCountryCode_DE.jsonld"
                 }
             }
         }

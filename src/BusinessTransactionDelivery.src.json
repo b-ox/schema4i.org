@@ -1,19 +1,19 @@
 {
     "type": "BusinessTransactionDelivery",
-    "uri": "http://schema.b-ox.org/BusinessTransactionDelivery",
+    "uri": "http://schema4i.org/BusinessTransactionDelivery",
     "description": "Information about the delivery of business transactions. This is a package of data that bundles various business transactions and is provided by a provider. The object BusinessTransactionDelivery contains information about the transport of business transaction data. The provider is typically an insurance company or pool, etc.",
     "links": [],
     "parents": [
-        { "@id": "http://schema.b-ox.org/BusinessTransaction#Delivery" }
+        { "@id": "http://schema4i.org/BusinessTransaction#Delivery" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/ParcelDelivery" }
+        { "@id": "http://schema4i.org/ParcelDelivery" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "BusinessTransactionDelivery": "box:BusinessTransactionDelivery"
         }

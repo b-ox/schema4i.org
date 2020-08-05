@@ -1,24 +1,24 @@
 {
     "type": "AssessAction",
-    "uri": "http://schema.b-ox.org/AssessAction",
+    "uri": "http://schema4i.org/AssessAction",
     "description": "The act of forming one's opinion, reaction or sentiment.",
     "links": [{
         "url": "http://schema.org/AssessAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/IgnoreAction" },
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/IgnoreAction" },
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "AssessAction": "schema:AssessAction"
         }

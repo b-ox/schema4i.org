@@ -1,31 +1,31 @@
 {
     "type": "Order",
-    "uri": "http://schema.b-ox.org/Order",
+    "uri": "http://schema4i.org/Order",
     "description": "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer. In the insurance industry this type is used to transfer data of an insurance contract. Adopting the basic principles of Schema.org an insurance contract is an Order with Order.OrderedItem referencing a FinancialProduct that is a Service where Service.Offers references different Offer objects that in the insurance context are different coverages (Coverage).",
     "links": [{
         "url": "http://schema.org/Order",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Invoice#ReferencesOrder" },
-        { "@id": "http://schema.b-ox.org/BusinessTransaction#Order" }
+        { "@id": "http://schema4i.org/Invoice#ReferencesOrder" },
+        { "@id": "http://schema4i.org/BusinessTransaction#Order" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "Customer": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ],
         "OrderedItem": [
-            { "@id": "http://schema.b-ox.org/OrderItem" }
+            { "@id": "http://schema4i.org/OrderItem" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Order": "schema:Order",
             "BillingAddress": {

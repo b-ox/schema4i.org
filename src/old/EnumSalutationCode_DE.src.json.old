@@ -1,21 +1,21 @@
 {
     "type": "EnumSalutationCode_DE",
-    "uri": "http://schema.b-ox.org/EnumSalutationCode_DE",
+    "uri": "http://schema4i.org/EnumSalutationCode_DE",
     "description": "Ein Code, der die Anrede einer natürlichen Person gemäß dem deutschen GDV-Standard mit dem Veröffentlichungsdatum 01.07.2018 darstellt, z.B. 1 = Herr.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumSalutationCode",
+        "url": "http://schema4i.org/EnumSalutationCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
     }, {
         "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0100.htm",
         "description": "GDV general data - part address, field 8"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Person#SalutationCode"
+        "@id": "http://schema4i.org/Person#SalutationCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Herr": "box:EnumSalutationCode#1",
             "Frau": "box:EnumSalutationCode#2",
             "Firma": "box:EnumSalutationCode#3",

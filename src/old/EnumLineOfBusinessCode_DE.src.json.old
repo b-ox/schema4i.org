@@ -1,10 +1,10 @@
 {
   "type": "EnumLineOfBusinessCode_DE",
-  "uri": "http://schema.b-ox.org/EnumLineOfBusinessCode_DE",
+  "uri": "http://schema4i.org/EnumLineOfBusinessCode_DE",
   "description": "Ein Code, der die Sparte eines Versicherungsvertrags gemäß dem deutschen GDV-Standard mit dem Veröffentlichungsdatum 01.07.2018 darstellt, z.B. 040 = Haftpflichtversicherung.",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumLineOfBusinessCode",
+      "url": "http://schema4i.org/EnumLineOfBusinessCode",
       "description": "Englische Dokumentation der Schlüsselwerte"
     },
     {
@@ -14,13 +14,13 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/LineOfBusinessCode"
+      "@id": "http://schema4i.org/LineOfBusinessCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "Lebensversicherung": "box:EnumLineOfBusinessCode#010",
       "Krankenversicherung": "box:EnumLineOfBusinessCode#020",
       "Allgemeine Unfallversicherung": "box:EnumLineOfBusinessCode#030",

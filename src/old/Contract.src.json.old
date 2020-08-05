@@ -1,15 +1,15 @@
 {
     "type": "Contract",
-    "uri": "http://schema.b-ox.org/Contract",
+    "uri": "http://schema4i.org/Contract",
     "description": "An insurance contract between a policy holder and an insurance company.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payload#Contract"
+        "@id": "http://schema4i.org/Payload#Contract"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Contract": {
                 "@id": "box:Contract",
@@ -96,11 +96,11 @@
             },
             "BankDetails": {
                 "@id": "box:BankDetails",
-                "@context": "http://schema.b-ox.org/BankDetails.jsonld"
+                "@context": "http://schema4i.org/BankDetails.jsonld"
             },
             "Payment": {
                 "@id": "box:Payment",
-                "@context": "http://schema.b-ox.org/Payment.jsonld"
+                "@context": "http://schema4i.org/Payment.jsonld"
             }
         }
     },
@@ -145,23 +145,23 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Contract": "box:Contract",
                 "Status": {
                     "@id": "box:ContractStatusCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractStatusCode.jsonld"
+                    "@context": "http://schema4i.org/EnumContractStatusCode.jsonld"
                 },
                 "Termination": {
                     "@id": "box:ContractTerminationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractTerminationCode.jsonld"
+                    "@context": "http://schema4i.org/EnumContractTerminationCode.jsonld"
                 },
                 "Insurer": {
                     "@id": "box:InsurerCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumInsurerCode.jsonld"
+                    "@context": "http://schema4i.org/EnumInsurerCode.jsonld"
                 }
             }
         }
@@ -178,23 +178,23 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Vertrag": "box:Contract",
                 "Status": {
                     "@id": "box:ContractStatusCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractStatusCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumContractStatusCode_DE.jsonld"
                 },
                 "Abgangsgrund": {
                     "@id": "box:ContractTerminationCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractTerminationCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumContractTerminationCode_DE.jsonld"
                 },
                 "Versicherer": {
                     "@id": "box:InsurerCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumInsurerCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumInsurerCode_DE.jsonld"
                 }
             }
         }

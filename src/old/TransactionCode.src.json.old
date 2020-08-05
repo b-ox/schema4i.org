@@ -1,21 +1,21 @@
 {
     "type": "TransactionCode",
-    "uri": "http://schema.b-ox.org/TransactionCode",
+    "uri": "http://schema4i.org/TransactionCode",
     "description": "Nine-digit category of the business transaction, e.g. 120013000=Postponing the start of a contract.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumTransactionCode.jsonld",
+        "url": "http://schema4i.org/EnumTransactionCode.jsonld",
         "description": "Enumeration with keys and values"
     }, {
-        "url": "http://schema.b-ox.org/EnumTransactionCode_DE.jsonld",
+        "url": "http://schema4i.org/EnumTransactionCode_DE.jsonld",
         "description": "German key translation of EnumTransactionCode"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Transaction#TransactionCode"
+        "@id": "http://schema4i.org/Transaction#TransactionCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "TransactionCode": {
                 "@id": "box:TransactionCode",
@@ -43,11 +43,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Transaction": {
                     "@id": "box:TransactionCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumTransactionCode.jsonld"
+                    "@context": "http://schema4i.org/EnumTransactionCode.jsonld"
                 }
             }
         }
@@ -60,11 +60,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "GeschaeftsvorfallID": {
                     "@id": "box:TransactionCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumTransactionCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumTransactionCode_DE.jsonld"
                 }
             }
         }

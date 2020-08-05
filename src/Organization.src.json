@@ -1,28 +1,28 @@
 {
     "type": "Organization",
-    "uri": "http://schema.b-ox.org/Organization",
+    "uri": "http://schema4i.org/Organization",
     "description": "An organization such as a school, NGO, corporation, club, etc. In the insurance industry an organization usually is a legal person on a life cycle of an insurance contract like a policyholder or someone who claims. It can also be an insurance broker or an insurance company.",
     "links": [{
         "url": "http://schema.org/Organization",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Action#Agent" },
-        { "@id": "http://schema.b-ox.org/Action#Participant" },
-        { "@id": "http://schema.b-ox.org/Invoice#Broker" },
-        { "@id": "http://schema.b-ox.org/Invoice#Customer" },
-        { "@id": "http://schema.b-ox.org/Invoice#Provider" },
-        { "@id": "http://schema.b-ox.org/Service#Provider" },
-        { "@id": "http://schema.b-ox.org/Order#Customer" }
+        { "@id": "http://schema4i.org/Action#Agent" },
+        { "@id": "http://schema4i.org/Action#Participant" },
+        { "@id": "http://schema4i.org/Invoice#Broker" },
+        { "@id": "http://schema4i.org/Invoice#Customer" },
+        { "@id": "http://schema4i.org/Invoice#Provider" },
+        { "@id": "http://schema4i.org/Service#Provider" },
+        { "@id": "http://schema4i.org/Order#Customer" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Organization": "schema:Organization",
             "AdditionalName": {
@@ -95,9 +95,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/Organization.jsonld",
-                "http://schema.b-ox.org/PostalAddress.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
             ],
             "@type": "Organization",
             "Address": {

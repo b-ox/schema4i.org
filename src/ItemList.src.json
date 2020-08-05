@@ -1,6 +1,6 @@
 {
     "type": "ItemList",
-    "uri": "http://schema.b-ox.org/ItemList",
+    "uri": "http://schema4i.org/ItemList",
     "description": "A list of elements of any kind, e.g. B. Top 10 films about Weatherman or Top 100 party songs. Not to be confused with HTML lists, which are often only used for formatting. On an API every list is represented by an ItemList object. The ItemList can be referenced by @id attribute or is an array of objects. If you do SearchAction the response is typically an ItemList of type array even if there is no item found. In this case an empty array is returned.",
     "links": [{
         "url": "http://schema.org/ItemList",
@@ -8,19 +8,19 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "ItemListElement": [
             { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema.b-ox.org/Thing" },
-            { "@id": "http://schema.b-ox.org/ListItem" }
+            { "@id": "http://schema4i.org/Thing" },
+            { "@id": "http://schema4i.org/ListItem" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ItemList": "schema:ItemList",
             "ItemListElement": {

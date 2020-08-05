@@ -1,10 +1,10 @@
 {
     "type": "LiabilityEndDate",
-    "uri": "http://schema.b-ox.org/LiabilityEndDate",
+    "uri": "http://schema4i.org/LiabilityEndDate",
     "description": "Indicates the date on which liability from the contract ends if no timely receipt of payment is recorded, e.g. 2020-02-01.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payment#LiabilityEndDate"
+        "@id": "http://schema4i.org/Payment#LiabilityEndDate"
     }],
     "context": {
         "@context": {

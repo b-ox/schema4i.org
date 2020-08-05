@@ -1,6 +1,6 @@
 {
     "type": "Service",
-    "uri": "http://schema.b-ox.org/Service",
+    "uri": "http://schema4i.org/Service",
     "description": "A service provided by an organization, e.g. delivery service, print services, etc. A service can also be provided via an API. If you want to describe the service behind an API use this type. Please check also WebAPI in this case.",
     "links": [{
         "url": "http://schema.org/Service",
@@ -11,19 +11,19 @@
         { "@id": "http://scchema.b-ox.org/WebAPI" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "Category": [
             { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode" },
-            { "@id": "http://schema.b-ox.org/EnumLineOfBusinessCode" }
+            { "@id": "http://schema4i.org/EnumInsuranceProductCategoryCode" },
+            { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Service": "schema:Service",
             "Award": {
@@ -64,7 +64,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Service.jsonld",
+                "http://schema4i.org/Service.jsonld",
                 {
                     "Category": {
                         "@id": "schema:category",
@@ -89,7 +89,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Service.jsonld",
+                "http://schema4i.org/Service.jsonld",
                 {
                     "Category": {
                         "@id": "schema:category",

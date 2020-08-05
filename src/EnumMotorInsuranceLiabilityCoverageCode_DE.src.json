@@ -1,9 +1,9 @@
 {
     "type": "EnumMotorInsuranceLiabilityCoverageCode_DE",
-    "uri": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode_DE",
+    "uri": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode_DE",
     "description": "A German 3-digit code for identifying any kind of vehicle.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode",
+        "url": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
     }, {
         "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0220.051.htm#12",
@@ -15,7 +15,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Unbegrenzte Deckung": "box:EnumMotorInsuranceLiabilityCoverageCode#11",
             "Gesetzliche Mindestdeckungssummen": "box:EnumMotorInsuranceLiabilityCoverageCode#13",
             "Deckungssummen, die nicht unter 11, 13, 17 und 18 fallen": "box:EnumMotorInsuranceLiabilityCoverageCode#16",

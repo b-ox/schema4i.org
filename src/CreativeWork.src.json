@@ -1,32 +1,32 @@
 {
     "type": "CreativeWork",
-    "uri": "http://schema.b-ox.org/CreativeWork",
+    "uri": "http://schema4i.org/CreativeWork",
     "description": "The most generic kind of creative work, including books, movies, photographs, software programs, etc. Also every kind of data or dataset / datafeed can be described with this type.",
     "links": [{
         "url": "http://schema.org/CreativeWork",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/DataSet" },
-        { "@id": "http://schema.b-ox.org/DigitalDocument" },
-        { "@id": "http://schema.b-ox.org/Message" }
+        { "@id": "http://schema4i.org/DataSet" },
+        { "@id": "http://schema4i.org/DigitalDocument" },
+        { "@id": "http://schema4i.org/Message" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "About": [
-            { "@id": "http://schema.b-ox.org/Thing" }
+            { "@id": "http://schema4i.org/Thing" }
         ],
         "Creator": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "CreativeWork": "schema:CreativeWork",
             "About": {

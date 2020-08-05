@@ -1,21 +1,21 @@
 {
     "type": "LineOfBusinessCode",
-    "uri": "http://schema.b-ox.org/LineOfBusinessCode",
+    "uri": "http://schema4i.org/LineOfBusinessCode",
     "description": "The line of business describes the type of insurance contract, e.g. 040 = liability insurance.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumLineOfBusinessCode.jsonld",
+        "url": "http://schema4i.org/EnumLineOfBusinessCode.jsonld",
         "description": "Enumeration with keys and values"
     }, {
-        "url": "http://schema.b-ox.org/EnumLineOfBusinessCode_DE.jsonld",
+        "url": "http://schema4i.org/EnumLineOfBusinessCode_DE.jsonld",
         "description": "German key translation of EnumLineOfBusinessCode"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Contract#LineOfBusinessCode"
+        "@id": "http://schema4i.org/Contract#LineOfBusinessCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "LineOfBusinessCode": {
                 "@id": "box:LineOfBusinessCode",
                 "@type": "@vocab",
@@ -42,11 +42,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "LineOfBusiness": {
                     "@id": "box:LineOfBusinessCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumLineOfBusinessCode.jsonld"
+                    "@context": "http://schema4i.org/EnumLineOfBusinessCode.jsonld"
                 }
             }
         }
@@ -59,11 +59,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Sparte": {
                     "@id": "box:LineOfBusinessCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumLineOfBusinessCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumLineOfBusinessCode_DE.jsonld"
                 }
             }
         }

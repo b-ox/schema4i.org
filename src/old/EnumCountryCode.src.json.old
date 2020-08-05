@@ -1,10 +1,10 @@
 {
   "type": "EnumCountryCode",
-  "uri": "http://schema.b-ox.org/EnumCountryCode",
+  "uri": "http://schema4i.org/EnumCountryCode",
   "description": "A code of the country according to the German GDV standard with release date 01.07.2018, based upon the list of international vehicle country codes of the UN as of 02.2007, e.g. D = Germany. An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumCountryCode_DE",
+      "url": "http://schema4i.org/EnumCountryCode_DE",
       "description": "Original German documentation"
     },
     {
@@ -18,13 +18,13 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/CountryCode"
+      "@id": "http://schema4i.org/CountryCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "Austria": "box:EnumCountryCode#A",
       "Afghanistan": "box:EnumCountryCode#AFG",
       "Antigua and Barbuda": "box:EnumCountryCode#AG",

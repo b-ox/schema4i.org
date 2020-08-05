@@ -1,10 +1,10 @@
 {
     "type": "PaymentFrequency",
-    "uri": "http://schema.b-ox.org/PaymentFrequency",
+    "uri": "http://schema4i.org/PaymentFrequency",
     "description": "Payment interval of the price of the insurance contract, e.g. R/1M = monthly.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payment#PaymentFrequency"
+        "@id": "http://schema4i.org/Payment#PaymentFrequency"
     }],
     "context": {
         "@context": {

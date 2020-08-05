@@ -1,15 +1,15 @@
 {
     "type": "Attachments",
-    "uri": "http://schema.b-ox.org/Attachments",
+    "uri": "http://schema4i.org/Attachments",
     "description": "Downloadable files like PDF or CSV, e.g. an insurance policy as PDF document. Attachments is a container for one or more files.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Header#Attachments"
+        "@id": "http://schema4i.org/Header#Attachments"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Attachments": {
                 "@id": "box:Attachments",

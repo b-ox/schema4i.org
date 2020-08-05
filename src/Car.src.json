@@ -1,6 +1,6 @@
 {
     "type": "Car",
-    "uri": "http://schema.b-ox.org/Car",
+    "uri": "http://schema4i.org/Car",
     "description": "A car is a wheeled, self-powered motor vehicle used for transportation.",
     "links": [{
         "url": "http://schema.org/Car",
@@ -14,13 +14,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/Vehicle" }
+        { "@id": "http://schema4i.org/Vehicle" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ooi": "https://openontology.org/",
             "Car": "schema:Car"
@@ -39,11 +39,11 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Car",
-                "http://schema.b-ox.org/Organization",
-                "http://schema.b-ox.org/Product",
-                "http://schema.b-ox.org/Thing",
-                "http://schema.b-ox.org/Vehicle"
+                "http://schema4i.org/Car",
+                "http://schema4i.org/Organization",
+                "http://schema4i.org/Product",
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Vehicle"
             ],
             "@type": "Car",
             "DateHolderFirstRegistered": "2020-07-16",

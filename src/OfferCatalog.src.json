@@ -1,6 +1,6 @@
 {
     "type": "OfferCatalog",
-    "uri": "http://schema.b-ox.org/OfferCatalog",
+    "uri": "http://schema4i.org/OfferCatalog",
     "description": "An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider. In the insurance industry it can be used to describe the highlights of an insurance product.",
     "links": [{
         "url": "http://schema.org/OfferCatalog",
@@ -10,13 +10,13 @@
         { "@id": "http://scchema.b-ox.org/Service#HasOfferCatalog" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/ItemList" }
+        { "@id": "http://schema4i.org/ItemList" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "OfferCatalog": "schema:OfferCatalog"
         }

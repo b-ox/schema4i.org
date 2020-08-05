@@ -1,32 +1,32 @@
 {
     "type": "Offer",
-    "uri": "http://schema.b-ox.org/Offer",
+    "uri": "http://schema4i.org/Offer",
     "description": "An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book. In the insurance industry typically an insurance company offers coverage in case of damage. An insurance policy (contract) is a confirmation (Order) of one or more offers (Offer). Note: As the BusinessFunction property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined BusinessFunction value can be assumed to be an offer to sell. In the insurance industry use http://purl.org/goodrelations/v1#ProvideService instead for an insurance company providing coverage as specialized offers.",
     "links": [{
         "url": "http://schema.org/Offer",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Service#Offers" },
-        { "@id": "http://schema.b-ox.org/Coverage" }
+        { "@id": "http://schema4i.org/Service#Offers" },
+        { "@id": "http://schema4i.org/Coverage" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "OfferedBy": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ],
         "Seller": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Offer": "schema:Offer",
             "AcceptedPaymentMethod": {

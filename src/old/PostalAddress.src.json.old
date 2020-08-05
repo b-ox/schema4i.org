@@ -1,15 +1,15 @@
 {
     "type": "PostalAddress",
-    "uri": "http://schema.b-ox.org/PostalAddress",
+    "uri": "http://schema4i.org/PostalAddress",
     "description": "Mailing address as part of the contact data of a natural person, organization or any other kind of location.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Policyholder#PostalAddress"
+        "@id": "http://schema4i.org/Policyholder#PostalAddress"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "PostalAddress": {
                 "@id": "schema:PostalAddress",
@@ -69,13 +69,13 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "PostalAddress": "box:PostalAddress",
                 "Country": {
                     "@id": "box:CountryCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumCountryCode.jsonld"
+                    "@context": "http://schema4i.org/EnumCountryCode.jsonld"
                 }
             }
         }
@@ -94,7 +94,7 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Anschrift": "box:PostalAddress",
                 "Strasse": "schema:streetAddress",
@@ -104,7 +104,7 @@
                 "Land": {
                     "@id": "box:CountryCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumCountryCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumCountryCode_DE.jsonld"
                 }
             }
         }
@@ -123,7 +123,7 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Adres": "box:PostalAddress",
                 "Straat": "schema:streetAddress",

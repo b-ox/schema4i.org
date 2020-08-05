@@ -1,15 +1,15 @@
 {
     "type": "Tariff",
-    "uri": "http://schema.b-ox.org/Tariff",
+    "uri": "http://schema4i.org/Tariff",
     "description": "Name of the tariff with the product provider (insurer), e.g. ALV1.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Contract#Tariff"
+        "@id": "http://schema4i.org/Contract#Tariff"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Tariff": {
                 "@id": "box:Tariff",

@@ -1,23 +1,23 @@
 {
     "type": "EnumOrderStatusCode",
-    "uri": "http://schema.b-ox.org/EnumOrderStatusCode",
+    "uri": "http://schema4i.org/EnumOrderStatusCode",
     "description": "A code that represents the status of an insurance contract according to the German GDV standard with release date 01.07.2018, e.g. 4 = canceled. An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumOrderStatusCode_DE",
+        "url": "http://schema4i.org/EnumOrderStatusCode_DE",
         "description": "Original German documentation"
     }, {
         "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl24.htm",
         "description": "GDV contract status"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Order#OrderStatus"
+        "@id": "http://schema4i.org/Order#OrderStatus"
     }],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "live": "box:EnumOrderStatusCode#1",
             "live short term during the year": "box:EnumOrderStatusCode#2",
             "dormant entitlement": "box:EnumOrderStatusCode#3",

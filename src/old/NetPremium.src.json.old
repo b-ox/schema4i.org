@@ -1,10 +1,10 @@
 {
     "type": "NetPremium",
-    "uri": "http://schema.b-ox.org/NetPremium",
+    "uri": "http://schema4i.org/NetPremium",
     "description": "Price for the insurance contract according to the frequency of payment, e.g. 100.00 euro per year. A net premium is the price without tax.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payment#NetPremium"
+        "@id": "http://schema4i.org/Payment#NetPremium"
     }],
     "context": {
         "@context": {

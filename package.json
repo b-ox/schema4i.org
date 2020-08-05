@@ -1,14 +1,14 @@
 {
-    "name": "@box/schema.b-ox.org",
+    "name": "@box/schema4i.org",
     "version": "1.0.0",
     "description": "Semantic Data Model for Insurances",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/b-ox/schema.b-ox.org.git"
+        "url": "https://github.com/b-ox/schema4i.org.git"
     },
     "bugs": {
-        "url": "https://github.com/b-ox/schema.b-ox.org/issues"
+        "url": "https://github.com/b-ox/schema4i.org/issues"
     },
     "engines": {
         "node": ">=12.10"

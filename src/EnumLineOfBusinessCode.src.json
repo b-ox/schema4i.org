@@ -1,9 +1,9 @@
 {
     "type": "EnumLineOfBusinessCode",
-    "uri": "http://schema.b-ox.org/EnumLineOfBusinessCode",
+    "uri": "http://schema4i.org/EnumLineOfBusinessCode",
     "description": "A code that represents the line of business of an insurance contract according to the German GDV standard with release date 01.07.2018, e.g. 040 = liability insurance. An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
     "links": [{
-            "url": "http://schema.b-ox.org/EnumLineOfBusinessCode_DE",
+            "url": "http://schema4i.org/EnumLineOfBusinessCode_DE",
             "description": "Original German documentation"
         },
         {
@@ -12,14 +12,14 @@
         }
     ],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Service#Category" }
+        { "@id": "http://schema4i.org/Service#Category" }
     ],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Life insurance": "box:EnumLineOfBusinessCode#010",
             "Health insurance": "box:EnumLineOfBusinessCode#020",
             "General accident insurance": "box:EnumLineOfBusinessCode#030",

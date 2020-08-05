@@ -1,21 +1,21 @@
 {
     "type": "ContractStatusCode",
-    "uri": "http://schema.b-ox.org/ContractStatusCode",
+    "uri": "http://schema4i.org/ContractStatusCode",
     "description": "The status code of an insurance contract, e.g. 4 = canceled.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumContractStatusCode.jsonld",
+        "url": "http://schema4i.org/EnumContractStatusCode.jsonld",
         "description": "Enumeration with keys and values"
     }, {
-        "url": "http://schema.b-ox.org/EnumContractStatusCode_DE.jsonld",
+        "url": "http://schema4i.org/EnumContractStatusCode_DE.jsonld",
         "description": "German key translation of EnumContractStatusCode"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Contract#StatusCode"
+        "@id": "http://schema4i.org/Contract#StatusCode"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "ContractStatusCode": {
                 "@id": "box:ContractStatusCode",
                 "@type": "@vocab",
@@ -42,11 +42,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Status": {
                     "@id": "box:ContractStatusCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractStatusCode.jsonld"
+                    "@context": "http://schema4i.org/EnumContractStatusCode.jsonld"
                 }
             }
         }
@@ -59,11 +59,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "Status": {
                     "@id": "box:ContractStatusCode",
                     "@type": "@vocab",
-                    "@context": "http://schema.b-ox.org/EnumContractStatusCode_DE.jsonld"
+                    "@context": "http://schema4i.org/EnumContractStatusCode_DE.jsonld"
                 }
             }
         }

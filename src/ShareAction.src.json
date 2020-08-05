@@ -1,6 +1,6 @@
 {
     "type": "ShareAction",
-    "uri": "http://schema.b-ox.org/ShareAction",
+    "uri": "http://schema4i.org/ShareAction",
     "description": "The act of distributing content to people for their amusement or edification.",
     "links": [{
         "url": "http://schema.org/ShareAction",
@@ -8,13 +8,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/CommunicateAction" }
+        { "@id": "http://schema4i.org/CommunicateAction" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ShareAction": "schema:ShareAction"
         }
@@ -32,11 +32,11 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "https://schema.b-ox.org/Action.jsonld",
-                "https://schema.b-ox.org/CommunicateAction.jsonld",
-                "https://schema.b-ox.org/Message.jsonld",
-                "https://schema.b-ox.org/Thing.jsonld",
-                "https://schema.b-ox.org/ShareAction.jsonld"
+                "https://schema4i.org/Action.jsonld",
+                "https://schema4i.org/CommunicateAction.jsonld",
+                "https://schema4i.org/Message.jsonld",
+                "https://schema4i.org/Thing.jsonld",
+                "https://schema4i.org/ShareAction.jsonld"
             ],
             "@type": "ShareAction",
             "About": {

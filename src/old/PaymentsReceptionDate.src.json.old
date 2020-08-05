@@ -1,10 +1,10 @@
 {
     "type": "PaymentsReceptionDate",
-    "uri": "http://schema.b-ox.org/PaymentsReceptionDate",
+    "uri": "http://schema4i.org/PaymentsReceptionDate",
     "description": "Date up to which incoming payments were taken into account, e.g. 2020-01-01.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Payment#PaymentsReceptionDate"
+        "@id": "http://schema4i.org/Payment#PaymentsReceptionDate"
     }],
     "context": {
         "@context": {

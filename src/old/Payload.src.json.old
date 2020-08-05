@@ -1,25 +1,25 @@
 {
     "type": "Payload",
-    "uri": "http://schema.b-ox.org/Payload",
+    "uri": "http://schema4i.org/Payload",
     "description": "A part of the message response from an insurance application programming interface (API) that contains business data. It works like a technical transport container for business objects of the first level. This is the point where every message starts and the Semantic Data Model types are transported.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Message#Payload"
+        "@id": "http://schema4i.org/Message#Payload"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Payload": {
                 "@id": "box:Payload",
                 "@type": "box:Payload",
                 "@context": [
-                    "http://schema.b-ox.org/Policyholder.jsonld",
-                    "http://schema.b-ox.org/Contract.jsonld",
-                    "http://schema.b-ox.org/Product.jsonld",
-                    "http://schema.b-ox.org/Claim.jsonld",
-                    "http://schema.b-ox.org/Transaction.jsonld"
+                    "http://schema4i.org/Policyholder.jsonld",
+                    "http://schema4i.org/Contract.jsonld",
+                    "http://schema4i.org/Product.jsonld",
+                    "http://schema4i.org/Claim.jsonld",
+                    "http://schema4i.org/Transaction.jsonld"
                 ]
             }
         }

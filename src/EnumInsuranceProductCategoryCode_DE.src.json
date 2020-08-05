@@ -1,20 +1,20 @@
 {
     "type": "EnumInsuranceProductCategoryCode_DE",
-    "uri": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode_DE",
+    "uri": "http://schema4i.org/EnumInsuranceProductCategoryCode_DE",
     "description": "Eindeutige ID einer Produktkategorie in der deutschen Versicherungswirtschaft. Diese Kategorie ist häufig identisch, aber nicht konsequent gleichbedeutet mit der Sparte (EnumLineOfBusinessCode). Vielmehr wird hier zusätzlich eine Marktsicht auf Versicherungsprodukte abgebildet, z.B. GEWERBESPEZIAL = Gewerbe-Spezialversicherung.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode",
+        "url": "http://schema4i.org/EnumInsuranceProductCategoryCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Service#Category"
+        "@id": "http://schema4i.org/Service#Category"
     }],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Jagdhaftpflichtversicherung": "box:EnumInsuranceProductCategoryCode#JAGD",
             "Privathaftpflichtversicherung": "box:EnumInsuranceProductCategoryCode#PHV",
             "Hundehaftpflichtversicherung": "box:EnumInsuranceProductCategoryCode#HUNDE",

@@ -1,23 +1,23 @@
 {
     "type": "EnumOrderStatusCode_DE",
-    "uri": "http://schema.b-ox.org/EnumOrderStatusCode_DE",
+    "uri": "http://schema4i.org/EnumOrderStatusCode_DE",
     "description": "Ein Code, der den Status eines Versicherungsvertrags gemäß dem deutschen GDV Standard mit Releasedatum 01.07.2018 darstellt, z.B. 4 = storniert.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumOrderStatusCode",
+        "url": "http://schema4i.org/EnumOrderStatusCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
     }, {
         "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl24.htm",
         "description": "GDV Vertragsstatus"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Order#OrderStatus" }
+        { "@id": "http://schema4i.org/Order#OrderStatus" }
     ],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "lebend": "box:EnumContractStatusCode#1",
             "lebend kurzfristig unterjährig": "box:EnumContractStatusCode#2",
             "ruhend Anwartschaft": "box:EnumContractStatusCode#3",

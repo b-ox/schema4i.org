@@ -1,6 +1,6 @@
 {
     "type": "MotorInsuranceLiabilityCoverage",
-    "uri": "http://schema.b-ox.org/MotorInsuranceLiabilityCoverage",
+    "uri": "http://schema4i.org/MotorInsuranceLiabilityCoverage",
     "description": "Provides coverage for liability insurance damage in the context of motor insurance.",
     "links": [{
         "url": "https://openontology.org",
@@ -8,18 +8,18 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/Coverage" }
+        { "@id": "http://schema4i.org/Coverage" }
     ],
     "multipletypes": {
         "SumInsured": [
             { "@id": "https://openontology.org/motor.json#/product.motor.coverage.liability.sum-insured" },
-            { "@id": "http://schema.b-ox.org/EnumMotorInsuranceLiabilityCoverageCode" }
+            { "@id": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
             "MotorInsuranceLiabilityCoverage": "box:MotorInsuranceLiabilityCoverage",

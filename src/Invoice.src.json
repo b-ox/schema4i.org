@@ -1,6 +1,6 @@
 {
     "type": "Invoice",
-    "uri": "http://schema.b-ox.org/Invoice",
+    "uri": "http://schema4i.org/Invoice",
     "description": "A statement of the money due for goods or services; a bill. In the insurance industry you can use this type also for transferring settlements between brokers and insurers or between insurers.",
     "links": [{
         "url": "http://schema.org/Invoice",
@@ -8,30 +8,30 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "Broker": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ],
         "Customer": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ],
         "Provider": [
-            { "@id": "http://schema.b-ox.org/Person" },
-            { "@id": "http://schema.b-ox.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ],
         "TotalPaymentDue": [
-            { "@id": "http://schema.b-ox.org/MonetaryAmount" },
-            { "@id": "http://schema.b-ox.org/CompoundPriceSpecification" }
+            { "@id": "http://schema4i.org/MonetaryAmount" },
+            { "@id": "http://schema4i.org/CompoundPriceSpecification" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Invoice": "schema:Invoice",
             "AccountID": {

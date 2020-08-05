@@ -1,10 +1,10 @@
 {
   "type": "EnumCountryCode_DE",
-  "uri": "http://schema.b-ox.org/EnumCountryCode_DE",
+  "uri": "http://schema4i.org/EnumCountryCode_DE",
   "description": "Ein Länder-Code gemäß der deutschen GDV-Norm mit dem Veröffentlichungsdatum 01.07.2018, basierend auf der Liste der internationalen Fahrzeuglandcodes der UN vom 02.2007, z.B. D = Deutschland.",
   "links": [
     {
-      "url": "http://schema.b-ox.org/EnumCountryCode",
+      "url": "http://schema4i.org/EnumCountryCode",
       "description": "Englische Dokumentation der Schlüsselwerte"
     },
     {
@@ -18,13 +18,13 @@
   ],
   "parents": [
     {
-      "@id": "http://schema.b-ox.org/CountryCode"
+      "@id": "http://schema4i.org/CountryCode"
     }
   ],
   "context": {
     "@context": {
       "@version": 1.1,
-      "box": "http://schema.b-ox.org/",
+      "box": "http://schema4i.org/",
       "Österreich": "box:EnumCountryCode#A",
       "Afghanistan": "box:EnumCountryCode#AFG",
       "Antigua und Barbuda": "box:EnumCountryCode#AG",

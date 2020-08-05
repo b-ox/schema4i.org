@@ -1,23 +1,23 @@
 {
     "type": "MoneyTransferAction",
-    "uri": "http://schema.b-ox.org/MoneyTransferAction",
+    "uri": "http://schema4i.org/MoneyTransferAction",
     "description": "The act of transferring money from one place to another place. This may occur electronically or physically. In the insurance industry it might be also used to just report transations even if there is in fact no money transferation from one account to another that does exactly match. So if there is sent a settlement from one business party to another there might be only one collective transaction but the need to report what the individual amounts are behind this.",
     "links": [{
         "url": "http://schema.org/MoneyTransfer",
         "description": "Original Schema.org type (ATTENTION: Still pending and wrong spelling.)"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "MoneyTransferAction": "schema:MoneyTransferAction",
             "Amount": {
@@ -40,12 +40,12 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/Action.jsonld",
-                "http://schema.b-ox.org/MoneyTransferAction.jsonld",
-                "http://schema.b-ox.org/MonetaryAmount.jsonld",
-                "http://schema.b-ox.org/Person.jsonld",
-                "http://schema.b-ox.org/Organization.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/MoneyTransferAction.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Organization.jsonld"
             ],
             "@type": "MoneyTransferAction",
             "Identifier": "4711",

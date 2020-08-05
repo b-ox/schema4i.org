@@ -10,7 +10,7 @@ const path = require("path");
 // configuration
 const fromPath = "src/";
 let typeIndex = {
-    name: "schema.b-ox.org",
+    name: "schema4i.org",
     description: "Semantic Data Model for Insurances",
     release: 0.54,
     modified: new Date(),
@@ -57,8 +57,8 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             let data = await fs.readFile(fromPath + file, 'utf-8');
 
             // replace namespace to match environment
-            data = data.replace(/pending.schema.b-ox.org\//g, environment + '/');
-            data = data.replace(/schema.b-ox.org\//g, environment + '/');
+            data = data.replace(/pending.schema4i.org\//g, environment + '/');
+            data = data.replace(/schema4i.org\//g, environment + '/');
 
             // parse data
             const obj = JSON.parse(data);

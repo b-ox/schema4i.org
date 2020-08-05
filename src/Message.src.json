@@ -1,6 +1,6 @@
 {
     "type": "Message",
-    "uri": "http://schema.b-ox.org/Message",
+    "uri": "http://schema4i.org/Message",
     "description": "A single message from a sender to one or more organizations or people. In APIs a Message object can also be used as a transport comtainer for information sending between technical components.",
     "links": [{
         "url": "http://schema.org/Message",
@@ -8,34 +8,34 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/CreativeWork" }
+        { "@id": "http://schema4i.org/CreativeWork" }
     ],
     "multipletypes": {
         "BCCRecipient": [
-            { "@id": "http://schema.b-ox.org/ContactPoint" },
-            { "@id": "http://schema.b-ox.org/Organization" },
-            { "@id": "http://schema.b-ox.org/Person" }
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
         ],
         "CCRecipient": [
-            { "@id": "http://schema.b-ox.org/ContactPoint" },
-            { "@id": "http://schema.b-ox.org/Organization" },
-            { "@id": "http://schema.b-ox.org/Person" }
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
         ],
         "Recipient": [
-            { "@id": "http://schema.b-ox.org/ContactPoint" },
-            { "@id": "http://schema.b-ox.org/Organization" },
-            { "@id": "http://schema.b-ox.org/Person" }
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
         ],
         "Sender": [
-            { "@id": "http://schema.b-ox.org/ContactPoint" },
-            { "@id": "http://schema.b-ox.org/Organization" },
-            { "@id": "http://schema.b-ox.org/Person" }
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Message": "schema:Message",
             "BCCRecipient": {

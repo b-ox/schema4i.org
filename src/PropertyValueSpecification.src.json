@@ -1,6 +1,6 @@
 {
     "type": "PropertyValueSpecification",
-    "uri": "http://schema.b-ox.org/PropertyValueSpecification",
+    "uri": "http://schema4i.org/PropertyValueSpecification",
     "description": "A Property value specification.",
     "links": [{
         "url": "http://schema.org/PropertyValueSpecification",
@@ -8,13 +8,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "PropertyValueSpecification": "schema:PropertyValueSpecification",
             "DefaultValue": {

@@ -1,23 +1,23 @@
 {
     "type": "SearchAction",
-    "uri": "http://schema.b-ox.org/SearchAction",
+    "uri": "http://schema4i.org/SearchAction",
     "description": "The act of searching for specific items. The SearchAction is used on an API to find a resource. For this purpose, the SearchAction is sent to the server in the request body of an HTTP post request. However, read access is often implemented via HTTP GET. In this case no body is sent. Nevertheless, this request implicitly represents a SearchAction and the server will respond with the same. The search result is returned as Result object while the Object attribute identifies e.g. a postbox, a list of movies or anything else. Moste of the times the Result is an array of objects.",
     "links": [{
         "url": "http://schema.org/SearchAction",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/InteractionCounter#InteractionType" },
-        { "@id": "http://schema.b-ox.org/Thing#PotentialAction" }
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Action" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "SearchAction": "schema:SearchAction",
             "Query": {
@@ -40,9 +40,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/SearchAction.jsonld",
-                "http://schema.b-ox.org/Action.jsonld",
-                "http://schema.b-ox.org/Thing.jsonld"
+                "http://schema4i.org/SearchAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "SearchAction",
             "ActionStatus": "CompletedActionStatus",
@@ -59,9 +59,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/SearchAction.jsonld",
-                "http://schema.b-ox.org/Action.jsonld",
-                "http://schema.b-ox.org/Thing.jsonld"
+                "http://schema4i.org/SearchAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "SearchAction",
             "ActionStatus": "CompletedActionStatus",

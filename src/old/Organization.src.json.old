@@ -1,19 +1,19 @@
 {
     "type": "Organization",
-    "uri": "http://schema.b-ox.org/Organization",
+    "uri": "http://schema4i.org/Organization",
     "description": "An organization such as a corporation, school, club, etc. A sole proprietorship that is not a legal person is considered a natural person not an organization. A DataProvider#APIProvider is a technical provider of an application programming interface (API) delivering the business data.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Sender#Organization"
+        "@id": "http://schema4i.org/Sender#Organization"
     }, {
-        "@id": "http://schema.b-ox.org/Recipient#Organization"
+        "@id": "http://schema4i.org/Recipient#Organization"
     }, {
-        "@id": "http://schema.b-ox.org/Policyholder#Organization"
+        "@id": "http://schema4i.org/Policyholder#Organization"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Organization": {
                 "@id": "box:Organization",

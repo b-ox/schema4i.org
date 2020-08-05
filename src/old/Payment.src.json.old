@@ -1,15 +1,15 @@
 {
     "type": "Payment",
-    "uri": "http://schema.b-ox.org/Payment",
+    "uri": "http://schema4i.org/Payment",
     "description": "Information about the incoming payment of the contract, e.g. premium and payment method.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Contract#Payment"
+        "@id": "http://schema4i.org/Contract#Payment"
     }],
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Payment": {
                 "@id": "box:Payment",
@@ -122,11 +122,11 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema.b-ox.org/",
+                "box": "http://schema4i.org/",
                 "schema": "http://schema.org/",
                 "Zahlung": "box:Payment",
                 "Rücklastschrift": {
-                    "@context": "http://schema.b-ox.org/EnumDirectDebitReturnCode_DE.jsonld",
+                    "@context": "http://schema4i.org/EnumDirectDebitReturnCode_DE.jsonld",
                     "@id": "box:DirectDebitReturnCode",
                     "@type": "@vocab"
                 }

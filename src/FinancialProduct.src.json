@@ -1,22 +1,22 @@
 {
     "type": "FinancialProduct",
-    "uri": "http://schema.b-ox.org/FinancialProduct",
+    "uri": "http://schema4i.org/FinancialProduct",
     "description": "A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry. In the insurance industry an insurance is e. g. a MotorInsuranceProduct that is a specialized FinancialProduct that is a Service. An insurance company provider a coverage for a damage to an object or person. In the sense of Schema.org this is the Offer of the provider. If somebody confirmes this Offer by an Order, then an insurance contract is established.",
     "links": [{
         "url": "http://schema.org/FinancialProduct",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/MotorInsuranceProduct" }
+        { "@id": "http://schema4i.org/MotorInsuranceProduct" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Service" }
+        { "@id": "http://schema4i.org/Service" }
     ],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "FinancialProduct": "schema:FinancialProduct"
         }
@@ -34,13 +34,13 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/FinancialProduct.jsonld",
-                "http://schema.b-ox.org/Service.jsonld",
-                "http://schema.b-ox.org/Organization.jsonld",
-                "http://schema.b-ox.org/OfferCatalog.jsonld",
-                "http://schema.b-ox.org/ItemList.jsonld",
-                "http://schema.b-ox.org/CreativeWork.jsonld",
-                "http://schema.b-ox.org/Thing.jsonld"
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/OfferCatalog.jsonld",
+                "http://schema4i.org/ItemList.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "FinancialProduct",
             "Category": "RENTE",

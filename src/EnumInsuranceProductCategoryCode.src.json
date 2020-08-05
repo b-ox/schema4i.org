@@ -1,20 +1,20 @@
 {
     "type": "EnumInsuranceProductCategoryCode",
-    "uri": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode",
+    "uri": "http://schema4i.org/EnumInsuranceProductCategoryCode",
     "description": "Unique ID of a product category in the German insurance industry. This category is often identical, but not consistently synonymous with the line of business (EnumLineOfBusinessCode). Rather, a market view of insurance products is also shown here, e.g. GEWERBESPEZIAL = Specialized commercial insurance.",
     "links": [{
-        "url": "http://schema.b-ox.org/EnumInsuranceProductCategoryCode_DE",
+        "url": "http://schema4i.org/EnumInsuranceProductCategoryCode_DE",
         "description": "Original German documentation"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Service#Category" }
+        { "@id": "http://schema4i.org/Service#Category" }
     ],
     "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "Hunting liability insurance": "box:EnumInsuranceProductCategoryCode#JAGD",
             "Personal liability insurance": "box:EnumInsuranceProductCategoryCode#PHV",
             "Dog liability insurance": "box:EnumInsuranceProductCategoryCode#HUNDE",

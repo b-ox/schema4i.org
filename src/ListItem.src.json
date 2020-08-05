@@ -1,26 +1,26 @@
 {
     "type": "ListItem",
-    "uri": "http://schema.b-ox.org/ListItem",
+    "uri": "http://schema4i.org/ListItem",
     "description": "An list item, e.g. a step in a checklist or how-to description. A ListItem you typically can find as type of an object in an ItemList. This might especially be the case when you need positioning, previous and next attributes as part of the object within the ItemList.",
     "links": [{
         "url": "http://schema.org/ListItem",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/ItemList#ItemListElement" }
+        { "@id": "http://schema4i.org/ItemList#ItemListElement" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "Item": [
-            { "@id": "http://schema.b-ox.org/Thing" }
+            { "@id": "http://schema4i.org/Thing" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ListItem": "schema:ListItem",
             "Item": {
@@ -64,9 +64,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/ItemList.jsonld",
-                "http://schema.b-ox.org/ListItem.jsonld",
-                "http://schema.b-ox.org/Thing.jsonld"
+                "http://schema4i.org/ItemList.jsonld",
+                "http://schema4i.org/ListItem.jsonld",
+                "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "ItemList",
             "ItemListElement": [{

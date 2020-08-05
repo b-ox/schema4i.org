@@ -1,10 +1,10 @@
 {
     "type": "DunningAmountAddditionalCosts",
-    "uri": "http://schema.b-ox.org/DunningAmountAddditionalCosts",
+    "uri": "http://schema4i.org/DunningAmountAddditionalCosts",
     "description": "In addition to the dunning amount and costs, specifies any additional dunning amounts, e.g. 25.00.",
     "links": [],
     "parents": [{
-        "@id": "http://schema.b-ox.org/Invoice#DunningAmountAddditionalCosts"
+        "@id": "http://schema4i.org/Invoice#DunningAmountAddditionalCosts"
     }],
     "base": [],
     "multipletypes": {},

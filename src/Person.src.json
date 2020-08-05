@@ -1,32 +1,32 @@
 {
     "type": "Person",
-    "uri": "http://schema.b-ox.org/Person",
+    "uri": "http://schema4i.org/Person",
     "description": "A person (alive, dead, undead, or fictional). In the insurance industry a person usually is a natural person on a life cycle of an insurance contract like a policyholder, the insured person or someone who claims. It can also be an insurance broker or an employee of an insurance company.",
     "links": [{
         "url": "http://schema.org/Person",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema.b-ox.org/Action#Agent" },
-        { "@id": "http://schema.b-ox.org/Action#Participant" },
-        { "@id": "http://schema.b-ox.org/Invoice#Broker" },
-        { "@id": "http://schema.b-ox.org/Invoice#Customer" },
-        { "@id": "http://schema.b-ox.org/Invoice#Provider" },
-        { "@id": "http://schema.b-ox.org/Order#Customer" }
+        { "@id": "http://schema4i.org/Action#Agent" },
+        { "@id": "http://schema4i.org/Action#Participant" },
+        { "@id": "http://schema4i.org/Invoice#Broker" },
+        { "@id": "http://schema4i.org/Invoice#Customer" },
+        { "@id": "http://schema4i.org/Invoice#Provider" },
+        { "@id": "http://schema4i.org/Order#Customer" }
     ],
     "base": [
-        { "@id": "http://schema.b-ox.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "DrivingLicenseIssueCountry": [
             { "@id": "https://openontology.org/definitions.json#/string" },
-            { "@id": "http://schema.b-ox.org/EnumCountryCode" }
+            { "@id": "http://schema4i.org/EnumCountryCode" }
         ]
     },
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema.b-ox.org/",
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
             "Person": "schema:Person",
@@ -150,9 +150,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema.b-ox.org/Thing.jsonld",
-                "http://schema.b-ox.org/Person.jsonld",
-                "http://schema.b-ox.org/PostalAddress.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
             ],
             "@type": "Person",
             "Address": {
