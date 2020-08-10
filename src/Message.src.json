@@ -1,7 +1,7 @@
 {
     "type": "Message",
     "uri": "http://schema4i.org/Message",
-    "description": "A single message from a sender to one or more organizations or people. In APIs a Message object can also be used as a transport comtainer for information sending between technical components.",
+    "description": "A single message from a sender to one or more organizations or people. In APIs a Message object can also be used as a transport container for information sending between technical components.",
     "links": [{
         "url": "http://schema.org/Message",
         "description": "Original Schema.org type"
