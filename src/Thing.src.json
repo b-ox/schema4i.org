@@ -42,6 +42,10 @@
             "PotentialAction": {
                 "@id": "schema:potentialAction"
             },
+            "SameAs": {
+                "@id": "schema:sameAs",
+                "@type": "schema:URL"
+            },
             "SubjectOf": {
                 "@id": "schema:subjectOf",
                 "@type": "box:CreativeWork"
