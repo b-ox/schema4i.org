@@ -237,11 +237,11 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
     let sitemap = 'https://' + environment + '\n';
     sitemap += 'https://' + environment + '/home\n';
     sitemap += 'https://' + environment + '/documentation\n';
+    sitemap += 'https://' + environment + '/samples\n';
     sitemap += 'https://' + environment + '/models\n';
     sitemap += 'https://' + environment + '/about\n';
     for (const type of typeIndex.types) {
         sitemap += type.uri.replace('http', 'https') + '\n';
-        sitemap += type.url.replace('http', 'https') + '\n';
     }
     await fs.writeFile(outputDir + "/sitemap.txt", sitemap);
     consoleLike.log("Write sitemap.txt to " + outputDir + "/sitemap.txt");
