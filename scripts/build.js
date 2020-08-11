@@ -12,7 +12,7 @@ const fromPath = "src/";
 let typeIndex = {
     name: "schema4i.org",
     description: "Semantic Data Model for Insurances",
-    release: 0.55,
+    release: 0.56,
     modified: new Date(),
     objects: 0,
     enumerations: 0,
