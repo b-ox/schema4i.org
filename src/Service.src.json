@@ -18,6 +18,10 @@
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumInsuranceProductCategoryCode" },
             { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
+        ],
+        "Broker": [
+            { "@id": "http://schemaai.org/Person" },
+            { "@id": "http://schemaai.org/Organization" }
         ]
     },
     "context": {
@@ -29,6 +33,9 @@
             "Award": {
                 "@id": "schema:award",
                 "@type": "schema:Text"
+            },
+            "Broker": {
+                "@id": "schema:broker"
             },
             "BusinessFunction": {
                 "@id": "schema:businessFunction",
@@ -74,10 +81,8 @@
             ],
             "@type": "Service",
             "Award": "Testsieger 01.20 bei Stiftung Warentest",
-            "Category": {
-                "@value": "Testsiegertarife",
-                "@type": "schema:Text"
-            },
+            "Broker": {},
+            "Category": "Testsiegertarife",
             "HasOfferCatalog": {},
             "Logo": "http://domain.de/logo.png",
             "Provider": {},
