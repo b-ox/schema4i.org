@@ -84,6 +84,8 @@
                 "http://schema4i.org/Offer.jsonld"
             ],
             "@type": "BusinessTransaction",
+            "Identifier": "4711",
+            "IdentifierReference": "VNR-4712",
             "TransactionCode": "100007000",
             "TransactionTrigger": "001",
             "Category": "Antrag/Neugeschäft",

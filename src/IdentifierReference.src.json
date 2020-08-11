@@ -1,0 +1,30 @@
+{
+    "type": "IdentifierReference",
+    "uri": "http://schema4i.org/IdentifierReference",
+    "description": "Reference to a Thing.Identifier that identifies any kind of identifier for any kind of Thing of the sender or provider of data. Used when the direction of data transfer changes. Used to refer to the Identifier of the origin sender.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Thing#IdentifierReference" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "schema": "http://schema.org/",
+            "IdentifierReference": {
+                "@id": "box:IdentifierReference",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample IdentifierReference",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "IdentifierReference": "VNR-4711"
+        },
+        "context": {}
+    }]
+}
