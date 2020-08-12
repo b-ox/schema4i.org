@@ -13,9 +13,9 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "BusinessTransactionDelivery": "box:BusinessTransactionDelivery"
+            "BusinessTransactionDelivery": "s4i:BusinessTransactionDelivery"
         }
     },
     "playground": [{

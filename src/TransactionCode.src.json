@@ -17,13 +17,13 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "TransactionCode": {
-                "@id": "box:TransactionCode",
+                "@id": "s4i:TransactionCode",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "box:EnumTransactionCode#"
+                    "@vocab": "s4i:EnumTransactionCode#"
                 }
             }
         }
@@ -45,9 +45,9 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema4i.org/",
+                "s4i": "http://schema4i.org/",
                 "Transaction": {
-                    "@id": "box:TransactionCode",
+                    "@id": "s4i:TransactionCode",
                     "@type": "@vocab",
                     "@context": "http://schema4i.org/EnumTransactionCode.jsonld"
                 }
@@ -62,9 +62,9 @@
         },
         "context": {
             "@context": {
-                "box": "http://schema4i.org/",
+                "s4i": "http://schema4i.org/",
                 "GeschaeftsvorfallID": {
-                    "@id": "box:TransactionCode",
+                    "@id": "s4i:TransactionCode",
                     "@type": "@vocab",
                     "@context": "http://schema4i.org/EnumTransactionCode_DE.jsonld"
                 }

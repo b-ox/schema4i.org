@@ -39,12 +39,12 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
             "Vehicle": "schema:Vehicle",
             "DateHolderFirstRegistered": {
-                "@id": "box:DateHolderFirstRegistered",
+                "@id": "s4i:DateHolderFirstRegistered",
                 "@type": "schema:Date"
             },
             "DateVehicleFirstRegistered": {
@@ -55,7 +55,7 @@
                 "@id": "oo:vehicle.json#/garage"
             },
             "Holder": {
-                "@id": "box:Holder"
+                "@id": "s4i:Holder"
             },
             "HSN": {
                 "@id": "oo:vehicle.json#/hsn",

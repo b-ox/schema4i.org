@@ -20,7 +20,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ListItem": "schema:ListItem",
             "Item": {
@@ -28,7 +28,7 @@
             },
             "NextItem": {
                 "@id": "schema:nextItem",
-                "@type": "box:ListItem"
+                "@type": "s4i:ListItem"
             },
             "Position": {
                 "@id": "schema:position",
@@ -36,7 +36,7 @@
             },
             "PreviousItem": {
                 "@id": "schema:previousItem",
-                "@type": "box:ListItem"
+                "@type": "s4i:ListItem"
             }
         }
     },
@@ -50,12 +50,12 @@
             "Item": {},
             "NextItem": {
                 "@id": "http://example.com/list/id-3",
-                "@type": "box:ListItem"
+                "@type": "s4i:ListItem"
             },
             "Position": 2,
             "PreviousItem": {
                 "@id": "http://example.com/list/id-1",
-                "@type": "box:ListItem"
+                "@type": "s4i:ListItem"
             }
         },
         "context": {}
@@ -78,7 +78,7 @@
                 },
                 "NextItem": {
                     "@id": "http://example.com/list/id-2",
-                    "@type": "box:ListItem"
+                    "@type": "s4i:ListItem"
                 },
                 "Position": 1
             }, {
@@ -90,7 +90,7 @@
                 },
                 "NextItem": {
                     "@id": "http://example.com/list/id-2",
-                    "@type": "box:ListItem"
+                    "@type": "s4i:ListItem"
                 },
                 "Position": 2
             }],

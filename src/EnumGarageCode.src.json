@@ -17,15 +17,15 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
-            "unknown": "box:EnumGarageCode#00",
-            "garage (any type)": "box:EnumGarageCode#01",
-            "unavailable": "box:EnumGarageCode#02",
-            "lockable single and double garage": "box:EnumGarageCode#03",
-            "multiple / underground car park (not lockable)": "box:EnumGarageCode#04",
-            "secured property / carport": "box:EnumGarageCode#05",
-            "secured property": "box:EnumGarageCode#06",
-            "carport": "box:EnumGarageCode#07"
+            "s4i": "http://schema4i.org/",
+            "unknown": "s4i:EnumGarageCode#00",
+            "garage (any type)": "s4i:EnumGarageCode#01",
+            "unavailable": "s4i:EnumGarageCode#02",
+            "lockable single and double garage": "s4i:EnumGarageCode#03",
+            "multiple / underground car park (not lockable)": "s4i:EnumGarageCode#04",
+            "secured property / carport": "s4i:EnumGarageCode#05",
+            "secured property": "s4i:EnumGarageCode#06",
+            "carport": "s4i:EnumGarageCode#07"
         }
     }
 }

@@ -17,15 +17,15 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
-            "unbekannt": "box:EnumGarageCode#00",
-            "Garage (beliebiger Typ)": "box:EnumGarageCode#01",
-            "nicht vorhanden": "box:EnumGarageCode#02",
-            "abschließbare Einzel- und Doppelgarage": "box:EnumGarageCode#03",
-            "Mehrfach / Tiefgarage (nicht abschließbar)": "box:EnumGarageCode#04",
-            "gesichertes Grundstück / Carport": "box:EnumGarageCode#05",
-            "gesichertes Grundstück": "box:EnumGarageCode#06",
-            "Carport": "box:EnumGarageCode#07"
+            "s4i": "http://schema4i.org/",
+            "unbekannt": "s4i:EnumGarageCode#00",
+            "Garage (beliebiger Typ)": "s4i:EnumGarageCode#01",
+            "nicht vorhanden": "s4i:EnumGarageCode#02",
+            "abschließbare Einzel- und Doppelgarage": "s4i:EnumGarageCode#03",
+            "Mehrfach / Tiefgarage (nicht abschließbar)": "s4i:EnumGarageCode#04",
+            "gesichertes Grundstück / Carport": "s4i:EnumGarageCode#05",
+            "gesichertes Grundstück": "s4i:EnumGarageCode#06",
+            "Carport": "s4i:EnumGarageCode#07"
         }
     }
 }

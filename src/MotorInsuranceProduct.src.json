@@ -17,9 +17,9 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "MotorInsuranceProduct": "box:MotorInsuranceProduct"
+            "MotorInsuranceProduct": "s4i:MotorInsuranceProduct"
         }
     },
     "playground": [{
@@ -49,7 +49,7 @@
                         "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "box:EnumMotorInsuranceLiabilityCoverageCode#"
+                            "@vocab": "s4i:EnumMotorInsuranceLiabilityCoverageCode#"
                         }
                     }
                 }

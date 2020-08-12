@@ -41,7 +41,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Action": "schema:Action",
             "ActionStatus": {
@@ -69,7 +69,7 @@
             },
             "Query-input": {
                 "@id": "schema:query-input",
-                "@type": "box:PropertyValueSpecification"
+                "@type": "s4i:PropertyValueSpecification"
             },
             "Result": {
                 "@id": "schema:result"
@@ -80,7 +80,7 @@
             },
             "Target": {
                 "@id": "schema:target",
-                "@type": "box:EntryPoint"
+                "@type": "s4i:EntryPoint"
             },
             "URL-input": {
                 "@id": "schema:url-input",
@@ -98,10 +98,7 @@
             "Agent": {},
             "EndTime": "2020-07-01T00:00:10",
             "Error": {},
-            "Object": {
-                "@type": "Thing",
-                "URL-input": "https://api.b-ox.de/thing/4711"
-            },
+            "Object": {},
             "Participant": {},
             "Query-input": {},
             "Result": {},

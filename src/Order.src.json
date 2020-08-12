@@ -25,12 +25,12 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Order": "schema:Order",
             "BillingAddress": {
                 "@id": "schema:billingAddress",
-                "@type": "box:PostalAddress"
+                "@type": "s4i:PostalAddress"
             },
             "ConfirmationNumber": {
                 "@id": "schema:confirmationNumber",
@@ -53,7 +53,7 @@
             },
             "OrderedItem": {
                 "@id": "schema:orderedItem",
-                "@type": "box:Service"
+                "@type": "s4i:Service"
             },
             "OrderNumber": {
                 "@id": "schema:orderNumber",
@@ -63,12 +63,12 @@
                 "@id": "schema:orderStatus",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "box:EnumOrderStatusCode#"
+                    "@vocab": "s4i:EnumOrderStatusCode#"
                 }
             },
             "PartOfInvoice": {
                 "@id": "schema:partOfInvoice",
-                "@type": "box:Invoice"
+                "@type": "s4i:Invoice"
             }
         }
     },

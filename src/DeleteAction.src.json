@@ -17,12 +17,12 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DeleteAction": "schema:DeleteAction",
             "TargetCollection": {
                 "@id": "schema:targetCollection",
-                "@type": "box:Thing"
+                "@type": "s4i:Thing"
             }
         }
     },
@@ -33,7 +33,7 @@
             "@context": {},
             "@type": "DeleteAction",
             "TargetCollection": {
-                "@id": "https://api.b-ox.de/postbox/messages"
+                "@id": "https://api.b-ox.de/posts4i/messages"
             }
         },
         "context": {}
@@ -48,11 +48,11 @@
             ],
             "@type": "DeleteAction",
             "Object": {
-                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@id": "https://api.b-ox.de/posts4i/messages/4711",
                 "@type": "Thing"
             },
             "TargetCollection": {
-                "@id": "https://api.b-ox.de/postbox/messages",
+                "@id": "https://api.b-ox.de/posts4i/messages",
                 "@type": "Thing"
             }
         },

@@ -27,7 +27,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Service": "schema:Service",
             "Award": {
@@ -46,7 +46,7 @@
             },
             "HasOfferCatalog": {
                 "@id": "schema:hasOfferCatalog",
-                "@type": "box:OfferCatalog"
+                "@type": "s4i:OfferCatalog"
             },
             "Logo": {
                 "@id": "schema:logo",
@@ -54,7 +54,7 @@
             },
             "Offers": {
                 "@id": "schema:offers",
-                "@type": "box:Offer"
+                "@type": "s4i:Offer"
             },
             "Provider": {
                 "@id": "schema:provider",
@@ -100,7 +100,7 @@
                         "@id": "schema:category",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "box:EnumInsuranceProductCategoryCode#"
+                            "@vocab": "s4i:EnumInsuranceProductCategoryCode#"
                         }
                     }
                 }

@@ -22,28 +22,28 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Organization": "schema:Organization",
             "AdditionalName": {
-                "@id": "box:AdditionalName",
+                "@id": "s4i:AdditionalName",
                 "@type": "schema:Text"
             },
             "Address": {
                 "@id": "schema:address",
-                "@type": "box:PostalAddress"
+                "@type": "s4i:PostalAddress"
             },
             "BankAccount": {
-                "@id": "box:BankAccount",
-                "@type": "box:BankAccount"
+                "@id": "s4i:BankAccount",
+                "@type": "s4i:BankAccount"
             },
             "CommercialRegistrationNumber": {
-                "@id": "box:CommercialRegistrationNumber",
+                "@id": "s4i:CommercialRegistrationNumber",
                 "@type": "schema:Text"
             },
             "ContactPoint": {
                 "@id": "schema:contactPoint",
-                "@type": "box:ContactPoint"
+                "@type": "s4i:ContactPoint"
             },
             "Email": {
                 "@id": "schema:email",

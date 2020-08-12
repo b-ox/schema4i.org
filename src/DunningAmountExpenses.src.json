@@ -11,9 +11,10 @@
     "context": {
         "@context": {
             "@version": 1.1,
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DunningAmountExpenses": {
-                "@id": "box:DunningAmountExpenses",
+                "@id": "s4i:DunningAmountExpenses",
                 "@type": "schema:Number"
             }
         }

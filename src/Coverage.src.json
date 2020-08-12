@@ -16,9 +16,9 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Coverage": "box:Coverage"
+            "Coverage": "s4i:Coverage"
         }
     },
     "playground": [{

@@ -14,10 +14,10 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
-            "MotorInsuranceFullyComprehensiveCoverage": "box:MotorInsuranceFullyComprehensiveCoverage",
+            "MotorInsuranceFullyComprehensiveCoverage": "s4i:MotorInsuranceFullyComprehensiveCoverage",
             "ClaimFreeYears": {
                 "@id": "oo:motor.json#/product.motor.no-claims-discount-comprehensive.claim-free-years",
                 "@type": "oo:definitions.json#/nonnegative-integer"
@@ -27,7 +27,7 @@
                 "@type": "oo:definitions.json#/money"
             },
             "NoClaimsDiscount": {
-                "@id": "box:NoClaimsDiscount",
+                "@id": "s4i:NoClaimsDiscount",
                 "@type": "schema:Number"
             },
             "NoClaimsDiscountLevel": {

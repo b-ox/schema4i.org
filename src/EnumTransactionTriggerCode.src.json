@@ -14,17 +14,17 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
-            "Insurance company": "box:EnumTransactionTriggerCode_DE#001",
-            "Policyholder": "box:EnumTransactionTriggerCode_DE#002",
-            "Insured person": "box:EnumTransactionTriggerCode_DE#003",
-            "Broker": "box:EnumTransactionTriggerCode_DE#004",
-            "Premium payer": "box:EnumTransactionTriggerCode_DE#005",
-            "Creditor": "box:EnumTransactionTriggerCode_DE#006",
-            "Beneficial owner": "box:EnumTransactionTriggerCode_DE#007",
-            "Mail recipient": "box:EnumTransactionTriggerCode_DE#008",
-            "Beneficiary": "box:EnumTransactionTriggerCode_DE#009",
-            "Benefit recipient": "box:EnumTransactionTriggerCode_DE#010"
+            "s4i": "http://schema4i.org/",
+            "Insurance company": "s4i:EnumTransactionTriggerCode_DE#001",
+            "Policyholder": "s4i:EnumTransactionTriggerCode_DE#002",
+            "Insured person": "s4i:EnumTransactionTriggerCode_DE#003",
+            "Broker": "s4i:EnumTransactionTriggerCode_DE#004",
+            "Premium payer": "s4i:EnumTransactionTriggerCode_DE#005",
+            "Creditor": "s4i:EnumTransactionTriggerCode_DE#006",
+            "Beneficial owner": "s4i:EnumTransactionTriggerCode_DE#007",
+            "Mail recipient": "s4i:EnumTransactionTriggerCode_DE#008",
+            "Beneficiary": "s4i:EnumTransactionTriggerCode_DE#009",
+            "Benefit recipient": "s4i:EnumTransactionTriggerCode_DE#010"
         }
     }
 }

@@ -1,7 +1,7 @@
 {
     "type": "SearchAction",
     "uri": "http://schema4i.org/SearchAction",
-    "description": "The act of searching for specific items. The SearchAction is used on an API to find a resource. For this purpose, the SearchAction is sent to the server in the request body of an HTTP post request. However, read access is often implemented via HTTP GET. In this case no body is sent. Nevertheless, this request implicitly represents a SearchAction and the server will respond with the same. The search result is returned as Result object while the Object attribute identifies e.g. a postbox, a list of movies or anything else. Moste of the times the Result is an array of objects.",
+    "description": "The act of searching for specific items. The SearchAction is used on an API to find a resource. For this purpose, the SearchAction is sent to the server in the request body of an HTTP post request. However, read access is often implemented via HTTP GET. In this case no body is sent. Nevertheless, this request implicitly represents a SearchAction and the server will respond with the same. The search result is returned as Result object while the Object attribute identifies e.g. a posts4i, a list of movies or anything else. Moste of the times the Result is an array of objects.",
     "links": [{
         "url": "http://schema.org/SearchAction",
         "description": "Original Schema.org type"
@@ -17,7 +17,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "SearchAction": "schema:SearchAction",
             "Query": {
@@ -48,7 +48,7 @@
             "ActionStatus": "CompletedActionStatus",
             "Identifier": "8cfe26d3.a879c8",
             "Result": {
-                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@id": "https://api.b-ox.de/posts4i/messages/4711",
                 "@type": "Thing",
                 "Identifier": "4711"
             }
@@ -67,11 +67,11 @@
             "ActionStatus": "CompletedActionStatus",
             "Identifier": "8cfe26d3.a879c8",
             "Result": [{
-                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@id": "https://api.b-ox.de/posts4i/messages/4711",
                 "@type": "Thing",
                 "Identifier": "4711"
             }, {
-                "@id": "https://api.b-ox.de/postbox/messages/4712",
+                "@id": "https://api.b-ox.de/posts4i/messages/4712",
                 "@type": "Message",
                 "Identifier": "4712"
             }]

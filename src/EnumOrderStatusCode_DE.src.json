@@ -17,19 +17,19 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
-            "lebend": "box:EnumContractStatusCode#1",
-            "lebend kurzfristig unterjährig": "box:EnumContractStatusCode#2",
-            "ruhend Anwartschaft": "box:EnumContractStatusCode#3",
-            "storniert": "box:EnumContractStatusCode#4",
-            "ruhend beitragsfrei": "box:EnumContractStatusCode#5",
-            "beitragsfrei": "box:EnumContractStatusCode#6",
-            "beitragsfrei durch Leistung": "box:EnumContractStatusCode#7",
-            "Beitragsstundung": "box:EnumContractStatusCode#8",
-            "Sonstiges": "box:EnumContractStatusCode#9",
-            "In Leistung": "box:EnumContractStatusCode#A",
-            "In Abrufphase": "box:EnumContractStatusCode#B",
-            "Vorläufige Deckung": "box:EnumContractStatusCode#C"
+            "s4i": "http://schema4i.org/",
+            "lebend": "s4i:EnumContractStatusCode#1",
+            "lebend kurzfristig unterjährig": "s4i:EnumContractStatusCode#2",
+            "ruhend Anwartschaft": "s4i:EnumContractStatusCode#3",
+            "storniert": "s4i:EnumContractStatusCode#4",
+            "ruhend beitragsfrei": "s4i:EnumContractStatusCode#5",
+            "beitragsfrei": "s4i:EnumContractStatusCode#6",
+            "beitragsfrei durch Leistung": "s4i:EnumContractStatusCode#7",
+            "Beitragsstundung": "s4i:EnumContractStatusCode#8",
+            "Sonstiges": "s4i:EnumContractStatusCode#9",
+            "In Leistung": "s4i:EnumContractStatusCode#A",
+            "In Abrufphase": "s4i:EnumContractStatusCode#B",
+            "Vorläufige Deckung": "s4i:EnumContractStatusCode#C"
         }
     }
 }

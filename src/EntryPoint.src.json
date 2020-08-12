@@ -21,7 +21,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "EntryPoint": "schema:EntryPoint",
             "ActionPlatform": {
@@ -80,7 +80,7 @@
             "@type": "EntryPoint",
             "ContentType": "application/ld+json",
             "EncodingType": "application/ld+json",
-            "URLTemplate": "https://api.b-ox.de/postbox/messages",
+            "URLTemplate": "https://api.b-ox.de/posts4i/messages",
             "HTTPMethod": "GET"
         },
         "context": {}

@@ -14,10 +14,10 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
-            "MotorInsurancePassengerAccidentCoverage": "box:MotorInsurancePassengerAccidentCoverage",
+            "MotorInsurancePassengerAccidentCoverage": "s4i:MotorInsurancePassengerAccidentCoverage",
             "Deductible": {
                 "@id": "oo:motor.json#/product.motor.coverage.passenger-cover.deductible",
                 "@type": "oo:definitions.json#/money"

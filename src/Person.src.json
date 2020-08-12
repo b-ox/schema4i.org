@@ -26,7 +26,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
             "Person": "schema:Person",
@@ -36,11 +36,11 @@
             },
             "Address": {
                 "@id": "schema:address",
-                "@type": "box:PostalAddress"
+                "@type": "s4i:PostalAddress"
             },
             "BankAccount": {
-                "@id": "box:BankAccount",
-                "@type": "box:BankAccount"
+                "@id": "s4i:BankAccount",
+                "@type": "s4i:BankAccount"
             },
             "BirthDate": {
                 "@id": "schema:birthDate",
@@ -48,7 +48,7 @@
             },
             "ContactPoint": {
                 "@id": "schema:contactPoint",
-                "@type": "box:ContactPoint"
+                "@type": "s4i:ContactPoint"
             },
             "DrivingLicenseExpires": {
                 "@id": "oo:motor.json#/object.vehicle.driver.driving-license.expiration-date",
@@ -100,12 +100,12 @@
                 "@id": "schema:nationality",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "box:EnumCountryCode#"
+                    "@vocab": "s4i:EnumCountryCode#"
                 }
             },
             "RelatedTo": {
                 "@id": "schema:relatedTo",
-                "@type": "box:Person"
+                "@type": "s4i:Person"
             },
             "TaxID": {
                 "@id": "schema:taxID",

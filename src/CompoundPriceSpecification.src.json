@@ -19,12 +19,12 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "CompoundPriceSpecification": "schema:CompoundPriceSpecification",
             "PriceComponent": {
                 "@id": "schema:priceComponent",
-                "@type": "box:UnitPriceSpecification"
+                "@type": "s4i:UnitPriceSpecification"
             }
         }
     },

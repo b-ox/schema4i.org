@@ -14,10 +14,10 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://openontology.org/",
-            "MotorInsurancePartialComprehensiveCoverage": "box:MotorInsurancePartialComprehensiveCoverage",
+            "MotorInsurancePartialComprehensiveCoverage": "s4i:MotorInsurancePartialComprehensiveCoverage",
             "Deductible": {
                 "@id": "oo:motor.json#/product.motor.coverage.comprehensive.partial.deductible",
                 "@type": "oo:definitions.json#/money"

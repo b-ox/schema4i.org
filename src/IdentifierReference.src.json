@@ -1,7 +1,7 @@
 {
     "type": "IdentifierReference",
     "uri": "http://schema4i.org/IdentifierReference",
-    "description": "Reference to a Thing.Identifier that identifies any kind of identifier for any kind of Thing of the sender or provider of data. Used when the direction of data transfer changes. Used to refer to the Identifier of the origin sender.",
+    "description": "While Identifier identifies any kind of Thing of the sender or provider of data IdentifierReference refers to this origin Identifier. It is especially used when the direction of data transfer changes. Sample: If an insurer provides data with an Identifier = 4711 and a broker wants to refer to it when responding he uses IdentifierReference = 4711 to tell the insurer what specific object / data is addressed.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Thing#IdentifierReference" }
@@ -11,6 +11,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
+            "box": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "IdentifierReference": {
                 "@id": "box:IdentifierReference",

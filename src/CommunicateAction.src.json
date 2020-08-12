@@ -22,12 +22,12 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "CommunicateAction": "schema:CommunicateAction",
             "About": {
                 "@id": "schema:about",
-                "@type": "box:Thing"
+                "@type": "s4i:Thing"
             },
             "Recipient": {
                 "@id": "schema:recipient"

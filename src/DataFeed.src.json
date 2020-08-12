@@ -16,12 +16,12 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DataFeed": "schema:DataFeed",
             "DataFeedElement": {
                 "@id": "schema:dataFeedElement",
-                "@type": "box:DataFeedItem"
+                "@type": "s4i:DataFeedItem"
             }
         }
     },

@@ -10,9 +10,9 @@ const path = require("path");
 // configuration
 const fromPath = "src/";
 let typeIndex = {
-    name: "schema4i.org",
-    description: "Semantic Data Model for Insurances",
-    release: 0.56,
+    name: "Schema4i.org",
+    description: "Schema for insurances (S4i)",
+    release: 0.58,
     modified: new Date(),
     objects: 0,
     enumerations: 0,
@@ -95,7 +95,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             for (const key in obj.context['@context']) {
                 if (typeof obj.context['@context'][key] === 'object') {
                     if (obj.context['@context'][key]['@type']) {
-                        if (obj.context['@context'][key]['@type'].startsWith('box:')) {
+                        if (obj.context['@context'][key]['@type'].startsWith('s4i:')) {
                             dependencies.push({
                                 "@id": "http://" + environment + "/" + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
                             })
@@ -235,7 +235,6 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
     // write sitemap file
     let sitemap = 'https://' + environment + '\n';
-    sitemap += 'https://' + environment + '/home\n';
     sitemap += 'https://' + environment + '/documentation\n';
     sitemap += 'https://' + environment + '/samples\n';
     sitemap += 'https://' + environment + '/models\n';

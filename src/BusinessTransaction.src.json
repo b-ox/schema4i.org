@@ -13,37 +13,37 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "BusinessTransaction": "box:BusinessTransaction",
+            "BusinessTransaction": "s4i:BusinessTransaction",
             "Category": {
                 "@id": "schema:category",
                 "@type": "schema:Text"
             },
             "Copy": {
-                "@id": "box:Copy",
-                "@type": "box:Copy"
+                "@id": "s4i:Copy",
+                "@type": "s4i:Copy"
             },
             "Delivery": {
-                "@id": "box:BusinessTransactionDelivery",
-                "@type": "box:BusinessTransactionDelivery"
+                "@id": "s4i:BusinessTransactionDelivery",
+                "@type": "s4i:BusinessTransactionDelivery"
             },
             "Order": {
-                "@id": "box:Order",
-                "@type": "box:Order"
+                "@id": "s4i:Order",
+                "@type": "s4i:Order"
             },
             "TransactionCode": {
-                "@id": "box:TransactionCode",
+                "@id": "s4i:TransactionCode",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "box:EnumTransactionCode#"
+                    "@vocab": "s4i:EnumTransactionCode#"
                 }
             },
             "TransactionTrigger": {
-                "@id": "box:TransactionTrigger",
+                "@id": "s4i:TransactionTrigger",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "box:EnumTransactionTriggerCode#"
+                    "@vocab": "s4i:EnumTransactionTriggerCode#"
                 }
             },
             "ValidThrough": {

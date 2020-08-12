@@ -14,7 +14,7 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ShareAction": "schema:ShareAction"
         }
@@ -44,7 +44,7 @@
                 "Name": "Eine Nachricht für Sie"
             },
             "Object": {
-                "@id": "https://api.b-ox.de/postbox/messages/4711",
+                "@id": "https://api.b-ox.de/posts4i/messages/4711",
                 "@type": "Message"
             },
             "Recipient": {

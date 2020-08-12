@@ -18,14 +18,14 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "PostalAddress": "schema:PostalAddress",
             "AddressCountry": {
                 "@id": "schema:addressCountry",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "box:EnumCountryCode#"
+                    "@vocab": "s4i:EnumCountryCode#"
                 }
             },
             "AddressLocality": {
@@ -36,8 +36,8 @@
                 "@id": "schema:addressRegion",
                 "@type": "schema:Text"
             },
-            "PostOfficeBoxNumber": {
-                "@id": "schema:postOfficeBoxNumber",
+            "PostOffices4iNumber": {
+                "@id": "schema:postOffices4iNumber",
                 "@type": "schema:Text"
             },
             "PostalCode": {
@@ -59,7 +59,7 @@
             "AddressCountry": "D",
             "AddressLocality": "Düsseldorf",
             "AddressRegion": "NRW",
-            "PostOfficeBoxNumber": "Postfach 4711",
+            "PostOffices4iNumber": "Postfach 4711",
             "PostalCode": "40233",
             "StreetAddress": "Düsseldorf"
         },
