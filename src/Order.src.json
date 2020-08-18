@@ -14,6 +14,10 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
+        "Broker": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ],
         "Customer": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
@@ -31,6 +35,9 @@
             "BillingAddress": {
                 "@id": "schema:billingAddress",
                 "@type": "s4i:PostalAddress"
+            },
+            "Broker": {
+                "@id": "schema:broker"
             },
             "ConfirmationNumber": {
                 "@id": "schema:confirmationNumber",
@@ -79,6 +86,7 @@
             "@context": {},
             "@type": "Order",
             "BillingAddress": {},
+            "Broker": {},
             "ConfirmationNumber": "BELEG-03 -0000014",
             "Customer": {},
             "Discount": 100.00,
