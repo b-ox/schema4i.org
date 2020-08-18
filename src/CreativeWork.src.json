@@ -21,6 +21,9 @@
         "Creator": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
+        ],
+        "HasPart": [
+            { "@id": "http://schema4i.org/CreativeWork" }
         ]
     },
     "context": {
@@ -46,6 +49,9 @@
             "EncodingFormat": {
                 "@id": "schema:encodingFormat",
                 "@type": "schema:Text"
+            },
+            "HasPart": {
+                "@id": "schema:hasPart"
             },
             "InteractionStatistic": {
                 "@id": "schema:interactionStatistic",
@@ -76,6 +82,7 @@
             "DateCreated": "2020-06-26T14:48:13",
             "DateModified": "2020-06-26T15:18:30",
             "DatePublished": "2020-06-26T16:00:01",
+            "HasPart": {},
             "InteractionStatistic": {},
             "Keywords": "Posteingang,Wichtig",
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
