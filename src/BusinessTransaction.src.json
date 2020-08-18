@@ -20,6 +20,10 @@
                 "@id": "schema:category",
                 "@type": "schema:Text"
             },
+            "Claim": {
+                "@id": "schema:Claim",
+                "@type": "s4i:Claim"
+            },
             "Copy": {
                 "@id": "s4i:Copy",
                 "@type": "s4i:Copy"
@@ -29,7 +33,7 @@
                 "@type": "s4i:BusinessTransactionDelivery"
             },
             "Order": {
-                "@id": "s4i:Order",
+                "@id": "schema:Order",
                 "@type": "s4i:Order"
             },
             "TransactionCode": {
@@ -59,6 +63,7 @@
             "@context": {},
             "@type": "BusinessTransaction",
             "Category": "Antrag/Neugeschäft",
+            "Claim": {},
             "Copy": true,
             "Delivery": {},
             "Order": {},
@@ -67,7 +72,7 @@
         },
         "context": {}
     }, {
-        "title": "A realistic BusinessTransaction",
+        "title": "A realistic BusinessTransaction of a motor insurance policy",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -112,13 +117,24 @@
                 "Customer": {
                     "@type": "Person",
                     "Identifier": "KNR-4711",
+                    "HonorificPrefix": "Herr Dr.",
                     "GivenName": "Markus",
-                    "FamilyName": "Heussen",
+                    "Name": "Heussen",
+                    "AdditionalName": ["c/o b-tix GmbH", "4. Etage"],
                     "Address": {
                         "@type": "PostalAddress",
                         "StreetAddress": "Lindenstr. 48-52",
                         "PostalCode": "40233",
                         "AddressLocality": "Düsseldorf"
+                    },
+                    "BirthDate": "1973-11-16",
+                    "Gender": "Male",
+                    "Telephone": "0211 41608400",
+                    "FaxNumber": "0211 41608397",
+                    "Email": "service@b-tix.tld",
+                    "TaxID": "DE123456789",
+                    "DrivingLicense": {
+                        "IssueDate": "1991-11-16"
                     },
                     "BankAccount": {
                         "@type": "BankAccount",
@@ -130,6 +146,11 @@
                             "Name": "Postbank"
                         }
                     }
+                },
+                "Broker": {
+                    "@type": "Organization",
+                    "Identifier": "VU.VMNR-4711",
+                    "IdentifierReference": "VM.VMNR-1147"
                 },
                 "OrderedItem": {
                     "@type": "MotorInsuranceProduct",
