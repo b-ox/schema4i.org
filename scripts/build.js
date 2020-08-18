@@ -12,7 +12,7 @@ const fromPath = "src/";
 let typeIndex = {
     name: "Schema4i.org",
     description: "Schema for insurances (S4i)",
-    release: 0.58,
+    release: 0.59,
     modified: new Date(),
     objects: 0,
     enumerations: 0,
@@ -86,7 +86,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             const dependencies = obj.parents.concat(obj.base);
             for (const key in obj.multipletypes) {
                 for (const object of obj.multipletypes[key]) {
-                    if (!object['@id'].startsWith('http://schema.org') && !object['@id'].startsWith('https://openontology.org'))
+                    if (!object['@id'].startsWith('http://schema.org') && !object['@id'].startsWith('https://docs.riskine.com'))
                         dependencies.push(object);
                     else
                         consoleLike.log('Skip native schema type.')
