@@ -1,0 +1,56 @@
+{
+    "type": "DrivingLicense",
+    "uri": "http://schema4i.org/DrivingLicense",
+    "description": "A document permitting a Person to drive a motor vehicle.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#DrivingLicense" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://docs.riskine.com/",
+            "DrivingLicense": "box:DrivingLicense",
+            "ExpirationDate": {
+                "@id": "oo:ontology/driving-license/expiration-date",
+                "@type": "oo:oo:ontology/definitions/date"
+            },
+            "IdNumber": {
+                "@id": "oo:ontology/driving-license/id-number",
+                "@type": "oo:oo:ontology/definitions/string"
+            },
+            "IssueAuthority": {
+                "@id": "oo:ontology/driving-license/issue-authority",
+                "@type": "oo:oo:ontology/definitions/string"
+            },
+            "IssueCountry": {
+                "@id": "oo:ontology/driving-license/issue-country",
+                "@type": "oo:oo:ontology/definitions/string"
+            },
+            "IssueDate": {
+                "@id": "oo:ontology/driving-license/issue-date",
+                "@type": "oo:ontology/definitions/date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DrivingLicense",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DrivingLicense",
+            "ExpirationDate": "2022-11-16",
+            "IdNumber": "123456789",
+            "IssueAuthority": "Viersen",
+            "IssueCountry": "DE",
+            "IssueDate": "2012-11-16"
+        },
+        "context": {}
+    }]
+}

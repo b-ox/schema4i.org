@@ -17,18 +17,13 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {
-        "DrivingLicenseIssueCountry": [
-            { "@id": "https://openontology.org/definitions.json#/string" },
-            { "@id": "http://schema4i.org/EnumCountryCode" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://openontology.org/",
+            "oo": "https://docs.riskine.com/",
             "Person": "schema:Person",
             "AdditionalName": {
                 "@id": "schema:additionalName",
@@ -50,31 +45,12 @@
                 "@id": "schema:contactPoint",
                 "@type": "s4i:ContactPoint"
             },
-            "DrivingLicenseExpires": {
-                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.expiration-date",
-                "@type": "oo:definitions.json#/date"
-            },
-            "DrivingLicenseID": {
-                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.id-number",
-                "@type": "oo:definitions.json#/string"
-            },
-            "DrivingLicenseIssueAuthority": {
-                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.issue-authority",
-                "@type": "oo:definitions.json#/string"
-            },
-            "DrivingLicenseIssueCountry": {
-                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.issue-country"
-            },
-            "DrivingLicenseIssueDate": {
-                "@id": "oo:motor.json#/object.vehicle.driver.driving-license.issue-date",
-                "@type": "oo:definitions.json#/date"
+            "DrivingLicense": {
+                "@id": "s4i:DrivingLicense",
+                "@type": "s4i:DrivingLicense"
             },
             "Email": {
                 "@id": "schema:email",
-                "@type": "schema:Text"
-            },
-            "FamilyName": {
-                "@id": "schema:familyName",
                 "@type": "schema:Text"
             },
             "FaxNumber": {
@@ -128,13 +104,8 @@
             "BankAccount": {},
             "BirthDate": "1973-11-16",
             "ContactPoint": {},
-            "DrivingLicenseExpires": "2022-04-01",
-            "DrivingLicenseID": "4711",
-            "DrivingLicenseIssueAuthority": "Düsseldorf",
-            "DrivingLicenseIssueCountry": "D",
-            "DrivingLicenseIssueDate": "1990-11-11",
+            "DrivingLicense": {},
             "Email": "noreply@b-tix.de",
-            "FamilyName": "Heussen",
             "FaxNumber": "0211 41608 100",
             "Gender": "Male",
             "GivenName": "Markus",
@@ -164,7 +135,7 @@
             },
             "BirthDate": "1973-11-16",
             "Email": "noreply@b-tix.de",
-            "FamilyName": "Heussen",
+            "Name": "Heussen",
             "GivenName": "Markus",
             "Telephone": "+49 211 41608 400"
         },
