@@ -1,0 +1,63 @@
+{
+    "type": "Question",
+    "uri": "http://schema4i.org/Question",
+    "description": "A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.",
+    "links": [{
+        "url": "http://schema.org/Question",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {
+        "AcceptedAnswer": [
+            { "@id": "http://schema4i.org/Answer" },
+            { "@id": "http://schema4i.org/ItemList" }
+        ],
+        "SuggestedAnswer": [
+            { "@id": "http://schema4i.org/Answer" },
+            { "@id": "http://schema4i.org/ItemList" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Question": "schema:Question",
+            "AcceptedAnswer": {
+                "@id": "schema:acceptedAnswer"
+            },
+            "AnswerCount": {
+                "@id": "schema:answerCount",
+                "@type": "schema:Number"
+            },
+            "DownvoteCount": {
+                "@id": "schema:downvoteCount",
+                "@type": "schema:Integer"
+            },
+            "SuggestedAnswer": {
+                "@id": "schema:suggestedAnswer"
+            },
+            "UpvoteCount": {
+                "@id": "schema:upvoteCount",
+                "@type": "schema:Integer"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Question",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Question",
+            "AcceptedAnswer": {},
+            "AnswerCount": 1,
+            "DownvoteCount": 0,
+            "SuggestedAnswer": {},
+            "UpvoteCount": 2
+        },
+        "context": {}
+    }]
+}

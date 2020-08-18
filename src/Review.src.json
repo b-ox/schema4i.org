@@ -1,0 +1,43 @@
+{
+    "type": "Review",
+    "uri": "http://schema4i.org/Review",
+    "description": "A review of an item - for example, of a restaurant, movie, or store. In the insurance industry most of the times claims are reviewd by ClaimReview.",
+    "links": [{
+        "url": "http://schema.org/Review",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/ClaimReview" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Review": "schema:Review",
+            "ItemReviewed": {
+                "@id": "schema:itemReviewed",
+                "@type": "s4i:Thing"
+            },
+            "ReviewBody": {
+                "@id": "schema:reviewBody",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Review",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Review",
+            "ItemReviewed": {},
+            "ReviewBody": "The actual body of the review."
+        },
+        "context": {}
+    }]
+}

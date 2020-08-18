@@ -1,0 +1,77 @@
+{
+    "type": "Conversation",
+    "uri": "http://schema4i.org/Conversation",
+    "description": "One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.",
+    "links": [{
+        "url": "http://schema.org/Conversation",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Conversation": "schema:Conversation"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Conversation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Conversation"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic Conversation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Conversation.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Person.jsonld"
+            ],
+            "@type": "Conversation",
+            "Name": "Chat between Max and Moritz",
+            "HasPart": [{
+                "@type": "Message",
+                "Sender": {
+                    "@type": "Person",
+                    "Name": "Max"
+                },
+                "Recipient": {
+                    "@type": "Person",
+                    "Name": "Moritz"
+                },
+                "About": {
+                    "@type": "Thing",
+                    "Text": "Hi Moritz :-)"
+                },
+                "DatePublished": "2020-08-17T12:03:01"
+            }, {
+                "@type": "Message",
+                "Sender": {
+                    "@type": "Person",
+                    "Name": "Moritz"
+                },
+                "Recipient": {
+                    "@type": "Person",
+                    "Name": "Max"
+                },
+                "About": {
+                    "@type": "Thing",
+                    "Text": "Hello Max, how are you?"
+                },
+                "DatePublished": "2020-08-17T12:03:15"
+            }]
+        },
+        "context": {}
+    }]
+}

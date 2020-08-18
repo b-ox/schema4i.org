@@ -1,0 +1,36 @@
+{
+    "type": "ClaimReview",
+    "uri": "http://schema4i.org/ClaimReview",
+    "description": "A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).",
+    "links": [{
+        "url": "http://schema.org/ClaimReview",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Review" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ClaimReview": "schema:ClaimReview",
+            "ClaimReviewed": {
+                "@id": "schema:claimReviewed",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ClaimReview",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "ClaimReview",
+            "ClaimReviewed": "Some short summary of the specific claim reviewed."
+        },
+        "context": {}
+    }]
+}

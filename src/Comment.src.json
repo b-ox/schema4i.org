@@ -1,0 +1,48 @@
+{
+    "type": "Comment",
+    "uri": "http://schema4i.org/Comment",
+    "description": "A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the text property, and its topic via about, properties shared with all CreativeWorks.",
+    "links": [{
+        "url": "http://schema.org/Comment",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Answer" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Comment": "schema:Comment",
+            "DownvoteCount": {
+                "@id": "schema:downvoteCount",
+                "@type": "schema:Integer"
+            },
+            "ParentItem": {
+                "@id": "schema:parentItem",
+                "@type": "s4i:Question"
+            },
+            "UpvoteCount": {
+                "@id": "schema:upvoteCount",
+                "@type": "schema:Integer"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Comment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Comment",
+            "DownvoteCount": 5,
+            "ParentItem": {},
+            "UpvoteCount": 3
+        },
+        "context": {}
+    }]
+}
