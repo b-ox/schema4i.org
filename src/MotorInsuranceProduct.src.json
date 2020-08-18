@@ -6,7 +6,7 @@
         "url": "https://github.com/riskine/ontology/blob/master/schemas/products/motor.json",
         "description": "Parts are used from the Insurance Ontology"
     }, {
-        "url": "https://openontology.org",
+        "url": "https://docs.riskine.com",
         "description": "Global data model for insurance"
     }],
     "parents": [],
@@ -44,9 +44,9 @@
                 "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
                 {
-                    "oo": "https://openontology.org/",
+                    "oo": "https://docs.riskine.com/",
                     "SumInsured": {
-                        "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured",
+                        "@id": "oo:ontology/motor/product.motor.coverage.liability.sum-insured",
                         "@type": "@vocab",
                         "@context": {
                             "@vocab": "s4i:EnumMotorInsuranceLiabilityCoverageCode#"

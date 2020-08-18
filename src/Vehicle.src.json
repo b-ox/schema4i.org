@@ -20,11 +20,11 @@
     ],
     "multipletypes": {
         "RegistrationArea": [
-            { "@id": "https://openontology.org/definitions.json#/string" },
+            { "@id": "https://docs.riskine.com/ontology/definitions/string" },
             { "@id": "http://schema4i.org/EnumCountryCode" }
         ],
         "Garage": [
-            { "@id": "https://openontology.org/definitions.json#/boolean" },
+            { "@id": "https://docs.riskine.com/ontology/definitions/boolean" },
             { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
         "Holder": [
@@ -32,7 +32,7 @@
             { "@id": "http://schema4i.org/Organization" }
         ],
         "VehicleType": [
-            { "@id": "https://openontology.org/definitions.json#/vehicle-type" },
+            { "@id": "https://docs.riskine.com/ontology/definitions/vehicle-type" },
             { "@id": "http://schema4i.org/EnumVehicleCode" }
         ]
     },
@@ -41,7 +41,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://openontology.org/",
+            "oo": "https://docs.riskine.com/",
             "Vehicle": "schema:Vehicle",
             "DateHolderFirstRegistered": {
                 "@id": "s4i:DateHolderFirstRegistered",
@@ -52,32 +52,32 @@
                 "@type": "schema:Date"
             },
             "Garage": {
-                "@id": "oo:vehicle.json#/garage"
+                "@id": "oo:ontology/vehicle/garage"
             },
             "Holder": {
                 "@id": "s4i:Holder"
             },
             "HSN": {
-                "@id": "oo:vehicle.json#/hsn",
-                "@type": "oo:definitions.json#/string"
+                "@id": "oo:ontology/vehicle/hsn",
+                "@type": "oo:ontology/definitions/string"
             },
             "NumberPlate": {
-                "@id": "oo:vehicle.json#/number-plate",
-                "@type": "oo:definitions.json#/string"
+                "@id": "oo:ontology/vehicle/number-plate",
+                "@type": "oo:ontology/definitions/string"
             },
             "RegistrationArea": {
-                "@id": "oo:vehicle.json#/registration-area"
+                "@id": "oo:ontology/vehicle/registration-area"
             },
             "TSN": {
-                "@id": "oo:vehicle.json#/tsn",
-                "@type": "oo:definitions.json#/string"
+                "@id": "oo:ontology/vehicle/tsn",
+                "@type": "oo:ontology/definitions/string"
             },
             "VehicleIdentificationNumber": {
                 "@id": "schema:vehicleIdentificationNumber",
                 "@type": "schema:Text"
             },
             "VehicleType": {
-                "@id": "oo:vehicle.json#/vehicle-type"
+                "@id": "oo:ontology/vehicle/vehicle-type"
             }
         }
     },

@@ -19,15 +19,15 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://openontology.org/",
+            "oo": "https://docs.riskine.com/",
             "BankAccount": "schema:BankAccount",
             "BIC": {
-                "@id": "oo:bank-account.json#/bic",
-                "@type": "oo:definitions.json#/string"
+                "@id": "oo:ontology/bank-account/bic",
+                "@type": "oo:ontology/definitions/string"
             },
             "IBAN": {
-                "@id": "oo:bank-account.json#/iban",
-                "@type": "oo:definitions.json#/string"
+                "@id": "oo:ontology/bank-account/iban",
+                "@type": "oo:ontology/definitions/string"
             },
             "Provider": {
                 "@id": "schema:provider",

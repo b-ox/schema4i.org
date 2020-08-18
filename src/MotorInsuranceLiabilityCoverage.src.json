@@ -3,7 +3,7 @@
     "uri": "http://schema4i.org/MotorInsuranceLiabilityCoverage",
     "description": "Provides coverage for liability insurance damage in the context of motor insurance.",
     "links": [{
-        "url": "https://openontology.org",
+        "url": "https://docs.riskine.com",
         "description": "Global data model for insurance"
     }],
     "parents": [],
@@ -12,7 +12,7 @@
     ],
     "multipletypes": {
         "SumInsured": [
-            { "@id": "https://openontology.org/motor.json#/product.motor.coverage.liability.sum-insured" },
+            { "@id": "https://docs.riskine.com/ontology/definitions/money" },
             { "@id": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode" }
         ]
     },
@@ -21,26 +21,26 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://openontology.org/",
+            "oo": "https://docs.riskine.com/",
             "MotorInsuranceLiabilityCoverage": "s4i:MotorInsuranceLiabilityCoverage",
             "ClaimFreeYears": {
-                "@id": "oo:motor.json#/product.motor.no-claims-discount-liability.claim-free-years",
-                "@type": "oo:definitions.json#/nonnegative-integer"
+                "@id": "oo:ontology/motor/product.motor.no-claims-discount-liability.claim-free-years",
+                "@type": "oo:ontology/definitions/nonnegative-integer"
             },
             "Deductible": {
-                "@id": "oo:motor.json#/product.motor.coverage.liability.deductible",
-                "@type": "oo:definitions.json#/money"
+                "@id": "oo:ontology/motor/product.motor.coverage.liability.deductible",
+                "@type": "oo:ontology/definitions/money"
             },
             "NoClaimsDiscount": {
                 "@id": "s4i:NoClaimsDiscount",
                 "@type": "schema:Number"
             },
             "NoClaimsDiscountLevel": {
-                "@id": "oo:motor.json#/product.motor.no-claims-discount-liability.level",
-                "@type": "oo:definitions.json#/string"
+                "@id": "oo:ontology/motor/product.motor.no-claims-discount-liability.level",
+                "@type": "oo:ontology/definitions/string"
             },
             "SumInsured": {
-                "@id": "oo:motor.json#/product.motor.coverage.liability.sum-insured"
+                "@id": "oo:ontology/motor/product.motor.coverage.liability.sum-insured"
             }
         }
     },
