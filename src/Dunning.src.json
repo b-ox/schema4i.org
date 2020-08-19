@@ -15,7 +15,7 @@
             "schema": "http://schema.org/",
             "Dunning": "s4i:Dunning",
             "AdditionalCosts": {
-                "@id": "box:DunningAdditionalCosts",
+                "@id": "s4i:DunningAdditionalCosts",
                 "@type": "schema:Number"
             },
             "Amount": {
