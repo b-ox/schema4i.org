@@ -16,10 +16,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DigitalDocument": "schema:DigitalDocument",
-            "Item": {
-                "@id": "schema:item"
-            }
+            "DigitalDocument": "schema:DigitalDocument"
         }
     },
     "playground": [{
@@ -27,8 +24,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "DigitalDocument",
-            "Item": {}
+            "@type": "DigitalDocument"
         },
         "context": {}
     }]
