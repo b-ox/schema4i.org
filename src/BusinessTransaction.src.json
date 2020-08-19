@@ -28,6 +28,10 @@
                 "@id": "s4i:Copy",
                 "@type": "s4i:Copy"
             },
+            "DateCreated": {
+                "@id": "schema:dateCreated",
+                "@type": "schema:DateTime"
+            },
             "Delivery": {
                 "@id": "s4i:BusinessTransactionDelivery",
                 "@type": "s4i:BusinessTransactionDelivery"
@@ -35,6 +39,10 @@
             "Order": {
                 "@id": "schema:Order",
                 "@type": "s4i:Order"
+            },
+            "Dunning": {
+                "@id": "s4i:Dunning",
+                "@type": "s4i:Dunning"
             },
             "TransactionCode": {
                 "@id": "s4i:TransactionCode",
@@ -65,8 +73,10 @@
             "Category": "Antrag/Neugeschäft",
             "Claim": {},
             "Copy": true,
+            "DateCreated": "2020-08-01T13:00:12",
             "Delivery": {},
             "Order": {},
+            "Dunning": {},
             "TransactionCode": "100007000",
             "ValidThrough": "2020-10-01T00:00:00"
         },
@@ -108,6 +118,7 @@
             },
             "ValidThrough": "2022-01-01T00:00:00",
             "Copy": true,
+            "DateCreated": "2020-08-01T13:00:12",
             "Order": {
                 "@type": "Order",
                 "ConfirmationNumber": [
