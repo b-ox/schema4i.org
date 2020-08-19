@@ -1,0 +1,67 @@
+{
+    "type": "DirectDebitReturnCode",
+    "uri": "http://schema4i.org/DirectDebitReturnCode",
+    "description": "Reason for non-payment of a SEPA / direct debit according to the European ISO Standard, e.g. AC01 = Incorrect Account Number.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Dunning#DirectDebitReturnCode"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "DirectDebitReturnCode": {
+                "@id": "s4i:DirectDebitReturnCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDirectDebitReturnCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Direct depit return code is 'Incorrect Account Number'",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DirectDebitReturnCode": "AC01"
+        },
+        "context": {}
+    }, {
+        "title": "Return code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "DirectDebitReturnCode": "AC01"
+        },
+        "context": {
+            "@context": {
+                "s4i": "http://schema4i.org/",
+                "Reason": {
+                    "@id": "s4i:DirectDebitReturnCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema4i.org/EnumDirectDebitReturnCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Return code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "DirectDebitReturnCode": "AC01"
+        },
+        "context": {
+            "@context": {
+                "s4i": "http://schema4i.org/",
+                "Rücklastschrift": {
+                    "@id": "s4i:DirectDebitReturnCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema4i.org/EnumDirectDebitReturnCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}
