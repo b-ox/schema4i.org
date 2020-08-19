@@ -1,10 +1,10 @@
 {
-    "type": "DunningAmountExpenses",
-    "uri": "http://schema4i.org/DunningAmountExpenses",
-    "description": "Amount of interest and fees according to OLG regulation, e.g. 25.00.",
+    "type": "TotalDunningAmount",
+    "uri": "http://schema4i.org/TotalDunningAmount",
+    "description": "Sum of all amounts from this reminder incl. dunning amount, expenses and addtional costs, e.g. 150.00.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/Invoice#DunningAmountExpenses"
+        "@id": "http://schema4i.org/Dunning#TotalAmount"
     }],
     "base": [],
     "multipletypes": {},
@@ -13,18 +13,18 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DunningAmountExpenses": {
-                "@id": "s4i:DunningAmountExpenses",
+            "TotalDunningAmount": {
+                "@id": "s4i:TotalDunningAmount",
                 "@type": "schema:Number"
             }
         }
     },
     "playground": [{
-        "title": "Sample DunningAmountExpenses",
+        "title": "Sample TotalDunningAmount",
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "DunningAmountExpenses": 25.00
+            "TotalDunningAmount": 150.00
         },
         "context": {}
     }]

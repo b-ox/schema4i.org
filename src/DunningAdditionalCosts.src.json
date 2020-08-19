@@ -1,10 +1,10 @@
 {
-    "type": "DunningAmountAddditionalCosts",
-    "uri": "http://schema4i.org/DunningAmountAddditionalCosts",
+    "type": "DunningAdditionalCosts",
+    "uri": "http://schema4i.org/DunningAdditionalCosts",
     "description": "In addition to the dunning amount and costs, specifies any additional dunning amounts, e.g. 25.00.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/Invoice#DunningAmountAddditionalCosts"
+        "@id": "http://schema4i.org/Dunning#AdditionalCosts"
     }],
     "base": [],
     "multipletypes": {},
@@ -13,18 +13,18 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DunningAmountAddditionalCosts": {
-                "@id": "s4i:DunningAmountAddditionalCosts",
+            "DunningAdditionalCosts": {
+                "@id": "s4i:DunningAdditionalCosts",
                 "@type": "schema:Number"
             }
         }
     },
     "playground": [{
-        "title": "Sample DunningAmountAddditionalCosts",
+        "title": "Sample DunningAdditionalCosts",
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "DunningAmountAddditionalCosts": 25.00
+            "DunningAdditionalCosts": 25.00
         },
         "context": {}
     }]

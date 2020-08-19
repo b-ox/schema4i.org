@@ -1,0 +1,31 @@
+{
+    "type": "LiabilityEndDate",
+    "uri": "http://schema4i.org/LiabilityEndDate",
+    "description": "Indicates the date on which liability of an insurance cover ends e.g. if no timely receipt of payment is recorded.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Dunning#LiabilityEndDate"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LiabilityEndDate": {
+                "@id": "s4i:LiabilityEndDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample LiabilityEndDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "LiabilityEndDate": "2020-02-01"
+        },
+        "context": {}
+    }]
+}

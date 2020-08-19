@@ -1,0 +1,31 @@
+{
+    "type": "DunningDate",
+    "uri": "http://schema4i.org/DunningDate",
+    "description": "The date of a dunning.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Dunning#Date"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DunningDate": {
+                "@id": "s4i:DunningDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DunningDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DunningDate": "2020-08-01"
+        },
+        "context": {}
+    }]
+}

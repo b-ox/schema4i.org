@@ -1,0 +1,30 @@
+{
+    "type": "BankBalance",
+    "uri": "http://schema4i.org/BankBalance",
+    "description": "Current amount of money on an account. This can e. g. be a bank account of a customer or an account for premium payment managed by an insurance company. A negative balance is shown with a negative sign, e.g. -50.00.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Dunning#BankBalance"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "schema": "http://schema.org/",
+            "BankBalance": {
+                "@id": "box:BankBalance",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BankBalance",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "BankBalance": "-50.00"
+        },
+        "context": {}
+    }]
+}

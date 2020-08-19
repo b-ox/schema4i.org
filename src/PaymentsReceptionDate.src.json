@@ -1,0 +1,31 @@
+{
+    "type": "PaymentsReceptionDate",
+    "uri": "http://schema4i.org/PaymentsReceptionDate",
+    "description": "Date up to which incoming payments were taken into account.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Dunning#PaymentsReceptionDate"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PaymentsReceptionDate": {
+                "@id": "s4i:PaymentsReceptionDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample PaymentsReceptionDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "PaymentsReceptionDate": "2020-01-01"
+        },
+        "context": {}
+    }]
+}

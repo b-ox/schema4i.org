@@ -1,0 +1,86 @@
+{
+    "type": "Dunning",
+    "uri": "http://schema4i.org/Dunning",
+    "description": "Detailed information about a missing payment of an invoice for all kind of payment methods.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/BusinessTransaction#Dunning" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Dunning": "s4i:Dunning",
+            "AdditionalCosts": {
+                "@id": "box:DunningAdditionalCosts",
+                "@type": "schema:Number"
+            },
+            "Amount": {
+                "@id": "s4i:DunningAmount",
+                "@type": "schema:Number"
+            },
+            "BankBalance": {
+                "@id": "s4i:BankBalance",
+                "@type": "schema:Number"
+            },
+            "Date": {
+                "@id": "s4i:DunningDate",
+                "@type": "schema:Number"
+            },
+            "Costs": {
+                "@id": "s4i:DunningCosts",
+                "@type": "schema:Number"
+            },
+            "Currency": {
+                "@id": "schema:currency",
+                "@type": "schema:Text"
+            },
+            "DirectDebitReturnCode": {
+                "@id": "s4i:DirectDebitReturnCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDirectDebitReturnCode#"
+                }
+            },
+            "LiabilityEndDate": {
+                "@id": "s4i:LiabilityEndDate",
+                "@type": "schema:Date"
+            },
+            "PaymentsReceptionDate": {
+                "@id": "s4i:PaymentsReceptionDate",
+                "@type": "schema:Date"
+            },
+            "TotalAmount": {
+                "@id": "s4i:TotalDunningAmount",
+                "@type": "schema:Number"
+            },
+            "UnpaidSinceDate": {
+                "@id": "s4i:UnpaidSinceDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Dunning",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Dunning",
+            "AdditionalCosts": 25.00,
+            "Amount": 100.00,
+            "BankBalance": -150.00,
+            "Date": "2020-08-01",
+            "DirectDebitReturnCode": "AC01",
+            "Costs": 25.00,
+            "Currency": "EUR",
+            "LiabilityEndDate": "2020-07-01",
+            "PaymentsReceptionDate": "2020-07-25",
+            "UnpaidSinceDate": "2020-07-01",
+            "TotalAmount": 150.00
+        },
+        "context": {}
+    }]
+}

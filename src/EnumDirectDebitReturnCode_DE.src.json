@@ -1,0 +1,32 @@
+{
+    "type": "EnumDirectDebitReturnCode_DE",
+    "uri": "http://schema4i.org/EnumDirectDebitReturnCode_DE",
+    "description": "Ein Auszug aus den Fehlercodes gemäß der europäischen ISO-Norm, der den Grund angibt, warum eine SEPA-Lastschrift gescheitert ist, z.B. AC01 = Falsche Kontonummer. Wenn Sie einen Code vermissen, können Sie uns gerne kontaktieren.",
+    "links": [{
+        "url": "http://schema4i.org/EnumDirectDebitReturnCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2019-05/EPC173-14%20v5.0%20Guidance%20on%20Reason%20Codes%20for%20SDD%20R-transactions.pdf",
+        "description": "GUIDANCE ON REASON CODES FOR SCT R-TRANSACTIONS of European Payments Council (ISO Standard)"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/DirectDebitReturnCode"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "IBAN fehlerhaft": "s4i:EnumDirectDebitReturnCode#AC01",
+            "Konto aufgelöst": "s4i:EnumDirectDebitReturnCode#AC04",
+            "Konto gesperrt": "s4i:EnumDirectDebitReturnCode#AC06",
+            "Abrechnung fehlgeschlagen": "s4i:EnumDirectDebitReturnCode#ED05",
+            "Kein gültiges Mandat": "s4i:EnumDirectDebitReturnCode#MD01",
+            "Infos zum Mandat fehlen oder sind inkorrekt": "s4i:EnumDirectDebitReturnCode#MD02",
+            "Widerspruch durch den Zahler": "s4i:EnumDirectDebitReturnCode#MD06",
+            "Rückgabe durch den Zahler": "s4i:EnumDirectDebitReturnCode#MS02",
+            "BIC ungültig": "s4i:EnumDirectDebitReturnCode#RC01"
+        }
+    }
+}

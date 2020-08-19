@@ -56,18 +56,6 @@
             "Customer": {
                 "@id": "schema:customer"
             },
-            "DunningAmount": {
-                "@id": "s4i:DunningAmount",
-                "@type": "schema:Number"
-            },
-            "DunningAmountExpenses": {
-                "@id": "s4i:DunningAmountExpenses",
-                "@type": "schema:Number"
-            },
-            "DunningAmountAddditionalCosts": {
-                "@id": "s4i:DunningAmountAddditionalCosts",
-                "@type": "schema:Number"
-            },
             "PaymentDueDate": {
                 "@id": "schema:paymentDueDate",
                 "@type": "schema:Date"
@@ -78,10 +66,7 @@
             },
             "PaymentStatus": {
                 "@id": "schema:paymentStatus",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "schema:"
-                }
+                "@type": "schema:paymentStatusType"
             },
             "Provider": {
                 "@id": "schema:provider"
@@ -107,9 +92,6 @@
             "Category": "PREMIUM",
             "ConfirmationNumber": "ABRECHNUNG-15 -0000028",
             "Customer": {},
-            "DunningAmount": 100.00,
-            "DunningAmountExpenses": 25.00,
-            "DunningAmountAddditionalCosts": 25.00,
             "TotalPaymentDue": {},
             "PaymentDueDate": "2020-04-01",
             "PaymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",

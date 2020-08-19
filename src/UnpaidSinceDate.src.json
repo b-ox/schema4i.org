@@ -1,0 +1,31 @@
+{
+    "type": "UnpaidSinceDate",
+    "uri": "http://schema4i.org/UnpaidSinceDate",
+    "description": "Indicates since when no payments have been received.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Dunning#UnpaidSinceDate"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "UnpaidSinceDate": {
+                "@id": "s4i:UnpaidSinceDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample UnpaidSinceDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "UnpaidSinceDate": "2022-01-01"
+        },
+        "context": {}
+    }]
+}
