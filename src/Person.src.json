@@ -59,10 +59,7 @@
             },
             "Gender": {
                 "@id": "schema:gender",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "schema:"
-                }
+                "@type": "schema:GenderType"
             },
             "GivenName": {
                 "@id": "schema:givenName",
@@ -82,6 +79,10 @@
             "RelatedTo": {
                 "@id": "schema:relatedTo",
                 "@type": "s4i:Person"
+            },
+            "Salutation": {
+                "@id": "oo:ontology/person/salutation",
+                "@type": "oo:ontology/definitions/salutation"
             },
             "TaxID": {
                 "@id": "schema:taxID",
@@ -112,6 +113,7 @@
             "HonorificPrefix": "Dr.",
             "Nationality": "D",
             "RelatedTo": {},
+            "Salutation": 3,
             "TaxID": "DE123123123",
             "Telephone": "+49 211 41608 400"
         },
