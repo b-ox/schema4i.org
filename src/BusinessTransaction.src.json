@@ -96,7 +96,9 @@
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema4i.org/Organization.jsonld",
-                "http://schema4i.org/Offer.jsonld"
+                "http://schema4i.org/Offer.jsonld",
+                "http://pending.schema4i.org/BusinessTransactionDelivery.jsonld",
+                "http://pending.schema4i.org/ParcelDelivery.jsonld"
             ],
             "@type": "BusinessTransaction",
             "Identifier": "4711",
