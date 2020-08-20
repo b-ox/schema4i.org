@@ -1,0 +1,29 @@
+{
+    "type": "EnumVehicleOwnershipCode_DE",
+    "uri": "http://schema4i.org/EnumVehicleOwnershipCode_DE",
+    "description": "Einstelliger Code für die rechtliche Rolle eines Eigentums- oder Besitzverhältnisses.",
+    "links": [{
+        "url": "http://schema4i.org/EnumVehicleOwnershipCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0210.050.htm#21",
+        "description": "GDV Satzart 0210.050/2, Feld 23"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/VehicleOwnership" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Eigentum VN": "s4i:EnumVehicleOwnershipCode#1",
+            "Eigentum / Finanzierung": "s4i:EnumVehicleOwnershipCode#2",
+            "Leasing": "s4i:EnumVehicleOwnershipCode#3",
+            "Mieter": "s4i:EnumVehicleOwnershipCode#4",
+            "Pächter": "s4i:EnumVehicleOwnershipCode#5",
+            "Niessbraucher": "s4i:EnumVehicleOwnershipCode#6"
+        }
+    }
+}

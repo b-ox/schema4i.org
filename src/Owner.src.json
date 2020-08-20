@@ -1,0 +1,35 @@
+{
+    "type": "Owner",
+    "uri": "http://schema4i.org/Owner",
+    "description": "Owner of an object that can be any kind of Thing.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#Owner" }
+    ],
+    "base": [],
+    "multipletypes": {
+        "Owner": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Owner": {
+                "@id": "s4i:Owner"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ItemList",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Owner": {}
+        },
+        "context": {}
+    }]
+}

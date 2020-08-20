@@ -1,0 +1,32 @@
+{
+    "type": "EnumTypeOfVehicleUseCode_DE",
+    "uri": "http://schema4i.org/EnumTypeOfVehicleUseCode_DE",
+    "description": "Zweistelliger Code für die Klassifierung einer Fahrzeugnutzung.",
+    "links": [{
+        "url": "http://schema4i.org/EnumTypeOfVehicleUseCode",
+        "description": "Englische Documentation"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0210.050.htm",
+        "description": "GDV Satzart 0210.050/2, Feld 22"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#TypeOfUse" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Überwiegend geschäftlich": "s4i:EnumTypeOfVehicleUseCode#01",
+            "Ausschließlich Privat": "s4i:EnumTypeOfVehicleUseCode#02",
+            "Taxi": "s4i:EnumTypeOfVehicleUseCode#03",
+            "Vermietung": "s4i:EnumTypeOfVehicleUseCode#04",
+            "Sonstige": "s4i:EnumTypeOfVehicleUseCode#05",
+            "Ausschließlich geschäftlich": "s4i:EnumTypeOfVehicleUseCode#06",
+            "Überwiegend Privat": "s4i:EnumTypeOfVehicleUseCode#07",
+            "Privat und geschäftlich": "s4i:EnumTypeOfVehicleUseCode#08",
+            "Landwirtschaft": "s4i:EnumTypeOfVehicleUseCode#09"
+        }
+    }
+}

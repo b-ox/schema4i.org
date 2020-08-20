@@ -19,21 +19,21 @@
         { "@id": "http://schema4i.org/Product" }
     ],
     "multipletypes": {
-        "RegistrationArea": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/string" },
-            { "@id": "http://schema4i.org/EnumCountryCode" }
-        ],
         "Garage": [
             { "@id": "https://docs.riskine.com/ontology/definitions/boolean" },
             { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
-        "Holder": [
+        "Owner": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
         ],
+        "RegistrationArea": [
+            { "@id": "https://docs.riskine.com/ontology/definitions/string" },
+            { "@id": "http://schema4i.org/EnumCountryCode" }
+        ],
         "VehicleType": [
             { "@id": "https://docs.riskine.com/ontology/definitions/vehicle-type" },
-            { "@id": "http://schema4i.org/EnumVehicleCode" }
+            { "@id": "http://schema4i.org/EnumVehicleRiskCode" }
         ]
     },
     "context": {
@@ -54,30 +54,56 @@
             "Garage": {
                 "@id": "oo:ontology/vehicle/garage"
             },
-            "Holder": {
-                "@id": "s4i:Holder"
+            "Manufacturer": {
+                "@id": "schema:manufacturer",
+                "@type": "s4i:Organization"
             },
-            "HSN": {
+            "ManufacturerKeyNumber": {
                 "@id": "oo:ontology/vehicle/hsn",
+                "@type": "oo:ontology/definitions/string"
+            },
+            "ModelKeyNumber": {
+                "@id": "oo:ontology/vehicle/tsn",
                 "@type": "oo:ontology/definitions/string"
             },
             "NumberPlate": {
                 "@id": "oo:ontology/vehicle/number-plate",
                 "@type": "oo:ontology/definitions/string"
             },
+            "NumberPlateAddress": {
+                "@id": "s4i:NumberPlateAddress",
+                "@type": "s4i:NumberPlateAddress"
+            },
+            "Ownership": {
+                "@id": "s4i:VehicleOwnership",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumVehicleOwnershipCode#"
+                }
+            },
+            "Owner": {
+                "@id": "s4i:Owner"
+            },
             "RegistrationArea": {
                 "@id": "oo:ontology/vehicle/registration-area"
-            },
-            "TSN": {
-                "@id": "oo:ontology/vehicle/tsn",
-                "@type": "oo:ontology/definitions/string"
             },
             "VehicleIdentificationNumber": {
                 "@id": "schema:vehicleIdentificationNumber",
                 "@type": "schema:Text"
             },
-            "VehicleType": {
-                "@id": "oo:ontology/vehicle/vehicle-type"
+            "RiskCode": {
+                "@id": "s4i:VehicleRiskCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumVehicleRiskCode#"
+                }
+            },
+            "TypeOfUse": {
+                "@id": "s4i:TypeOfVehicleUse",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTypeOfVehicleUseCode#"
+                }
             }
         }
     },
@@ -92,12 +118,17 @@
             "DateHolderFirstRegistered": "2020-07-16",
             "DateVehicleFirstRegistered": "2020-07-16",
             "Garage": false,
-            "HSN": "0583",
+            "Manufacturer": {},
+            "ManufacturerKeyNumber": "0583",
+            "Model": "",
+            "ModelKeyNumber": "AJM",
             "NumberPlate": "D-TX 718",
-            "NumberPlateCountryCode": "D",
-            "TSN": "AJM",
+            "NumberPlateAddress": {},
+            "Owner": {},
+            "Ownership": "1",
             "VehicleIdentificationNumber": "D676SDA8",
-            "VehicleType": 5
+            "RiskCode": "112",
+            "TypeOfUse": "02"
         },
         "context": {}
     }]

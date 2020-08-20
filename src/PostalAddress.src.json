@@ -36,8 +36,8 @@
                 "@id": "schema:addressRegion",
                 "@type": "schema:Text"
             },
-            "PostOffices4iNumber": {
-                "@id": "schema:postOffices4iNumber",
+            "PostOfficeBoxNumber": {
+                "@id": "schema:postOfficeBoxNumber",
                 "@type": "schema:Text"
             },
             "PostalCode": {

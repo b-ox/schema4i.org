@@ -1,0 +1,30 @@
+{
+    "type": "NumberPlateAddress",
+    "uri": "http://schema4i.org/NumberPlateAddress",
+    "description": "Address data in connection with a vehicle registration number (number plate).",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#NumberPlateAddress" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/PostalAddress" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NumberPlateAddress": "s4i:NumberPlateAddress"
+        }
+    },
+    "playground": [{
+        "title": "A maximum NumberPlateAddress",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "NumberPlateAddress"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "EnumTypeOfVehicleUseCode",
+    "uri": "http://schema4i.org/EnumTypeOfVehicleUseCode",
+    "description": "Two-digit code for classifying a vehicle use.",
+    "links": [{
+        "url": "http://schema4i.org/EnumTypeOfVehicleUseCode_DE",
+        "description": "Original German documentation"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0210.050.htm",
+        "description": "GDV standard vehicle data section 2, field 22"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#TypeOfUse" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Mostly for business": "s4i:EnumTypeOfVehicleUseCode#01",
+            "Only private": "s4i:EnumTypeOfVehicleUseCode#02",
+            "Taxi": "s4i:EnumTypeOfVehicleUseCode#03",
+            "Rental": "s4i:EnumTypeOfVehicleUseCode#04",
+            "Others": "s4i:EnumTypeOfVehicleUseCode#05",
+            "Exclusively for business": "s4i:EnumTypeOfVehicleUseCode#06",
+            "Mostly private": "s4i:EnumTypeOfVehicleUseCode#07",
+            "Private and business": "s4i:EnumTypeOfVehicleUseCode#08",
+            "Agriculture": "s4i:EnumTypeOfVehicleUseCode#09"
+        }
+    }
+}

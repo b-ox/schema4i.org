@@ -1,18 +1,18 @@
 {
-    "type": "EnumVehicleCode",
-    "uri": "http://schema4i.org/EnumVehicleCode",
+    "type": "EnumVehicleRiskCode_DE",
+    "uri": "http://schema4i.org/EnumVehicleRiskCode_DE",
     "description": "A German 3-digit code for identifying any kind of vehicle.",
     "links": [{
-            "url": "http://schema4i.org/EnumVehicleCode_DE",
-            "description": "Original German documentation"
+            "url": "http://schema4i.org/EnumVehicleRiskCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
         },
         {
             "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl110.htm",
-            "description": "GDV standard annex 110"
+            "description": "GDV Standard Anlage 110"
         }
     ],
     "parents": [
-        { "@id": "http://schema4i.org/Vehicle#VehicleType" }
+        { "@id": "http://schema4i.org/VehicleRiskCode" }
     ],
     "base": [],
     "multipletypes": {},
@@ -20,7 +20,7 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Passengers cars": "s4i:EnumLineOfBusinessCode#112"
+            "Personenkraftwagen": "s4i:EnumVehicleRiskCode#112"
         }
     }
 }

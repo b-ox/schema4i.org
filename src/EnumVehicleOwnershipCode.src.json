@@ -1,0 +1,29 @@
+{
+    "type": "EnumVehicleOwnershipCode",
+    "uri": "http://schema4i.org/EnumVehicleOwnershipCode_DE",
+    "description": "One-digit code for the legal role of ownership.",
+    "links": [{
+        "url": "http://schema4i.org/EnumVehicleOwnershipCode_DE",
+        "description": "German documentation of the keys"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0210.050.htm#21",
+        "description": "GDV 0210.050/2, field 23"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/VehicleOwnership" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Property": "s4i:EnumVehicleOwnershipCode#1",
+            "Property / Financing": "s4i:EnumVehicleOwnershipCode#2",
+            "Leasing": "s4i:EnumVehicleOwnershipCode#3",
+            "Tenant": "s4i:EnumVehicleOwnershipCode#4",
+            "Leaseholder": "s4i:EnumVehicleOwnershipCode#5",
+            "Usufruct": "s4i:EnumVehicleOwnershipCode#6"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "type": "IsRelatedTo",
+    "uri": "http://schema4i.org/IsRelatedTo",
+    "description": "A pointer to another, somehow related product (or multiple products) or services. In the insurance industry this attribute is especially used in a FinancialService that offers coverage for any kind of Thing that can be a Person, Organization, Product or Service, etc. Compared to Schema.org, this is an extended use of this attribute. Use as array when there is a need for more than one Thing to transfer.",
+    "links": [{
+        "url": "http://schema.org/isRelatedTo",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Service#IsRelatedTo" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "IsRelatedTo": {
+                "@id": "schema:isRelatedTo",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum IsRelatedTo",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "IsRelatedTo": {}
+        },
+        "context": {}
+    }]
+}

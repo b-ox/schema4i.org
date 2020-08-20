@@ -1,0 +1,37 @@
+{
+    "type": "VehicleRiskCode",
+    "uri": "http://schema4i.org/VehicleRiskCode",
+    "description": "Three-digit key for the exact typing of a vehicle.",
+    "links": [{
+        "url": "http://schema.org/additionalName",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#RiskCode" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "VehicleRiskCode": {
+                "@id": "s4i:VehicleRiskCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumVehicleRiskCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum VehicleRiskCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "VehicleRiskCode": "112"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "VehicleOwnership",
+    "uri": "http://schema4i.org/VehicleOwnership",
+    "description": "Legal role of the owner of a vehicle.",
+    "links": [{
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/ds0210.050.htm",
+        "description": "GDV 0210.050/2 field 23"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#Ownership" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "VehicleOwnership": {
+                "@id": "s4i:VehicleOwnership",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumVehicleOwnershipCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum VehicleOwnership",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "VehicleOwnership": "1"
+        },
+        "context": {}
+    }]
+}

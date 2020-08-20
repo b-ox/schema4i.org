@@ -48,6 +48,10 @@
                 "@id": "schema:hasOfferCatalog",
                 "@type": "s4i:OfferCatalog"
             },
+            "IsRelatedTo": {
+                "@id": "s4i:IsRelatedTo",
+                "@type": "s4i:Thing"
+            },
             "Logo": {
                 "@id": "schema:logo",
                 "@type": "schema:URL"
@@ -84,6 +88,7 @@
             "Broker": {},
             "Category": "Testsiegertarife",
             "HasOfferCatalog": {},
+            "IsRelatedTo": {},
             "Logo": "http://domain.de/logo.png",
             "Provider": {},
             "Slogan": "Die beste Rentenversicherung der Welt"
