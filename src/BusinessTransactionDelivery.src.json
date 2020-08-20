@@ -23,8 +23,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "BusinessTransactionDelivery",
-            "Item": {}
+            "@type": "BusinessTransactionDelivery"
         },
         "context": {}
     }]
