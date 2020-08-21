@@ -6,11 +6,8 @@
         "url": "http://schema.org/Vehicle",
         "description": "Original Schema.org type"
     }, {
-        "url": "https://github.com/riskine/ontology/blob/master/schemas/core/vehicle.json",
-        "description": "OpenOntology for Insurances type"
-    }, {
-        "url": "https://raw.githubusercontent.com/riskine/ontology/master/schemas/core/vehicle.json",
-        "description": "OpenOntology for Insurances type (JSON Schema)"
+        "url": "https://docs.riskine.com/ontology/vehicle",
+        "description": "OpenOntology.org type"
     }],
     "parents": [
         { "@id": "http://schema4i.org/Car" }
@@ -111,9 +108,7 @@
         "title": "A maximum Vehicle",
         "tab": "tab-expanded",
         "input": {
-            "@context": [
-                "http://schema4i.org/Vehicle"
-            ],
+            "@context": {},
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",
             "DateVehicleFirstRegistered": "2020-07-16",
