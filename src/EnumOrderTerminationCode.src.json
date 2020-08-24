@@ -1,0 +1,67 @@
+{
+    "type": "EnumOrderTerminationCode",
+    "uri": "http://schema4i.org/EnumOrderTerminationCode",
+    "description": "Reason of termination of an order (contract) according to the German GDV standard with release date 01.07.2018, e.g. 01 = Termination by the customer for the expiry. An native English version of the keys is not available at the moment. Instead you can find the following keys that were automatically translated from German language using Google Translate. Please use with care!",
+    "links": [{
+        "url": "http://schema4i.org/EnumOrderTerminationCode_DE",
+        "description": "Original German documentation"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl5.htm",
+        "description": "GDV termination codes"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/OrderTerminationCode" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "VN termination to expiry": "s4i:EnumContractTerminationCode#01",
+            "Termination VN general differences in the event of a claim": "s4i:EnumContractTerminationCode#02",
+            "VN termination in the event of an increase in the tariff": "s4i:EnumContractTerminationCode#03",
+            "VU termination to expiry": "s4i:EnumContractTerminationCode#04",
+            "VU termination in the event of a claim": "s4i:EnumContractTerminationCode#05",
+            "Termination VU due to lack of contribution payment, subsequent contribution": "s4i:EnumContractTerminationCode#06",
+            "Termination of risk in the event of change of ownership Moving abroad Insurability not given Disability Total loss": "s4i:EnumContractTerminationCode#07",
+            "Replacement insurance changeover from individual insurance to group insurance Changeover from group insurance to individual insurance": "s4i:EnumContractTerminationCode#08",
+            "Cancellation when short-term contracts expire": "s4i:EnumContractTerminationCode#09",
+            "Interruption of contract with reservation of a specific vehicle": "s4i:EnumContractTerminationCode#10",
+            "Interruption of contract without a reservation for a specific vehicle": "s4i:EnumContractTerminationCode#11",
+            "Contract that has not entered into force Cancellation from the beginning see also value entries 39 and 40": "s4i:EnumContractTerminationCode#12",
+            "Termination of the buyer in the event of a change of ownership": "s4i:EnumContractTerminationCode#13",
+            "Death policyholder": "s4i:EnumContractTerminationCode#14",
+            "End-of-age process, eg termination due to drawing of old-age pension": "s4i:EnumContractTerminationCode#15",
+            "Termination clause deleted": "s4i:EnumContractTerminationCode#16",
+            "Income payment": "s4i:EnumContractTerminationCode#17",
+            "Disposal from the framework contract": "s4i:EnumContractTerminationCode#18",
+            "UN exemption requested": "s4i:EnumContractTerminationCode#19",
+            "Exemption from contributions": "s4i:EnumContractTerminationCode#20",
+            "Contract ends when the insured person dies": "s4i:EnumContractTerminationCode#21",
+            "Contract expires when contract expires": "s4i:EnumContractTerminationCode#22",
+            "End of contract through marriage insured child": "s4i:EnumContractTerminationCode#23",
+            "Buyback": "s4i:EnumContractTerminationCode#24",
+            "Decay": "s4i:EnumContractTerminationCode#25",
+            "Change of provider e.g. change to other private health insurance companies": "s4i:EnumContractTerminationCode#26",
+            "Switch to statutory health insurance - compulsory": "s4i:EnumContractTerminationCode#27",
+            "Switch to statutory health insurance - voluntary": "s4i:EnumContractTerminationCode#28",
+            "Separation of contracts - merger": "s4i:EnumContractTerminationCode#29",
+            "Agency and or change of office": "s4i:EnumContractTerminationCode#30",
+            "Withdrawal e.g. violation of pre-contractual notification obligation": "s4i:EnumContractTerminationCode#31",
+            "Departure after tariff change": "s4i:EnumContractTerminationCode#32",
+            "Withdrawal from the contract due to violation of the information obligation": "s4i:EnumContractTerminationCode#33",
+            "Termination without notice due to willful or grossly negligent breach of the notification obligation": "s4i:EnumContractTerminationCode#34",
+            "Termination due to slightly negligent or unjustifiable violation of the notification obligation by VN": "s4i:EnumContractTerminationCode#35",
+            "VN termination due to exclusion of the risk by VU": "s4i:EnumContractTerminationCode#36",
+            "Cancellation with transition to another insurance company in the event of a merger or an acquisition": "s4i:EnumContractTerminationCode#37",
+            "Cancellation due to continuation under a new insurance certificate number": "s4i:EnumContractTerminationCode#38",
+            "VU termination due to lack of premium payment": "s4i:EnumContractTerminationCode#39",
+            "Revocation of the UN from the beginning": "s4i:EnumContractTerminationCode#40",
+            "Double insurance": "s4i:EnumContractTerminationCode#41",
+            "Termination due to abandonment of the professional activity specified in the application": "s4i:EnumContractTerminationCode#42",
+            "Due to a change, a new contract is legally created": "s4i:EnumContractTerminationCode#43",
+            "other reasons for cancellation": "s4i:EnumContractTerminationCode#99"
+        }
+    }
+}

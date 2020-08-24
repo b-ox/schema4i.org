@@ -54,6 +54,17 @@
                 "@id": "schema:discountCurrency",
                 "@type": "schema:Text"
             },
+            "DateModified": {
+                "@id": "schema:dateModified",
+                "@type": "schema:Date"
+            },
+            "ModificationCode": {
+                "@id": "s4i:OrderModificationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTransactionCode#"
+                }
+            },
             "OrderDate": {
                 "@id": "schema:orderDate",
                 "@type": "schema:Date"
@@ -76,6 +87,17 @@
             "PartOfInvoice": {
                 "@id": "schema:partOfInvoice",
                 "@type": "s4i:Invoice"
+            },
+            "TerminationCode": {
+                "@id": "s4i:OrderTerminationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderTerminationCode#"
+                }
+            },
+            "TerminationDate": {
+                "@id": "s4i:TerminationDate",
+                "@type": "schema:Date"
             }
         }
     },
@@ -91,11 +113,14 @@
             "Customer": {},
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
+            "DateModified": "2020-08-24",
             "OrderDate": "2020-07-30",
             "OrderedItem": {},
             "OrderNumber": "A-Nr.4711",
             "OrderStatus": "1",
-            "PartOfInvoice": {}
+            "PartOfInvoice": {},
+            "TerminationDate": "2021-01-01",
+            "TerminationCode": "01"
         },
         "context": {}
     }]

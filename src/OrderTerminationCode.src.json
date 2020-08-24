@@ -1,0 +1,67 @@
+{
+    "type": "OrderTerminationCode",
+    "uri": "http://schema4i.org/OrderTerminationCode",
+    "description": "The reason for the ending of an order (insurance contract), e.g. 1 = Termination by the customer to expire.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#TerminationCode"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "TerminationCode": {
+                "@id": "s4i:OrderTerminationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderTerminationCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Insurance contract terminated by customer",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "TerminationCode": "01"
+        },
+        "context": {}
+    }, {
+        "title": "Termination code translated to English",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "TerminationCode": "01"
+        },
+        "context": {
+            "@context": {
+                "s4i": "http://schema4i.org/",
+                "Termination": {
+                    "@id": "s4i:ContractTerminationCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema4i.org/EnumOrderTerminationCode.jsonld"
+                }
+            }
+        }
+    }, {
+        "title": "Termination code translated to German",
+        "tab": "tab-compacted",
+        "input": {
+            "@context": {},
+            "TerminationCode": "01"
+        },
+        "context": {
+            "@context": {
+                "s4i": "http://schema4i.org/",
+                "Abgangsgrund": {
+                    "@id": "s4i:ContractTerminationCode",
+                    "@type": "@vocab",
+                    "@context": "http://schema4i.org/EnumOrderTerminationCode_DE.jsonld"
+                }
+            }
+        }
+    }]
+}

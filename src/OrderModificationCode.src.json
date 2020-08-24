@@ -1,0 +1,39 @@
+{
+    "type": "OrderModificationCode",
+    "uri": "http://schema4i.org/OrderModificationCode",
+    "description": "Cause of the last modification of an order (insurance contract), e.g. 110011003=Address removed.",
+    "links": [{
+        "url": "http://schema4i.org/EnumTransactionCode.jsonld",
+        "description": "Enumeration of keys of EnumTransactionCode"
+    }, {
+        "url": "http://schema4i.org/EnumTransactionCode_DE.jsonld",
+        "description": "German key translation of EnumTransactionCode"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#ModificationCode"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "ModificationCode": {
+                "@id": "s4i:OrderModificationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTransactionCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Contract modification code is 'Address removed'",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ModificationCode": "110011003"
+        },
+        "context": {}
+    }]
+}

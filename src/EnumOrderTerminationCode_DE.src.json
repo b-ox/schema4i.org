@@ -1,0 +1,67 @@
+{
+    "type": "EnumOrderTerminationCode_DE",
+    "uri": "http://schema4i.org/EnumOrderTerminationCode_DE",
+    "description": "Code für die Schlüsselung des Abgangs eines Vertrages (Abgangsgrund) gemäß dem deutschen GDV Standard mit Releasedatum 01.07.2018, z.B. 01 = Kündigung durch den Kunden zum Ablauf.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOrderTerminationCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl5.htm",
+        "description": "GDV Abgangsgründe"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/OrderTerminationCode" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Kündigung VN zum Ablauf": "s4i:EnumContractTerminationCode#01",
+            "Kündigung VN im Schadenfall allgemeine Differenzen": "s4i:EnumContractTerminationCode#02",
+            "Kündigung VN bei Beitragserhöhung Tarifaktion": "s4i:EnumContractTerminationCode#03",
+            "Kündigung VU zum Ablauf": "s4i:EnumContractTerminationCode#04",
+            "Kündigung VU im Schadenfall": "s4i:EnumContractTerminationCode#05",
+            "Kündigung VU mangels Beitragszahlung Folgebeitrag": "s4i:EnumContractTerminationCode#06",
+            "Kündigung Risikofortfall Besitzerwechsel Umzug ins Ausland Versicherungsfähigkeit nicht gegeben Berufsunfähigkeit Totalschaden": "s4i:EnumContractTerminationCode#07",
+            "Ersatzversicherung Umstellung Einzelversicherung in Gruppenversicherung Umstellung Gruppenversicherung in Einzelversicherung": "s4i:EnumContractTerminationCode#08",
+            "Storno zum Ablauf kurzfristiger Verträge": "s4i:EnumContractTerminationCode#09",
+            "Vertragsunterbrechung mit Reservierung spez KFZ": "s4i:EnumContractTerminationCode#10",
+            "Vertragsunterbrechung ohne Reservierung spez KFZ": "s4i:EnumContractTerminationCode#11",
+            "nicht in Kraft getretener Vertrag Storno ab Beginn siehe auch Werteinträge 39 und 40": "s4i:EnumContractTerminationCode#12",
+            "Kündigung des Erwerbers bei Besitzwechsel": "s4i:EnumContractTerminationCode#13",
+            "Tod Versicherungsnehmer": "s4i:EnumContractTerminationCode#14",
+            "Altersablauf Endalter z B Beendigung wegen Bezug der Altersrente": "s4i:EnumContractTerminationCode#15",
+            "Kündigungsklausel gestrichen": "s4i:EnumContractTerminationCode#16",
+            "Erlebensfallauszahlung": "s4i:EnumContractTerminationCode#17",
+            "Abgang aus Rahmenvertrag": "s4i:EnumContractTerminationCode#18",
+            "Beitragsfreistellung vom VN beantragt": "s4i:EnumContractTerminationCode#19",
+            "Beitragsfreistellung": "s4i:EnumContractTerminationCode#20",
+            "Vertragsende durch Tod der versicherten Person": "s4i:EnumContractTerminationCode#21",
+            "Vertragsende durch Ablauf Vertrag": "s4i:EnumContractTerminationCode#22",
+            "Vertragsende durch Heirat mitversichertes Kind": "s4i:EnumContractTerminationCode#23",
+            "Rückkauf": "s4i:EnumContractTerminationCode#24",
+            "Verfall": "s4i:EnumContractTerminationCode#25",
+            "Anbieterwechsel z B Wechsel zu anderen Privaten-Krankenversicherungsunternehmen": "s4i:EnumContractTerminationCode#26",
+            "Wechsel zur Gesetzlichen-Krankenversicherung - pflichtig": "s4i:EnumContractTerminationCode#27",
+            "Wechsel zur Gesetzlichen-Krankenversicherung - freiwillig": "s4i:EnumContractTerminationCode#28",
+            "Vertragstrennung -Zusammenlegung": "s4i:EnumContractTerminationCode#29",
+            "Agentur undoder Geschäftsstellenwechsel": "s4i:EnumContractTerminationCode#30",
+            "Rücktritt z B Verletzung der vorvertraglichen Anzeigepflicht Anfechtung": "s4i:EnumContractTerminationCode#31",
+            "Abgang nach Tarifwechsel": "s4i:EnumContractTerminationCode#32",
+            "Rücktritt vom Vertrag wegen Verletzung der Informationspflicht": "s4i:EnumContractTerminationCode#33",
+            "Fristlose Kündigung wegen vorsätzlicher oder grob fahrlässiger Verletzung der Anzeigepflicht": "s4i:EnumContractTerminationCode#34",
+            "Kündigung wegen leicht fahrlässiger oder nicht zu vertretender Verletzung der Anzeigepflicht durch VN": "s4i:EnumContractTerminationCode#35",
+            "Kündigung VN wegen Ausschluss der Gefahr durch VU": "s4i:EnumContractTerminationCode#36",
+            "Storno mit Übergang auf anderes VU im Falle einer Fusion bzw eines Zukaufs": "s4i:EnumContractTerminationCode#37",
+            "Storno wegen Fortführung unter neuer Versicherungsscheinnummer": "s4i:EnumContractTerminationCode#38",
+            "Kündigung VU mangels Beitragszahlung Erstbeitrag": "s4i:EnumContractTerminationCode#39",
+            "Widerruf des VN ab Beginn": "s4i:EnumContractTerminationCode#40",
+            "Doppelversicherung": "s4i:EnumContractTerminationCode#41",
+            "Beendigung wegen Aufgabe der im Antrag genannten beruflichen Tätigkeit": "s4i:EnumContractTerminationCode#42",
+            "Aufgrund einer Änderung entsteht rechtlich ein neuer Vertrag": "s4i:EnumContractTerminationCode#43",
+            "sonstige Stornogründe": "s4i:EnumContractTerminationCode#99"
+        }
+    }
+}

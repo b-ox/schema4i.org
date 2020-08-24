@@ -1,0 +1,31 @@
+{
+    "type": "TerminationDate",
+    "uri": "http://schema4i.org/TerminationDate",
+    "description": "Date on which the order (contract) is terminated.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#TerminationDate"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "TerminationDate": {
+                "@id": "s4i:TerminationDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample TerminationDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "TerminationDate": "2022-01-01"
+        },
+        "context": {}
+    }]
+}
