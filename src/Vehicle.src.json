@@ -84,10 +84,6 @@
             "RegistrationArea": {
                 "@id": "oo:ontology/vehicle/registration-area"
             },
-            "VehicleIdentificationNumber": {
-                "@id": "schema:vehicleIdentificationNumber",
-                "@type": "schema:Text"
-            },
             "RiskCode": {
                 "@id": "s4i:VehicleRiskCode",
                 "@type": "@vocab",
@@ -101,6 +97,14 @@
                 "@context": {
                     "@vocab": "s4i:EnumTypeOfVehicleUseCode#"
                 }
+            },
+            "VehicleIdentificationNumber": {
+                "@id": "schema:vehicleIdentificationNumber",
+                "@type": "schema:Text"
+            },
+            "YearlyMileage": {
+                "@id": "oo:ontology/motor/object.vehicle.yearly-mileage",
+                "@type": "oo:ontology/definitions/nonnegative-integer"
             }
         }
     },
@@ -121,9 +125,10 @@
             "NumberPlateAddress": {},
             "Owner": {},
             "Ownership": "1",
-            "VehicleIdentificationNumber": "D676SDA8",
             "RiskCode": "112",
-            "TypeOfUse": "02"
+            "TypeOfUse": "02",
+            "VehicleIdentificationNumber": "D676SDA8",
+            "YearlyMileage": 35000
         },
         "context": {}
     }]
