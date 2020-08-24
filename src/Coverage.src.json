@@ -18,7 +18,12 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Coverage": "s4i:Coverage"
+            "oo": "https://docs.riskine.com/",
+            "Coverage": "s4i:Coverage",
+            "Deductible": {
+                "@id": "oo:ontology/motor/product/deductible",
+                "@type": "oo:ontology/definitions/money"
+            }
         }
     },
     "playground": [{
@@ -26,7 +31,8 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "Coverage"
+            "@type": "Coverage",
+            "Deductible": 300
         },
         "context": {}
     }]

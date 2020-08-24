@@ -22,8 +22,12 @@
                 "@id": "oo:ontology/motor/product.motor.no-claims-discount-comprehensive.claim-free-years",
                 "@type": "oo:ontology/definitions/nonnegative-integer"
             },
-            "Deductible": {
+            "FullyDeductible": {
                 "@id": "oo:ontology/motor/product.motor.coverage.comprehensive.fully.deductible",
+                "@type": "oo:ontology/definitions/money"
+            },
+            "PartialDeductible": {
+                "@id": "oo:product.motor.coverage.comprehensive.partial.deductible",
                 "@type": "oo:ontology/definitions/money"
             },
             "NoClaimsDiscount": {
@@ -33,10 +37,6 @@
             "NoClaimsDiscountLevel": {
                 "@id": "oo:ontology/motor/product.motor.no-claims-discount-comprehensive.level",
                 "@type": "oo:ontology/definitions/string"
-            },
-            "GAP": {
-                "@id": "oo:ontology/motor/product.motor.coverage.comprehensive.fully.gap-coverage.is-included",
-                "@type": "oo:ontology/definitions/boolean"
             }
         }
     },
@@ -47,7 +47,8 @@
             "@context": {},
             "@type": "MotorInsuranceFullyComprehensiveCoverage",
             "ClaimFreeYears": 0,
-            "Deductible": 500.00,
+            "FullyDeductible": 500.00,
+            "PartialDeductible": 150.00,
             "NoClaimsDiscount": 125,
             "NoClaimsDiscountLevel": "1/2"
         },

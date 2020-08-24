@@ -18,8 +18,8 @@
             "schema": "http://schema.org/",
             "oo": "https://docs.riskine.com/",
             "MotorInsurancePartialComprehensiveCoverage": "s4i:MotorInsurancePartialComprehensiveCoverage",
-            "Deductible": {
-                "@id": "oo:ontology/motor/product.motor.coverage.comprehensive.partial.deductible",
+            "PartialDeductible": {
+                "@id": "oo:product.motor.coverage.comprehensive.partial.deductible",
                 "@type": "oo:ontology/definitions/money"
             }
         }
@@ -30,7 +30,7 @@
         "input": {
             "@context": {},
             "@type": "MotorInsurancePartialComprehensiveCoverage",
-            "Deductible": 150.00
+            "PartialDeductible": 150.00
         },
         "context": {}
     }]
