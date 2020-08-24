@@ -18,7 +18,23 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "FinancialProduct": "schema:FinancialProduct"
+            "FinancialProduct": "schema:FinancialProduct",
+            "PaymentInterval": {
+                "@id": "oo:ontology/product/premium-payment-interval",
+                "@type": "oo:ontology/definitions/temporal-interval"
+            },
+            "Price": {
+                "@id": "schema:price",
+                "@type": "schema:Number"
+            },
+            "PriceCurrency": {
+                "@id": "schema:priceCurrency",
+                "@type": "schema:Text"
+            },
+            "PriceSpecification": {
+                "@id": "schema:priceSpecification",
+                "@type": "s4i:PriceSpecification"
+            }
         }
     },
     "playground": [{
@@ -26,7 +42,11 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "FinancialProduct"
+            "@type": "FinancialProduct",
+            "PaymentInterval": 7,
+            "Price": 119.00,
+            "PriceCurrency": "EUR",
+            "PriceSpecification": []
         },
         "context": {}
     }, {

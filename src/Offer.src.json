@@ -28,6 +28,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
+            "oo": "https://docs.riskine.com/",
             "Offer": "schema:Offer",
             "AcceptedPaymentMethod": {
                 "@id": "schema:acceptedPaymentMethod",
@@ -47,6 +48,10 @@
             },
             "OfferedBy": {
                 "@id": "schema:offeredBy"
+            },
+            "PaymentInterval": {
+                "@id": "oo:ontology/product/premium-payment-interval",
+                "@type": "oo:ontology/definitions/temporal-interval"
             },
             "Price": {
                 "@id": "schema:price",
@@ -92,6 +97,7 @@
             "Category": "Insurance",
             "ItemOffered": {},
             "OfferedBy": {},
+            "PaymentInterval": 7,
             "Price": 100.00,
             "PriceCurrency": "EUR",
             "PriceSpecification": [],
