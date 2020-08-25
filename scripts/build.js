@@ -12,7 +12,7 @@ const fromPath = "src/";
 let typeIndex = {
     name: "Schema4i.org",
     description: "Schema for insurances (S4i)",
-    release: 0.63,
+    release: 0.64,
     modified: new Date(),
     objects: 0,
     enumerations: 0,
