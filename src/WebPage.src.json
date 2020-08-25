@@ -1,0 +1,55 @@
+{
+    "type": "WebPage",
+    "uri": "http://schema4i.org/WebPage",
+    "description": "A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as breadcrumb may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page. When using this object in a Semantic API, only an explicit use is permitted while an implicit use is accordingly excluded. Among other things, the object can be used to describe links to webpages that are parts of a website or portal.",
+    "links": [{
+        "url": "http://schema.org/WebPage",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/ItemList#ItemListElement" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "WebPage": "schema:WebPage"
+        }
+    },
+    "playground": [{
+        "title": "A maximum WebPage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "WebPage"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic WebPage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/WebPage.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Organization.jsonld"
+            ],
+            "@type": "WebPage",
+            "Identier": "001",
+            "Name": "Kundenauskunft",
+            "URL": "https://portal.pfefferminzia.de/deeplink?sct=hjgGH7sad87sadbjsda&id=4711",
+            "DateCreated": "2020-08-25T14:27:10",
+            "Provider": {
+                "@type": "Organization",
+                "Identifier": "5515",
+                "Name": "AXA"
+            }
+        },
+        "context": {}
+    }]
+}
