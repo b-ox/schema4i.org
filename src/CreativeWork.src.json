@@ -9,7 +9,8 @@
     "parents": [
         { "@id": "http://schema4i.org/DataSet" },
         { "@id": "http://schema4i.org/DigitalDocument" },
-        { "@id": "http://schema4i.org/Message" }
+        { "@id": "http://schema4i.org/Message" },
+        { "@id": "http://schema4i.org/WebPage" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
