@@ -14,7 +14,8 @@
         "node": ">=12.10"
     },
     "scripts": {
-        "build": "node scripts/build-npm.js"
+        "build": "node scripts/build-npm.js",
+        "verify-links": "node scripts/verify-links-npm.js"
     },
     "keywords": [
         "semantic",
