@@ -3,7 +3,7 @@
     "uri": "http://schema4i.org/DataSet",
     "description": "A body of structured information describing some topic(s) of interest.",
     "links": [{
-        "url": "http://schema.org/DataSet",
+        "url": "http://schema.org/Dataset",
         "description": "Original Schema.org type"
     }],
     "parents": [
