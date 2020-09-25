@@ -59,7 +59,10 @@
             },
             "Gender": {
                 "@id": "schema:gender",
-                "@type": "schema:GenderType"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "schema:GenderType#"
+                }
             },
             "GivenName": {
                 "@id": "schema:givenName",
