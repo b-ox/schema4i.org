@@ -58,6 +58,10 @@
                 "@id": "schema:interactionStatistic",
                 "@type": "s4i:InteractionCounter"
             },
+            "IsBasedOn": {
+                "@id": "schema:isBasedOn",
+                "@type": "s4i:CreativeWork"
+            },
             "Keywords": {
                 "@id": "schema:keywords",
                 "@type": "schema:Text"
@@ -85,6 +89,7 @@
             "DatePublished": "2020-06-26T16:00:01",
             "HasPart": {},
             "InteractionStatistic": {},
+            "IsBasedOn": {},
             "Keywords": "Posteingang,Wichtig",
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
             "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
