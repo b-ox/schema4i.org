@@ -12,7 +12,7 @@
     ],
     "multipletypes": {
         "SumInsured": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/money" },
+            { "@id": "https://schema.riskine.com/definitions/money" },
             { "@id": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode" }
         ]
     },

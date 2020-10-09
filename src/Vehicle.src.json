@@ -6,7 +6,7 @@
         "url": "http://schema.org/Vehicle",
         "description": "Original Schema.org type"
     }, {
-        "url": "https://docs.riskine.com/ontology/vehicle",
+        "url": "https://schema.riskine.com/vehicle",
         "description": "OpenOntology.org type"
     }],
     "parents": [
@@ -17,7 +17,7 @@
     ],
     "multipletypes": {
         "Garage": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/boolean" },
+            { "@id": "https://schema.riskine.com/definitions/boolean" },
             { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
         "Owner": [
@@ -25,11 +25,11 @@
             { "@id": "http://schema4i.org/Organization" }
         ],
         "RegistrationArea": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/string" },
+            { "@id": "https://schema.riskine.com/definitions/string" },
             { "@id": "http://schema4i.org/EnumCountryCode" }
         ],
         "VehicleType": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/vehicle-type" },
+            { "@id": "https://schema.riskine.com/definitions/vehicle-type" },
             { "@id": "http://schema4i.org/EnumVehicleRiskCode" }
         ]
     },
