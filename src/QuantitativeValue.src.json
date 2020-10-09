@@ -22,6 +22,18 @@
             "AdditionalProperty": {
                 "@id": "schema:additionalProperty",
                 "@type": "s4i:PropertyValue"
+            },
+            "UnitCode": {
+                "@id": "schema:unitCode",
+                "@type": "schema:Text"
+            },
+            "UnitText": {
+                "@id": "schema:unitText",
+                "@type": "schema:Text"
+            },
+            "Value": {
+                "@id": "schema:value",
+                "@type": "schema:Text"
             }
         }
     },
@@ -31,7 +43,10 @@
         "input": {
             "@context": {},
             "@type": "QuantitativeValue",
-            "AdditionalProperty": {}
+            "AdditionalProperty": {},
+            "UnitCode": "KGM",
+            "UnitText": "Kilogramm",
+            "Value": 100
         },
         "context": {}
     }]
