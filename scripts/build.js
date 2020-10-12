@@ -86,7 +86,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             const dependencies = obj.parents.concat(obj.base);
             for (const key in obj.multipletypes) {
                 for (const object of obj.multipletypes[key]) {
-                    if (!object['@id'].startsWith('http://schema.org') && !object['@id'].startsWith('https://docs.riskine.com'))
+                    if (!object['@id'].startsWith('http://schema.org') && !object['@id'].startsWith('https://schema.riskine.com'))
                         dependencies.push(object);
                     else
                         consoleLike.log('Skip native schema type.')
