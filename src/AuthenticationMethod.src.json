@@ -1,0 +1,31 @@
+{
+    "type": "AuthenticationMethod",
+    "uri": "http://schema4i.org/AuthenticationMethod",
+    "description": "Method of authentication against an API. Possible values are UNP (Username / Password), OTP (Username / Password / One-Time-Password like MTAN or Hardware-Token) or X509 for digital X.509 certificates.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Credentials#AuthenticationMethod" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AuthenticationMethod": {
+                "@id": "s4i:AuthenticationMethod",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum AuthenticationMethod",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "AuthenticationMethod": "X509"
+        },
+        "context": {}
+    }]
+}
