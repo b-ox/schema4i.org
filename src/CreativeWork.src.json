@@ -10,7 +10,8 @@
         { "@id": "http://schema4i.org/DataSet" },
         { "@id": "http://schema4i.org/DigitalDocument" },
         { "@id": "http://schema4i.org/Message" },
-        { "@id": "http://schema4i.org/WebPage" }
+        { "@id": "http://schema4i.org/WebPage" },
+        { "@id": "http://schema4i.org/Article" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
@@ -45,6 +46,10 @@
             },
             "DateModified": {
                 "@id": "schema:dateModified",
+                "@type": "schema:DateTime"
+            },
+            "DatePublished": {
+                "@id": "schema:datePublished",
                 "@type": "schema:DateTime"
             },
             "EncodingFormat": {

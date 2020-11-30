@@ -20,6 +20,10 @@
             "ArticleBody": {
                 "@id": "schema:articleBody",
                 "@type": "schema:Text"
+            },
+            "ArticleSection": {
+                "@id": "schema:articleSection",
+                "@type": "schema:Text"
             }
         }
     },
@@ -29,7 +33,8 @@
         "input": {
             "@context": {},
             "@type": "Article",
-            "ArticleBody": "The actual body of the article."
+            "ArticleBody": "The actual body of the article.",
+            "ArticleSection": "Sports"
         },
         "context": {}
     }]
