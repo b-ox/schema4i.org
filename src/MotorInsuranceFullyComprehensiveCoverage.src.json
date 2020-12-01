@@ -3,8 +3,8 @@
     "uri": "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage",
     "description": "Provides coverage for a fully comprehensive insurance damage in the context of motor insurance.",
     "links": [{
-        "url": "https://docs.riskine.com",
-        "description": "Global data model for insurance"
+        "url": "https://openontology.org",
+        "description": "OpenOntology.org"
     }],
     "parents": [],
     "base": [
@@ -16,27 +16,27 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://docs.riskine.com/",
+            "oo": "https://schema.openontology.org/",
             "MotorInsuranceFullyComprehensiveCoverage": "s4i:MotorInsuranceFullyComprehensiveCoverage",
             "ClaimFreeYears": {
-                "@id": "oo:ontology/motor/product.motor.no-claims-discount-comprehensive.claim-free-years",
-                "@type": "oo:ontology/definitions/nonnegative-integer"
+                "@id": "oo:motor/product.motor.no-claims-discount-comprehensive.claim-free-years",
+                "@type": "oo:definitions/nonnegative-integer"
             },
             "FullyDeductible": {
-                "@id": "oo:ontology/motor/product.motor.coverage.comprehensive.fully.deductible",
-                "@type": "oo:ontology/definitions/money"
+                "@id": "oo:motor/product.motor.coverage.comprehensive.fully.deductible",
+                "@type": "oo:definitions/money"
             },
             "PartialDeductible": {
-                "@id": "oo:product.motor.coverage.comprehensive.partial.deductible",
-                "@type": "oo:ontology/definitions/money"
+                "@id": "oo:motor/product.motor.coverage.comprehensive.partial.deductible",
+                "@type": "oo:definitions/money"
             },
             "NoClaimsDiscount": {
                 "@id": "s4i:NoClaimsDiscount",
                 "@type": "schema:Number"
             },
             "NoClaimsDiscountLevel": {
-                "@id": "oo:ontology/motor/product.motor.no-claims-discount-comprehensive.level",
-                "@type": "oo:ontology/definitions/string"
+                "@id": "oo:motor/product.motor.no-claims-discount-comprehensive.level",
+                "@type": "oo:definitions/string"
             }
         }
     },

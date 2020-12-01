@@ -5,6 +5,9 @@
     "links": [{
         "url": "http://schema.org/Offer",
         "description": "Original Schema.org type"
+    }, {
+        "url": "http://openontology.org",
+        "description": "OpenOntology.org"
     }],
     "parents": [
         { "@id": "http://schema4i.org/Service#Offers" },
@@ -28,7 +31,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://docs.riskine.com/",
+            "oo": "https://schema.openontology.org/",
             "Offer": "schema:Offer",
             "AcceptedPaymentMethod": {
                 "@id": "schema:acceptedPaymentMethod",
@@ -50,8 +53,8 @@
                 "@id": "schema:offeredBy"
             },
             "PaymentInterval": {
-                "@id": "oo:ontology/product/premium-payment-interval",
-                "@type": "oo:ontology/definitions/temporal-interval"
+                "@id": "oo:product/premium-payment-interval",
+                "@type": "oo:definitions/temporal-interval"
             },
             "Price": {
                 "@id": "schema:price",

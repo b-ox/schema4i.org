@@ -15,27 +15,27 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://docs.riskine.com/",
+            "oo": "https://schema.openontology.org/",
             "DrivingLicense": "box:DrivingLicense",
             "ExpirationDate": {
-                "@id": "oo:ontology/driving-license/expiration-date",
-                "@type": "oo:oo:ontology/definitions/date"
+                "@id": "oo:driving-license/expiration-date",
+                "@type": "oo:definitions/date"
             },
             "IdNumber": {
-                "@id": "oo:ontology/driving-license/id-number",
-                "@type": "oo:oo:ontology/definitions/string"
+                "@id": "oo:driving-license/id-number",
+                "@type": "oo:definitions/string"
             },
             "IssueAuthority": {
-                "@id": "oo:ontology/driving-license/issue-authority",
-                "@type": "oo:oo:ontology/definitions/string"
+                "@id": "oo:driving-license/issue-authority",
+                "@type": "oo:definitions/string"
             },
             "IssueCountry": {
-                "@id": "oo:ontology/driving-license/issue-country",
-                "@type": "oo:oo:ontology/definitions/string"
+                "@id": "oo:driving-license/issue-country",
+                "@type": "oo:definitions/string"
             },
             "IssueDate": {
-                "@id": "oo:ontology/driving-license/issue-date",
-                "@type": "oo:ontology/definitions/date"
+                "@id": "oo:driving-license/issue-date",
+                "@type": "oo:definitions/date"
             }
         }
     },

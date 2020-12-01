@@ -23,7 +23,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://docs.riskine.com/",
+            "oo": "https://schema.openontology.org/",
             "Person": "schema:Person",
             "AdditionalName": {
                 "@id": "schema:additionalName",
@@ -84,8 +84,8 @@
                 "@type": "s4i:Person"
             },
             "Salutation": {
-                "@id": "oo:ontology/person/salutation",
-                "@type": "oo:ontology/definitions/salutation"
+                "@id": "oo:person/salutation",
+                "@type": "oo:definitions/salutation"
             },
             "TaxID": {
                 "@id": "schema:taxID",
