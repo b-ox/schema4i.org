@@ -40,7 +40,7 @@
                 "http://schema4i.org/Organization.jsonld"
             ],
             "@type": "WebPage",
-            "Identier": "001",
+            "Identifier": "001",
             "Name": "Kundenauskunft",
             "URL": "https://portal.pfefferminzia.de/deeplink?sct=hjgGH7sad87sadbjsda&id=4711",
             "DateCreated": "2020-08-25T14:27:10",
