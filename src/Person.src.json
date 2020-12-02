@@ -61,7 +61,7 @@
                 "@id": "schema:gender",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "schema:GenderType#"
+                    "@vocab": "schema:"
                 }
             },
             "GivenName": {
