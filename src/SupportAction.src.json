@@ -1,0 +1,60 @@
+{
+    "type": "SupportAction",
+    "uri": "http://schema4i.org/SupportAction",
+    "description": "Action to open or record a support ticket. Can also be used as About object within a Message object to send a support case from a sender to a recipient.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SupportAction": "s4i:SupportAction"
+        }
+    },
+    "playground": [{
+        "title": "A maximum SupportAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "SupportAction"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic SupportAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/SupportAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/TechArticle.jsonld",
+                "http://schema4i.org/Article.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/WebAPI.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "SupportAction",
+            "Name": "Problemfall: Benutzer m.muster",
+            "Object": {
+                "@type": "Service",
+                "@id": "https://api-test.b-ox.de/config/services/1047/STS"
+            },
+            "Result": {
+                "@type": "TechArticle",
+                "About": {
+                    "@type": "WebAPI",
+                    "Name": "Schnittstelle BiPRO Security Service"
+                },
+                "Abstract": "Aktion Login<br/>Vorgangsnummer 4132.A71D<br/>Lieferung-ID: 4711<br/>...",
+                "ArticleBody": "Bei der Anmeldung erscheint die Fehlermeldung &qout;404 Transport error&quot;.",
+                "EncodingFormat": "text/html"
+            }
+        },
+        "context": {}
+    }]
+}
