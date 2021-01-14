@@ -6,7 +6,9 @@
         "url": "http://schema.org/Article",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/TechArticle" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/CreativeWork" }
     ],
@@ -17,6 +19,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Article": "schema:Article",
+            "Abstract": {
+                "@id": "schema:abstract",
+                "@type": "schema:Text"
+            },
             "ArticleBody": {
                 "@id": "schema:articleBody",
                 "@type": "schema:Text"
@@ -33,6 +39,7 @@
         "input": {
             "@context": {},
             "@type": "Article",
+            "Abstract": "A short description of the article",
             "ArticleBody": "The actual body of the article.",
             "ArticleSection": "Sports"
         },

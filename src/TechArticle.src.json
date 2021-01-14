@@ -1,0 +1,52 @@
+{
+    "type": "TechArticle",
+    "uri": "http://schema4i.org/TechArticle",
+    "description": "A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc. It can be also used to describe technical support tickets.",
+    "links": [{
+        "url": "http://schema.org/TechArticle",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Article" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "TechArticle": "schema:TechArticle"
+        }
+    },
+    "playground": [{
+        "title": "A maximum TechArticle",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "TechArticle"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic TechArticle",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/TechArticle.jsonld",
+                "http://schema4i.org/Article.jsonld",
+                "http://schema4i.org/WebAPI.jsonld",
+                "http://schema4i.org/Service.jsonld"
+            ],
+            "@type": "TechArticle",
+            "About": {
+                "@type": "WebAPI",
+                "Name": "Schnittstelle BiPRO Security Service"
+            },
+            "Abstract": "Aktion Login<br/>Vorgangsnummer 4132.A71D<br/>Lieferung-ID: 4711<br/>...",
+            "ArticleBody": "<p>Bei der Nutzung der Schnittstelle ist folgendes Problem aufgetreten: <strong>...</strong></p>",
+            "EncodingFormat": "text/html"
+        },
+        "context": {}
+    }]
+}
