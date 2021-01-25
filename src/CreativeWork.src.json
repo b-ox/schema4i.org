@@ -65,7 +65,7 @@
             },
             "IsBasedOn": {
                 "@id": "schema:isBasedOn",
-                "@type": "s4i:CreativeWork"
+                "@type": "schema:URL"
             },
             "Keywords": {
                 "@id": "schema:keywords",
@@ -94,7 +94,7 @@
             "DatePublished": "2020-06-26T16:00:01",
             "HasPart": {},
             "InteractionStatistic": {},
-            "IsBasedOn": {},
+            "IsBasedOn": "http://domain.tld/SourceFile.json",
             "Keywords": "Posteingang,Wichtig",
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
             "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
