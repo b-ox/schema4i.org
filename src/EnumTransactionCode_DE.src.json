@@ -18,8 +18,6 @@
     "multipletypes": {},
     "context": {
         "@context": {
-            "@version": 1.1,
-            "s4i": "http://schema4i.org/",
             "Sonstiges (100000000)": "s4i:EnumTransactionCode#100000000",
             "Antragsversand (100001000)": "s4i:EnumTransactionCode#100001000",
             "Neuantrag (100001010)": "s4i:EnumTransactionCode#100001010",
@@ -177,7 +175,7 @@
             "Riester-Zulagenzahlung (120030004)": "s4i:EnumTransactionCode#120030004",
             "Riester - Entnahme für selbstgenutztes Wohneigentum  (120030005)": "s4i:EnumTransactionCode#120030005",
             "Riester - Zulagenrückzahlung (120030006)": "s4i:EnumTransactionCode#120030006",
-            "Riester - Zulagenantrag-Ermittlungsergebnis: Fehlermeldung der ZfA (120030007)": "s4i:EnumTransactionCode#120030007",
+            "Riester - Zulagenantrag-Ermittlungsergebnis, Fehlermeldung der ZfA (120030007)": "s4i:EnumTransactionCode#120030007",
             "Policendarlehen (120031000)": "s4i:EnumTransactionCode#120031000",
             "Policendarlehen -gewünscht (120031001)": "s4i:EnumTransactionCode#120031001",
             "Policendarlehen -Ablehnung (120031002)": "s4i:EnumTransactionCode#120031002",
@@ -701,7 +699,9 @@
             "Schaden - Kulanz (150013304)": "s4i:EnumTransactionCode#150013304",
             "Abrechnungskorrektur (210110000)": "s4i:EnumTransactionCode#210110000",
             "manuelle Provision (210120000)": "s4i:EnumTransactionCode#210120000",
-            "Buchung als Abgrenzung zu vertragsbezogenen Provisionen (210200000)": "s4i:EnumTransactionCode#210200000"
+            "Buchung als Abgrenzung zu vertragsbezogenen Provisionen (210200000)": "s4i:EnumTransactionCode#210200000",
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/"
         }
     }
 }
