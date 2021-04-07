@@ -23,6 +23,10 @@
                 "@id": "schema:priceType",
                 "@type": "schema:Text"
             },
+            "ReferenceQuantity": {
+                "@id": "schema:referenceQuantity",
+                "@type": "s4i:QuantitativeValue"
+            },
             "UnitCode": {
                 "@id": "schema:unitCode",
                 "@type": "schema:Text"
@@ -40,6 +44,7 @@
             "@context": {},
             "@type": "UnitPriceSpecification",
             "PriceType": "INSURANCE_PREMIUM_NET_RATE",
+            "ReferenceQuantity": {},
             "UnitCode": "P1",
             "UnitText": "Prozent"
         },

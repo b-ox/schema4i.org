@@ -40,30 +40,241 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Action.jsonld",
                 "http://schema4i.org/MoneyTransferAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
-                "http://schema4i.org/Person.jsonld",
-                "http://schema4i.org/Organization.jsonld"
+                "http://schema4i.org/DataFeed.jsonld",
+                "http://schema4i.org/DataSet.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DataFeedItem.jsonld",
+                "http://schema4i.org/Invoice.jsonld",
+                "http://schema4i.org/CompoundPriceSpecification.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld",
+                "http://schema4i.org/ContactPoint.jsonld",
+                "http://schema4i.org/Order.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Vehicle.jsonld",
+                "http://schema4i.org/Product.jsonld"
             ],
             "@type": "MoneyTransferAction",
-            "Identifier": "4711",
-            "StartTime": "2020-04-11T13:13:13",
-            "Agent": {
-                "@type": "Person",
-                "Name": "Max Mustermann"
-            },
-            "Participant": {
+            "Identifier": "16086599439804662056313",
+            "StartTime": "2020-12-22T17:59:03",
+            "Participant": [{
+                "@id": "#e",
                 "@type": "Organization",
-                "Name": "Muster AG"
+                "Identifier": "293842",
+                "Name": "Test-e",
+                "AlternateName": "Test-e",
+                "AdditionalName": [],
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Luxemburger Allee 4",
+                    "PostalCode": "45481",
+                    "AddressLocality": "MÃÂ¼hlheim",
+                    "AddressCountry": "D"
+                },
+                "Telephone": "0208/7006-0",
+                "ContactPoint": {
+                    "@type": "ContactPoint",
+                    "Identifier": "4711",
+                    "Name": "Max Mustermann",
+                    "Telephone": "040/5036-123",
+                    "FaxNumber": "040/5036-321",
+                    "Email": "max@mustermann.de"
+                }
+            }, {
+                "@id": "#95368115",
+                "@type": "Organization",
+                "Identifier": "5438",
+                "Name": "R+V",
+                "AlternateName": "",
+                "AdditionalName": [],
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Musterallee 1",
+                    "PostalCode": "12345",
+                    "AddressLocality": "Musterstadt",
+                    "AddressCountry": "D"
+                }
+            }],
+            "Result": {
+                "@type": "DataFeed",
+                "Creator": {
+                    "@type": "Organization",
+                    "Identifier": "ISY",
+                    "Name": "ISY Informationssysteme GmbH",
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "StreetAddress": "An der Horst 18",
+                        "PostalCode": "47652",
+                        "AddressLocality": "Weeze",
+                        "AddressCountry": "D"
+                    },
+                    "Telephone": "02837/9136-0"
+                },
+                "DataFeedElement": [{
+                    "@type": ["DataFeedItem", "Invoice"],
+                    "DateCreated": "2020-12-22",
+                    "AccountID": "10596146",
+                    "Category": "PREMIUM",
+                    "BillingPeriod": "2020-06",
+                    "TotalPaymentDue": {
+                        "@type": "CompoundPriceSpecification",
+                        "Price": 117.3,
+                        "PriceCurrency": "EUR",
+                        "ValidFrom": "2020-01-01",
+                        "ValidThrough": "2020-04-01",
+                        "PriceComponent": [{
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_PREMIUM_NET",
+                            "Price": 124.79,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "16101274782078904"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_PREMIUM_NET_RATE",
+                            "Price": 100,
+                            "UnitCode": "P1",
+                            "ReferenceQuantity": {
+                                "@type": "QuantityValue",
+                                "AdditionalProperty": {
+                                    "@type": "PropertyValue",
+                                    "Name": "LEADER",
+                                    "Value": "true"
+                                }
+                            },
+                            "Identifier": "16101274782074513"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_TAX_RATE",
+                            "Price": 19,
+                            "UnitCode": "P1",
+                            "Identifier": "16101274782074555"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_TAX",
+                            "Price": 23.71,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "16101274782073486"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "FIRE_BRIGADE_TAX_RATE",
+                            "Price": 0,
+                            "UnitCode": "P1",
+                            "Identifier": "16101274782075520"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "FIRE_BRIGADE_TAX",
+                            "Price": 0,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "161012747820788"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_PREMIUM_GROSS",
+                            "Price": 148.5,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "16101274782077029"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_BROKERAGE",
+                            "Price": -31.2,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "16101274782073561"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_BROKERAGE_RATE",
+                            "Price": 25,
+                            "UnitCode": "P1",
+                            "Identifier": "1610127478207395"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_AGENCY_COMMISSION",
+                            "Price": 0,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "16101274782076603"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_AGENCY_COMMISSION_RATE",
+                            "Price": 0,
+                            "UnitCode": "P1",
+                            "Identifier": "16101274782077154"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_MANAGEMENT_COMMISSION",
+                            "Price": 0,
+                            "PriceCurrency": "EUR",
+                            "Identifier": "16101274782072136"
+                        }, {
+                            "@type": "UnitPriceSpecification",
+                            "PriceType": "INSURANCE_MANAGEMENT_COMMISSION_RATE",
+                            "Price": 0,
+                            "UnitCode": "P1",
+                            "Identifier": "1610127478207595"
+                        }],
+                        "Identifier": "16101274782073507"
+                    },
+                    "ConfirmationNumber": "e-95368115/15-0000007",
+                    "PaymentStatus": "PaymentComplete",
+                    "Broker": {
+                        "@id": "#e",
+                        "@type": "Organization",
+                        "ContactPoint": {
+                            "@type": "ContactPoint",
+                            "Identifier": "B451",
+                            "Name": "Anonymous",
+                            "Telephone": "040/3",
+                            "FaxNumber": "040/3",
+                            "Email": "dummy@domain.tld"
+                        }
+                    },
+                    "Provider": {
+                        "@id": "#95368115",
+                        "@type": "Organization"
+                    },
+                    "Customer": {
+                        "@type": "Organization",
+                        "AlternateName": "Anonymous",
+                        "Name": "Anonymous",
+                        "Address": {
+                            "@type": "PostalAddress",
+                            "StreetAddress": "Friedberger Stra?e 42",
+                            "PostalCode": "12345",
+                            "AddressLocality": "Musterstadt",
+                            "AddressCountry": "D"
+                        }
+                    },
+                    "ReferencesOrder": [{
+                        "@type": "Order",
+                        "ConfirmationNumber": ["", "4900216703010-208"],
+                        "Description": "Folge: Folge",
+                        "OrderDate": "2018-07-01",
+                        "OrderedItem": {
+                            "@type": ["OrderItem", "FinancialProduct"],
+                            "Identifier": "04 -0000118",
+                            "Name": "Gruppenunfall Aon",
+                            "OrderItemNumber": "030",
+                            "IsRelatedTo": {}
+                        },
+                        "BillingAddress": {
+                            "@type": "PostalAddress",
+                            "AddressCountry": "D"
+                        }
+                    }],
+                    "Identifier": "16101274782074771"
+                }]
             },
             "Amount": {
                 "@type": "MonetaryAmount",
                 "Currency": "EUR",
-                "Value": "3332.00"
-            }
-        },
-        "context": {}
+                "Value": 1711.04,
+                "Identifier": "16101274782075235"
+            },
+            "context": {}
+        }
     }]
 }

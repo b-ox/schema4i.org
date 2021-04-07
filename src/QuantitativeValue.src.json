@@ -1,0 +1,53 @@
+{
+    "type": "QuantitativeValue",
+    "uri": "http://schema4i.org/QuantitativeValue",
+    "description": "A point value or interval for product characteristics and other purposes.",
+    "links": [{
+        "url": "http://schema.org/QuantitativeValue",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/UnitPriceSpecification#ReferenceQuantity" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "QuantitativeValue": "schema:QuantitativeValue",
+            "AdditionalProperty": {
+                "@id": "schema:additionalProperty",
+                "@type": "s4i:PropertyValue"
+            },
+            "UnitCode": {
+                "@id": "schema:unitCode",
+                "@type": "schema:Text"
+            },
+            "UnitText": {
+                "@id": "schema:unitText",
+                "@type": "schema:Text"
+            },
+            "Value": {
+                "@id": "schema:value",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum QuantitativeValue",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "QuantitativeValue",
+            "AdditionalProperty": {},
+            "UnitCode": "KGM",
+            "UnitText": "Kilogramm",
+            "Value": 100
+        },
+        "context": {}
+    }]
+}

@@ -24,7 +24,7 @@ The two officially maintained Hosts are [schema4i.org](schema4i.org) and [pendin
 
 ## Basic principle
 
-We use things that are already defined elsewhere to prevent reinventing the wheel. Our base vocabulary is [Schema.org](https://schema.org). We always search there for objects (types) like [schema.org/Person](https://schema.org/Person), attributes (properties) like [schema.org/givenName](https://schema.org/givenName)) or data types like [schema.org/Text](https://schema.org/Text)) before we add new things into our vocabulary. We also refer to parts of the [OpenOntology](https://docs.riskine.com).
+We use things that are already defined elsewhere to prevent reinventing the wheel. Our base vocabulary is [Schema.org](https://schema.org). We always search there for objects (types) like [schema.org/Person](https://schema.org/Person), attributes (properties) like [schema.org/givenName](https://schema.org/givenName)) or data types like [schema.org/Text](https://schema.org/Text)) before we add new things into our vocabulary. We also refer to parts of the [OpenOntology](https://openontology.org).
 
 Only those objects, attributes oder data types are "part of the Schema for insurances" that have been declared in our JSON-LD context files. Of cause you can use everything else in your data exchange by just adding an additional context to the JSON-LD document.
 
@@ -70,7 +70,7 @@ The human-readable meaning of the type is defined in `description`. If there are
 
 The `parent` property references one or more objects and attribute that uses this type. It expects a JSON object with the only property `@id` to reference the object (and maybe the attribute in it) of the parent while both are separated by a hashtag (#). This URL ist later accessible so that you can directly navigate to the right position.
 
-The `context` contains the actual JSON-LD context that will be exported as dedicated file while building. This files you can load from our site into your processor later. Within the `@context` there must be the `@version` property with the fixed value `1.1` followed by the prefix declaration `"s4i": "http://schema4i.org/"` and `"schema": "http://schema.org/"` (note the trailing slashes). When you reuse OpenOntology that `"oo" : "https://docs.riskine.com/"` is the namespace. The name of the object has to be declared and mapped to the desired meaning. Whenever possible use the meaning defined at Schema.org for the values of `@id` and `@type`. Doing like this JSON-LD consumers that can understand the meaning of Schema.org will understand this object automatically.
+The `context` contains the actual JSON-LD context that will be exported as dedicated file while building. This files you can load from our site into your processor later. Within the `@context` there must be the `@version` property with the fixed value `1.1` followed by the prefix declaration `"s4i": "http://schema4i.org/"` and `"schema": "http://schema.org/"` (note the trailing slashes). When you reuse OpenOntology that `"oo" : "https://schema.openontology.org/"` is the namespace. The name of the object has to be declared and mapped to the desired meaning. Whenever possible use the meaning defined at Schema.org for the values of `@id` and `@type`. Doing like this JSON-LD consumers that can understand the meaning of Schema.org will understand this object automatically.
 
 After this you have to put additional attributes to the context and define their meanings. You must always define both, the `@id` and `@type`. The type is important, because sometimes there is more than one type choosable. Rather, most of the times we choose the <http://schema.org/Text> data type if possible. If there is not data type available that fits your meaning, then you can e.g. use `"@type": "@vocab"` and define an enumeration with keys and values.
 
@@ -97,7 +97,6 @@ After this you have to put additional attributes to the context and define their
                 "@version": 1.1,
                 "s4i": "http://schema4i.org/",
                 "schema": "http://schema.org/",
-                "oo": "https://docs.riskine.com/",
                 "PostalAddress": "schema:PostalAddress",
                 "AddressCountry": {
                     "@id": "schema:addressCountry",

@@ -3,11 +3,8 @@
     "uri": "http://schema4i.org/MotorInsuranceProduct",
     "description": "Motor insurance for cars, motorbikes, trucks, quads, etc.",
     "links": [{
-        "url": "https://github.com/riskine/ontology/blob/master/schemas/products/motor.json",
-        "description": "Parts are used from the Insurance Ontology"
-    }, {
-        "url": "https://docs.riskine.com",
-        "description": "Global data model for insurance"
+        "url": "https://openontology.org",
+        "description": "OpenOntology.org"
     }],
     "parents": [],
     "base": [
@@ -44,9 +41,9 @@
                 "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage.jsonld",
                 {
-                    "oo": "https://docs.riskine.com/",
+                    "oo": "https://schema.openontology.org/",
                     "SumInsured": {
-                        "@id": "oo:ontology/motor/product.motor.coverage.liability.sum-insured",
+                        "@id": "oo:motor/product.motor.coverage.liability.sum-insured",
                         "@type": "@vocab",
                         "@context": {
                             "@vocab": "s4i:EnumMotorInsuranceLiabilityCoverageCode#"

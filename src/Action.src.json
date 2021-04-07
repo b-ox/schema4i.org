@@ -12,7 +12,9 @@
         { "@id": "http://schema4i.org/CreateAction" },
         { "@id": "http://schema4i.org/IgnoreAction" },
         { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/MoneyTransferAction" },
         { "@id": "http://schema4i.org/SearchAction" },
+        { "@id": "http://schema4i.org/SupportAction" },
         { "@id": "http://schema4i.org/Thing#PotentialAction" },
         { "@id": "http://schema4i.org/UpdateAction" }
     ],

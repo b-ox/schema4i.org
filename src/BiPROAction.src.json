@@ -1,0 +1,28 @@
+{
+    "type": "BiPROAction",
+    "uri": "http://schema4i.org/BiPROAction",
+    "description": "Describes an interaction on a BiPRO API.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BiPROAction": "s4i:BiPROAction"
+        }
+    },
+    "playground": [{
+        "title": "A minimum BiPROAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "BiPROAction"
+        },
+        "context": {}
+    }]
+}

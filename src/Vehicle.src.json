@@ -6,7 +6,7 @@
         "url": "http://schema.org/Vehicle",
         "description": "Original Schema.org type"
     }, {
-        "url": "https://docs.riskine.com/ontology/vehicle",
+        "url": "https://schema.openontology.org/vehicle",
         "description": "OpenOntology.org type"
     }],
     "parents": [
@@ -17,7 +17,7 @@
     ],
     "multipletypes": {
         "Garage": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/boolean" },
+            { "@id": "https://schema.openontology.org/definitions/boolean" },
             { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
         "Owner": [
@@ -25,11 +25,11 @@
             { "@id": "http://schema4i.org/Organization" }
         ],
         "RegistrationArea": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/string" },
+            { "@id": "https://schema.openontology.org/definitions/string" },
             { "@id": "http://schema4i.org/EnumCountryCode" }
         ],
         "VehicleType": [
-            { "@id": "https://docs.riskine.com/ontology/definitions/vehicle-type" },
+            { "@id": "https://schema.openontology.org/definitions/vehicle-type" },
             { "@id": "http://schema4i.org/EnumVehicleRiskCode" }
         ]
     },
@@ -38,7 +38,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://docs.riskine.com/",
+            "oo": "https://schema.openontology.org/",
             "Vehicle": "schema:Vehicle",
             "DateHolderFirstRegistered": {
                 "@id": "s4i:DateHolderFirstRegistered",
@@ -49,23 +49,23 @@
                 "@type": "schema:Date"
             },
             "Garage": {
-                "@id": "oo:ontology/vehicle/garage"
+                "@id": "oo:vehicle/garage"
             },
             "Manufacturer": {
                 "@id": "schema:manufacturer",
                 "@type": "s4i:Organization"
             },
             "ManufacturerKeyNumber": {
-                "@id": "oo:ontology/vehicle/hsn",
-                "@type": "oo:ontology/definitions/string"
+                "@id": "oo:vehicle/hsn",
+                "@type": "oo:definitions/string"
             },
             "ModelKeyNumber": {
-                "@id": "oo:ontology/vehicle/tsn",
-                "@type": "oo:ontology/definitions/string"
+                "@id": "oo:vehicle/tsn",
+                "@type": "oo:definitions/string"
             },
             "NumberPlate": {
-                "@id": "oo:ontology/vehicle/number-plate",
-                "@type": "oo:ontology/definitions/string"
+                "@id": "oo:vehicle/number-plate",
+                "@type": "oo:definitions/string"
             },
             "NumberPlateAddress": {
                 "@id": "s4i:NumberPlateAddress",
@@ -82,7 +82,7 @@
                 "@id": "s4i:Owner"
             },
             "RegistrationArea": {
-                "@id": "oo:ontology/vehicle/registration-area"
+                "@id": "oo:vehicle/registration-area"
             },
             "RiskCode": {
                 "@id": "s4i:VehicleRiskCode",
@@ -103,8 +103,8 @@
                 "@type": "schema:Text"
             },
             "YearlyMileage": {
-                "@id": "oo:ontology/motor/object.vehicle.yearly-mileage",
-                "@type": "oo:ontology/definitions/nonnegative-integer"
+                "@id": "oo:motor/object.vehicle.yearly-mileage",
+                "@type": "oo:definitions/nonnegative-integer"
             }
         }
     },

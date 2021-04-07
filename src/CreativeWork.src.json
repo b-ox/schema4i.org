@@ -10,7 +10,8 @@
         { "@id": "http://schema4i.org/DataSet" },
         { "@id": "http://schema4i.org/DigitalDocument" },
         { "@id": "http://schema4i.org/Message" },
-        { "@id": "http://schema4i.org/WebPage" }
+        { "@id": "http://schema4i.org/WebPage" },
+        { "@id": "http://schema4i.org/Article" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
@@ -47,6 +48,10 @@
                 "@id": "schema:dateModified",
                 "@type": "schema:DateTime"
             },
+            "DatePublished": {
+                "@id": "schema:datePublished",
+                "@type": "schema:DateTime"
+            },
             "EncodingFormat": {
                 "@id": "schema:encodingFormat",
                 "@type": "schema:Text"
@@ -57,6 +62,10 @@
             "InteractionStatistic": {
                 "@id": "schema:interactionStatistic",
                 "@type": "s4i:InteractionCounter"
+            },
+            "IsBasedOn": {
+                "@id": "schema:isBasedOn",
+                "@type": "schema:URL"
             },
             "Keywords": {
                 "@id": "schema:keywords",
@@ -85,6 +94,7 @@
             "DatePublished": "2020-06-26T16:00:01",
             "HasPart": {},
             "InteractionStatistic": {},
+            "IsBasedOn": "http://domain.tld/SourceFile.json",
             "Keywords": "Posteingang,Wichtig",
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
             "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"

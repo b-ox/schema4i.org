@@ -5,12 +5,6 @@
     "links": [{
         "url": "http://schema.org/Car",
         "description": "Original Schema.org type"
-    }, {
-        "url": "https://github.com/riskine/ontology/blob/master/schemas/core/vehicle.json",
-        "description": "OpenOntology for Insurances type"
-    }, {
-        "url": "https://raw.githubusercontent.com/riskine/ontology/master/schemas/core/vehicle.json",
-        "description": "OpenOntology for Insurances type (JSON Schema)"
     }],
     "parents": [],
     "base": [
