@@ -1,0 +1,31 @@
+{
+    "type": "RegisterAction",
+    "uri": "http://schema4i.org/RegisterAction",
+    "description": "The act of registering to be a user of a service, product or web page.",
+    "links": [{
+        "url": "http://schema.org/RegisterAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RegisterAction": "schema:RegisterAction"
+        }
+    },
+    "playground": [{
+        "title": "A minimum RegisterAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "RegisterAction"
+        },
+        "context": {}
+    }]
+}
