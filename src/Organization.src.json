@@ -37,6 +37,10 @@
                 "@id": "s4i:BankAccount",
                 "@type": "s4i:BankAccount"
             },
+            "CICRegistrationNumber": {
+                "@id": "s4i:CICRegistrationNumber",
+                "@type": "schema:Text"
+            },
             "CommercialRegistrationNumber": {
                 "@id": "s4i:CommercialRegistrationNumber",
                 "@type": "schema:Text"
@@ -80,6 +84,7 @@
             "AdditionalName": ["c/o X-PLOR GmbH", "4. Etage"],
             "Address": {},
             "BankAccount": {},
+            "CICRegistrationNumber": "D-Y1K7-3SBQE-79",
             "CommercialRegistrationNumber": "HRB 8297",
             "ContactPoint": {},
             "Email": "noreply@b-tix.de",
