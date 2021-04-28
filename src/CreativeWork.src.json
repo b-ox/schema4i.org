@@ -72,6 +72,10 @@
                 "@id": "schema:keywords",
                 "@type": "schema:Text"
             },
+            "License": {
+                "@id": "schema:license",
+                "@type": "s4i:CreativeWork"
+            },
             "Text": {
                 "@id": "schema:text",
                 "@type": "schema:Text"
@@ -97,6 +101,7 @@
             "InteractionStatistic": {},
             "IsBasedOn": "http://domain.tld/SourceFile.json",
             "Keywords": "Posteingang,Wichtig",
+            "License": {},
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
             "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
         },
