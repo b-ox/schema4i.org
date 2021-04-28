@@ -11,7 +11,8 @@
         { "@id": "http://schema4i.org/DigitalDocument" },
         { "@id": "http://schema4i.org/Message" },
         { "@id": "http://schema4i.org/WebPage" },
-        { "@id": "http://schema4i.org/Article" }
+        { "@id": "http://schema4i.org/Article" },
+        { "@id": "http://schema4i.org/ProfilePage" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
