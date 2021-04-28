@@ -20,6 +20,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "UserAccount": "s4i:UserAccount",
+            "Credentials": {
+                "@id": "s4i:Credentials",
+                "@type": "s4i:Credentials"
+            },
             "Status": {
                 "@id": "s4i:UserAccountStatus",
                 "@type": "schema:Text"
@@ -39,6 +43,7 @@
         "input": {
             "@context": {},
             "@type": "UserAccount",
+            "Credentials": {},
             "Status": "Aktiv",
             "ProfilePage": {},
             "MemberOf": {}
@@ -54,7 +59,9 @@
                 "http://schema4i.org/ProfilePage",
                 "http://schema4i.org/Person",
                 "http://schema4i.org/PostalAddress",
-                "http://schema4i.org/Role"
+                "http://schema4i.org/Role",
+                "http://schema4i.org/Credentials",
+                "http://schema4i.org/DigitalDocument"
             ],
             "@type": "UserAccount",
             "@id": "http://localhost:1880/user/asdfghjk",
@@ -83,7 +90,28 @@
                     "@type": "UserAccount",
                     "@id": "http://localhost:1880/group/qwertz"
                 }
-            }]
+            }],
+            "License": {
+                "@type": "DigitalDocument",
+                "@id": "http://localhost:1880/licenses/terms",
+                "Identifier": "terms",
+                "Name": "Nutzungsbedingungen.pdf",
+                "Description": "Nutzungsbedingungen",
+                "EncodingFormat": "application/pdf"
+            },
+            "Credentials": [{
+                    "@type": "Credentials",
+                    "Name": "Login mit Benutzerkennung/Passwort",
+                    "AuthenticationMethod": "UNP",
+                    "Username": "m.muster"
+                },
+                {
+                    "@type": "Credentials",
+                    "Name": "Login mit E-Mail-Adresse",
+                    "AuthenticationMethod": "UNP",
+                    "Username": "mmuster@mail.de"
+                }
+            ]
         },
         "context": {}
     }]
