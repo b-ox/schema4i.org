@@ -1,0 +1,54 @@
+{
+    "type": "Role",
+    "uri": "http://schema4i.org/Role",
+    "description": "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#MemberOf" },
+        { "@id": "http://schema4i.org/Organization#MemberOf" },
+        { "@id": "http://schema4i.org/UserAccount#MemberOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Role": "schema:Role"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Role",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Role",
+            "RoleName": "Administrator"
+        },
+        "context": {}
+    }, {
+        "title": "A realistic Role",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Person",
+                "http://schema4i.org/Role",
+                "http://schema4i.org/ProgramMembership"
+            ],
+            "@type": "Person",
+            "MemberOf": {
+                "@type": "Role",
+                "RoleName": "Mitglied",
+                "MemberOf": {
+                    "@type": "ProgramMembership",
+                    "ProgramName": "Golf Community"
+                }
+            }
+        },
+        "context": {}
+    }]
+}
