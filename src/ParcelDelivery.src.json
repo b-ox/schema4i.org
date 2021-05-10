@@ -21,11 +21,11 @@
             "ParcelDelivery": "schema:ParcelDelivery",
             "HasDeliveryMethod": {
                 "@id": "schema:hasDeliveryMethod",
-                "@type": "DeliveryMethod"
+                "@type": "schema:DeliveryMethod"
             },
             "Provider": {
                 "@id": "schema:provider",
-                "@type": "schema:Organization"
+                "@type": "s4i:Organization"
             },
             "TrackingNumber": {
                 "@id": "schema:trackingNumber",

@@ -11,9 +11,9 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "schema": "http://schema.org/",
+            "s4i": "http://schema4i.org/",
             "BankBalance": {
-                "@id": "box:BankBalance",
+                "@id": "s4i:BankBalance",
                 "@type": "schema:Number"
             }
         }
@@ -23,7 +23,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "BankBalance": "-50.00"
+            "BankBalance": -50.00
         },
         "context": {}
     }]

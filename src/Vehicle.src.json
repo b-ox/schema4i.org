@@ -20,10 +20,6 @@
             { "@id": "https://schema.openontology.org/definitions/boolean" },
             { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
-        "Owner": [
-            { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Organization" }
-        ],
         "RegistrationArea": [
             { "@id": "https://schema.openontology.org/definitions/string" },
             { "@id": "http://schema4i.org/EnumCountryCode" }
@@ -79,7 +75,8 @@
                 }
             },
             "Owner": {
-                "@id": "s4i:Owner"
+                "@id": "s4i:Owner",
+                "@type": "s4i:Owner"
             },
             "RegistrationArea": {
                 "@id": "oo:vehicle/registration-area"

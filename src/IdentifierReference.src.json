@@ -11,10 +11,10 @@
     "context": {
         "@context": {
             "@version": 1.1,
-            "box": "http://schema4i.org/",
+            "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "IdentifierReference": {
-                "@id": "box:IdentifierReference",
+                "@id": "s4i:IdentifierReference",
                 "@type": "schema:Text"
             }
         }

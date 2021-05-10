@@ -5,7 +5,7 @@
     "links": [],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/BusinessTransaction#Dunning" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
@@ -28,7 +28,7 @@
             },
             "Date": {
                 "@id": "s4i:DunningDate",
-                "@type": "schema:Number"
+                "@type": "schema:Date"
             },
             "Costs": {
                 "@id": "s4i:DunningCosts",
