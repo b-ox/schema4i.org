@@ -15,7 +15,8 @@
     },
     "scripts": {
         "build": "node scripts/build-npm.js",
-        "verify-links": "node scripts/verify-links-npm.js"
+        "verify-links": "node scripts/verify-links-npm.js",
+        "generate-types": "node scripts/generate-types-npm.js"
     },
     "keywords": [
         "semantic",
