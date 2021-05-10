@@ -1,0 +1,59 @@
+{
+    "type": "ProfilePage",
+    "uri": "http://schema4i.org/ProfilePage",
+    "description": "Web page type: Profile page. It's used to represent information about a user. Most of the times this is part of the users account. In About use Person to describe personal information of the user.",
+    "links": [{
+        "url": "http://schema.org/ProfilePage",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/UserAccount#ProfilePage" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ProfilePage": "s4i:ProfilePage"
+        }
+    },
+    "playground": [{
+        "title": "A maximum ProfilePage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "ProfilePage",
+            "About": {}
+        },
+        "context": {}
+    }, {
+        "title": "A realistic ProfilePage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/ProfilePage",
+                "http://schema4i.org/Person",
+                "http://schema4i.org/PostalAddress"
+            ],
+            "@type": "ProfilePage",
+            "About": {
+                "@type": "Person",
+                "Name": "Regina Muster",
+                "BirthDate": "1980-01-01",
+                "Email": "rmuster@mail.de",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Musterstr. 5",
+                    "AddressLocality": "Düsseldorf",
+                    "PostalCode": "40233"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

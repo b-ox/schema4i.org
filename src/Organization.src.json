@@ -18,7 +18,12 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "MemberOf": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/ProgramMembership" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -36,6 +41,10 @@
             "BankAccount": {
                 "@id": "s4i:BankAccount",
                 "@type": "s4i:BankAccount"
+            },
+            "CICRegistrationNumber": {
+                "@id": "s4i:CICRegistrationNumber",
+                "@type": "schema:Text"
             },
             "CommercialRegistrationNumber": {
                 "@id": "s4i:CommercialRegistrationNumber",
@@ -61,6 +70,9 @@
                 "@id": "schema:logo",
                 "@type": "schema:URL"
             },
+            "MemberOf": {
+                "@id": "schema:memberOf"
+            },
             "TaxID": {
                 "@id": "schema:taxID",
                 "@type": "schema:Text"
@@ -80,12 +92,14 @@
             "AdditionalName": ["c/o X-PLOR GmbH", "4. Etage"],
             "Address": {},
             "BankAccount": {},
+            "CICRegistrationNumber": "D-Y1K7-3SBQE-79",
             "CommercialRegistrationNumber": "HRB 8297",
             "ContactPoint": {},
             "Email": "noreply@b-tix.de",
             "FaxNumber": "0211 41608 100",
             "LegalName": "b-tix GmbH",
             "Logo": "https://www.b-tix.de/wp-content/uploads/2015/04/b-tix_logo_weiss_textlos_klein.png",
+            "MemberOf": {},
             "TaxID": "DE123123123",
             "Telephone": "0049 211 41608 400"
         },

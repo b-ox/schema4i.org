@@ -1,0 +1,118 @@
+{
+    "type": "UserAccount",
+    "uri": "http://schema4i.org/UserAccount",
+    "description": "A user account, or account for short, is an authorization to access a restricted IT system. Usually, a user has to authenticate himself with a username and password when logging in. The system uses the user account to identify the individual user.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "MemberOf": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/ProgramMembership" },
+            { "@id": "http://schema4i.org/UserAccount" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "UserAccount": "s4i:UserAccount",
+            "Credentials": {
+                "@id": "s4i:Credentials",
+                "@type": "s4i:Credentials"
+            },
+            "Status": {
+                "@id": "s4i:UserAccountStatus",
+                "@type": "schema:Text"
+            },
+            "ProfilePage": {
+                "@id": "s4i:ProfilePage",
+                "@type": "s4i:ProfilePage"
+            },
+            "MemberOf": {
+                "@id": "schema:memberOf"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum UserAccount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "UserAccount",
+            "Credentials": {},
+            "Status": "Aktiv",
+            "ProfilePage": {},
+            "MemberOf": {}
+        },
+        "context": {}
+    }, {
+        "title": "A realistic UserAccount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/UserAccount",
+                "http://schema4i.org/ProfilePage",
+                "http://schema4i.org/Person",
+                "http://schema4i.org/PostalAddress",
+                "http://schema4i.org/Role",
+                "http://schema4i.org/Credentials",
+                "http://schema4i.org/DigitalDocument"
+            ],
+            "@type": "UserAccount",
+            "@id": "http://localhost:1880/user/asdfghjk",
+            "Identifier": "asdfghjk",
+            "Name": "r.muster",
+            "Status": "Aktiv",
+            "ProfilePage": {
+                "@type": "ProfilePage",
+                "About": {
+                    "@type": "Person",
+                    "Name": "Regina Muster",
+                    "BirthDate": "1980-01-01",
+                    "Email": "rmuster@mail.de",
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "StreetAddress": "Musterstr. 5",
+                        "AddressLocality": "Düsseldorf",
+                        "PostalCode": "40233"
+                    }
+                }
+            },
+            "MemberOf": [{
+                "@type": "Role",
+                "RoleName": "Mitglied",
+                "MemberOf": {
+                    "@type": "UserAccount",
+                    "@id": "http://localhost:1880/group/qwertz"
+                }
+            }],
+            "License": {
+                "@type": "DigitalDocument",
+                "@id": "http://localhost:1880/licenses/terms",
+                "Identifier": "terms",
+                "Name": "Nutzungsbedingungen.pdf",
+                "Description": "Nutzungsbedingungen",
+                "EncodingFormat": "application/pdf"
+            },
+            "Credentials": [{
+                    "@type": "Credentials",
+                    "Name": "Login mit Benutzerkennung/Passwort",
+                    "AuthenticationMethod": "UNP",
+                    "Username": "m.muster"
+                },
+                {
+                    "@type": "Credentials",
+                    "Name": "Login mit E-Mail-Adresse",
+                    "AuthenticationMethod": "UNP",
+                    "Username": "mmuster@mail.de"
+                }
+            ]
+        },
+        "context": {}
+    }]
+}
