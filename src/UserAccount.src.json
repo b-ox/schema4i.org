@@ -64,7 +64,7 @@
                 "http://schema4i.org/DigitalDocument"
             ],
             "@type": "UserAccount",
-            "@id": "http://schema4i.org/user/asdfghjk",
+            "@id": "https://api.b-ox.de/user/asdfghjk",
             "Identifier": "asdfghjk",
             "Name": "r.muster",
             "Status": "Aktiv",
@@ -88,12 +88,12 @@
                 "RoleName": "Mitglied",
                 "MemberOf": {
                     "@type": "UserAccount",
-                    "@id": "http://schema4i.org/group/qwertz"
+                    "@id": "https://api.b-ox.de/group/qwertz"
                 }
             }],
             "License": {
                 "@type": "DigitalDocument",
-                "@id": "http://schema4i.org/licenses/terms",
+                "@id": "https://api.b-ox.de/licenses/terms",
                 "Identifier": "terms",
                 "Name": "Nutzungsbedingungen.pdf",
                 "Description": "Nutzungsbedingungen",
