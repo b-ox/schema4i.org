@@ -43,7 +43,7 @@
             "@type": "UpdateAction",
             "Object": {
                 "@id": "https://api.b-ox.de/config/settings/POSTs4i/ACCOUNTS",
-                "@†ype": "PropertyValue",
+                "@type": "PropertyValue",
                 "Value": 3
             }
         },

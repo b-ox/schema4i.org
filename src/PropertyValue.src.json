@@ -20,7 +20,7 @@
             { "@id": "http://schema.org/Number" },
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema.org/Boolean" },
-            { "@id": "http://schema.org/Thing" }
+            { "@id": "http://schema4i.org/Thing" }
         ]
     },
     "context": {

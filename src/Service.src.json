@@ -7,8 +7,8 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://scchema.b-ox.org/FinancialProduct" },
-        { "@id": "http://scchema.b-ox.org/WebAPI" }
+        { "@id": "http://schema4i.org/FinancialProduct" },
+        { "@id": "http://schema4i.org/WebAPI" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
@@ -20,8 +20,8 @@
             { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
         ],
         "Broker": [
-            { "@id": "http://schemaai.org/Person" },
-            { "@id": "http://schemaai.org/Organization" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ]
     },
     "context": {
@@ -62,7 +62,7 @@
             },
             "Provider": {
                 "@id": "schema:provider",
-                "@type": "schema:Organization"
+                "@type": "s4i:Organization"
             },
             "Slogan": {
                 "@id": "schema:slogan",

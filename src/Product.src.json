@@ -10,7 +10,7 @@
         { "@id": "http://schema.org/Vehicle" }
     ],
     "base": [
-        { "@id": "http://schema.org/Thing" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
@@ -21,7 +21,7 @@
             "Product": "schema:Product",
             "Manufacturer": {
                 "@id": "schema:manufacturer",
-                "@type": "schema:Organization"
+                "@type": "s4i:Organization"
             },
             "Model": {
                 "@id": "schema:model",
