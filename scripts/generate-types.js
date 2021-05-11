@@ -51,11 +51,26 @@ function processType(type, ignoreMissing) {
     }
 }
 
+function formatDoc(doc, indentation = 0) {
+    let description = (doc || '').replace(/\n|\r|\t/g, '');
+    const descriptionParts = [];
+    while (description.length > 0) {
+        const currentSlice = Math.min(130, description.length);
+        const currentPart = description.slice(0, currentSlice).trim();
+        if (currentPart.length > 0) {
+            descriptionParts.push(`${' '.repeat(indentation)} * ${currentPart}`);
+        }
+        description = description.slice(currentSlice);
+    }
+    return descriptionParts.join('\n') || `${' '.repeat(indentation)} *`;
+}
+
 class FieldDefinition {
     name;
     description;
     types;
     onlyOne;
+    required;
 
     constructor(name, description, types) {
         this.name = name;
@@ -120,7 +135,9 @@ class TypeDefinition {
                 this.simpleType = thisDef;
             }
             if (this.type === 'Thing') {
-                this.fields.push(new FieldDefinition('@type', '', ['string']));
+                const typeField = new FieldDefinition('@type', '', ['string']);
+                // typeField.required = true;
+                this.fields.push(typeField);
                 this.fields.push(new FieldDefinition('@context', '', ['Context']));
             }
             this.examples = (srcFile.playground || []).map(pg => ({title: pg.title, data: pg.input}));
@@ -132,55 +149,77 @@ class TypeDefinition {
 
 const LANGUAGES = {
     'typescript': {
-        typeFile: `schema4i.d.ts`,
-        openTypes: () => `
-export declare type OneOrMany<T> = T | T[];
-export declare type Context = OneOrMany<string | Record<string, any>>;
-${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export declare type ${key} = ${value.join('|')};`).join('\n')}`,
-        typeMapper: (typeDefinition, strict) => {
-            const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
-            function getFieldTypes(field) {
-                const types = generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types;
-                return field.onlyOne ? `${types.join('|')}` : `OneOrMany<${types.join('|')}>`;
-            }
-            const genericDeclaration = generics.length > 0 ? `<${generics.map(g => `${g} extends Thing = Thing`).join(', ')}>` : '';
-            const doc = `/**
-* ${typeDefinition.type}
-* 
-* ${typeDefinition.description}
-* ${typeDefinition.url ? `@see ${typeDefinition.url}` : ''}
-*/`;
-            if (typeDefinition.simpleType) {
-                const simpleTypes = getFieldTypes(typeDefinition.simpleType);
-                return `${doc}
-export type ${typeDefinition.type} = ${simpleTypes}
+        typeFile: `schema4i.ts`,
+        writeTypes: (typeDefinitions, strict) => {
+            let output = `
+// tslint:disable: no-empty-interface
+
+export type OneOrMany<T> = T | T[];
+export type Context = OneOrMany<string | Record<string, any>>;
+${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${value.join('|')};`).join('\n')}`;
+            for (const typeDefinition of typeDefinitions) {
+                const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
+                function getFieldTypes(field) {
+                    const types = generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types;
+                    return field.onlyOne ? `${types.join('|')}` : `OneOrMany<${types.join('|')}>`;
+                }
+                const genericDeclaration = generics.length > 0 ? `<${generics.map(g => `${g} extends Thing = Thing`).join(', ')}>` : '';
+                const doc = `/**
+ * ${typeDefinition.type}
+ *
+${formatDoc(typeDefinition.description)}
+ * ${typeDefinition.url ? `@see ${typeDefinition.url}` : ''}
+ */`;
+                if (typeDefinition.simpleType) {
+                    const simpleTypes = getFieldTypes(typeDefinition.simpleType);
+                    output += `
+${doc}
+export type ${typeDefinition.type} = ${simpleTypes};
 `;
-            } else {
-                return `${doc}
+                } else {
+                    output += `
+/**
+ * Checks if the given object is an instance of ${typeDefinition.type}.
+ */
+export function is${typeDefinition.type}(obj: any): obj is ${typeDefinition.type} {
+    return typeof obj === 'object' && obj["@type"] === '${typeDefinition.type}';
+}
+
+${doc}
 export interface ${typeDefinition.type}${genericDeclaration}${typeDefinition.baseTypes.length ? ` extends ${typeDefinition.baseTypes.join(', ')}` : ''} {
 ${typeDefinition.fields.map(field => `
-    /** ${field.description} */
-    '${field.name}'?: ${getFieldTypes(field)}`).join(';\n')}
-    ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : ''}
+    /**
+${formatDoc(field.description, 4)}
+     */
+    '${field.name}'${field.required ? '' : '?'}: ${getFieldTypes(field)};`).join('\n')}
+${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : ''}
 }
 `;
+                }
             }
+            return output;
         },
         exampleFile: 'schema4i-examples.ts',
-        openExamples: () => `
-import s4i from './schema4i.d';
+        writeExamples: (typeDefinitions) => {
+            const exampleTypes = typeDefinitions.filter(t => !t.simpleType && t.examples.length > 0);
+            let output = `
+import * as s4i from './schema4i';
 
 const EXAMPLES = new Map<string, s4i.Thing[]>();
-`,
-        exampleMapper: (typeDefinition) => `
+`;
+            for (const typeDefinition of exampleTypes) {
+                output += `
 const examples${typeDefinition.type}: s4i.${typeDefinition.type}[] = [${
     typeDefinition.examples.map(example => JSON.stringify(example.data, undefined, 2)).join(',\n')
 }];
 EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
-`,
-        closeExamples: (typeDefinitions) => `
-${typeDefinitions.map(type => `export function getExampleGenerator(type: '${type.type}', host?: string): Generator<s4i.${type.type}>;`).join('\n')}
-export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string, host?: string): Generator<R> {
+`
+            }
+            output += '\n';
+            for (const typeDefinition of exampleTypes) {
+                output += `export function getExampleGenerator(type: '${typeDefinition.type}', host?: string): Generator<s4i.${typeDefinition.type}>;\n`;
+            }
+            output += `export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string, host?: string): Generator<R> {
     const examples = EXAMPLES.get(type);
     if (!examples) {
         return;
@@ -198,6 +237,8 @@ export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: stri
     }
 }
 `
+        return output;
+        }
     }
 };
 
@@ -217,7 +258,7 @@ async function generateTypes(language, outputDir, includeExamples, strict, conso
     if (!languageProcessor) {
         throw new Error(`language ${language} is not supported.`);
     }
-    if (includeExamples && !languageProcessor.exampleMapper) {
+    if (includeExamples && !languageProcessor.writeExamples) {
         throw new Error(`language ${language} does not support examples.`);
     }
 
@@ -243,30 +284,21 @@ async function generateTypes(language, outputDir, includeExamples, strict, conso
 
     consoleLike.log(`Processed ${types.length} types`);
 
-    const typeOutputs = [
-        languageProcessor.openTypes ? languageProcessor.openTypes() : undefined,
-        ...types.map(t => languageProcessor.typeMapper(t, strict)),
-        languageProcessor.closeTypes ? languageProcessor.closeTypes() : undefined,
-    ].filter(line => typeof line !== 'undefined');
+    const typeOutput = languageProcessor.writeTypes(types, strict);
 
-    let exampleOutputs = [];
+    let exampleOutput = '';
     if (includeExamples) {
-        const exampleTypes = types.filter(t => !t.simpleType && t.examples.length > 0);
-        exampleOutputs = [
-            languageProcessor.openExamples ? languageProcessor.openExamples() : undefined,
-            ...exampleTypes.map(t => languageProcessor.exampleMapper(t)),
-            languageProcessor.closeExamples ? languageProcessor.closeExamples(exampleTypes) : undefined,
-        ].filter(line => typeof line !== 'undefined');
+        exampleOutput = languageProcessor.writeExamples(types);
     }
 
     const typeOutputFile = path.resolve(outputDir, languageProcessor.typeFile);
     consoleLike.log(`Writing type definitions to ${typeOutputFile}`);
-    await fs.writeFile(typeOutputFile, typeOutputs.join('\n'), { encoding: 'utf-8' });
+    await fs.writeFile(typeOutputFile, typeOutput, { encoding: 'utf-8' });
 
     if (includeExamples) {
         const exampleOutputFile = path.resolve(outputDir, languageProcessor.exampleFile);
         consoleLike.log(`Writing examples to ${exampleOutputFile}`);
-        await fs.writeFile(exampleOutputFile, exampleOutputs.join('\n'), { encoding: 'utf-8' });    
+        await fs.writeFile(exampleOutputFile, exampleOutput, { encoding: 'utf-8' });    
     }
 }
 
