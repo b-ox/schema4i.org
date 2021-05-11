@@ -21,9 +21,6 @@
         "Customer": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
-        ],
-        "OrderedItem": [
-            { "@id": "http://schema4i.org/OrderItem" }
         ]
     },
     "context": {
@@ -71,7 +68,7 @@
             },
             "OrderedItem": {
                 "@id": "schema:orderedItem",
-                "@type": "s4i:Service"
+                "@type": "s4i:FinancialProduct"
             },
             "OrderNumber": {
                 "@id": "schema:orderNumber",

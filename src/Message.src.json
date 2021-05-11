@@ -6,7 +6,10 @@
         "url": "http://schema.org/Message",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Action#Result" },
+        { "@id": "https://schema4i.org/CreativeWork#HasPart" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/CreativeWork" }
     ],

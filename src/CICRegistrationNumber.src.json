@@ -1,0 +1,31 @@
+{
+    "type": "CICRegistrationNumber",
+    "uri": "http://schema4i.org/CICRegistrationNumber",
+    "description": "Number of a person or company registered at the German Chamber of Industry and Commerce (IHK = Industrie- und Handelskammer), e.g. D-Y1K7-3SBQE-79.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Organization#CICRegistrationNumber"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CICRegistrationNumber": {
+                "@id": "s4i:CICRegistrationNumber",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample CICRegistrationNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "CICRegistrationNumber": "D-Y1K7-3SBQE-79"
+        },
+        "context": {}
+    }]
+}

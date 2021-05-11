@@ -1,0 +1,31 @@
+{
+    "type": "UserAccountStatus",
+    "uri": "http://schema4i.org/UserAccountStatus",
+    "description": "The status of a user account as free text such as Active, Check, Rejected, Blocked. This value is intended for people and not for machines, but it can also be used as a self-expressing key. Typical values in German software are 'Aktiv', 'Pruefung', 'Abgewiesen', 'Gesperrt'.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/UserAccount#Status" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "UserAccountStatus": {
+                "@id": "s4i:UserAccountStatus",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum UserAccountStatus",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "UserAccountStatus": "Aktiv"
+        },
+        "context": {}
+    }]
+}
