@@ -149,14 +149,15 @@ class TypeDefinition {
 
 const LANGUAGES = {
     'typescript': {
-        typeFile: `schema4i.ts`,
+        typeFile: `schema4i.d.ts`,
         writeTypes: (typeDefinitions, strict) => {
             let output = `
 // tslint:disable: no-empty-interface
 
 export type OneOrMany<T> = T | T[];
 export type Context = OneOrMany<string | Record<string, any>>;
-${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${value.join('|')};`).join('\n')}`;
+${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${value.join('|')};`).join('\n')}
+`;
             for (const typeDefinition of typeDefinitions) {
                 const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
                 function getFieldTypes(field) {
@@ -178,13 +179,6 @@ export type ${typeDefinition.type} = ${simpleTypes};
 `;
                 } else {
                     output += `
-/**
- * Checks if the given object is an instance of ${typeDefinition.type}.
- */
-export function is${typeDefinition.type}(obj: any): obj is ${typeDefinition.type} {
-    return typeof obj === 'object' && obj["@type"] === '${typeDefinition.type}';
-}
-
 ${doc}
 export interface ${typeDefinition.type}${genericDeclaration}${typeDefinition.baseTypes.length ? ` extends ${typeDefinition.baseTypes.join(', ')}` : ''} {
 ${typeDefinition.fields.map(field => `
@@ -194,6 +188,27 @@ ${formatDoc(field.description, 4)}
     '${field.name}'${field.required ? '' : '?'}: ${getFieldTypes(field)};`).join('\n')}
 ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : ''}
 }
+`;
+                }
+            }
+            return output;
+        },
+        otherFile: 'schema4i-util.ts',
+        writeOther: (typeDefinitions) => {
+            let output = `
+import * as s4i from './schema4i';
+
+`;
+            for (const typeDefinition of typeDefinitions) {
+                if (!typeDefinition.simpleType) {
+                    output += `
+/**
+ * Checks if the given object is an instance of ${typeDefinition.type}.
+ */
+export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.type} {
+    return typeof obj === 'object' && obj["@type"] === '${typeDefinition.type}';
+}
+
 `;
                 }
             }
@@ -217,23 +232,15 @@ EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
             }
             output += '\n';
             for (const typeDefinition of exampleTypes) {
-                output += `export function getExampleGenerator(type: '${typeDefinition.type}', host?: string): Generator<s4i.${typeDefinition.type}>;\n`;
+                output += `export function getExampleGenerator(type: '${typeDefinition.type}'): Generator<s4i.${typeDefinition.type}>;\n`;
             }
-            output += `export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string, host?: string): Generator<R> {
+            output += `export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string): Generator<R> {
     const examples = EXAMPLES.get(type);
     if (!examples) {
         return;
     }
     for (const example of examples) {
-        if (!host) {
-            yield example as R;
-        } else {
-            const clone = {...example};
-            const context = Array.isArray(clone["@context"]) ? clone["@context"] : [clone["@context"]].filter(v => typeof v !== 'undefined');
-            // TODO: map object context
-            clone["@context"] = context.map(url => typeof url === 'string' ? url.replace(/https?:\\/\\/schema4i\.org/, host) : url);
-            yield clone as R;
-        }
+        yield example as R;
     }
 }
 `
@@ -291,9 +298,20 @@ async function generateTypes(language, outputDir, includeExamples, strict, conso
         exampleOutput = languageProcessor.writeExamples(types);
     }
 
+    let otherOutput = '';
+    if (typeof languageProcessor.writeOther === 'function') {
+        otherOutput = languageProcessor.writeOther(types);
+    }
+
     const typeOutputFile = path.resolve(outputDir, languageProcessor.typeFile);
     consoleLike.log(`Writing type definitions to ${typeOutputFile}`);
     await fs.writeFile(typeOutputFile, typeOutput, { encoding: 'utf-8' });
+
+    if (otherOutput) {
+        const otherOutputFile = path.resolve(outputDir, languageProcessor.otherFile);
+        consoleLike.log(`Writing additional code to ${otherOutputFile}`);
+        await fs.writeFile(otherOutputFile, otherOutput, { encoding: 'utf-8' });    
+    }
 
     if (includeExamples) {
         const exampleOutputFile = path.resolve(outputDir, languageProcessor.exampleFile);
