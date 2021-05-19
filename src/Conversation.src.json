@@ -20,14 +20,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum Conversation",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "Conversation"
-        },
-        "context": {}
-    }, {
         "title": "A realistic Conversation",
         "tab": "tab-expanded",
         "input": {

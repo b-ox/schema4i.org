@@ -23,7 +23,11 @@
         "title": "A minimum RegisterAction",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/RegisterAction.jsonld"
+            ],
             "@type": "RegisterAction"
         },
         "context": {}

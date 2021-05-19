@@ -43,7 +43,10 @@
         "title": "A maximum DrivingLicense",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DrivingLicense.jsonld"
+            ],
             "@type": "DrivingLicense",
             "ExpirationDate": "2022-11-16",
             "IdNumber": "123456789",

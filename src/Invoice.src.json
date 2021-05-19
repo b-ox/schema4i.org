@@ -84,7 +84,10 @@
         "title": "A maximum Invoice",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Invoice.jsonld"
+            ],
             "@type": "Invoice",
             "AccountID": "KUNDEKTO-10424147",
             "BillingPeriod": "2020-04",

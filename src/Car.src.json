@@ -20,14 +20,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum Car",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "Car"
-        },
-        "context": {}
-    }, {
         "title": "A realistic Car",
         "tab": "tab-expanded",
         "input": {

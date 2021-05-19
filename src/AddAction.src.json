@@ -1,0 +1,50 @@
+{
+    "type": "AddAction",
+    "uri": "http://schema4i.org/AddAction",
+    "description": "The act of editing by adding an object to a collection. The attribute Object declares the Thing that will be added. The attribute TargetCollection might be an ItemList to which the object will be added. On an API the AddAction is sent to the server as request body of an HTTP PUT request. The server itself answers with a AddAction response.",
+    "links": [{
+        "url": "http://schema.org/AddAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/UpdateAction" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AddAction": "schema:AddAction",
+            "TargetCollection": {
+                "@id": "schema:targetCollection",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Delete an Object from a collection",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/AddAction.jsonld"
+            ],
+            "@type": "AddAction",
+            "Object": {
+                "@id": "https://api.b-ox.de/posts4i/messages/4711",
+                "@type": "Thing"
+            },
+            "TargetCollection": {
+                "@id": "https://api.b-ox.de/posts4i/messages",
+                "@type": "Thing"
+            }
+        },
+        "context": {}
+    }]
+}

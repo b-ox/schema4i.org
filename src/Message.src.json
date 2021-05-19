@@ -75,7 +75,11 @@
         "title": "A maximum Message",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Message.jsonld"
+            ],
             "@type": "Message",
             "BCCRecipient": {},
             "CCRecipient": {},

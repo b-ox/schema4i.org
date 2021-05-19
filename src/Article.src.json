@@ -37,7 +37,11 @@
         "title": "A maximum Article",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Article.jsonld"
+            ],
             "@type": "Article",
             "Abstract": "A short description of the article",
             "ArticleBody": "The actual body of the article.",

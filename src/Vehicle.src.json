@@ -109,7 +109,11 @@
         "title": "A maximum Vehicle",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Product",
+                "http://schema4i.org/Vehicle"
+            ],
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",
             "DateVehicleFirstRegistered": "2020-07-16",

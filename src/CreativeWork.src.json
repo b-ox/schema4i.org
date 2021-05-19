@@ -57,6 +57,10 @@
                 "@id": "schema:encodingFormat",
                 "@type": "schema:Text"
             },
+            "Expires": {
+                "@id": "schema:expires",
+                "@type": "schema:DateTime"
+            },
             "HasPart": {
                 "@id": "schema:hasPart"
             },
@@ -90,7 +94,10 @@
         "title": "A maximum CreativeWork",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld"
+            ],
             "@type": "CreativeWork",
             "About": {},
             "Creator": {},

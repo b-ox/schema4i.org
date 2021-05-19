@@ -22,18 +22,14 @@
         }
     },
     "playground": [{
-        "title": "An maximum Claim",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "Claim": {}
-        },
-        "context": {}
-    }, {
         "title": "An realistic Claim",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Claim.jsonld"
+            ],
             "Claim": {
                 "Identifier": "S-4711 / 11.08.20",
                 "IdentifierReference": "VM.S-123 / 2020"

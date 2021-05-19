@@ -19,43 +19,53 @@
             "PropertyValueSpecification": "schema:PropertyValueSpecification",
             "DefaultValue": {
                 "@id": "schema:defaultValue",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "singleton"
             },
             "MaxValue": {
                 "@id": "schema:maxValue",
-                "@type": "schema:Number"
+                "@type": "schema:Number",
+                "types-hint": "singleton"
             },
             "MinValue": {
                 "@id": "schema:minValue",
-                "@type": "schema:Number"
+                "@type": "schema:Number",
+                "types-hint": "singleton"
             },
             "ReadonlyValue": {
                 "@id": "schema:readonlyValue",
-                "@type": "schema:Boolean"
+                "@type": "schema:Boolean",
+                "types-hint": "singleton"
             },
             "StepValue": {
                 "@id": "schema:stepValue",
-                "@type": "schema:Number"
+                "@type": "schema:Number",
+                "types-hint": "singleton"
             },
             "ValueMaxLength": {
                 "@id": "schema:valueMaxLength",
-                "@type": "schema:Number"
+                "@type": "schema:Number",
+                "types-hint": "singleton"
             },
             "ValueMinLength": {
                 "@id": "schema:valueMinLength",
-                "@type": "schema:Number"
+                "@type": "schema:Number",
+                "types-hint": "singleton"
             },
             "ValueName": {
                 "@id": "schema:valueName",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "singleton"
             },
             "ValuePattern": {
                 "@id": "schema:valuePattern",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "singleton"
             },
             "ValueRequired": {
                 "@id": "schema:valueRequired",
-                "@type": "schema:Boolean"
+                "@type": "schema:Boolean",
+                "types-hint": "singleton"
             }
         }
     },
@@ -63,7 +73,10 @@
         "title": "A maximum PropertyValueSpecification",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValueSpecification.jsonld"
+            ],
             "@type": "PropertyValueSpecification",
             "DefaultValue": "Vorgabe",
             "MaxValue": 100,

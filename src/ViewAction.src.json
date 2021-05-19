@@ -26,7 +26,12 @@
         "title": "A minimum ViewAction",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Action",
+                "http://schema4i.org/ConsumeAction",
+                "http://schema4i.org/ViewAction"
+            ],
             "@type": "ViewAction"
         },
         "context": {}

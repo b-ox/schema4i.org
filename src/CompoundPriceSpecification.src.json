@@ -32,7 +32,11 @@
         "title": "A maximum CompoundPriceSpecification",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/CompoundPriceSpecification.jsonld"
+            ],
             "@type": "CompoundPriceSpecification",
             "PriceComponent": []
         },

@@ -92,24 +92,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum Action",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "Action",
-            "ActionStatus": "CompletedActionStatus",
-            "Agent": {},
-            "EndTime": "2020-07-01T00:00:10",
-            "Error": {},
-            "Object": {},
-            "Participant": {},
-            "Query-input": {},
-            "Result": {},
-            "StartTime": "2020-07-01T00:00:00",
-            "Target": {}
-        },
-        "context": {}
-    }, {
         "title": "An Action error response of a server",
         "tab": "tab-expanded",
         "input": {

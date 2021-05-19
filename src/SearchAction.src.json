@@ -27,15 +27,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum SearchAction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "SearchAction",
-            "Query": "The search query here"
-        },
-        "context": {}
-    }, {
         "title": "A real SearchAction response with one item",
         "tab": "tab-expanded",
         "input": {

@@ -22,7 +22,11 @@
         "title": "A maximum NumberPlateAddress",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/NumberPlateAddress.jsonld"
+            ],
             "@type": "NumberPlateAddress"
         },
         "context": {}

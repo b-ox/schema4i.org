@@ -34,7 +34,10 @@
         "title": "A maximum MonetaryAmount",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld"
+            ],
             "@type": "MonetaryAmount",
             "Currency": "EUR",
             "Value": 3332.00

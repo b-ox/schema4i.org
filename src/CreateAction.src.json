@@ -26,7 +26,11 @@
         "title": "A maximum CreateAction",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/CreateAction.jsonld"
+            ],
             "@type": "CreateAction"
         },
         "context": {}

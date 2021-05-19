@@ -75,6 +75,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
+                "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 {
                     "Category": {
@@ -87,7 +88,6 @@
             "Award": "Testsieger 01.20 bei Stiftung Warentest",
             "Broker": {},
             "Category": "Testsiegertarife",
-            "HasOfferCatalog": {},
             "IsRelatedTo": {},
             "Logo": "http://domain.de/logo.png",
             "Provider": {},
@@ -99,6 +99,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
+                "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 {
                     "Category": {

@@ -38,18 +38,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum UserAccount",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "UserAccount",
-            "Credentials": {},
-            "Status": "Aktiv",
-            "ProfilePage": {},
-            "MemberOf": {}
-        },
-        "context": {}
-    }, {
         "title": "A realistic UserAccount",
         "tab": "tab-expanded",
         "input": {
@@ -61,6 +49,7 @@
                 "http://schema4i.org/PostalAddress",
                 "http://schema4i.org/Role",
                 "http://schema4i.org/Credentials",
+                "http://schema4i.org/CreativeWork",
                 "http://schema4i.org/DigitalDocument"
             ],
             "@type": "UserAccount",

@@ -67,7 +67,10 @@
         "title": "A maximum Dunning",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Dunning.jsonld"
+            ],
             "@type": "Dunning",
             "AdditionalCosts": 25.00,
             "Amount": 100.00,

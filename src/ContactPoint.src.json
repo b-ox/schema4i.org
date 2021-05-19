@@ -37,7 +37,10 @@
         "title": "A maximum ContactPoint",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ContactPoint.jsonld"
+            ],
             "@type": "ContactPoint",
             "Email": "service@b-tix.de",
             "FaxNumber": "0049 211 41608 100",

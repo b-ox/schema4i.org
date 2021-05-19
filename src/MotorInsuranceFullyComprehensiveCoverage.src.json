@@ -44,7 +44,12 @@
         "title": "A maximum MotorInsuranceFullyComprehensiveCoverage",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage.jsonld"
+            ],
             "@type": "MotorInsuranceFullyComprehensiveCoverage",
             "ClaimFreeYears": 0,
             "FullyDeductible": 500.00,

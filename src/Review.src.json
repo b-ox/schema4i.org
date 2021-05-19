@@ -33,7 +33,11 @@
         "title": "A maximum Review",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Review.jsonld"
+            ],
             "@type": "Review",
             "ItemReviewed": {},
             "ReviewBody": "The actual body of the review."

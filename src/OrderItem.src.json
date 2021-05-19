@@ -33,16 +33,6 @@
         "title": "A maximum OrderItem",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
-            "@type": "OrderItem",
-            "OrderItemNumber": "4711",
-            "OrderQuantity": 1
-        },
-        "context": {}
-    }, {
-        "title": "A maximum OrderItem",
-        "tab": "tab-expanded",
-        "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/OrderItem.jsonld"

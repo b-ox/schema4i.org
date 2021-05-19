@@ -37,45 +37,23 @@
             },
             "HTTPMethod": {
                 "@id": "schema:httpMethod",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "singleton"
             },
             "URLTemplate": {
                 "@id": "schema:urlTemplate",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "required singleton"
             }
         }
     },
     "playground": [{
-        "title": "An EntryPoint for a Website (URL)",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": [
-                "http://pending.schema4i.org/EntryPoint.jsonld",
-                {
-                    "ActionPlatform": {
-                        "@id": "http://schema.org/actionPlatform",
-                        "@type": "http://schema.org/URL"
-                    }
-                }
-            ],
-            "@type": "EntryPoint",
-            "ActionPlatform": "http://www.b-ox.de/kostenlos-registrieren",
-            "ContentType": "text/html",
-            "HTTPMethod": "GET"
-        },
-        "context": {}
-    }, {
         "title": "An EntryPoint for an API",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/EntryPoint.jsonld",
-                {
-                    "ActionPlatform": {
-                        "@id": "http://schema.org/actionPlatform",
-                        "@type": "http://schema.org/URL"
-                    }
-                }
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/EntryPoint.jsonld"
             ],
             "@type": "EntryPoint",
             "ContentType": "application/ld+json",

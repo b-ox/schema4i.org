@@ -27,7 +27,11 @@
         "title": "A maximum WebAPI",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Service",
+                "http://schema4i.org/WebAPI"
+            ],
             "@type": "WebAPI",
             "Documentation": "http://api-test.b-ox.de/docs/config.json"
         },

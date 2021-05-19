@@ -24,19 +24,12 @@
         }
     },
     "playground": [{
-        "title": "A maximum UpdateAction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "UpdateAction"
-        },
-        "context": {}
-    }, {
         "title": "A real world UpdateAction",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "https://schema4i.org/Thing.jsonld",
+                "https://schema4i.org/Action.jsonld",
                 "https://schema4i.org/UpdateAction.jsonld",
                 "https://schema4i.org/PropertyValue.jsonld"
             ],

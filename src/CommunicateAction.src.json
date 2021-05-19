@@ -38,7 +38,11 @@
         "title": "A minimum CommunicateAction",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/CommunicateAction.jsonld"
+            ],
             "@type": "CommunicateAction",
             "About": {},
             "Recipient": {}

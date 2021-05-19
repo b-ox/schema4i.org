@@ -89,7 +89,10 @@
         "title": "A maximum Offer",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld"
+            ],
             "@type": "Offer",
             "AcceptedPaymentMethod": [
                 "http://purl.org/goodrelations/v1#ByInvoice",

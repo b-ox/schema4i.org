@@ -22,7 +22,11 @@
         "title": "A maximum BusinessTransactionDelivery",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ParcelDelivery.jsonld",
+                "http://schema4i.org/BusinessTransactionDelivery.jsonld"
+            ],
             "@type": "BusinessTransactionDelivery"
         },
         "context": {}

@@ -22,11 +22,29 @@
         }
     },
     "playground": [{
-        "title": "A maximum OfferCatalog",
+        "title": "A realistic OfferCatalog",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
-            "@type": "OfferCatalog"
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ItemList.jsonld",
+                "http://schema4i.org/OfferCatalog.jsonld",
+                "http://schema4i.org/Offer.jsonld"
+            ],
+            "@type": "OfferCatalog",
+            "ItemListElement": [{
+                "@type": "ListItem",
+                "Item": {
+                    "@type": "Offer",
+                    "Name": "Eintrag 1"
+                }
+            }, {
+                "@type": "ListItem",
+                "Item": {
+                    "@type": "Offer",
+                    "Name": "Eintrag 2"
+                }
+            }]
         },
         "context": {}
     }]

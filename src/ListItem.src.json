@@ -15,6 +15,10 @@
     "multipletypes": {
         "Item": [
             { "@id": "http://schema4i.org/Thing" }
+        ],
+        "Position": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/Integer" }
         ]
     },
     "context": {
@@ -24,19 +28,22 @@
             "schema": "http://schema.org/",
             "ListItem": "schema:ListItem",
             "Item": {
-                "@id": "schema:item"
+                "@id": "schema:item",
+                "types-hint": "required singleton"
             },
             "NextItem": {
                 "@id": "schema:nextItem",
-                "@type": "s4i:ListItem"
+                "@type": "s4i:ListItem",
+                "types-hint": "singleton"
             },
             "Position": {
                 "@id": "schema:position",
-                "@type": "schema:Integer"
+                "types-hint": "singleton"
             },
             "PreviousItem": {
                 "@id": "schema:previousItem",
-                "@type": "s4i:ListItem"
+                "@type": "s4i:ListItem",
+                "types-hint": "singleton"
             }
         }
     },
@@ -44,58 +51,15 @@
         "title": "A maximum ListItem",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
-            "@id": "http://example.com/list/id-2",
-            "@type": "ListItem",
-            "Item": {},
-            "NextItem": {
-                "@id": "http://example.com/list/id-3",
-                "@type": "s4i:ListItem"
-            },
-            "Position": 2,
-            "PreviousItem": {
-                "@id": "http://example.com/list/id-1",
-                "@type": "s4i:ListItem"
-            }
-        },
-        "context": {}
-    }, {
-        "title": "A sample ItemList",
-        "tab": "tab-expanded",
-        "input": {
             "@context": [
-                "http://schema4i.org/ItemList.jsonld",
-                "http://schema4i.org/ListItem.jsonld",
-                "http://schema4i.org/Thing.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ListItem.jsonld"
             ],
-            "@type": "ItemList",
-            "ItemListElement": [{
-                "@id": "http://example.com/list/id-1",
-                "@type": "ListItem",
-                "Item": {
-                    "@type": "Thing",
-                    "Name": "Eintrag 1"
-                },
-                "NextItem": {
-                    "@id": "http://example.com/list/id-2",
-                    "@type": "s4i:ListItem"
-                },
-                "Position": 1
-            }, {
-                "@id": "http://example.com/list/id-2",
-                "@type": "ListItem",
-                "Item": {
-                    "@type": "Thing",
-                    "Name": "Eintrag 2"
-                },
-                "NextItem": {
-                    "@id": "http://example.com/list/id-2",
-                    "@type": "s4i:ListItem"
-                },
-                "Position": 2
-            }],
-            "ItemListOrder": "ItemListUnordered",
-            "NumberOfItems": 2
+            "@type": "ListItem",
+            "Item": {
+                "@type": "Thing"
+            },
+            "Position": 1
         },
         "context": {}
     }]

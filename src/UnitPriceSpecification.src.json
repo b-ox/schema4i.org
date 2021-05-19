@@ -41,7 +41,11 @@
         "title": "A maximum UnitPriceSpecification",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "https://schema4i.org/Thing.jsonld",
+                "https://schema4i.org/PriceSpecification.jsonld",
+                "https://schema4i.org/UnitPriceSpecification.jsonld"
+            ],
             "@type": "UnitPriceSpecification",
             "PriceType": "INSURANCE_PREMIUM_NET_RATE",
             "ReferenceQuantity": {},

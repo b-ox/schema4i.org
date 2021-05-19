@@ -37,7 +37,11 @@
         "title": "A maximum Comment",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Comment.jsonld"
+            ],
             "@type": "Comment",
             "DownvoteCount": 5,
             "ParentItem": {},

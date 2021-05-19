@@ -109,7 +109,10 @@
         "title": "A maximum Person",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld"
+            ],
             "@type": "Person",
             "AdditionalName": "c/o b-tix GmbH",
             "Address": {},

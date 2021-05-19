@@ -30,7 +30,11 @@
         "title": "A maximum Coverage",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld"
+            ],
             "@type": "Coverage",
             "Deductible": 300
         },
