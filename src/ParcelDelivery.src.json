@@ -37,8 +37,12 @@
         "title": "A maximum ParcelDelivery",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
-            "@type": "BusinessTransactionDelivery",
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ParcelDelivery.jsonld",
+                "http://schema4i.org/Organization.jsonld"
+            ],
+            "@type": "ParcelDelivery",
             "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
             "Provider": {
                 "@type": "Organization",

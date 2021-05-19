@@ -36,21 +36,17 @@
         }
     },
     "playground": [{
-        "title": "A maximum BankAccount",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "BankAccount",
-            "BIC": "PBNKDEFF",
-            "IBAN": "DE41500105170123456789",
-            "Provider": {}
-        },
-        "context": {}
-    }, {
         "title": "A realistic BankAccount",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/BankAccount.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
+            ],
             "@type": "BankAccount",
             "BIC": "PBNKDEFF",
             "IBAN": "DE41500105170123456789",

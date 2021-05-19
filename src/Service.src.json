@@ -75,6 +75,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
+                "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 {
                     "Category": {
@@ -99,6 +100,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
+                "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 {
                     "Category": {

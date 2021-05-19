@@ -11,11 +11,6 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
-        "ItemListElement": [
-            { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema4i.org/Thing" },
-            { "@id": "http://schema4i.org/ListItem" }
-        ]
     },
     "context": {
         "@context": {
@@ -24,7 +19,8 @@
             "schema": "http://schema.org/",
             "ItemList": "schema:ItemList",
             "ItemListElement": {
-                "@id": "schema:itemListElement"
+                "@id": "schema:itemListElement",
+                "@type": "s4i:ListItem"
             },
             "ItemListOrder": {
                 "@id": "schema:itemListOrder",
@@ -40,11 +36,29 @@
         "title": "A maximum ItemList",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ItemList.jsonld",
+                "http://schema4i.org/ListItem.jsonld"
+            ],
             "@type": "ItemList",
-            "ItemListElement": [],
+            "ItemListElement": [{
+                "@type": "ListItem",
+                "Item": {
+                    "@type": "Thing",
+                    "Name": "Eintrag 1"
+                },
+                "Position": 1
+            }, {
+                "@type": "ListItem",
+                "Item": {
+                    "@type": "Thing",
+                    "Name": "Eintrag 2"
+                },
+                "Position": 2
+            }],
             "ItemListOrder": "ItemListUnordered",
-            "NumberOfItems": 0
+            "NumberOfItems": 2
         },
         "context": {}
     }]

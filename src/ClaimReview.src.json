@@ -27,7 +27,12 @@
         "title": "A maximum ClaimReview",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Review.jsonld",
+                "http://schema4i.org/ClaimReview.jsonld"
+            ],
             "@type": "ClaimReview",
             "ClaimReviewed": "Some short summary of the specific claim reviewed."
         },

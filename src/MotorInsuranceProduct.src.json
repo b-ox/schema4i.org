@@ -20,14 +20,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum MotorInsuranceProduct",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "MotorInsuranceProduct"
-        },
-        "context": {}
-    }, {
         "title": "A real MotorInsuranceProduct",
         "tab": "tab-expanded",
         "input": {

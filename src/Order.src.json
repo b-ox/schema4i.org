@@ -102,7 +102,10 @@
         "title": "A maximum Order",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Order.jsonld"
+            ],
             "@type": "Order",
             "BillingAddress": {},
             "Broker": {},

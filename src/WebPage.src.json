@@ -22,21 +22,13 @@
         }
     },
     "playground": [{
-        "title": "A maximum WebPage",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "WebPage"
-        },
-        "context": {}
-    }, {
         "title": "A realistic WebPage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/WebPage.jsonld",
-                "http://schema4i.org/CreativeWork.jsonld",
                 "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/WebPage.jsonld",
                 "http://schema4i.org/Organization.jsonld"
             ],
             "@type": "WebPage",

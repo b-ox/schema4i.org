@@ -29,15 +29,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum ProgramMembership",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "ProgramMembership",
-            "ProgramName": "Community-Edition"
-        },
-        "context": {}
-    }, {
         "title": "A realistic ProgramMembership",
         "tab": "tab-expanded",
         "input": {

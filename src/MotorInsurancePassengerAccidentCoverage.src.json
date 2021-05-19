@@ -28,7 +28,12 @@
         "title": "A maximum MotorInsurancePassengerAccidentCoverage",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MotorInsurancePassengerAccidentCoverage.jsonld"
+            ],
             "@type": "MotorInsurancePassengerAccidentCoverage",
             "Deductible": 150.00
         },

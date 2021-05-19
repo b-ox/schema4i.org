@@ -46,7 +46,10 @@
         "title": "A maximum PriceSpecification",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld"
+            ],
             "@type": "PriceSpecification",
             "Price": 4200.00,
             "PriceCurrency": "EUR",

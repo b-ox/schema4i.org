@@ -54,7 +54,11 @@
         "title": "A maximum PostalAddress",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ContactPoint.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
+            ],
             "@type": "PostalAddress",
             "AddressCountry": "D",
             "AddressLocality": "Düsseldorf",

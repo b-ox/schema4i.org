@@ -52,7 +52,7 @@ function processType(type, ignoreMissing) {
 }
 
 function formatDoc(doc, indentation = 0) {
-    let description = (doc || '').replace(/\n|\r|\t/g, '');
+    let description = (doc || '').replace(/\n|\r|\t|\\[nrt]/g, '');
     const descriptionParts = [];
     while (description.length > 0) {
         const currentSlice = Math.min(130, description.length);

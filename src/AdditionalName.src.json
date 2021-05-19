@@ -23,14 +23,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum AdditionalName",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "AdditionalName": "c/o b-tix GmbH"
-        },
-        "context": {}
-    }, {
         "title": "Array of AdditionalName",
         "tab": "tab-expanded",
         "input": {

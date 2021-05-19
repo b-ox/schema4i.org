@@ -22,15 +22,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum ProfilePage",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "ProfilePage",
-            "About": {}
-        },
-        "context": {}
-    }, {
         "title": "A realistic ProfilePage",
         "tab": "tab-expanded",
         "input": {

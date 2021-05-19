@@ -21,15 +21,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum Role",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "Role",
-            "RoleName": "Administrator"
-        },
-        "context": {}
-    }, {
         "title": "A realistic Role",
         "tab": "tab-expanded",
         "input": {

@@ -65,23 +65,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum BusinessTransaction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "BusinessTransaction",
-            "Category": "Antrag/Neugeschäft",
-            "Claim": {},
-            "Copy": true,
-            "DateCreated": "2020-08-01T13:00:12",
-            "Delivery": {},
-            "Order": {},
-            "Dunning": {},
-            "TransactionCode": "100007000",
-            "ValidThrough": "2020-10-01T00:00:00"
-        },
-        "context": {}
-    }, {
         "title": "A realistic BusinessTransaction of a motor insurance policy",
         "tab": "tab-expanded",
         "input": {
@@ -97,8 +80,8 @@
                 "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Offer.jsonld",
-                "http://pending.schema4i.org/BusinessTransactionDelivery.jsonld",
-                "http://pending.schema4i.org/ParcelDelivery.jsonld"
+                "http://schema4i.org/BusinessTransactionDelivery.jsonld",
+                "http://schema4i.org/ParcelDelivery.jsonld"
             ],
             "@type": "BusinessTransaction",
             "Identifier": "4711",

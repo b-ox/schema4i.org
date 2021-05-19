@@ -64,11 +64,13 @@
         "title": "A maximum Thing",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "https://schema4i.org/Thing.jsonld"
+            ],
             "@type": "Thing",
             "AlternateName": "Cola",
             "Name": "Coca Cola",
-            "Description": "Drink with a lot of suggar.",
+            "Description": "Drink with a lot of sugar.",
             "Identifier": "CC",
             "IdentifierReference": "XX",
             "PotentialAction": [],

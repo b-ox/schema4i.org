@@ -63,7 +63,10 @@
         "title": "A maximum PropertyValueSpecification",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValueSpecification.jsonld"
+            ],
             "@type": "PropertyValueSpecification",
             "DefaultValue": "Vorgabe",
             "MaxValue": 100,

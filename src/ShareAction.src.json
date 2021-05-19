@@ -20,14 +20,6 @@
         }
     },
     "playground": [{
-        "title": "A minimum ShareAction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "ShareAction"
-        },
-        "context": {}
-    }, {
         "title": "Share an Object",
         "tab": "tab-expanded",
         "input": {

@@ -44,7 +44,10 @@
         "title": "A maximum DataFeedItem",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DataFeedItem.jsonld"
+            ],
             "@type": "DataFeedItem",
             "DateCreated": "2020-06-26T14:33:12",
             "DateModified": "2020-06-26T14:35:01",

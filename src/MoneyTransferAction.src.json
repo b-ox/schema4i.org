@@ -27,15 +27,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum MoneyTransferAction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "MoneyTransferAction",
-            "Amount": {}
-        },
-        "context": {}
-    }, {
         "title": "A realistic MoneyTransferAction",
         "tab": "tab-expanded",
         "input": {

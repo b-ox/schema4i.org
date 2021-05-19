@@ -50,7 +50,11 @@
         "title": "A maximum Question",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Question.jsonld"
+            ],
             "@type": "Question",
             "AcceptedAnswer": {},
             "AnswerCount": 1,

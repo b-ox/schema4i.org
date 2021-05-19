@@ -20,11 +20,18 @@
         }
     },
     "playground": [{
-        "title": "A maximum DigitalDocument",
+        "title": "A realistic DigitalDocument",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
-            "@type": "DigitalDocument"
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DigitalDocument.jsonld"
+            ],
+            "@type": "DigitalDocument",
+            "@id": "https://api-test.b-ox.de/files/123456789",
+            "Name": "attachment.pdf",
+            "EncodingFormat": "application/pdf"
         },
         "context": {}
     }]

@@ -17,14 +17,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum SupportAction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "SupportAction"
-        },
-        "context": {}
-    }, {
         "title": "A realistic SupportAction",
         "tab": "tab-expanded",
         "input": {

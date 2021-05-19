@@ -20,14 +20,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum TechArticle",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "TechArticle"
-        },
-        "context": {}
-    }, {
         "title": "A realistic TechArticle",
         "tab": "tab-expanded",
         "input": {

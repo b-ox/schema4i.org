@@ -27,17 +27,6 @@
         }
     },
     "playground": [{
-        "title": "A minimum AddAction",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "AddAction",
-            "TargetCollection": {
-                "@id": "https://api.b-ox.de/posts4i/messages"
-            }
-        },
-        "context": {}
-    }, {
         "title": "Delete an Object from a collection",
         "tab": "tab-expanded",
         "input": {

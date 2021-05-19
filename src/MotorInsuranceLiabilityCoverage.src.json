@@ -48,7 +48,12 @@
         "title": "A maximum MotorInsuranceLiabilityCoverage",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld"
+            ],
             "@type": "MotorInsuranceLiabilityCoverage",
             "ClaimFreeYears": 7,
             "Deductible": 0.00,

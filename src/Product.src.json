@@ -33,7 +33,10 @@
         "title": "A maximum Product",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Product.jsonld"
+            ],
             "@type": "Product",
             "Manufacturer": {},
             "Model": "Model S"

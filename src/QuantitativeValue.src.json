@@ -45,7 +45,10 @@
         "title": "A maximum QuantitativeValue",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
             "@type": "QuantitativeValue",
             "AdditionalProperty": {},
             "UnitCode": "KGM",

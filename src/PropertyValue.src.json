@@ -43,26 +43,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum PropertyValue",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": [
-                "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/PropertyValue.jsonld",
-                {
-                    "Value": {
-                        "@id": "http://schema.org/value",
-                        "@type": "http://schema.org/Number"
-                    }
-                }
-            ],
-            "@type": "PropertyValue",
-            "UnitCode": "KGM",
-            "UnitText": "Kilogramm",
-            "Value": 100
-        },
-        "context": {}
-    }, {
         "title": "A realistic PropertyValue",
         "tab": "tab-expanded",
         "input": {

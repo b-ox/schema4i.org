@@ -39,18 +39,6 @@
         }
     },
     "playground": [{
-        "title": "A maximum FinancialProduct",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "FinancialProduct",
-            "PaymentInterval": 7,
-            "Price": 119.00,
-            "PriceCurrency": "EUR",
-            "PriceSpecification": []
-        },
-        "context": {}
-    }, {
         "title": "A realistic FinancialProduct (Insurance)",
         "tab": "tab-expanded",
         "input": {

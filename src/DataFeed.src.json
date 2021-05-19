@@ -26,20 +26,12 @@
         }
     },
     "playground": [{
-        "title": "A maximum DataFeed",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": {},
-            "@type": "DataFeed",
-            "DataFeedElement": []
-        },
-        "context": {}
-    }, {
         "title": "A realistic DataFeed",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DataSet.jsonld",
                 "http://schema4i.org/DataFeed.jsonld",
                 "http://schema4i.org/DataFeedItem.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
@@ -47,10 +39,11 @@
             ],
             "@type": "DataFeed",
             "DataFeedElement": [{
-                "@type": ["DataFeedItem", "Thing"],
+                "@type": "DataFeedItem",
                 "DateCreated": "2020-06-26T14:48:13",
                 "Name": "Target A",
-                "URL": "http://www.b-ox.de/target-a"
+                "URL": "http://www.b-ox.de/target-a",
+                "Item": {}
             }],
             "About": {
                 "@type": "Thing",

@@ -87,7 +87,10 @@
         "title": "A maximum Organization",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Organization.jsonld"
+            ],
             "@type": "Organization",
             "AdditionalName": ["c/o X-PLOR GmbH", "4. Etage"],
             "Address": {},
