@@ -37,11 +37,13 @@
             },
             "HTTPMethod": {
                 "@id": "schema:httpMethod",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "singleton"
             },
             "URLTemplate": {
                 "@id": "schema:urlTemplate",
-                "@type": "schema:Text"
+                "@type": "schema:Text",
+                "types-hint": "required singleton"
             }
         }
     },

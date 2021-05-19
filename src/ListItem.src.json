@@ -28,18 +28,22 @@
             "schema": "http://schema.org/",
             "ListItem": "schema:ListItem",
             "Item": {
-                "@id": "schema:item"
+                "@id": "schema:item",
+                "types-hint": "required singleton"
             },
             "NextItem": {
                 "@id": "schema:nextItem",
-                "@type": "s4i:ListItem"
+                "@type": "s4i:ListItem",
+                "types-hint": "singleton"
             },
             "Position": {
-                "@id": "schema:position"
+                "@id": "schema:position",
+                "types-hint": "singleton"
             },
             "PreviousItem": {
                 "@id": "schema:previousItem",
-                "@type": "s4i:ListItem"
+                "@type": "s4i:ListItem",
+                "types-hint": "singleton"
             }
         }
     },

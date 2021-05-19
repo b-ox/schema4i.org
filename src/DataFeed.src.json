@@ -21,7 +21,8 @@
             "DataFeed": "schema:DataFeed",
             "DataFeedElement": {
                 "@id": "schema:dataFeedElement",
-                "@type": "s4i:DataFeedItem"
+                "@type": "s4i:DataFeedItem",
+                "types-hint": "required multiple"
             }
         }
     },

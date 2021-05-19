@@ -20,15 +20,18 @@
             "ItemList": "schema:ItemList",
             "ItemListElement": {
                 "@id": "schema:itemListElement",
-                "@type": "s4i:ListItem"
+                "@type": "s4i:ListItem",
+                "types-hint": "required multiple"
             },
             "ItemListOrder": {
                 "@id": "schema:itemListOrder",
-                "@type": "schema:ItemListOrderType"
+                "@type": "schema:ItemListOrderType",
+                "types-hint": "singleton"
             },
             "NumberOfItems": {
                 "@id": "schema:numberOfItems",
-                "@type": "schema:Integer"
+                "@type": "schema:Integer",
+                "types-hint": "singleton"
             }
         }
     },

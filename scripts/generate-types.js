@@ -69,14 +69,15 @@ class FieldDefinition {
     name;
     description;
     types;
-    onlyOne;
+    cardinality;
     required;
 
-    constructor(name, description, types) {
+    constructor(name, description, types, typesHint = '') {
         this.name = name;
         this.description = description;
         this.types = types;
-        this.onlyOne = name === 'URL' || name === '@id' || name === '@context';
+        this.required = typesHint.includes('required');
+        this.cardinality = typesHint.includes('singleton') ? 'one' : (typesHint.includes('multiple') ? 'many' : 'any');
     }
 }
 
@@ -117,28 +118,24 @@ class TypeDefinition {
             }
             this.fields = fieldDefs.map(([key, entry]) => {
                 if (processType(entry["@id"], true) === this.type) {
-                    thisDef = new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry));
-                    thisDef.onlyOne = true;
+                    thisDef = new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), 'singleton');
                     return;
                 }
                 if (key === 'URL') {
                     key = '@id';
                 }
-                return new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry));
+                return new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
             }).filter(v => typeof v !== 'undefined');
             if (this.type.startsWith('Enum') && this.fields.length === 0) {
                 // TODO: map enums properly
-                thisDef = new FieldDefinition(this.type, '', ['string']);
-                thisDef.onlyOne = true;
+                thisDef = new FieldDefinition(this.type, '', ['string'], 'singleton');
             }
             if (this.fields.length === 0 && thisDef) {
                 this.simpleType = thisDef;
             }
             if (this.type === 'Thing') {
-                const typeField = new FieldDefinition('@type', '', ['string']);
-                // typeField.required = true;
-                this.fields.push(typeField);
-                this.fields.push(new FieldDefinition('@context', '', ['Context']));
+                this.fields.push(new FieldDefinition('@type', '', ['string']));
+                this.fields.push(new FieldDefinition('@context', '', ['Context'], 'singleton'));
             }
             this.examples = (srcFile.playground || []).map(pg => ({title: pg.title, data: pg.input}));
         } catch (e) {
@@ -161,8 +158,8 @@ ${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${
             for (const typeDefinition of typeDefinitions) {
                 const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
                 function getFieldTypes(field) {
-                    const types = generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types;
-                    return field.onlyOne ? `${types.join('|')}` : `OneOrMany<${types.join('|')}>`;
+                    const types = (generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types).join('|');
+                    return field.cardinality === 'one' ? types : (field.cardinality === 'many' ? `(${types})[]` : `OneOrMany<${types}>`);
                 }
                 const genericDeclaration = generics.length > 0 ? `<${generics.map(g => `${g} extends Thing = Thing`).join(', ')}>` : '';
                 const doc = `/**

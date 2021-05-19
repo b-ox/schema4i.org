@@ -47,6 +47,7 @@
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/OfferCatalog.jsonld",
+                "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/ItemList.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
                 "http://schema4i.org/Thing.jsonld"
@@ -57,20 +58,35 @@
             "HasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "ItemListElement": [{
-                    "@type": "Thing",
-                    "Name": "Variable Sparfunktion ohne festen Ansparplan"
+                    "@type": "ListItem",
+                    "Item": {
+                        "@type": "Offer",
+                        "Name": "Variable Sparfunktion ohne festen Ansparplan"
+                    }
                 }, {
-                    "@type": "Thing",
-                    "Name": "100% digitales Produkt mit Online-Kontoführung"
+                    "@type": "ListItem",
+                    "Item": {
+                        "@type": "Offer",
+                        "Name": "100% digitales Produkt mit Online-Kontoführung"
+                    }
                 }, {
-                    "@type": "Thing",
-                    "Name": "Monatliche Zinsbuchung und Treue-Bonus"
+                    "@type": "ListItem",
+                    "Item": {
+                        "@type": "Offer",
+                        "Name": "Monatliche Zinsbuchung und Treue-Bonus"
+                    }
                 }, {
-                    "@type": "Thing",
-                    "Name": "Einzahlungen, Auszahlungen, Beiträge und Versicherungsschutz jederzeit anpassbar"
+                    "@type": "ListItem",
+                    "Item": {
+                        "@type": "Offer",
+                        "Name": "Einzahlungen, Auszahlungen, Beiträge und Versicherungsschutz jederzeit anpassbar"
+                    }
                 }, {
-                    "@type": "Thing",
-                    "Name": "Hohe Sicherheit durch eine klassische Anlagestrategie"
+                    "@type": "ListItem",
+                    "Item": {
+                        "@type": "Offer",
+                        "Name": "Hohe Sicherheit durch eine klassische Anlagestrategie"
+                    }
                 }],
                 "ItemListOrder": "ItemListUnordered",
                 "NumberOfItems": 5

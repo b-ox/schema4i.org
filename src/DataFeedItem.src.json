@@ -36,7 +36,8 @@
                 "@type": "schema:DateTime"
             },
             "Item": {
-                "@id": "schema:item"
+                "@id": "schema:item",
+                "types-hint": "required singleton"
             }
         }
     },

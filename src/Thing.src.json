@@ -56,7 +56,8 @@
             },
             "URL": {
                 "@id": "@id",
-                "@type": "@id"
+                "@type": "@id",
+                "types-hint": "singleton"
             }
         }
     },
