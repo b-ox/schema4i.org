@@ -82,6 +82,10 @@
             "ValidThrough": {
                 "@id": "schema:validThrough",
                 "@type": "schema:DateTime"
+            },
+            "IncludesObject": {
+                "@id": "schema:includesObject",
+                "@type": "s4i:TypeAndQuantityNode"
             }
         }
     },
