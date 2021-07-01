@@ -1,0 +1,71 @@
+{
+    "type": "TradeAction",
+    "uri": "http://schema4i.org/TradeAction",
+    "description": "The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.",
+    "links": [{
+        "url": "http://schema.org/TradeAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "TradeAction": "schema:TradeAction",
+            "Price": {
+                "@id": "schema:price",
+                "@type": "schema:Number"
+            },
+            "PriceCurrency": {
+                "@id": "schema:priceCurrency",
+                "@type": "schema:Text"
+            },
+            "PriceSpecification": {
+                "@id": "schema:priceSpecification",
+                "@type": "s4i:PriceSpecification"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Pay for a shipment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/TradeAction.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/CompountPriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld"
+            ],
+            "@type": "TradeAction",
+            "Object": {
+                "@id": "https://api.b-ox.de/messages/4711",
+                "@type": "Message"
+            },
+            "Price": 1.19,
+            "PriceCurrency": "EUR",
+            "PriceSpecification": {
+                "@type": "CompountPriceSpecification",
+                "PriceComponent": [{
+                    "@type": "UnitPriceSpecification",
+                    "Name": "Sum",
+                    "Price": 1.00
+                }, {
+                    "@type": "UnitPriceSpecification",
+                    "Name": "VAT",
+                    "Price": 0.19
+                }]
+            }
+        },
+        "context": {}
+    }]
+}

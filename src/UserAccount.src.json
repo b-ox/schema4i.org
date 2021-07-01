@@ -34,6 +34,10 @@
             },
             "MemberOf": {
                 "@id": "schema:memberOf"
+            },
+            "Order": {
+                "@id": "s4i:Order",
+                "@type": "s4i:Order"
             }
         }
     },
@@ -49,6 +53,7 @@
                 "http://schema4i.org/PostalAddress",
                 "http://schema4i.org/Role",
                 "http://schema4i.org/Credentials",
+                "http://schema4i.org/Order",
                 "http://schema4i.org/CreativeWork",
                 "http://schema4i.org/DigitalDocument"
             ],
