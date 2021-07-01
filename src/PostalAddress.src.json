@@ -63,9 +63,9 @@
             "AddressCountry": "D",
             "AddressLocality": "Düsseldorf",
             "AddressRegion": "NRW",
-            "PostOffices4iNumber": "Postfach 4711",
+            "PostOfficeBoxNumber": "Postfach 4711",
             "PostalCode": "40233",
-            "StreetAddress": "Düsseldorf"
+            "StreetAddress": "Lindenstr. 48"
         },
         "context": {}
     }]
