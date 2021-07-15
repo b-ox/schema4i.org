@@ -95,6 +95,10 @@
             "TerminationDate": {
                 "@id": "s4i:TerminationDate",
                 "@type": "schema:Date"
+            },
+            "AcceptedOffer": {
+                "@id": "schema:acceptedOffer",
+                "@type": "s4i:Offer"
             }
         }
     },

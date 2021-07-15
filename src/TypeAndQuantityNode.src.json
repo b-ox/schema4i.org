@@ -1,0 +1,68 @@
+{
+    "type": "TypeAndQuantityNode",
+    "uri": "http://schema4i.org/TypeAndQuantityNode",
+    "description": "A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.",
+    "links": [{
+        "url": "http://schema.org/TypeAndQuantityNode",
+        "description": "Original Schema.org type"
+    }, {
+        "url": "http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
+        "description": "UN/CEFACT UnitCode"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/ItemList#ItemListElement" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "TypeOfGood": [
+            { "@id": "http://schema4i.org/Product" },
+            { "@id": "http://schema4i.org/Service" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "TypeAndQuantityNode": "schema:TypeAndQuantityNode",
+            "UnitCode": {
+                "@id": "schema:unitCode",
+                "@type": "schema:Text"
+            },
+            "UnitText": {
+                "@id": "schema:unitText",
+                "@type": "schema:Text"
+            },
+            "AmountOfThisGood": {
+                "@id": "schema:amountOfThisGood",
+                "@type": "schema:Number"
+            },
+            "TypeOfGood": {
+                "@id": "schema:typeOfGood"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic TypeAndQuantityNode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/TypeAndQuantityNode.jsonld",
+                "http://schema4i.org/Product.jsonld"
+            ],
+            "@type": "TypeAndQuantityNode",
+            "Name": "Gewicht",
+            "UnitCode": "G21",
+            "UnitText": "Tasse",
+            "AmountOfThisGood": 2,
+            "Product": {
+                "@type": "Product",
+                "Name": "Kaffee"
+            }
+        },
+        "context": {}
+    }]
+}
