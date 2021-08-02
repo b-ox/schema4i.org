@@ -264,6 +264,19 @@ export function mapEnum(type: EnumTypes, value: string, lang: '${I18N_SUFFIXES.j
     const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
     return ENUMS.get(enumName)?.get(value);
 }
+
+export function listEnumKeys(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): string[] {
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    const enumDef = ENUMS.get(enumName);
+    return enumDef ? [...enumDef.keys()] : undefined;
+}
+
+export function listEnumValues(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): string[] {
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    const enumDef = ENUMS.get(enumName);
+    return enumDef ? [...enumDef.values()] : undefined;
+}
+
 `;
             return output;
         },
