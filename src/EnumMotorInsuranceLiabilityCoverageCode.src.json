@@ -23,7 +23,7 @@
             "Coverage amounts that do not fall under 11, 13, 17 and 18": "s4i:EnumMotorInsuranceLiabilityCoverageCode#16",
             "Statutory coverage amounts for passenger transport by bus": "s4i:EnumMotorInsuranceLiabilityCoverageCode#17",
             "5,000,000 personal injuries, 2,000,000 flat property and pecuniary damage, 2,500,000 euros (converted), 1,000,000 euros (converted)": "s4i:EnumMotorInsuranceLiabilityCoverageCode#18",
-            "50,000,000 euros (flat rate), 8,000,000 euros maximum per person": "s4i:EnumMotorInsuranceLiabilityCoverageCode51",
+            "50,000,000 euros (flat rate), 8,000,000 euros maximum per person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#51",
             "100,000,000 euros (flat rate), 8,000,000 euros maximum per person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#52",
             "100,000,000 euros (flat rate), 10,000,000 euros maximum per person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#53",
             "100,000,000 euros (flat rate), 12,000,000 euros maximum per person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#54",

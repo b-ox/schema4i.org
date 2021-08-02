@@ -21,7 +21,7 @@
             "Deckungssummen, die nicht unter 11, 13, 17 und 18 fallen": "s4i:EnumMotorInsuranceLiabilityCoverageCode#16",
             "Gesetzliche Deckungssummen für Personenbeförderung mit Omnibussen": "s4i:EnumMotorInsuranceLiabilityCoverageCode#17",
             "5.000.000 Personenschäden, 2.000.000 pauschal Sach- und Vermögensschäden, 2.500.000 Euro (umgerechnet), 1.000.000 Euro (umgerechnet)": "s4i:EnumMotorInsuranceLiabilityCoverageCode#18",
-            "50.000.000 Euro (pauschal), 8.000.000 Euro maximal pro Person": "s4i:EnumMotorInsuranceLiabilityCoverageCode51",
+            "50.000.000 Euro (pauschal), 8.000.000 Euro maximal pro Person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#51",
             "100.000.000 Euro (pauschal), 8.000.000 Euro maximal pro Person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#52",
             "100.000.000 Euro (pauschal), 10.000.000 Euro maximal pro Person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#53",
             "100.000.000 Euro (pauschal), 12.000.000 Euro maximal pro Person": "s4i:EnumMotorInsuranceLiabilityCoverageCode#54",
