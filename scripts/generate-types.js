@@ -13,6 +13,10 @@ const PRIMITIVE_TYPES = {
     'ISODateString': ['string']
 }
 
+const DEFAULT_I18N_SUFFIX = 'EN';
+
+const I18N_SUFFIXES = [DEFAULT_I18N_SUFFIX, 'DE'];
+
 const PRIMITIVE_TYPE_MAPPINGS = {
     '@id': 'URL',
     '@context': 'Context',
@@ -37,14 +41,17 @@ const PRIMITIVE_TYPE_MAPPINGS = {
     'oo:definitions/temporal-interval': 'number',
     'oo:definitions/nonnegative-integer': 'number',
     'oo:definitions/salutation': 'number',
-    '@vocab': 'string' // TODO: map enums
+    '@vocab': 'string' // enums not in the s4i schema
 }
 
-function processType(type, ignoreMissing) {
+function processType(type, typeObject, ignoreMissing) {
     const prefixedType = type.replace('http://schema.org/', 'schema:').replace('https://schema.openontology.org/', 'oo:');
-    if (PRIMITIVE_TYPE_MAPPINGS[prefixedType]) {
+    if (type === '@vocab' && typeObject['@context'] && (typeObject['@context']['@vocab'].startsWith('s4i:') || typeObject['@context']['@vocab'].startsWith('http://schema.org/'))) {
+        type = typeObject['@context']['@vocab'].replace('#', '');
+    } else if (PRIMITIVE_TYPE_MAPPINGS[prefixedType]) {
         return PRIMITIVE_TYPE_MAPPINGS[prefixedType];
-    } else if (type.startsWith('s4i:') || type.startsWith('http://schema4i.org/')) {
+    }
+    if (type.startsWith('s4i:') || type.startsWith('http://schema4i.org/')) {
         return type.replace('s4i:', '').replace('http://schema4i.org/', '');
     } else if (!ignoreMissing) {
         throw new Error(`Unknown type ${type}`);
@@ -63,6 +70,23 @@ function formatDoc(doc, indentation = 0) {
         description = description.slice(currentSlice);
     }
     return descriptionParts.join('\n') || `${' '.repeat(indentation)} *`;
+}
+
+function joinWithLineBreaks(values, joiner, lbJoiner, maxLength = 80) {
+    const lineParts = [];
+    let currentPart = [];
+    for (const value of values) {
+        if (currentPart.reduce((sum, p) => sum + p.length, 0) + value.length <= maxLength) {
+            currentPart.push(value);
+        } else {
+            lineParts.push(currentPart.join(joiner));
+            currentPart = [];
+        }
+    }
+    if (currentPart.length > 0) {
+        lineParts.push(currentPart.join(joiner));
+    }
+    return lineParts.join(lbJoiner);
 }
 
 class FieldDefinition {
@@ -90,22 +114,24 @@ class TypeDefinition {
     fields = [];
     simpleType;
     examples = [];
+    enumValues;
     constructor(srcFile, schemaOrgDefs) {
         try {
             this.type = srcFile.type;
             this.description = srcFile.description;
             this.url = srcFile.uri;
-            this.baseTypes = (srcFile.base || []).map(base => processType(base['@id']));
+            this.baseTypes = (srcFile.base || []).map(base => processType(base['@id'], base));
             if (!srcFile.context) {
                 throw new Error(`type ${this.type} has no context`);
             }
             let thisDef;
-            const fieldDefs = Object.entries(srcFile.context['@context']).filter(([_, entry]) => typeof entry === 'object');
+            const context = srcFile.context['@context'];
+            const fieldDefs = Object.entries(context).filter(([_, entry]) => typeof entry === 'object');
             function getEntryTypes(key, entry) {
                 if (entry['@type']) {
-                    return [processType(entry['@type'])];
+                    return [processType(entry['@type'], entry)];
                 } else if (srcFile.multipletypes[key]) {
-                    return srcFile.multipletypes[key].map(t => processType(t['@id']));
+                    return srcFile.multipletypes[key].map(t => processType(t['@id'], t));
                 } else {
                     throw new Error(`Property ${key} on type ${this.type} has no type defined`);
                 }
@@ -117,7 +143,7 @@ class TypeDefinition {
                 return '';
             }
             this.fields = fieldDefs.map(([key, entry]) => {
-                if (processType(entry["@id"], true) === this.type) {
+                if (processType(entry["@id"], entry, true) === this.type) {
                     thisDef = new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), 'singleton');
                     return;
                 }
@@ -127,8 +153,15 @@ class TypeDefinition {
                 return new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
             }).filter(v => typeof v !== 'undefined');
             if (this.type.startsWith('Enum') && this.fields.length === 0) {
-                // TODO: map enums properly
-                thisDef = new FieldDefinition(this.type, '', ['string'], 'singleton');
+                const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && entry.startsWith('s4i:Enum')).map(([value, key]) => ({
+                    key: key.split('#').pop(),
+                    value
+                }));
+                thisDef = new FieldDefinition(this.type, '', enumValues.map(({key}) => `'${key}'`), 'singleton');
+                this.enumValues = {};
+                for (const {key, value} of enumValues) {
+                    this.enumValues[key] = value;
+                }
             }
             if (this.fields.length === 0 && thisDef) {
                 this.simpleType = thisDef;
@@ -158,7 +191,8 @@ ${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${
             for (const typeDefinition of typeDefinitions) {
                 const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
                 function getFieldTypes(field) {
-                    const types = (generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types).join('|');
+                    const typeArray = (generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types);
+                    const types = joinWithLineBreaks(typeArray, '|', '|\n    ');
                     return field.cardinality === 'one' ? types : (field.cardinality === 'many' ? `(${types})[]` : `OneOrMany<${types}>`);
                 }
                 const genericDeclaration = generics.length > 0 ? `<${generics.map(g => `${g} extends Thing = Thing`).join(', ')}>` : '';
@@ -195,6 +229,8 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
             let output = `
 import * as s4i from './schema4i';
 
+const ENUMS = new Map<string, Map<string, string>>();
+
 `;
             for (const typeDefinition of typeDefinitions) {
                 if (!typeDefinition.simpleType) {
@@ -209,6 +245,26 @@ export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.
 `;
                 }
             }
+            output += `
+
+`;
+            const enumDefinitions = typeDefinitions.filter(td => td.enumValues);
+            for (const enumDefinition of enumDefinitions) {
+                output += `
+ENUMS.set('${enumDefinition.type}', new Map());
+${Object.entries(enumDefinition.enumValues).map(([key, value]) => `ENUMS.get('${enumDefinition.type}').set('${key}', '${value.replace(/'/g, `\\'`)}');`).join('\n')}
+`;
+            }
+            const enumTypes = enumDefinitions.filter(td => !I18N_SUFFIXES.some(suffix => td.type.endsWith(suffix))).map(td => td.type);
+            const joinedEnumTypes = joinWithLineBreaks(enumTypes, `'|'`, `'|\n    '`);
+            output += `
+export type EnumTypes = '${joinedEnumTypes}';
+
+export function mapEnum(type: EnumTypes, value: string, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): string {
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    return ENUMS.get(enumName)?.get(value);
+}
+`;
             return output;
         },
         exampleFile: 'schema4i-examples.ts',
