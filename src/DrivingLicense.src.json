@@ -16,7 +16,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
-            "DrivingLicense": "box:DrivingLicense",
+            "DrivingLicense": "s4i:DrivingLicense",
             "ExpirationDate": {
                 "@id": "oo:driving-license/expiration-date",
                 "@type": "oo:definitions/date"

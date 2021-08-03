@@ -59,7 +59,7 @@
             "Deductible": 0.00,
             "NoClaimsDiscount": 41,
             "NoClaimsDiscountLevel": "7",
-            "SumInsured": "15.000.000"
+            "SumInsured": 15000000
         },
         "context": {}
     }]
