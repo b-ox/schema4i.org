@@ -80,7 +80,7 @@ function joinWithLineBreaks(values, joiner, lbJoiner, maxLength = 80) {
             currentPart.push(value);
         } else {
             lineParts.push(currentPart.join(joiner));
-            currentPart = [];
+            currentPart = [value];
         }
     }
     if (currentPart.length > 0) {
