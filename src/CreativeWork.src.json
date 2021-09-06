@@ -12,7 +12,8 @@
         { "@id": "http://schema4i.org/Message" },
         { "@id": "http://schema4i.org/WebPage" },
         { "@id": "http://schema4i.org/Article" },
-        { "@id": "http://schema4i.org/ProfilePage" }
+        { "@id": "http://schema4i.org/ProfilePage" },
+        { "@id": "http://schema4i.org/MediaObject" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }

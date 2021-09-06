@@ -1,0 +1,39 @@
+{
+    "type": "DataDownload",
+    "uri": "http://schema4i.org/DataDownload",
+    "description": "A dataset in downloadable form.",
+    "links": [{
+        "url": "http://schema.org/DataDownload",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/MediaObject" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DataDownload": "s4i:DataDownload"
+        }
+    },
+    "playground": [{
+        "title": "A realistic DataDownload",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld"
+            ],
+            "@type": "DataDownload",
+            "ContentUrl": "https://api.b-ox.de/files/236812312.12312312432",
+            "EncodingFormat": "application/zip",
+            "Name": "Technisches Protokoll",
+            "Identifier": "1-76asdftasdfsi665fs75f75s4f5asdf",
+            "Keywords": ["Trace"]
+        },
+        "context": {}
+    }]
+}

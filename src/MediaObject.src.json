@@ -1,0 +1,40 @@
+{
+    "type": "MediaObject",
+    "uri": "http://schema4i.org/MediaObject",
+    "description": "A dataset in downloadable form.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/DataDownload" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "MediaObject": "s4i:MediaObject",
+            "ContentUrl": {
+                "@id": "schema:contentUrl",
+                "@type": "schema:URL"
+            },
+            "EncodingFormat": {
+                "@id": "schema:encodingFormat",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum MediaObject",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "MediaObject",
+            "ContentUrl": "https://api.b-ox.de/files/236812312.12312312432",
+            "EncodingFormat": "application/zip"
+        },
+        "context": {}
+    }]
+}
