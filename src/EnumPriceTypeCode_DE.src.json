@@ -1,0 +1,48 @@
+{
+  "type": "EnumPriceTypeCode_DE",
+  "uri": "http://schema4i.org/EnumPriceTypeCode_DE",
+  "description": "Code für die Schlüsselung der Beitragsarten nach BiPRO.",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumPriceTypeCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+    }
+  ],
+  "parents": [],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Beitrag inkl. Steuer gemäß Klasse Steuer": "s4i:EnumPriceTypeCode#01",
+      "Nettobeitrag inklusive etwaigem Ratenzahlungszuschlag": "s4i:EnumPriceTypeCode#02",
+      "Tarifbeitrag ohne gesetzlichen Zuschlag gem. Zahlweise (PKV)": "s4i:EnumPriceTypeCode#03",
+      "Bei fondsgebundenen Versicherungen der Beitragsanteil gem. Zahlweise, der in Investmentfonds eingezahlt wird (Sparanteil)": "s4i:EnumPriceTypeCode#04",
+      "Bei fondsgebundenen Versicherungen der Beitragsanteil, der insgesamt (während der gesamten Beitragszahldauer) in die Investmentfonds eingezahlt wird (Sparanteil gesamt)": "s4i:EnumPriceTypeCode#05",
+      "Tarifbeitrag, Gesamtbeitrag Brutto ohne Überschussverrechnung (LV)": "s4i:EnumPriceTypeCode#06",
+      "Tarifbeitrag - Jahresbeitrag inklusive Versicherungssteuer, ohne Abzug von Rabatten (Konditionen)": "s4i:EnumPriceTypeCode#08",
+      "Tarifbeitrag 100 (Jahresbeitrag ohne Berücksichtigung aller Zu- und Abschläge, Ratenzahlungszuschlag, Gebühr und Vers.-Steuer ) (KFZ)": "s4i:EnumPriceTypeCode#09",
+      "Basisbeitrag, Beitrag ohne Prämienfaktor - Der Ursprungsbeitrag zum Basisjahr (z. B. Wert 1914 in Mark bei Gebäude)(Komposit)(Komposit)": "s4i:EnumPriceTypeCode#10",
+      "Steuerlich abzugsfähiger Sollbeitrag in der PKV (gem. Bürgerentlastungsgesetz)": "s4i:EnumPriceTypeCode#11",
+      "Sparrate (Rate, die regelmäßig in eine Kapitalanlage eingezahlt wird.)": "s4i:EnumPriceTypeCode#12",
+      "Gebühr": "s4i:EnumPriceTypeCode#13",
+      "100 Beteiligung (Inkasso Abrechnung)": "s4i:EnumPriceTypeCode#14",
+      "Abrechnungsbetrag (Inkasso Abrechnung)": "s4i:EnumPriceTypeCode#15",
+      "Grundbeitrag nach Berechnungseinheit": "s4i:EnumPriceTypeCode#16",
+      "Grundbeitrag nach Berechnungseinheit inklusive tarifliche Zu- Abschläge": "s4i:EnumPriceTypeCode#17",
+      "Grundbeitrag nach Berechnungseinheit inklusive aller Zu- Abschläge": "s4i:EnumPriceTypeCode#18",
+      "Mindestbeitrag": "s4i:EnumPriceTypeCode#19",
+      "Wagnisbeitrag - Der zu zahlende Beitrag unter Beachtung der Mindestbeiträge (Haftpflicht)": "s4i:EnumPriceTypeCode#20",
+      "Verminderter Anfangsbeitrag gesamt brutto ohne Überschussverrechnung (analog Tarifbeitrag 07) als Betrag (Betrag und Waehrung MÜSSEN angegeben werden). Zusätzlich MUSS der Zeitraum Beitrag.Erhebung angegeben werden.": "s4i:EnumPriceTypeCode#21",
+      "Verminderter Anfangsbeitrag gesamt brutto ohne Überschussverrechnung (analog Tarifbeitrag 07) als Prozentsatz (Prozentsatz MUSS angegeben werden Betrag DARF NICHT angegeben werden). Zusätzlich MUSS der Zeitraum Beitrag.Erhebung angegeben werden. Es MUSS ein Beitrag mit ArtID07 als Bezugsgröße am selben Produktbaustein angegeben werden.": "s4i:EnumPriceTypeCode#22",
+      "Förderbeitrag": "s4i:EnumPriceTypeCode#23",
+      "Zuzahlung": "s4i:EnumPriceTypeCode#24",
+      "Maximalbeitrag (Im Falle von Riester ist dieser abzüglich der Zulagen)": "s4i:EnumPriceTypeCode#25",
+      "Rückstandsverrechnung": "s4i:EnumPriceTypeCode#26",
+      "Prämienrückerstattung": "s4i:EnumPriceTypeCode#27",
+      "Beitragsentlastung KV": "s4i:EnumPriceTypeCode#28",
+      "Nettobeitrag exklusive etwaigem Ratenzahlungszuschlag": "s4i:EnumPriceTypeCode#29"
+    }
+  }
+}
