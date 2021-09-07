@@ -105,5 +105,50 @@
             }
         },
         "context": {}
+    },{
+        "title": "A FinancialProduct with different price components (Insurance)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/CompoundPriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "FinancialProduct",
+            "Category": "RENTE",
+            "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
+            "Identifier": "1047.IUL.Selbststaendige",
+            "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
+            "Name": "Rente für Selbstständige",
+            "Provider": {
+                "@type": "Organization",
+                "Identifier": "1047",
+                "Name": "IDEAL"
+            },
+            "PaymentInterval": 7,
+            "Price": 153.21,
+            "PriceCurrency": "EUR",
+            "PriceSpecification": {
+                "@type": "CompoundPriceSpecification",
+                "PriceComponent": [{
+                    "@type": "UnitPriceSpecification",
+                    "PriceType": "01",
+                    "Price": 153.21,
+                    "PriceCurrency": "EUR",
+                    "Identifier": "16111274782378904"
+                }, {
+                    "@type": "UnitPriceSpecification",
+                    "PriceType": "02",
+                    "Price": 113.21,
+                    "PriceCurrency": "EUR",
+                    "Identifier": "16111274282323409"
+                }]
+            }
+        },
+        "context": {}
     }]
 }

@@ -12,7 +12,12 @@
     "base": [
         { "@id": "http://schema4i.org/PriceSpecification" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "PriceType": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumPriceTypeCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -20,8 +25,7 @@
             "schema": "http://schema.org/",
             "UnitPriceSpecification": "schema:UnitPriceSpecification",
             "PriceType": {
-                "@id": "schema:priceType",
-                "@type": "schema:Text"
+                "@id": "schema:priceType"
             },
             "ReferenceQuantity": {
                 "@id": "schema:referenceQuantity",
