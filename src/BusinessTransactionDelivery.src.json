@@ -4,7 +4,7 @@
     "description": "Information about the delivery of business transactions. This is a package of data that bundles various business transactions and is provided by a provider. The object BusinessTransactionDelivery contains information about the transport of business transaction data. The provider is typically an insurance company or pool, etc.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessTransaction#Delivery" }
+        { "@id": "http://schema4i.org/BusinessTransferAction#Delivery" }
     ],
     "base": [
         { "@id": "http://schema4i.org/ParcelDelivery" }

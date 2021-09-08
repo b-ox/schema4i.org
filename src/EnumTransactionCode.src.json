@@ -14,7 +14,7 @@
   ],
   "parents": [
     {
-      "@id": "http://schema4i.org/BusinessTransaction#TransactionCode"
+      "@id": "http://schema4i.org/BusinessTransferAction#TransactionCode"
     }
   ],
   "base": [],
