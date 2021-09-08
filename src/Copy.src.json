@@ -4,7 +4,7 @@
     "description": "Indicates whether the digitally transmitted data are original or if they are retransmitted on a conventional way via mail e.g. false=Original, true=Original comes via mail.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/BusinessTransaction#Copy"
+        "@id": "http://schema4i.org/BusinessTransferAction#Copy"
     }],
     "base": [],
     "multipletypes": {},

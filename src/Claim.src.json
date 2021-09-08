@@ -7,7 +7,7 @@
         "description": "Original Schema.org type"
     }],
     "parents": [{
-        "@id": "http://schema4i.org/BusinessTransaction#Claim"
+        "@id": "http://schema4i.org/BusinessTransferAction#Claim"
     }],
     "base": [
         { "@id": "http://schema4i.org/CreativeWork" }

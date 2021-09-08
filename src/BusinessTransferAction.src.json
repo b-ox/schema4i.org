@@ -1,13 +1,11 @@
 {
-    "type": "BusinessTransaction",
-    "uri": "http://schema4i.org/BusinessTransaction",
-    "description": "A business transaction is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.",
+    "type": "BusinessTransferAction",
+    "uri": "http://schema4i.org/BusinessTransferAction",
+    "description": "An Action to transfer some form of business transaction. It is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.",
     "links": [],
-    "parents": [
-        { "@id": "http://schema4i.org/CreativeWork#About" }
-    ],
+    "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/Action" }
     ],
     "multipletypes": {},
     "context": {
@@ -15,7 +13,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "BusinessTransaction": "s4i:BusinessTransaction",
+            "BusinessTransferAction": "s4i:BusinessTransferAction",
             "Category": {
                 "@id": "schema:category",
                 "@type": "schema:Text"
@@ -35,10 +33,6 @@
             "Delivery": {
                 "@id": "s4i:BusinessTransactionDelivery",
                 "@type": "s4i:BusinessTransactionDelivery"
-            },
-            "Order": {
-                "@id": "schema:Order",
-                "@type": "s4i:Order"
             },
             "Dunning": {
                 "@id": "s4i:Dunning",
@@ -65,12 +59,12 @@
         }
     },
     "playground": [{
-        "title": "A realistic BusinessTransaction of a motor insurance policy",
+        "title": "A realistic BusinessTransferAction of a motor insurance policy",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/BusinessTransaction.jsonld",
+                "http://schema4i.org/BusinessTransferAction.jsonld",
                 "http://schema4i.org/Order.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/PostalAddress.jsonld",
@@ -83,7 +77,7 @@
                 "http://schema4i.org/BusinessTransactionDelivery.jsonld",
                 "http://schema4i.org/ParcelDelivery.jsonld"
             ],
-            "@type": "BusinessTransaction",
+            "@type": "BusinessTransferAction",
             "Identifier": "4711",
             "IdentifierReference": "VNR-4712",
             "TransactionCode": "100007000",
@@ -104,7 +98,7 @@
             "ValidThrough": "2022-01-01T00:00:00",
             "Copy": true,
             "DateCreated": "2020-08-01T13:00:12",
-            "Order": {
+            "Result": {
                 "@type": "Order",
                 "ConfirmationNumber": [
                     "4711",

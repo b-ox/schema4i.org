@@ -7,7 +7,7 @@
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessTransaction#TransactionTrigger" }
+        { "@id": "http://schema4i.org/BusinessTransferAction#TransactionTrigger" }
     ],
     "base": [],
     "multipletypes": {},
