@@ -74,7 +74,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
             // do some requiredd field checks
             consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context.');
-            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
+            for (const field of ['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
                 }
@@ -213,14 +213,16 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                 url: obj.uri + ".jsonld",
             });
 
-            // write source file 
-            await fs.writeFile(outputDir + "/jsonld-src/" + obj.type + ".src.json",
-                JSON.stringify(obj, null, 2)
-            );
-            // copy readme source file
-            // if (absoluteSourceDir) {
-            //     fs.copyFile(path.resolve(fromPath, 'README.md'), path.resolve(absoluteSourceDir, 'README.md'));
-            // }
+            if (absoluteSourceDir) {
+                // write source file 
+                await fs.writeFile(path.resolve(absoluteSourceDir,  obj.type + ".src.json"),
+                    JSON.stringify(obj, null, 2)
+                );
+                // copy readme source file
+                // if (absoluteSourceDir) {
+                //     fs.copyFile(path.resolve(fromPath, 'README.md'), path.resolve(absoluteSourceDir, 'README.md'));
+                // }
+            }
 
         } else {
             consoleLike.log("WARNING: Ignore file.");
