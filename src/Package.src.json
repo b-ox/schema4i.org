@@ -1,0 +1,31 @@
+{
+    "type": "Package",
+    "uri": "http://schema4i.org/Package",
+    "description": "Describes different scopes of a service or product.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/FinancialProduct#Package" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Package": {
+                "@id": "s4i:Package",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Package",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Package": "Klassik Exklusiv"
+        },
+        "context": {}
+    }]
+}

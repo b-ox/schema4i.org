@@ -20,6 +20,10 @@
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
             "FinancialProduct": "schema:FinancialProduct",
+            "Package": {
+                "@id": "s4i:Package",
+                "@type": "schema:Text"
+            },
             "PaymentInterval": {
                 "@id": "oo:product/premium-payment-interval",
                 "@type": "oo:definitions/temporal-interval"
@@ -122,6 +126,7 @@
             "Category": "RENTE",
             "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
             "Identifier": "1047.IUL.Selbststaendige",
+            "Package": "Klassik Exklusiv",
             "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
             "Name": "Rente für Selbstständige",
             "Provider": {
