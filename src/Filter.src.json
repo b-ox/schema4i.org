@@ -1,0 +1,113 @@
+{
+    "type": "Filter",
+    "uri": "http://schema4i.org/Filter",
+    "description": "An abstract data structure describing a selection criteria that can be applied to a data set or other form of structured data to determine a subset of the input.",
+    "links": [],
+    "parents": [],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Thing"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Filter": "s4i:Filter",
+            "MatchAll": {
+                "@id": "s4i:MatchAll",
+                "@type": "s4i:Thing"
+            },
+            "MatchSome": {
+                "@id": "s4i:MatchSome",
+                "@type": "s4i:Thing"
+            },
+            "MatchNot": {
+                "@id": "s4i:MatchNot",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "A Filter matching Messages with a Keyword",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld"
+                ],
+                "@type": "Filter",
+                "MatchAll": [
+                    {
+                        "@type": "Message",
+                        "Keywords": [
+                            "Posteingang"
+                        ]
+                    }
+                ]
+            },
+            "context": {}
+        },
+        {
+            "title": "A Filter matching multiple Messages with ids",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld"
+                ],
+                "@type": "Filter",
+                "MatchAll": [
+                    {
+                        "@type": "Message"
+                    }
+                ],
+                "MatchSome": [
+                    {
+                        "@id": "https://api.b-ox.de/messages/4711"
+                    },
+                    {
+                        "@id": "https://api.b-ox.de/messages/4712"
+                    }
+                ]
+            },
+            "context": {}
+        },
+        {
+            "title": "A Filter matching multiple Messages with a TransactionCode, excluding those with a Keyword",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld"
+                ],
+                "@type": "Filter",
+                "MatchAll": [
+                    {
+                        "@type": "Message"
+                    }
+                ],
+                "MatchSome": [
+                    {
+                        "About": {
+                            "TransactionCode": "4711"
+                         }
+                    }
+                ],
+                "MatchNot": [
+                    {
+                        "Keywords": [
+                            "Postausgang"
+                        ]
+                    }
+                ]
+            },
+            "context": {}
+        }
+    ]
+}

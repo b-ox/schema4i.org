@@ -1,0 +1,22 @@
+{
+    "type": "MatchNot",
+    "uri": "http://schema4i.org/MatchNot",
+    "description": "A field in a filter describing one or multiple http://schema4i.org/Thing of which none should be matched by all results of the filter. The field can contain any Thing with a reduced number of properties. If any property is included in a target Thing it should be excluded from the matches.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Filter#MatchNot"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "MatchNot": {
+                "@id": "s4i:MatchNot",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": []
+}
