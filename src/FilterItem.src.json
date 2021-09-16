@@ -1,0 +1,22 @@
+{
+    "type": "FilterItem",
+    "uri": "http://schema4i.org/FilterItem",
+    "description": "A field in a filter describing a http://schema4i.org/Thing that must be matched by all results of the filter. The field can contain any partial Thing with a reduced number of properties. Specifically, the @type and @id field are not mandatory on all child objects, since their presence changes the semantics of the Filter. How exactly a FilterItem is matched against a Thing is determined by the http://schema4i.org/FilterType property of the Filter. Depending on the FilterType, it may be possible to add multiple FilterItems to a Filter, for example to describe an Or-Filter, an Exactly-One-Filter or in case of numeric fields to describe a range of values.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Filter#FilterItem"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "FilterItem": {
+                "@id": "s4i:FilterItem",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": []
+}
