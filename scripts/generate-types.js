@@ -290,7 +290,7 @@ const EXAMPLES = new Map<string, s4i.Thing[]>();
 `;
             for (const typeDefinition of exampleTypes) {
                 output += `
-const examples${typeDefinition.type}: s4i.${typeDefinition.type}[] = [${
+const examples${typeDefinition.type}: s4i.Thing[] = [${
     typeDefinition.examples.map(example => JSON.stringify(example.data, undefined, 2)).join(',\n')
 }];
 EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
@@ -306,6 +306,9 @@ EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
         return;
     }
     for (const example of examples) {
+        if (example['@type'] !== 'type') {
+            continue;
+        }
         yield example as R;
     }
 }
