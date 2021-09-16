@@ -306,7 +306,7 @@ EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
         return;
     }
     for (const example of examples) {
-        if (example['@type'] !== 'type') {
+        if (example['@type'] !== type) {
             continue;
         }
         yield example as R;
