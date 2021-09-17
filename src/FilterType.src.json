@@ -1,0 +1,39 @@
+{
+    "type": "FilterType",
+    "uri": "http://schema4i.org/FilterType",
+    "description": "FilterType describes the way a http://schema4i.org/Filter processes its http://schema4i.org/FilterItem. For example, this can be used to determine if a FilterItem must be a precise match for the Filter to be a match, or if a loose text search should be applied. When dealing with numbers or dates it could describe ranges, e.g. 'Match everything with a value higher than this'. Which FilterTypes a provider understands is implementation specific. It may also be possible to add multiple FilterTypes to a Filter to describe different aspects of it, for example whether the Filter must be an exact match or not and if only one FilterItem has to match, in case multiple are present.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Filter#FilterType"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "FilterType": {
+                "@id": "s4i:FilterType",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A FilterType describing a Filter that compares text values for exact equality",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "FilterType": "COMPARE_TEXT_EQUALS"
+        },
+        "context": {}
+    }, {
+        "title": "A FilterType describing a Filter that searches text in a field",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "FilterType": "SEARCH_TEXT"
+        },
+        "context": {}
+    }]
+}
