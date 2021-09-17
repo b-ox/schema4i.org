@@ -1,0 +1,30 @@
+{
+    "type": "Truck",
+    "uri": "http://schema4i.org/Truck",
+    "description": "A truck is a motor vehicle belonging to the commercial vehicles, with which goods are transported. In the German insurance industry vehicles with risk identifier WKZ 2XX and WKZ 3XX are (small) trucks.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Truck": "s4i:Truck"
+        }
+    },
+    "playground": [{
+        "title": "A minimal Truck",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Truck",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "Truck"
+        },
+        "context": {}
+    }]
+}

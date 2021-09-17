@@ -1,0 +1,30 @@
+{
+    "type": "TrikeOrQuad",
+    "uri": "http://schema4i.org/TrikeOrQuad",
+    "description": "A trike is generally an open, motorized road vehicle with one front wheel and two driven rear wheels. A quad is a small motor vehicle for one to three people with four wheels or less often with four tracks, often with thick balloon tires as an all-terrain vehicle. In the German insurance industry vehicles with risk identifier WKZ 030 and 031 are trikes or quads.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "TrikeOrQuad": "s4i:TrikeOrQuad"
+        }
+    },
+    "playground": [{
+        "title": "A minimal TrikeOrQuad",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/TrikeOrQuad",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "TrikeOrQuad"
+        },
+        "context": {}
+    }]
+}

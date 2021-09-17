@@ -1,0 +1,39 @@
+{
+    "type": "LifeInsuranceProduct",
+    "uri": "http://schema4i.org/LifeInsuranceProduct",
+    "description": "Life insurance for cars, motorbikes, trucks, quads, etc.",
+    "links": [{
+        "url": "https://openontology.org",
+        "description": "OpenOntology.org"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/FinancialProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LifeInsuranceProduct": "s4i:LifeInsuranceProduct"
+        }
+    },
+    "playground": [{
+        "title": "A real LifeInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/LifeInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld"
+            ],
+            "@type": "LifeInsuranceProduct",
+            "Offers": []
+        },
+        "context": {}
+    }]
+}

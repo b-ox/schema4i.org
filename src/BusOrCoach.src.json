@@ -1,0 +1,37 @@
+{
+    "type": "BusOrCoach",
+    "uri": "http://schema4i.org/BusOrCoach",
+    "description": "A car is a wheeled, self-powered motor vehicle used for transportation.",
+    "links": [{
+        "url": "http://schema.org/BusOrCoach",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BusOrCoach": "schema:BusOrCoach"
+        }
+    },
+    "playground": [{
+        "title": "A minimal BusOrCoach",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/BusOrCoach",
+                "http://schema4i.org/Organization",
+                "http://schema4i.org/Product",
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "BusOrCoach"
+        },
+        "context": {}
+    }]
+}

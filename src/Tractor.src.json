@@ -1,0 +1,30 @@
+{
+    "type": "Tractor",
+    "uri": "http://schema4i.org/Tractor",
+    "description": "A tractor also called a farm tractor or bulldog, is a tractor that is used in agriculture to pull and drive agricultural machinery. Since tractors are used on unpaved ground and arable land, they are designed for high off-road mobility and robustness. In the German insurance industry vehicles with risk identifier WKZ 4XX are tractors.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Tractor": "s4i:Tractor"
+        }
+    },
+    "playground": [{
+        "title": "A minimal Tractor",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Tractor",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "Tractor"
+        },
+        "context": {}
+    }]
+}

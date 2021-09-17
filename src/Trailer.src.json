@@ -1,0 +1,30 @@
+{
+    "type": "Trailer",
+    "uri": "http://schema4i.org/Trailer",
+    "description": "A trailer is a vehicle that usually has a loading area for transporting goods, but does not have its own drive. They are carried behind towing vehicles such as cars, trucks, buses, tractors or motorcycles. In the German insurance industry vehicles with risk identifier WKZ 5XX are trailors.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Trailer": "s4i:Trailer"
+        }
+    },
+    "playground": [{
+        "title": "A minimal Trailer",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Trailer",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "Trailer"
+        },
+        "context": {}
+    }]
+}

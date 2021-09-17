@@ -1,0 +1,37 @@
+{
+    "type": "Motorcycle",
+    "uri": "http://schema4i.org/Motorcycle",
+    "description": "A motorcycle or motorbike is a single-track, two-wheeled motor vehicle. In the German insurance industry vehicles with risk identifier WKZ 003 are motorcycles.",
+    "links": [{
+        "url": "http://schema.org/Motorcycle",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Motorcycle": "schema:Motorcycle"
+        }
+    },
+    "playground": [{
+        "title": "A realistic Motorcycle",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Motorcycle",
+                "http://schema4i.org/Organization",
+                "http://schema4i.org/Product",
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "Motorcycle"
+        },
+        "context": {}
+    }]
+}

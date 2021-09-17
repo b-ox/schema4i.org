@@ -10,7 +10,14 @@
         "description": "OpenOntology.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/Car" }
+        { "@id": "http://schema4i.org/Car" },
+        { "@id": "http://schema4i.org/Truck" },
+        { "@id": "http://schema4i.org/Tractor" },
+        { "@id": "http://schema4i.org/MotorizedBicycle" },
+        { "@id": "http://schema4i.org/Motorcycle" },
+        { "@id": "http://schema4i.org/Trailer" },
+        { "@id": "http://schema4i.org/TrikeOrQuad" },
+        { "@id": "http://schema4i.org/BusOrCoach" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Product" }
