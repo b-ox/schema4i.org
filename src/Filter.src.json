@@ -1,7 +1,7 @@
 {
     "type": "Filter",
     "uri": "http://schema4i.org/Filter",
-    "description": "An abstract data structure describing a selection criteria that can be applied to a data set or other form of structured data to determine a subset of the input.",
+    "description": "An abstract data structure describing a selection criteria that can be applied to a data set or other form of structured data to determine a subset of the input. The http://schema4i.org/FilterItem property describes which values the target collection is filtered for, while the http://schema4i.org/FilterType property describes how exactly the FilterItem is matched against the target items. Which FilterTypes are supported is provider specific. If the FilterType is omitted, the service provider should assume a sensible default value.",
     "links": [],
     "parents": [],
     "base": [
@@ -14,22 +14,36 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
             "Filter": "s4i:Filter",
-            "MatchAll": {
-                "@id": "s4i:MatchAll",
-                "@type": "s4i:Thing"
+            "FilterType": {
+                "@id": "s4i:FilterType",
+                "@type": "schema:Text"
             },
-            "MatchSome": {
-                "@id": "s4i:MatchSome",
-                "@type": "s4i:Thing"
-            },
-            "MatchNot": {
-                "@id": "s4i:MatchNot",
-                "@type": "s4i:Thing"
+            "FilterItem": {
+                "@id": "s4i:FilterItem",
+                "@type": "s4i:Thing",
+                "types-hint": "required"
             }
         }
     },
     "playground": [
+        {
+            "title": "A minimal Filter matching a Message with an Identifier",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld"
+                ],
+                "@type": "Filter",
+                "FilterItem": {
+                    "Identifier": "4711"
+                }
+            },
+            "context": {}
+        },
         {
             "title": "A Filter matching Messages with a Keyword",
             "tab": "tab-expanded",
@@ -40,19 +54,17 @@
                     "http://schema4i.org/Message.jsonld"
                 ],
                 "@type": "Filter",
-                "MatchAll": [
-                    {
-                        "@type": "Message",
-                        "Keywords": [
-                            "Posteingang"
-                        ]
-                    }
-                ]
+                "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
+                "FilterItem": {
+                    "Keywords": [
+                        "Posteingang"
+                    ]
+                }
             },
             "context": {}
         },
         {
-            "title": "A Filter matching multiple Messages with ids",
+            "title": "A Filter matching Messages with a text content in multiple fields using free text search",
             "tab": "tab-expanded",
             "input": {
                 "@context": [
@@ -61,51 +73,76 @@
                     "http://schema4i.org/Message.jsonld"
                 ],
                 "@type": "Filter",
-                "MatchAll": [
-                    {
-                        "@type": "Message"
-                    }
-                ],
-                "MatchSome": [
-                    {
-                        "@id": "https://api.b-ox.de/messages/4711"
+                "FilterType": ["MUST_MATCH", "ONE_FIELD", "SEARCH_TEXT"],
+                "FilterItem": {
+                    "Sender": {
+                        "Name": "b-tix"
                     },
-                    {
-                        "@id": "https://api.b-ox.de/messages/4712"
+                    "Recipient": {
+                        "Name": "b-tix"
+                    },
+                    "CCRecipient": {
+                        "Name": "b-tix"
                     }
-                ]
+                }
             },
             "context": {}
         },
         {
-            "title": "A Filter matching multiple Messages with a TransactionCode, excluding those with a Keyword",
+            "title": "A SearchAction with multiple Filters matching multiple Messages with ids and a Keyword",
             "tab": "tab-expanded",
             "input": {
                 "@context": [
                     "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Action.jsonld",
+                    "http://schema4i.org/SearchAction.jsonld",
                     "http://schema4i.org/Filter.jsonld",
                     "http://schema4i.org/Message.jsonld"
                 ],
-                "@type": "Filter",
-                "MatchAll": [
-                    {
-                        "@type": "Message"
+                "@type": "SearchAction",
+                "Object": [{
+                    "@type": "Filter",
+                    "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
+                    "FilterItem": {
+                        "Keyword": "Posteingang"
                     }
+                }, {
+                    "@type": "Filter",
+                    "FilterType": ["MUST_MATCH", "ONE_ITEM", "COMPARE_TEXT_EQUALS"],
+                    "FilterItem": [{
+                        "Identifier": "4711"
+                    }, {
+                        "Identifier": "4712"
+                    }]
+                }]
+            },
+            "context": {}
+        },
+        {
+            "title": "A SearchAction with multiple Filters matching multiple Messages with a TransactionCode prefix, excluding those with a Keyword",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Action.jsonld",
+                    "http://schema4i.org/SearchAction.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld"
                 ],
-                "MatchSome": [
-                    {
-                        "About": {
-                            "TransactionCode": "4711"
-                         }
+                "@type": "SearchAction",
+                "Object": [{
+                    "@type": "Filter",
+                    "FilterType": ["MUST_MATCH", "COMPARE_TEXT_PREFIX"],
+                    "FilterItem": {
+                        "TransactionCode": "100"
                     }
-                ],
-                "MatchNot": [
-                    {
-                        "Keywords": [
-                            "Postausgang"
-                        ]
+                }, {
+                    "@type": "Filter",
+                    "FilterType": ["MUST_NOT_MATCH", "COMPARE_TEXT_EQUALS"],
+                    "FilterItem": {
+                        "Keyword": "Papierkorb"
                     }
-                ]
+                }]
             },
             "context": {}
         }
