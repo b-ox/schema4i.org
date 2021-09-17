@@ -54,7 +54,7 @@
                     "http://schema4i.org/Message.jsonld"
                 ],
                 "@type": "Filter",
-                "FilterType": ["Must match", "Compare text exactly"],
+                "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
                 "FilterItem": {
                     "Keywords": [
                         "Posteingang"
@@ -73,7 +73,7 @@
                     "http://schema4i.org/Message.jsonld"
                 ],
                 "@type": "Filter",
-                "FilterType": ["Must match", "At least one field", "Search for text"],
+                "FilterType": ["MUST_MATCH", "ONE_FIELD", "SEARCH_TEXT"],
                 "FilterItem": {
                     "Sender": {
                         "Name": "b-tix"
@@ -102,13 +102,13 @@
                 "@type": "SearchAction",
                 "Object": [{
                     "@type": "Filter",
-                    "FilterType": ["Must match", "Compare text exactly"],
+                    "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
                     "FilterItem": {
                         "Keyword": "Posteingang"
                     }
                 }, {
                     "@type": "Filter",
-                    "FilterType": ["Must match", "At least one item", "Compare text exactly"],
+                    "FilterType": ["MUST_MATCH", "ONE_ITEM", "COMPARE_TEXT_EQUALS"],
                     "FilterItem": [{
                         "Identifier": "4711"
                     }, {
@@ -132,13 +132,13 @@
                 "@type": "SearchAction",
                 "Object": [{
                     "@type": "Filter",
-                    "FilterType": ["Must match", "Compare text as prefix"],
+                    "FilterType": ["MUST_MATCH", "COMPARE_TEXT_PREFIX"],
                     "FilterItem": {
                         "TransactionCode": "100"
                     }
                 }, {
                     "@type": "Filter",
-                    "FilterType": ["Must not match", "Compare text exactly"],
+                    "FilterType": ["MUST_NOT_MATCH", "COMPARE_TEXT_EQUALS"],
                     "FilterItem": {
                         "Keyword": "Papierkorb"
                     }

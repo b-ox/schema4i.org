@@ -19,5 +19,21 @@
             }
         }
     },
-    "playground": []
+    "playground": [{
+        "title": "A FilterType describing a Filter that compares text values for exact equality",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "FilterType": "COMPARE_TEXT_EQUALS"
+        },
+        "context": {}
+    }, {
+        "title": "A FilterType describing a Filter that searches text in a field",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "FilterType": "SEARCH_TEXT"
+        },
+        "context": {}
+    }]
 }
