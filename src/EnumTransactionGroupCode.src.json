@@ -1,0 +1,33 @@
+{
+  "type": "EnumTransactionGroupCode",
+  "uri": "http://schema4i.org/EnumTransactionGroupCode",
+  "description": "Three-digit code of the group of a business transaction. The code is derived from the first three digits of the identification code (EnumTransactionGroupCode) of the business transaction.",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumTransactionGroupCode_DE",
+      "description": "Original German documentation"
+    }
+  ],
+  "parents": [],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Request new business": "s4i:EnumTransactionGroupCode#100",
+      "Partner change": "s4i:EnumTransactionGroupCode#110",
+      "Contract change": "s4i:EnumTransactionGroupCode#120",
+      "Legal relations": "s4i:EnumTransactionGroupCode#130",
+      "Contribution Incasso": "s4i:EnumTransactionGroupCode#140",
+      "Benefit case": "s4i:EnumTransactionGroupCode#150",
+      "Termination resolution": "s4i:EnumTransactionGroupCode#160",
+      "information": "s4i:EnumTransactionGroupCode#170",
+      "complaint": "s4i:EnumTransactionGroupCode#180",
+      "acquisition": "s4i:EnumTransactionGroupCode#190",
+      "EVB number": "s4i:EnumTransactionGroupCode#200",
+      "VU-VM billing": "s4i:EnumTransactionGroupCode#210",
+      "miscellaneous": "s4i:EnumTransactionGroupCode#999"
+    }
+  }
+}
