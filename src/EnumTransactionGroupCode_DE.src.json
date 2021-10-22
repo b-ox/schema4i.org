@@ -1,0 +1,33 @@
+{
+  "type": "EnumTransactionGroupCode_DE",
+  "uri": "http://schema4i.org/EnumTransactionGroupCode_DE",
+  "description": "Dreistelliger Code der Gruppe eines Geschäftsvorfalls. Der Code wird aus den ersten drei Ziffern des Identifikationscodes (EnumTransactionCode) des Geschäftsvorfalls abgeleitet.",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumTransactionGroupCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+    }
+  ],
+  "parents": [],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Antrag Neugeschäft": "s4i:EnumTransactionGroupCode#100",
+      "Partner Änderung": "s4i:EnumTransactionGroupCode#110",
+      "Vertrag Änderung": "s4i:EnumTransactionGroupCode#120",
+      "Rechtsverhältnisse": "s4i:EnumTransactionGroupCode#130",
+      "Beitrag Inkasso": "s4i:EnumTransactionGroupCode#140",
+      "Leistungsfall": "s4i:EnumTransactionGroupCode#150",
+      "Kündigung Auflösung": "s4i:EnumTransactionGroupCode#160",
+      "Auskünfte": "s4i:EnumTransactionGroupCode#170",
+      "Beschwerde": "s4i:EnumTransactionGroupCode#180",
+      "Akquise": "s4i:EnumTransactionGroupCode#190",
+      "eVB-Nummer": "s4i:EnumTransactionGroupCode#200",
+      "VU-VM-Abrechnung": "s4i:EnumTransactionGroupCode#210",
+      "Sonstiges": "s4i:EnumTransactionGroupCode#999"
+    }
+  }
+}
