@@ -1,7 +1,7 @@
 {
   "type": "EnumTransactionGroupCode_DE",
   "uri": "http://schema4i.org/EnumTransactionGroupCode_DE",
-  "description": "Dreistelliger Code der Gruppe eines Geschäftsvorfalls. Der Code wird aus den ersten drei Ziffern des Identifikationscodes (EnumTransactionGroupCode) des Geschäftsvorfalls abgeleitet.",
+  "description": "Dreistelliger Code der Gruppe eines Geschäftsvorfalls. Der Code wird aus den ersten drei Ziffern des Identifikationscodes (EnumTransactionCode) des Geschäftsvorfalls abgeleitet.",
   "links": [
     {
       "url": "http://schema4i.org/EnumTransactionGroupCode",
