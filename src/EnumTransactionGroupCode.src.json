@@ -1,7 +1,7 @@
 {
   "type": "EnumTransactionGroupCode",
   "uri": "http://schema4i.org/EnumTransactionGroupCode",
-  "description": "Three-digit code of the group of a business transaction. The code is derived from the first three digits of the identification code (EnumTransactionGroupCode) of the business transaction.",
+  "description": "Three-digit code of the group of a business transaction. The code is derived from the first three digits of the identification code (EnumTransactionCode) of the business transaction.",
   "links": [
     {
       "url": "http://schema4i.org/EnumTransactionGroupCode_DE",
