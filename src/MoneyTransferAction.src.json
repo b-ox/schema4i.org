@@ -19,7 +19,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "MoneyTransferAction": "schema:MoneyTransferAction",
+            "MoneyTransferAction": "schema:MoneyTransfer",
             "Amount": {
                 "@id": "schema:amount",
                 "@type": "s4i:MonetaryAmount"
