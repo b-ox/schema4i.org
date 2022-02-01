@@ -1,0 +1,40 @@
+{
+    "type": "ImageObject",
+    "uri": "http://schema4i.org/ImageObject",
+    "description": "An image file.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Sender#Logo" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ImageObject": "s4i:ImageObject",
+            "EncodingFormat": {
+                "@id": "schema:encodingFormat",
+                "@type": "schema:Text"
+            },
+            "ContentUrl": {
+                "@id": "schema:contentUrl",
+                "@type": "schema:URL"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An ImageObject",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "ImageObject",
+            "EncodingFormat": "application/png",
+            "ContentUrl": "https://gui-test.b-ox.de/resources/provider/icons/1104.png"
+        },
+        "context": {}
+    }]
+}
