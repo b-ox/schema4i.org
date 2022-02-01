@@ -4,11 +4,9 @@
     "description": "An abstract data structure describing a selection criteria that can be applied to a data set or other form of structured data to determine a subset of the input. The http://schema4i.org/FilterItem property describes which values the target collection is filtered for, while the http://schema4i.org/FilterType property describes how exactly the FilterItem is matched against the target items. Which FilterTypes are supported is provider specific. If the FilterType is omitted, the service provider should assume a sensible default value.",
     "links": [],
     "parents": [],
-    "base": [
-        {
-            "@id": "http://schema4i.org/Thing"
-        }
-    ],
+    "base": [{
+        "@id": "http://schema4i.org/Thing"
+    }],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -27,8 +25,7 @@
             }
         }
     },
-    "playground": [
-        {
+    "playground": [{
             "title": "A minimal Filter matching a Message with an Identifier",
             "tab": "tab-expanded",
             "input": {
@@ -39,6 +36,7 @@
                 ],
                 "@type": "Filter",
                 "FilterItem": {
+                    "@type": "Message",
                     "Identifier": "4711"
                 }
             },
@@ -56,6 +54,7 @@
                 "@type": "Filter",
                 "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
                 "FilterItem": {
+                    "@type": "Message",
                     "Keywords": [
                         "Posteingang"
                     ]
@@ -75,6 +74,7 @@
                 "@type": "Filter",
                 "FilterType": ["MUST_MATCH", "ONE_FIELD", "SEARCH_TEXT"],
                 "FilterItem": {
+                    "@type": "Message",
                     "Sender": {
                         "Name": "b-tix"
                     },
@@ -110,8 +110,10 @@
                     "@type": "Filter",
                     "FilterType": ["MUST_MATCH", "ONE_ITEM", "COMPARE_TEXT_EQUALS"],
                     "FilterItem": [{
+                        "@type": "Message",
                         "Identifier": "4711"
                     }, {
+                        "@type": "Message",
                         "Identifier": "4712"
                     }]
                 }]
@@ -134,13 +136,38 @@
                     "@type": "Filter",
                     "FilterType": ["MUST_MATCH", "COMPARE_TEXT_PREFIX"],
                     "FilterItem": {
+                        "@type": "Message",
                         "TransactionCode": "100"
                     }
                 }, {
                     "@type": "Filter",
                     "FilterType": ["MUST_NOT_MATCH", "COMPARE_TEXT_EQUALS"],
                     "FilterItem": {
+                        "@type": "Message",
                         "Keyword": "Papierkorb"
+                    }
+                }]
+            },
+            "context": {}
+        },
+        {
+            "title": "A SearchAction for a Message where DateSent is between two dates",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Action.jsonld",
+                    "http://schema4i.org/SearchAction.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld"
+                ],
+                "@type": "SearchAction",
+                "Object": [{
+                    "@type": "Filter",
+                    "FilterType": ["MUST_NOT_MATCH", "DATE_BETWEEN"],
+                    "FilterItem": {
+                        "@type": "Message",
+                        "DateSent": ["2022-01-01", "2022-02-01"]
                     }
                 }]
             },
