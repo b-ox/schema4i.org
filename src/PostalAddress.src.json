@@ -47,6 +47,10 @@
             "StreetAddress": {
                 "@id": "schema:streetAddress",
                 "@type": "schema:Text"
+            },
+            "HouseNumber": {
+                "@id": "s4i:HouseNumber",
+                "@type": "schema:Text"
             }
         }
     },
@@ -65,7 +69,8 @@
             "AddressRegion": "NRW",
             "PostOfficeBoxNumber": "Postfach 4711",
             "PostalCode": "40233",
-            "StreetAddress": "Lindenstr. 48"
+            "StreetAddress": "Lindenstr.",
+            "HouseNumber": "48-52"
         },
         "context": {}
     }]

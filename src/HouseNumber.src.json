@@ -1,0 +1,31 @@
+{
+    "type": "HouseNumber",
+    "uri": "http://schema4i.org/HouseNumber",
+    "description": "The number of the house or apartment in the street.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/PostalAddress#HouseNumber" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HouseNumber": {
+                "@id": "s4i:HouseNumber",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "HouseNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "HouseNumber": "48-52"
+        },
+        "context": {}
+    }]
+}
