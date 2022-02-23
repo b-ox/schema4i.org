@@ -1,0 +1,42 @@
+{
+    "type": "WebApplication",
+    "uri": "http://schema4i.org/WebApplication",
+    "description": "A Web application is a software application running on a server accessible via the Internet.",
+    "links": [{
+        "url": "http://schema.org/WebApplication",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [{
+        "@id": "http://schema4i.org/SoftwareApplication"
+    }],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "WebApplication": "schema:WebApplication",
+            "BrowserRequirements": {
+                "@id": "schema:browserRequirements",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum WebApplication",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Service",
+                "http://schema4i.org/CreativeWork",
+                "http://schema4i.org/SoftwareApplication",
+                "http://schema4i.org/WebApplication"
+            ],
+            "@type": "WebApplication",
+            "BrowserRequirements": "Latest versions of Chrome, Firefox, Safari and Edge"
+        },
+        "context": {}
+    }]
+}
