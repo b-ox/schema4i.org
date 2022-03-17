@@ -7,8 +7,9 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/AddAction" },
         { "@id": "http://schema4i.org/DeleteAction" },
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
         { "@id": "http://schema4i.org/Thing#PotentialAction" }
     ],
     "base": [
