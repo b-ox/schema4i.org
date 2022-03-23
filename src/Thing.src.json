@@ -39,6 +39,10 @@
                 "@id": "schema:description",
                 "@type": "schema:Text"
             },
+            "DisambiguatingDescription": {
+                "@id": "schema:disambiguatingDescription",
+                "@type": "schema:Text"
+            },
             "Identifier": {
                 "@id": "schema:identifier",
                 "@type": "schema:Text"
@@ -72,6 +76,7 @@
             "AlternateName": "Cola",
             "Name": "Coca Cola",
             "Description": "Drink with a lot of sugar.",
+            "DisambiguatingDescription": "Cola drink with a lot of sugar.",
             "Identifier": "CC",
             "IdentifierReference": "XX",
             "PotentialAction": [],
