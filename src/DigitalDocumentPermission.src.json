@@ -1,0 +1,58 @@
+{
+    "type": "DigitalDocumentPermission",
+    "uri": "http://schema4i.org/DigitalDocumentPermission",
+    "description": "A permission for a particular person or group to access a particular file.",
+    "links": [{
+        "url": "http://schema.org/DigitalDocumentPermission",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "Grantee": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/UserAccount" },
+            { "@id": "http://schema4i.org/Credentials" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DigitalDocumentPermission": "s4i:DigitalDocumentPermission",
+            "PermissionType": {
+                "@id": "schema:permissionType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "schema:"
+                }
+            },
+            "Grantee": {
+                "@id": "schema:grantee"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DigitalDocumentPermission",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/UserAccount.jsonld",
+                "http://schema4i.org/DigitalDocumentPermission.jsonld",
+                "https://schema.org/DigitalDocumentPermissionType"
+            ],
+            "@type": "DigitalDocumentPermission",
+            "PermissionType": ["ReadPermission", "WritePermission"],
+            "Grantee": {
+                "@type": "UserAccount",
+                "Identifier": "4711"
+            }
+        },
+        "context": {}
+    }]
+}
