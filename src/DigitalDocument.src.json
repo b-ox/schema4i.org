@@ -16,7 +16,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DigitalDocument": "schema:DigitalDocument"
+            "DigitalDocument": "schema:DigitalDocument",
+            "HasDigitalDocumentPermission": {
+                "@id": "schema:hasDigitalDocumentPermission",
+                "@type": "s4i:DigitalDocumentPermission"
+            }
         }
     },
     "playground": [{
@@ -25,13 +29,23 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
-                "http://schema4i.org/DigitalDocument.jsonld"
+                "http://schema4i.org/DigitalDocument.jsonld",
+                "http://schema4i.org/DigitalDocumentPermission.jsonld"
             ],
             "@type": "DigitalDocument",
             "@id": "https://api-test.b-ox.de/files/123456789",
             "Name": "attachment.pdf",
-            "EncodingFormat": "application/pdf"
+            "EncodingFormat": "application/pdf",
+            "HasDigitalDocumentPermission": {
+                "@type": "DigitalDocumentPermission",
+                "PermissionType": "ReadPermission",
+                "Grantee": {
+                    "@type": "Person",
+                    "Name": "Muster"
+                }
+            }
         },
         "context": {}
     }]
