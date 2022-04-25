@@ -1,0 +1,99 @@
+{
+    "type": "RealEstateListing",
+    "uri": "http://schema4i.org/RealEstateListing",
+    "description": "A RealEstateListing is a listing that describes one or more real-estate Offers (whose businessFunction is typically to lease out, or to sell). The RealEstateListing type itself represents the overall listing, as manifested in some WebPage or API.",
+    "links": [{
+        "url": "http://schema.org/RealEstateListing",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/WebPage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RealEstateListing": "schema:RealEstateListing",
+            "DatePosted": {
+                "@id": "schema:datePosted",
+                "@type": "schema:DateTime"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic RealEstateListing",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RealEstateListing.jsonld",
+                "http://schema4i.org/WebPage.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/OfferForPurchase.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Apartment.jsonld",
+                "http://schema4i.org/Accommodation.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/LocationFeatureSpecification.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/ImageObject.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "RealEstateListing",
+            "DatePosted": "2020-04-25T21:50:00",
+            "Offers": [{
+                "@type": "OfferForPurchase",
+                "@id": "#4711",
+                "OfferedBy": {
+                    "@type": "Organization",
+                    "Name": "Realty, Inc."
+                },
+                "Price": 200000,
+                "PriceCurrency": "USD",
+                "BusinessFunction": "http://purl.org/goodrelations/v1#Sell",
+                "ItemOffered": {
+                    "@type": "Apartment",
+                    "@id": "#4712",
+                    "FloorLevel": 1,
+                    "AmenityFeature": [],
+                    "FloorSize": {
+                        "@type": "QuantitativeValue",
+                        "Name": "Size",
+                        "Value": 1457,
+                        "UnitCode": "FTK",
+                        "UnitText": "sqft"
+                    },
+                    "NumberOfBathroomsTotal": 2,
+                    "NumberOfBedrooms": 2,
+                    "NumberOfFullBathrooms": 2,
+                    "NumberOfPartialBathrooms": 0,
+                    "PetsAllowed": true,
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "AddressCountry": "USA",
+                        "AddressLocality": "Cape Coral",
+                        "AddressRegion": "Lee County",
+                        "PostalCode": "99114",
+                        "StreetAddress": "1508 SW 47th St",
+                        "Name": "1508 SW 47th St, Cape Coral, FL 99114, USA"
+                    },
+                    "Latitude": 26.55964,
+                    "Longitude": -81.951283,
+                    "Photo": {
+                        "@type": "ImageObject",
+                        "Url": "https://realty.tld/image.png"
+                    },
+                    "Identifier": "4711",
+                    "MainEntityOfPage": "https://realty.tld/4711",
+                    "SameAs": "https://realty.tld/4711"
+                }
+            }]
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,94 @@
+{
+    "type": "Accommodation",
+    "uri": "http://schema4i.org/Accommodation",
+    "description": "An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement. For more specific types of accommodations not defined, one can use additionalType with external vocabularies. ",
+    "links": [{
+        "url": "http://schema.org/Accommodation",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Apartment" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Accommodation": "schema:Accommodation",
+            "FloorLevel": {
+                "@id": "schema:floorLevel",
+                "@type": "schema:Text"
+            },
+            "FloorSize": {
+                "@id": "schema:floorSize",
+                "@type": "s4i:QuantitativeValue"
+            },
+            "NumberOfBathroomsTotal": {
+                "@id": "schema:numberOfBathroomsTotal",
+                "@type": "schema:Integer"
+            },
+            "NumberOfBedrooms": {
+                "@id": "schema:numberOfBedrooms",
+                "@type": "schema:Number"
+            },
+            "NumberOfFullBathrooms": {
+                "@id": "schema:numberOfFullBathrooms",
+                "@type": "schema:Number"
+            },
+            "NumberOfPartialBathrooms": {
+                "@id": "schema:numberOfPartialBathrooms",
+                "@type": "schema:Number"
+            },
+            "NumberOfRooms": {
+                "@id": "schema:numberOfRooms",
+                "@type": "schema:Number"
+            },
+            "PermittedUsage": {
+                "@id": "schema:permittedUsage",
+                "@type": "schema:Text"
+            },
+            "PetsAllowed": {
+                "@id": "schema:petsAllowed",
+                "@type": "schema:Text"
+            },
+            "TourBookingPage": {
+                "@id": "schema:tourBookingPage",
+                "@type": "schema:URL"
+            },
+            "YearBuilt": {
+                "@id": "schema:yearBuilt",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Accommodation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Accommodation",
+            "FloorLevel": "1",
+            "FloorSize": {
+                "@type": "QuantitativeValue",
+                "Name": "Size",
+                "Value": 1457,
+                "UnitCode": "FTK",
+                "UnitText": "sqft"
+            },
+            "NumberOfBathroomsTotal": 2,
+            "NumberOfBedrooms": 2,
+            "NumberOfFullBathrooms": 2,
+            "NumberOfPartialBathrooms": 0,
+            "NumberOfRooms": 3,
+            "PermittedUsage": "Eigennutzung und 3 Mal jährlich Vermietung",
+            "PetsAllowed": "Kleine Hunde bis 12kg",
+            "TourBookingPage": "https://test.tld/tour",
+            "YearBuilt": 1985
+        },
+        "context": {}
+    }]
+}

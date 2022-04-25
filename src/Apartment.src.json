@@ -1,0 +1,31 @@
+{
+    "type": "Apartment",
+    "uri": "http://schema4i.org/Apartment",
+    "description": "",
+    "links": [{
+        "url": "http://schema.org/Apartment",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Accommodation" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Apartment": "schema:Apartment"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Apartment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Apartment"
+        },
+        "context": {}
+    }]
+}

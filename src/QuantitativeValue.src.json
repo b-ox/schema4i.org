@@ -7,7 +7,8 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/UnitPriceSpecification#ReferenceQuantity" }
+        { "@id": "http://schema4i.org/UnitPriceSpecification#ReferenceQuantity" },
+        { "@id": "http://schema4i.org/Apartment#FloorSize" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
