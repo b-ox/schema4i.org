@@ -1,0 +1,48 @@
+{
+  "type": "EnumTransactionCategoryCode_DE",
+  "uri": "http://schema4i.org/EnumTransactionCategoryCode_DE",
+  "description": "Vierstelliger Code der Kategorie eines Geschäftsvorfalls.",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumTransactionCategoryCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+    }
+  ],
+  "parents": [],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Übermittlung eines Stichtagsbestandes: Vertrag (1001)": "s4i:EnumTransactionCategoryCode#1001",
+      "Übermittlung eines Änderungsbestandes: Vertrag (1002)": "s4i:EnumTransactionCategoryCode#1002",
+      "Initiale Bereitstellung von Änderungen zu Geschäftsvorfällen mit Wirksamkeit in der Zukunft: Vertrag (1003)": "s4i:EnumTransactionCategoryCode#1003",
+      "Geschäftsvorfall ausgelöste Bereitstellung und Übermittlung von Änderungen: Vertrag (1004)": "s4i:EnumTransactionCategoryCode#1004",
+      "Übermittlung eines Datenbestandes vom Verbraucher zum Anbieter: Vertrag (1005)": "s4i:EnumTransactionCategoryCode#1005",
+      "Übermittlung von Geschäftsvorfällen ohne Vertragsdaten: Vertrag (1006)": "s4i:EnumTransactionCategoryCode#1006",
+      "Initiale Bereitstellung von Änderungen zu Geschäftsvorfällen mit Wirksamkeit in der Zukunft: Vertrag + Inkasso (1103)": "s4i:EnumTransactionCategoryCode#1103",
+      "Geschäftsvorfall ausgelöste Bereitstellung und Übermittlung von Änderungen: Vertrag + Inkasso (1104)": "s4i:EnumTransactionCategoryCode#1104",
+      "Übermittlung eines Datenbestandes vom Verbraucher zum Anbieter: Vertrag + Inkasso (1105)": "s4i:EnumTransactionCategoryCode#1105",
+      "Initiale Bereitstellung von Änderungen zu Geschäftsvorfällen mit Wirksamkeit in der Zukunft: nur Inkasso (1203)": "s4i:EnumTransactionCategoryCode#1203",
+      "Geschäftsvorfall ausgelöste Bereitstellung und Übermittlung von Änderungen: nur Inkasso (1204)": "s4i:EnumTransactionCategoryCode#1204",
+      "Übermittlung eines Datenbestandes vom Verbraucher zum Anbieter: nur Inkasso (1205)": "s4i:EnumTransactionCategoryCode#1205",
+      "Initiale Bereitstellung von Änderungen zu Geschäftsvorfällen mit Wirksamkeit in der Zukunft: Prämienabrechnung (1303)": "s4i:EnumTransactionCategoryCode#1303",
+      "Geschäftsvorfall ausgelöste Bereitstellung und Übermittlung von Änderungen: Prämienabrechnung (1304)": "s4i:EnumTransactionCategoryCode#1304",
+      "Übermittlung eines Datenbestandes vom Verbraucher zum Anbieter: Prämienabrechnung (1305)": "s4i:EnumTransactionCategoryCode#1305",
+      "Übermittlung eines Stichtagsbestandes: Schaden mit kumulierten Schadenbeträgen (2001)": "s4i:EnumTransactionCategoryCode#2001",
+      "Übermittlung eines Änderungsbestandes: Schaden mit kumulierten Schadenbeträgen (2002)": "s4i:EnumTransactionCategoryCode#2002",
+      "Übermittlung eines Stichtagsbestandes: Schaden mit einzelnen Regulierungen (2101)": "s4i:EnumTransactionCategoryCode#2101",
+      "Übermittlung eines Änderungsbestandes: Schaden mit einzelnen Regulierungen (2102)": "s4i:EnumTransactionCategoryCode#2102",
+      "Geschäftsvorfall ausgelöste Bereitstellung und Übermittlung von Änderungen: Schaden (2104)": "s4i:EnumTransactionCategoryCode#2104",
+      "Übermittlung eines Datenbestandes vom Verbraucher zum Anbieter: Schaden (2105)": "s4i:EnumTransactionCategoryCode#2105",
+      "Übermittlung von Geschäftsvorfällen ohne Vertragsdaten: Schaden (2106)": "s4i:EnumTransactionCategoryCode#2106",
+      "Geschäftsvorfall ausgelöste Bereitstellung und Übermittlung von Änderungen: Schadenabrechnung (2304)": "s4i:EnumTransactionCategoryCode#2304",
+      "Übermittlung eines Datenbestandes vom Verbraucher zum Anbieter: Schadenabrechnung (2305)": "s4i:EnumTransactionCategoryCode#2305",
+      "Vermittlerabrechnung: Abrechnung (2401)": "s4i:EnumTransactionCategoryCode#2401",
+      "Vermittlerabrechnung: VA Klärungsanfrage (2402)": "s4i:EnumTransactionCategoryCode#2402",
+      "Vermittlerabrechnung: VA Klärungsantwort (2403)": "s4i:EnumTransactionCategoryCode#2403",
+      "Vermittlerabrechnung: VA Abrechnung anfordern (2404)": "s4i:EnumTransactionCategoryCode#2404"
+    }
+  }
+}
