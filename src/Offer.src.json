@@ -11,7 +11,8 @@
     }],
     "parents": [
         { "@id": "http://schema4i.org/Service#Offers" },
-        { "@id": "http://schema4i.org/Coverage" }
+        { "@id": "http://schema4i.org/Coverage" },
+        { "@id": "http://schema4i.org/OfferForPurchase" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }

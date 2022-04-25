@@ -1,0 +1,84 @@
+{
+    "type": "Place",
+    "uri": "http://schema4i.org/Place",
+    "description": "Entities that have a somewhat fixed, physical extension.",
+    "links": [{
+        "url": "http://schema.org/Place",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Accommodation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Place": "schema:Place",
+            "Address": {
+                "@id": "schema:address",
+                "@type": "s4i:PostalAddress"
+            },
+            "AmenityFeature": {
+                "@id": "schema:amenityFeature",
+                "@type": "s4i:LocationFeatureSpecification"
+            },
+            "HasMap": {
+                "@id": "schema:hasMap",
+                "@type": "schema:URL"
+            },
+            "Keywords": {
+                "@id": "schema:keywords",
+                "@type": "schema:Text"
+            },
+            "Latitude": {
+                "@id": "schema:latitude",
+                "@type": "schema:Number"
+            },
+            "Longitude": {
+                "@id": "schema:longitude",
+                "@type": "schema:Number"
+            },
+            "Photo": {
+                "@id": "schema:photo",
+                "@type": "s4i:ImageObject"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Place",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Place",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressCountry": "USA",
+                "AddressLocality": "Cape Coral",
+                "AddressRegion": "Lee County",
+                "PostalCode": "99114",
+                "StreetAddress": "1508 SW 47th St",
+                "Name": "1508 SW 47th St, Cape Coral, FL 99114, USA"
+            },
+            "AmenityFeature": [{
+                "@type": "LocationFeatureSpecification",
+                "PropertyID": "TYPE",
+                "Name": "Type",
+                "Value": "Single Family Residence"
+            }],
+            "HasMap": "https://test.tld/map",
+            "Keywords": "Wohnung, Eigentumswohnung",
+            "Latitude": 26.55964,
+            "Longitude": -81.951283,
+            "Photo": [{
+                "@type": "ImageObject",
+                "ContentUrl": "https://test.tld/photo1.png"
+            }]
+        },
+        "context": {}
+    }]
+}

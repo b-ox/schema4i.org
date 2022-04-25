@@ -1,0 +1,79 @@
+{
+    "type": "OfferForPurchase",
+    "uri": "http://schema4i.org/Offer",
+    "description": "An OfferForPurchase represents an Offer to sell something, i.e. an Offer whose BusinessFunction is sell. See Good Relations for background on the underlying concepts.",
+    "links": [{
+        "url": "http://schema.org/OfferForPurchase",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Offer" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "OfferForPurchase": "schema:OfferForPurchase"
+        }
+    },
+    "playground": [{
+        "title": "A maximum OfferForPurchase",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/OfferForPurchase.jsonld"
+            ],
+            "@type": "OfferForPurchase",
+            "@id": "#4711",
+            "OfferedBy": {
+                "@type": "Organization",
+                "Name": "Realty, Inc."
+            },
+            "Price": 200000,
+            "PriceCurrency": "USD",
+            "BusinessFunction": "http://purl.org/goodrelations/v1#Sell",
+            "ItemOffered": {
+                "@type": "Apartment",
+                "@id": "#4712",
+                "FloorLevel": 1,
+                "AmenityFeature": [],
+                "FloorSize": {
+                    "@type": "QuantitativeValue",
+                    "Name": "Size",
+                    "Value": 1457,
+                    "UnitCode": "FTK",
+                    "UnitText": "sqft"
+                },
+                "NumberOfBathroomsTotal": 2,
+                "NumberOfBedrooms": 2,
+                "NumberOfFullBathrooms": 2,
+                "NumberOfPartialBathrooms": 0,
+                "PetsAllowed": true,
+                "Address": {
+                    "@type": "PostalAddress",
+                    "AddressCountry": "USA",
+                    "AddressLocality": "Cape Coral",
+                    "AddressRegion": "Lee County",
+                    "PostalCode": "99114",
+                    "StreetAddress": "1508 SW 47th St",
+                    "Name": "1508 SW 47th St, Cape Coral, FL 99114, USA"
+                },
+                "Latitude": 26.55964,
+                "Longitude": -81.951283,
+                "Photo": {
+                    "@type": "ImageObject",
+                    "Url": "https://realty.tld/image.png"
+                },
+                "Identifier": "4711",
+                "MainEntityOfPage": "https://realty.tld/4711",
+                "SameAs": "https://realty.tld/4711"
+            }
+        },
+        "context": {}
+    }]
+}
