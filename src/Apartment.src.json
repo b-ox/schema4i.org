@@ -1,7 +1,7 @@
 {
     "type": "Apartment",
     "uri": "http://schema4i.org/Apartment",
-    "description": "",
+    "description": "An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building.",
     "links": [{
         "url": "http://schema.org/Apartment",
         "description": "Original Schema.org type"
