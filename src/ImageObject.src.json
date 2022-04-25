@@ -4,7 +4,8 @@
     "description": "An image file.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Sender#Logo" }
+        { "@id": "http://schema4i.org/Organization#Logo" },
+        { "@id": "http://schema4i.org/Place#Photo" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
