@@ -77,6 +77,10 @@
                 "@id": "schema:honorificPrefix",
                 "@type": "schema:Text"
             },
+            "JobTitle": {
+                "@id": "schema:jobTitle",
+                "@type": "schema:Text"
+            },
             "MemberOf": {
                 "@id": "schema:memberOf"
             },
@@ -102,6 +106,10 @@
             "Telephone": {
                 "@id": "schema:telephone",
                 "@type": "schema:Text"
+            },
+            "WorksFor": {
+                "@id": "schema:worksFor",
+                "@type": "schema:Organization"
             }
         }
     },
@@ -125,12 +133,14 @@
             "Gender": "Male",
             "GivenName": "Markus",
             "HonorificPrefix": "Dr.",
+            "JobTitle": "CEO",
             "MemberOf": {},
             "Nationality": "D",
             "RelatedTo": {},
             "Salutation": 3,
             "TaxID": "DE123123123",
-            "Telephone": "+49 211 41608 400"
+            "Telephone": "+49 211 41608 400",
+            "WorksFor": {}
         },
         "context": {}
     }, {
