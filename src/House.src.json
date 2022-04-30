@@ -1,0 +1,31 @@
+{
+    "type": "House",
+    "uri": "http://schema4i.org/House",
+    "description": "A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures.",
+    "links": [{
+        "url": "http://schema.org/House",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Accommodation" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "House": "schema:House"
+        }
+    },
+    "playground": [{
+        "title": "A maximum House",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "House"
+        },
+        "context": {}
+    }]
+}
