@@ -47,6 +47,10 @@
                 "@id": "schema:identifier",
                 "@type": "schema:Text"
             },
+            "Image": {
+                "@id": "schema:image",
+                "@type": "s4i:ImageObject"
+            },
             "PotentialAction": {
                 "@id": "schema:potentialAction"
             },
@@ -77,6 +81,7 @@
             "Name": "Coca Cola",
             "Description": "Drink with a lot of sugar.",
             "DisambiguatingDescription": "Cola drink with a lot of sugar.",
+            "Image": {},
             "Identifier": "CC",
             "IdentifierReference": "XX",
             "PotentialAction": [],

@@ -38,6 +38,14 @@
                 "@id": "schema:acceptedPaymentMethod",
                 "@type": "schema:PaymentMethod"
             },
+            "AddOn": {
+                "@id": "schema:addOn",
+                "@type": "s4i:Offer"
+            },
+            "AvailabilityStarts": {
+                "@id": "schema:availabilityStarts",
+                "@type": "schema:DateTime"
+            },
             "BusinessFunction": {
                 "@id": "schema:businessFunction",
                 "@type": "schema:BusinessFunction"
@@ -48,7 +56,11 @@
             },
             "ItemOffered": {
                 "@id": "schema:itemOffered",
-                "@type": "s4i:FinancialProduct"
+                "@type": "s4i:Thing"
+            },
+            "LeaseLength": {
+                "@id": "schema:leaseLength",
+                "@type": "s4i:QuantitativeValue"
             },
             "OfferedBy": {
                 "@id": "schema:offeredBy"
@@ -104,9 +116,12 @@
                 "http://purl.org/goodrelations/v1#DirectDebit",
                 "http://purl.org/goodrelations/v1#PayPal"
             ],
+            "AddOn": {},
+            "AvailabilityStarts": "2021-01-01T00:00:00",
             "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
             "Category": "Insurance",
             "ItemOffered": {},
+            "LeaseLength": {},
             "OfferedBy": {},
             "PaymentInterval": 7,
             "Price": 100.00,

@@ -8,7 +8,7 @@
         { "@id": "http://schema4i.org/Place#Photo" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/CreativeWork" }
     ],
     "multipletypes": {},
     "context": {
