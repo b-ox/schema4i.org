@@ -109,7 +109,7 @@
             },
             "WorksFor": {
                 "@id": "schema:worksFor",
-                "@type": "schema:Organization"
+                "@type": "s4i:Organization"
             }
         }
     },
