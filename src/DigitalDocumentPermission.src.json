@@ -33,6 +33,10 @@
             },
             "Grantee": {
                 "@id": "schema:grantee"
+            },
+            "Granter": {
+                "@id": "s4i:Granter",
+                "@type": "s4i:Granter"
             }
         }
     },
@@ -51,6 +55,10 @@
             "Grantee": {
                 "@type": "UserAccount",
                 "Identifier": "4711"
+            },
+            "Granter": {
+                "@type": "UserAccount",
+                "Identifier": "4712"
             }
         },
         "context": {}
