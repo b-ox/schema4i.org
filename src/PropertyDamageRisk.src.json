@@ -1,0 +1,46 @@
+{
+    "type": "PropertyDamageRisk",
+    "uri": "http://schema4i.org/PropertyDamageRisk",
+    "description": "Describes a risk of property damage. The affected object might be a specific property or a person whose property is insured.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Risk" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PropertyDamageRisk": "s4i:PropertyDamageRisk"
+        }
+    },
+    "playground": [{
+        "title": "A maximum PropertyDamageRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Car.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PropertyDamageRisk.jsonld"
+            ],
+            "@type": "PropertyDamageRisk",
+            "Affects": {
+                "@type": "Car",
+                "Manufacturer": {
+                    "@type": "Organization",
+                    "Name": "Porsche"
+                },
+                "Model": "718 Cayman S",
+                "NumberPlate": "D-TX 718",
+                "TSN": "AJM",
+                "VehicleIdentificationNumber": "D676SDA8",
+                "VehicleType": "112"
+            }
+        },
+        "context": {}
+    }]
+}

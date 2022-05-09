@@ -1,0 +1,37 @@
+{
+    "type": "Insured",
+    "uri": "http://schema4i.org/Insured",
+    "description": "An insured person, object or intangible matter that is part of an insurance contract. This need not be identical to the person who made the contract. Sometimes an insured object can be the subject of multiple different coverages within the same insurance product.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/InsuranceProduct#Insured"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Insured": {
+                "@id": "s4i:Insured",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Insured person",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld"
+            ],
+            "Insured": {
+                "@type": "Person",
+                "Name": "Muster"
+            }
+        },
+        "context": {}
+    }]
+}
