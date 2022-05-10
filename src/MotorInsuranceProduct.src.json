@@ -8,7 +8,7 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/FinancialProduct" }
+        { "@id": "http://schema4i.org/InsuranceProduct" }
     ],
     "multipletypes": {},
     "context": {
@@ -26,6 +26,7 @@
             "@context": [
                 "http://schema4i.org/MotorInsuranceProduct.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
