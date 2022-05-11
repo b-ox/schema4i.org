@@ -27,6 +27,7 @@
       "acquisition": "s4i:EnumTransactionGroupCode#190",
       "EVB number": "s4i:EnumTransactionGroupCode#200",
       "VU-VM billing": "s4i:EnumTransactionGroupCode#210",
+      "correspondence": "s4i:EnumTransactionGroupCode#899",
       "miscellaneous": "s4i:EnumTransactionGroupCode#999"
     }
   }
