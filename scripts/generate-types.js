@@ -44,7 +44,7 @@ const PRIMITIVE_TYPE_MAPPINGS = {
     '@vocab': 'string' // enums not in the s4i schema
 }
 
-function processType(type, typeObject, ignoreMissing) {
+function processType(/** @type {string}*/ type, typeObject, ignoreMissing) {
     const prefixedType = type.replace('http://schema.org/', 'schema:').replace('https://schema.openontology.org/', 'oo:');
     if (type === '@vocab' && typeObject['@context'] && (typeObject['@context']['@vocab'].startsWith('s4i:') || typeObject['@context']['@vocab'].startsWith('http://schema.org/'))) {
         type = typeObject['@context']['@vocab'].replace('#', '');
@@ -180,7 +180,7 @@ class TypeDefinition {
 const LANGUAGES = {
     'typescript': {
         typeFile: `schema4i.d.ts`,
-        writeTypes: (typeDefinitions, strict) => {
+        writeTypes: (/** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {boolean}*/ strict) => {
             let output = `
 // tslint:disable: no-empty-interface
 
@@ -225,7 +225,7 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
             return output;
         },
         otherFile: 'schema4i-util.ts',
-        writeOther: (typeDefinitions) => {
+        writeOther: (/** @type {TypeDefinition[]}*/ typeDefinitions) => {
             let output = `
 import * as s4i from './schema4i';
 
@@ -238,12 +238,13 @@ function isType(obj: any, type: string) {
 `;
             for (const typeDefinition of typeDefinitions) {
                 if (!typeDefinition.simpleType) {
+                    const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type));
                     output += `
 /**
  * Checks if the given object is an instance of ${typeDefinition.type}.
  */
 export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.type} {
-    return isType(obj, '${typeDefinition.type}');
+    return isType(obj, '${typeDefinition.type}')${ childTypes.length > 0 ? ' || ' + joinWithLineBreaks(childTypes.map(ct => `is${ct.type}(obj)`), ' || ', ` ||\n    `) : '' };
 }
 
 `;
