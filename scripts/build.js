@@ -74,7 +74,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
             // do some requiredd field checks
             consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context.');
-            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
+            for (const field of ['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
                 }
@@ -94,6 +94,8 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             }
             for (const key in obj.context['@context']) {
                 if (typeof obj.context['@context'][key] === 'object') {
+                    // remove internal field for type generator, jsonld processor does not like this
+                    delete obj.context['@context'][key]['types-hint'];
                     if (obj.context['@context'][key]['@type']) {
                         if (obj.context['@context'][key]['@type'].startsWith('s4i:')) {
                             dependencies.push({
