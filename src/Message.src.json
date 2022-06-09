@@ -17,22 +17,26 @@
         "BCCRecipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Person" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Credentials" }
         ],
         "CCRecipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Person" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Credentials" }
         ],
         "Recipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Person" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Credentials" }
         ],
         "Sender": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Person" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Credentials" }
         ]
     },
     "context": {

@@ -1,0 +1,37 @@
+{
+    "type": "LiabilityDamageRisk",
+    "uri": "http://schema4i.org/LiabilityDamageRisk",
+    "description": "Describes a liability risk of person, object or intangible matter. Liability risks are risks caused by liability for damages done to third parties, e.g. a vehicle driver who causes an accident that results in an injury to another person. The affected thing describes the cause of the liability, e.g. a vehicle, even though the financial damage will usually affect a person or organization responsible for that thing.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Risk" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LiabilityDamageRisk": "s4i:LiabilityDamageRisk"
+        }
+    },
+    "playground": [{
+        "title": "A maximum LiabilityDamageRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/LiabilityDamageRisk.jsonld"
+            ],
+            "@type": "LiabilityDamageRisk",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Müller"
+            }
+        },
+        "context": {}
+    }]
+}

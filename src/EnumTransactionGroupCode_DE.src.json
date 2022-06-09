@@ -27,6 +27,7 @@
       "Akquise": "s4i:EnumTransactionGroupCode#190",
       "eVB-Nummer": "s4i:EnumTransactionGroupCode#200",
       "VU-VM-Abrechnung": "s4i:EnumTransactionGroupCode#210",
+      "Schriftverkehr": "s4i:EnumTransactionGroupCode#899",
       "Sonstiges": "s4i:EnumTransactionGroupCode#999"
     }
   }

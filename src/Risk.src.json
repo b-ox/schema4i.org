@@ -1,0 +1,45 @@
+{
+    "type": "Risk",
+    "uri": "http://schema4i.org/Risk",
+    "description": "Describes an abstract risk to a person, object or intangible matter that is subject to coverage by an insurance product. The risk describes the possible risk in its entirety, but a relevant coverage might only cover parts of it or put limitations on the financial amount covered. Details for this are to be included in the coverage.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#Covers" },
+        { "@id": "http://schema4i.org/LiabilityDamageRisk" },
+        { "@id": "http://schema4i.org/PropertyDamageRisk" },
+        { "@id": "http://schema4i.org/HealthCareCostRisk" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Risk": "s4i:Risk",
+            "Affects": {
+                "@id": "s4i:Insured",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Risk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Risk.jsonld"
+            ],
+            "@type": "Risk",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Müller"
+            }
+        },
+        "context": {}
+    }]
+}
