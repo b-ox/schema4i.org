@@ -22,6 +22,10 @@
         "MemberOf": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/ProgramMembership" }
+        ],
+        "Logo": [
+            { "@id": "http://schema4i.org/MediaObject" },
+            { "@id": "http://schema.org/URL" }
         ]
     },
     "context": {
@@ -67,8 +71,7 @@
                 "@type": "schema:Text"
             },
             "Logo": {
-                "@id": "schema:logo",
-                "@type": "schema:URL"
+                "@id": "schema:logo"
             },
             "MemberOf": {
                 "@id": "schema:memberOf"
