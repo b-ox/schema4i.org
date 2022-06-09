@@ -1,6 +1,6 @@
 {
     "type": "OfferForPurchase",
-    "uri": "http://schema4i.org/Offer",
+    "uri": "http://schema4i.org/OfferForPurchase",
     "description": "An OfferForPurchase represents an Offer to sell something, i.e. an Offer whose BusinessFunction is sell. See Good Relations for background on the underlying concepts.",
     "links": [{
         "url": "http://schema.org/OfferForPurchase",

@@ -42,6 +42,13 @@
                 "@id": "schema:addOn",
                 "@type": "s4i:Offer"
             },
+            "Availability": {
+                "@id": "schema:availability",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumIdemAvailabilityCode#"
+                }
+            },
             "AvailabilityStarts": {
                 "@id": "schema:availabilityStarts",
                 "@type": "schema:DateTime"
@@ -117,6 +124,7 @@
                 "http://purl.org/goodrelations/v1#PayPal"
             ],
             "AddOn": {},
+            "Availability": "InStock",
             "AvailabilityStarts": "2021-01-01T00:00:00",
             "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
             "Category": "Insurance",
