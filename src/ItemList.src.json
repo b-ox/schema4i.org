@@ -11,6 +11,10 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
+        "ItemListOrder": [
+            { "@id": "http://schema.org/ItemListOrderType" },
+            { "@id": "http://schema.org/Text" }
+        ]
     },
     "context": {
         "@context": {
@@ -24,9 +28,7 @@
                 "types-hint": "required multiple"
             },
             "ItemListOrder": {
-                "@id": "schema:itemListOrder",
-                "@type": "schema:ItemListOrderType",
-                "types-hint": "singleton"
+                "@id": "schema:itemListOrder"
             },
             "NumberOfItems": {
                 "@id": "schema:numberOfItems",
