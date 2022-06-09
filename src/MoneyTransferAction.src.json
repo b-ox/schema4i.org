@@ -48,6 +48,7 @@
                 "http://schema4i.org/ContactPoint.jsonld",
                 "http://schema4i.org/Order.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/Vehicle.jsonld",
                 "http://schema4i.org/Product.jsonld"
@@ -245,7 +246,7 @@
                         "Description": "Folge: Folge",
                         "OrderDate": "2018-07-01",
                         "OrderedItem": {
-                            "@type": ["OrderItem", "FinancialProduct"],
+                            "@type": ["OrderItem", "InsuranceProduct"],
                             "Identifier": "04 -0000118",
                             "Name": "Gruppenunfall Aon",
                             "OrderItemNumber": "030",
