@@ -46,7 +46,7 @@
                 "@id": "schema:availability",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "s4i:EnumIdemAvailabilityCode#"
+                    "@vocab": "s4i:EnumItemAvailabilityCode#"
                 }
             },
             "AvailabilityStarts": {
