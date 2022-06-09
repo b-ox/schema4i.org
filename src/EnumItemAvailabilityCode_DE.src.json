@@ -1,6 +1,6 @@
 {
-    "type": "EnumItemAvailabilityCode",
-    "uri": "http://schema4i.org/EnumItemAvailabilityCode",
+    "type": "EnumItemAvailabilityCode_DE",
+    "uri": "http://schema4i.org/EnumItemAvailabilityCode_DE",
     "description": "Die Verfügbarkeit dieses Artikels – zum Beispiel Auf Lager, Nicht auf Lager, Vorbestellung usw.",
     "links": [{
         "url": "http://schema4i.org/EnumItemAvailabilityCode",
