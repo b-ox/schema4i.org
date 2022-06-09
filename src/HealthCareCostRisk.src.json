@@ -1,0 +1,37 @@
+{
+    "type": "HealthCareCostRisk",
+    "uri": "http://schema4i.org/HealthCareCostRisk",
+    "description": "Describes a risk of of financial damage from treatments of health impediments like illness or injury to one or multiple people.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Risk" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HealthCareCostRisk": "s4i:HealthCareCostRisk"
+        }
+    },
+    "playground": [{
+        "title": "A maximum HealthCareCostRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/HealthCareCostRisk.jsonld"
+            ],
+            "@type": "HealthCareCostRisk",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Müller"
+            }
+        },
+        "context": {}
+    }]
+}

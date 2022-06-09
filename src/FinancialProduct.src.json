@@ -7,8 +7,7 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/MotorInsuranceProduct" },
-        { "@id": "http://schema4i.org/LifeInsuranceProduct" }
+        { "@id": "http://schema4i.org/InsuranceProduct" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Service" }

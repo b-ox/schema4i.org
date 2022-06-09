@@ -1,0 +1,43 @@
+{
+    "type": "Granter",
+    "uri": "http://schema4i.org/Granter",
+    "description": "A person, group of people, legal or abstract entity granting something.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/DigitalDocumentPermission#Granter" }
+    ],
+    "base": [],
+    "multipletypes": {
+        "Granter": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/UserAccount" },
+            { "@id": "http://schema4i.org/Credentials" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Granter": {
+                "@id": "s4i:Granter"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Granter",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Person"
+            ],
+            "Granter": {
+                "@type": "Person",
+                "Name": "Muster"
+            }
+        },
+        "context": {}
+    }]
+}

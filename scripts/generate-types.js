@@ -44,7 +44,7 @@ const PRIMITIVE_TYPE_MAPPINGS = {
     '@vocab': 'string' // enums not in the s4i schema
 }
 
-function processType(type, typeObject, ignoreMissing) {
+function processType(/** @type {string}*/ type, typeObject, ignoreMissing) {
     const prefixedType = type.replace('http://schema.org/', 'schema:').replace('https://schema.openontology.org/', 'oo:');
     if (type === '@vocab' && typeObject['@context'] && (typeObject['@context']['@vocab'].startsWith('s4i:') || typeObject['@context']['@vocab'].startsWith('http://schema.org/'))) {
         type = typeObject['@context']['@vocab'].replace('#', '');
@@ -180,7 +180,7 @@ class TypeDefinition {
 const LANGUAGES = {
     'typescript': {
         typeFile: `schema4i.d.ts`,
-        writeTypes: (typeDefinitions, strict) => {
+        writeTypes: (/** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {boolean}*/ strict) => {
             let output = `
 // tslint:disable: no-empty-interface
 
@@ -225,21 +225,26 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
             return output;
         },
         otherFile: 'schema4i-util.ts',
-        writeOther: (typeDefinitions) => {
+        writeOther: (/** @type {TypeDefinition[]}*/ typeDefinitions) => {
             let output = `
 import * as s4i from './schema4i';
 
 const ENUMS = new Map<string, Map<string, string>>();
 
+function isType(obj: any, type: string) {
+    return typeof obj === 'object' && (Array.isArray(obj["@type"]) ? obj["@type"].indexOf(type) > -1 : obj["@type"] === type);
+}
+
 `;
             for (const typeDefinition of typeDefinitions) {
                 if (!typeDefinition.simpleType) {
+                    const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type));
                     output += `
 /**
  * Checks if the given object is an instance of ${typeDefinition.type}.
  */
 export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.type} {
-    return typeof obj === 'object' && obj["@type"] === '${typeDefinition.type}';
+    return isType(obj, '${typeDefinition.type}')${ childTypes.length > 0 ? ' || ' + joinWithLineBreaks(childTypes.map(ct => `is${ct.type}(obj)`), ' || ', ` ||\n    `) : '' };
 }
 
 `;
@@ -249,10 +254,13 @@ export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.
 
 `;
             const enumDefinitions = typeDefinitions.filter(td => td.enumValues);
+            let enumCount = 0;
             for (const enumDefinition of enumDefinitions) {
+                const count = enumCount++;
                 output += `
-ENUMS.set('${enumDefinition.type}', new Map());
-${Object.entries(enumDefinition.enumValues).map(([key, value]) => `ENUMS.get('${enumDefinition.type}').set('${key}', '${value.replace(/'/g, `\\'`)}');`).join('\n')}
+const E${count} = new Map();
+ENUMS.set('${enumDefinition.type}', E${count});
+${Object.entries(enumDefinition.enumValues).map(([key, value]) => `E${count}.set('${key}', '${value.replace(/'/g, `\\'`)}');`).join('\n')}
 `;
             }
             const enumTypes = enumDefinitions.filter(td => !I18N_SUFFIXES.some(suffix => td.type.endsWith(suffix))).map(td => td.type);

@@ -1,7 +1,7 @@
 {
     "type": "Order",
     "uri": "http://schema4i.org/Order",
-    "description": "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer. In the insurance industry this type is used to transfer data of an insurance contract. Adopting the basic principles of Schema.org an insurance contract is an Order with Order.OrderedItem referencing a FinancialProduct that is a Service where Service.Offers references different Offer objects that in the insurance context are different coverages (Coverage).",
+    "description": "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer. In the insurance industry this type is used to transfer data of an insurance contract. Adopting the basic principles of Schema.org an insurance contract is an Order with Order.OrderedItem referencing an InsuranceProduct that is a Service where Service.Offers references different Offer objects that in the insurance context are different coverages (Coverage).",
     "links": [{
         "url": "http://schema.org/Order",
         "description": "Original Schema.org type"

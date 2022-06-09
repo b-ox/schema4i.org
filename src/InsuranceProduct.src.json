@@ -1,0 +1,112 @@
+{
+    "type": "InsuranceProduct",
+    "uri": "http://schema4i.org/InsuranceProduct",
+    "description": "An insurance product provided to consumers and businesses by insurance companies or similar providers. In the insurance industry an insurance is e. g. a MotorInsuranceProduct that is a specialized InsuranceProduct that is a Service. An insurance company provides a coverage for damages to an object or person. In the sense of Schema.org this is the Offer of the provider. If somebody confirmes this Offer by an Order, then an insurance contract is established. Usually, the offers included in an insurance product are coverages.",
+    "links": [{
+        "url": "http://schema.org/InsuranceProduct",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/MotorInsuranceProduct" },
+        { "@id": "http://schema4i.org/LifeInsuranceProduct" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/FinancialProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://schema.openontology.org/",
+            "InsuranceProduct": "schema:InsuranceProduct",
+            "Insured": {
+                "@id": "s4i:Insured",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic InsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "InsuranceProduct",
+            "Category": "RENTE",
+            "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
+            "Identifier": "1047.IUL.Selbststaendige",
+            "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
+            "Name": "Rente für Selbstständige",
+            "Provider": {
+                "@type": "Organization",
+                "Identifier": "1047",
+                "Name": "IDEAL"
+            },
+            "SubjectOf": {
+                "@type": "CreativeWork",
+                "Keywords": "Selbstständig, Freiberuflich, Kleingewerbe, Unternehmer, Versicherungskonto, Zinsen, Flexibel, Rücklagen, Universal, Life"
+            },
+            "Offers": [{
+                "@type": "Coverage",
+                "Deductible": 300
+            }]
+        },
+        "context": {}
+    }, {
+        "title": "A InsuranceProduct with different price components",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/CompoundPriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "InsuranceProduct",
+            "Category": "RENTE",
+            "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
+            "Identifier": "1047.IUL.Selbststaendige",
+            "Package": "Klassik Exklusiv",
+            "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
+            "Name": "Rente für Selbstständige",
+            "Provider": {
+                "@type": "Organization",
+                "Identifier": "1047",
+                "Name": "IDEAL"
+            },
+            "PaymentInterval": 7,
+            "Price": 153.21,
+            "PriceCurrency": "EUR",
+            "PriceSpecification": {
+                "@type": "CompoundPriceSpecification",
+                "PriceComponent": [{
+                    "@type": "UnitPriceSpecification",
+                    "PriceType": "01",
+                    "Price": 153.21,
+                    "PriceCurrency": "EUR",
+                    "Identifier": "16111274782378904"
+                }, {
+                    "@type": "UnitPriceSpecification",
+                    "PriceType": "02",
+                    "Price": 113.21,
+                    "PriceCurrency": "EUR",
+                    "Identifier": "16111274282323409"
+                }]
+            }
+        },
+        "context": {}
+    }]
+}
