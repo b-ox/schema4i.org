@@ -28,6 +28,9 @@
         ],
         "HasPart": [
             { "@id": "http://schema4i.org/CreativeWork" }
+        ],
+        "Offers": [
+            { "@id": "http://schema4i.org/Offer" }
         ]
     },
     "context": {
@@ -81,6 +84,10 @@
                 "@id": "schema:license",
                 "@type": "s4i:CreativeWork"
             },
+            "Offers": {
+                "@id": "schema:offers",
+                "@type": "s4i:Offer"
+            },
             "Text": {
                 "@id": "schema:text",
                 "@type": "schema:Text"
@@ -110,6 +117,7 @@
             "IsBasedOn": "http://domain.tld/SourceFile.json",
             "Keywords": "Posteingang,Wichtig",
             "License": {},
+            "Offers": {},
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
             "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
         },
