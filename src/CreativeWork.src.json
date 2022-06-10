@@ -28,6 +28,9 @@
         ],
         "HasPart": [
             { "@id": "http://schema4i.org/CreativeWork" }
+        ],
+        "Offers": [
+            { "@id": "http://schema4i.org/Offer" }
         ]
     },
     "context": {
