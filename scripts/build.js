@@ -12,7 +12,7 @@ const fromPath = "src/";
 let typeIndex = {
     name: "Schema4i.org",
     description: "Schema for insurances (S4i)",
-    release: 0.90,
+    release: 0.91,
     modified: new Date(),
     objects: 0,
     enumerations: 0,
@@ -74,7 +74,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
             // do some requiredd field checks
             consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context.');
-            for (const field of ['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
+            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
                 }

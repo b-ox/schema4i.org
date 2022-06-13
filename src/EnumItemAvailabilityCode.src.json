@@ -1,0 +1,30 @@
+{
+    "type": "EnumItemAvailabilityCode",
+    "uri": "http://schema4i.org/EnumItemAvailabilityCode",
+    "description": "The availability of this item—for example In stock, Out of stock, Pre-order, etc. ",
+    "links": [{
+        "url": "http://schema4i.org/EnumItemAvailabilityCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Offer#Availablility" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Back order": "s4i:EnumItemAvailabilityCode#BackOrder",
+            "Discontinued": "s4i:EnumItemAvailabilityCode#Discontinued",
+            "In stock": "s4i:EnumItemAvailabilityCode#InStock",
+            "In store only": "s4i:EnumItemAvailabilityCode#InStoreOnly",
+            "Limited availability": "s4i:EnumItemAvailabilityCode#LimitedAvailability",
+            "Online only": "s4i:EnumItemAvailabilityCode#OnlineOnly",
+            "Out of stock": "s4i:EnumItemAvailabilityCode#OutOfStock",
+            "Pre order": "s4i:EnumItemAvailabilityCode#PreOrder",
+            "Presale": "s4i:EnumItemAvailabilityCode#PreSale",
+            "Sold out": "s4i:EnumItemAvailabilityCode#SoldOut"
+        }
+    }
+}

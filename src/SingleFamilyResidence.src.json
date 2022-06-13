@@ -1,0 +1,31 @@
+{
+    "type": "SingleFamilyResidence",
+    "uri": "http://schema4i.org/SingleFamilyResidence",
+    "description": "Residence type: Single-family home.",
+    "links": [{
+        "url": "http://schema.org/SingleFamilyResidence",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/House" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SingleFamilyResidence": "schema:SingleFamilyResidence"
+        }
+    },
+    "playground": [{
+        "title": "A maximum SingleFamilyResidence",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "SingleFamilyResidence"
+        },
+        "context": {}
+    }]
+}
