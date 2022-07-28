@@ -14,7 +14,7 @@
         { "@id": "http://schema4i.org/LocationFeatureSpecification" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/StructuredValue" }
     ],
     "multipletypes": {
         "Value": [
