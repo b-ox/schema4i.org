@@ -53,6 +53,10 @@
                 "@id": "schema:availabilityStarts",
                 "@type": "schema:DateTime"
             },
+            "AvailabilityEnds": {
+                "@id": "schema:availabilityEnds",
+                "@type": "schema:DateTime"
+            },
             "BusinessFunction": {
                 "@id": "schema:businessFunction",
                 "@type": "schema:BusinessFunction"
@@ -126,6 +130,7 @@
             "AddOn": {},
             "Availability": "InStock",
             "AvailabilityStarts": "2021-01-01T00:00:00",
+            "AvailabilityEnds": "2021-01-15T00:00:00",
             "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
             "Category": "Insurance",
             "ItemOffered": {},
