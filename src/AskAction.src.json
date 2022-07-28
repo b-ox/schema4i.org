@@ -1,0 +1,77 @@
+{
+    "type": "AskAction",
+    "uri": "http://schema4i.org/AskAction",
+    "description": "The act of posing a question / favor to someone. In the API this is used to deliver structural descriptions for questions to the client that the user should answer, and in return to pass on the answers from the client to the API.",
+    "links": [{
+        "url": "http://schema.org/AskAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CommunicateAction" }
+    ],
+    "multipletypes": {
+        "Question": [
+            { "@id": "http://schema4i.org/Question" },
+            { "@id": "http://schema4i.org/ItemList" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AskAction": "schema:AskAction",
+            "Question": {
+                "@id": "schema:question"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An AskAction containing a question.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/AskAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Question.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "AskAction",
+            "ActionStatus": "ActiveActionStatus",
+            "Question": {
+                "@type": "Question",
+                "@id": "https://api.b-ox.de/question/4711",
+                "Description": "How many?"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "An AskAction response containing the answer to a question.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/AskAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Question.jsonld",
+                "http://schema4i.org/Answer.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "AskAction",
+            "ActionStatus": "CompletedActionStatus",
+            "Question": {
+                "@type": "Question",
+                "@id": "https://api.b-ox.de/question/4711",
+                "Description": "How many?",
+                "AcceptedAnswer": {
+                    "@type": "Answer",
+                    "Text": "two"
+                }
+            }
+        },
+        "context": {}
+    }]
+}
