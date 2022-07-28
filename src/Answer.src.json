@@ -19,7 +19,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Answer": "schema:Answer"
+            "Answer": "schema:Answer",
+            "Content": {
+                "@id": "s4i:Content",
+                "@type": "s4i:Content"
+            }
         }
     },
     "playground": [{
