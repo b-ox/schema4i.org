@@ -1,0 +1,35 @@
+{
+    "type": "Content",
+    "uri": "http://schema4i.org/Content",
+    "description": "The content of the answer to a question, either as a textual description or a StructuredValue.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Answer#Content"
+    }],
+    "base": [],
+    "multipletypes": {
+        "Content": [
+            { "@id": "http://schema4i.org/StructuredValue" },
+            { "@id": "http://schema.org/Text" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Content": {
+                "@id": "s4i:Content"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Content",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Content": "This is a text answer"
+        },
+        "context": {}
+    }]
+}

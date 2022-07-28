@@ -7,6 +7,7 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
+        { "@id": "http://schema4i.org/AskAction" },
         { "@id": "http://schema4i.org/AssessAction" },
         { "@id": "http://schema4i.org/ConsumeAction" },
         { "@id": "http://schema4i.org/CreateAction" },
@@ -15,6 +16,7 @@
         { "@id": "http://schema4i.org/MoneyTransferAction" },
         { "@id": "http://schema4i.org/RegisterAction" },
         { "@id": "http://schema4i.org/SearchAction" },
+        { "@id": "http://schema4i.org/SendAction" },
         { "@id": "http://schema4i.org/SupportAction" },
         { "@id": "http://schema4i.org/Thing#PotentialAction" },
         { "@id": "http://schema4i.org/UpdateAction" }

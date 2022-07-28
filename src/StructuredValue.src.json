@@ -1,0 +1,43 @@
+{
+    "type": "StructuredValue",
+    "uri": "http://schema4i.org/StructuredValue",
+    "description": "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.",
+    "links": [{
+        "url": "http://schema.org/StructuredValue",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Content" },
+        { "@id": "http://schema4i.org/ContactPoint" },
+        { "@id": "http://schema4i.org/InteractionCounter" },
+        { "@id": "http://schema4i.org/MonetaryAmount" },
+        { "@id": "http://schema4i.org/PriceSpecification" },
+        { "@id": "http://schema4i.org/PropertyValue" },
+        { "@id": "http://schema4i.org/QuantitativeValue" },
+        { "@id": "http://schema4i.org/TypeAndQuantityNode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "StructuredValue": "schema:StructuredValue"
+        }
+    },
+    "playground": [{
+        "title": "A StructuredValue",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld"
+            ],
+            "@type": "StructuredValue"
+        },
+        "context": {}
+    }]
+}
