@@ -1,7 +1,7 @@
 {
-    "type": "LifeInsuranceProduct",
-    "uri": "http://schema4i.org/LifeInsuranceProduct",
-    "description": "A life insurance product like a pension.",
+    "type": "LiabilityInsuranceProduct",
+    "uri": "http://schema4i.org/LiabilityInsuranceProduct",
+    "description": "An insurance product protecting against personal or commercial liability risks.",
     "links": [{
         "url": "https://openontology.org",
         "description": "OpenOntology.org"
@@ -16,15 +16,15 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "LifeInsuranceProduct": "s4i:LifeInsuranceProduct"
+            "LiabilityInsuranceProduct": "s4i:LiabilityInsuranceProduct"
         }
     },
     "playground": [{
-        "title": "A real LifeInsuranceProduct",
+        "title": "A real LiabilityInsuranceProduct",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/LifeInsuranceProduct.jsonld",
+                "http://schema4i.org/LiabilityInsuranceProduct.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
                 "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
@@ -32,7 +32,7 @@
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld"
             ],
-            "@type": "LifeInsuranceProduct",
+            "@type": "LiabilityInsuranceProduct",
             "Offers": []
         },
         "context": {}
