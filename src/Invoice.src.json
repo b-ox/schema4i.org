@@ -62,7 +62,7 @@
             },
             "PaymentMethod": {
                 "@id": "schema:paymentMethod",
-                "@type": "schema:PaymentMethod"
+                "@type": "s4i:PaymentMethod"
             },
             "PaymentStatus": {
                 "@id": "schema:paymentStatus",

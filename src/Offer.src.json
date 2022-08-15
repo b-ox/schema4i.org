@@ -36,7 +36,7 @@
             "Offer": "schema:Offer",
             "AcceptedPaymentMethod": {
                 "@id": "schema:acceptedPaymentMethod",
-                "@type": "schema:PaymentMethod"
+                "@type": "s4i:PaymentMethod"
             },
             "AddOn": {
                 "@id": "schema:addOn",
