@@ -18,25 +18,29 @@
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Credentials" }
+            { "@id": "http://schema4i.org/Credentials" },
+            { "@id": "http://schema4i.org/UserAccount" }
         ],
         "CCRecipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Credentials" }
+            { "@id": "http://schema4i.org/Credentials" },
+            { "@id": "http://schema4i.org/UserAccount" }
         ],
         "Recipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Credentials" }
+            { "@id": "http://schema4i.org/Credentials" },
+            { "@id": "http://schema4i.org/UserAccount" }
         ],
         "Sender": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Credentials" }
+            { "@id": "http://schema4i.org/Credentials" },
+            { "@id": "http://schema4i.org/UserAccount" }
         ]
     },
     "context": {
