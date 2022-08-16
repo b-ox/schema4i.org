@@ -98,6 +98,10 @@
             "AcceptedOffer": {
                 "@id": "schema:acceptedOffer",
                 "@type": "s4i:Offer"
+            },
+            "PaymentMethod": {
+                "@id": "schema:paymentMethod",
+                "@type": "s4i:PaymentMethod"
             }
         }
     },
