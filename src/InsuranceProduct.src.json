@@ -2,10 +2,7 @@
     "type": "InsuranceProduct",
     "uri": "http://schema4i.org/InsuranceProduct",
     "description": "An insurance product provided to consumers and businesses by insurance companies or similar providers. In the insurance industry an insurance is e. g. a MotorInsuranceProduct that is a specialized InsuranceProduct that is a Service. An insurance company provides a coverage for damages to an object or person. In the sense of Schema.org this is the Offer of the provider. If somebody confirmes this Offer by an Order, then an insurance contract is established. Usually, the offers included in an insurance product are coverages.",
-    "links": [{
-        "url": "http://schema.org/InsuranceProduct",
-        "description": "Original Schema.org type"
-    }],
+    "links": [],
     "parents": [
         { "@id": "http://schema4i.org/MotorInsuranceProduct" },
         { "@id": "http://schema4i.org/LifeInsuranceProduct" }
