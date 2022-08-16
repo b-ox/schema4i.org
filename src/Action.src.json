@@ -17,7 +17,8 @@
         { "@id": "http://schema4i.org/SearchAction" },
         { "@id": "http://schema4i.org/SupportAction" },
         { "@id": "http://schema4i.org/Thing#PotentialAction" },
-        { "@id": "http://schema4i.org/UpdateAction" }
+        { "@id": "http://schema4i.org/UpdateAction" },
+        { "@id": "http://schema4i.org/InteractAction" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }

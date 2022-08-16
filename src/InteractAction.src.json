@@ -1,0 +1,35 @@
+{
+    "type": "InteractAction",
+    "uri": "http://schema4i.org/InteractAction",
+    "description": "The act of interacting with another person or organization.",
+    "links": [{
+        "url": "http://schema.org/InteractAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "InteractAction": "schema:InteractAction"
+        }
+    },
+    "playground": [{
+        "title": "A minimum InteractAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/InteractAction.jsonld"
+            ],
+            "@type": "InteractAction"
+        },
+        "context": {}
+    }]
+}
