@@ -1,0 +1,53 @@
+{
+    "type": "SendAction",
+    "uri": "http://schema4i.org/SendAction",
+    "description": "The act of physically/electronically dispatching an object for transfer from an origin to a destination. The object to be sent is described in `Object`.",
+    "links": [{
+        "url": "http://schema.org/SendAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {
+        "Recipient": [
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SendAction": "schema:SendAction",
+            "Recipient": {
+                "@id": "schema:recipient"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A SendAction referencing a Message.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/SendAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "SendAction",
+            "Object": [{
+                "@id": "https://api.b-ox.de/messages/4711",
+                "@type": "Message",
+                "Identifier": "4711"
+            }]
+        },
+        "context": {}
+    }]
+}

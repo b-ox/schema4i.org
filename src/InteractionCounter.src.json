@@ -10,7 +10,7 @@
         { "@id": "http://schema4i.org/CreativeWork#InteractionStatistic" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/StructuredValue" }
     ],
     "multipletypes": {},
     "context": {
