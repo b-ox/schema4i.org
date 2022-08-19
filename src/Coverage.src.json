@@ -4,6 +4,7 @@
     "description": "Provides insurance cover for damage to an object or person.",
     "links": [],
     "parents": [
+        { "@id": "http://schema4i.org/LiabilityCoverage" },
         { "@id": "http://schema4i.org/MotorInsuranceLiabilityCoverage" },
         { "@id": "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage" },
         { "@id": "http://schema4i.org/MotorInsurancePartialComprehensiveCoverage" },
@@ -23,6 +24,10 @@
             "Deductible": {
                 "@id": "oo:motor/product/deductible",
                 "@type": "oo:definitions/money"
+            },
+            "SumInsured": {
+                "@id": "s4i:SumInsured",
+                "@type": "http://schema4i.org/SumInsured"
             },
             "Covers": {
                 "@id": "s4i:Risk",

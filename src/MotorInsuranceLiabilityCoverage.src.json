@@ -12,7 +12,7 @@
     ],
     "multipletypes": {
         "SumInsured": [
-            { "@id": "https://schema.openontology.org/definitions/money" },
+            { "@id": "http://schema4i.org/SumInsured" },
             { "@id": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode" }
         ]
     },
@@ -59,7 +59,11 @@
             "Deductible": 0.00,
             "NoClaimsDiscount": 41,
             "NoClaimsDiscountLevel": "7",
-            "SumInsured": 15000000
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 15000000,
+                "Currency": "EUR"
+            }
         },
         "context": {}
     }]

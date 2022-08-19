@@ -1,0 +1,39 @@
+{
+    "type": "SumInsured",
+    "uri": "http://schema4i.org/SumInsured",
+    "description": "A monetary amount describing the maximum amount of damage or cost covered by an insurance product. This might be a `MonetaryAmount` or a textual description of more complex coverage or a predefined Enum.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/LiabilityCoverage#SumInsured"
+    }],
+    "base": [],
+    "multipletypes": {
+        "SumInsured": [
+            {"@id": "http://schema4i.org/MonetaryAmount"},
+            {"@id": "http://schema.org/Text"}
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SumInsured": {
+                "@id": "s4i:SumInsured"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample SumInsured",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 1000000
+            }
+        },
+        "context": {}
+    }]
+}
