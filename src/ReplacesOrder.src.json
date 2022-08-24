@@ -1,0 +1,40 @@
+{
+    "type": "ReplacesOrder",
+    "uri": "http://schema4i.org/ReplacesOrder",
+    "description": "An ReplacesOrder replaces an Order that e. g. was cancelled. In the insurance industry its typically used to transmit information about a previous insurance contract.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Order#ReplacesOrder" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ReplacesOrder": {
+                "@id": "s4i:ReplacesOrder",
+                "@type": "s4i:Order"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample Order that replaces another Order using ReplacesOrder",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Order",
+            "ReplacesOrder": {
+                "@type": "Order",
+                "ConfirmationNumber": "AZ-4711",
+                "Provider": {
+                    "@type": "Organization",
+                    "Identifier": 5312,
+                    "Name": "ALLIANZ Versicherung AG"
+                }
+            }
+        },
+        "context": {}
+    }]
+}
