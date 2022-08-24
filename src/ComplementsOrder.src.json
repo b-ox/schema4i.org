@@ -1,0 +1,40 @@
+{
+    "type": "ComplementsOrder",
+    "uri": "http://schema4i.org/ComplementsOrder",
+    "description": "An ComplementsOrder is an another existing Order that is complemented by a (new) Order. In the insurance industry its typically used to transmit information about an existing insurance contract that is not cancelled but complemented by another new insurance contract.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Order#ComplementsOrder" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ComplementsOrder": {
+                "@id": "s4i:ComplementsOrder",
+                "@type": "s4i:Order"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample Order that complements another Order using ComplementsOrder",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Order",
+            "ComplementsOrder": {
+                "@type": "Order",
+                "ConfirmationNumber": "AZ-4711",
+                "Provider": {
+                    "@type": "Organization",
+                    "Identifier": 5312,
+                    "Name": "ALLIANZ Versicherung AG"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

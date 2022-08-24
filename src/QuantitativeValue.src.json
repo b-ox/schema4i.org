@@ -16,7 +16,8 @@
     "multipletypes": {
         "Value": [
             { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema.org/Number" }
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema.org/StructuredValue" }
         ]
     },
     "context": {
@@ -55,6 +56,24 @@
             "UnitCode": "KGM",
             "UnitText": "Kilogramm",
             "Value": 100
+        },
+        "context": {}
+    }, {
+        "title": "A QuantitativeValue as MoneytaryAmount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "@type": "QuantitativeValue",
+            "UnitCode": "M4",
+            "UnitText": "Geldbetrag",
+            "Value": {
+                "@type": "MonetaryAmount",
+                "Value": 100,
+                "Currency": "EUR"
+            }
         },
         "context": {}
     }]

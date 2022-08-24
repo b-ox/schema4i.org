@@ -20,6 +20,10 @@
         "Customer": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
+        ],
+        "Payer": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
         ]
     },
     "context": {
@@ -101,7 +105,18 @@
             },
             "PaymentMethod": {
                 "@id": "schema:paymentMethod",
-                "@type": "s4i:PaymentMethod"
+                "@type": "schema:PaymentMethod"
+            },
+            "Payer": {
+                "@id": "s4i:Payer"
+            },
+            "ReplacesOrder": {
+                "@id": "s4i:ReplacesOrder",
+                "@type": "s4i:Order"
+            },
+            "ComplementsOrder": {
+                "@id": "s4i:ComplementsOrder",
+                "@type": "s4i:Order"
             }
         }
     },
@@ -127,7 +142,12 @@
             "OrderStatus": "1",
             "PartOfInvoice": {},
             "TerminationDate": "2021-01-01",
-            "TerminationCode": "01"
+            "TerminationCode": "01",
+            "AcceptedOffer": {},
+            "PaymentMethod": "http://purl.org/goodrelations/v1#DirectDebit",
+            "Payer": {},
+            "ReplacesOrder": {},
+            "ComplementsOrder": {}
         },
         "context": {}
     }]
