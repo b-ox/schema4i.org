@@ -1,0 +1,52 @@
+{
+    "type": "Payer",
+    "uri": "http://schema4i.org/Payer",
+    "description": "The Payer is someone who is responsible to pay the price for a product. Usually this is the Customer itself. In that case the Customer is implicitly the payer and you do not have to provider it explicitly. But in some cases the payer might be another Person or Organisation. In this case you need to transmit the Payer.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Order#Payer" }
+    ],
+    "base": [],
+    "multipletypes": {
+        "Payer": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Payer": {
+                "@id": "s4i:Payer"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample Payer with BankAccount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Payer": {
+                "@type": "Payer",
+                "Name": "Max Muster",
+                "BankAccount": {
+                    "@type": "BankAcount",
+                    "BIC": "PBNKDEFF",
+                    "IBAN": "DE41500105170123456789",
+                    "Name": "Max Mustermann",
+                    "Provider": {
+                        "@type": "Organization",
+                        "Name": "Postbank",
+                        "Address": {
+                            "@type": "PostalAddress",
+                            "AddressLocality": "Düsseldorf"
+                        }
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}
