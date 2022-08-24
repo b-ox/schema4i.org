@@ -83,6 +83,10 @@
             "Telephone": {
                 "@id": "schema:telephone",
                 "@type": "schema:Text"
+            },
+            "YearlyRevenue": {
+                "@id": "schema:yearlyRevenue",
+                "@type": "s4i:QuantitativeValue"
             }
         }
     },
@@ -107,7 +111,8 @@
             "Logo": "https://www.b-tix.de/wp-content/uploads/2015/04/b-tix_logo_weiss_textlos_klein.png",
             "MemberOf": {},
             "TaxID": "DE123123123",
-            "Telephone": "0049 211 41608 400"
+            "Telephone": "0049 211 41608 400",
+            "YearlyRevenue": {}
         },
         "context": {}
     }, {
@@ -132,7 +137,17 @@
             "LegalName": "b-tix GmbH",
             "Name": "b-tix",
             "Logo": "https://www.b-tix.de/wp-content/uploads/2015/04/b-tix_logo_weiss_textlos_klein.png",
-            "Telephone": "0049 211 41608 400"
+            "Telephone": "0049 211 41608 400",
+            "YearlyRevenue": {
+                "@type": "QuantitativeValue",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Value": 100000,
+                    "Currency": "EUR"
+                },
+                "UnitCode": "M4",
+                "UnitText": "Geldwert"
+            }
         },
         "context": {}
     }]
