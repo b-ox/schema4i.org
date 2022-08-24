@@ -177,16 +177,16 @@
                 },
                 "OrderNumber": "Antragsnr.4711/1",
                 "OrderStatus": "1",
-                "PartOfInvoice": {
-                    "@type": "Invoice",
-                    "PaymentStatus": "PaymentPastDue",
-                    "PaymentMethod": "http://purl.org/goodrelations/v1#DirectDebithttp://purl.org/goodrelations/v1#DirectDebit",
-                    "TotalPaymentDue": {
-                        "@type": "CompoundPriceSpecification",
-                        "Price": 134.00,
-                        "PriceCurrency": "EUR",
-                        "PriceComponent": {
-                            "@type": "UnitPriceSpecification"
+                "Payer": {
+                    "@type": "Person",
+                    "GivenName": "Rita",
+                    "Name": "Muster",
+                    "BankAccount": {
+                        "@type": "BankAccount",
+                        "IBAN": "DE...",
+                        "Provider": {
+                            "@type": "Organization",
+                            "Name": "Postbank"
                         }
                     }
                 }
