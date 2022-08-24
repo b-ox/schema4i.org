@@ -17,7 +17,7 @@
         "Value": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema.org/Number" },
-            { "@id": "http://schema.org/StructuredValue" }
+            { "@id": "http://schema4i.org/StructuredValue" }
         ]
     },
     "context": {
