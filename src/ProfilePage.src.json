@@ -18,7 +18,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "ProfilePage": "s4i:ProfilePage"
+            "ProfilePage": "s4i:ProfilePage",
+            "Reviews": {
+                "@id": "schema:review",
+                "@type": "s4i:Review"
+            }
         }
     },
     "playground": [{
@@ -44,6 +48,45 @@
                     "PostalCode": "40233"
                 }
             }
+        },
+        "context": {}
+    }, {
+        "title": "A ProfilePage with reviews to verify profile data",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/ProfilePage",
+                "http://schema4i.org/Person",
+                "http://schema4i.org/PostalAddress"
+            ],
+            "@type": "ProfilePage",
+            "About": {
+                "@id": "#profile",
+                "@type": "Person",
+                "Name": "Regina Muster",
+                "BirthDate": "1980-01-01",
+                "Email": "rmuster@mail.de",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Musterstr. 5",
+                    "AddressLocality": "Düsseldorf",
+                    "PostalCode": "40233"
+                }
+            },
+            "Reviews": [{
+                "@type": "Review",
+                "ItemReviewed": {
+                    "@type": "Person",
+                    "@id": "#profile"
+                },
+                "ReviewRating": {
+                    "@type": "Rating",
+                    "BestRating": 1,
+                    "WorstRating": 0,
+                    "RatingValue": 1
+                }
+            }]
         },
         "context": {}
     }]

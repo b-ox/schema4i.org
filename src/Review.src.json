@@ -7,7 +7,8 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/ClaimReview" }
+        { "@id": "http://schema4i.org/ClaimReview" },
+        { "@id": "http://schema4i.org/ProfilePage#Reviews" }
     ],
     "base": [
         { "@id": "http://schema4i.org/CreativeWork" }
@@ -26,6 +27,10 @@
             "ReviewBody": {
                 "@id": "schema:reviewBody",
                 "@type": "schema:Text"
+            },
+            "ReviewRating": {
+                "@id": "schema:reviewRating",
+                "@type": "s4i:Rating"
             }
         }
     },
@@ -40,7 +45,49 @@
             ],
             "@type": "Review",
             "ItemReviewed": {},
-            "ReviewBody": "The actual body of the review."
+            "ReviewBody": "The actual body of the review.",
+            "ReviewRating": {}
+        },
+        "context": {}
+    }, {
+        "title": "A reviews ProfilePage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/ProfilePage",
+                "http://schema4i.org/Person",
+                "http://schema4i.org/PostalAddress",
+                "http://schema4i.org/Review.jsonld",
+                "http://schema4i.org/Rating.jsonld"
+            ],
+            "@type": "ProfilePage",
+            "About": {
+                "@id": "#profile",
+                "@type": "Person",
+                "Name": "Regina Muster",
+                "Email": "rmuster@mail.de",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Musterstr. 5",
+                    "AddressLocality": "Düsseldorf",
+                    "PostalCode": "40233"
+                }
+            },
+            "Reviews": [{
+                "@type": "Review",
+                "ItemReviewed": {
+                    "@id": "#profile",
+                    "@type": "Person",
+                    "Email": "rmuster@mail.de"
+                },
+                "ReviewRating": {
+                    "@type": "Rating",
+                    "BestRating": 1,
+                    "WorstRating": 0,
+                    "RatingValue": 1
+                }
+            }]
         },
         "context": {}
     }]
