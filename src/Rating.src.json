@@ -1,0 +1,52 @@
+{
+    "type": "Rating",
+    "uri": "http://schema4i.org/Rating",
+    "description": "A rating is an evaluation on a numeric scale, such as 1 to 5 stars. It can be also used to verify profile data such as email addresses or phone numbers. Also see Review and ProfilePage.",
+    "links": [{
+        "url": "http://schema.org/Rating",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/ProfilePage#Reviews" },
+        { "@id": "http://schema4i.org/Review#ReviewRating" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Rating": "schema:Rating",
+            "BestRating": {
+                "@id": "schema:bestRating",
+                "@type": "schema:Number"
+            },
+            "WorstRating": {
+                "@id": "schema:bestRating",
+                "@type": "schema:Number"
+            },
+            "RatingValue": {
+                "@id": "schema:bestRating",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Rating",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Rating.jsonld"
+            ],
+            "@type": "Rating",
+            "BestRating": 1,
+            "WorstRating": 0,
+            "RatingValue": 1
+        },
+        "context": {}
+    }]
+}
