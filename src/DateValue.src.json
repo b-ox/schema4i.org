@@ -1,7 +1,7 @@
 {
     "type": "DateValue",
     "uri": "http://schema4i.org/DateValue",
-    "description": "A date-value pair, e.g. representing a date or datetime. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.",
+    "description": "A date value  representing a date or datetime. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.",
     "links": [{
         "url": "http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
         "description": "UN/CEFACT UnitCode"
