@@ -10,7 +10,7 @@
         { "@id": "http://schema4i.org/Answer#Content" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/PropertyValue" }
+        { "@id": "http://schema4i.org/StructuredValue" }
     ],
     "multipletypes": {
         "MaxValue": [
