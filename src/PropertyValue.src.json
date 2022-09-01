@@ -10,6 +10,7 @@
         "description": "UN/CEFACT UnitCode"
     }],
     "parents": [
+        { "@id": "http://schema4i.org/DateValue" },
         { "@id": "http://schema4i.org/ItemList#ItemListElement" },
         { "@id": "http://schema4i.org/LocationFeatureSpecification" }
     ],

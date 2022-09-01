@@ -1,0 +1,73 @@
+{
+    "type": "DateValue",
+    "uri": "http://schema4i.org/DateValue",
+    "description": "A date-value pair, e.g. representing a date or datetime. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.",
+    "links": [{
+        "url": "http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
+        "description": "UN/CEFACT UnitCode"
+    }],
+    "parents": [
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/PropertyValue" }
+    ],
+    "multipletypes": {
+        "MaxValue": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ],
+        "MinValue": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ],
+        "Value": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DateValue": "schema:DateValue",
+            "MaxValue": {
+                "@id": "schema:maxValue"
+            },
+            "MinValue": {
+                "@id": "schema:minValue"
+            },
+            "UnitCode": {
+                "@id": "schema:unitCode",
+                "@type": "schema:Text"
+            },
+            "UnitText": {
+                "@id": "schema:unitText",
+                "@type": "schema:Text"
+            },
+            "Value": {
+                "@id": "schema:value"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic DateValue",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DateValue.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Date"
+                    }
+                }
+            ],
+            "@type": "DateValue",
+            "Name": "Geburtsdatum",
+            "Value": "1980-03-23"
+        },
+        "context": {}
+    }]
+}
