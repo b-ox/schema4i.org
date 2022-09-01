@@ -20,6 +20,14 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "MonetaryAmount": "schema:MonetaryAmount",
+            "MaxValue": {
+                "@id": "schema:maxValue",
+                "@type": "schema:Number"
+            },
+            "MinValue": {
+                "@id": "schema:minValue",
+                "@type": "schema:Number"
+            },
             "Currency": {
                 "@id": "schema:currency",
                 "@type": "schema:Text"
