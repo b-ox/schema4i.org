@@ -31,6 +31,14 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "PropertyValue": "schema:PropertyValue",
+            "MaxValue": {
+                "@id": "schema:maxValue",
+                "@type": "schema:Number"
+            },
+            "MinValue": {
+                "@id": "schema:minValue",
+                "@type": "schema:Number"
+            },
             "UnitCode": {
                 "@id": "schema:unitCode",
                 "@type": "schema:Text"
