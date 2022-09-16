@@ -16,7 +16,7 @@
             "MultiFamilyResidence": "schema:MultiFamilyResidence",
             "NumberOfUnits": {
                 "@id": "s4i:NumberOfUnits",
-                "@type": "s4i:Number"
+                "@type": "schema:Number"
             }
         }
     },
