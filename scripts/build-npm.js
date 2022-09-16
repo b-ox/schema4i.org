@@ -3,7 +3,8 @@ const path = require("path");
 const argv = require('minimist')(process.argv.slice(2), {
     alias: {
         o: 'outputDir',
-        s: 'includeSource'
+        s: 'includeSource',
+        q: 'quiet'
     }
 });
 
@@ -14,12 +15,15 @@ const argv = require('minimist')(process.argv.slice(2), {
         console.log('\nHostURL: The URL that will be used to host the resulting schema.');
         console.log('-o|--outputDir (optional): The directory where the jsonld-files will be placed. Defaults to ../<HostURL>.');
         console.log('-s|--includeSource (optional): A directory inside the outputDir where the source-files will be copied to. Omitted if empty.');
+        console.log('-q|--quiet (optional): Reduce log output.');
         return;
     }
     const hostUrl = environment.replace(/^[^:/]+:\/\//, '');
     const outputDir = argv.o || `../${hostUrl}`;
     const sourceDir = argv.s;
-    await buildSchema(hostUrl, path.resolve(outputDir), sourceDir);
+    const quiet = !!argv.q;
+    const logger = quiet ? { log: () => {} } : undefined;
+    await buildSchema(hostUrl, path.resolve(outputDir), sourceDir, logger);
 })().catch((e) => {
     console.error('build failed with error: ', e);
     process.exit(1);
