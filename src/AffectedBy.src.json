@@ -1,0 +1,31 @@
+{
+    "type": "AffectedBy",
+    "uri": "http://schema4i.org/AffectedBy",
+    "description": "One thing is affected by another thing when there is any kind of circumstance around the other thing that has an effect on the one thing. That might be any kind of act or even being there can have an impact on the one thing. The other thing Affects this one thing.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Risk#AffectedBy" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AffectedBy": {
+                "@id": "s4i:AffectedBy",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum AffectedBy",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "AffectedBy": {}
+        },
+        "context": {}
+    }]
+}

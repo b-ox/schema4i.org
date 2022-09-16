@@ -6,7 +6,11 @@
         "url": "http://schema.org/House",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Apartment" },
+        { "@id": "http://schema4i.org/SingleFamilyResidence" },
+        { "@id": "http://schema4i.org/MultiFamilyResidence" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Accommodation" }
     ],
@@ -23,7 +27,12 @@
         "title": "A maximum House",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/House.jsonld",
+                "http://schema4i.org/Accommodation.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
             "@type": "House"
         },
         "context": {}

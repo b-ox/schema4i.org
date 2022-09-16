@@ -1,0 +1,39 @@
+{
+    "type": "MultiFamilyResidence",
+    "uri": "http://schema4i.org/MultiFamilyResidence",
+    "description": "Residence type: Multi-family home.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/House" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "MultiFamilyResidence": "schema:MultiFamilyResidence",
+            "NumberOfUnits": {
+                "@id": "s4i:NumberOfUnits",
+                "@type": "s4i:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum MultiFamilyResidence",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/MultiFamilyResidence.jsonld",
+                "http://schema4i.org/House.jsonld",
+                "http://schema4i.org/Accommodation.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "MultiFamilyResidence",
+            "NumberOfUnits": 2
+        },
+        "context": {}
+    }]
+}

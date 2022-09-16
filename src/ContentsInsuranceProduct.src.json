@@ -1,0 +1,78 @@
+{
+    "type": "ContentsInsuranceProduct",
+    "uri": "http://schema4i.org/ContentsInsuranceProduct",
+    "description": "Contents insurance is insurance that pays for damage to, or loss of, an individuals personal possessions while they are located within that individuals home. Some contents insurance policies also provide restricted cover for personal possessions temporarily taken away from the home by the policyholder. ",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ContentsInsuranceProduct": "s4i:ContentsInsuranceProduct"
+        }
+    },
+    "playground": [{
+        "title": "A real ContentsInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ContentsInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/ContentsInsuranceCoverage.jsonld",
+                "http://schema4i.org/PropertyDamageRisk.jsonld",
+                "http://schema4i.org/DamageRisk.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/MultiFamilyResidence.jsonld",
+                "http://schema4i.org/Accommodation.jsonld",
+                "http://schema4i.org/Apartment.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MoneytaryAmount.jsonld"
+            ],
+            "@type": "ContentsInsuranceProduct",
+            "Insured": {
+                "@id": "#Wohnung",
+                "@type": "Apartment",
+                "FloorSize": 134,
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Lindenstr.",
+                    "HouseNumber": "48-52",
+                    "PostalCode": "40233",
+                    "AddressLocality": "Düsseldorf"
+                },
+                "ContainedInPlace": {
+                    "@type": "MultiFamilyResidence",
+                    "NumberOfUnits": "2"
+                }
+            },
+            "Offers": [{
+                "@type": "ContentsInsuranceCoverage",
+                "Covers": {
+                    "@type": "PropertyDamageRisk",
+                    "Affects": {
+                        "@id": "#Wohnung",
+                        "@type": "Accommodation"
+                    }
+                }
+            }, {
+                "@type": "ContentsInsuranceCoverage",
+                "CoverageCategory": "1302",
+                "SumInsured": {
+                    "@type": "MoneytaryAmount",
+                    "Value": 5000.00,
+                    "Currency": "EUR"
+                }
+            }]
+        },
+        "context": {}
+    }]
+}

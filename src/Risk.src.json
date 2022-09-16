@@ -20,7 +20,11 @@
             "schema": "http://schema.org/",
             "Risk": "s4i:Risk",
             "Affects": {
-                "@id": "s4i:Insured",
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
+            "AffectedBy": {
+                "@id": "s4i:AffectedBy",
                 "@type": "s4i:Thing"
             }
         }
@@ -38,6 +42,33 @@
             "Affects": {
                 "@type": "Person",
                 "Name": "Müller"
+            },
+            "AffectedBy": {
+                "@type": "Question",
+                "Name": "Waren Sie in den letzten 3 Jahren beim Arzt?",
+                "SuggestedAnswer": {
+                    "@type": "ItemList",
+                    "ItemListElement": [{
+                        "@type": "ListItem",
+                        "Item": {
+                            "@type": "Answer",
+                            "Text": "Ja",
+                            "Identifier": "0"
+                        }
+                    }, {
+                        "@type": "ListItem",
+                        "Item": {
+                            "@type": "Answer",
+                            "Text": "Nein",
+                            "Identifier": "1"
+                        }
+                    }],
+                    "AcceptedAnswer": {
+                        "@type": "Answer",
+                        "Text": "Nein",
+                        "Identifier": "1"
+                    }
+                }
             }
         },
         "context": {}

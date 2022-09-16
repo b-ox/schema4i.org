@@ -20,6 +20,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Accommodation": "schema:Accommodation",
+            "ContainedInPlace": {
+                "@id": "schema:containedInPlace",
+                "@type": "s4i:Place"
+            },
             "FloorLevel": {
                 "@id": "schema:floorLevel",
                 "@type": "schema:Text"
@@ -70,8 +74,19 @@
         "title": "A maximum Accommodation",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/SingleFamilyResidence.jsonld",
+                "http://schema4i.org/House.jsonld",
+                "http://schema4i.org/Accommodation",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld"
+            ],
             "@type": "Accommodation",
+            "ContainedInPlace": {
+                "@type": "SingleFamilyResidence"
+            },
             "FloorLevel": "1",
             "FloorSize": {
                 "@type": "QuantitativeValue",
