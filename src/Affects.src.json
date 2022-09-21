@@ -1,0 +1,31 @@
+{
+    "type": "Affects",
+    "uri": "http://schema4i.org/Affects",
+    "description": "One thing affects another thing when there is any kind of circumstance that has an effect on the other thing. That might be any kind of act or even being there can have an impact on the other thing. The other thing is AffectedBy this one thing.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Risk#Affects" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Affects": {
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Affects",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Affects": {}
+        },
+        "context": {}
+    }]
+}

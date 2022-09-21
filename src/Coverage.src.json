@@ -5,6 +5,7 @@
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/LiabilityCoverage" },
+        { "@id": "http://schema4i.org/ContentsInsuranceCoverage" },
         { "@id": "http://schema4i.org/MotorInsuranceLiabilityCoverage" },
         { "@id": "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage" },
         { "@id": "http://schema4i.org/MotorInsurancePartialComprehensiveCoverage" },

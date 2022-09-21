@@ -1,7 +1,7 @@
 {
-    "type": "LiabilityCoverage",
-    "uri": "http://schema4i.org/LiabilityCoverage",
-    "description": "Provides coverage for various types of liability damage.",
+    "type": "ContentsInsuranceCoverage",
+    "uri": "http://schema4i.org/ContentsInsuranceCoverage",
+    "description": "Provides coverage for various types of contents damage.",
     "links": [],
     "parents": [],
     "base": [
@@ -13,7 +13,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "LiabilityCoverage": "s4i:LiabilityCoverage",
+            "ContentsInsuranceCoverage": "s4i:ContentsInsuranceCoverage",
             "SumInsured": {
                 "@id": "s4i:SumInsured",
                 "@type": "http://schema4i.org/SumInsured"
@@ -21,16 +21,16 @@
         }
     },
     "playground": [{
-        "title": "A maximum LiabilityCoverage",
+        "title": "A maximum ContentsInsuranceCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/LiabilityInsuranceCoverage.jsonld"
+                "http://schema4i.org/ContentsInsuranceCoverage.jsonld"
             ],
-            "@type": "LiabilityCoverage",
+            "@type": "ContentsInsuranceCoverage",
             "SumInsured": {
                 "@type": "MonetaryAmount",
                 "Value": 10000000,
