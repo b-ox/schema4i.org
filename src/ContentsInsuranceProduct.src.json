@@ -35,7 +35,7 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/MoneytaryAmount.jsonld"
+                "http://schema4i.org/MonetaryAmount.jsonld"
             ],
             "@type": "ContentsInsuranceProduct",
             "Insured": {
@@ -67,7 +67,7 @@
                 "@type": "ContentsInsuranceCoverage",
                 "CoverageCategory": "1302",
                 "SumInsured": {
-                    "@type": "MoneytaryAmount",
+                    "@type": "MonetaryAmount",
                     "Value": 5000.00,
                     "Currency": "EUR"
                 }

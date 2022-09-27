@@ -67,7 +67,7 @@
         },
         "context": {}
     }, {
-        "title": "A QuantitativeValue as MoneytaryAmount",
+        "title": "A QuantitativeValue as MonetaryAmount",
         "tab": "tab-expanded",
         "input": {
             "@context": [
