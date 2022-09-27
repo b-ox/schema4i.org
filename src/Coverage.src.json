@@ -28,7 +28,7 @@
             },
             "SumInsured": {
                 "@id": "s4i:SumInsured",
-                "@type": "http://schema4i.org/SumInsured"
+                "@type": "s4i:SumInsured"
             },
             "Covers": {
                 "@id": "s4i:Risk",

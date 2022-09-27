@@ -43,33 +43,19 @@
                 "@type": "Person",
                 "Name": "Müller"
             },
-            "AffectedBy": {
+            "AffectedBy": [{
                 "@type": "Question",
                 "Name": "Waren Sie in den letzten 3 Jahren beim Arzt?",
-                "SuggestedAnswer": {
-                    "@type": "ItemList",
-                    "ItemListElement": [{
-                        "@type": "ListItem",
-                        "Item": {
-                            "@type": "Answer",
-                            "Text": "Ja",
-                            "Identifier": "0"
-                        }
-                    }, {
-                        "@type": "ListItem",
-                        "Item": {
-                            "@type": "Answer",
-                            "Text": "Nein",
-                            "Identifier": "1"
-                        }
-                    }],
-                    "AcceptedAnswer": {
-                        "@type": "Answer",
-                        "Text": "Nein",
-                        "Identifier": "1"
+                "Identifier": "RISIKO_VP_LetzterArztbesuch",
+                "AcceptedAnswer": {
+                    "@type": "Answer",
+                    "Text": "Nein",
+                    "Content": {
+                        "@type": "PropertyValue",
+                        "Value": false
                     }
                 }
-            }
+            }]
         },
         "context": {}
     }]
