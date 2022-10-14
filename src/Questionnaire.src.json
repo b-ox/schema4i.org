@@ -9,8 +9,8 @@
     ],
     "multipletypes": {
         "Action": [
-            { "@id": "http://schema.org/ItemList" },
-            { "@id": "http://schema.org/AskAction" }
+            { "@id": "http://schema4i.org/ItemList" },
+            { "@id": "http://schema4i.org/AskAction" }
         ]
     },
     "context": {
