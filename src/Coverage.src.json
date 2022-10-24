@@ -14,7 +14,13 @@
     "base": [
         { "@id": "http://schema4i.org/Offer" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "SumInsured": [
+            { "@id": "http://schema4i.org/MonetaryAmount" },
+            { "@id": "http://schema.org/Text" }
+        ]
+
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -27,8 +33,7 @@
                 "@type": "oo:definitions/money"
             },
             "SumInsured": {
-                "@id": "s4i:SumInsured",
-                "@type": "s4i:SumInsured"
+                "@id": "s4i:SumInsured"
             },
             "Covers": {
                 "@id": "s4i:Risk",
@@ -44,13 +49,23 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/Risk.jsonld"
+                "http://schema4i.org/Risk.jsonld",
+                {
+                    "SumInsured": {
+                        "@id": "s4i:SumInsured",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumMotorInsuranceLiabilityCoverageCode#"
+                        }
+                    }
+                }
             ],
             "@type": "Coverage",
             "Deductible": 300,
             "Covers": [{
                 "@type": "Risk"
-            }]
+            }],
+            "SumInsured": "11"
         },
         "context": {}
     }]
