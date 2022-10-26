@@ -7,7 +7,7 @@
         { "@id": "http://schema4i.org/Coverage#Covers" },
         { "@id": "http://schema4i.org/LiabilityDamageRisk" },
         { "@id": "http://schema4i.org/PropertyDamageRisk" },
-        { "@id": "http://schema4i.org/HealthCareCostRisk" }
+        { "@id": "http://schema4i.org/PersonalInjuryRisk" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
