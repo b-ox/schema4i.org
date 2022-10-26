@@ -4,7 +4,7 @@
     "description": "A monetary amount describing the maximum amount of damage or cost covered by an insurance product. This might be a `MonetaryAmount` or a textual description of more complex coverage or a predefined Enum.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/LiabilityCoverage#SumInsured"
+        "@id": "http://schema4i.org/Coverage#SumInsured"
     }],
     "base": [],
     "multipletypes": {
