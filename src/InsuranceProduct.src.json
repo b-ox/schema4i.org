@@ -33,6 +33,7 @@
                 "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
@@ -55,7 +56,11 @@
             },
             "Offers": [{
                 "@type": "Coverage",
-                "Deductible": 300
+                "Deductible": {
+                    "@type": "MonetaryAmount",
+                    "Value": 300,
+                    "Currency": "EUR"    
+                }
             }]
         },
         "context": {}

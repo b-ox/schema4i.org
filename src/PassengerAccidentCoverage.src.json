@@ -17,11 +17,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
-            "PassengerAccidentCoverage": "s4i:PassengerAccidentCoverage",
-            "Deductible": {
-                "@id": "oo:motor/product.motor.coverage.passenger-cover.deductible",
-                "@type": "oo:definitions/money"
-            }
+            "PassengerAccidentCoverage": "s4i:PassengerAccidentCoverage"
         }
     },
     "playground": [{
@@ -31,11 +27,16 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/PassengerAccidentCoverage.jsonld"
             ],
             "@type": "PassengerAccidentCoverage",
-            "Deductible": 150.00
+            "Deductible": {
+                "@type": "MonetaryAmount",
+                "Value": 300,
+                "Currency": "EUR"    
+            }
         },
         "context": {}
     }]

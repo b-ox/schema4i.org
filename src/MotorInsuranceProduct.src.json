@@ -30,6 +30,7 @@
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/VehicleLiabilityCoverage.jsonld",
                 "http://schema4i.org/FullyComprehensiveCoverage.jsonld",
@@ -54,7 +55,11 @@
             }, {
                 "@type": "FullyComprehensiveCoverage",
                 "ClaimFreeYears": 7,
-                "Deductible": 500.00,
+                "Deductible": {
+                    "@type": "MonetaryAmount",
+                    "Value": 300,
+                    "Currency": "EUR"
+                },
                 "NoClaimsDiscount": 41,
                 "NoClaimsDiscountLevel": "7"
             }]

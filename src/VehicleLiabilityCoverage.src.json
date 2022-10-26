@@ -27,10 +27,6 @@
                 "@id": "oo:motor/product.motor.no-claims-discount-liability.claim-free-years",
                 "@type": "oo:definitions/nonnegative-integer"
             },
-            "Deductible": {
-                "@id": "oo:motor/product.motor.coverage.liability.deductible",
-                "@type": "oo:definitions/money"
-            },
             "NoClaimsDiscount": {
                 "@id": "s4i:NoClaimsDiscount",
                 "@type": "schema:Number"
@@ -52,11 +48,16 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/VehicleLiabilityCoverage.jsonld"
             ],
             "@type": "VehicleLiabilityCoverage",
             "ClaimFreeYears": 7,
-            "Deductible": 0.00,
+            "Deductible": {
+                "@type": "MonetaryAmount",
+                "Value": 0,
+                "Currency": "EUR"
+            },
             "NoClaimsDiscount": 41,
             "NoClaimsDiscountLevel": "7",
             "SumInsured": {

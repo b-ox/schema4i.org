@@ -30,8 +30,8 @@
             "oo": "https://schema.openontology.org/",
             "Coverage": "s4i:Coverage",
             "Deductible": {
-                "@id": "oo:motor/product/deductible",
-                "@type": "oo:definitions/money"
+                "@id": "s4i:Deductible",
+                "@type": "s4i:MonetaryAmount"
             },
             "SumInsured": {
                 "@id": "s4i:SumInsured"
@@ -50,6 +50,7 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Risk.jsonld",
                 {
                     "SumInsured": {
@@ -62,7 +63,11 @@
                 }
             ],
             "@type": "Coverage",
-            "Deductible": 300,
+            "Deductible": {
+                "@type": "MonetaryAmount",
+                "Value": 1000,
+                "Currency": "EUR"
+            },
             "Covers": [{
                 "@type": "Risk"
             }],
