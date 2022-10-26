@@ -90,7 +90,7 @@
                 "Identifier": "1047",
                 "Name": "IDEAL"
             },
-            "PaymentInterval": 7,
+            "PaymentInterval": "7",
             "Price": 153.21,
             "PriceCurrency": "EUR",
             "PriceSpecification": {

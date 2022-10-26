@@ -35,6 +35,13 @@
             "Value": {
                 "@id": "schema:value",
                 "@type": "schema:Number"
+            },
+            "PaymentInterval": {
+                "@id": "s4i:PaymentInterval",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumIntervalCode#"
+                }
             }
         }
     },
@@ -48,7 +55,8 @@
             ],
             "@type": "MonetaryAmount",
             "Currency": "EUR",
-            "Value": 3332.00
+            "Value": 3332.00,
+            "PaymentInterval": "8"
         },
         "context": {}
     }]
