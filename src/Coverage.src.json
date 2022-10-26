@@ -39,6 +39,14 @@
             "Covers": {
                 "@id": "s4i:Risk",
                 "@type": "s4i:Risk"
+            },
+            "AffectedBy": {
+                "@id": "s4i:AffectedBy",
+                "@type": "s4i:Thing"
+            },
+            "WaitingPeriod": {
+                "@id": "s4i:WaitingPeriod",
+                "@type": "schema:Duration"
             }
         }
     },
@@ -52,6 +60,9 @@
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/Question.jsonld",
+                "http://schema4i.org/Answer.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
                 {
                     "SumInsured": {
                         "@id": "s4i:SumInsured",
@@ -71,7 +82,21 @@
             "Covers": [{
                 "@type": "Risk"
             }],
-            "SumInsured": "11"
+            "SumInsured": "11",
+            "AffectedBy": [{
+                "@type": "Question",
+                "Name": "Soll das Premium Deckungspaket eingeschlossen werden?",
+                "Identifier": "DECKUNG_Premium_Einschluss",
+                "AcceptedAnswer": {
+                    "@type": "Answer",
+                    "Text": "Ja",
+                    "Content": {
+                        "@type": "PropertyValue",
+                        "Value": true
+                    }
+                }
+            }],
+            "WaitingPeriod": "P14D"
         },
         "context": {}
     }]
