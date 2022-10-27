@@ -71,7 +71,7 @@
                 "http://schema4i.org/MotorInsuranceProduct.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
-                "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld",
+                "http://schema4i.org/VehicleLiabilityCoverage.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/BusinessTransactionDelivery.jsonld",
@@ -147,7 +147,7 @@
                     "BusinessFunction": "http://purl.org/goodrelations/v1#ProvideService",
                     "Category": "050",
                     "Offers": [{
-                        "@type": "MotorInsuranceLiabilityCoverage",
+                        "@type": "VehicleLiabilityCoverage",
                         "ClaimFreeYears": 7,
                         "NoClaimsDiscount": 41,
                         "NoClaimsDiscountLevel": "7",

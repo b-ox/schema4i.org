@@ -64,8 +64,17 @@
                     }
                 }
             }, {
+                "@context": {
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumCoverageCategoryCode"
+                        }
+                    }        
+                },
                 "@type": "ContentsInsuranceCoverage",
-                "CoverageCategory": "1302",
+                "Category": "1302",
                 "SumInsured": {
                     "@type": "MonetaryAmount",
                     "Value": 5000.00,

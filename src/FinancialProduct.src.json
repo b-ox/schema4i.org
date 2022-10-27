@@ -25,8 +25,11 @@
                 "@type": "schema:Text"
             },
             "PaymentInterval": {
-                "@id": "oo:product/premium-payment-interval",
-                "@type": "oo:definitions/temporal-interval"
+                "@id": "s4i:PaymentInterval",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumIntervalCode#"
+                }
             },
             "Price": {
                 "@id": "schema:price",
@@ -134,7 +137,7 @@
                 "Identifier": "1047",
                 "Name": "IDEAL"
             },
-            "PaymentInterval": 7,
+            "PaymentInterval": "7",
             "Price": 153.21,
             "PriceCurrency": "EUR",
             "PriceSpecification": {

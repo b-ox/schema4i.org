@@ -1,0 +1,51 @@
+{
+    "type": "AccidentCoverage",
+    "uri": "http://schema4i.org/AccidentCoverage",
+    "description": "Provides coverage for accidents resulting in personal injuries or health impediments.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AccidentCoverage": "s4i:AccidentCoverage",
+            "Progression": {
+                "@id": "s4i:Progression",
+                "@type": "s4i:PropertyValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum AccidentCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/AccidentCoverage.jsonld",
+                "http://schema4i.org/PersonalInjuryRisk.jsonld"
+            ],
+            "@type": "AccidentCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
+            },
+            "Progression": {
+                "@type": "PropertyValue",
+                "UnitCode": "P1",
+                "Value": 250
+            },
+            "Covers": {
+                "@type": "PersonalInjuryRisk"
+            }
+        },
+        "context": {}
+    }]
+}

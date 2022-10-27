@@ -1,0 +1,28 @@
+{
+    "type": "GardenHouse",
+    "uri": "http://schema4i.org/GardenHouse",
+    "description": "A `GardenHouse`, sometimes referred to as summer house or cottage, is a small `Building` that is part of a private garden.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Building" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "GardenHouse": "schema:GardenHouse"
+        }
+    },
+    "playground": [{
+        "title": "A maximum GardenHouse",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "GardenHouse"
+        },
+        "context": {}
+    }]
+}

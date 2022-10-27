@@ -1,6 +1,6 @@
 {
-    "type": "MotorInsuranceLiabilityCoverage",
-    "uri": "http://schema4i.org/MotorInsuranceLiabilityCoverage",
+    "type": "VehicleLiabilityCoverage",
+    "uri": "http://schema4i.org/VehicleLiabilityCoverage",
     "description": "Provides coverage for liability insurance damage in the context of motor insurance.",
     "links": [{
         "url": "https://openontology.org",
@@ -8,7 +8,7 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Coverage" }
+        { "@id": "http://schema4i.org/LiabilityCoverage" }
     ],
     "multipletypes": {
         "SumInsured": [
@@ -22,14 +22,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
-            "MotorInsuranceLiabilityCoverage": "s4i:MotorInsuranceLiabilityCoverage",
+            "VehicleLiabilityCoverage": "s4i:VehicleLiabilityCoverage",
             "ClaimFreeYears": {
                 "@id": "oo:motor/product.motor.no-claims-discount-liability.claim-free-years",
                 "@type": "oo:definitions/nonnegative-integer"
-            },
-            "Deductible": {
-                "@id": "oo:motor/product.motor.coverage.liability.deductible",
-                "@type": "oo:definitions/money"
             },
             "NoClaimsDiscount": {
                 "@id": "s4i:NoClaimsDiscount",
@@ -40,23 +36,28 @@
                 "@type": "oo:definitions/string"
             },
             "SumInsured": {
-                "@id": "oo:motor/product.motor.coverage.liability.sum-insured"
+                "@id": "s4i:SumInsured"
             }
         }
     },
     "playground": [{
-        "title": "A maximum MotorInsuranceLiabilityCoverage",
+        "title": "A maximum VehicleLiabilityCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/MotorInsuranceLiabilityCoverage.jsonld"
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/VehicleLiabilityCoverage.jsonld"
             ],
-            "@type": "MotorInsuranceLiabilityCoverage",
+            "@type": "VehicleLiabilityCoverage",
             "ClaimFreeYears": 7,
-            "Deductible": 0.00,
+            "Deductible": {
+                "@type": "MonetaryAmount",
+                "Value": 0,
+                "Currency": "EUR"
+            },
             "NoClaimsDiscount": 41,
             "NoClaimsDiscountLevel": "7",
             "SumInsured": {
