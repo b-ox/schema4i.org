@@ -1,0 +1,36 @@
+{
+    "type": "ParkingFacility",
+    "uri": "http://schema4i.org/ParkingFacility",
+    "description": "A `ParkingFacility` is place where vehicles can be placed. This can be either a public space like a parking lot or a private space like a garage or car port. The distinction whether this is an enclosed building or not should be made by multi-typing it with the `Building` type.",
+    "links": [{
+        "url": "http://schema.org/ParkingFacility",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ParkingFacility": "schema:ParkingFacility",
+            "OpeningHours": {
+                "@id": "schema:openingHours",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ParkingFacility",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "ParkingFacility",
+            "OpeningHours": "05:00-22:00"
+        },
+        "context": {}
+    }]
+}

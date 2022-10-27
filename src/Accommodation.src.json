@@ -11,7 +11,7 @@
         { "@id": "http://schema4i.org/House" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Place" }
+        { "@id": "http://schema4i.org/Building" }
     ],
     "multipletypes": {},
     "context": {
@@ -79,6 +79,7 @@
                 "http://schema4i.org/House.jsonld",
                 "http://schema4i.org/Accommodation",
                 "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/QuantitativeValue.jsonld",
                 "http://schema4i.org/StructuredValue.jsonld"

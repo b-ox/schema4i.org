@@ -7,7 +7,9 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/Accommodation" }
+        { "@id": "http://schema4i.org/Building" },
+        { "@id": "http://schema4i.org/ParkingFacility" },
+        { "@id": "http://schema4i.org/LandmarksOrHistoricalBuildings" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
