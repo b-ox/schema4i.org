@@ -23,7 +23,7 @@
             { "@id": "http://schema4i.org/ProgramMembership" }
         ],
         "KnowsAbout": [
-            { "@id": "http://schema4i.org/Text" },
+            { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/Thing" }
         ]
     },
