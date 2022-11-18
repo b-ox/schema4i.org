@@ -84,6 +84,10 @@
                 "@id": "schema:numberOfEmployees",
                 "@type": "s4i:QuantitativeValue"
             },
+            "RelatedOrganization": {
+                "@id": "s4i:RelatedOrganization",
+                "@type": "s4i:Organization"
+            },
             "TaxID": {
                 "@id": "schema:taxID",
                 "@type": "schema:Text"
@@ -122,6 +126,17 @@
             "NumberOfEmployees": {
                 "@type": "QuantitativeValue",
                 "Value": 10
+            },
+            "RelatedOrganization": {
+                "@type": "Organization",
+                "Name": "A-va GmbH",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "AddressCountry": "D",
+                    "AddressLocality": "Düsseldorf",
+                    "PostalCode": "40233",
+                    "StreetAddress": "Düsseldorf"
+                }
             },
             "TaxID": "DE123123123",
             "Telephone": "0049 211 41608 400",
