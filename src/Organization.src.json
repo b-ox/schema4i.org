@@ -82,7 +82,7 @@
             },
             "NumberOfEmployees": {
                 "@id": "schema:numberOfEmployees",
-                "@type": "schema:QuantitativeValue"
+                "@type": "s4i:QuantitativeValue"
             },
             "TaxID": {
                 "@id": "schema:taxID",

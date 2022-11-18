@@ -1,7 +1,7 @@
 {
-    "type": "ContentsInsuranceCoverage",
-    "uri": "http://schema4i.org/ContentsInsuranceCoverage",
-    "description": "Provides coverage for various types of contents damage.",
+    "type": "BuildingInsuranceCoverage",
+    "uri": "http://schema4i.org/BuildingInsuranceCoverage",
+    "description": "Provides coverage for various types of damage to buildings.",
     "links": [],
     "parents": [],
     "base": [
@@ -13,24 +13,23 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "ContentsInsuranceCoverage": "s4i:ContentsInsuranceCoverage"
+            "BuildingInsuranceCoverage": "s4i:BuildingInsuranceCoverage"
         }
     },
     "playground": [{
-        "title": "A maximum ContentsInsuranceCoverage",
+        "title": "A maximum BuildingInsuranceCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/ContentsInsuranceCoverage.jsonld"
+                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/BuildingInsuranceCoverage.jsonld"
             ],
-            "@type": "ContentsInsuranceCoverage",
-            "SumInsured": {
-                "@type": "MonetaryAmount",
-                "Value": 10000000,
-                "Currency": "EUR"
+            "@type": "BuildingInsuranceCoverage",
+            "Insured": {
+                "@type": "Building"
             }
         },
         "context": {}

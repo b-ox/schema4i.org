@@ -1,0 +1,65 @@
+{
+    "type": "BuildingInsuranceProduct",
+    "uri": "http://schema4i.org/BuildingInsuranceProduct",
+    "description": "Building insurance is insurance that pays for damage to buildings.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BuildingInsuranceProduct": "s4i:BuildingInsuranceProduct"
+        }
+    },
+    "playground": [{
+        "title": "A real BuildingInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/BuildingInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/ContentsInsuranceCoverage.jsonld",
+                "http://schema4i.org/PropertyDamageRisk.jsonld",
+                "http://schema4i.org/DamageRisk.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/MultiFamilyResidence.jsonld",
+                "http://schema4i.org/Accommodation.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld"
+            ],
+            "@type": "BuildingInsuranceProduct",
+            "Insured": {
+                "@id": "#Wohnung",
+                "@type": "Accommodation",
+                "FloorSize": 134,
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Lindenstr.",
+                    "HouseNumber": "48-52",
+                    "PostalCode": "40233",
+                    "AddressLocality": "Düsseldorf"
+                }
+            },
+            "Offers": [{
+                "@type": "BuildingInsuranceCoverage",
+                "Covers": {
+                    "@type": "PropertyDamageRisk",
+                    "Affects": {
+                        "@id": "#Wohnung",
+                        "@type": "Accommodation"
+                    }
+                }
+            }]
+        },
+        "context": {}
+    }]
+}
