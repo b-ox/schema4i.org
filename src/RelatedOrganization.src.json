@@ -1,5 +1,5 @@
 {
-    "type": "Organization",
+    "type": "RelatedOrganization",
     "uri": "http://schema4i.org/RelatedOrganization",
     "description": "An organization that is in some way related to another organization.",
     "links": [],
