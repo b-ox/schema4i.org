@@ -7,15 +7,19 @@
         "@id": "http://schema4i.org/Coverage#Deductible"
     }],
     "base": [],
-    "multipletypes": {},
+    "multipletypes": {
+        "Deductible": [
+            { "@id": "http://schema4i.org/QuantitativeValue" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Deductible": {
-                "@id": "s4i:Deductible",
-                "@type": "s4i:MonetaryAmount"
+                "@id": "s4i:Deductible"
             }
         }
     },
