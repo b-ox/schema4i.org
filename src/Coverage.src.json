@@ -19,6 +19,10 @@
         "SumInsured": [
             { "@id": "http://schema4i.org/MonetaryAmount" },
             { "@id": "http://schema.org/Text" }
+        ],
+        "Deductible": [
+            { "@id": "http://schema4i.org/QuantitativeValue" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
         ]
 
     },
@@ -30,8 +34,7 @@
             "oo": "https://schema.openontology.org/",
             "Coverage": "s4i:Coverage",
             "Deductible": {
-                "@id": "s4i:Deductible",
-                "@type": "s4i:MonetaryAmount"
+                "@id": "s4i:Deductible"
             },
             "SumInsured": {
                 "@id": "s4i:SumInsured"
@@ -74,11 +77,15 @@
                 }
             ],
             "@type": "Coverage",
-            "Deductible": {
+            "Deductible": [{
                 "@type": "MonetaryAmount",
                 "Value": 1000,
                 "Currency": "EUR"
-            },
+            },{
+                "@type": "QuantitativeValue",
+                "Value": 2,
+                "UnitCode": "P1"
+            }],
             "Covers": [{
                 "@type": "Risk"
             }],
