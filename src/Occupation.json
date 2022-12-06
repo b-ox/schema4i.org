@@ -1,0 +1,73 @@
+{
+    "type": "Occupation",
+    "uri": "http://schema4i.org/Occupation",
+    "description": "A job title that may be used to describe a Person`s profession",
+    "links": [{
+        "url": "http://schema.org/Occupation",
+        "description": "Original Schema.org type"
+    }, {
+        "url": "http://openontology.org",
+        "description": "OpenOntology.org"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "EstimatedSalary": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/MonetaryAmount" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://schema.openontology.org/",
+            "Occupation": "schema:Occupation",
+            "EducationRequirements": {
+                "@id": "schema:educationRequirements",
+                "@type": "schema:text"
+            },
+            "EstimatedSalary": {
+                "@id": "schema:estimatedSalary"
+            },
+            "Qualifications": {
+                "@id": "schema:qualifications",
+                "@type": "schema:text"
+            },
+            "Responsibilities": {
+                "@id": "schema:responsibilities",
+                "@type": "schema:text"
+            },
+            "Skills": {
+                "@id": "schema:skills",
+                "@type": "schema:text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Occupation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld"
+            ],
+            "@type": "Occupation",
+            "EducationRequirements": "Bachelor of Science",
+            "EstimatedSalary": {
+                "@type": "MonetaryAmount",
+                "Value": 30000,
+                "Currency": "EUR"
+            },
+            "Name": "Softwareentwickler/in",
+            "Qualifications": ["10 Jahre Erfahrung mit React.js"],
+            "Responsibilities": ["Weiterentwicklung und Wartung der firmeninternen Website"],
+            "Skills": ["Lernbereitschaft", "Motivation"]
+        },
+        "context": {}
+    }]
+}
