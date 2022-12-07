@@ -1,7 +1,7 @@
 {
     "type": "DataLakeItem",
     "uri": "http://schema4i.org/DataLakeItem",
-    "description": "A data item that contains one or more entries of a certain digital ressource as well as some related metadata.",
+    "description": "A Data Lake is a repository of data in a structured and unstructured form. A DataLakeItem is an item within this repository that contains one or more entries of a certain digital ressource as well as some related metadata.",
     "links": [],
     "parents": [],
     "base": [

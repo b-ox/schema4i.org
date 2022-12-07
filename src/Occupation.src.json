@@ -1,13 +1,10 @@
 {
     "type": "Occupation",
     "uri": "http://schema4i.org/Occupation",
-    "description": "A job title that may be used to describe a Person`s profession",
+    "description": "A profession, may involve prolonged training and/or a formal qualification.",
     "links": [{
         "url": "http://schema.org/Occupation",
         "description": "Original Schema.org type"
-    }, {
-        "url": "http://openontology.org",
-        "description": "OpenOntology.org"
     }],
     "parents": [],
     "base": [
@@ -15,7 +12,7 @@
     ],
     "multipletypes": {
         "EstimatedSalary": [
-            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/Number" },
             { "@id": "http://schema4i.org/MonetaryAmount" }
         ]
     },
@@ -24,7 +21,6 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "Occupation": "schema:Occupation",
             "EducationRequirements": {
                 "@id": "schema:educationRequirements",
@@ -64,8 +60,8 @@
                 "Currency": "EUR"
             },
             "Name": "Softwareentwickler/in",
-            "Qualifications": ["10 Jahre Erfahrung mit React.js"],
-            "Responsibilities": ["Weiterentwicklung und Wartung der firmeninternen Website"],
+            "Qualifications": "10 Jahre Erfahrung mit React.js",
+            "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
             "Skills": ["Lernbereitschaft", "Motivation"]
         },
         "context": {}
