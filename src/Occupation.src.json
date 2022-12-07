@@ -16,7 +16,7 @@
     "multipletypes": {
         "EstimatedSalary": [
             { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema.org/MonetaryAmount" }
+            { "@id": "http://schema4i.org/MonetaryAmount" }
         ]
     },
     "context": {
@@ -28,22 +28,22 @@
             "Occupation": "schema:Occupation",
             "EducationRequirements": {
                 "@id": "schema:educationRequirements",
-                "@type": "schema:text"
+                "@type": "schema:Text"
             },
             "EstimatedSalary": {
                 "@id": "schema:estimatedSalary"
             },
             "Qualifications": {
                 "@id": "schema:qualifications",
-                "@type": "schema:text"
+                "@type": "schema:Text"
             },
             "Responsibilities": {
                 "@id": "schema:responsibilities",
-                "@type": "schema:text"
+                "@type": "schema:Text"
             },
             "Skills": {
                 "@id": "schema:skills",
-                "@type": "schema:text"
+                "@type": "schema:Text"
             }
         }
     },
