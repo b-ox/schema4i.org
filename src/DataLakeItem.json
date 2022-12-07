@@ -1,0 +1,52 @@
+{
+    "type": "DataLakeItem",
+    "uri": "http://schema4i.org/DataLakeItem",
+    "description": "A data item that contains one or more entries of a certain digital ressource as well as some related metadata.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DataLakeItem": "s4i:DataLakeItem"
+        }
+    },
+    "playground": [{
+        "title": "A realistic DataLakeItem containing a Person as information and an Organization as source of this information",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DataLakeItem.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/Organization.jsonld"
+            ],
+            "@type": "DataLakeItem",
+            "About": {
+                "@type": "Person",
+                "Name": "Max Mustermann",
+                "Address": {
+                    "AddressLocality": "Musterstadt",
+                    "PostalCode": "11111",
+                    "StreetAddress": "Musterstraße 1"
+                },
+                "Email": "max.mustermann@email.de"
+            },
+            "DateCreated": "2022-12-07T09:13:45",
+            "DateModified": "2022-12-07T09:17:23",
+            "Creator": {
+                "@type": "Organization",
+                "Identifier": "Muster-Personaldienstleister",
+                "Name": "Muster-Personaldienstleiter GmbH"
+            }
+        },
+        "context": {}
+    }]
+}
