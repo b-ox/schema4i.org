@@ -1,6 +1,6 @@
 {
-    "type": "MotorInsurancePartialComprehensiveCoverage",
-    "uri": "http://schema4i.org/MotorInsurancePartialComprehensiveCoverage",
+    "type": "PartialComprehensiveCoverage",
+    "uri": "http://schema4i.org/PartialComprehensiveCoverage",
     "description": "Provides coverage for a partial comprehensive insurance damage in the context of motor insurance.",
     "links": [{
         "url": "https://openontology.org",
@@ -17,7 +17,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
-            "MotorInsurancePartialComprehensiveCoverage": "s4i:MotorInsurancePartialComprehensiveCoverage",
+            "PartialComprehensiveCoverage": "s4i:PartialComprehensiveCoverage",
             "PartialDeductible": {
                 "@id": "oo:motor/product.motor.coverage.comprehensive.partial.deductible",
                 "@type": "oo:definitions/money"
@@ -25,16 +25,16 @@
         }
     },
     "playground": [{
-        "title": "A maximum MotorInsurancePartialComprehensiveCoverage",
+        "title": "A maximum PartialComprehensiveCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/MotorInsurancePartialComprehensiveCoverage.jsonld"
+                "http://schema4i.org/PartialComprehensiveCoverage.jsonld"
             ],
-            "@type": "MotorInsurancePartialComprehensiveCoverage",
+            "@type": "PartialComprehensiveCoverage",
             "PartialDeductible": 150.00
         },
         "context": {}

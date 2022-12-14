@@ -21,6 +21,10 @@
         "MemberOf": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/ProgramMembership" }
+        ],
+        "KnowsAbout": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/Thing" }
         ]
     },
     "context": {
@@ -81,6 +85,9 @@
                 "@id": "schema:jobTitle",
                 "@type": "schema:Text"
             },
+            "KnowsAbout": {
+                "@id": "schema:knowsAbout"
+            },
             "MemberOf": {
                 "@id": "schema:memberOf"
             },
@@ -134,6 +141,7 @@
             "GivenName": "Markus",
             "HonorificPrefix": "Dr.",
             "JobTitle": "CEO",
+            "KnowsAbout": ["Insurances"],
             "MemberOf": {},
             "Nationality": "D",
             "RelatedTo": {},

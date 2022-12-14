@@ -296,7 +296,12 @@ import * as s4i from './schema4i';
 
 const EXAMPLES = new Map<string, s4i.Thing[]>();
 `;
+            const processedTypes = [];
             for (const typeDefinition of exampleTypes) {
+                if (processedTypes.includes(typeDefinition.type)) {
+                    throw new Error(`duplicate examples for ${typeDefinition.type}`);
+                }
+                processedTypes.push(typeDefinition.type);
                 output += `
 const examples${typeDefinition.type}: s4i.Thing[] = [${
     typeDefinition.examples.map(example => JSON.stringify(example.data, undefined, 2)).join(',\n')

@@ -77,8 +77,11 @@
                 "@id": "schema:offeredBy"
             },
             "PaymentInterval": {
-                "@id": "oo:product/premium-payment-interval",
-                "@type": "oo:definitions/temporal-interval"
+                "@id": "s4i:PaymentInterval",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumIntervalCode#"
+                }
             },
             "Price": {
                 "@id": "schema:price",
@@ -136,7 +139,7 @@
             "ItemOffered": {},
             "LeaseLength": {},
             "OfferedBy": {},
-            "PaymentInterval": 7,
+            "PaymentInterval": "7",
             "Price": 100.00,
             "PriceCurrency": "EUR",
             "PriceSpecification": [],

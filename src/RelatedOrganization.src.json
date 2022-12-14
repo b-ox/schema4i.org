@@ -1,0 +1,53 @@
+{
+    "type": "RelatedOrganization",
+    "uri": "http://schema4i.org/RelatedOrganization",
+    "description": "An organization that is in some way related to another organization.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Organization#RelatedOrganization"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RelatedOrganization": "s4i:RelatedOrganization"
+        }
+    },
+    "playground": [{
+        "title": "An organization related to another organization",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
+            ],
+            "@type": "Organization",
+            "Name": "b-tix",
+            "LegalName": "b-tix GmbH",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressCountry": "D",
+                "AddressLocality": "Düsseldorf",
+                "PostalCode": "40233",
+                "StreetAddress": "Düsseldorf"
+            },
+            "RelatedOrganization": {
+                "@type": "Organization",
+                "Name": "A-va",
+                "LegalName": "A-va GmbH",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "AddressCountry": "D",
+                    "AddressLocality": "Düsseldorf",
+                    "PostalCode": "40233",
+                    "StreetAddress": "Düsseldorf"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

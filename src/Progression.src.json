@@ -1,0 +1,38 @@
+{
+    "type": "Progression",
+    "uri": "http://schema4i.org/Progression",
+    "description": "Describes some form of mathematical growth rate. In accident insurance, this usually describes the rate at which the benefits increase in relation to the severity of the disability resulting from an accident.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/AccidentCoverage#Progression"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Progression": {
+                "@id": "s4i:Progression",
+                "@type": "s4i:PropertyValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Progression",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld"
+            ],
+            "Progression": {
+                "@type": "PropertyValue",
+                "UnitCode": "P1",
+                "Value": 250
+            }
+        },
+        "context": {}
+    }]
+}

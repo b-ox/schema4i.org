@@ -1,0 +1,36 @@
+{
+    "type": "Building",
+    "uri": "http://schema4i.org/Building",
+    "description": "A solid, permanent structure enclosed by walls and a roof. `Building`s are distinct from temporary structures like tents or non-enclosed structures like bridges or carports.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Building": "schema:Building",
+            "YearBuilt": {
+                "@id": "schema:yearBuilt",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Building",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Building",
+            "Name": "Sistine Chapel",
+            "YearBuilt": 1481,
+            "Latitude": 41.903056,
+            "Longitude": 12.454444
+        },
+        "context": {}
+    }]
+}

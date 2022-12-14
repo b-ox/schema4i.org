@@ -1,0 +1,69 @@
+{
+    "type": "Occupation",
+    "uri": "http://schema4i.org/Occupation",
+    "description": "A profession, may involve prolonged training and/or a formal qualification.",
+    "links": [{
+        "url": "http://schema.org/Occupation",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "EstimatedSalary": [
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Occupation": "schema:Occupation",
+            "EducationRequirements": {
+                "@id": "schema:educationRequirements",
+                "@type": "schema:Text"
+            },
+            "EstimatedSalary": {
+                "@id": "schema:estimatedSalary"
+            },
+            "Qualifications": {
+                "@id": "schema:qualifications",
+                "@type": "schema:Text"
+            },
+            "Responsibilities": {
+                "@id": "schema:responsibilities",
+                "@type": "schema:Text"
+            },
+            "Skills": {
+                "@id": "schema:skills",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Occupation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld"
+            ],
+            "@type": "Occupation",
+            "EducationRequirements": "Bachelor of Science",
+            "EstimatedSalary": {
+                "@type": "MonetaryAmount",
+                "Value": 30000,
+                "Currency": "EUR"
+            },
+            "Name": "Softwareentwickler/in",
+            "Qualifications": "10 Jahre Erfahrung mit React.js",
+            "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
+            "Skills": ["Lernbereitschaft", "Motivation"]
+        },
+        "context": {}
+    }]
+}

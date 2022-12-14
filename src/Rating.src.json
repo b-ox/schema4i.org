@@ -7,7 +7,7 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/ProfilePage#Reviews" },
+        { "@id": "http://schema4i.org/CreativeWork#Review" },
         { "@id": "http://schema4i.org/Review#ReviewRating" }
     ],
     "base": [

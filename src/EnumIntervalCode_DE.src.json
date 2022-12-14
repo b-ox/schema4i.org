@@ -1,0 +1,32 @@
+{
+    "type": "EnumIntervalCode_DE",
+    "uri": "http://schema4i.org/EnumIntervalCode_DE",
+    "description": "Ein Code der ein sich wiederholendes Zeitintervall beschreibt, z.B. jährlich oder täglich.",
+    "links": [{
+        "url": "http://schema4i.org/EnumIntervalCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl14.htm",
+        "description": "GDV Standard Zahlungsweise, Anlage 14"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/FinancialProduct#PaymentInterval" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "jährlich": "s4i:EnumIntervalCode#1",
+            "halbjährlich": "s4i:EnumIntervalCode#2",
+            "dreijährig": "s4i:EnumIntervalCode#3",
+            "vierteljährlich": "s4i:EnumIntervalCode#4",
+            "sonstiges": "s4i:EnumIntervalCode#5",
+            "einmalig": "s4i:EnumIntervalCode#6",
+            "täglich": "s4i:EnumIntervalCode#7",
+            "monatlich": "s4i:EnumIntervalCode#8",
+            "niemals": "s4i:EnumIntervalCode#9"
+        }
+    }
+}

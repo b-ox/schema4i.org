@@ -1,0 +1,61 @@
+{
+    "type": "Questionnaire",
+    "uri": "http://schema4i.org/Questionnaire",
+    "description": "A collection of questions, organized in AskActions. This object represents an inquiry process between two or more parties. It can be the result of a past process or represent a not yet finished inquiry, depending on ActionStatus and presence of AcceptedAnswers.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {
+        "Action": [
+            { "@id": "http://schema4i.org/ItemList" },
+            { "@id": "http://schema4i.org/AskAction" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Questionnaire": "schema:Questionnaire",
+            "Action": {
+                "@id": "schema:Action"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Questionnaire",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Questionnaire.jsonld",
+                "http://schema4i.org/AskAction.jsonld",
+                "http://schema4i.org/Question.jsonld",
+                "http://schema4i.org/Answer.jsonld"
+            ],
+            "@type": "Questionnaire",
+            "Action": [{
+                "@type": "AskAction",
+                "ActionStatus": "CompletedActionStatus",
+                "Question": {
+                    "@type": "Question",
+                    "Description": "How many?",
+                    "AcceptedAnswer": {
+                        "@type": "Answer",
+                        "Content": "four"
+                    }
+                }
+            }, {
+                "@type": "AskAction",
+                "ActionStatus": "ActiveActionStatus",
+                "Question": {
+                    "@type": "Question",
+                    "Description": "When?"
+                }
+            }]
+        },
+        "context": {}
+    }]
+}

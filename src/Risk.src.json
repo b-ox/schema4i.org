@@ -7,7 +7,7 @@
         { "@id": "http://schema4i.org/Coverage#Covers" },
         { "@id": "http://schema4i.org/LiabilityDamageRisk" },
         { "@id": "http://schema4i.org/PropertyDamageRisk" },
-        { "@id": "http://schema4i.org/HealthCareCostRisk" }
+        { "@id": "http://schema4i.org/PersonalInjuryRisk" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
@@ -20,7 +20,11 @@
             "schema": "http://schema.org/",
             "Risk": "s4i:Risk",
             "Affects": {
-                "@id": "s4i:Insured",
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
+            "AffectedBy": {
+                "@id": "s4i:AffectedBy",
                 "@type": "s4i:Thing"
             }
         }
@@ -38,7 +42,20 @@
             "Affects": {
                 "@type": "Person",
                 "Name": "Müller"
-            }
+            },
+            "AffectedBy": [{
+                "@type": "Question",
+                "Name": "Waren Sie in den letzten 3 Jahren beim Arzt?",
+                "Identifier": "RISIKO_VP_LetzterArztbesuch",
+                "AcceptedAnswer": {
+                    "@type": "Answer",
+                    "Text": "Nein",
+                    "Content": {
+                        "@type": "PropertyValue",
+                        "Value": false
+                    }
+                }
+            }]
         },
         "context": {}
     }]
