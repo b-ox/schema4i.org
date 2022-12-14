@@ -22,6 +22,10 @@
             "Insured": {
                 "@id": "s4i:Insured",
                 "@type": "s4i:Thing"
+            },
+            "License": {
+                "@id": "s4i:License",
+                "@type": "s4i:DigitalDocument"
             }
         }
     },
@@ -61,7 +65,15 @@
                     "Value": 300,
                     "Currency": "EUR"    
                 }
-            }]
+            }],
+            "License": {
+                "@type": "DigitalDocument",
+                "@id": "https://api.b-ox.de/produkte/1047/bedingungen",
+                "Identifier": "terms",
+                "Name": "Vertragsbedingungen.pdf",
+                "Description": "Vertragsbedingungen",
+                "EncodingFormat": "application/pdf"
+            }
         },
         "context": {}
     }, {
