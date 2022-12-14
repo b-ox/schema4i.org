@@ -54,7 +54,7 @@
             },
             "PetsAllowed": {
                 "@id": "schema:petsAllowed",
-                "@type": "schema:Boolean"
+                "@type": "schema:Text"
             },
             "TourBookingPage": {
                 "@id": "schema:tourBookingPage",
@@ -86,7 +86,7 @@
             "NumberOfPartialBathrooms": 0,
             "NumberOfRooms": 3,
             "PermittedUsage": "Eigennutzung und 3 Mal jährlich Vermietung",
-            "PetsAllowed": true,
+            "PetsAllowed": "Kleine Hunde bis 12kg",
             "TourBookingPage": "https://test.tld/tour",
             "YearBuilt": 1985
         },
