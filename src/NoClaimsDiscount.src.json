@@ -4,8 +4,8 @@
     "description": "Discount in percent on the insurance premium, which increases depending on the damage-free years. It is usually used in motor liability and comprehensive insurance, but is also increasingly used in other lines.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/MotorInsuranceLiabilityCoverage#NoClaimsDiscount" },
-        { "@id": "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage#NoClaimsDiscount" }
+        { "@id": "http://schema4i.org/VehicleLiabilityCoverage#NoClaimsDiscount" },
+        { "@id": "http://schema4i.org/FullyComprehensiveCoverage#NoClaimsDiscount" }
     ],
     "base": [],
     "multipletypes": {},

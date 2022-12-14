@@ -1,6 +1,6 @@
 {
-    "type": "MotorInsuranceFullyComprehensiveCoverage",
-    "uri": "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage",
+    "type": "FullyComprehensiveCoverage",
+    "uri": "http://schema4i.org/FullyComprehensiveCoverage",
     "description": "Provides coverage for a fully comprehensive insurance damage in the context of motor insurance.",
     "links": [{
         "url": "https://openontology.org",
@@ -17,7 +17,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
-            "MotorInsuranceFullyComprehensiveCoverage": "s4i:MotorInsuranceFullyComprehensiveCoverage",
+            "FullyComprehensiveCoverage": "s4i:FullyComprehensiveCoverage",
             "ClaimFreeYears": {
                 "@id": "oo:motor/product.motor.no-claims-discount-comprehensive.claim-free-years",
                 "@type": "oo:definitions/nonnegative-integer"
@@ -41,16 +41,16 @@
         }
     },
     "playground": [{
-        "title": "A maximum MotorInsuranceFullyComprehensiveCoverage",
+        "title": "A maximum FullyComprehensiveCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/MotorInsuranceFullyComprehensiveCoverage.jsonld"
+                "http://schema4i.org/FullyComprehensiveCoverage.jsonld"
             ],
-            "@type": "MotorInsuranceFullyComprehensiveCoverage",
+            "@type": "FullyComprehensiveCoverage",
             "ClaimFreeYears": 0,
             "FullyDeductible": 500.00,
             "PartialDeductible": 150.00,

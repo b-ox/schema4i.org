@@ -30,6 +30,14 @@
                 "@id": "schema:additionalProperty",
                 "@type": "s4i:PropertyValue"
             },
+            "MaxValue": {
+                "@id": "schema:maxValue",
+                "@type": "schema:Number"
+            },
+            "MinValue": {
+                "@id": "schema:minValue",
+                "@type": "schema:Number"
+            },
             "UnitCode": {
                 "@id": "schema:unitCode",
                 "@type": "schema:Text"
@@ -59,7 +67,7 @@
         },
         "context": {}
     }, {
-        "title": "A QuantitativeValue as MoneytaryAmount",
+        "title": "A QuantitativeValue as MonetaryAmount",
         "tab": "tab-expanded",
         "input": {
             "@context": [

@@ -1,0 +1,31 @@
+{
+    "type": "NumberOfUnits",
+    "uri": "http://schema4i.org/NumberOfUnits",
+    "description": "The number of unites, e. g. the number of apartments in a house.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/MultiFamilyResidence#NumberOfUnits" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NumberOfUnits": {
+                "@id": "s4i:NumberOfUnits",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum NumberOfUnits",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "NumberOfUnits": 2
+        },
+        "context": {}
+    }]
+}

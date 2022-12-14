@@ -110,6 +110,10 @@
             "Payer": {
                 "@id": "s4i:Payer"
             },
+            "PaymentDueDate": {
+                "@id": "schema:paymentDueDate",
+                "@type": "schema:Date"
+            },
             "ReplacesOrder": {
                 "@id": "s4i:ReplacesOrder",
                 "@type": "s4i:Order"
@@ -146,6 +150,7 @@
             "AcceptedOffer": {},
             "PaymentMethod": "http://purl.org/goodrelations/v1#DirectDebit",
             "Payer": {},
+            "PaymentDueDate": "2022-12-31",
             "ReplacesOrder": {},
             "ComplementsOrder": {}
         },

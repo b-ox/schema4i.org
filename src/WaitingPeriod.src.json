@@ -1,0 +1,31 @@
+{
+    "type": "WaitingPeriod",
+    "uri": "http://schema4i.org/WaitingPeriod",
+    "description": "Describes a period (in `ISO 8601 duration format`) that someone has to wait for something, for example a delay before benefits from an insurance product can be received.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Coverage#WaitingPeriod"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "WaitingPeriod": {
+                "@id": "s4i:WaitingPeriod",
+                "@type": "schema:Duration"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample WaitingPeriod",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "WaitingPeriod": "P14D"
+        },
+        "context": {}
+    }]
+}

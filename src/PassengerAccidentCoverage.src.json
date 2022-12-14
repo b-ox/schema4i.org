@@ -1,6 +1,6 @@
 {
-    "type": "MotorInsurancePassengerAccidentCoverage",
-    "uri": "http://schema4i.org/MotorInsurancePassengerAccidentCoverage",
+    "type": "PassengerAccidentCoverage",
+    "uri": "http://schema4i.org/PassengerAccidentCoverage",
     "description": "Provides accidence insurance coverage for persons in the car when crashing.",
     "links": [{
         "url": "https://openontology.org",
@@ -17,25 +17,26 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
-            "MotorInsurancePassengerAccidentCoverage": "s4i:MotorInsurancePassengerAccidentCoverage",
-            "Deductible": {
-                "@id": "oo:motor/product.motor.coverage.passenger-cover.deductible",
-                "@type": "oo:definitions/money"
-            }
+            "PassengerAccidentCoverage": "s4i:PassengerAccidentCoverage"
         }
     },
     "playground": [{
-        "title": "A maximum MotorInsurancePassengerAccidentCoverage",
+        "title": "A maximum PassengerAccidentCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/MotorInsurancePassengerAccidentCoverage.jsonld"
+                "http://schema4i.org/PassengerAccidentCoverage.jsonld"
             ],
-            "@type": "MotorInsurancePassengerAccidentCoverage",
-            "Deductible": 150.00
+            "@type": "PassengerAccidentCoverage",
+            "Deductible": {
+                "@type": "MonetaryAmount",
+                "Value": 300,
+                "Currency": "EUR"    
+            }
         },
         "context": {}
     }]

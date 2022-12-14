@@ -38,6 +38,10 @@
             "Order": {
                 "@id": "s4i:Order",
                 "@type": "s4i:Order"
+            },
+            "License": {
+                "@id": "s4i:License",
+                "@type": "s4i:DigitalDocument"
             }
         }
     },

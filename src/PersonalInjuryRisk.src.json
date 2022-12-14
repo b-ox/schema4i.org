@@ -1,6 +1,6 @@
 {
-    "type": "HealthCareCostRisk",
-    "uri": "http://schema4i.org/HealthCareCostRisk",
+    "type": "PersonalInjuryRisk",
+    "uri": "http://schema4i.org/PersonalInjuryRisk",
     "description": "Describes a risk of of financial damage from treatments of health impediments like illness or injury to one or multiple people.",
     "links": [],
     "parents": [],
@@ -13,20 +13,20 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "HealthCareCostRisk": "s4i:HealthCareCostRisk"
+            "PersonalInjuryRisk": "s4i:PersonalInjuryRisk"
         }
     },
     "playground": [{
-        "title": "A maximum HealthCareCostRisk",
+        "title": "A maximum PersonalInjuryRisk",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Risk.jsonld",
-                "http://schema4i.org/HealthCareCostRisk.jsonld"
+                "http://schema4i.org/PersonalInjuryRisk.jsonld"
             ],
-            "@type": "HealthCareCostRisk",
+            "@type": "PersonalInjuryRisk",
             "Affects": {
                 "@type": "Person",
                 "Name": "Müller"

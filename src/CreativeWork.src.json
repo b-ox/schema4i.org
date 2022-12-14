@@ -95,6 +95,10 @@
             "ThumbnailUrl": {
                 "@id": "schema:thumbnailUrl",
                 "@type": "schema:URL"
+            },
+            "Review": {
+                "@id": "schema:review",
+                "@type": "s4i:Review"
             }
         }
     },
@@ -104,7 +108,8 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/CreativeWork.jsonld"
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Review.jsonld"
             ],
             "@type": "CreativeWork",
             "About": {},
@@ -119,7 +124,11 @@
             "License": {},
             "Offers": {},
             "Text": "Dies ist ein Freitext und der eigentliche Inhalt der Nachricht.",
-            "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png"
+            "ThumbnailUrl": "https://api.b-ox.de/resources/files/2382hb234jkhkhkj123.png",
+            "Review": {
+                "@type": "Review",
+                "ReviewBody": "Eine Bewertung dieser Nachricht."
+            }
         },
         "context": {}
     }]

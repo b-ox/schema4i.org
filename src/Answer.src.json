@@ -31,7 +31,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "Answer"
+            "@type": "Answer",
+            "Identifier": "true",
+            "Text": "Yes"
         },
         "context": {}
     }]

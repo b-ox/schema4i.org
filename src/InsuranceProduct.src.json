@@ -5,7 +5,8 @@
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/MotorInsuranceProduct" },
-        { "@id": "http://schema4i.org/LifeInsuranceProduct" }
+        { "@id": "http://schema4i.org/LifeInsuranceProduct" },
+        { "@id": "http://schema4i.org/ContentsInsuranceProduct" }
     ],
     "base": [
         { "@id": "http://schema4i.org/FinancialProduct" }
@@ -21,6 +22,10 @@
             "Insured": {
                 "@id": "s4i:Insured",
                 "@type": "s4i:Thing"
+            },
+            "License": {
+                "@id": "s4i:License",
+                "@type": "s4i:DigitalDocument"
             }
         }
     },
@@ -32,6 +37,7 @@
                 "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
@@ -54,8 +60,20 @@
             },
             "Offers": [{
                 "@type": "Coverage",
-                "Deductible": 300
-            }]
+                "Deductible": {
+                    "@type": "MonetaryAmount",
+                    "Value": 300,
+                    "Currency": "EUR"    
+                }
+            }],
+            "License": {
+                "@type": "DigitalDocument",
+                "@id": "https://api.b-ox.de/produkte/1047/bedingungen",
+                "Identifier": "terms",
+                "Name": "Vertragsbedingungen.pdf",
+                "Description": "Vertragsbedingungen",
+                "EncodingFormat": "application/pdf"
+            }
         },
         "context": {}
     }, {
@@ -84,7 +102,7 @@
                 "Identifier": "1047",
                 "Name": "IDEAL"
             },
-            "PaymentInterval": 7,
+            "PaymentInterval": "7",
             "Price": 153.21,
             "PriceCurrency": "EUR",
             "PriceSpecification": {

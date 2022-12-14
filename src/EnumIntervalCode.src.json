@@ -1,0 +1,32 @@
+{
+    "type": "EnumIntervalCode",
+    "uri": "http://schema4i.org/EnumIntervalCode",
+    "description": "A code identifying a repeating time frame, e.g. annual or daily.",
+    "links": [{
+        "url": "http://schema4i.org/EnumIntervalCode_DE",
+        "description": "Original German documentation"
+    }, {
+        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl14.htm",
+        "description": "GDV standard payment interval, appendix 14"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Offer#PaymentInterval" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "annual": "s4i:EnumIntervalCode#1",
+            "semiannual": "s4i:EnumIntervalCode#2",
+            "triannual": "s4i:EnumIntervalCode#3",
+            "quarterly": "s4i:EnumIntervalCode#4",
+            "other": "s4i:EnumIntervalCode#5",
+            "one time": "s4i:EnumIntervalCode#6",
+            "daily": "s4i:EnumIntervalCode#7",
+            "monthly": "s4i:EnumIntervalCode#8",
+            "never": "s4i:EnumIntervalCode#9"
+        }
+    }
+}

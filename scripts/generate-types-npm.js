@@ -4,7 +4,8 @@ const argv = require('minimist')(process.argv.slice(2), {
     alias: {
         o: 'outputDir',
         e: 'includeExamples',
-        s: 'strict'
+        s: 'strict',
+        q: 'quiet'
     }
 });
 
@@ -16,12 +17,15 @@ const argv = require('minimist')(process.argv.slice(2), {
         console.log('-o|--outputDir (optional): The directory where the type files will be placed. Defaults to ../types.');
         console.log('-e|--includeExamples (optional): Includes example generators for the types.');
         console.log('-s|--strict (optional): Disallow fields that are not defined in the schema on the generated types.');
+        console.log('-q|--quiet (optional): Reduce log output.');
         return;
     }
     const outputDir = argv.o || `../types`;
     const includeExamples = !!argv.e;
     const strict = !!argv.s;
-    await generateTypes(language, path.resolve(outputDir), includeExamples, strict);
+    const quiet = !!argv.q;
+    const logger = quiet ? { log: () => {} } : undefined;
+    await generateTypes(language, path.resolve(outputDir), includeExamples, strict, logger);
 })().catch((e) => {
     console.error('type generation failed with error: ', e);
     process.exit(1);
