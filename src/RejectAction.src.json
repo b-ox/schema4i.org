@@ -1,0 +1,45 @@
+{
+    "type": "RejectAction",
+    "uri": "http://schema4i.org/RejectAction",
+    "description": "The act of rejecting to/adopting an object. The object to be rejected is described in `Object`.",
+    "links": [{
+        "url": "http://schema.org/RejectAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RejectAction": "schema:RejectAction"
+        }
+    },
+    "playground": [{
+        "title": "A RejectAction referencing a License.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RejectAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/DigitalDocument.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "RejectAction",
+            "Object": [{
+                "@id": "https://api.b-ox.de/license/4711",
+                "@type": "DigitalDocument",
+                "Identifier": "4711"
+            }]
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "License",
+    "uri": "http://schema4i.org/License",
+    "description": "A document containing rules, specifications or requirements for the use of a service or platform, e.g. terms of use, data protection agreements, or privacy policies.",
+    "links": [],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "License": {
+                "@id": "s4i:License",
+                "@type": "s4i:CreativeWork"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum License",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "DigitalDocument",
+            "@id": "http://schema4i.org/licenses/tac",
+            "Identifier": "terms-and-conditions",
+            "Description": "Nutzungsbedingungen",
+            "InteractionStatistic": {
+                "@type": "InteractionCounter",
+                "InteractionType": "http://schema4i.org/AcceptAction",
+                "UserInteractionCount": 1
+            }
+        },
+        "context": {}
+    }]
+}
