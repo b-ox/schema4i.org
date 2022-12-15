@@ -1,0 +1,39 @@
+{
+    "type": "ProvisionalCover",
+    "uri": "http://schema4i.org/ProvisionalCover",
+    "description": "A ProvisionalCover is an addition to an insurance contract that provides a temporary coverage until the contract becomes valid, usually starting from the time of application.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/InsuranceProduct#ProvisionalCover"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ProvisionalCover": {
+                "@id": "s4i:ProvisionalCover",
+                "@type": "s4i:Order"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ProvisionalCover",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Order.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld"
+            ],
+            "@type": "InsuranceProduct",
+            "ProvisionalCover": {
+                "@type": "Order",
+                "OrderStatus": "C"
+            }
+        },
+        "context": {}
+    }]
+}
