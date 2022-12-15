@@ -1,0 +1,45 @@
+{
+    "type": "AcceptAction",
+    "uri": "http://schema4i.org/AcceptAction",
+    "description": "The act of committing to/adopting an object. The object to be accepted is described in `Object`.",
+    "links": [{
+        "url": "http://schema.org/AcceptAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AcceptAction": "schema:AcceptAction"
+        }
+    },
+    "playground": [{
+        "title": "An AcceptAction referencing a License.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/AcceptAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/DigitalDocument.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "AcceptAction",
+            "Object": [{
+                "@id": "https://api.b-ox.de/license/4711",
+                "@type": "DigitalDocument",
+                "Identifier": "4711"
+            }]
+        },
+        "context": {}
+    }]
+}
