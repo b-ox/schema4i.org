@@ -1,0 +1,31 @@
+{
+    "type": "NationalBankCode",
+    "uri": "http://schema4i.org/NationalBankCode",
+    "description": "Identifies a bank or credit union internationally (such as the Bankleitzahl in Germany)",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/BankOrCreditUnion#NationalBankCode"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NationalBankCode": {
+                "@id": "s4i:NationalBankCode",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample NationalBankCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "NationalBankCode": "80008000"
+        },
+        "context": {}
+    }]
+}

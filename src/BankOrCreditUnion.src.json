@@ -1,0 +1,53 @@
+{
+    "type": "BankOrCreditUnion",
+    "uri": "http://schema4i.org/BankOrCreditUnion",
+    "description": "Bank or credit union.",
+    "links": [{
+        "url": "http://schema.org/BankOrCreditUnion",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Organization" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://schema.openontology.org/",
+            "BankOrCreditUnion": "schema:BankOrCreditUnion",
+            "BIC": {
+                "@id": "oo:bank-account/bic",
+                "@type": "oo:definitions/string"
+            },
+            "NationalBankCode": {
+                "@id": "s4i:NationalBankCode",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum BankOrCreditUnion",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/BankOrCreditUnion.jsonld",
+                "http://schema4i.org/PostalAddress"
+            ],
+            "@type": "BankOrCreditUnion",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressLocality": "Düsseldorf",
+                "StreetAddress": "Musterstraße 1"
+            },
+            "BIC": "MUBADEDDXXX",
+            "LegalName": "Musterbank Düsseldorf",
+            "NationalBankCode": "80008000"
+        },
+        "context": {}
+    }]
+}
