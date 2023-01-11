@@ -9,6 +9,7 @@
     "parents": [
         { "@id": "http://schema4i.org/Action#Agent" },
         { "@id": "http://schema4i.org/Action#Participant" },
+        { "@id": "http://schema.org/BankOrCreditUnion" },
         { "@id": "http://schema4i.org/Invoice#Broker" },
         { "@id": "http://schema4i.org/Invoice#Customer" },
         { "@id": "http://schema4i.org/Invoice#Provider" },
