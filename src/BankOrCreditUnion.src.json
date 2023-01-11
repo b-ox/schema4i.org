@@ -42,11 +42,12 @@
             "Address": {
                 "@type": "PostalAddress",
                 "AddressLocality": "Düsseldorf",
-                "StreetAddress": "Musterstraße 1"
+                "PostalCode": "40212",
+                "StreetAddress": "Berliner Allee 32"
             },
-            "BIC": "MUBADEDDXXX",
-            "LegalName": "Musterbank Düsseldorf",
-            "NationalBankCode": "80008000"
+            "BIC": "DUSSDEDDXXX",
+            "LegalName": "Stadtsparkasse Düsseldorf",
+            "NationalBankCode": "30050110"
         },
         "context": {}
     }]
