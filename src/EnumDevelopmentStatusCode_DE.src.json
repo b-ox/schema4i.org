@@ -1,0 +1,28 @@
+{
+    "type": "EnumDevelopmentStatusCode_DE",
+    "uri": "http://schema4i.org/EnumDevelopmentStatusCode_DE",
+    "description": "Ein Code der den Entwicklungszustand einer Immobilie repräsentiert. Die Werte beziehen sich auf die OData Werte für den Lookup Namen 'DevelopmentStatus' aus dem RESO Data Dictionary. Siehe auch https://ddwiki.reso.org/display/DDW17/DevelopmentStatus+Lookups.",
+    "links": [{
+        "url": "http://schema4i.org/EnumDevelopmentStatusCode_DE",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Fertiggestellt": "s4i:EnumDevelopmentStatusCode#Completed",
+            "Flurstück bereit": "s4i:EnumDevelopmentStatusCode#FinishedLots",
+            "Sonstige": "s4i:EnumDevelopmentStatusCode#Other",
+            "Geplant": "s4i:EnumDevelopmentStatusCode#Proposed",
+            "Unbebautes Land": "s4i:EnumDevelopmentStatusCode#RawLand",
+            "Planiert": "s4i:EnumDevelopmentStatusCode#RoughGrade",
+            "Siehe Anmerkungen": "s4i:EnumDevelopmentStatusCode#SeeRemarks",
+            "Bauantrag genehmigt": "s4i:EnumDevelopmentStatusCode#SitePlanApproved",
+            "Bauantrag gestellt": "s4i:EnumDevelopmentStatusCode#SitePlanFiled",
+            "Im Bau": "s4i:EnumDevelopmentStatusCode#UnderConstruction"
+        }
+    }
+}

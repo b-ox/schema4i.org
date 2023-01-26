@@ -29,13 +29,33 @@
             "@type": "Building",
             "Name": "Eiffel Tower",
             "LifeCycle": [{
+                "@context": {
+                    "Identifier": {
+                        "@id": "schema:identifier",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumDevelopmentStatusCode#"
+                        }
+                    }
+                },
                 "@type": "Event",
                 "Name": "Construction",
+                "Identifier": "UnderConstruction",
                 "StartDate": "1887-01-28",
                 "EndDate": "1889-03-15"
             }, {
+                "@context": {
+                    "Identifier": {
+                        "@id": "schema:identifier",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumDevelopmentStatusCode#"
+                        }
+                    }
+                },
                 "@type": "Event",
                 "Name": "Inauguration",
+                "Identifier": "Completed",
                 "StartDate": "1889-03-31"
             }]
         },
