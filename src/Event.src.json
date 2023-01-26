@@ -9,12 +9,12 @@
     ],
     "multipletypes": {
         "StartDate": [
-            { "@id": "http://schema4i.org/Date" },
-            { "@id": "http://schema4i.org/DateTime" }
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
         ],
         "EndDate": [
-            { "@id": "http://schema4i.org/Date" },
-            { "@id": "http://schema4i.org/DateTime" }
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
         ],
         "Location": [
             { "@id": "http://schema4i.org/Place" },
