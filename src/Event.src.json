@@ -1,0 +1,91 @@
+{
+    "type": "Event",
+    "uri": "http://schema4i.org/Event",
+    "description": "An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the offers property. Repeated events may be structured as separate Event objects.",
+    "links": [{
+        "url": "http://schema.org/Event",
+        "description": "Original Schema.org type"
+}],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "StartDate": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ],
+        "EndDate": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ],
+        "Location": [
+            { "@id": "http://schema4i.org/Place" },
+            { "@id": "http://schema4i.org/PostalAddress" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Event": "schema:Event",
+            "About": {
+                "@id": "schema:about",
+                "@type": "s4i:Thing"
+            },
+            "StartDate": {
+                "@id": "schema:startDate"
+            },
+            "EndDate": {
+                "@id": "schema:endDate"
+            },
+            "Duration": {
+                "@id": "schema:duration",
+                "@type": "schema:Duration"
+            },
+            "Keywords": {
+                "@id": "schema:keywords",
+                "@type": "schema:Text"
+            },
+            "Location": {
+                "@id": "schema:location"
+            },
+            "Offers": {
+                "@id": "schema:offers",
+                "@type": "s4i:Offer"
+            },
+            "SubEvent": {
+                "@id": "schema:subEvent",
+                "@type": "s4i:Event"
+            },
+            "SuperEvent": {
+                "@id": "schema:superEvent",
+                "@type": "s4i:Event"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Event",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Place.jsonld"
+            ],
+            "@type": "Event",
+            "Name": "Live Aid",
+            "StartDate": "1985-07-13T12:00:00",
+            "EndDate": "1985-07-13T22:00:00",
+            "Location": [{
+                "@type": "Place",
+                "Name": "Wembley Stadium"
+            }, {
+                "@type": "Place",
+                "Name": "John F. Kennedy Stadium"
+            }],
+            "Duration": "T10H"
+        },
+        "context": {}
+    }]
+}

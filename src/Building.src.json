@@ -17,6 +17,10 @@
             "YearBuilt": {
                 "@id": "schema:yearBuilt",
                 "@type": "schema:Number"
+            },
+            "LifeCycle": {
+                "@id": "s4i:LifeCycle",
+                "@type": "s4i:Event"
             }
         }
     },
