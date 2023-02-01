@@ -29,6 +29,14 @@
                 "@id": "schema:amenityFeature",
                 "@type": "s4i:LocationFeatureSpecification"
             },
+            "ContainedInPlace": {
+                "@id": "schema:containedInPlace",
+                "@type": "s4i:Place"
+            },
+            "ContainsPlace": {
+                "@id": "schema:containsPlace",
+                "@type": "s4i:Place"
+            },
             "HasMap": {
                 "@id": "schema:hasMap",
                 "@type": "schema:URL"

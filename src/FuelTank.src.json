@@ -1,0 +1,41 @@
+{
+    "type": "FuelTank",
+    "uri": "http://schema4i.org/FuelTank",
+    "description": "A `FuelTank` is place where fuel like e.g. oil can be stored.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "FuelTank": "s4i:FuelTank",
+            "FuelCapacity": {
+                "@id": "schema:fuelCapacity,",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum FuelTank",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "@type": "FuelTank",
+            "FuelCapacity": {
+                "@type": "QuantitativeValue",
+                "Name": "Capacity",
+                "Value": 320,
+                "UnitCode": "LTR",
+                "UnitText": "liters"
+            }
+        },
+        "context": {}
+    }]
+}
