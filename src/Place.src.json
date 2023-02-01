@@ -30,11 +30,11 @@
                 "@type": "s4i:LocationFeatureSpecification"
             },
             "ContainedInPlace": {
-                "@id": "schema:ContainedInPlace",
+                "@id": "schema:containedInPlace",
                 "@type": "s4i:Place"
             },
             "ContainsPlace": {
-                "@id": "schema:ContainsPlace",
+                "@id": "schema:containsPlace",
                 "@type": "s4i:Place"
             },
             "HasMap": {
