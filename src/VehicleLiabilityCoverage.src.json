@@ -12,7 +12,7 @@
     ],
     "multipletypes": {
         "SumInsured": [
-            { "@id": "http://schema4i.org/SumInsured" },
+            { "@id": "http://schema4i.org/MonetaryAmount" },
             { "@id": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode" }
         ]
     },
