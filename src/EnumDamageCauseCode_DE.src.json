@@ -1,7 +1,7 @@
 {
   "type": "EnumDamageCauseCode_DE",
   "uri": "http://schema4i.org/EnumDamageCauseCode_DE",
-  "description": "Code für die Schlüsselung der Gefahren nach BiPRO.",
+  "description": "Code für die Schlüsselung der Gefahren.",
   "links": [{
       "url": "http://schema4i.org/EnumDamageCauseCode",
       "description": "Englische Dokumentation der Schlüsselwerte"

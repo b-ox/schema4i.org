@@ -1,7 +1,7 @@
 {
   "type": "EnumDamageCauseCode",
   "uri": "http://schema4i.org/EnumDamageCauseCode",
-  "description": "Code for coding the damage types according to BiPRO.",
+  "description": "Code for coding the damage causes.",
   "links": [{
       "url": "http://schema4i.org/EnumDamageCauseCode_DE",
       "description": "German translation"
