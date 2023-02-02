@@ -1,0 +1,32 @@
+{
+    "type": "DamageCause",
+    "uri": "http://schema4i.org/DamageCause",
+    "description": "Describes a damage cause, e.g. F for Fire",
+    "links": [],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DamageCause": {
+                "@id": "s4i:DamageCause",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDamageCauseCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DamageCause",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DamageCause": "F"
+        },
+        "context": {}
+    }]
+}
