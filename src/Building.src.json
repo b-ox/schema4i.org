@@ -21,6 +21,10 @@
             "LifeCycle": {
                 "@id": "s4i:LifeCycle",
                 "@type": "s4i:Event"
+            },
+            "Stories": {
+                "@id": "s4i:Stories",
+                "@type": "s4i:Stories"
             }
         }
     },
@@ -33,7 +37,8 @@
             "Name": "Sistine Chapel",
             "YearBuilt": 1481,
             "Latitude": 41.903056,
-            "Longitude": 12.454444
+            "Longitude": 12.454444,
+            "Stories": 2
         },
         "context": {}
     }]

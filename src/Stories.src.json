@@ -1,0 +1,32 @@
+{
+    "type": "Stories",
+    "uri": "http://schema4i.org/Stories",
+    "description": "The number of floors in a Building.",
+    "links": [{
+        "url": "https://ddwiki.reso.org/display/DDW17/Stories+Field",
+        "description": "Original RESO Data Dictionary type"
+    }],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Stories": {
+                "@id": "s4i:Stories",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Stories",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Stories": 3
+        },
+        "context": {}
+    }]
+}
