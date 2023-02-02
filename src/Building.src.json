@@ -24,7 +24,7 @@
             },
             "Stories": {
                 "@id": "s4i:Stories",
-                "@type": "s4i:Stories"
+                "@type": "schema:Number"
             }
         }
     },
