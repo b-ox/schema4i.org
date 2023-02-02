@@ -3,7 +3,9 @@
     "uri": "http://schema4i.org/DamageCause",
     "description": "Describes a damage cause, e.g. F for Fire",
     "links": [],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/PropertyDamageRisk" }
+    ],
     "base": [],
     "multipletypes": {},
     "context": {
