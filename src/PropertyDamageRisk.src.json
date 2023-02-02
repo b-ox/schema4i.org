@@ -34,7 +34,7 @@
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/PropertyDamageRisk.jsonld"
             ],
-            "@type": "PropertyDamageRisk for a car",
+            "@type": "PropertyDamageRisk",
             "Affects": {
                 "@type": "Car",
                 "Manufacturer": {
