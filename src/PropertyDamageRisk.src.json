@@ -13,7 +13,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "PropertyDamageRisk": "s4i:PropertyDamageRisk"
+            "PropertyDamageRisk": "s4i:PropertyDamageRisk",
+            "DamageCause": {
+                "@id": "s4i:DamageCause",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDamageCauseCode#"
+                }
+            }
         }
     },
     "playground": [{

@@ -1,0 +1,50 @@
+{
+  "type": "EnumDamageCauseCode",
+  "uri": "http://schema4i.org/EnumDamageCauseCode",
+  "description": "Code for coding the damage types according to BiPRO.",
+  "links": [{
+      "url": "http://schema4i.org/EnumDamageCauseCode_DE",
+      "description": "German translation"
+  }],
+  "parents": [],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Fire": "s4i:EnumDamageCauseCode#F",
+      "Tap Water": "s4i:EnumDamageCauseCode#L",
+      "Hail": "s4i:EnumDamageCauseCode#H",
+      "burglary": "s4i:EnumDamageCauseCode#E",
+      "Glas": "s4i:EnumDamageCauseCode#G",
+      "Overvoltage damage": "s4i:EnumDamageCauseCode#U",
+      "Utility fire": "s4i:EnumDamageCauseCode#N",
+      "Elemental damage (all damages)": "s4i:EnumDamageCauseCode#M",
+      "Deprivation": "s4i:EnumDamageCauseCode#B",
+      "Flooding": "s4i:EnumDamageCauseCode#M01",
+      "Earthquake": "s4i:EnumDamageCauseCode#M02",
+      "Snow pressure": "s4i:EnumDamageCauseCode#M03",
+      "Landslide": "s4i:EnumDamageCauseCode#M04",
+      "Volcanic eruption": "s4i:EnumDamageCauseCode#M05",
+      "Avalanche": "s4i:EnumDamageCauseCode#M06",
+      "Tailback": "s4i:EnumDamageCauseCode#M07",
+      "Subsidence": "s4i:EnumDamageCauseCode#M08",
+      "Heavy rain": "s4i:EnumDamageCauseCode#M09",
+      "Other elemental damages": "s4i:EnumDamageCauseCode#M99",
+      "Extended Coverage": "s4i:EnumDamageCauseCode#EC",
+      "Unnamed damages": "s4i:EnumDamageCauseCode#UG",
+      "Operating technology": "s4i:EnumDamageCauseCode#BT",
+      "Transport": "s4i:EnumDamageCauseCode#TR",
+      "Additional damages": "s4i:EnumDamageCauseCode#ZG",
+      "House technic": "s4i:EnumDamageCauseCode#HT",
+      "Civil unrest, strikes, lockouts, vandalism": "s4i:EnumDamageCauseCode#IU",
+      "Vehicle impact": "s4i:EnumDamageCauseCode#FA",
+      "Smoke": "s4i:EnumDamageCauseCode#RA",
+      "Lockout": "s4i:EnumDamageCauseCode#AS",
+      "Supersonic pressure": "s4i:EnumDamageCauseCode#UE",
+      "Closure of operations due to official orders or recommendations under the Infection Protection Act": "s4i:EnumDamageCauseCode#BS",
+      "Vandalism": "s4i:EnumDamageCauseCode#V"
+    }
+  }
+}
