@@ -57,7 +57,8 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Risk.jsonld",
-                "http://schema4i.org/PropertyDamageRisk.jsonld"
+                "http://schema4i.org/PropertyDamageRisk.jsonld",
+                "http://schema4i.org/EnumDamageCauseCode.jsonld"
             ],
             "@type": "PropertyDamageRisk",
             "DamageCause": "F",
