@@ -24,7 +24,7 @@
         }
     },
     "playground": [{
-        "title": "A maximum PropertyDamageRisk",
+        "title": "A PropertyDamageRisk for a car",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -46,6 +46,34 @@
                 "TSN": "AJM",
                 "VehicleIdentificationNumber": "D676SDA8",
                 "VehicleType": "112"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "A PropertyDamageRisk for a building",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/PropertyDamageRisk.jsonld",
+                "http://schema4i.org/EnumDamageCauseCode.jsonld"
+            ],
+            "@type": "PropertyDamageRisk",
+            "DamageCause": "F",
+            "Affects": {
+                "@type": "Building",
+                "Stories": 4,
+                "FloorSize": 134,
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Lindenstr.",
+                    "HouseNumber": "48-52",
+                    "PostalCode": "40233",
+                    "AddressLocality": "Düsseldorf",
+                    "AddressCountry": "D"
+                }
             }
         },
         "context": {}
