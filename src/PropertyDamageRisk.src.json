@@ -60,9 +60,9 @@
                 "http://schema4i.org/PropertyDamageRisk.jsonld"
             ],
             "@type": "PropertyDamageRisk",
+            "DamageCause": "F",
             "Affects": {
                 "@type": "Building",
-                "DamageCause": "F",
                 "Stories": 4,
                 "FloorSize": 134,
                 "Address": {
