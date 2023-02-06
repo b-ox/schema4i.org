@@ -34,7 +34,7 @@
             "Kein Keller": "s4i:EnumBasementFeatureCode#None",
             "Anderer Keller": "s4i:EnumBasementFeatureCode#Other",
             "Teilweise": "s4i:EnumBasementFeatureCode#Partial",
-            "Teilweise Fertiggestellt": "s4i:EnumBasementFeatureCode#PartiallyFinished",
+            "Teilweise fertiggestellt": "s4i:EnumBasementFeatureCode#PartiallyFinished",
             "Stauraum": "s4i:EnumBasementFeatureCode#StorageSpace",
             "Sumpfpumpe": "s4i:EnumBasementFeatureCode#SumpPump",
             "Unfertig": "s4i:EnumBasementFeatureCode#Unfinished",
