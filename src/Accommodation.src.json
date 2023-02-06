@@ -22,6 +22,10 @@
                 "@id": "s4i:FloorPlan",
                 "@type": "s4i:FloorPlan"
             },
+            "Basement": {
+                "@id": "s4i:Basement",
+                "@type": "s4i:Basement"
+            },
             "ContainedInPlace": {
                 "@id": "schema:containedInPlace",
                 "@type": "s4i:Place"
@@ -88,6 +92,13 @@
                 "http://schema4i.org/StructuredValue.jsonld"
             ],
             "@type": "Accommodation",
+            "Basement": {
+                "@type": "Basement",
+                "BasementFeature": [
+                    "Apartment",
+                    "Walk-UpAccess"
+                ]
+            },
             "ContainedInPlace": {
                 "@type": "SingleFamilyResidence"
             },

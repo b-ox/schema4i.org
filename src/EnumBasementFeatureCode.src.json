@@ -1,0 +1,45 @@
+{
+    "type": "EnumBasementFeatureCode",
+    "uri": "http://schema4i.org/EnumBasementFeatureCode",
+    "description": "A code that represents the status of a the basement of a piece of real estate. The values correspond to the OData values for the lookup name 'Basement+Field' used by the RESO Data Dictionary. See also https://ddwiki.reso.org/display/DDW17/Basement+Lookups.",
+    "links": [{
+        "url": "http://schema4i.org/EnumBasementFeatureCode_DE",
+        "description": "German translation"
+    },
+    {
+        "url": "https://ddwiki.reso.org/display/DDW17/Basement+Lookups",
+        "description": "Original RESO Data Dictionary list"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Basement#BasementFeature"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Apartment": "s4i:EnumBasementFeatureCode#Apartment",
+            "Bath/Stubbed": "s4i:EnumBasementFeatureCode#BathStubbed",
+            "Block": "s4i:EnumBasementFeatureCode#Block",
+            "Concrete": "s4i:EnumBasementFeatureCode#Concrete",
+            "Crawl Space": "s4i:EnumBasementFeatureCode#CrawlSpace",
+            "Daylight": "s4i:EnumBasementFeatureCode#Daylight",
+            "Dirt Floor": "s4i:EnumBasementFeatureCode#DirtFloor",
+            "Exterior Entry": "s4i:EnumBasementFeatureCode#ExteriorEntry",
+            "Finished": "s4i:EnumBasementFeatureCode#Finished",
+            "French Drain": "s4i:EnumBasementFeatureCode#FrenchDrain",
+            "Full": "s4i:EnumBasementFeatureCode#Full",
+            "Interior Entry": "s4i:EnumBasementFeatureCode#Interior Entry",
+            "None (Basement)": "s4i:EnumBasementFeatureCode#None(Basement)",
+            "Other (Basement)": "s4i:EnumBasementFeatureCode#Other(Basement)",
+            "Partial": "s4i:EnumBasementFeatureCode#Partially",
+            "Partially Finished": "s4i:EnumBasementFeatureCode#PartiallyFinished",
+            "Storage Space": "s4i:EnumBasementFeatureCode#StorageSpace",
+            "Sump Pump": "s4i:EnumBasementFeatureCode#SumpPump",
+            "Unfinished": "s4i:EnumBasementFeatureCode#Unfinished",
+            "Walk-Out Access": "s4i:EnumBasementFeatureCode#Walk-OutAccess",
+            "Walk-Up Access": "s4i:EnumBasementFeatureCode#Walk-UpAccess"
+        }
+    }
+}

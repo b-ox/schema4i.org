@@ -1,0 +1,44 @@
+{
+    "type": "Basement",
+    "uri": "http://schema4i.org/Basement",
+    "description": "A Basement is the part of a Accommodation that is wholly or partly below ground level.",
+    "links": [{
+        "url": "https://ddwiki.reso.org/display/DDW17/Basement+Field",
+        "description": "Original RESO Data Dictionary type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Accommodation#Basement" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Basement": "schema:Basement",
+            "BasementFeature": {
+                "@id": "s4i:BasementFeature",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumBasementFeatureCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Basement",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/EnumBasementFeatureCode.jsonld"
+            ],
+            "@type": "Basement",
+            "BasementFeature": [
+                "Apartment",
+                "Walk-UpAccess"
+            ]
+        },
+        "context": {}
+    }]
+}
