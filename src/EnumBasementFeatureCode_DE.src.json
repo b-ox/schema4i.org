@@ -1,7 +1,7 @@
 {
     "type": "EnumBasementFeatureCode_DE",
     "uri": "http://schema4i.org/EnumBasementFeatureCode",
-    "description": "A code that represents the status of a the basement of a piece of real estate. The values correspond to the OData values for the lookup name 'Basement+Field' used by the RESO Data Dictionary. See also https://ddwiki.reso.org/display/DDW17/Basement+Lookups.",
+    "description": "Ein Code, der Merkmale eines Kellers als Teil eines Gebäudes oder einer Unterkunft darstellt. Die Werte entsprechen den OData-Werten für den Lookup-Namen 'Basement Field', der vom RESO Data Dictionary verwendet wird (siehe https://ddwiki.reso.org/display/DDW17/Basement+Lookups)",
     "links": [{
         "url": "http://schema4i.org/EnumBasementFeatureCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
@@ -31,15 +31,15 @@
             "Drainage": "s4i:EnumBasementFeatureCode#FrenchDrain",
             "Komplett": "s4i:EnumBasementFeatureCode#Full",
             "Inneneingang": "s4i:EnumBasementFeatureCode#Interior Entry",
-            "Kein Keller": "s4i:EnumBasementFeatureCode#None(Basement)",
-            "Anderer Keller": "s4i:EnumBasementFeatureCode#Other(Basement)",
+            "Kein Keller": "s4i:EnumBasementFeatureCode#None",
+            "Anderer Keller": "s4i:EnumBasementFeatureCode#Other",
             "Teilweise": "s4i:EnumBasementFeatureCode#Partial",
             "Teilweise Fertiggestellt": "s4i:EnumBasementFeatureCode#PartiallyFinished",
             "Stauraum": "s4i:EnumBasementFeatureCode#StorageSpace",
             "Sumpfpumpe": "s4i:EnumBasementFeatureCode#SumpPump",
             "Unfertig": "s4i:EnumBasementFeatureCode#Unfinished",
-            "Eingang ohne Treppe": "s4i:EnumBasementFeatureCode#Walk-OutAccess",
-            "Eingang mit Treppe": "s4i:EnumBasementFeatureCode#Walk-UpAccess"
+            "Eingang ohne Treppe": "s4i:EnumBasementFeatureCode#WalkOutAccess",
+            "Eingang mit Treppe": "s4i:EnumBasementFeatureCode#WalkUpAccess"
         }
     }
 }
