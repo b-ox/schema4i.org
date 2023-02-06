@@ -18,6 +18,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Accommodation": "schema:Accommodation",
+            "AccommodationFloorPlan": {
+                "@id": "s4i:FloorPlan",
+                "@type": "s4i:FloorPlan"
+            },
             "ContainedInPlace": {
                 "@id": "schema:containedInPlace",
                 "@type": "s4i:Place"
@@ -76,6 +80,7 @@
                 "http://schema4i.org/SingleFamilyResidence.jsonld",
                 "http://schema4i.org/House.jsonld",
                 "http://schema4i.org/Accommodation",
+                "http://schema4i.org/AccommodationFloorPlan",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Thing.jsonld",
@@ -87,6 +92,13 @@
                 "@type": "SingleFamilyResidence"
             },
             "FloorLevel": "1",
+            "FloorPlan": {
+                "@type": "FloorPlan",
+                "NumberOfAccommodationUnits": {
+                    "@type": "QuantitativeValue",
+                    "Value": 4
+                }
+            },
             "FloorSize": {
                 "@type": "QuantitativeValue",
                 "Name": "Size",

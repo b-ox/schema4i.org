@@ -1,0 +1,42 @@
+{
+    "type": "FloorPlan",
+    "uri": "http://schema4i.org/FloorPlan",
+    "description": "A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams). A FloorPlan is always in the context of a particular place.",
+    "links": [{
+        "url": "http://schema.org/FloorPlan",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Accommodation#AccommodationFloorPlan"
+    }],
+    "base": [],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NumberOfAccommodationUnits": {
+                "@id": "schema:numberOfAccommodationUnits",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum FloorPlan",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/FloorPlan",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "@type": "FloorPlan",
+            "NumberOfAccommodationUnits": {
+                "@type": "QuantitativeValue",
+                "Value": 4
+            }
+        },
+        "context": {}
+    }]
+}
