@@ -96,6 +96,7 @@
                 "@type": "FloorPlan",
                 "NumberOfAccommodationUnits": {
                     "@type": "QuantitativeValue",
+                    "UnitCode": "H87",
                     "Value": 4
                 }
             },
