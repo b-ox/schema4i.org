@@ -66,6 +66,13 @@
                 "@id": "schema:petsAllowed",
                 "@type": "schema:Text"
             },
+            "RoofFeature": {
+                "@id": "s4i:RoofFeature",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumRoofFeatureCode#"
+                }
+            },
             "TourBookingPage": {
                 "@id": "schema:tourBookingPage",
                 "@type": "schema:URL"
