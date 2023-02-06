@@ -1,7 +1,7 @@
 {
     "type": "EnumBasementFeatureCode",
     "uri": "http://schema4i.org/EnumBasementFeatureCode",
-    "description": "A code that represents the status of a the basement of a piece of real estate. The values correspond to the OData values for the lookup name 'Basement+Field' used by the RESO Data Dictionary. See also https://ddwiki.reso.org/display/DDW17/Basement+Lookups.",
+    "description": "A code that represents features of a basement as part of a building or accommodation. The values correspond to the OData values for the lookup name 'Basement Field' used by the RESO Data Dictionary (see https://ddwiki.reso.org/display/DDW17/Basement+Lookups)",
     "links": [{
         "url": "http://schema4i.org/EnumBasementFeatureCode_DE",
         "description": "German translation"
@@ -30,16 +30,16 @@
             "Finished": "s4i:EnumBasementFeatureCode#Finished",
             "French Drain": "s4i:EnumBasementFeatureCode#FrenchDrain",
             "Full": "s4i:EnumBasementFeatureCode#Full",
-            "Interior Entry": "s4i:EnumBasementFeatureCode#Interior Entry",
-            "None (Basement)": "s4i:EnumBasementFeatureCode#None(Basement)",
-            "Other (Basement)": "s4i:EnumBasementFeatureCode#Other(Basement)",
+            "Interior Entry": "s4i:EnumBasementFeatureCode#InteriorEntry",
+            "None": "s4i:EnumBasementFeatureCode#None",
+            "Other": "s4i:EnumBasementFeatureCode#Other",
             "Partial": "s4i:EnumBasementFeatureCode#Partially",
             "Partially Finished": "s4i:EnumBasementFeatureCode#PartiallyFinished",
             "Storage Space": "s4i:EnumBasementFeatureCode#StorageSpace",
             "Sump Pump": "s4i:EnumBasementFeatureCode#SumpPump",
             "Unfinished": "s4i:EnumBasementFeatureCode#Unfinished",
-            "Walk-Out Access": "s4i:EnumBasementFeatureCode#Walk-OutAccess",
-            "Walk-Up Access": "s4i:EnumBasementFeatureCode#Walk-UpAccess"
+            "Walk-Out Access": "s4i:EnumBasementFeatureCode#WalkOutAccess",
+            "Walk-Up Access": "s4i:EnumBasementFeatureCode#WalkUpAccess"
         }
     }
 }
