@@ -1,0 +1,52 @@
+{
+  "type": "EnumRoomTypeCode_DE",
+  "uri": "http://schema4i.org/EnumRoomTypeCode_DE",
+  "description": "Category of an Accommodation. Die Werte beziehen sich auf die OData Werte für den Lookup Namen 'RoomType' aus dem RESO Data Dictionary. Siehe auch https://ddwiki.reso.org/display/DDW17/RoomType+Lookups.",
+  "links": [{
+      "url": "http://schema4i.org/EnumRoomTypeCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+  }],
+  "parents": [
+    { "@id": "http://schema4i.org/Room#AccommodationCategory" }
+  ],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Badezimmer": "s4i:EnumRoomTypeCode#Bathroom",
+      "Badezimmer1": "s4i:EnumRoomTypeCode#Bathroom1",
+      "Badezimmer2": "s4i:EnumRoomTypeCode#Bathroom2",
+      "Badezimmer3": "s4i:EnumRoomTypeCode#Bathroom3",
+      "Badezimmer4": "s4i:EnumRoomTypeCode#Bathroom4",
+      "Badezimmer5": "s4i:EnumRoomTypeCode#Bathroom5",
+      "Schlafzimmer": "s4i:EnumRoomTypeCode#Bedroom",
+      "Schlafzimmer1": "s4i:EnumRoomTypeCode#Bedroom1",
+      "Schlafzimmer2": "s4i:EnumRoomTypeCode#Bedroom2",
+      "Schlafzimmer3": "s4i:EnumRoomTypeCode#Bedroom3",
+      "Schlafzimmer4": "s4i:EnumRoomTypeCode#Bedroom4",
+      "Schlafzimmer5": "s4i:EnumRoomTypeCode#Bedroom5",
+      "Bonuszimmer": "s4i:EnumRoomTypeCode#BonusRoom",
+      "Hobbyraum": "s4i:EnumRoomTypeCode#Den",
+      "Esszimmer": "s4i:EnumRoomTypeCode#DiningRoom",
+      "Fitnessraum": "s4i:EnumRoomTypeCode#ExerciseRoom",
+      "Familienzimmer": "s4i:EnumRoomTypeCode#FamilyRoom",
+      "Spielzimmer": "s4i:EnumRoomTypeCode#GameRoom",
+      "Großes Wohnzimmer": "s4i:EnumRoomTypeCode#GreatRoom",
+      "Gym": "s4i:EnumRoomTypeCode#Gym",
+      "Küche": "s4i:EnumRoomTypeCode#Kitchen",
+      "Waschküche": "s4i:EnumRoomTypeCode#Laundry",
+      "Bibliothek": "s4i:EnumRoomTypeCode#Library",
+      "Wohnzimmer": "s4i:EnumRoomTypeCode#LivingRoom",
+      "Loft": "s4i:EnumRoomTypeCode#Loft",
+      "Haupt-Bad": "s4i:EnumRoomTypeCode#MasterBathroom",
+      "Haupt-Schlafzimmer": "s4i:EnumRoomTypeCode#MasterBedroom",
+      "Medienzimmer": "s4i:EnumRoomTypeCode#MediaRoom",
+      "Büro": "s4i:EnumRoomTypeCode#Office",
+      "Sauna": "s4i:EnumRoomTypeCode#Sauna",
+      "Hauswirtschaftsraum": "s4i:EnumRoomTypeCode#UtilityRoom",
+      "Workshop": "s4i:EnumRoomTypeCode#Workshop"
+    }
+  }
+}

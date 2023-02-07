@@ -18,6 +18,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Accommodation": "schema:Accommodation",
+            "AccommodationCategory": {
+                "@id": "schema:accommodationCategory",
+                "@type": "schema:Text"
+            },
             "AccommodationFloorPlan": {
                 "@id": "s4i:FloorPlan",
                 "@type": "s4i:FloorPlan"
