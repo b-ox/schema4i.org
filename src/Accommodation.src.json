@@ -22,10 +22,6 @@
                 "@id": "s4i:FloorPlan",
                 "@type": "s4i:FloorPlan"
             },
-            "Basement": {
-                "@id": "s4i:Basement",
-                "@type": "s4i:Basement"
-            },
             "ContainedInPlace": {
                 "@id": "schema:containedInPlace",
                 "@type": "s4i:Place"
@@ -65,13 +61,6 @@
             "PetsAllowed": {
                 "@id": "schema:petsAllowed",
                 "@type": "schema:Text"
-            },
-            "RoofFeature": {
-                "@id": "s4i:RoofFeature",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumRoofFeatureCode#"
-                }
             },
             "TourBookingPage": {
                 "@id": "schema:tourBookingPage",

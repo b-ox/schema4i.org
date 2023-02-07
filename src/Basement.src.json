@@ -7,7 +7,7 @@
         "description": "Original RESO Data Dictionary type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/Accommodation#Basement" }
+        { "@id": "http://schema4i.org/Building#Basement" }
     ],
     "base": [],
     "multipletypes": {},
