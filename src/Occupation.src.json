@@ -33,7 +33,7 @@
             },
             "OccupationalCategory": {
                 "@id": "s4i:DefinedTermSet",
-                "@type": "s4i:Thing"
+                "@type": "s4i:DefinedTermSet"
             },
             "Qualifications": {
                 "@id": "schema:qualifications",

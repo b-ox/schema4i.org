@@ -56,7 +56,7 @@
             },
             "Reference": {
                 "@id": "s4i:DefinedTerm",
-                "@type": "s4i:Thing"
+                "@type": "s4i:DefinedTerm"
             },
             "SameAs": {
                 "@id": "schema:sameAs",
