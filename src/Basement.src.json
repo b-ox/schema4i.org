@@ -36,7 +36,7 @@
             "@type": "Basement",
             "BasementFeature": [
                 "Apartment",
-                "Walk-UpAccess"
+                "WalkUpAccess"
             ]
         },
         "context": {}
