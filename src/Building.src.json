@@ -14,6 +14,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Building": "schema:Building",
+            "Basement": {
+                "@id": "s4i:Basement",
+                "@type": "s4i:Basement"
+            },
             "YearBuilt": {
                 "@id": "schema:yearBuilt",
                 "@type": "schema:Number"
@@ -21,6 +25,13 @@
             "LifeCycle": {
                 "@id": "s4i:LifeCycle",
                 "@type": "s4i:Event"
+            },
+            "RoofFeature": {
+                "@id": "s4i:RoofFeature",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumRoofFeatureCode#"
+                }
             },
             "Stories": {
                 "@id": "s4i:Stories",
@@ -32,12 +43,23 @@
         "title": "A maximum Building",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/EnumRoofFeatureCode.jsonld",
+                "http://schema4i.org/Basement.jsonld"
+            ],
             "@type": "Building",
+            "Basement": {
+                "@type": "Basement",
+                "BasementFeature": [
+                    "None",
+                    "WalkUpAccess"
+                ]
+            },
             "Name": "Sistine Chapel",
             "YearBuilt": 1481,
             "Latitude": 41.903056,
             "Longitude": 12.454444,
+            "RoofFeature": "SpanishTile",
             "Stories": 2
         },
         "context": {}

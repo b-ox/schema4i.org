@@ -1,0 +1,50 @@
+{
+    "type": "Room",
+    "uri": "http://schema4i.org/Room",
+    "description": "A room is a distinguishable space within a structure, usually separated from other spaces by interior walls.",
+    "links": [{
+        "url": "http://schema.org/Room",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [{ "@id": "http://schema4i.org/Accommodation" }],
+    "multipletypes": {
+        "AccommodationCategory": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumRoomTypeCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Room": "schema:Room",
+            "AccommodationCategory": {
+                "@id": "schema:accommodationCategory"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Room",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Room",
+                "http://schema4i.org/EnumDamageCauseCode.jsonld",
+                {
+                    "AccommodationCategory": {
+                        "@type": "@vocab",
+                        "@id": "http://schema.org/accommodationCategory",
+                        "@context": {
+                            "@vocab": "https://schema4i.org/EnumRoomTypeCode"
+                        }
+                    }
+                }
+            ],
+            "@type": "Room",
+            "AccommodationCategory": "LivingRoom"
+        },
+        "context": {}
+    }]
+}

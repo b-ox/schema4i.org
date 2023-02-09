@@ -1,0 +1,45 @@
+{
+    "type": "EnumBasementFeatureCode_DE",
+    "uri": "http://schema4i.org/EnumBasementFeatureCode",
+    "description": "Ein Code, der Merkmale eines Kellers als Teil eines Gebäudes oder einer Unterkunft darstellt. Die Werte entsprechen den OData-Werten für den Lookup-Namen 'Basement Field', der vom RESO Data Dictionary verwendet wird (siehe https://ddwiki.reso.org/display/DDW17/Basement+Lookups)",
+    "links": [{
+        "url": "http://schema4i.org/EnumBasementFeatureCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    },
+    {
+        "url": "https://ddwiki.reso.org/display/DDW17/Basement+Lookups",
+        "description": "Original RESO Data Dictionary liste"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Basement#BasementFeature"
+      }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Apartment": "s4i:EnumBasementFeatureCode#Apartment",
+            "Bad": "s4i:EnumBasementFeatureCode#BathStubbed",
+            "Blockbau": "s4i:EnumBasementFeatureCode#Block",
+            "Beton": "s4i:EnumBasementFeatureCode#Concrete",
+            "Kriechkeller": "s4i:EnumBasementFeatureCode#CrawlSpace",
+            "Tageslicht": "s4i:EnumBasementFeatureCode#Daylight",
+            "Schmutzboden": "s4i:EnumBasementFeatureCode#DirtFloor",
+            "Außeneingang": "s4i:EnumBasementFeatureCode#ExteriorEntry",
+            "Fertiggestellt": "s4i:EnumBasementFeatureCode#Finished",
+            "Drainage": "s4i:EnumBasementFeatureCode#FrenchDrain",
+            "Komplett": "s4i:EnumBasementFeatureCode#Full",
+            "Inneneingang": "s4i:EnumBasementFeatureCode#Interior Entry",
+            "Kein Keller": "s4i:EnumBasementFeatureCode#None",
+            "Anderer Keller": "s4i:EnumBasementFeatureCode#Other",
+            "Teilweise": "s4i:EnumBasementFeatureCode#Partial",
+            "Teilweise fertiggestellt": "s4i:EnumBasementFeatureCode#PartiallyFinished",
+            "Stauraum": "s4i:EnumBasementFeatureCode#StorageSpace",
+            "Sumpfpumpe": "s4i:EnumBasementFeatureCode#SumpPump",
+            "Unfertig": "s4i:EnumBasementFeatureCode#Unfinished",
+            "Eingang ohne Treppe": "s4i:EnumBasementFeatureCode#WalkOutAccess",
+            "Eingang mit Treppe": "s4i:EnumBasementFeatureCode#WalkUpAccess"
+        }
+    }
+}
