@@ -1,0 +1,59 @@
+{
+    "type": "EmployeeRole",
+    "uri": "http://schema4i.org/EmployeeRole",
+    "description": "A EmployeeRole describes employee relationship",
+    "links": [{
+        "url": "http://schema.org/EmployeeRole",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#HasOccupation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "EmployeeRole": "schema:EmployeeRole",
+            "HasOccupation": {
+                "@id": "s4i:Occupation",
+                "@type": "s4i:DefinedTermSet"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic EmployeeRole",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Person",
+                "http://schema4i.org/EmployeeRole"
+            ],
+            "@type": "EmployeeRole",
+            "HasOccupation": {
+                "@type": "Occupation",
+                "EducationRequirements": "Bachelor of Science",
+                "EstimatedSalary": {
+                    "@type": "MonetaryAmount",
+                    "Value": 30000,
+                    "Currency": "EUR"
+                },
+                "Name": "Softwareentwickler/in",
+                "OccupationalCategory": {
+                    "@type": "DefinedTermSet",
+                    "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                    "HasDefinedTerm": "666"
+                }, 
+                "Qualifications": "10 Jahre Erfahrung mit React.js",
+                "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
+                "Skills": ["Lernbereitschaft", "Motivation"]
+            }
+        },
+        "context": {}
+    }]
+}

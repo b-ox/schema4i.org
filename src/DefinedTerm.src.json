@@ -1,0 +1,63 @@
+{
+    "type": "DefinedTerm",
+    "uri": "http://schema4i.org/DefinedTerm",
+    "description": "A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term.",
+    "links": [{
+        "url": "http://schema.org/DefinedTerm",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/DefinedTermSet#HasDefinedTerm" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "InDefinedTermSet": [
+            { "@id": "http://schema.org/URL" },
+            { "@id": "http://schema4i.org/DefinedTermSet" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "InDefinedTermSet": {
+                "@id": "s4i:InDefinedTermSet",
+                "@type": "s4i:Thing"
+            },
+            "TermCode": {
+                "@id": "s4i:TermCode",
+                "@type": "schema:Text"
+            }
+    
+        }
+    },
+    "playground": [
+        {
+            "title": "A maximum DefinedTerm",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/DefinedTerm.jsonld"
+                ],
+                "@type": "DefinedTerm",
+                "InDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                    "Identifier": "Customer.Identifier",
+                    "Name": "Kundennummer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "5515",
+                        "Name": "AXA"
+                    }
+                },
+                "TermCode": "KNR-4711"
+            },
+            "context": {}
+        }
+    ]
+}

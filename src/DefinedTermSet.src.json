@@ -1,0 +1,38 @@
+{
+    "type": "DefinedTermSet",
+    "uri": "http://schema4i.org/DefinedTermSet",
+    "description": "A set of defined terms, for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.",
+    "links": [],
+    "parents": [{ "@id": "http://schema4i.org/Occupation#OccupationalCategory" }],
+    "base": [{ "@id": "http://schema4i.org/Thing" }],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DefinedTermSet": "s4i:DefinedTermSet",
+            "HasDefinedTerm": {
+                "@id": "s4i:DefinedTerm",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "A maximum DefinedTermSet",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/DefinedTermSet.jsonld"
+                ],
+                "@type": "DefinedTermSet",
+                "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                "HasDefinedTerm": "KNR-4711"
+            },
+            "context": {}
+        }
+    ]
+}
