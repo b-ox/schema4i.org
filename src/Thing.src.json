@@ -54,6 +54,10 @@
             "PotentialAction": {
                 "@id": "schema:potentialAction"
             },
+            "Reference": {
+                "@id": "s4i:DefinedTerm",
+                "@type": "s4i:Thing"
+            },
             "SameAs": {
                 "@id": "schema:sameAs",
                 "@type": "schema:URL"
@@ -83,7 +87,23 @@
             "DisambiguatingDescription": "Cola drink with a lot of sugar.",
             "Image": {},
             "Identifier": "CC",
-            "IdentifierReference": "XX",
+            "Reference": [
+                {
+                    "@type": "DefinedTerm",
+                    "InDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                        "Identifier": "Customer.Identifier",
+                        "Name": "Kundennummer",
+                        "Creator": {
+                            "@type": "Organization",
+                            "Identifier": "5515",
+                            "Name": "AXA"
+                        }
+                    },
+                    "TermCode": "KNR-4711"
+                }
+            ],
             "PotentialAction": [],
             "SameAs": "https://api.b-ox.de/resources/drinks/cola",
             "URL": "https://api.b-ox.de/resources/drinks/cc"

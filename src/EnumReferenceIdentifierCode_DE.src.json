@@ -1,0 +1,22 @@
+{
+    "type": "EnumReferenceIdentifierCode_DE",
+    "uri": "http://schema4i.org/EnumReferenceIdentifierCode",
+    "description": "Ein Code, der die verschiedenene Identifiert beschreibt",
+    "links": [{
+        "url": "http://schema4i.org/EnumReferenceIdentifierCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Kundennummer": "s4i:EnumReferenceIdentifierCode#CustomerIdentifier",
+            "Vertragsnummer": "s4i:EnumReferenceIdentifierCode#OrderConfirmationNumber",
+            "Antragsnummer": "s4i:EnumReferenceIdentifierCode#OrderIdentifier",
+            "Schadennummer": "s4i:EnumReferenceIdentifierCode#ClaimIdentifier"
+        }
+    }
+}
