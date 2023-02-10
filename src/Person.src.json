@@ -134,8 +134,7 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
-                "http://schema4i.org/Occupation.jsonld",
-                "http://schema.org/hasOccupation"
+                "http://schema4i.org/Occupation.jsonld"
             ],
             "@type": "Person",
             "AdditionalName": "c/o b-tix GmbH",
