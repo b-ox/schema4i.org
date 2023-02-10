@@ -25,6 +25,10 @@
         "KnowsAbout": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/Thing" }
+        ],
+        "HasOccupation": [
+            { "@id": "http://schema4i.org/Occupation" },
+            { "@id": "http://schema4i.org/EmployeeRole" }
         ]
     },
     "context": {
@@ -77,6 +81,9 @@
                 "@id": "schema:givenName",
                 "@type": "schema:Text"
             },
+            "HasOccupation": {
+                "@id": "schema:hasOccupation"
+            },
             "HonorificPrefix": {
                 "@id": "schema:honorificPrefix",
                 "@type": "schema:Text"
@@ -126,7 +133,8 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Person.jsonld"
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Occupation.jsonld"
             ],
             "@type": "Person",
             "AdditionalName": "c/o b-tix GmbH",
@@ -139,8 +147,11 @@
             "FaxNumber": "0211 41608 100",
             "Gender": "Male",
             "GivenName": "Markus",
+            "HasOccupation": {
+                "@type": "Occupation",
+                "Name": "CEO"
+            },        
             "HonorificPrefix": "Dr.",
-            "JobTitle": "CEO",
             "KnowsAbout": ["Insurances"],
             "MemberOf": {},
             "Nationality": "D",
