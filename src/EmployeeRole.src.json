@@ -55,5 +55,45 @@
             }
         },
         "context": {}
+    },{
+        "title": "A Person with the attribute HasOccupation as EmployeeRole",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema.org/hasOccupation",
+                "http://schema4i.org/EmployeeRole"
+            ],
+            "@type": "Person",
+            "BirthDate": "1973-11-16",
+            "Email": "noreply@b-tix.de",
+            "HasOccupation": {
+                "@type": "EmployeeRole",
+                "HasOccupation": {
+                    "@type": "Occupation",
+                    "EducationRequirements": "Bachelor of Science",
+                    "EstimatedSalary": {
+                        "@type": "MonetaryAmount",
+                        "Value": 30000,
+                        "Currency": "EUR"
+                    },
+                    "Name": "Softwareentwickler/in",
+                    "OccupationalCategory": {
+                        "@type": "DefinedTermSet",
+                        "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                        "HasDefinedTerm": "666"
+                    }, 
+                    "Qualifications": "10 Jahre Erfahrung mit React.js",
+                    "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
+                    "Skills": ["Lernbereitschaft", "Motivation"]
+                }
+            },  
+            "Name": "Heussen",
+            "GivenName": "Markus",
+            "Telephone": "+49 211 41608 400"
+        },
+        "context": {}
     }]
 }

@@ -32,7 +32,7 @@
                 "@id": "schema:estimatedSalary"
             },
             "OccupationalCategory": {
-                "@id": "s4i:DefinedTermSet",
+                "@id": "schema:occupationalCategory",
                 "@type": "s4i:DefinedTermSet"
             },
             "Qualifications": {

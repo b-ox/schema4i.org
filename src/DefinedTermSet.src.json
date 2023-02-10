@@ -15,9 +15,9 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DefinedTermSet": "s4i:DefinedTermSet",
+            "DefinedTermSet": "schema:DefinedTermSet",
             "HasDefinedTerm": {
-                "@id": "s4i:DefinedTerm",
+                "@id": "schema:DefinedTerm",
                 "@type": "s4i:DefinedTerm"
             }
         }

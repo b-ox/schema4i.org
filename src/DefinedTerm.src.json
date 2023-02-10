@@ -23,12 +23,12 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
+            "DefinedTerm": "schema:DefinedTerm",
             "InDefinedTermSet": {
-                "@id": "s4i:InDefinedTermSet",
-                "@type": "s4i:Thing"
+                "@id": "schema:InDefinedTermSet"
             },
             "TermCode": {
-                "@id": "s4i:TermCode",
+                "@id": "schema:termCode",
                 "@type": "schema:Text"
             }
     
@@ -41,7 +41,13 @@
             "input": {
                 "@context": [
                     "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/DefinedTerm.jsonld"
+                    "http://schema4i.org/DefinedTerm.jsonld",
+                    {
+                        "InDefinedTermSet": {
+                          "@id": "http://schema.org/inDefinedTermSet",
+                          "@type": "http://schema4i.org/DefinedTermSet"
+                        }
+                      }
                 ],
                 "@type": "DefinedTerm",
                 "InDefinedTermSet": {
