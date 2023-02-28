@@ -55,7 +55,7 @@
                 "@id": "schema:potentialAction"
             },
             "Reference": {
-                "@id": "s4i:DefinedTerm",
+                "@id": "s4i:Reference",
                 "@type": "s4i:DefinedTerm"
             },
             "SameAs": {
