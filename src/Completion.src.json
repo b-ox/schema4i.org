@@ -1,0 +1,41 @@
+{
+    "type": "Completion",
+    "uri": "http://schema4i.org/Completion",
+    "description": "Includes information about the answering progress of a Questionnaire. It includes a list of AskActions. Each AskAction describes the number of potentially included Questions by containing an ItemList with the NumberOfItems property set.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Questionnaire#Completion"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Completion": {
+                "@id": "s4i:Completion",
+                "@type": "s4i:AskAction"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Completion",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/AskAction.jsonld",
+                "http://schema4i.org/ItemList.jsonld"
+            ],
+            "Completion": {
+                "@type": "AskAction",
+                "Question": {
+                    "@type": "ItemList",
+                    "NumberOfItems": 5
+                }
+            }
+        },
+        "context": {}
+    }]
+}

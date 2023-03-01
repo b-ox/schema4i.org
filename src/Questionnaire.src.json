@@ -21,6 +21,10 @@
             "Questionnaire": "schema:Questionnaire",
             "Action": {
                 "@id": "schema:Action"
+            },
+            "Completion": {
+                "@id": "s4i:Completion",
+                "@type": "s4i:AskAction"
             }
         }
     },
@@ -53,6 +57,19 @@
                 "Question": {
                     "@type": "Question",
                     "Description": "When?"
+                }
+            }],
+            "Completion": [{
+                "@type": "AskAction",
+                "Question": {
+                    "@type": "ItemList",
+                    "NumberOfItems": 1
+                }
+            }, {
+                "@type": "AskAction",
+                "Question": {
+                    "@type": "ItemList",
+                    "NumberOfItems": 1
                 }
             }]
         },
