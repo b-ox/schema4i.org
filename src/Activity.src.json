@@ -1,49 +1,39 @@
 {
-    "type": "BusinessActivity",
-    "uri": "http://schema4i.org/BusinessActivity",
-    "description": "An operation that a business entity, such as an Organization, engages in to generate revenue or achieve its objectives.",
+    "type": "Activity",
+    "uri": "http://schema4i.org/Activity",
+    "description": "A generic term used to describe single or continuous operations performed by individuals or companies.",
     "links": [],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Activity" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {
-        "Category": [
-            {"@id": "http://schema.org/Text"},
-            {"@id": "http://schema4i.org/EnumLineOfBusinessCode"}
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "BusinessActivity": "s4i:BusinessActivity",
-            "Category": {
-                "@id": "schema:category"
-            }
+            "Activity": "s4i:Activity"
         }
     },
     "playground": [{
-        "title": "A maximum BusinessActivity",
+        "title": "A maximum Activity",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/BusinessActivity.jsonld",
                 "http://schema4i.org/Activity.jsonld",
                 "http://schema4i.org/DefinedTerm.jsonld",
                 "http://schema4i.org/DefinedTermSet.jsonld"
             ],
-            "@type": "BusinessActivity",
+            "@type": "Activity",
             "Name": "Buchhaltung",
-            "Category": ["040", "140", "172", "703"],
             "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen",
             "Reference": {
                 "@type": "DefinedTerm",
                 "InDefinedTermSet": {
                     "@type": "DefinedTermSet",
-                    "@id": "https://api.b-ox.de/termset/BusinessActivity/5414",
+                    "@id": "https://api.b-ox.de/termset/Activity/5414",
                     "Creator": {
                         "@type": "Organization",
                         "Identifier": "5414",
