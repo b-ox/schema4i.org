@@ -23,7 +23,12 @@
         "title": "Sample Reference without EnumReferenceIdentifierCode",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "https//schema4i.org/Thing.jsonld",
+                "https//schema4i.org/CreativeWork.jsonld"
+                "https//schema4i.org/DefinedTerm.jsonld",
+                "https//schema4i.org/DefinedTermSet.jsonld"                
+            ],
             "Reference": [
                 {
                     "@type": "DefinedTerm",
@@ -48,7 +53,10 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/EnumReferenceIdentifierCode.jsonld"
+                "https//schema4i.org/Thing.jsonld",
+                "https//schema4i.org/CreativeWork.jsonld"
+                "https//schema4i.org/DefinedTerm.jsonld",
+                "https//schema4i.org/DefinedTermSet.jsonld"                
             ],
             "Reference": [
                 {
@@ -73,7 +81,12 @@
         "title": "Sample Reference without EnumReferenceIdentifierCode and without List",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "https//schema4i.org/Thing.jsonld",
+                "https//schema4i.org/CreativeWork.jsonld"
+                "https//schema4i.org/DefinedTerm.jsonld",
+                "https//schema4i.org/DefinedTermSet.jsonld"                
+            ],
             "Reference": [
                 {
                     "@type": "DefinedTerm",
