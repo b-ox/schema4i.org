@@ -33,7 +33,14 @@
                 "http://schema4i.org/BusinessActivity.jsonld",
                 "http://schema4i.org/Activity.jsonld",
                 "http://schema4i.org/DefinedTerm.jsonld",
-                "http://schema4i.org/DefinedTermSet.jsonld"
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld",
+                {
+                    "Category": {
+                        "@id": "http://schema.org/category",
+                        "@type": "http://schema4i.org/EnumLineOfBusinessCode"
+                    }
+                }
             ],
             "@type": "BusinessActivity",
             "Name": "Buchhaltung",
@@ -42,8 +49,8 @@
             "Reference": {
                 "@type": "DefinedTerm",
                 "InDefinedTermSet": {
-                    "@type": "DefinedTermSet",
                     "@id": "https://api.b-ox.de/termset/BusinessActivity/5414",
+                    "@type": "DefinedTermSet",
                     "Creator": {
                         "@type": "Organization",
                         "Identifier": "5414",
