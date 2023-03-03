@@ -19,9 +19,13 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "EmployeeRole": "schema:EmployeeRole",
+            "EmployementStatus": {
+                "@id": "s4i:EmployementStatus",
+                "@type": "s4i:EnumEmploymentStatusCode"
+            },
             "HasOccupation": {
                 "@id": "s4i:Occupation",
-                "@type": "s4i:DefinedTermSet"
+                "@type": "s4i:Occupation"
             }
         }
     },
@@ -30,9 +34,13 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing",
-                "http://schema4i.org/Person",
-                "http://schema4i.org/EmployeeRole"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/EmployeeRole.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
             ],
             "@type": "EmployeeRole",
             "HasOccupation": {
@@ -43,19 +51,20 @@
                     "Value": 30000,
                     "Currency": "EUR"
                 },
+                "EmploymentStatus": "01",
                 "Name": "Softwareentwickler/in",
                 "OccupationalCategory": {
                     "@type": "DefinedTermSet",
                     "@id": "https://api.b-ox.de/datalake/occupation/5515",
                     "HasDefinedTerm": "666"
-                }, 
+                },
                 "Qualifications": "10 Jahre Erfahrung mit React.js",
                 "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
                 "Skills": ["Lernbereitschaft", "Motivation"]
             }
         },
         "context": {}
-    },{
+    }, {
         "title": "A Person with the attribute HasOccupation as EmployeeRole",
         "tab": "tab-expanded",
         "input": {
@@ -63,8 +72,11 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
-                "http://schema.org/hasOccupation",
-                "http://schema4i.org/EmployeeRole"
+                "http://schema4i.org/EmployeeRole.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
             ],
             "@type": "Person",
             "BirthDate": "1973-11-16",
@@ -84,12 +96,12 @@
                         "@type": "DefinedTermSet",
                         "@id": "https://api.b-ox.de/datalake/occupation/5515",
                         "HasDefinedTerm": "666"
-                    }, 
+                    },
                     "Qualifications": "10 Jahre Erfahrung mit React.js",
                     "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
                     "Skills": ["Lernbereitschaft", "Motivation"]
                 }
-            },  
+            },
             "Name": "Heussen",
             "GivenName": "Markus",
             "Telephone": "+49 211 41608 400"
