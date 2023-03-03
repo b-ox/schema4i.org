@@ -1,7 +1,7 @@
 {
     "type": "Thing",
     "uri": "http://schema4i.org/Thing",
-    "description": "The most generic type of item.",
+    "description": "The most generic type of item. The attribute 'IdentifierReference' is now deprecated. Instead the more detailed attribute 'Reference' should be used.",
     "links": [{
         "url": "http://schema.org/Thing",
         "description": "Original Schema.org type"
@@ -55,7 +55,7 @@
                 "@id": "schema:potentialAction"
             },
             "Reference": {
-                "@id": "s4i:DefinedTerm",
+                "@id": "s4i:Reference",
                 "@type": "s4i:DefinedTerm"
             },
             "SameAs": {
