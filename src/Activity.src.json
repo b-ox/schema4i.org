@@ -28,20 +28,7 @@
             ],
             "@type": "Activity",
             "Name": "Buchhaltung",
-            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen",
-            "Reference": {
-                "@type": "DefinedTerm",
-                "InDefinedTermSet": {
-                    "@type": "DefinedTermSet",
-                    "@id": "https://api.b-ox.de/termset/Activity/5414",
-                    "Creator": {
-                        "@type": "Organization",
-                        "Identifier": "5414",
-                        "Name": "Münchener Verein"
-                    }
-                },
-                "TermCode": "4711"
-            }
+            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen"
         },
         "context": {}
     }]
