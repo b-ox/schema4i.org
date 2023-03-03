@@ -1,0 +1,35 @@
+{
+    "type": "Activity",
+    "uri": "http://schema4i.org/Activity",
+    "description": "A generic term used to describe single or continuous operations performed by individuals or companies.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Activity": "s4i:Activity"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Activity",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Activity.jsonld",
+                "http://schema4i.org/DefinedTerm.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
+            ],
+            "@type": "Activity",
+            "Name": "Buchhaltung",
+            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen"
+        },
+        "context": {}
+    }]
+}
