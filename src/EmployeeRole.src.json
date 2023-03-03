@@ -25,7 +25,7 @@
             },
             "HasOccupation": {
                 "@id": "s4i:Occupation",
-                "@type": "s4i:DefinedTermSet"
+                "@type": "s4i:Occupation"
             }
         }
     },
@@ -34,9 +34,13 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing",
-                "http://schema4i.org/Person",
-                "http://schema4i.org/EmployeeRole"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/EmployeeRole.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
             ],
             "@type": "EmployeeRole",
             "HasOccupation": {
@@ -68,8 +72,11 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
-                "http://schema.org/hasOccupation",
-                "http://schema4i.org/EmployeeRole"
+                "http://schema4i.org/EmployeeRole.jsonld",
+                "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
             ],
             "@type": "Person",
             "BirthDate": "1973-11-16",
