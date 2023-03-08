@@ -214,6 +214,30 @@ class TypeDefinition {
             throw new Error(`generating type ${this.type} failed: ${e.message}`);
         }
     }
+
+    listAncestors(/** @type {TypeDefinition[]}*/ typeDefinitions) {
+        const directAncestors = typeDefinitions.filter(t => this.baseTypes.includes(t.type));
+        /** @type {TypeDefinition[]}*/
+        const allAncestors = [];
+        let nextGenAncestors = directAncestors;
+        do {
+            allAncestors.push(...nextGenAncestors);
+            nextGenAncestors = typeDefinitions.filter(t => !allAncestors.includes(t) && nextGenAncestors.some(a => a.baseTypes.includes(t.type)));
+        } while (nextGenAncestors.length > 0);
+        return allAncestors;
+    }
+
+    listDescendants(/** @type {TypeDefinition[]}*/ typeDefinitions) {
+        const directDescendants = typeDefinitions.filter(t => t.baseTypes.includes(this.type));
+        /** @type {TypeDefinition[]}*/
+        const allDescendants = [];
+        let nextGenDescendants = directDescendants;
+        do {
+            allDescendants.push(...nextGenDescendants);
+            nextGenDescendants = typeDefinitions.filter(t => !allDescendants.includes(t) && nextGenDescendants.some(a => t.baseTypes.includes(a.type)));
+        } while (nextGenDescendants.length > 0);
+        return allDescendants;
+    }
 }
 
 const LANGUAGES = {
@@ -270,6 +294,10 @@ import * as s4i from './schema4i';
 
 const ENUMS = new Map<string, Map<string, string>>();
 
+const ANCESTORS = new Map<string, string[]>();
+
+const DESCENDANTS = new Map<string, string[]>();
+
 function isType(obj: any, type: string) {
     return typeof obj === 'object' && (Array.isArray(obj["@type"]) ? obj["@type"].indexOf(type) > -1 : obj["@type"] === type);
 }
@@ -278,6 +306,8 @@ function isType(obj: any, type: string) {
             for (const typeDefinition of typeDefinitions) {
                 if (!typeDefinition.simpleType) {
                     const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type));
+                    const ancestors = typeDefinition.listAncestors(typeDefinitions);
+                    const descendants = typeDefinition.listDescendants(typeDefinitions);
                     output += `
 /**
  * Checks if the given object is an instance of ${typeDefinition.type}.
@@ -287,6 +317,21 @@ export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.
 }
 
 `;
+
+                    if (ancestors.length > 0) {
+
+                        output += `
+ANCESTORS.set('${typeDefinition.type}', ['${ joinWithLineBreaks(ancestors.map(a => a.type), `', '`, `',\n    '`) }']);
+`;
+
+                    }
+                    if (descendants.length > 0) {
+
+                        output += `
+DESCENDANTS.set('${typeDefinition.type}', ['${ joinWithLineBreaks(descendants.map(a => a.type), `', '`, `',\n    '`) }']);
+`;
+
+                    }
                 }
             }
             output += `
@@ -322,6 +367,14 @@ export function listEnumValues(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'
     const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
     const enumDef = ENUMS.get(enumName);
     return enumDef ? [...enumDef.values()] : undefined;
+}
+
+export function getAncestors(type: string): string[] {
+    return ANCESTORS.get(type)?.slice() ?? [];
+}
+
+export function getDescendants(type: string): string[] {
+    return DESCENDANTS.get(type)?.slice() ?? [];
 }
 
 `;
