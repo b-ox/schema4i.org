@@ -44,7 +44,13 @@ const PRIMITIVE_TYPE_MAPPINGS = {
     '@vocab': 'string' // enums not in the s4i schema
 }
 
-function processType(/** @type {string}*/ type, typeObject, ignoreMissing) {
+/**
+ * @param {string} type
+ * @param {any} typeObject
+ * @param {boolean} ignoreMissing
+ * @returns {string}
+ */
+function processType(type, typeObject, ignoreMissing) {
     const prefixedType = type.replace('http://schema.org/', 'schema:').replace('https://schema.openontology.org/', 'oo:');
     if (type === '@vocab' && typeObject['@context'] && (typeObject['@context']['@vocab'].startsWith('s4i:') || typeObject['@context']['@vocab'].startsWith('http://schema.org/'))) {
         type = typeObject['@context']['@vocab'].replace('#', '');
@@ -58,6 +64,11 @@ function processType(/** @type {string}*/ type, typeObject, ignoreMissing) {
     }
 }
 
+/**
+ * @param {string} doc 
+ * @param {number} indentation 
+ * @returns {string}
+ */
 function formatDoc(doc, indentation = 0) {
     let description = (doc || '').replace(/\n|\r|\t|\\[nrt]/g, '');
     const descriptionParts = [];
@@ -72,7 +83,15 @@ function formatDoc(doc, indentation = 0) {
     return descriptionParts.join('\n') || `${' '.repeat(indentation)} *`;
 }
 
-function joinWithLineBreaks(values, joiner, lbJoiner, maxLength = 80) {
+/**
+ * 
+ * @param {string[]} values 
+ * @param {string} joiner 
+ * @param {string} lbJoiner 
+ * @param {number} maxLength 
+ * @returns {string}
+ */
+function joinWithLineBreaks(values, joiner, lbJoiner, maxLength = 80) {
     const lineParts = [];
     let currentPart = [];
     for (const value of values) {
@@ -90,12 +109,23 @@ function joinWithLineBreaks(values, joiner, lbJoiner, maxLength = 80) {
 }
 
 class FieldDefinition {
+    /** @type {string} */
     name;
+    /** @type {string} */
     description;
+    /** @type {string[]} */
     types;
+    /** @type {'one'|'many'|'any'} */
     cardinality;
+    /** @type {boolean} */
     required;
 
+    /**
+     * @param {string} name 
+     * @param {string} description 
+     * @param {string[]} types 
+     * @param {string} typesHint 
+     */
     constructor(name, description, types, typesHint = '') {
         this.name = name;
         this.description = description;
@@ -107,13 +137,21 @@ class FieldDefinition {
 
 class TypeDefinition {
     context;
+    /** @type {string} */
     type;
+    /** @type {string} */
     description;
+    /** @type {string[]} */
     baseTypes = [];
+    /** @type {string} */
     url;
+    /** @type {FieldDefinition[]} */
     fields = [];
+    /** @type {FieldDefinition} */
     simpleType;
+    /** @type {{title: string, data: string}[]} */
     examples = [];
+    /** @type {Record<string, string>} */
     enumValues;
     constructor(srcFile, schemaOrgDefs) {
         try {
@@ -124,6 +162,7 @@ class TypeDefinition {
             if (!srcFile.context) {
                 throw new Error(`type ${this.type} has no context`);
             }
+            /** @type {FieldDefinition} */
             let thisDef;
             const context = srcFile.context['@context'];
             const fieldDefs = Object.entries(context).filter(([_, entry]) => typeof entry === 'object');
