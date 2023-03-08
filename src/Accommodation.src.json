@@ -10,7 +10,9 @@
         { "@id": "http://schema4i.org/Apartment" },
         { "@id": "http://schema4i.org/House" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
