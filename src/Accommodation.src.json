@@ -11,7 +11,7 @@
         { "@id": "http://schema4i.org/House" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/Place" }
     ],
     "multipletypes": {},
     "context": {
@@ -27,10 +27,6 @@
             "AccommodationFloorPlan": {
                 "@id": "s4i:FloorPlan",
                 "@type": "s4i:FloorPlan"
-            },
-            "ContainedInPlace": {
-                "@id": "schema:containedInPlace",
-                "@type": "s4i:Place"
             },
             "FloorLevel": {
                 "@id": "schema:floorLevel",
