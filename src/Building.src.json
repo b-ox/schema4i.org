@@ -7,7 +7,12 @@
     "base": [
         { "@id": "http://schema4i.org/Place" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "ConstructionClass": [
+            {"@id": "http://schema.org/Text"},
+            {"@id": "http://schema4i.org/EnumConstructionClassCode"}
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -17,6 +22,9 @@
             "Basement": {
                 "@id": "s4i:Basement",
                 "@type": "s4i:Basement"
+            },
+            "ConstructionClass": {
+                "@id": "s4i:ConstructionClass"
             },
             "YearBuilt": {
                 "@id": "schema:yearBuilt",
@@ -45,6 +53,7 @@
         "input": {
             "@context": [
                 "http://schema4i.org/EnumRoofFeatureCode.jsonld",
+                "http://schema4i.org/EnumConstructionClassCode.jsonld",
                 "http://schema4i.org/Basement.jsonld"
             ],
             "@type": "Building",
@@ -60,7 +69,8 @@
             "Latitude": 41.903056,
             "Longitude": 12.454444,
             "RoofFeature": "SpanishTile",
-            "Stories": 2
+            "Stories": 2,
+            "ConstructionClass": "2"
         },
         "context": {}
     }]
