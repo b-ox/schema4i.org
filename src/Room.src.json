@@ -6,7 +6,9 @@
         "url": "http://schema.org/Room",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Place#ContainsPlace" }
+    ],
     "base": [{ "@id": "http://schema4i.org/Accommodation" }],
     "multipletypes": {
         "AccommodationCategory": [
