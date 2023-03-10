@@ -1,7 +1,7 @@
 {
     "type": "EnumConstructionClassCode",
     "uri": "http://schema4i.org/EnumConstructionClassCode",
-    "description": "A Code that is a classification of a building structure depending on its construction method",
+    "description": "A Code that is a classification of a building structure depending on its construction method. The classes are used specifically in the German insurance industry to classify buildings with regard to their fire hazard.",
     "links": [{
         "url": "http://schema4i.org/EnumConstructionClassCode_DE",
         "description": "Original German documentation"
