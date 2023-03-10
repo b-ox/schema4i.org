@@ -54,7 +54,13 @@
             "@context": [
                 "http://schema4i.org/EnumRoofFeatureCode.jsonld",
                 "http://schema4i.org/EnumConstructionClassCode.jsonld",
-                "http://schema4i.org/Basement.jsonld"
+                "http://schema4i.org/Basement.jsonld",
+                {
+                    "ConstructionClass": {
+                        "@id": "http://schema4i.org/ConstructionClass",
+                        "@type": "http://schema4i.org/EnumConstructionClassCode"
+                    }
+                }
             ],
             "@type": "Building",
             "Basement": {
