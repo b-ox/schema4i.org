@@ -1,7 +1,7 @@
 {
     "type": "EnumConstructionClassCode_DE",
     "uri": "http://schema4i.org/EnumConstructionClassCode",
-    "description": "Ein Code, der die Bauart eines Gebäudes beschreibt",
+    "description": "Ein Code, der die Bauart eines Gebäudes beschreibt. Die Klassen werden speziell in der Deutschen Versicherungswirtschaft zur klassifizierung von Gebäuden hinsichtlich ihrer Feuergefährlichkeit genutzt.",
     "links": [{
         "url": "http://schema4i.org/EnumConstructionClassCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
