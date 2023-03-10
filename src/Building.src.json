@@ -19,10 +19,6 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Building": "schema:Building",
-            "Basement": {
-                "@id": "s4i:Basement",
-                "@type": "s4i:Basement"
-            },
             "BuilderName": {
                 "@id": "s4i:BuilderName",
                 "@type": "schema:Text"
@@ -74,7 +70,7 @@
                 }
             ],
             "@type": "Building",
-            "Basement": {
+            "ContainsPlace": {
                 "@type": "Basement",
                 "BasementFeature": [
                     "None",
