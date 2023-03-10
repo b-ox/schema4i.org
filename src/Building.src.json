@@ -9,8 +9,8 @@
     ],
     "multipletypes": {
         "ConstructionClass": [
-            {"@id": "http://schema.org/Text"},
-            {"@id": "http://schema4i.org/EnumConstructionClassCode"}
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumConstructionClassCode" }
         ]
     },
     "context": {
@@ -56,13 +56,20 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
+                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/Basement.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/EnumRoofFeatureCode.jsonld",
                 "http://schema4i.org/EnumConstructionClassCode.jsonld",
                 "http://schema4i.org/Basement.jsonld",
                 {
                     "ConstructionClass": {
                         "@id": "http://schema4i.org/ConstructionClass",
-                        "@type": "http://schema4i.org/EnumConstructionClassCode"
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumConstructionClassCode#"
+                        }
                     }
                 }
             ],
