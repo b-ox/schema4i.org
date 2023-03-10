@@ -23,6 +23,10 @@
                 "@id": "s4i:Basement",
                 "@type": "s4i:Basement"
             },
+            "BuilderName": {
+                "@id": "s4i:BuilderName",
+                "@type": "schema:Text"
+            },
             "ConstructionClass": {
                 "@id": "s4i:ConstructionClass"
             },
@@ -76,7 +80,8 @@
             "Longitude": 12.454444,
             "RoofFeature": "SpanishTile",
             "Stories": 2,
-            "ConstructionClass": "2"
+            "ConstructionClass": "2",
+            "BuilderName": "Baccio Pontelli"
         },
         "context": {}
     }]
