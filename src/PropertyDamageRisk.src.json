@@ -20,6 +20,13 @@
                 "@context": {
                     "@vocab": "s4i:EnumDamageCauseCode#"
                 }
+            },
+            "PropertyUsage": {
+                "@id": "s4i:PropertyUsage",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumPropertyUsageCode#"
+                }
             }
         }
     },
@@ -58,10 +65,12 @@
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Risk.jsonld",
                 "http://schema4i.org/PropertyDamageRisk.jsonld",
-                "http://schema4i.org/EnumDamageCauseCode.jsonld"
+                "http://schema4i.org/EnumDamageCauseCode.jsonld",
+                "http://schema4i.org/EnumPropertyUsageCode.jsonld"
             ],
             "@type": "PropertyDamageRisk",
             "DamageCause": "F",
+            "PropertyUsage": "01",
             "Affects": {
                 "@type": "Building",
                 "Stories": 4,
