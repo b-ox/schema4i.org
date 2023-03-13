@@ -15,8 +15,8 @@
     "@context": {
       "@version": 1.1,
       "s4i": "http://schema4i.org/",
-      "selbstgenutzt": "s4i:EnumPropertyUsageCode#selbstgenutzt",
-      "fremdgenutzt": "s4i:EnumPropertyUsageCode#fremdgenutzt"
+      "selbstgenutzt": "s4i:EnumPropertyUsageCode#01",
+      "fremdgenutzt": "s4i:EnumPropertyUsageCode#02"
     }
   }
 }

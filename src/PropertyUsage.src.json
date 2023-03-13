@@ -24,7 +24,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "PropertyUsage": "fremdgenutzt"
+            "PropertyUsage": "02"
         },
         "context": {}
     }]

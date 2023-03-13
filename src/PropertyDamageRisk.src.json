@@ -70,7 +70,7 @@
             ],
             "@type": "PropertyDamageRisk",
             "DamageCause": "F",
-            "PropertyUsage": "selbstgenutzt",
+            "PropertyUsage": "01",
             "Affects": {
                 "@type": "Building",
                 "Stories": 4,
