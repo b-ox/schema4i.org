@@ -8,16 +8,18 @@
       "description": "Original German documentation"
     }
   ],
-  "parents": [],
+  "parents": [
+    { "@id": "http://schema4i.org/SignaturType" }
+  ],
   "base": [],
   "multipletypes": {},
   "context": {
     "@context": {
       "@version": 1.1,
       "s4i": "http://schema4i.org/",
-      "No signature; declaration of intent is made e.g. orally": "s4i:EnumSignatureTypeCode#00",
+      "No explicit signature; declaration of intent is made e.g. by verbal agreement or click confirmation": "s4i:EnumSignatureTypeCode#00",
       "Electronic signing of a document by means of an advanced electronic signature e.g. ePen or DigiPad": "s4i:EnumSignatureTypeCode#01",
-      "Electronic signing of a document by means of a qualified electronic signature, e.g. nPA": "s4i:EnumSignatureTypeCode#02",
+      "Electronic signing of a document by means of a qualified electronic / digital signature by certificate": "s4i:EnumSignatureTypeCode#02",
       "Handwritten signature on printed paper": "s4i:EnumSignatureTypeCode#03"
     }
   }
