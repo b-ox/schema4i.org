@@ -1,0 +1,38 @@
+{
+    "type": "SignatureType",
+    "uri": "http://schema4i.org/SignatureType",
+    "description": "An SignatureType descripes how a (digital) document was signed",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Order#SignatureType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SignatureType": {
+                "@id": "s4i:SignatureType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSignatureTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample SignatureType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/SignatureType.jsonld"
+            ],
+            "SingatureType": "03"
+        },
+        "context": {}
+    }]
+}
