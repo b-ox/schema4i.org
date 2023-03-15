@@ -7,7 +7,7 @@
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
     "parents": [{
-        "@id": "http://schema4i.org/Order#SignatureType"
+        "@id": "http://schema4i.org/SignatureType"
       }],
     "base": [],
     "multipletypes": {},
@@ -15,9 +15,9 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Keine Unterschrift; Abgabe der Willenserklärung erfolgt z. B. mündlich": "s4i:EnumSignatureTypeCode#00",
+            "Keine Unterschrift; Abgabe der Willenserklärung erfolgt z. B. mündlich oder per Klick": "s4i:EnumSignatureTypeCode#00",
             "Elektronische Unterzeichnung eines Dokumentes mittels fortgeschrittener elektronischer Signatur z. B. ePen oder DigiPad": "s4i:EnumSignatureTypeCode#01",
-            "Elektronische Unterzeichnung eines Dokumentes mittels qualifizierter elektronischer Signatur z. B. nPA": "s4i:EnumSignatureTypeCode#02",
+            "Elektronische Unterzeichnung eines Dokumentes mittels qualifizierter elektronischer / digitaler Signatur per Zertifikat z. B. nPA": "s4i:EnumSignatureTypeCode#02",
             "Handschriftliche Unterzeichnung auf ausgedrucktem Papier": "s4i:EnumSignatureTypeCode#03"
         }
     }
