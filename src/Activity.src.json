@@ -32,6 +32,10 @@
             },
             "Agent": {
                 "@id": "schema:agent"
+            },
+            "Object": {
+                "@id": "schema:object",
+                "@type": "s4i:Thing"
             }
 
         }
@@ -62,6 +66,10 @@
             "Agent": {
                 "@type": "Person",
                 "Name": "Hr. Mustermann"
+            },
+            "Object": {
+                "@type": "Thing",
+                "Name": "Kassenbuch"
             }
         },
         "context": {}
