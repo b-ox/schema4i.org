@@ -9,7 +9,7 @@
     }
   ],
   "parents": [
-    { "@id": "http://schema4i.org/SignaturType" }
+    { "@id": "http://schema4i.org/Order#SignaturType" }
   ],
   "base": [],
   "multipletypes": {},
