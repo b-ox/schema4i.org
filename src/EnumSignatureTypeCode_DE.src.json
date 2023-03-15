@@ -7,7 +7,7 @@
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
     "parents": [{
-        "@id": "http://schema4i.org/SignatureType"
+        "@id": "http://schema4i.org/Order#SignatureType"
       }],
     "base": [],
     "multipletypes": {},
