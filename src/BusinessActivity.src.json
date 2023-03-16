@@ -9,8 +9,8 @@
     ],
     "multipletypes": {
         "Category": [
-            {"@id": "http://schema.org/Text"},
-            {"@id": "http://schema4i.org/EnumLineOfBusinessCode"}
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
         ]
     },
     "context": {
