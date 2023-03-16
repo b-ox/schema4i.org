@@ -30,7 +30,7 @@
                 "@type": "schema:Text"
             },
             "HostingOrganization": {
-                "@id": "s4i:HostingOrganization",
+                "@id": "schema:hostingOrganization",
                 "@type": "s4i:Organization"
             }
         }
