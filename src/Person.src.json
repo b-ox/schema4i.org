@@ -153,7 +153,15 @@
             },        
             "HonorificPrefix": "Dr.",
             "KnowsAbout": ["Insurances"],
-            "MemberOf": {},
+            "MemberOf": {
+                "@type": "ProgramMembership",
+                "MembershipNumber": "0815",
+                "HostingOrganization": {
+                    "@type": "Organization",
+                    "sameAs": "https://www.verdi.de",
+                    "Name": "Verdi"
+                }
+            },
             "Nationality": "D",
             "RelatedTo": {},
             "Salutation": 3,
