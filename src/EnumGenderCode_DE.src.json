@@ -7,9 +7,9 @@
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
     "parents": [{
-        "@id": "http://schema4i.org/Animal/Gender"
+        "@id": "http://schema4i.org/Animal#Gender"
       },{
-        "@id": "http://schema4i.org/Person/Gender"
+        "@id": "http://schema4i.org/Person#Gender"
     }],
     "base": [],
     "multipletypes": {},
