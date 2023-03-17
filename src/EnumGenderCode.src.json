@@ -7,9 +7,9 @@
         "description": "Original German documentation"
     }],
     "parents": [{
-        "@id": "http://schema4i.org/Animal/Gender"
+        "@id": "http://schema4i.org/Animal#Gender"
       },{
-        "@id": "http://schema4i.org/Person/Gender"
+        "@id": "http://schema4i.org/Person#Gender"
     }],
     "base": [],
     "multipletypes": {},
