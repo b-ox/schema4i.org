@@ -20,8 +20,7 @@
             "schema": "http://schema.org/",
             "Animal": "schema:Animal",
             "Breed": {
-                "@id": "s4i:Breed",
-                "@type": "schema:Text"
+                "@id": "s4i:Breed"
             },
             "Birthdate": {
                 "@id": "schema:birthDate",
