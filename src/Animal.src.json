@@ -1,0 +1,56 @@
+{
+    "type": "Animal",
+    "uri": "http://schema4i.org/Animal",
+    "description": "A living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "Breed": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumDogBreedCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Animal": "schema:Animal",
+            "Breed": {
+                "@id": "s4i:Breed",
+                "@type": "schema:Text"
+            },
+            "Birthdate": {
+                "@id": "schema:birthDate",
+                "@type": "schema:Date"
+            },
+            "Gender": {
+                "@id": "schema:gender",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumGenderCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Animal",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Animal.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Gender.jsonld"
+            ],
+            "@type": "Animal",
+            "Breed":  "Goldfish",
+            "Name": "Goldy",
+            "BirthDate": "2021-10-04",
+            "Gender": "1"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "EnumGenderCode_DE",
+    "uri": "http://schema4i.org/EnumGenderCode",
+    "description": "Ein Code, der das Geschlecht eines Menschen oder Tieres beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumGenderCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Animal/Gender"
+      },{
+        "@id": "http://schema4i.org/Person/Gender"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "maennlich":"s4i:EnumGenderCode#1",
+            "weiblich":"s4i:EnumGenderCode#2",
+            "divers":"s4i:EnumGenderCode#3"
+        }
+    }
+}
