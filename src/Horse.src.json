@@ -23,13 +23,7 @@
             "@context": [
                 "http://schema4i.org/Animal.jsonld",
                 "http://schema4i.org/Horse.jsonld",
-                "http://schema4i.org/Thing.jsonld",
-                {
-                    "Breed": {
-                        "@id": "http://schema4i.org/Breed",
-                        "@type": "schema:Text"
-                    }
-                }
+                "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "Horse",
             "Breed":  "Pony",
