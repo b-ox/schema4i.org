@@ -1,0 +1,36 @@
+{
+    "type": "Gender",
+    "uri": "http://schema4i.org/Gender",
+    "description": "Gender of something, typically a Person or Animal.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#Gender" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Gender": {
+                "@id": "s4i:Gender",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumGenderCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Gender",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Gender.jsonld"
+            ],
+            "Gender": "3"
+        },
+        "context": {}
+    }]
+}
