@@ -1,0 +1,31 @@
+{
+    "type": "City",
+    "uri": "http://schema4i.org/City",
+    "description": "A city or town.",
+    "links": [{
+        "url": "http://schema.org/City",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/AdministrativeArea" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "City": "schema:City"
+        }
+    },
+    "playground": [{
+        "title": "A maximum City",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "City"
+        },
+        "context": {}
+    }]
+}

@@ -14,7 +14,12 @@
     "base": [
         { "@id": "http://schema4i.org/ContactPoint" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "AddressCountry": [
+            { "@id": "http://schema4i.org/Country" },
+            { "@id": "http://schema4i.org/EnumCountryCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -22,11 +27,7 @@
             "schema": "http://schema.org/",
             "PostalAddress": "schema:PostalAddress",
             "AddressCountry": {
-                "@id": "schema:addressCountry",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumCountryCode#"
-                }
+                "@id": "schema:addressCountry"
             },
             "AddressLocality": {
                 "@id": "schema:addressLocality",

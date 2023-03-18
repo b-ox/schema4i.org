@@ -1,0 +1,33 @@
+{
+    "type": "AdministrativeArea",
+    "uri": "http://schema4i.org/AdministrativeArea",
+    "description": "A geographical region, typically under the jurisdiction of a particular government.",
+    "links": [{
+        "url": "http://schema.org/AdministrativeArea",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/City" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AdministrativeArea": "schema:AdministrativeArea"
+        }
+    },
+    "playground": [{
+        "title": "A maximum AdministrativeArea",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "AdministrativeArea"
+        },
+        "context": {}
+    }]
+}
