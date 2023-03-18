@@ -10,7 +10,9 @@
         { "@id": "http://schema4i.org/Apartment" },
         { "@id": "http://schema4i.org/House" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -18,13 +20,13 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Accommodation": "schema:Accommodation",
+            "AccommodationCategory": {
+                "@id": "schema:accommodationCategory",
+                "@type": "schema:Text"
+            },
             "AccommodationFloorPlan": {
                 "@id": "s4i:FloorPlan",
                 "@type": "s4i:FloorPlan"
-            },
-            "ContainedInPlace": {
-                "@id": "schema:containedInPlace",
-                "@type": "s4i:Place"
             },
             "FloorLevel": {
                 "@id": "schema:floorLevel",
@@ -88,6 +90,13 @@
                 "http://schema4i.org/StructuredValue.jsonld"
             ],
             "@type": "Accommodation",
+            "Basement": {
+                "@type": "Basement",
+                "BasementFeature": [
+                    "Apartment",
+                    "WalkUpAccess"
+                ]
+            },
             "ContainedInPlace": {
                 "@type": "SingleFamilyResidence"
             },

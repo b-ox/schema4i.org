@@ -1,0 +1,29 @@
+{
+    "type": "EnumConstructionClassCode_DE",
+    "uri": "http://schema4i.org/EnumConstructionClassCode",
+    "description": "Ein Code, der die Bauart eines Gebäudes beschreibt. Die Klassen werden speziell in der Deutschen Versicherungswirtschaft zur klassifizierung von Gebäuden hinsichtlich ihrer Feuergefährlichkeit genutzt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumConstructionClassCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Building#ConstructionClass"
+      }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "sonstiges / nicht aufgeteilt / Sachen im Freien": "s4i:EnumConstructionClassCode#0",
+            "Bauartklasse I": "s4i:EnumConstructionClassCode#1",
+            "Bauartklasse II": "s4i:EnumConstructionClassCode#2",
+            "Bauartklasse III": "s4i:EnumConstructionClassCode#3",
+            "Bauartklasse IV": "s4i:EnumConstructionClassCode#4",
+            "Bauartklasse V": "s4i:EnumConstructionClassCode#5",
+            "Fertighausgruppe 1": "s4i:EnumConstructionClassCode#6",
+            "Fertighausgruppe 2": "s4i:EnumConstructionClassCode#7",
+            "Fertighausgruppe 3": "s4i:EnumConstructionClassCode#8"
+        }
+    }
+}

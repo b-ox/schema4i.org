@@ -88,6 +88,13 @@
                 "@id": "schema:partOfInvoice",
                 "@type": "s4i:Invoice"
             },
+            "SignatureType": {
+                "@id": "s4i:SignatureType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSignatureTypeCode#"
+                }
+            },
             "TerminationCode": {
                 "@id": "s4i:OrderTerminationCode",
                 "@type": "@vocab",
@@ -145,6 +152,7 @@
             "OrderNumber": "A-Nr.4711",
             "OrderStatus": "1",
             "PartOfInvoice": {},
+            "SignatureType": "00",
             "TerminationDate": "2021-01-01",
             "TerminationCode": "01",
             "AcceptedOffer": {},

@@ -1,0 +1,33 @@
+{
+    "type": "ConstructionClass",
+    "uri": "http://schema4i.org/ConstructionClass",
+    "description": "A ConstructionClass defines the structure of a Building and defines how the walls and roof are build.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/"
+        }
+    },
+    "playground": [{
+        "title": "A realistic ConstructionClass",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/EnumConstructionClassCode.jsonld"
+            ],
+            "@type": "Building",
+            "ConstructionClass": "2",
+            "YearBuilt": 1481,
+            "Latitude": 41.903056,
+            "Longitude": 12.454444
+        },
+        "context": {}
+    }]
+}

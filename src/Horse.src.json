@@ -1,0 +1,35 @@
+{
+    "type": "Horse",
+    "uri": "http://schema4i.org/Horse",
+    "description": "A horse is a large, four-legged animal with hooves, a long nose and tail, and a mane of hair along its upper back.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Animal" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Horse": "s4i:Horse"
+        }
+    },
+    "playground": [{
+        "title": "A Sample Horse",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Animal.jsonld",
+                "http://schema4i.org/Horse.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "Horse",
+            "Breed":  "Pony",
+            "Name": "Wendy",
+            "BirthDate": "2021-10-04"
+        },
+        "context": {}
+    }]
+}

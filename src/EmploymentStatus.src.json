@@ -1,0 +1,31 @@
+{
+    "type": "EmploymentStatus",
+    "uri": "http://schema4i.org/EmploymentStatus",
+    "description": "The status of an employment such as employed or self-employed ot more specific.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/EmployeeRole#EmploymentStatus" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "EmploymentStatus": {
+                "@id": "s4i:EmploymentStatus",
+                "@type": "s4i:EnumEmploymentStatusCode"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A simple EmploymentStatus meaning self-employed",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "EmploymentStatus": "04"
+        },
+        "context": {}
+    }]
+}

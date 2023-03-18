@@ -1,0 +1,98 @@
+{
+    "type": "Reference",
+    "uri": "http://schema4i.org/Reference",
+    "description": "While Identifier identifies any kind of Thing of the sender or provider of data Reference refers to the source of the Identifier. Different Types of Identifiers can be specified using the EnumReferenceIdentifierCode.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Thing#Reference" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Reference": {
+                "@id": "s4i:Reference",
+                "@type": "s4i:DefinedTerm"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Reference without EnumReferenceIdentifierCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https//schema4i.org/Thing.jsonld",
+                "https//schema4i.org/CreativeWork.jsonld",
+                "https//schema4i.org/DefinedTerm.jsonld",
+                "https//schema4i.org/DefinedTermSet.jsonld"
+            ],
+            "Reference": [{
+                "@type": "DefinedTerm",
+                "InDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "@id": "https://api.b-ox.de/datalake/rategroup/5515",
+                    "Identifier": "CustomerRateGroup",
+                    "Name": "Tarifgruppe",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "5515",
+                        "Name": "AXA"
+                    }
+                },
+                "TermCode": "V"
+            }]
+        },
+        "context": {}
+    }, {
+        "title": "Sample Reference with EnumReferenceIdentifierCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https//schema4i.org/Thing.jsonld",
+                "https//schema4i.org/CreativeWork.jsonld",
+                "https//schema4i.org/DefinedTerm.jsonld",
+                "https//schema4i.org/DefinedTermSet.jsonld"
+            ],
+            "Reference": [{
+                "@type": "DefinedTerm",
+                "InDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                    "Identifier": "CustomerIdentifier",
+                    "Name": "Kundennummer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "5515",
+                        "Name": "AXA"
+                    }
+                },
+                "TermCode": "KNR-4711"
+            }]
+        },
+        "context": {}
+    }, {
+        "title": "Sample Reference without EnumReferenceIdentifierCode and without List",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https//schema4i.org/Thing.jsonld",
+                "https//schema4i.org/CreativeWork.jsonld",
+                "https//schema4i.org/DefinedTerm.jsonld",
+                "https//schema4i.org/DefinedTermSet.jsonld"
+            ],
+            "Reference": [{
+                "@type": "DefinedTerm",
+                "InDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "Identifier": "AdditionalIdentifier",
+                    "Name": "Nummer"
+                },
+                "TermCode": "ABC-0815"
+            }]
+        },
+        "context": {}
+    }]
+}

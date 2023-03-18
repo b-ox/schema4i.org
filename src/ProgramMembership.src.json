@@ -24,8 +24,15 @@
             "ProgramName": {
                 "@id": "schema:programName",
                 "@type": "schema:Text"
+            },
+            "MembershipNumber": {
+                "@id": "schema:membershipNumber",
+                "@type": "schema:Text"
+            },
+            "HostingOrganization": {
+                "@id": "schema:hostingOrganization",
+                "@type": "s4i:Organization"
             }
-
         }
     },
     "playground": [{
@@ -34,11 +41,18 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing",
-                "http://schema4i.org/ProgramMembership"
+                "http://schema4i.org/ProgramMembership",
+                "http://schema4i.org/Organization"
             ],
             "@type": "ProgramMembership",
             "Identifier": "CE",
-            "ProgramName": "Community-Edition"
+            "ProgramName": "Community-Edition",
+            "MembershipNumber":  "007",
+            "HostingOrganization": {
+                "@type": "Organization",
+                "sameAs": "https://www.b-tix.de",
+                "Name": "b-tix Gmbh"
+            }
         },
         "context": {}
     }]

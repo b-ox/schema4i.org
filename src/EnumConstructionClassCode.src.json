@@ -1,0 +1,29 @@
+{
+    "type": "EnumConstructionClassCode",
+    "uri": "http://schema4i.org/EnumConstructionClassCode",
+    "description": "A Code that is a classification of a building structure depending on its construction method. The classes are used specifically in the German insurance industry to classify buildings with regard to their fire hazard.",
+    "links": [{
+        "url": "http://schema4i.org/EnumConstructionClassCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [{
+        "@id": "http://schema4i.org/Building#ConstructionClass"
+      }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "other / not divided / things outside": "s4i:EnumConstructionClassCode#0",
+            "Construction Class I": "s4i:EnumConstructionClassCode#1",
+            "Construction Class II": "s4i:EnumConstructionClassCode#2",
+            "Construction Class III": "s4i:EnumConstructionClassCode#3",
+            "Construction Class IV": "s4i:EnumConstructionClassCode#4",
+            "Construction Class V": "s4i:EnumConstructionClassCode#5",
+            "Prefab house group 1": "s4i:EnumConstructionClassCode#6",
+            "Prefab house group 2": "s4i:EnumConstructionClassCode#7",
+            "Prefab house group 3": "s4i:EnumConstructionClassCode#8"
+        }
+    }
+}

@@ -6,7 +6,9 @@
         "url": "http://schema.org/Occupation",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#HasOccupation" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
@@ -29,6 +31,10 @@
             "EstimatedSalary": {
                 "@id": "schema:estimatedSalary"
             },
+            "OccupationalCategory": {
+                "@id": "schema:occupationalCategory",
+                "@type": "s4i:DefinedTermSet"
+            },
             "Qualifications": {
                 "@id": "schema:qualifications",
                 "@type": "schema:Text"
@@ -50,7 +56,8 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
-                "http://schema4i.org/MonetaryAmount.jsonld"
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
             ],
             "@type": "Occupation",
             "EducationRequirements": "Bachelor of Science",
@@ -60,6 +67,11 @@
                 "Currency": "EUR"
             },
             "Name": "Softwareentwickler/in",
+            "OccupationalCategory": {
+                "@type": "DefinedTermSet",
+                "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                "HasDefinedTerm": "666"
+            }, 
             "Qualifications": "10 Jahre Erfahrung mit React.js",
             "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
             "Skills": ["Lernbereitschaft", "Motivation"]

@@ -1,0 +1,54 @@
+{
+  "type": "EnumRoofFeatureCode_DE",
+  "uri": "http://schema4i.org/EnumRoofFeatureCode_DE",
+  "description": "Ein Code der den Dach-Stil eines Gebäude beschreibt. Die Werte beziehen sich auf die OData Werte für den Lookup Namen 'Roof' aus dem RESO Data Dictionary. Siehe auch https://ddwiki.reso.org/display/DDW17/Roof+Lookups.",
+  "links": [{
+      "url": "http://schema4i.org/EnumRoofFeatureCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+  }],
+  "parents": [
+    { "@id": "http://schema4i.org/Accommodation#RoofFeature" }
+  ],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "Aluminum Dach": "s4i:EnumRoofFeatureCode#Aluminum",
+      "Asbest-Schindel": "s4i:EnumRoofFeatureCode#AsbestosShingle",
+      "Asphaltdach": "s4i:EnumRoofFeatureCode#Asphalt",
+      "Bahama": "s4i:EnumRoofFeatureCode#Bahama",
+      "Tonnendach": "s4i:EnumRoofFeatureCode#Barrel",
+      "Bituthen-Dach": "s4i:EnumRoofFeatureCode#Bituthene",
+      "Aufgebautes Dach": "s4i:EnumRoofFeatureCode#Built-Up",
+      "Kompositionsdach": "s4i:EnumRoofFeatureCode#Composition",
+      "Betondach": "s4i:EnumRoofFeatureCode#Concrete",
+      "Kupferdach": "s4i:EnumRoofFeatureCode#Copper",
+      "Elastomeres Dach ": "s4i:EnumRoofFeatureCode#Elastomeric",
+      "Glasfaserdach": "s4i:EnumRoofFeatureCode#Fiberglass",
+      "Flachdach": "s4i:EnumRoofFeatureCode#Flat",
+      "Flachziegeldach": "s4i:EnumRoofFeatureCode#FlatTile",
+      "Schaumstoffdach ": "s4i:EnumRoofFeatureCode#Foam",
+      "Giebeldach": "s4i:EnumRoofFeatureCode#GableRoof",
+      "Begrüntes Dach": "s4i:EnumRoofFeatureCode#GreenRoof",
+      "Mansard Dach": "s4i:EnumRoofFeatureCode#Mansard",
+      "Membran Dach": "s4i:EnumRoofFeatureCode#Membrane",
+      "Metal Dach": "s4i:EnumRoofFeatureCode#Metal",
+      "Gemischtes Dach": "s4i:EnumRoofFeatureCode#Mixed",
+      "Kein Dach": "s4i:EnumRoofFeatureCode#None",
+      "Anderes Dach": "s4i:EnumRoofFeatureCode#Other",
+      "Walzendach": "s4i:EnumRoofFeatureCode#RolledHotMop",
+      "Gummidach": "s4i:EnumRoofFeatureCode#Rubber",
+      "Holz-Schindeldach": "s4i:EnumRoofFeatureCode#Shake",
+      "Schindeldach": "s4i:EnumRoofFeatureCode#Shingle",
+      "Schieferdach": "s4i:EnumRoofFeatureCode#Slate",
+      "Spanisches Ziegeldach": "s4i:EnumRoofFeatureCode#SpanishTile",
+      "Steindach": "s4i:EnumRoofFeatureCode#Stone",
+      "Synthetisches Dach": "s4i:EnumRoofFeatureCode#Synthetic",
+      "Teer/Gravedach": "s4i:EnumRoofFeatureCode#TarGravel",
+      "Ziegeldach": "s4i:EnumRoofFeatureCode#Tile",
+      "Holz": "s4i:EnumRoofFeatureCode#Wood"
+    }
+  }
+}

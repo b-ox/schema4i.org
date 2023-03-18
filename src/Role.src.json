@@ -4,6 +4,7 @@
     "description": "Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.",
     "links": [],
     "parents": [
+        { "@id": "http://schema4i.org/EmployeeRole" },
         { "@id": "http://schema4i.org/Person#MemberOf" },
         { "@id": "http://schema4i.org/Organization#MemberOf" },
         { "@id": "http://schema4i.org/UserAccount#MemberOf" }
@@ -11,13 +12,32 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Participant": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ],
+        "MemberOf": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/ProgramMembership" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Role": "schema:Role"
+            "Role": "schema:Role",
+            "RoleName": {
+                "@id": "schema:roleName",
+                "@type": "schema:Text"
+            },
+            "Participant": {
+                "@id": "schema:participant"
+            },
+            "MemberOf": {
+                "@id": "schema:memberOf"
+            }
         }
     },
     "playground": [{

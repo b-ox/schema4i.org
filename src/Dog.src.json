@@ -1,0 +1,52 @@
+{
+    "type": "Dog",
+    "uri": "http://schema4i.org/Dog",
+    "description": "A dog is a domestic mammal of the family Canidae and the order Carnivora.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Animal" }
+    ],
+    "multipletypes": {
+        "Breed": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumDogBreedCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Dog": "s4i:Dog",
+            "Breed": {
+                "@id": "s4i:Breed"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A Sample Dog",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Animal.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/EnumDogBreedCode.jsonld",
+                {
+                    "Breed": {
+                        "@id": "http://schema4i.org/Breed",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumDogBreedCode#"
+                        }
+                    }
+                }
+            ],
+            "@type": "Dog",
+            "Breed":  "304",
+            "Name": "Rex",
+            "BirthDate": "2020-12-24"
+        },
+        "context": {}
+    }]
+}

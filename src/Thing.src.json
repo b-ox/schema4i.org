@@ -1,7 +1,7 @@
 {
     "type": "Thing",
     "uri": "http://schema4i.org/Thing",
-    "description": "The most generic type of item.",
+    "description": "The most generic type of item. The attribute 'IdentifierReference' is now deprecated. Instead the more detailed attribute 'Reference' should be used.",
     "links": [{
         "url": "http://schema.org/Thing",
         "description": "Original Schema.org type"
@@ -54,6 +54,10 @@
             "PotentialAction": {
                 "@id": "schema:potentialAction"
             },
+            "Reference": {
+                "@id": "s4i:Reference",
+                "@type": "s4i:DefinedTerm"
+            },
             "SameAs": {
                 "@id": "schema:sameAs",
                 "@type": "schema:URL"
@@ -83,7 +87,23 @@
             "DisambiguatingDescription": "Cola drink with a lot of sugar.",
             "Image": {},
             "Identifier": "CC",
-            "IdentifierReference": "XX",
+            "Reference": [
+                {
+                    "@type": "DefinedTerm",
+                    "InDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "https://api.b-ox.de/datalake/occupation/5515",
+                        "Identifier": "Customer.Identifier",
+                        "Name": "Kundennummer",
+                        "Creator": {
+                            "@type": "Organization",
+                            "Identifier": "5515",
+                            "Name": "AXA"
+                        }
+                    },
+                    "TermCode": "KNR-4711"
+                }
+            ],
             "PotentialAction": [],
             "SameAs": "https://api.b-ox.de/resources/drinks/cola",
             "URL": "https://api.b-ox.de/resources/drinks/cc"

@@ -1,0 +1,22 @@
+{
+  "type": "EnumPropertyUsageCode_DE",
+  "uri": "http://schema4i.org/EnumPropertyUsageCode_DE",
+  "description": "Ein Code der die Nutzung beschreibt.",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumPropertyUsageCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+    }
+  ],
+  "parents": [],
+  "base": [],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "selbstgenutzt": "s4i:EnumPropertyUsageCode#01",
+      "fremdgenutzt": "s4i:EnumPropertyUsageCode#02"
+    }
+  }
+}

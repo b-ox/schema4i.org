@@ -1,0 +1,65 @@
+{
+    "type": "BusinessActivity",
+    "uri": "http://schema4i.org/BusinessActivity",
+    "description": "An operation that a business entity, such as an Organization, engages in to generate revenue or achieve its objectives.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Activity" }
+    ],
+    "multipletypes": {
+        "Category": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BusinessActivity": "s4i:BusinessActivity",
+            "Category": {
+                "@id": "schema:category"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum BusinessActivity",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/BusinessActivity.jsonld",
+                "http://schema4i.org/Activity.jsonld",
+                "http://schema4i.org/DefinedTerm.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld",
+                {
+                    "Category": {
+                        "@id": "http://schema.org/category",
+                        "@type": "http://schema4i.org/EnumLineOfBusinessCode"
+                    }
+                }
+            ],
+            "@type": "BusinessActivity",
+            "Name": "Buchhaltung",
+            "Category": ["040", "140", "172", "703"],
+            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen",
+            "Reference": {
+                "@type": "DefinedTerm",
+                "InDefinedTermSet": {
+                    "@id": "https://api.b-ox.de/termset/BusinessActivity/5414",
+                    "@type": "DefinedTermSet",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "5414",
+                        "Name": "Münchener Verein"
+                    }
+                },
+                "TermCode": "4711"
+            }
+        },
+        "context": {}
+    }]
+}

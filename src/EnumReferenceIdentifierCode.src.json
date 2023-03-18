@@ -1,0 +1,22 @@
+{
+    "type": "EnumReferenceIdentifierCode",
+    "uri": "http://schema4i.org/EnumReferenceIdentifierCode",
+    "description": "a code to classify different Identifiers",
+    "links": [{
+        "url": "http://schema4i.org/EnumReferenceIdentifierCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Customer Identifier": "s4i:EnumReferenceIdentifierCode#CustomerIdentifier",
+            "Order Confirmation Number": "s4i:EnumReferenceIdentifierCode#OrderConfirmationNumber",
+            "Order Identifier": "s4i:EnumReferenceIdentifierCode#OrderIdentifier",
+            "Claim Identifier": "s4i:EnumReferenceIdentifierCode#ClaimIdentifier"
+        }
+    }
+}
