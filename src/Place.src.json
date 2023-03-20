@@ -14,7 +14,12 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Altitude": [
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema4i.org/QuantitativeValue" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -24,6 +29,9 @@
             "Address": {
                 "@id": "schema:address",
                 "@type": "s4i:PostalAddress"
+            },
+            "Altitude": {
+                "@id": "s4i:Altitude"
             },
             "AmenityFeature": {
                 "@id": "schema:amenityFeature",
@@ -63,7 +71,23 @@
         "title": "A maximum Place",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "https://schema4i.org/Thing.jsonld",
+                "https://schema4i.org/Place.jsonld",
+                "https://schema4i.org/LocationFeatureSpecification.jsonld",
+                "https://schema4i.org/PropertyValue.jsonld",
+                "https://schema4i.org/StructuredValue.jsonld",
+                "https://schema4i.org/PostalAddress.jsonld",
+                "https://schema4i.org/ImageObject.jsonld",
+                "https://schema4i.org/CreativeWork.jsonld",
+                "https://schema4i.org/QuantitativeValue.jsonld",
+                {
+                    "Altitude": {
+                        "@id": "s4i:Altitude",
+                        "@type": "s4i:QuantitativeValue"
+                    }
+                }
+            ],
             "@type": "Place",
             "Address": {
                 "@type": "PostalAddress",
@@ -84,6 +108,11 @@
             "Keywords": "Wohnung, Eigentumswohnung",
             "Latitude": 26.55964,
             "Longitude": -81.951283,
+            "Altitude": {
+                "@type": "QuantitativeValue",
+                "UnitCode": "MTR",
+                "Value": 2
+            },
             "Photo": [{
                 "@type": "ImageObject",
                 "ContentUrl": "https://test.tld/photo1.png"

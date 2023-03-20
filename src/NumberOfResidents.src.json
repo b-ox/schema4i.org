@@ -1,0 +1,31 @@
+{
+    "type": "NumberOfResidents",
+    "uri": "http://schema4i.org/NumberOfResidents",
+    "description": "The number of inhabitants is the central measure of demographics for special town or country sizes.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/AdministrativeArea#NumberOfResidents" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NumberOfResidents": {
+                "@id": "s4i:NumberOfResidents",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Array of NumberOfResidents",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "NumberOfResidents": 21500000
+        },
+        "context": {}
+    }]
+}
