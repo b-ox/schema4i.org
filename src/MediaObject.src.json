@@ -20,6 +20,10 @@
                 "@id": "schema:contentUrl",
                 "@type": "schema:URL"
             },
+            "EmbedUrl": {
+                "@id": "schema:embedUrl",
+                "@type": "schema:URL"
+            },
             "EncodingFormat": {
                 "@id": "schema:encodingFormat",
                 "@type": "schema:Text"
@@ -33,6 +37,7 @@
             "@context": {},
             "@type": "MediaObject",
             "ContentUrl": "https://api.b-ox.de/files/236812312.12312312432",
+            "EmbedUrl": "https://api.b-ox.de/files/366432367.115553212",
             "EncodingFormat": "application/zip"
         },
         "context": {}
