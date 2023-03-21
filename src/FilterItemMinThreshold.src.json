@@ -1,183 +1,86 @@
 {
-    "type": "Filter",
-    "uri": "http://schema4i.org/Filter",
-    "description": "An abstract data structure describing a selection criteria that can be applied to a data set or other form of structured data to determine a subset of the input. The http://schema4i.org/FilterItem property describes which values the target collection is filtered for, while the http://schema4i.org/FilterType property describes how exactly the FilterItem is matched against the target items. Which FilterTypes are supported is provider specific. If the FilterType is omitted, the service provider should assume a sensible default value.",
+    "type": "FilterItemMinThreshold",
+    "uri": "http://schema4i.org/FilterItemMinThreshold",
+    "description": "A field in a filter describing a http://schema4i.org/QuantitativeValue that allows the user to set how many Conditions must be fullfilled for an item to pass. The amount of Conditions that need to be fullfilled can be either a number or a percentage.",
     "links": [],
-    "parents": [],
-    "base": [{
-        "@id": "http://schema4i.org/Thing"
+    "parents": [{
+        "@id": "http://schema4i.org/Filter#FilterItemMinThreshold"
     }],
+    "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "schema": "http://schema.org/",
-            "Filter": "s4i:Filter",
-            "FilterType": {
-                "@id": "s4i:FilterType",
-                "@type": "schema:Text"
-            },
-            "FilterItem": {
-                "@id": "s4i:FilterItem",
-                "@type": "s4i:Thing",
-                "types-hint": "required"
-            },
             "FilterItemMinThreshold": {
                 "@id": "s4i:FilterItemMinThreshold",
-                "@type": "QuantitativeValue",
-                "Value":"schema:Number",
-                "UnitCode":"schema:unitCode"
+                "@type": "s4i:QuantitativeValue"
             }
         }
     },
     "playground": [{
-            "title": "A minimal Filter matching a Message with an Identifier",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/Message.jsonld"
-                ],
-                "@type": "Filter",
-                "FilterItem": {
-                    "@type": "Message",
-                    "Identifier": "4711"
+        "title": "A minimal Filter matching a Message that fullfills at least two Conditions.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Filter.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/QuantitativeValue"
+            ],
+            "@type": "Filter",
+            "FilterItem": {
+                "@type": "Message",
+                "Keywords": [
+                    "Posteingang"
+                ]
+            },
+            "FilterItem": {
+                "@type": "Message",
+                "Identifier": "4711"
+            },
+            "FilterItem": {
+                "MessageAttachment": {
+                    "Keywords": "Dokument"
                 }
             },
-            "context": {}
+            "FilterItemMinThreshold": {
+                "@type": "s4i:QuantitativeValue",
+                "Value": "2",
+                "UnitCode": "P1"
+            }
+        }
         },
         {
-            "title": "A Filter matching Messages with a Keyword",
+            "title": "A minimal Filter matching a Message that fullfills at least 30% of all Conditions.",
             "tab": "tab-expanded",
             "input": {
                 "@context": [
-                    "http://schema4i.org/Thing.jsonld",
                     "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/Message.jsonld"
+                    "http://schema4i.org/Message.jsonld",
+                    "http://schema4i.org/QuantitativeValue"
                 ],
                 "@type": "Filter",
-                "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
                 "FilterItem": {
                     "@type": "Message",
                     "Keywords": [
                         "Posteingang"
                     ]
-                }
-            },
-            "context": {}
-        },
-        {
-            "title": "A Filter matching Messages with a text content in multiple fields using free text search",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/Message.jsonld"
-                ],
-                "@type": "Filter",
-                "FilterType": ["MUST_MATCH", "ONE_FIELD", "SEARCH_TEXT"],
+                },
                 "FilterItem": {
                     "@type": "Message",
-                    "Sender": {
-                        "Name": "b-tix"
-                    },
-                    "Recipient": {
-                        "Name": "b-tix"
-                    },
-                    "CCRecipient": {
-                        "Name": "b-tix"
+                    "Identifier": "4711"
+                },
+                "FilterItem": {
+                    "MessageAttachment": {
+                        "Keywords": "Dokument"
                     }
+                },
+                "FilterItemMinThreshold": {
+                    "@type": "s4i:QuantitativeValue",
+                    "Value": "30",
+                    "UnitCode": "C62"
                 }
-            },
-            "context": {}
-        },
-        {
-            "title": "A SearchAction with multiple Filters matching multiple Messages with ids and a Keyword",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Action.jsonld",
-                    "http://schema4i.org/SearchAction.jsonld",
-                    "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/Message.jsonld"
-                ],
-                "@type": "SearchAction",
-                "Object": [{
-                    "@type": "Filter",
-                    "FilterType": ["MUST_MATCH", "COMPARE_TEXT_EQUALS"],
-                    "FilterItem": {
-                        "Keyword": "Posteingang"
-                    }
-                }, {
-                    "@type": "Filter",
-                    "FilterType": ["MUST_MATCH", "ONE_ITEM", "COMPARE_TEXT_EQUALS"],
-                    "FilterItem": [{
-                        "@type": "Message",
-                        "Identifier": "4711"
-                    }, {
-                        "@type": "Message",
-                        "Identifier": "4712"
-                    }]
-                }]
-            },
-            "context": {}
-        },
-        {
-            "title": "A SearchAction with multiple Filters matching multiple Messages with a TransactionCode prefix, excluding those with a Keyword",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Action.jsonld",
-                    "http://schema4i.org/SearchAction.jsonld",
-                    "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/Message.jsonld"
-                ],
-                "@type": "SearchAction",
-                "Object": [{
-                    "@type": "Filter",
-                    "FilterType": ["MUST_MATCH", "COMPARE_TEXT_PREFIX"],
-                    "FilterItem": {
-                        "@type": "Message",
-                        "TransactionCode": "100"
-                    }
-                }, {
-                    "@type": "Filter",
-                    "FilterType": ["MUST_NOT_MATCH", "COMPARE_TEXT_EQUALS"],
-                    "FilterItem": {
-                        "@type": "Message",
-                        "Keyword": "Papierkorb"
-                    }
-                }]
-            },
-            "context": {}
-        },
-        {
-            "title": "A SearchAction for a Message where DateSent is between two dates",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Action.jsonld",
-                    "http://schema4i.org/SearchAction.jsonld",
-                    "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/Message.jsonld"
-                ],
-                "@type": "SearchAction",
-                "Object": [{
-                    "@type": "Filter",
-                    "FilterType": ["MUST_NOT_MATCH", "DATE_BETWEEN"],
-                    "FilterItem": {
-                        "@type": "Message",
-                        "DateSent": ["2022-01-01", "2022-02-01"]
-                    }
-                }]
-            },
-            "context": {}
-        }
+            }
+            }
     ]
-}
+} 
