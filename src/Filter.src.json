@@ -25,9 +25,7 @@
             },
             "FilterItemMinThreshold": {
                 "@id": "s4i:FilterItemMinThreshold",
-                "@type": "QuantitativeValue",
-                "Value":"schema:Number",
-                "UnitCode":"schema:unitCode"
+                "@type": "QuantitativeValue"
             }
         }
     },
