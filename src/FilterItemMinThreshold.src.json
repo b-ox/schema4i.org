@@ -1,0 +1,86 @@
+{
+    "type": "FilterItemMinThreshold",
+    "uri": "http://schema4i.org/FilterItemMinThreshold",
+    "description": "A field in a filter describing a http://schema4i.org/QuantitativeValue that allows the user to set how many Conditions must be fullfilled for an item to pass. The amount of Conditions that need to be fullfilled can be either a number or a percentage.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Filter#FilterItemMinThreshold"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "FilterItemMinThreshold": {
+                "@id": "s4i:FilterItemMinThreshold",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A minimal Filter matching a Message that fullfills at least two Conditions.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Filter.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/QuantitativeValue"
+            ],
+            "@type": "Filter",
+            "FilterItem": {
+                "@type": "Message",
+                "Keywords": [
+                    "Posteingang"
+                ]
+            },
+            "FilterItem": {
+                "@type": "Message",
+                "Identifier": "4711"
+            },
+            "FilterItem": {
+                "MessageAttachment": {
+                    "Keywords": "Dokument"
+                }
+            },
+            "FilterItemMinThreshold": {
+                "@type": "s4i:QuantitativeValue",
+                "Value": "2",
+                "UnitCode": "P1"
+            }
+        }
+        },
+        {
+            "title": "A minimal Filter matching a Message that fullfills at least 30% of all Conditions.",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld",
+                    "http://schema4i.org/QuantitativeValue"
+                ],
+                "@type": "Filter",
+                "FilterItem": {
+                    "@type": "Message",
+                    "Keywords": [
+                        "Posteingang"
+                    ]
+                },
+                "FilterItem": {
+                    "@type": "Message",
+                    "Identifier": "4711"
+                },
+                "FilterItem": {
+                    "MessageAttachment": {
+                        "Keywords": "Dokument"
+                    }
+                },
+                "FilterItemMinThreshold": {
+                    "@type": "s4i:QuantitativeValue",
+                    "Value": "30",
+                    "UnitCode": "C62"
+                }
+            }
+            }
+    ]
+} 
