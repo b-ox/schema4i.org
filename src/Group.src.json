@@ -1,7 +1,7 @@
 {
     "type": "Group",
     "uri": "http://schema4i.org/Group",
-    "description": "A collection",
+    "description": "A subdivision or classification of people, organizations, animals, or any other thing based on common characteristics.",
     "links": [],
     "parents": [],
     "base": [
@@ -18,7 +18,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Group": "schema:Group",
+            "Group": "s4i:Group",
             "NumberOfMembers": {
                 "@id": "s4i:NumberOfMembers"
             },
@@ -34,13 +34,12 @@
     },
     "playground": [
         {
-            "title": "A example Group",
+            "title": "An example Group",
             "tab": "tab-expanded",
             "input": {
                 "@context": [
                     "http://schema4i.org/Group.jsonld",
                     "http://schema4i.org/Thing.jsonld",
-                    "http://schema.org/Number.jsonld",
                     {
                         "NumberOfMembers": {
                             "@id": "http://schema4i.org/NumberOfMembers",
@@ -55,8 +54,7 @@
                     {
                         "@context": [
                             "http://schema4i.org/Animal.jsonld",
-                            "http://schema4i.org/Thing.jsonld",
-                            "http://schema4i.org/Gender.jsonld"
+                            "http://schema4i.org/Thing.jsonld"
                         ],
                         "@type": "Animal",
                         "Breed": "Goldfish",
@@ -68,7 +66,6 @@
                         "@context": [
                             "http://schema4i.org/Animal.jsonld",
                             "http://schema4i.org/Thing.jsonld",
-                            "http://schema4i.org/EnumDogBreedCode.jsonld",
                             {
                                 "Breed": {
                                     "@id": "http://schema4i.org/Breed",
@@ -89,7 +86,6 @@
                     "@context": [
                       "http://schema4i.org/Thing.jsonld",
                       "http://schema4i.org/Filter.jsonld",
-                      "http://schema4i.org/FilterItem.jsonld",
                       "http://schema4i.org/Animal.jsonld"
                     ],
                     "@type": "Filter",
