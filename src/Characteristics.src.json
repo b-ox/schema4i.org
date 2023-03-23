@@ -1,7 +1,7 @@
 {
     "type": "Characteristics",
     "uri": "http://schema4i.org/Characteristics",
-    "description": "Describes a feature that all Group Members have in common.",
+    "description": "Describes characteristics that apply to all members of a group.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Group#Characteristics" }
@@ -21,7 +21,7 @@
     },
     "playground": [
         {
-            "title": "A example Characteristics",
+            "title": "A maximum example of Characteristics",
             "tab": "tab-expanded",
             "input": {
                 "@context": [
@@ -30,10 +30,12 @@
                     "http://schema4i.org/FilterItem.jsonld",
                     "http://schema4i.org/Animal.jsonld"
                   ],
-                    "@type": "Filter",
-                    "FilterItem": {
-                      "@type": "Animal"
-                    }
+                  "Characteristics": {
+                      "@type": "Filter",
+                      "FilterItem": {
+                          "@type": "Animal"
+                      }
+                  }
             },
             "context": {}
         }
