@@ -1,0 +1,41 @@
+{
+    "type": "Characteristics",
+    "uri": "http://schema4i.org/Characteristics",
+    "description": "Describes a feature that all Group Members have in common.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Group#Characteristics" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Characteristics": {
+                "@id": "s4i:Characteristics",
+                "@type": "s4i:Filter"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "A example Characteristics",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/FilterItem.jsonld",
+                    "http://schema4i.org/Animal.jsonld"
+                  ],
+                    "@type": "Filter",
+                    "FilterItem": {
+                      "@type": "Animal"
+                    }
+            },
+            "context": {}
+        }
+    ]
+}

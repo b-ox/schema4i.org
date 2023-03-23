@@ -3,7 +3,9 @@
     "uri": "http://schema4i.org/Filter",
     "description": "An abstract data structure describing a selection criteria that can be applied to a data set or other form of structured data to determine a subset of the input. The http://schema4i.org/FilterItem property describes which values the target collection is filtered for, while the http://schema4i.org/FilterType property describes how exactly the FilterItem is matched against the target items. Which FilterTypes are supported is provider specific. If the FilterType is omitted, the service provider should assume a sensible default value.",
     "links": [],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Characteristics" }
+    ],
     "base": [{
         "@id": "http://schema4i.org/Thing"
     }],

@@ -1,0 +1,104 @@
+{
+    "type": "Group",
+    "uri": "http://schema4i.org/Group",
+    "description": "A collection",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "NumberOfMembers": [
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema4i.org/QuantitativeValue" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Group": "schema:Group",
+            "NumberOfMembers": {
+                "@id": "s4i:NumberOfMembers"
+            },
+            "Member": {
+                "@id": "schema:member",
+                "@type": "s4i:Thing"
+            },
+            "Characteristics": {
+                "@id": "s4i:Characteristics",
+                "@type": "s4i:Filter"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "A example Group",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Group.jsonld",
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema.org/Number.jsonld",
+                    {
+                        "NumberOfMembers": {
+                            "@id": "http://schema4i.org/NumberOfMembers",
+                            "@type": "http://schema.org/Number"
+                    }
+                }
+                ],
+                "@type": "Group",
+                "Name": "My Pets",
+                "NumberOfMembers": 2,
+                "Member": [
+                    {
+                        "@context": [
+                            "http://schema4i.org/Animal.jsonld",
+                            "http://schema4i.org/Thing.jsonld",
+                            "http://schema4i.org/Gender.jsonld"
+                        ],
+                        "@type": "Animal",
+                        "Breed": "Goldfish",
+                        "Name": "Goldy",
+                        "BirthDate": "2021-10-04",
+                        "Gender": "1"
+                    },
+                    {
+                        "@context": [
+                            "http://schema4i.org/Animal.jsonld",
+                            "http://schema4i.org/Thing.jsonld",
+                            "http://schema4i.org/EnumDogBreedCode.jsonld",
+                            {
+                                "Breed": {
+                                    "@id": "http://schema4i.org/Breed",
+                                    "@type": "@vocab",
+                                    "@context": {
+                                        "@vocab": "http://schema4i.org/EnumDogBreedCode#"
+                                    }
+                                }
+                            }
+                        ],
+                        "@type": "Dog",
+                        "Breed": "304",
+                        "Name": "Rex",
+                        "BirthDate": "2020-12-24"
+                    }
+                ],
+                "Characteristics": {
+                    "@context": [
+                      "http://schema4i.org/Thing.jsonld",
+                      "http://schema4i.org/Filter.jsonld",
+                      "http://schema4i.org/FilterItem.jsonld",
+                      "http://schema4i.org/Animal.jsonld"
+                    ],
+                    "@type": "Filter",
+                    "FilterItem": {
+                      "@type": "Animal"
+                    }
+                  }
+            },
+            "context": {}
+        }
+    ]
+}
