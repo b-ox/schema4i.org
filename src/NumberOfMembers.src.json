@@ -1,7 +1,7 @@
 {
     "type": "NumberOfMembers",
     "uri": "http://schema4i.org/NumberOfMembers",
-    "description": "The Number of Members e.g. in a group.",
+    "description": "The number of members e.g. in a group.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Group#NumberOfMembers" }
@@ -31,7 +31,6 @@
                 "@context": [
                     "http://schema4i.org/Group.jsonld",
                     "http://schema4i.org/Thing.jsonld",
-                    "http://schema.org/Number.jsonld",
                     {
                         "NumberOfMembers": {
                             "@id": "http://schema4i.org/NumberOfMembers",
