@@ -44,7 +44,7 @@
                 }
             },
             "FilterItemMinThreshold": {
-                "@type": "s4i:QuantitativeValue",
+                "@type": "QuantitativeValue",
                 "Value": "2",
                 "UnitCode": "P1"
             }
@@ -76,7 +76,7 @@
                     }
                 },
                 "FilterItemMinThreshold": {
-                    "@type": "s4i:QuantitativeValue",
+                    "@type": "QuantitativeValue",
                     "Value": "30",
                     "UnitCode": "C62"
                 }
