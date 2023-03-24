@@ -1,0 +1,31 @@
+{
+    "type": "Country",
+    "uri": "http://schema4i.org/Country",
+    "description": "A country.",
+    "links": [{
+        "url": "http://schema.org/Country",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/AdministrativeArea" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Country": "schema:Country"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Country",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Country"
+        },
+        "context": {}
+    }]
+}

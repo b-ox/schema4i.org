@@ -1,0 +1,46 @@
+{
+    "type": "NumberOfMembers",
+    "uri": "http://schema4i.org/NumberOfMembers",
+    "description": "The number of members e.g. in a group.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Group#NumberOfMembers" }
+    ],
+    "base": [],
+    "multipletypes": {
+        "NumberOfMembers": [
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema4i.org/QuantitativeValue" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NumberOfMembers": {
+                "@id": "s4i:NumberOfMembers"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "A sample for NumberOfMembers",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Group.jsonld",
+                    "http://schema4i.org/Thing.jsonld",
+                    {
+                        "NumberOfMembers": {
+                            "@id": "http://schema4i.org/NumberOfMembers",
+                            "@type": "http://schema.org/Number"
+                    }
+                }
+                ],
+                "NumberOfMembers": 11
+            },
+            "context": {}
+        }
+    ]
+}

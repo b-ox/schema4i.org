@@ -1,0 +1,47 @@
+{
+    "type": "Breed",
+    "uri": "http://schema4i.org/Breed",
+    "description": "A breed is a specific group of domestic animals having homogeneous appearance (phenotype), homogeneous behavior, and/or other characteristics that distinguish it from other organisms of the same species.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Animal#Breed" },
+        { "@id": "http://schema4i.org/Dog#Breed" }
+    ],
+    "base": [],
+    "multipletypes": {
+        "Breed": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumDogBreedCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Breed": {
+                "@id": "s4i:Breed"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Breed",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/EnumDogBreedCode.jsonld",
+                {
+                    "Breed": {
+                        "@id": "http://schema4i.org/Breed",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumDogBreedCode#"
+                        }
+                    }
+                }
+            ],
+            "Breed": "121"
+        },
+        "context": {}
+    }]
+}

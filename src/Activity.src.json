@@ -3,17 +3,41 @@
     "uri": "http://schema4i.org/Activity",
     "description": "A generic term used to describe single or continuous operations performed by individuals or companies.",
     "links": [],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BusinessActivity" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Participant": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Role" }
+        ],
+        "Agent": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Role" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Activity": "s4i:Activity"
+            "Activity": "s4i:Activity",
+            "Participant": {
+                "@id": "schema:participant"
+            },
+            "Agent": {
+                "@id": "schema:agent"
+            },
+            "Object": {
+                "@id": "schema:object",
+                "@type": "s4i:Thing"
+            }
+
         }
     },
     "playground": [{
@@ -24,11 +48,29 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Activity.jsonld",
                 "http://schema4i.org/DefinedTerm.jsonld",
-                "http://schema4i.org/DefinedTermSet.jsonld"
+                "http://schema4i.org/DefinedTermSet.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                "http://schema4i.org/Person.jsonld"
             ],
             "@type": "Activity",
-            "Name": "Buchhaltung",
-            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen"
+            "Name": "Buchfuehrung durchfuehren",
+            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen",
+            "Participant": {
+                "@type": "Role",
+                "RoleName": "Abteilungsleiter",
+                "Participant": {
+                    "@type": "Person",
+                    "Name": "Fr. Mustermann"
+                }
+            },
+            "Agent": {
+                "@type": "Person",
+                "Name": "Hr. Mustermann"
+            },
+            "Object": {
+                "@type": "Thing",
+                "Name": "Kassenbuch"
+            }
         },
         "context": {}
     }]

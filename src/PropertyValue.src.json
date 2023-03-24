@@ -49,6 +49,10 @@
             },
             "Value": {
                 "@id": "schema:value"
+            },
+            "ValueReference": {
+                "@id": "schema:valueReference",
+                "@type": "s4i:PropertyValue"
             }
         }
     },
@@ -70,7 +74,8 @@
             "Name": "Gewicht",
             "UnitCode": "KGM",
             "UnitText": "Kilogramm",
-            "Value": 100
+            "Value": 100,
+            "ValueReference": {}
         },
         "context": {}
     }]

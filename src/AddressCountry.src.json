@@ -1,0 +1,37 @@
+{
+    "type": "AddressCountry",
+    "uri": "http://schema4i.org/AddressCountry",
+    "description": "The country. For example, USA.",
+    "links": [{
+        "url": "http://schema.org/addressCountry",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/PostalAddress#AddressCountry" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AddressCountry": {
+                "@id": "schema:addressCountry",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumCountryCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Array of AddressCountry",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "AddressCountry": "D"
+        },
+        "context": {}
+    }]
+}

@@ -74,7 +74,7 @@
                 "@id": "schema:gender",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "schema:"
+                    "@vocab": "s4i:EnumGenderCode#"
                 }
             },
             "GivenName": {
@@ -145,7 +145,7 @@
             "DrivingLicense": {},
             "Email": "noreply@b-tix.de",
             "FaxNumber": "0211 41608 100",
-            "Gender": "Male",
+            "Gender": "1",
             "GivenName": "Markus",
             "HasOccupation": {
                 "@type": "Occupation",
