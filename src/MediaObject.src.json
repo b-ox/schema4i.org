@@ -4,7 +4,8 @@
     "description": "A dataset in downloadable form.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/DataDownload" }
+        { "@id": "http://schema4i.org/DataDownload" },
+        { "@id": "http://schema4i.org/CreativeWork#AssociatedMedia" }
     ],
     "base": [
         { "@id": "http://schema4i.org/CreativeWork" }
