@@ -25,7 +25,7 @@
             },
             "Defect": {
                 "@id": "s4i:Defect",
-                "@type": "s4i:Thing"
+                "@type": "s4i:Defect"
             },
             "ConstructionClass": {
                 "@id": "s4i:ConstructionClass"
