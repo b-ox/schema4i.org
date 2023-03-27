@@ -42,6 +42,10 @@
             "About": {
                 "@id": "schema:about"
             },
+            "AssociatedMedia": {
+                "@id": "schema:associatedMedia",
+                "@type": "s4i:MediaObject"
+            },
             "Creator": {
                 "@id": "schema:creator"
             },
