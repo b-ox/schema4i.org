@@ -1,0 +1,45 @@
+{
+    "type": "Defect",
+    "uri": "http://schema4i.org/Defect",
+    "description": "Describes an imperfection or abnormality that impairs quality, function, or utility.",
+    "links": [],
+    "parents": [{ "@id": "http://schema4i.org/Building#Defect" }],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Defect": "s4i:Defect"
+        }
+    },
+    "playground": [{
+        "title": "A example Defect on a Building",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "InDefinedTermSet": {
+                      "@id": "http://schema.org/inDefinedTermSet",
+                      "@type": "http://schema.org/URL"
+                    }
+                }
+            ],
+            "@type": "Defect",
+            "Name": "Durchnässung",
+            "Reference": [
+                {
+                  "@type": "DefinedTerm",
+                  "InDefinedTermSet": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
+                  "TermCode": "03"
+                }
+              ]
+        },
+        "context": {}
+    }]
+}
