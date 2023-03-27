@@ -35,10 +35,7 @@
             "Reference": [
                 {
                   "@type": "DefinedTerm",
-                  "InDefinedTermSet": {
-                    "@type": "DefinedTermSet",
-                    "@id": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart"
-                  },
+                  "InDefinedTermSet": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
                   "TermCode": "03"
                 }
               ]
