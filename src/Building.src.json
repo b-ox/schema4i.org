@@ -23,6 +23,10 @@
                 "@id": "s4i:BuilderName",
                 "@type": "schema:Text"
             },
+            "Defect": {
+                "@id": "s4i:Defect",
+                "@type": "s4i:Thing"
+            },
             "ConstructionClass": {
                 "@id": "s4i:ConstructionClass"
             },
@@ -56,6 +60,7 @@
                 "http://schema4i.org/Basement.jsonld",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Defect.jsonld",
                 "http://schema4i.org/EnumRoofFeatureCode.jsonld",
                 "http://schema4i.org/EnumConstructionClassCode.jsonld",
                 "http://schema4i.org/Basement.jsonld",
@@ -76,6 +81,17 @@
                     "None",
                     "WalkUpAccess"
                 ]
+            },
+            "Defect": {
+                "@type": "Defect",
+                "Reference": [{
+                  "@type": "DefinedTerm",
+                  "InDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "@id": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart"
+                  },
+                  "TermCode": "03"
+                }]
             },
             "Name": "Sistine Chapel",
             "YearBuilt": 1481,
