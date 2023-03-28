@@ -1,12 +1,12 @@
-# Welcome to [schema4i.org](https://pending.schema4i.org)
+# Welcome to [schema4i.org](https://schema4i.org)
 
-Inspired by the work of [JSON for Linked Data](https://json-ld.org/) and [Schema.org](https://schema.org/) [we](https:///pending.schema4i.org/page/about) build a **Schema for insurances** (also called **Schema4i** or **S4i**). As a **shared vocabulary** [Schema4i.org](https://pending.schema4i.org) makes it easier for API developers and website operators to get the maximum benefit from data. The data model is **open and free** for use. It might be used especially in the insurance industry or beyond. You can use it to provide APIs and websites with **insurance-related meaning** for better networking with other participants in the industry. Why? Because in the future everything's driven by [linked data](https://en.wikipedia.org/wiki/Linked_data).
+Inspired by the work of [JSON for Linked Data](https://json-ld.org/) and [Schema.org](https://schema.org/) [we](https:///schema4i.org/page/about) build a **Schema for insurances** (also called **Schema4i** or **S4i**). As a **shared vocabulary** [Schema4i.org](https://schema4i.org) makes it easier for API developers and website operators to get the maximum benefit from data. The data model is **open and free** for use. It might be used especially in the insurance industry or beyond. You can use it to provide APIs and websites with **insurance-related meaning** for better networking with other participants in the industry. Why? Because in the future everything's driven by [linked data](https://en.wikipedia.org/wiki/Linked_data).
 
 ## About this repository
 
-This is the [Schema4i.org](https://pending.schema4i.org) project repository. It contains all the types (objects, attributes and enumerations) and the JSON-LD context files used to publish on [Schema4i.org](https://schema4i.org) (comming soon) and [Pending.Schema4i.org](https://pending.schema4i.org) (already live). While the first site hosts official releases of Schema4i, the second one is updated more frequently containing the data models waiting for official release deployment. Follow the URLs to open the sites.
+This is the [Schema4i.org](https://schema4i.org) project repository. It contains all the types (objects, attributes and enumerations) and the JSON-LD context files used to publish on [Schema4i.org](https://schema4i.org) and [Pending.Schema4i.org](https://pending.schema4i.org). While the first site hosts official releases of Schema4i, the second one is updated more frequently containing the data models waiting for official release deployment. Follow the URLs to open the sites.
 
-**If you just want to learn more about how to use Schema for insurances, this repo is not the right place for you. Please visit [Schema4i.org](https://pending.schema4i.org) instead for documentation and samples.**
+**If you just want to learn more about how to use Schema for insurances, this repo is not the right place for you. Please visit [Schema4i.org](https://schema4i.org) instead for documentation and samples.**
 
 ### Installation
 
@@ -21,6 +21,10 @@ The `npm run build <HostURL>` command will scan these files, extract the JSON-LD
 For more info on how to use the `build` command please call `npm run build -- --help`.
 
 The two officially maintained Hosts are [schema4i.org](schema4i.org) and [pending.schema4i.org](pending.schema4i.org). You are free to use a different `HostURL` for local builds to match your requirements during development and testing.
+
+### More documentation
+
+Please also check out the [Schema4i.org Wiki](https://github.com/b-ox/schema4i.org/wiki) here on Github. There you will find some hints for modeling S4i.
 
 ## Basic principle
 
@@ -54,13 +58,13 @@ When we add terms, often into the "Pending" area ([pending.schema4i.org](https:/
 
 ## Modeling rules
 
-If you want to contribute, **fork this project**, add your objects, attributes and enumerations and send pull requests. Maybe then there will be a short discussion, but afterwards we publish your requests into the pending area so that **you and others can use it very fast**. When modeling the Semantic Data Model, we follow some guidelines.
+If you want to contribute, **fork this project**, add your objects, attributes and enumerations and send pull requests. Maybe then there will be a short discussion, but afterwards we publish your requests into the pending area so that **you and others can use it very fast**. When modeling the Semantic Data Model, we follow some guidelines. See also the [Wiki of Schema4i.org](https://github.com/b-ox/schema4i.org/wiki).
 
 ### Definitions and name conventions
 
  **Objects** we call a logical unit of attributes. It's a little bit similar to a field group containing field. **Attributes** are the properties of an object. These properties can be fields that have values. Most of the times the values are text values, date formats or keys of an enumeration. Attributes can also be links pointing to other objects or refer to other datasets via URL.
 
-The names of objects and attributes or enumerations always start with a capital letter and ideally consists of a single word. In some cases it makes sense to use several words to define an object to get better meaning. In this case we use the "PascalCase" notation like e.g. in the object [**P**ostal**A**ddress](https://pending.schema4i.org/PostalAddress).
+The names of objects and attributes or enumerations always start with a capital letter and ideally consists of a single word. In some cases it makes sense to use several words to define an object to get better meaning. In this case we use the "PascalCase" notation like e.g. in the object [**P**ostal**A**ddress](http://schema4i.org/PostalAddress).
 
 ### Modelling objects
 
