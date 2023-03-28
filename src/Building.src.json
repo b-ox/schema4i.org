@@ -30,6 +30,10 @@
             "ConstructionClass": {
                 "@id": "s4i:ConstructionClass"
             },
+            "CurrentUse": {
+                "@id": "s4i:CurrentUse",
+                "@type": "s4i:PropertyValue"
+            },
             "YearBuilt": {
                 "@id": "schema:yearBuilt",
                 "@type": "schema:Number"
@@ -71,6 +75,10 @@
                         "@context": {
                             "@vocab": "http://schema4i.org/EnumConstructionClassCode#"
                         }
+                    },
+                    "InDefinedTermSet": {
+                        "@id": "http://schema.org/InDefinedTermSet",
+                        "@type": "http://schema4i.org/DefinedTermSet"
                     }
                 }
             ],
@@ -82,16 +90,29 @@
                     "WalkUpAccess"
                 ]
             },
-            "Defect": {
-                "@type": "Defect",
-                "Reference": [{
+            "CurrentUse": {
+                "@type": "PropertyValue",
+                "Reference": {
                   "@type": "DefinedTerm",
+                  "TermCode": "PlaceOfWorship",
                   "InDefinedTermSet": {
                     "@type": "DefinedTermSet",
-                    "@id": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart"
+                    "@id": "http://schema4i.org/EnumBuildingUseCode"
+                  }
+                },
+                "Value": 50,
+                "UnitCode": "P1"
+            }, 
+            "Defect": {
+                "@type": "Defect",
+                "Reference": {
+                  "@type": "DefinedTerm",
+                  "InDefinedTermSet": {
+                    "@id": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
+                    "@type": "DefinedTermSet"
                   },
                   "TermCode": "03"
-                }]
+                }
             },
             "Name": "Sistine Chapel",
             "YearBuilt": 1481,

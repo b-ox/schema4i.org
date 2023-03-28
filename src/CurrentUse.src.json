@@ -1,0 +1,45 @@
+{
+    "type": "CurrentUse",
+    "uri": "http://schema4i.org/CurrentUse",
+    "description": "An CurrentUse describes the current usage of a building.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Building#CurrentUse" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CurrentUse": {
+                "@id": "s4i:CurrentUse",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumBuildingUseCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample CurrentUse",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/CurrentUse.jsonld"
+            ],
+            "CurrentUse": {
+                "@type": "PropertyValue",
+                "Reference": {
+                  "@type": "DefinedTerm",
+                  "TermCode": "PlaceOfWorship",
+                  "InDefinedTermSet": "http://schema4i.org/EnumBuildingUseCode"
+                },
+                "Value": 50,
+                "UnitCode": "P1"
+              }            
+        },
+        "context": {}
+    }]
+}
