@@ -1,4 +1,4 @@
-# Welcome to [schema4i.org](https://schema4i.org)
+# Welcome to [Schema4i.org](https://schema4i.org)
 
 Inspired by the work of [JSON for Linked Data](https://json-ld.org/) and [Schema.org](https://schema.org/) [we](https:///schema4i.org/page/about) build a **Schema for insurances** (also called **Schema4i** or **S4i**). As a **shared vocabulary** [Schema4i.org](https://schema4i.org) makes it easier for API developers and website operators to get the maximum benefit from data. The data model is **open and free** for use. It might be used especially in the insurance industry or beyond. You can use it to provide APIs and websites with **insurance-related meaning** for better networking with other participants in the industry. Why? Because in the future everything's driven by [linked data](https://en.wikipedia.org/wiki/Linked_data).
 
