@@ -77,7 +77,7 @@
                         }
                     },
                     "InDefinedTermSet": {
-                        "@id": "http://schema4i.org/InDefinedTermSet",
+                        "@id": "http://schema.org/InDefinedTermSet",
                         "@type": "http://schema4i.org/DefinedTermSet"
                     }
                 }
