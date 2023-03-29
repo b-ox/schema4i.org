@@ -22,6 +22,10 @@
             "NumberOfResidents": {
                 "@id": "s4i:NumberOfResidents",
                 "@type": "schema:Number"
+            },
+            "Region": {
+                "@id": "s4i:DefinedRegion",
+                "@type": "s4i:DefinedRegion"
             }
         }
     },
@@ -29,8 +33,29 @@
         "title": "A maximum AdministrativeArea",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
-            "@type": "AdministrativeArea"
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/AdministrativeArea.jsonld",
+                "http://schema4i.org/DefinedRegion.jsonld",
+                "http://schema4i.org/PostalCodeRangeSpecification.jsonld"
+            ],
+            "@type": "AdministrativeArea",
+            "Keywords": ["Stadt"],
+            "Latitude": "51.23",
+            "Longitude": "6.78",
+            "Name": "Düsseldorf",
+            "NumberOfResidents": "619477",
+            "Region": {
+                "@type": "DefinedRegion",
+                "AddressCountry": "D",
+                "AddressRegion": "North-Rhine Westphalia",
+                "PostalCodeRange": {
+                    "@type": "PostalCodeRangeSpecification",
+                    "PostalCodeBegin": "40210",
+                    "PostalCodeEnd": "40721"
+                }
+            }
         },
         "context": {}
     }]
