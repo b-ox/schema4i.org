@@ -10,7 +10,7 @@
         { "@id": "http://schema4i.org/AdministrativeArea#Region" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/StructuredValue" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
         "AddressCountry": [
