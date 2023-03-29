@@ -1,0 +1,62 @@
+{
+    "type": "DefinedRegion",
+    "uri": "http://schema4i.org/DefinedRegion",
+    "description": "A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.",
+    "links": [{
+        "url": "http://schema.org/DefinedRegion",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/StructuredValue" }
+    ],
+    "multipletypes": {
+        "AddressCountry": [
+            { "@id": "http://schema4i.org/Country" },
+            { "@id": "http://schema4i.org/EnumCountryCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DefinedRegion": "schema:DefinedRegion",
+            "AddressCountry": {
+                "@id": "schema:addressCountry"
+            },
+            "AddressRegion": {
+                "@id": "schema:addressRegion",
+                "@type": "schema:Text"
+            },
+            "PostalCode": {
+                "@id": "schema:postalCode",
+                "@type": "schema:Text"
+            },
+            "PostalCodePrefix": {
+                "@id": "schema:postalCodePrefix",
+                "@type": "schema:Text"
+            },
+            "PostalCodeRange": {
+                "@id": "schema:postalCodeRange",
+                "@type": "s4i:PostalCodeRangeSpecification"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic DefinedRegion",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/DefinedRegion.jsonld"
+            ],
+            "@type": "DefinedRegion",
+            "AddressCountry": "D",
+            "AddressRegion": "North-Rhine Westphalia",
+            "PostalCode": "40233"
+        },
+        "context": {}
+    }]
+}
