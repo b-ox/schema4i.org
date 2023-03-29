@@ -10,7 +10,7 @@
         { "@id": "http://schema4i.org/DefinedRegion#PostalCodeRange" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/StructuredValue" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
