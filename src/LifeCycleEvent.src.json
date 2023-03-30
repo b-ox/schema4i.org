@@ -17,18 +17,18 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "LifeCycleEvent": {
-                "@id": "s4i:LifeCycleEvent",
-                "@type": "s4i:Event"
+                "@id": "s4i:LifeCycleEvent"
             }
         }
     },
     "playground": [{
-        "title": "Sample LifeCycleEvent",
+        "title": "Sample Event",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/LifeCycleEvent.jsonld",
-                "http://schema4i.org/Place.jsonld"
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld"                
             ],
             "@type": "Event",
             "Name": "Live Aid",
