@@ -63,6 +63,8 @@
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Basement.jsonld",
                 "http://schema4i.org/BuildingLifeCycleEvent.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Defect.jsonld",
