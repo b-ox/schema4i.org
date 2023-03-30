@@ -4,17 +4,18 @@
     "description": "Describes a chronological sequence of LifeCycleEvents that an object, work or person goes through.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/Building#LifeCycle"
+        "@id": "http://schema4i.org/BuildingLifeCycle"
     }],
-    "base": [],
+    "base": [{
+        "@id": "http://schema4i.org/Event"
+    }],
     "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "LifeCycle": {
-                "@id": "s4i:LifeCycle",
-                "@type": "s4i:Event"
+                "@id": "s4i:LifeCycle"
             }
         }
     },
@@ -24,7 +25,16 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Building.jsonld",
-                "http://schema4i.org/Event.jsonld"
+                "http://schema4i.org/LifeCycleEvent.jsonld",                
+                "http://schema4i.org/Place.jsonld",                
+                "http://schema4i.org/Thing.jsonld",                
+                "http://schema4i.org/Event.jsonld",
+                {
+                    "InDefinedTermSet": {
+                        "@id": "http://schema.org/inDefinedTermSet",
+                        "@type": "DefinedTermSet"
+                    }
+                }                
             ],
             "@type": "Building",
             "Name": "Eiffel Tower",
@@ -38,23 +48,31 @@
                         }
                     }
                 },
-                "@type": "Event",
+                "@type": "LifeCycleEvent",
                 "Name": "Construction",
-                "Identifier": "UnderConstruction",
+                "Reference": {
+                    "@type": "DefinedTerm",
+                    "TermCode": "UnderConstruction",
+                    "Name": "Bauphase",
+                    "InDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "http://schema4i.org/EnumConstructionStatusCode"
+                    }
+                },
                 "StartDate": "1887-01-28",
                 "EndDate": "1889-03-15"
             }, {
-                "@context": {
-                    "Identifier": {
-                        "@id": "schema:identifier",
-                        "@type": "@vocab",
-                        "@context": {
-                            "@vocab": "s4i:EnumConstructionStatusCode#"
-                        }
+                "@type": "LifeCycleEvent",
+                "Name": "Inauguration",
+                "Reference": {
+                    "@type": "DefinedTerm",
+                    "TermCode": "Completed",
+                    "Name": "Fertigstellung",
+                    "InDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "http://schema4i.org/EnumConstructionStatusCode"
                     }
                 },
-                "@type": "Event",
-                "Name": "Inauguration",
                 "Identifier": "Completed",
                 "StartDate": "1889-03-31"
             }]
