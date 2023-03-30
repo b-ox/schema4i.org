@@ -1,7 +1,7 @@
 {
     "type": "LifeCycle",
     "uri": "http://schema4i.org/LifeCycle",
-    "description": "Describes a chronological sequence of events that an object, work or person goes through. Generally, life cycle events are events that change the nature of the subject in some way, e.g. a book changing from a draft into the final publication.",
+    "description": "Describes a chronological sequence of LifeCycleEvents that an object, work or person goes through.",
     "links": [],
     "parents": [{
         "@id": "http://schema4i.org/Building#LifeCycle"
@@ -12,10 +12,7 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "LifeCycle": {
-                "@id": "s4i:LifeCycle",
-                "@type": "s4i:Event"
-            }
+            "LifeCycle": "s4i:LifeCycle"
         }
     },
     "playground": [{
@@ -24,7 +21,16 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Building.jsonld",
-                "http://schema4i.org/Event.jsonld"
+                "http://schema4i.org/LifeCycleEvent.jsonld",                
+                "http://schema4i.org/Place.jsonld",                
+                "http://schema4i.org/Thing.jsonld",                
+                "http://schema4i.org/Event.jsonld",
+                {
+                    "InDefinedTermSet": {
+                        "@id": "http://schema.org/inDefinedTermSet",
+                        "@type": "DefinedTermSet"
+                    }
+                }                
             ],
             "@type": "Building",
             "Name": "Eiffel Tower",
@@ -34,27 +40,35 @@
                         "@id": "schema:identifier",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumDevelopmentStatusCode#"
+                            "@vocab": "s4i:EnumConstructionStatusCode#"
                         }
                     }
                 },
-                "@type": "Event",
+                "@type": "LifeCycleEvent",
                 "Name": "Construction",
-                "Identifier": "UnderConstruction",
+                "Reference": {
+                    "@type": "DefinedTerm",
+                    "TermCode": "UnderConstruction",
+                    "Name": "Bauphase",
+                    "InDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "http://schema4i.org/EnumConstructionStatusCode"
+                    }
+                },
                 "StartDate": "1887-01-28",
                 "EndDate": "1889-03-15"
             }, {
-                "@context": {
-                    "Identifier": {
-                        "@id": "schema:identifier",
-                        "@type": "@vocab",
-                        "@context": {
-                            "@vocab": "s4i:EnumDevelopmentStatusCode#"
-                        }
+                "@type": "LifeCycleEvent",
+                "Name": "Inauguration",
+                "Reference": {
+                    "@type": "DefinedTerm",
+                    "TermCode": "Completed",
+                    "Name": "Fertigstellung",
+                    "InDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "http://schema4i.org/EnumConstructionStatusCode"
                     }
                 },
-                "@type": "Event",
-                "Name": "Inauguration",
                 "Identifier": "Completed",
                 "StartDate": "1889-03-31"
             }]

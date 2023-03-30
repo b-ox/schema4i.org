@@ -1,0 +1,46 @@
+{
+    "type": "LifeCycleEvent",
+    "uri": "http://schema4i.org/LifeCycleEvent",
+    "description": "Describes a event that an object, work or person goes through. Generally, life cycle events are events that change the nature of the subject in some way, e.g. a book changing from a draft into the final publication.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Building#LifeCycle"
+    }, {
+        "@id": "http://schema4i.org/BuildingLifeCycleEvent"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Event" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "LifeCycleEvent": "s4i:LifeCycleEvent"
+        }
+    },
+    "playground": [{
+        "title": "Sample Event",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld"                
+            ],
+            "@type": "Event",
+            "Name": "Live Aid",
+            "StartDate": "1985-07-13T12:00:00",
+            "EndDate": "1985-07-13T22:00:00",
+            "Location": [{
+                "@type": "Place",
+                "Name": "Wembley Stadium"
+            }, {
+                "@type": "Place",
+                "Name": "John F. Kennedy Stadium"
+            }],
+            "Duration": "T10H"
+        },
+        "context": {}
+    }]
+}

@@ -62,6 +62,9 @@
             "@context": [
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Basement.jsonld",
+                "http://schema4i.org/BuildingLifeCycleEvent.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Defect.jsonld",
@@ -94,7 +97,8 @@
                 "@type": "PropertyValue",
                 "Reference": {
                   "@type": "DefinedTerm",
-                  "TermCode": "PlaceOfWorship",
+                  "TermCode": "Industrial",
+                  "Name": "gewerbliche Nutzung",
                   "InDefinedTermSet": {
                     "@type": "DefinedTermSet",
                     "@id": "http://schema4i.org/EnumBuildingUseCode"
@@ -107,6 +111,7 @@
                 "@type": "Defect",
                 "Reference": {
                   "@type": "DefinedTerm",
+                  "Name": "Dach",
                   "InDefinedTermSet": {
                     "@id": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
                     "@type": "DefinedTermSet"
@@ -114,6 +119,13 @@
                   "TermCode": "03"
                 }
             },
+            "LifeCycle": [{
+                "@type": "BuildingLifeCycleEvent",
+                "Name": "Rohbau",
+                "ConstructionStatus": "UnderConstruction",
+                "StartDate": "1505-07-13T12:00:00",
+                "EndDate": "1508-07-13T22:00:00"
+            }],
             "Name": "Sistine Chapel",
             "YearBuilt": 1481,
             "Latitude": 41.903056,
