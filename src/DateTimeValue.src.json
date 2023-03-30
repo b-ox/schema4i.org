@@ -1,0 +1,47 @@
+{
+    "type": "DateTimeValue",
+    "uri": "http://schema4i.org/DateTimeValue",
+    "description": "A value representing a date and time. The Value should be an ISO_8601 date string, including time component and not truncated. If a timezone offset is known, it should be added according to standard. MinValue and MaxValue can be used to define a valid range for values.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Answer#Content" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/StructuredValue" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DateTimeValue": "schema:DateTimeValue",
+            "MaxValue": {
+                "@id": "schema:maxValue",
+                "@type": "schema:DateTime"
+            },
+            "MinValue": {
+                "@id": "schema:minValue",
+                "@type": "schema:DateTime"
+            },
+            "Value": {
+                "@id": "schema:value",
+                "@type": "schema:DateTime"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic DateTimeValue",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DateTimeValue.jsonld"
+            ],
+            "@type": "DateTimeValue",
+            "Name": "Check-In",
+            "Value": "2022-05-01T14:00:00+01:00"
+        },
+        "context": {}
+    }]
+}
