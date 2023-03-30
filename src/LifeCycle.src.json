@@ -4,11 +4,9 @@
     "description": "Describes a chronological sequence of LifeCycleEvents that an object, work or person goes through.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/BuildingLifeCycle"
+        "@id": "http://schema4i.org/Building#LifeCycle"
     }],
-    "base": [{
-        "@id": "http://schema4i.org/Event"
-    }],
+    "base": [],
     "multipletypes": {},
     "context": {
         "@context": {
