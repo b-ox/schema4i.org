@@ -5,6 +5,9 @@
     "links": [{
         "url": "http://schema4i.org/EnumConstructionStatusCode_DE",
         "description": "German translation"
+    }, {
+        "url": "https://ddwiki.reso.org/display/DDW17/DevelopmentStatus+Lookups",
+        "description": "RESO standard for DevelopmentStatus"
     }],
     "parents": [],
     "base": [],
