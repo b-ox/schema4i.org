@@ -14,9 +14,7 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "BuildingLifeCycleEvent": {
-                "@id": "s4i:BuildingLifeCycleEvent"
-            },
+            "BuildingLifeCycleEvent": "s4i:BuildingLifeCycleEvent",
             "ConstructionStatus": {
                 "@id": "http://schema4i.org/ConstructionStatus",
                 "@type": "@vocab",
