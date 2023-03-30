@@ -62,6 +62,7 @@
             "@context": [
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Basement.jsonld",
+                "http://schema4i.org/BuildingLifeCycleEvent.jsonld",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Defect.jsonld",
@@ -114,6 +115,12 @@
                   "TermCode": "03"
                 }
             },
+            "LifeCycle": [{
+                "@type": "BuildingLifeCycleEvent",
+                "ConstructionStatus": "Under Construction",
+                "StartDate": "1505-07-13T12:00:00",
+                "EndDate": "1508-07-13T22:00:00"
+            }],
             "Name": "Sistine Chapel",
             "YearBuilt": 1481,
             "Latitude": 41.903056,
