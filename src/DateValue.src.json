@@ -1,31 +1,15 @@
 {
     "type": "DateValue",
     "uri": "http://schema4i.org/DateValue",
-    "description": "A date value representing a date or datetime. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.",
-    "links": [{
-        "url": "http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
-        "description": "UN/CEFACT UnitCode"
-    }],
+    "description": "A value representing a date. The Value should be an ISO_8601 date string in the form YYYY-MM-DD, with no time or timezone component and not truncated. MinValue and MaxValue can be used to define a valid range for values.",
+    "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Answer#Content" }
     ],
     "base": [
         { "@id": "http://schema4i.org/StructuredValue" }
     ],
-    "multipletypes": {
-        "MaxValue": [
-            { "@id": "http://schema.org/Date" },
-            { "@id": "http://schema.org/DateTime" }
-        ],
-        "MinValue": [
-            { "@id": "http://schema.org/Date" },
-            { "@id": "http://schema.org/DateTime" }
-        ],
-        "Value": [
-            { "@id": "http://schema.org/Date" },
-            { "@id": "http://schema.org/DateTime" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
@@ -33,21 +17,16 @@
             "schema": "http://schema.org/",
             "DateValue": "schema:DateValue",
             "MaxValue": {
-                "@id": "schema:maxValue"
+                "@id": "schema:maxValue",
+                "@type": "schema:Date"
             },
             "MinValue": {
-                "@id": "schema:minValue"
-            },
-            "UnitCode": {
-                "@id": "schema:unitCode",
-                "@type": "schema:Text"
-            },
-            "UnitText": {
-                "@id": "schema:unitText",
-                "@type": "schema:Text"
+                "@id": "schema:minValue",
+                "@type": "schema:Date"
             },
             "Value": {
-                "@id": "schema:value"
+                "@id": "schema:value",
+                "@type": "schema:Date"
             }
         }
     },
