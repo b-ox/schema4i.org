@@ -5,6 +5,9 @@
     "links": [{
         "url": "http://schema4i.org/EnumConstructionStatusCode_DE",
         "description": "Englische Dokumentation der Schlüsselwerte"
+    }, {
+        "url": "https://ddwiki.reso.org/display/DDW17/DevelopmentStatus+Lookups",
+        "description": "RESO Standard für DevelopmentStatus"
     }],
     "parents": [],
     "base": [],
