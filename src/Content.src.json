@@ -1,25 +1,21 @@
 {
     "type": "Content",
     "uri": "http://schema4i.org/Content",
-    "description": "The content of the answer to a question, either as a textual description or a StructuredValue.",
+    "description": "The content of the answer to a question. If a human-readable free text version of the answer is available, the `Text` property should also be used.",
     "links": [],
     "parents": [{
         "@id": "http://schema4i.org/Answer#Content"
     }],
     "base": [],
-    "multipletypes": {
-        "Content": [
-            { "@id": "http://schema4i.org/StructuredValue" },
-            { "@id": "http://schema.org/Text" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Content": {
-                "@id": "s4i:Content"
+                "@id": "s4i:Content",
+                "@type": "s4i:PropertyValue"
             }
         }
     },
@@ -28,7 +24,10 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "Content": "This is a text answer"
+            "Content": {
+                "@type": "PropertyValue",
+                "Value": "This is the answer"
+            }
         },
         "context": {}
     }]
