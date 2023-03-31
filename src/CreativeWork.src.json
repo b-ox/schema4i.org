@@ -31,6 +31,10 @@
         ],
         "Offers": [
             { "@id": "http://schema4i.org/Offer" }
+        ],
+        "IsPartOf": [
+            { "@id": "http://schema4i.org/CreativeWork" },
+            { "@id": "http://schema.org/URL" }
         ]
     },
     "context": {
@@ -79,6 +83,9 @@
             "IsBasedOn": {
                 "@id": "schema:isBasedOn",
                 "@type": "schema:URL"
+            },
+            "IsPartOf": {
+                "@id": "schema:isPartOf"
             },
             "Keywords": {
                 "@id": "schema:keywords",

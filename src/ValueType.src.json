@@ -1,0 +1,35 @@
+{
+    "type": "ValueType",
+    "uri": "http://schema4i.org/ValueType",
+    "description": "Describes the type of the value of a property. This can be a URL referencing a Linked Data type from a schema or a URL for a DataType like Text or Number.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/PropertyValueSpecification#ValueType" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ValueType": {
+                "@id": "s4i:Copy",
+                "@type": "schema:URL"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ValueType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValueSpecification.jsonld"
+            ],
+            "@type": "PropertyValueSpecification",
+            "ValueType": "http://schema.org/Text"
+        },
+        "context": {}
+    }]
+}

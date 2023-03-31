@@ -13,12 +13,7 @@
     "base": [
         { "@id": "http://schema4i.org/Comment" }
     ],
-    "multipletypes": {
-        "Content": [
-            { "@id": "http://schema4i.org/StructuredValue" },
-            { "@id": "http://schema.org/Text" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
@@ -26,7 +21,8 @@
             "schema": "http://schema.org/",
             "Answer": "schema:Answer",
             "Content": {
-                "@id": "s4i:Content"
+                "@id": "s4i:Content",
+                "@type": "s4i:PropertyValue"
             }
         }
     },

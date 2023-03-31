@@ -1,0 +1,45 @@
+{
+    "type": "AnswerSpecification",
+    "uri": "http://schema4i.org/AnswerSpecification",
+    "description": "Describes the format of an answer to a question. To answer a `Question`, the `AcceptedAnswer` field should be filled with an `Answer` whose `Content` conforms to the `AnswerSpecification` of the question.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Question#AnswerSpecification"
+    }],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AnswerSpecification": {
+                "@id": "s4i:AnswerSpecification",
+                "@type": "s4i:PropertyValueSpecification"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample AnswerSpecification",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValueSpecification.jsonld"
+            ],
+            "@type": "PropertyValueSpecification",
+            "DefaultValue": "Vorgabe",
+            "MaxValue": 100,
+            "MinValue": 1,
+            "ReadonlyValue": false,
+            "StepValue": 5,
+            "ValueMaxLength": 10,
+            "ValueMinLength": 5,
+            "ValueName": "Feldname",
+            "ValuePattern": "[a-z]{5,10}",
+            "ValueRequired": true,
+            "ValueType": "http://schema.org/Text"
+        },
+        "context": {}
+    }]
+}
