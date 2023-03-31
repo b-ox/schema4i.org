@@ -11,6 +11,12 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
+        "DefaultValue": [
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/Boolean" },
+            { "@id": "http://schema4i.org/Thing" }
+        ],
         "MaxValue": [
             { "@id": "http://schema.org/Number" },
             { "@id": "http://schema.org/Text" }
@@ -32,7 +38,6 @@
             "PropertyValueSpecification": "schema:PropertyValueSpecification",
             "DefaultValue": {
                 "@id": "schema:defaultValue",
-                "@type": "schema:Text",
                 "types-hint": "singleton"
             },
             "MaxValue": {
@@ -74,6 +79,11 @@
             },
             "ValueRequired": {
                 "@id": "schema:valueRequired",
+                "@type": "schema:Boolean",
+                "types-hint": "singleton"
+            },
+            "MultipleValues": {
+                "@id": "schema:multipleValues",
                 "@type": "schema:Boolean",
                 "types-hint": "singleton"
             },
