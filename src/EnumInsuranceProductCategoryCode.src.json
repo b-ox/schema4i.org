@@ -9,7 +9,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Service#Category" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

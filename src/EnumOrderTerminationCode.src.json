@@ -12,7 +12,9 @@
     "parents": [
         { "@id": "http://schema4i.org/OrderTerminationCode" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

@@ -12,7 +12,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Vehicle#VehicleType" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

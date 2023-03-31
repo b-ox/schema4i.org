@@ -3,17 +3,20 @@
     "uri": "http://schema4i.org/EnumBasementFeatureCode",
     "description": "Ein Code, der Merkmale eines Kellers als Teil eines Gebäudes oder einer Unterkunft darstellt. Die Werte entsprechen den OData-Werten für den Lookup-Namen 'Basement Field', der vom RESO Data Dictionary verwendet wird (siehe https://ddwiki.reso.org/display/DDW17/Basement+Lookups)",
     "links": [{
-        "url": "http://schema4i.org/EnumBasementFeatureCode",
-        "description": "Englische Dokumentation der Schlüsselwerte"
-    },
-    {
-        "url": "https://ddwiki.reso.org/display/DDW17/Basement+Lookups",
-        "description": "Original RESO Data Dictionary liste"
-    }],
-    "parents": [{
-        "@id": "http://schema4i.org/Basement#BasementFeature"
-      }],
-    "base": [],
+            "url": "http://schema4i.org/EnumBasementFeatureCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        },
+        {
+            "url": "https://ddwiki.reso.org/display/DDW17/Basement+Lookups",
+            "description": "Original RESO Data Dictionary liste"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/Basement#BasementFeature" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

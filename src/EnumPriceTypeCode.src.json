@@ -1,42 +1,42 @@
 {
-  "type": "EnumPriceTypeCode",
-  "uri": "http://schema4i.org/EnumPriceTypeCode",
-  "description": "Code for coding the contribution types according to BiPRO.",
-  "links": [
-    {
-      "url": "http://schema4i.org/EnumPriceTypeCode_DE",
-      "description": "Original German documentation"
+    "type": "EnumPriceTypeCode",
+    "uri": "http://schema4i.org/EnumPriceTypeCode",
+    "description": "Code for coding the contribution types according to BiPRO.",
+    "links": [{
+        "url": "http://schema4i.org/EnumPriceTypeCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Net premium (without insurance tax, incl. surcharges, discounts)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET",
+            "Net premium rate": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_RATE",
+            "Annual net premium including any installment payment surcharge": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_ANNUAL",
+            "Insurance tax rate": "s4i:EnumPriceTypeCode#INSURANCE_TAX_RATE",
+            "Insurance tax": "s4i:EnumPriceTypeCode#INSURANCE_TAX",
+            "Fire brigade tax rate": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX_RATE",
+            "Fire brigade tax": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX",
+            "Gross insurance premium": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS",
+            "Gross insurance premium rate": "s4i:EnumPriceTypeCodeINSURANCE_PREMIUM_GROSS_TAX_RATE",
+            "Gross insurance premium according to payment method": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_AMOUNT",
+            "Annual premium including insurance tax, without deduction of discounts (conditions)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_ANNUAL",
+            "Brokerage/Commission": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE",
+            "Brokerage rate": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE_RATE",
+            "Agency commission": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION",
+            "Agency commission rate": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION_RATE",
+            "Gross management fee": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION",
+            "Gross management commission rate": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION_RATE",
+            "Payment transaction bookings/Financial bookings": "s4i:EnumPriceTypeCode#UNSPECIFIC_PAYMENT",
+            "Claims/Benefit payment": "s4i:EnumPriceTypeCode#LOSS_EXPENSES",
+            "Claims/Goodwill payment": "s4i:EnumPriceTypeCode#GOODWILL",
+            "Claims/Recourse payment": "s4i:EnumPriceTypeCode#REGRESS",
+            "Claims/Salvage payment": "s4i:EnumPriceTypeCode#PROVENUE"
+        }
     }
-  ],
-  "parents": [],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "Net premium (without insurance tax, incl. surcharges, discounts)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET",
-      "Net premium rate": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_RATE",
-      "Annual net premium including any installment payment surcharge": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_ANNUAL",
-      "Insurance tax rate": "s4i:EnumPriceTypeCode#INSURANCE_TAX_RATE",
-      "Insurance tax": "s4i:EnumPriceTypeCode#INSURANCE_TAX",
-      "Fire brigade tax rate": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX_RATE",
-      "Fire brigade tax": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX",
-      "Gross insurance premium": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS",
-      "Gross insurance premium rate": "s4i:EnumPriceTypeCodeINSURANCE_PREMIUM_GROSS_TAX_RATE",
-      "Gross insurance premium according to payment method": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_AMOUNT",
-      "Annual premium including insurance tax, without deduction of discounts (conditions)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_ANNUAL",
-      "Brokerage/Commission": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE",
-      "Brokerage rate": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE_RATE",
-      "Agency commission": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION",
-      "Agency commission rate": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION_RATE",
-      "Gross management fee": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION",
-      "Gross management commission rate": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION_RATE",
-      "Payment transaction bookings/Financial bookings": "s4i:EnumPriceTypeCode#UNSPECIFIC_PAYMENT",
-      "Claims/Benefit payment": "s4i:EnumPriceTypeCode#LOSS_EXPENSES",
-      "Claims/Goodwill payment": "s4i:EnumPriceTypeCode#GOODWILL",
-      "Claims/Recourse payment": "s4i:EnumPriceTypeCode#REGRESS",
-      "Claims/Salvage payment": "s4i:EnumPriceTypeCode#PROVENUE"
-    }
-  }
 }

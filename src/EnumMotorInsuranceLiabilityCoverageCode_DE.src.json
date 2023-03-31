@@ -10,7 +10,9 @@
         "description": "GDV Standard KFZ-Haftpflichtversicherung Feld 12"
     }],
     "parents": [],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

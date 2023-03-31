@@ -1,42 +1,42 @@
 {
-  "type": "EnumPriceTypeCode_DE",
-  "uri": "http://schema4i.org/EnumPriceTypeCode_DE",
-  "description": "Code für die Schlüsselung der Beitragsarten nach BiPRO.",
-  "links": [
-    {
-      "url": "http://schema4i.org/EnumPriceTypeCode",
-      "description": "Englische Dokumentation der Schlüsselwerte"
+    "type": "EnumPriceTypeCode_DE",
+    "uri": "http://schema4i.org/EnumPriceTypeCode_DE",
+    "description": "Code für die Schlüsselung der Beitragsarten nach BiPRO.",
+    "links": [{
+        "url": "http://schema4i.org/EnumPriceTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Netto-Beitrag (ohne Versicherungssteuer, inkl. Zuschläge, Rabatte)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET",
+            "Netto-Beitragsrsatz": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_RATE",
+            "Jahres-Netto-Beitrag inklusive etwaigem Ratenzahlungszuschlag": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_ANNUAL",
+            "Versicherungssteuersatz": "s4i:EnumPriceTypeCode#INSURANCE_TAX_RATE",
+            "Versicherungssteuer": "s4i:EnumPriceTypeCode#INSURANCE_TAX",
+            "Feuerschutzsteuersatz": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX_RATE",
+            "Feuerschutzsteuer": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX",
+            "Brutto-Beitrag": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS",
+            "Brutto-Beitragssatz": "s4i:EnumPriceTypeCodeINSURANCE_PREMIUM_GROSS_TAX_RATE",
+            "Beitrag inkl. Steuer gemäß Zahlweise": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_AMOUNT",
+            "Jahresbeitrag inklusive Versicherungssteuer, ohne Abzug von Rabatten (Konditionen)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_ANNUAL",
+            "Courtage/Provision": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE",
+            "Provisionssatz": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE_RATE",
+            "Assekuradeuersprovision": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION",
+            "Assekuradeuersprovisionssatz": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION_RATE",
+            "Führungsprovision (brutto)": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION",
+            "Führungsprovisionsrate (brutto)": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION_RATE",
+            "Zahlungsverkehrsbuchung/Finanzbuchungen": "s4i:EnumPriceTypeCode#UNSPECIFIC_PAYMENT",
+            "Schaden-/Leistungszahlung": "s4i:EnumPriceTypeCode#LOSS_EXPENSES",
+            "Schaden-/Kulanzzahlung": "s4i:EnumPriceTypeCode#GOODWILL",
+            "Schaden-/Regresszahlung": "s4i:EnumPriceTypeCode#REGRESS",
+            "Schaden-/Provenuezahlung": "s4i:EnumPriceTypeCode#PROVENUE"
+        }
     }
-  ],
-  "parents": [],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "Netto-Beitrag (ohne Versicherungssteuer, inkl. Zuschläge, Rabatte)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET",
-      "Netto-Beitragsrsatz": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_RATE",
-      "Jahres-Netto-Beitrag inklusive etwaigem Ratenzahlungszuschlag": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_ANNUAL",
-      "Versicherungssteuersatz": "s4i:EnumPriceTypeCode#INSURANCE_TAX_RATE",
-      "Versicherungssteuer": "s4i:EnumPriceTypeCode#INSURANCE_TAX",
-      "Feuerschutzsteuersatz": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX_RATE",
-      "Feuerschutzsteuer": "s4i:EnumPriceTypeCode#FIRE_BRIGADE_TAX",
-      "Brutto-Beitrag": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS",
-      "Brutto-Beitragssatz": "s4i:EnumPriceTypeCodeINSURANCE_PREMIUM_GROSS_TAX_RATE",
-      "Beitrag inkl. Steuer gemäß Zahlweise": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_AMOUNT",
-      "Jahresbeitrag inklusive Versicherungssteuer, ohne Abzug von Rabatten (Konditionen)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_ANNUAL",
-      "Courtage/Provision": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE",
-      "Provisionssatz": "s4i:EnumPriceTypeCode#INSURANCE_BROKERAGE_RATE",
-      "Assekuradeuersprovision": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION",
-      "Assekuradeuersprovisionssatz": "s4i:EnumPriceTypeCode#INSURANCE_AGENCY_COMMISSION_RATE",
-      "Führungsprovision (brutto)": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION",
-      "Führungsprovisionsrate (brutto)": "s4i:EnumPriceTypeCode#INSURANCE_MANAGEMENT_COMMISSION_RATE",
-      "Zahlungsverkehrsbuchung/Finanzbuchungen": "s4i:EnumPriceTypeCode#UNSPECIFIC_PAYMENT",
-      "Schaden-/Leistungszahlung": "s4i:EnumPriceTypeCode#LOSS_EXPENSES",
-      "Schaden-/Kulanzzahlung": "s4i:EnumPriceTypeCode#GOODWILL",
-      "Schaden-/Regresszahlung": "s4i:EnumPriceTypeCode#REGRESS",
-      "Schaden-/Provenuezahlung": "s4i:EnumPriceTypeCode#PROVENUE"
-    }
-  }
 }

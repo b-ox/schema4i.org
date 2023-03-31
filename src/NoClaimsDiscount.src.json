@@ -7,7 +7,9 @@
         { "@id": "http://schema4i.org/VehicleLiabilityCoverage#NoClaimsDiscount" },
         { "@id": "http://schema4i.org/FullyComprehensiveCoverage#NoClaimsDiscount" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

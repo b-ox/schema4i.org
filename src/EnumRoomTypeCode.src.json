@@ -1,52 +1,54 @@
 {
-  "type": "EnumRoomTypeCode",
-  "uri": "http://schema4i.org/EnumRoomTypeCode",
-  "description": "Category of an Accommodation. The values correspond to the OData values for the lookup name 'RoomType' used by the RESO Data Dictionary. See https://ddwiki.reso.org/display/DDW17/RoomType+Lookups.",
-  "links": [{
-      "url": "http://schema4i.org/EnumRoomTypeCode_DE",
-      "description": "German translation"
-  }],
-  "parents": [
-    { "@id": "http://schema4i.org/Room#AccommodationCategory" }
-  ],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "Bathroom": "s4i:EnumRoomTypeCode#Bathroom",
-      "Bathroom1": "s4i:EnumRoomTypeCode#Bathroom1",
-      "Bathroom2": "s4i:EnumRoomTypeCode#Bathroom2",
-      "Bathroom3": "s4i:EnumRoomTypeCode#Bathroom3",
-      "Bathroom4": "s4i:EnumRoomTypeCode#Bathroom4",
-      "Bathroom5": "s4i:EnumRoomTypeCode#Bathroom5",
-      "Bedroom": "s4i:EnumRoomTypeCode#Bedroom",
-      "Bedroom1": "s4i:EnumRoomTypeCode#Bedroom1",
-      "Bedroom2": "s4i:EnumRoomTypeCode#Bedroom2",
-      "Bedroom3": "s4i:EnumRoomTypeCode#Bedroom3",
-      "Bedroom4": "s4i:EnumRoomTypeCode#Bedroom4",
-      "Bedroom5": "s4i:EnumRoomTypeCode#Bedroom5",
-      "BonusRoom": "s4i:EnumRoomTypeCode#BonusRoom",
-      "Den": "s4i:EnumRoomTypeCode#Den",
-      "DiningRoom": "s4i:EnumRoomTypeCode#DiningRoom",
-      "ExerciseRoom": "s4i:EnumRoomTypeCode#ExerciseRoom",
-      "FamilyRoom": "s4i:EnumRoomTypeCode#FamilyRoom",
-      "GameRoom": "s4i:EnumRoomTypeCode#GameRoom",
-      "GreatRoom": "s4i:EnumRoomTypeCode#GreatRoom",
-      "Gym": "s4i:EnumRoomTypeCode#Gym",
-      "Kitchen": "s4i:EnumRoomTypeCode#Kitchen",
-      "Laundry": "s4i:EnumRoomTypeCode#Laundry",
-      "Library": "s4i:EnumRoomTypeCode#Library",
-      "LivingRoom": "s4i:EnumRoomTypeCode#LivingRoom",
-      "Loft": "s4i:EnumRoomTypeCode#Loft",
-      "MasterBathroom": "s4i:EnumRoomTypeCode#MasterBathroom",
-      "MasterBedroom": "s4i:EnumRoomTypeCode#MasterBedroom",
-      "MediaRoom": "s4i:EnumRoomTypeCode#MediaRoom",
-      "Office": "s4i:EnumRoomTypeCode#Office",
-      "Sauna": "s4i:EnumRoomTypeCode#Sauna",
-      "UtilityRoom": "s4i:EnumRoomTypeCode#UtilityRoom",
-      "Workshop": "s4i:EnumRoomTypeCode#Workshop"
+    "type": "EnumRoomTypeCode",
+    "uri": "http://schema4i.org/EnumRoomTypeCode",
+    "description": "Category of an Accommodation. The values correspond to the OData values for the lookup name 'RoomType' used by the RESO Data Dictionary. See https://ddwiki.reso.org/display/DDW17/RoomType+Lookups.",
+    "links": [{
+        "url": "http://schema4i.org/EnumRoomTypeCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Room#AccommodationCategory" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Bathroom": "s4i:EnumRoomTypeCode#Bathroom",
+            "Bathroom1": "s4i:EnumRoomTypeCode#Bathroom1",
+            "Bathroom2": "s4i:EnumRoomTypeCode#Bathroom2",
+            "Bathroom3": "s4i:EnumRoomTypeCode#Bathroom3",
+            "Bathroom4": "s4i:EnumRoomTypeCode#Bathroom4",
+            "Bathroom5": "s4i:EnumRoomTypeCode#Bathroom5",
+            "Bedroom": "s4i:EnumRoomTypeCode#Bedroom",
+            "Bedroom1": "s4i:EnumRoomTypeCode#Bedroom1",
+            "Bedroom2": "s4i:EnumRoomTypeCode#Bedroom2",
+            "Bedroom3": "s4i:EnumRoomTypeCode#Bedroom3",
+            "Bedroom4": "s4i:EnumRoomTypeCode#Bedroom4",
+            "Bedroom5": "s4i:EnumRoomTypeCode#Bedroom5",
+            "BonusRoom": "s4i:EnumRoomTypeCode#BonusRoom",
+            "Den": "s4i:EnumRoomTypeCode#Den",
+            "DiningRoom": "s4i:EnumRoomTypeCode#DiningRoom",
+            "ExerciseRoom": "s4i:EnumRoomTypeCode#ExerciseRoom",
+            "FamilyRoom": "s4i:EnumRoomTypeCode#FamilyRoom",
+            "GameRoom": "s4i:EnumRoomTypeCode#GameRoom",
+            "GreatRoom": "s4i:EnumRoomTypeCode#GreatRoom",
+            "Gym": "s4i:EnumRoomTypeCode#Gym",
+            "Kitchen": "s4i:EnumRoomTypeCode#Kitchen",
+            "Laundry": "s4i:EnumRoomTypeCode#Laundry",
+            "Library": "s4i:EnumRoomTypeCode#Library",
+            "LivingRoom": "s4i:EnumRoomTypeCode#LivingRoom",
+            "Loft": "s4i:EnumRoomTypeCode#Loft",
+            "MasterBathroom": "s4i:EnumRoomTypeCode#MasterBathroom",
+            "MasterBedroom": "s4i:EnumRoomTypeCode#MasterBedroom",
+            "MediaRoom": "s4i:EnumRoomTypeCode#MediaRoom",
+            "Office": "s4i:EnumRoomTypeCode#Office",
+            "Sauna": "s4i:EnumRoomTypeCode#Sauna",
+            "UtilityRoom": "s4i:EnumRoomTypeCode#UtilityRoom",
+            "Workshop": "s4i:EnumRoomTypeCode#Workshop"
+        }
     }
-  }
 }

@@ -1,20 +1,22 @@
 {
-  "type": "EnumPropertyUsageCode",
-  "uri": "http://schema4i.org/EnumPropertyUsageCode",
-  "description": "A code that describes the usage.",
-  "links": [{
-      "url": "http://schema4i.org/EnumPropertyUsageCode_DE",
-      "description": "German translation"
-  }],
-  "parents": [],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "self usage": "s4i:EnumPropertyUsageCode#01",
-      "third-party usage": "s4i:EnumPropertyUsageCode#02"
+    "type": "EnumPropertyUsageCode",
+    "uri": "http://schema4i.org/EnumPropertyUsageCode",
+    "description": "A code that describes the usage.",
+    "links": [{
+        "url": "http://schema4i.org/EnumPropertyUsageCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "self usage": "s4i:EnumPropertyUsageCode#01",
+            "third-party usage": "s4i:EnumPropertyUsageCode#02"
+        }
     }
-  }
 }

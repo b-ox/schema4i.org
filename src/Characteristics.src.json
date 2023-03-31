@@ -6,7 +6,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Group#Characteristics" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -19,25 +21,23 @@
             }
         }
     },
-    "playground": [
-        {
-            "title": "A maximum example of Characteristics",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Filter.jsonld",
-                    "http://schema4i.org/FilterItem.jsonld",
-                    "http://schema4i.org/Animal.jsonld"
-                  ],
-                  "Characteristics": {
-                      "@type": "Filter",
-                      "FilterItem": {
-                          "@type": "Animal"
-                      }
-                  }
-            },
-            "context": {}
-        }
-    ]
+    "playground": [{
+        "title": "A maximum example of Characteristics",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Filter.jsonld",
+                "http://schema4i.org/FilterItem.jsonld",
+                "http://schema4i.org/Animal.jsonld"
+            ],
+            "Characteristics": {
+                "@type": "Filter",
+                "FilterItem": {
+                    "@type": "Animal"
+                }
+            }
+        },
+        "context": {}
+    }]
 }

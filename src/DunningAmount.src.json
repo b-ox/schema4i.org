@@ -6,7 +6,9 @@
     "parents": [{
         "@id": "http://schema4i.org/Dunning#Amount"
     }],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

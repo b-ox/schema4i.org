@@ -6,7 +6,9 @@
     "parents": [{
         "@id": "http://schema4i.org/Building#LifeCycle"
     }],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -21,16 +23,16 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Building.jsonld",
-                "http://schema4i.org/LifeCycleEvent.jsonld",                
-                "http://schema4i.org/Place.jsonld",                
-                "http://schema4i.org/Thing.jsonld",                
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Event.jsonld",
                 {
                     "InDefinedTermSet": {
                         "@id": "http://schema.org/inDefinedTermSet",
                         "@type": "DefinedTermSet"
                     }
-                }                
+                }
             ],
             "@type": "Building",
             "Name": "Eiffel Tower",

@@ -6,7 +6,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Order#SignatureType" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

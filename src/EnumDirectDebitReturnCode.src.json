@@ -9,10 +9,12 @@
         "url": "http://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2019-05/EPC173-14%20v5.0%20Guidance%20on%20Reason%20Codes%20for%20SDD%20R-transactions.pdf",
         "description": "GUIDANCE ON REASON CODES FOR SCT R-TRANSACTIONS of European Payments Council (ISO Standard)"
     }],
-    "parents": [{
-        "@id": "http://schema4i.org/DirectDebitReturnCode"
-    }],
-    "base": [],
+    "parents": [
+        { "@id": "http://schema4i.org/DirectDebitReturnCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

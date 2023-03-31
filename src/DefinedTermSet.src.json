@@ -6,10 +6,13 @@
         "url": "http://schema.org/DefinedTermSet",
         "description": "Original Schema.org type"
     }],
-    "parents": [{ "@id": "http://schema4i.org/Occupation#OccupationalCategory" }],
-    "base": [{ "@id": "http://schema4i.org/CreativeWork" }],
-    "multipletypes": {
-    },
+    "parents": [
+        { "@id": "http://schema4i.org/Occupation#OccupationalCategory" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
@@ -22,20 +25,18 @@
             }
         }
     },
-    "playground": [
-        {
-            "title": "A maximum DefinedTermSet",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/DefinedTermSet.jsonld"
-                ],
-                "@type": "DefinedTermSet",
-                "@id": "https://api.b-ox.de/datalake/occupation/5515",
-                "HasDefinedTerm": "KNR-4711"
-            },
-            "context": {}
-        }
-    ]
+    "playground": [{
+        "title": "A maximum DefinedTermSet",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/DefinedTermSet.jsonld"
+            ],
+            "@type": "DefinedTermSet",
+            "@id": "https://api.b-ox.de/datalake/occupation/5515",
+            "HasDefinedTerm": "KNR-4711"
+        },
+        "context": {}
+    }]
 }

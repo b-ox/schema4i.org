@@ -3,10 +3,12 @@
     "uri": "http://schema4i.org/DirectDebitReturnCode",
     "description": "Reason for non-payment of a SEPA / direct debit according to the European ISO Standard, e.g. AC01 = Incorrect Account Number.",
     "links": [],
-    "parents": [{
-        "@id": "http://schema4i.org/Dunning#DirectDebitReturnCode"
-    }],
-    "base": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Dunning#DirectDebitReturnCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

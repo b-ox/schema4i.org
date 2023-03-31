@@ -6,7 +6,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Building#CurrentUse" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -15,10 +17,7 @@
             "schema": "http://schema.org/",
             "CurrentUse": {
                 "@id": "s4i:CurrentUse",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumBuildingUseCode#"
-                }
+                "@type": "s4i:PropertyValue"
             }
         }
     },
@@ -27,18 +26,21 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/CurrentUse.jsonld"
+                "http://schema4i.org/CurrentUse.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/DefinedTerm.jsonld",
+                "http://schema4i.org/Thing.jsonld"
             ],
             "CurrentUse": {
                 "@type": "PropertyValue",
                 "Reference": {
-                  "@type": "DefinedTerm",
-                  "TermCode": "PlaceOfWorship",
-                  "InDefinedTermSet": "http://schema4i.org/EnumBuildingUseCode"
+                    "@type": "DefinedTerm",
+                    "TermCode": "PlaceOfWorship",
+                    "InDefinedTermSet": "http://schema4i.org/EnumBuildingUseCode"
                 },
                 "Value": 50,
                 "UnitCode": "P1"
-              }            
+            }
         },
         "context": {}
     }]

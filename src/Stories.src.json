@@ -6,8 +6,12 @@
         "url": "https://ddwiki.reso.org/display/DDW17/Stories+Field",
         "description": "Original RESO Data Dictionary type"
     }],
-    "parents": [],
-    "base": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Building#Stories" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

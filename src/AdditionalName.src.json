@@ -9,7 +9,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Organization#AdditionalName" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

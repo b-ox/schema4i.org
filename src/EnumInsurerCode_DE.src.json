@@ -12,7 +12,9 @@
         }
     ],
     "parents": [],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

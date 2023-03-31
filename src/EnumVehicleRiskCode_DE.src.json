@@ -14,7 +14,9 @@
     "parents": [
         { "@id": "http://schema4i.org/VehicleRiskCode" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

@@ -6,7 +6,9 @@
     "parents": [{
         "@id": "http://schema4i.org/AccidentCoverage#Progression"
     }],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

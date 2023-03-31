@@ -22,23 +22,22 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/DefinedTerm.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 {
                     "InDefinedTermSet": {
-                      "@id": "http://schema.org/inDefinedTermSet",
-                      "@type": "http://schema.org/URL"
+                        "@id": "http://schema.org/inDefinedTermSet",
+                        "@type": "http://schema.org/URL"
                     }
                 }
             ],
             "@type": "Defect",
             "Name": "Durchnässung",
-            "Reference": [
-                {
-                  "@type": "DefinedTerm",
-                  "InDefinedTermSet": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
-                  "TermCode": "03"
-                }
-              ]
+            "Reference": [{
+                "@type": "DefinedTerm",
+                "InDefinedTermSet": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
+                "TermCode": "03"
+            }]
         },
         "context": {}
     }]

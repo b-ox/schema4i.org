@@ -6,7 +6,9 @@
     "parents": [{
         "@id": "http://schema4i.org/Coverage#Deductible"
     }],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {
         "Deductible": [
             { "@id": "http://schema4i.org/QuantitativeValue" },

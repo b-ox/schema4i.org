@@ -3,8 +3,12 @@
     "uri": "http://schema4i.org/License",
     "description": "A document containing rules, specifications or requirements for the use of a service or platform, e.g. terms of use, data protection agreements, or privacy policies.",
     "links": [],
-    "parents": [],
-    "base": [],
+    "parents": [
+        { "@id": "http://schema4i.org/UserAccount#License" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

@@ -6,7 +6,9 @@
     "parents": [
         { "@id": "http://schema4i.org/Group#NumberOfMembers" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {
         "NumberOfMembers": [
             { "@id": "http://schema.org/Number" },
@@ -23,24 +25,22 @@
             }
         }
     },
-    "playground": [
-        {
-            "title": "A sample for NumberOfMembers",
-            "tab": "tab-expanded",
-            "input": {
-                "@context": [
-                    "http://schema4i.org/Group.jsonld",
-                    "http://schema4i.org/Thing.jsonld",
-                    {
-                        "NumberOfMembers": {
-                            "@id": "http://schema4i.org/NumberOfMembers",
-                            "@type": "http://schema.org/Number"
+    "playground": [{
+        "title": "A sample for NumberOfMembers",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Group.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "NumberOfMembers": {
+                        "@id": "http://schema4i.org/NumberOfMembers",
+                        "@type": "http://schema.org/Number"
                     }
                 }
-                ],
-                "NumberOfMembers": 11
-            },
-            "context": {}
-        }
-    ]
+            ],
+            "NumberOfMembers": 11
+        },
+        "context": {}
+    }]
 }

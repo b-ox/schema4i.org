@@ -1,48 +1,48 @@
 {
-  "type": "EnumTransactionCategoryCode",
-  "uri": "http://schema4i.org/EnumTransactionCategoryCode",
-  "description": "Four-digit code of the category of a business transaction.",
-  "links": [
-    {
-      "url": "http://schema4i.org/EnumTransactionCategoryCode_DE",
-      "description": "Original German documentation"
+    "type": "EnumTransactionCategoryCode",
+    "uri": "http://schema4i.org/EnumTransactionCategoryCode",
+    "description": "Four-digit code of the category of a business transaction.",
+    "links": [{
+        "url": "http://schema4i.org/EnumTransactionCategoryCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Transmission of a key date position: Contract (1001)": "s4i:EnumTransactionCategoryCode#1001",
+            "Transfer of a Change Stock: Contract (1002)": "s4i:EnumTransactionCategoryCode#1002",
+            "Initial Provision of Changes to Business Transactions Effective in the Future: Contract (1003)": "s4i:EnumTransactionCategoryCode#1003",
+            "Business transaction-triggered provision and transmission of changes: Contract (1004)": "s4i:EnumTransactionCategoryCode#1004",
+            "Transmission of a database from the consumer to the provider: contract (1005)": "s4i:EnumTransactionCategoryCode#1005",
+            "Transmission of business transactions without contract data: Contract (1006)": "s4i:EnumTransactionCategoryCode#1006",
+            "Initial provision of changes to business transactions with future effect: contract + debt collection (1103)": "s4i:EnumTransactionCategoryCode#1103",
+            "Business transaction-triggered provision and transmission of changes: contract + debt collection (1104)": "s4i:EnumTransactionCategoryCode#1104",
+            "Transmission of a database from the consumer to the provider: contract + debt collection (1105)": "s4i:EnumTransactionCategoryCode#1105",
+            "Initial provision of changes to business transactions effective in the future: collections only (1203)": "s4i:EnumTransactionCategoryCode#1203",
+            "Business transaction-triggered provision and transmission of changes: collections only (1204)": "s4i:EnumTransactionCategoryCode#1204",
+            "Transmission of a database from the consumer to the provider: collection only (1205)": "s4i:EnumTransactionCategoryCode#1205",
+            "Initial provision of changes to business transactions that will take effect in the future: premium settlement (1303)": "s4i:EnumTransactionCategoryCode#1303",
+            "Business transaction-triggered provision and transmission of changes: premium settlement (1304)": "s4i:EnumTransactionCategoryCode#1304",
+            "Transmission of a database from the consumer to the provider: premium statement (1305)": "s4i:EnumTransactionCategoryCode#1305",
+            "Transmission of a key date inventory: damage with cumulative damage amounts (2001)": "s4i:EnumTransactionCategoryCode#2001",
+            "Transmission of a change stock: damage with accumulated damage amounts (2002)": "s4i:EnumTransactionCategoryCode#2002",
+            "Transmission of a key date inventory: damage with individual adjustments (2101)": "s4i:EnumTransactionCategoryCode#2101",
+            "Transmission of a change stock: damage with individual adjustments (2102)": "s4i:EnumTransactionCategoryCode#2102",
+            "Business transaction-triggered provision and transmission of changes: damage (2104)": "s4i:EnumTransactionCategoryCode#2104",
+            "Transmission of a database from the consumer to the provider: damage (2105)": "s4i:EnumTransactionCategoryCode#2105",
+            "Transmission of business transactions without contract data: damage (2106)": "s4i:EnumTransactionCategoryCode#2106",
+            "Business transaction-triggered provision and transmission of changes: claims settlement (2304)": "s4i:EnumTransactionCategoryCode#2304",
+            "Transmission of a database from the consumer to the provider: claim settlement (2305)": "s4i:EnumTransactionCategoryCode#2305",
+            "Agent settlement: Settlement (2401)": "s4i:EnumTransactionCategoryCode#2401",
+            "Agent settlement: Clarification request (2402)": "s4i:EnumTransactionCategoryCode#2402",
+            "Agent settlement: Clarification Response (2403)": "s4i:EnumTransactionCategoryCode#2403",
+            "Agent settlement: Request billing (2404)": "s4i:EnumTransactionCategoryCode#2404"
+        }
     }
-  ],
-  "parents": [],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "Transmission of a key date position: Contract (1001)": "s4i:EnumTransactionCategoryCode#1001",
-      "Transfer of a Change Stock: Contract (1002)": "s4i:EnumTransactionCategoryCode#1002",
-      "Initial Provision of Changes to Business Transactions Effective in the Future: Contract (1003)": "s4i:EnumTransactionCategoryCode#1003",
-      "Business transaction-triggered provision and transmission of changes: Contract (1004)": "s4i:EnumTransactionCategoryCode#1004",
-      "Transmission of a database from the consumer to the provider: contract (1005)": "s4i:EnumTransactionCategoryCode#1005",
-      "Transmission of business transactions without contract data: Contract (1006)": "s4i:EnumTransactionCategoryCode#1006",
-      "Initial provision of changes to business transactions with future effect: contract + debt collection (1103)": "s4i:EnumTransactionCategoryCode#1103",
-      "Business transaction-triggered provision and transmission of changes: contract + debt collection (1104)": "s4i:EnumTransactionCategoryCode#1104",
-      "Transmission of a database from the consumer to the provider: contract + debt collection (1105)": "s4i:EnumTransactionCategoryCode#1105",
-      "Initial provision of changes to business transactions effective in the future: collections only (1203)": "s4i:EnumTransactionCategoryCode#1203",
-      "Business transaction-triggered provision and transmission of changes: collections only (1204)": "s4i:EnumTransactionCategoryCode#1204",
-      "Transmission of a database from the consumer to the provider: collection only (1205)": "s4i:EnumTransactionCategoryCode#1205",
-      "Initial provision of changes to business transactions that will take effect in the future: premium settlement (1303)": "s4i:EnumTransactionCategoryCode#1303",
-      "Business transaction-triggered provision and transmission of changes: premium settlement (1304)": "s4i:EnumTransactionCategoryCode#1304",
-      "Transmission of a database from the consumer to the provider: premium statement (1305)": "s4i:EnumTransactionCategoryCode#1305",
-      "Transmission of a key date inventory: damage with cumulative damage amounts (2001)": "s4i:EnumTransactionCategoryCode#2001",
-      "Transmission of a change stock: damage with accumulated damage amounts (2002)": "s4i:EnumTransactionCategoryCode#2002",
-      "Transmission of a key date inventory: damage with individual adjustments (2101)": "s4i:EnumTransactionCategoryCode#2101",
-      "Transmission of a change stock: damage with individual adjustments (2102)": "s4i:EnumTransactionCategoryCode#2102",
-      "Business transaction-triggered provision and transmission of changes: damage (2104)": "s4i:EnumTransactionCategoryCode#2104",
-      "Transmission of a database from the consumer to the provider: damage (2105)": "s4i:EnumTransactionCategoryCode#2105",
-      "Transmission of business transactions without contract data: damage (2106)": "s4i:EnumTransactionCategoryCode#2106",
-      "Business transaction-triggered provision and transmission of changes: claims settlement (2304)": "s4i:EnumTransactionCategoryCode#2304",
-      "Transmission of a database from the consumer to the provider: claim settlement (2305)": "s4i:EnumTransactionCategoryCode#2305",
-      "Agent settlement: Settlement (2401)": "s4i:EnumTransactionCategoryCode#2401",
-      "Agent settlement: Clarification request (2402)": "s4i:EnumTransactionCategoryCode#2402",
-      "Agent settlement: Clarification Response (2403)": "s4i:EnumTransactionCategoryCode#2403",
-      "Agent settlement: Request billing (2404)": "s4i:EnumTransactionCategoryCode#2404"
-    }
-  }
 }

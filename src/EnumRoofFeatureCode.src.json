@@ -1,54 +1,56 @@
 {
-  "type": "EnumRoofFeatureCode",
-  "uri": "http://schema4i.org/EnumRoofFeatureCode",
-  "description": "A code that represents the style of a roof. The values correspond to the OData values for the lookup name 'Roof' used by the RESO Data Dictionary. See also https://ddwiki.reso.org/display/DDW17/DevelopmentStatus+Lookups.",
-  "links": [{
-      "url": "http://schema4i.org/EnumRoofFeatureCode_DE",
-      "description": "German translation"
-  }],
-  "parents": [
-    { "@id": "http://schema4i.org/Accommodation#RoofFeature" }
-  ],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "Aluminum": "s4i:EnumRoofFeatureCode#Aluminum",
-      "Asbestos Shingle": "s4i:EnumRoofFeatureCode#AsbestosShingle",
-      "Asphalt": "s4i:EnumRoofFeatureCode#Asphalt",
-      "Bahama": "s4i:EnumRoofFeatureCode#Bahama",
-      "Barrel": "s4i:EnumRoofFeatureCode#Barrel",
-      "Bituthene": "s4i:EnumRoofFeatureCode#Bituthene",
-      "Built-Up": "s4i:EnumRoofFeatureCode#Built-Up",
-      "Composition": "s4i:EnumRoofFeatureCode#Composition",
-      "Concrete": "s4i:EnumRoofFeatureCode#Concrete",
-      "Copper": "s4i:EnumRoofFeatureCode#Copper",
-      "Elastomeric": "s4i:EnumRoofFeatureCode#Elastomeric",
-      "Fiberglass": "s4i:EnumRoofFeatureCode#Fiberglass",
-      "Flat": "s4i:EnumRoofFeatureCode#Flat",
-      "Flat Tile": "s4i:EnumRoofFeatureCode#FlatTile",
-      "Foam": "s4i:EnumRoofFeatureCode#Foam",
-      "GableRoof": "s4i:EnumRoofFeatureCode#GableRoof",
-      "Green Roof": "s4i:EnumRoofFeatureCode#GreenRoof",
-      "Mansard": "s4i:EnumRoofFeatureCode#Mansard",
-      "Membrane": "s4i:EnumRoofFeatureCode#Membrane",
-      "Metal": "s4i:EnumRoofFeatureCode#Metal",
-      "Mixed": "s4i:EnumRoofFeatureCode#Mixed",
-      "None": "s4i:EnumRoofFeatureCode#None",
-      "Other": "s4i:EnumRoofFeatureCode#Other",
-      "Rolled/Hot Mop": "s4i:EnumRoofFeatureCode#RolledHotMop",
-      "Rubber": "s4i:EnumRoofFeatureCode#Rubber",
-      "Shake": "s4i:EnumRoofFeatureCode#Shake",
-      "Shingle": "s4i:EnumRoofFeatureCode#Shingle",
-      "Slate": "s4i:EnumRoofFeatureCode#Slate",
-      "Spanish Tile": "s4i:EnumRoofFeatureCode#SpanishTile",
-      "Stone": "s4i:EnumRoofFeatureCode#Stone",
-      "Synthetic": "s4i:EnumRoofFeatureCode#Synthetic",
-      "Tar/Gravel": "s4i:EnumRoofFeatureCode#TarGravel",
-      "Tile": "s4i:EnumRoofFeatureCode#Tile",
-      "Wood": "s4i:EnumRoofFeatureCode#Wood"
+    "type": "EnumRoofFeatureCode",
+    "uri": "http://schema4i.org/EnumRoofFeatureCode",
+    "description": "A code that represents the style of a roof. The values correspond to the OData values for the lookup name 'Roof' used by the RESO Data Dictionary. See also https://ddwiki.reso.org/display/DDW17/DevelopmentStatus+Lookups.",
+    "links": [{
+        "url": "http://schema4i.org/EnumRoofFeatureCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Accommodation#RoofFeature" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Aluminum": "s4i:EnumRoofFeatureCode#Aluminum",
+            "Asbestos Shingle": "s4i:EnumRoofFeatureCode#AsbestosShingle",
+            "Asphalt": "s4i:EnumRoofFeatureCode#Asphalt",
+            "Bahama": "s4i:EnumRoofFeatureCode#Bahama",
+            "Barrel": "s4i:EnumRoofFeatureCode#Barrel",
+            "Bituthene": "s4i:EnumRoofFeatureCode#Bituthene",
+            "Built-Up": "s4i:EnumRoofFeatureCode#Built-Up",
+            "Composition": "s4i:EnumRoofFeatureCode#Composition",
+            "Concrete": "s4i:EnumRoofFeatureCode#Concrete",
+            "Copper": "s4i:EnumRoofFeatureCode#Copper",
+            "Elastomeric": "s4i:EnumRoofFeatureCode#Elastomeric",
+            "Fiberglass": "s4i:EnumRoofFeatureCode#Fiberglass",
+            "Flat": "s4i:EnumRoofFeatureCode#Flat",
+            "Flat Tile": "s4i:EnumRoofFeatureCode#FlatTile",
+            "Foam": "s4i:EnumRoofFeatureCode#Foam",
+            "GableRoof": "s4i:EnumRoofFeatureCode#GableRoof",
+            "Green Roof": "s4i:EnumRoofFeatureCode#GreenRoof",
+            "Mansard": "s4i:EnumRoofFeatureCode#Mansard",
+            "Membrane": "s4i:EnumRoofFeatureCode#Membrane",
+            "Metal": "s4i:EnumRoofFeatureCode#Metal",
+            "Mixed": "s4i:EnumRoofFeatureCode#Mixed",
+            "None": "s4i:EnumRoofFeatureCode#None",
+            "Other": "s4i:EnumRoofFeatureCode#Other",
+            "Rolled/Hot Mop": "s4i:EnumRoofFeatureCode#RolledHotMop",
+            "Rubber": "s4i:EnumRoofFeatureCode#Rubber",
+            "Shake": "s4i:EnumRoofFeatureCode#Shake",
+            "Shingle": "s4i:EnumRoofFeatureCode#Shingle",
+            "Slate": "s4i:EnumRoofFeatureCode#Slate",
+            "Spanish Tile": "s4i:EnumRoofFeatureCode#SpanishTile",
+            "Stone": "s4i:EnumRoofFeatureCode#Stone",
+            "Synthetic": "s4i:EnumRoofFeatureCode#Synthetic",
+            "Tar/Gravel": "s4i:EnumRoofFeatureCode#TarGravel",
+            "Tile": "s4i:EnumRoofFeatureCode#Tile",
+            "Wood": "s4i:EnumRoofFeatureCode#Wood"
+        }
     }
-  }
 }

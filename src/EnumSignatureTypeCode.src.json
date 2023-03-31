@@ -1,26 +1,26 @@
 {
-  "type": "EnumSignatureTypeCode",
-  "uri": "http://schema4i.org/EnumSignatureTypeCode",
-  "description": "A code that describes how a (digital) document was signed.",
-  "links": [
-    {
-      "url": "http://schema4i.org/EnumSignatureTypeCode_DE",
-      "description": "Original German documentation"
+    "type": "EnumSignatureTypeCode",
+    "uri": "http://schema4i.org/EnumSignatureTypeCode",
+    "description": "A code that describes how a (digital) document was signed.",
+    "links": [{
+        "url": "http://schema4i.org/EnumSignatureTypeCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Order#SignaturType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "No explicit signature; declaration of intent is made e.g. by verbal agreement or click confirmation": "s4i:EnumSignatureTypeCode#00",
+            "Electronic signing of a document by means of an advanced electronic signature e.g. ePen or DigiPad": "s4i:EnumSignatureTypeCode#01",
+            "Electronic signing of a document by means of a qualified electronic / digital signature by certificate": "s4i:EnumSignatureTypeCode#02",
+            "Handwritten signature on printed paper": "s4i:EnumSignatureTypeCode#03"
+        }
     }
-  ],
-  "parents": [
-    { "@id": "http://schema4i.org/Order#SignaturType" }
-  ],
-  "base": [],
-  "multipletypes": {},
-  "context": {
-    "@context": {
-      "@version": 1.1,
-      "s4i": "http://schema4i.org/",
-      "No explicit signature; declaration of intent is made e.g. by verbal agreement or click confirmation": "s4i:EnumSignatureTypeCode#00",
-      "Electronic signing of a document by means of an advanced electronic signature e.g. ePen or DigiPad": "s4i:EnumSignatureTypeCode#01",
-      "Electronic signing of a document by means of a qualified electronic / digital signature by certificate": "s4i:EnumSignatureTypeCode#02",
-      "Handwritten signature on printed paper": "s4i:EnumSignatureTypeCode#03"
-    }
-  }
 }

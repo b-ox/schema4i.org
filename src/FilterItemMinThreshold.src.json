@@ -6,7 +6,9 @@
     "parents": [{
         "@id": "http://schema4i.org/Filter#FilterItemMinThreshold"
     }],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -19,36 +21,31 @@
         }
     },
     "playground": [{
-        "title": "A minimal Filter matching a Message that fullfills at least two Conditions.",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": [
-                "http://schema4i.org/Filter.jsonld",
-                "http://schema4i.org/Message.jsonld",
-                "http://schema4i.org/QuantitativeValue"
-            ],
-            "@type": "Filter",
-            "FilterItem": {
-                "@type": "Message",
-                "Keywords": [
-                    "Posteingang"
-                ]
-            },
-            "FilterItem": {
-                "@type": "Message",
-                "Identifier": "4711"
-            },
-            "FilterItem": {
-                "MessageAttachment": {
-                    "Keywords": "Dokument"
-                }
-            },
-            "FilterItemMinThreshold": {
-                "@type": "QuantitativeValue",
-                "Value": "2",
-                "UnitCode": "P1"
+            "title": "A minimal Filter matching a Message that fullfills at least two Conditions.",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Filter.jsonld",
+                    "http://schema4i.org/Message.jsonld",
+                    "http://schema4i.org/QuantitativeValue"
+                ],
+                "@type": "Filter",
+                "FilterItem": [{
+                    "@type": "Message",
+                    "Keywords": ["Posteingang"]
+                }, {
+                    "@type": "Message",
+                    "Identifier": "4711"
+                }, {
+                    "MessageAttachment": {
+                        "Keywords": "Dokument"
+                    }
+                }, {
+                    "@type": "QuantitativeValue",
+                    "Value": "2",
+                    "UnitCode": "P1"
+                }]
             }
-        }
         },
         {
             "title": "A minimal Filter matching a Message that fullfills at least 30% of all Conditions.",
@@ -60,27 +57,22 @@
                     "http://schema4i.org/QuantitativeValue"
                 ],
                 "@type": "Filter",
-                "FilterItem": {
+                "FilterItem": [{
                     "@type": "Message",
-                    "Keywords": [
-                        "Posteingang"
-                    ]
-                },
-                "FilterItem": {
+                    "Keywords": ["Posteingang"]
+                }, {
                     "@type": "Message",
                     "Identifier": "4711"
-                },
-                "FilterItem": {
+                }, {
                     "MessageAttachment": {
                         "Keywords": "Dokument"
                     }
-                },
-                "FilterItemMinThreshold": {
+                }, {
                     "@type": "QuantitativeValue",
                     "Value": "30",
                     "UnitCode": "C62"
-                }
+                }]
             }
-            }
+        }
     ]
-} 
+}
