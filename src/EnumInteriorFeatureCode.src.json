@@ -1,10 +1,13 @@
 {
     "type": "EnumInteriorFeatureCode",
     "uri": "http://schema4i.org/EnumInteriorFeatureCode",
-    "description": "A code that represents the interior of a building. The values correspond to the OData values for the lookup name 'InteriorFeatures' used by the RESO Data Dictionary. See also https://ddwiki.reso.org/display/DDW17/InteriorOrRoomFeatures+Lookups.",
+    "description": "A code that represents the interior of a building. The values correspond to the OData values for the lookup name 'InteriorFeatures' used by the RESO Data Dictionary.",
     "links": [{
         "url": "http://schema4i.org/EnumInteriorFeatureCode_DE",
         "description": "Original German documentation"
+    }, {
+        "url": "https://ddwiki.reso.org/display/DDW17/InteriorOrRoomFeatures+Lookups",
+        "description": "RESO standard for InteriorOrRoomFeature"
     }],
     "parents": [{
         "@id": "http://schema4i.org/LocationFeatureSpecification"
