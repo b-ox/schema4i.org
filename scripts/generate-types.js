@@ -1,4 +1,3 @@
-
 const fs = require("fs").promises;
 const path = require("path");
 const request = require('request');
@@ -166,6 +165,7 @@ class TypeDefinition {
             let thisDef;
             const context = srcFile.context['@context'];
             const fieldDefs = Object.entries(context).filter(([_, entry]) => typeof entry === 'object');
+
             function getEntryTypes(key, entry) {
                 if (entry['@type']) {
                     return [processType(entry['@type'], entry)];
@@ -175,6 +175,7 @@ class TypeDefinition {
                     throw new Error(`Property ${key} on type ${this.type} has no type defined`);
                 }
             }
+
             function getDescription(entry) {
                 if (entry['@id'] && entry['@id'].startsWith('schema:')) {
                     return (schemaOrgDefs['@graph'].find(sType => sType['@id'] === entry['@id']) || {})['rdfs:comment'] || '';
@@ -191,14 +192,15 @@ class TypeDefinition {
                 }
                 return new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
             }).filter(v => typeof v !== 'undefined');
-            if (this.type.startsWith('Enum') && this.fields.length === 0) {
-                const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && entry.startsWith('s4i:Enum')).map(([value, key]) => ({
+            if (this.type.indexOf('Enumeration') === -1 && this.type.startsWith('Enum') && this.fields.length === 0) {
+                const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && entry.indexOf('s4i:Enumeration') === -1 && entry.startsWith('s4i:Enum')).map(([value, key]) => ({
                     key: key.split('#').pop(),
                     value
                 }));
-                thisDef = new FieldDefinition(this.type, '', enumValues.map(({key}) => `'${key}'`), 'singleton');
+                thisDef = new FieldDefinition(this.type, '', enumValues.map(({ key }) => `'${key}'`), 'singleton');
                 this.enumValues = {};
-                for (const {key, value} of enumValues) {
+                for (const { key, value }
+                    of enumValues) {
                     this.enumValues[key] = value;
                 }
             }
@@ -209,13 +211,13 @@ class TypeDefinition {
                 this.fields.push(new FieldDefinition('@type', '', ['string']));
                 this.fields.push(new FieldDefinition('@context', '', ['Context'], 'singleton'));
             }
-            this.examples = (srcFile.playground || []).map(pg => ({title: pg.title, data: pg.input}));
+            this.examples = (srcFile.playground || []).map(pg => ({ title: pg.title, data: pg.input }));
         } catch (e) {
             throw new Error(`generating type ${this.type} failed: ${e.message}`);
         }
     }
 
-    listAncestors(/** @type {TypeDefinition[]}*/ typeDefinitions) {
+    listAncestors( /** @type {TypeDefinition[]}*/ typeDefinitions) {
         const directAncestors = typeDefinitions.filter(t => this.baseTypes.includes(t.type));
         /** @type {TypeDefinition[]}*/
         const allAncestors = [];
@@ -227,7 +229,7 @@ class TypeDefinition {
         return allAncestors;
     }
 
-    listDescendants(/** @type {TypeDefinition[]}*/ typeDefinitions) {
+    listDescendants( /** @type {TypeDefinition[]}*/ typeDefinitions) {
         const directDescendants = typeDefinitions.filter(t => t.baseTypes.includes(this.type));
         /** @type {TypeDefinition[]}*/
         const allDescendants = [];
@@ -241,10 +243,10 @@ class TypeDefinition {
 }
 
 const LANGUAGES = {
-    'typescript': {
-        typeFile: `schema4i.d.ts`,
-        writeTypes: (/** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {boolean}*/ strict) => {
-            let output = `
+        'typescript': {
+            typeFile: `schema4i.d.ts`,
+            writeTypes: ( /** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {boolean}*/ strict) => {
+                    let output = `
 // tslint:disable: no-empty-interface
 
 export type OneOrMany<T> = T | T[];
