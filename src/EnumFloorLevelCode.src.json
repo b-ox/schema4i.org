@@ -1,0 +1,32 @@
+{
+    "type": "EnumFloorLevelCode",
+    "uri": "http://schema4i.org/EnumFloorLevelCode",
+    "description": "A code that represents the level on which a room is located. The values correspond to the OData values for the lookup name 'RoomLevel Field' used by the RESO Data Dictionary.",
+    "links": [{
+        "url": "http://schema4i.org/EnumFloorLevelCode_DE",
+        "description": "German translation"
+    }, {
+        "url": "https://ddwiki.reso.org/display/DDW20/RoomLevel+Lookups",
+        "description": "Original RESO Data Dictionary list"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Accommodation#FloorLevel" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Basement (RoomLevel)": "s4i:EnumFloorLevelCode#Basement",
+            "First (RoomLevel)": "s4i:EnumFloorLevelCode#First",
+            "Lower": "s4i:EnumFloorLevelCode#Lower",
+            "Main (RoomLevel)": "s4i:EnumFloorLevelCode#Main",
+            "Second (RoomLevel)": "s4i:EnumFloorLevelCode#Second",
+            "Third (RoomLevel)": "s4i:EnumFloorLevelCode#Third",
+            "Upper": "s4i:EnumFloorLevelCode#Upper"
+        }
+    }
+}

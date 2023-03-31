@@ -13,7 +13,12 @@
     "base": [
         { "@id": "http://schema4i.org/Place" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "FloorLevel": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumFloorLevelCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -29,8 +34,7 @@
                 "@type": "s4i:FloorPlan"
             },
             "FloorLevel": {
-                "@id": "schema:floorLevel",
-                "@type": "schema:Text"
+                "@id": "schema:floorLevel"
             },
             "FloorSize": {
                 "@id": "schema:floorSize",
@@ -87,7 +91,17 @@
                 "http://schema4i.org/Building.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/QuantitativeValue.jsonld",
-                "http://schema4i.org/StructuredValue.jsonld"
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/EnumFloorLevelCode.jsonld",
+                {
+                    "FloorLevel": {
+                        "@id": "http://schema.org/floorLevel",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org//EnumFloorLevelCode#"
+                        }
+                    }
+                }
             ],
             "@type": "Accommodation",
             "Basement": {
@@ -100,7 +114,7 @@
             "ContainedInPlace": {
                 "@type": "SingleFamilyResidence"
             },
-            "FloorLevel": "1",
+            "FloorLevel": "Second",
             "FloorPlan": {
                 "@type": "FloorPlan",
                 "NumberOfAccommodationUnits": {
