@@ -30,5 +30,58 @@
             "Value": "Single Family Residence"
         },
         "context": {}
+    },
+    {
+        "title": "A LocationFeatureSpecification using an external Reference",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "InDefinedTermSet": {
+                      "@id": "http://schema.org/inDefinedTermSet",
+                      "@type": "http://schema.org/URL"
+                    }
+                }
+            ],
+            "@type": "LocationFeatureSpecification",
+            "Reference": {
+                "@type": "DefinedTerm",
+                "Name": "einfache Bauausführung",
+                "InDefinedTermSet": {
+                  "@id": "http://www.bipro.net/namespace/datentypen#STE_BauausfuehrungBasis",
+                  "@type": "DefinedTermSet"
+                },
+                "TermCode": "901"
+              }
+        },
+        "context": {}
+    }, {
+        "title": "A LocationFeatureSpecification using an s4i List",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "InDefinedTermSet": {
+                      "@id": "http://schema.org/inDefinedTermSet",
+                      "@type": "http://schema.org/URL"
+                    }
+                }
+            ],
+            "@type": "LocationFeatureSpecification",
+            "Reference": {
+                "@type": "DefinedTerm",
+                "Name": "Vorratskammer",
+                "InDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "@id": "http://schema4i.org/EnumBuildingUseCode"
+                },
+                "TermCode": "Pantry"
+              }
+        },
+        "context": {}
     }]
 }
