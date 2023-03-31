@@ -141,7 +141,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                     let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
                     parentFile = JSON.parse(parentFile);
 
-                    if (!obj.type.startsWith("Enum") && attributeName !== '') {
+                    if (obj.type.indexOf("Enumeration") === -1 && !obj.type.startsWith("Enum") && attributeName !== '') {
                         // check parent of attribute
                         if (!parentFile.context["@context"][attributeName]) {
                             if (
@@ -165,7 +165,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                 }
             };
 
-            if (!obj.type.startsWith("Enum")) {
+            if (obj.type.indexOf("Enumeration") === -1 && !obj.type.startsWith("Enum")) {
                 // check examples for objects
                 if (!obj.playground) {
                     consoleLike.warn(`Playground examples not found in ${file}.`);
