@@ -43,6 +43,10 @@
             "UpvoteCount": {
                 "@id": "schema:upvoteCount",
                 "@type": "schema:Integer"
+            },
+            "AnswerSpecification": {
+                "@id": "s4i:AnswerSpecification",
+                "@type": "s4i:PropertyValueSpecification"
             }
         }
     },
@@ -53,14 +57,30 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
-                "http://schema4i.org/Question.jsonld"
+                "http://schema4i.org/Question.jsonld",
+                "http://schema4i.org/Answer.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/PropertyValueSpecification.jsonld"
             ],
             "@type": "Question",
-            "AcceptedAnswer": {},
+            "AcceptedAnswer": {
+                "@type": "Answer",
+                "Content": {
+                    "@type": "PropertyValue",
+                    "Value": "My Name"
+                }
+            },
             "AnswerCount": 1,
             "DownvoteCount": 0,
             "SuggestedAnswer": {},
-            "UpvoteCount": 2
+            "UpvoteCount": 2,
+            "AnswerSpecification": {
+                "@type": "PropertyValueSpecification",
+                "ValueType": "http://schema.org/Text",
+                "DefaultValue": "My Name",
+                "ValueMaxLength": 10,
+                "ValueMinLength": 1
+            }
         },
         "context": {}
     }]
