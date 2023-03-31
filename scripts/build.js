@@ -183,7 +183,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                     if (!ok) {
                         throw new Error(`Link to English documentation not found in "${obj.type}.src.json".`);
                     }
-                } else {
+                } else if (obj.type.indexOf("Enumeration") === -1) {
                     // check for German documentation
                     let ok = false;
                     obj.links.forEach(function(link) {
