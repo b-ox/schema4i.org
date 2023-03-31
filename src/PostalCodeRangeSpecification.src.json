@@ -1,0 +1,47 @@
+{
+    "type": "PostalCodeRangeSpecification",
+    "uri": "http://schema4i.org/PostalCodeRangeSpecification",
+    "description": "Indicates a range of postal codes, usually defined as the set of valid codes between postalCodeBegin and postalCodeEnd, inclusively.    ",
+    "links": [{
+        "url": "http://schema.org/PostalCodeRangeSpecification",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/DefinedRegion#PostalCodeRange" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/StructuredValue" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PostalCodeRangeSpecification": "schema:PostalCodeRangeSpecification",
+            "PostalCodeBegin": {
+                "@id": "schema:postalCodeBegin",
+                "@type": "schema:Text"
+            },
+            "PostalCodeEnd": {
+                "@id": "schema:postalCodeEnd",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum PostalCodeRangeSpecification",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/PostalCodeRangeSpecification.jsonld"
+            ],
+            "@type": "PostalCodeRangeSpecification",
+            "PostalCodeBegin": "40210",
+            "PostalCodeEnd": "40721"
+        },
+        "context": {}
+    }]
+}

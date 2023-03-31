@@ -1,0 +1,38 @@
+{
+    "type": "Region",
+    "uri": "http://schema4i.org/Region",
+    "description": "A geographical area whose boundaries are defined by arbitrary criteria.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/AdministrativeArea#Region" }
+    ],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Region": {
+                "@id": "s4i:Region",
+                "@type": "s4i:DefinedRegion"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic Region",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/DefinedRegion.jsonld"
+            ],
+            "@type": "DefinedRegion",
+            "AddressCountry": "D",
+            "AddressRegion": "North-Rhine Westphalia",
+            "PostalCode": "40233"
+        },
+        "context": {}
+    }]
+}
