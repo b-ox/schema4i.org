@@ -80,6 +80,11 @@
                 "@type": "schema:Boolean",
                 "types-hint": "singleton"
             },
+            "MultipleValues": {
+                "@id": "schema:multipleValues",
+                "@type": "schema:Boolean",
+                "types-hint": "singleton"
+            },
             "ValueType": {
                 "@id": "s4i:ValueType",
                 "@type": "schema:URL",
