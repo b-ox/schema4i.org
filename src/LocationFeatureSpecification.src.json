@@ -58,11 +58,15 @@
         },
         "context": {}
     }, {
-        "title": "A LocationFeatureSpecification using an s4i List",
+        "title": "A LocationFeatureSpecification using an S4i Enum",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/LocationFeatureSpecification.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",                
+                "http://schema4i.org/DefinedTerm.jsonld", 
+                "http://schema4i.org/DefinedTermSet.jsonld",                 
                 "http://schema4i.org/Thing.jsonld",
                 {
                     "InDefinedTermSet": {
