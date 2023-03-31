@@ -6,9 +6,7 @@
         "url": "http://schema.org/DefinedRegion",
         "description": "Original Schema.org type"
     }],
-    "parents": [
-        { "@id": "http://schema4i.org/AdministrativeArea#Region" }
-    ],
+    "parents": [],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],

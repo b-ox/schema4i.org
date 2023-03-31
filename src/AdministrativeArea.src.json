@@ -24,7 +24,7 @@
                 "@type": "schema:Number"
             },
             "Region": {
-                "@id": "s4i:DefinedRegion",
+                "@id": "s4i:Region",
                 "@type": "s4i:DefinedRegion"
             }
         }
