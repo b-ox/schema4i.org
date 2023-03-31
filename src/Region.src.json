@@ -1,12 +1,14 @@
 {
     "type": "Region",
     "uri": "http://schema4i.org/Region",
-    "description": "A geographical area whose boundaries are defined by arbitrary criteria",
+    "description": "A geographical area whose boundaries are defined by arbitrary criteria.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/AdministrativeArea#Region" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
