@@ -43,6 +43,11 @@ const PRIMITIVE_TYPE_MAPPINGS = {
     '@vocab': 'string' // enums not in the s4i schema
 }
 
+const SKIP_TYPEOF_CHECKER = [
+    'Property',
+    'Enumeration'
+]
+
 /**
  * @param {string} type
  * @param {any} typeObject
@@ -307,10 +312,12 @@ function isType(obj: any, type: string) {
 `;
             for (const typeDefinition of typeDefinitions) {
                 if (!typeDefinition.simpleType) {
-                    const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type));
+                    const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type) && !SKIP_TYPEOF_CHECKER.includes(td.type));
                     const ancestors = typeDefinition.listAncestors(typeDefinitions);
                     const descendants = typeDefinition.listDescendants(typeDefinitions);
-                    output += `
+
+                    if (!SKIP_TYPEOF_CHECKER.includes(typeDefinition.type)) {
+                        output += `
 /**
  * Checks if the given object is an instance of ${typeDefinition.type}.
  */
@@ -319,6 +326,7 @@ export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.
 }
 
 `;
+                    }
 
                     if (ancestors.length > 0) {
 
