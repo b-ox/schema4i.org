@@ -12,7 +12,9 @@
     "parents": [{
         "@id": "http://schema4i.org/Order#ModificationCode"
     }],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {

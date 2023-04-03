@@ -6,7 +6,9 @@
     "parents": [
         { "@id": "http://schema4i.org/PropertyValueSpecification#ValueType" }
     ],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
@@ -14,7 +16,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ValueType": {
-                "@id": "s4i:Copy",
+                "@id": "s4i:ValueType",
                 "@type": "schema:URL"
             }
         }
