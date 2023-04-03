@@ -16,7 +16,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ValueType": {
-                "@id": "s4i:Copy",
+                "@id": "s4i:ValueType",
                 "@type": "schema:URL"
             }
         }
