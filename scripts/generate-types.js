@@ -306,7 +306,7 @@ const ANCESTORS = new Map<string, string[]>();
 const DESCENDANTS = new Map<string, string[]>();
 
 function isType(obj: any, type: string) {
-    return typeof obj === 'object' && (Array.isArray(obj["@type"]) ? obj["@type"].indexOf(type) > -1 : obj["@type"] === type);
+    return typeof obj === 'object' && obj !== null && (Array.isArray(obj["@type"]) ? obj["@type"].indexOf(type) > -1 : obj["@type"] === type);
 }
 
 `;
