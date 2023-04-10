@@ -1,7 +1,7 @@
 {
     "type": "Collection",
     "uri": "http://schema4i.org/Collection",
-    "description": "A collection of items like creative works or products.",
+    "description": "A collection of items like any kind of creative works.",
     "links": [{
         "url": "http://schema.org/Collection",
         "description": "Original Schema.org type"
@@ -30,7 +30,8 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
-                "http://schema4i.org/Collection.jsonld"
+                "http://schema4i.org/Collection.jsonld",
+                "http://schema4i.org/City.jsonld"                
             ],
             "@type": "Collection",
             "CollectionSize": 2,
@@ -39,7 +40,7 @@
                 "Name": "Berlin"
             }, {
                 "@type": "City",
-                "Name": "Düsseldorf"
+                "Name": "Duesseldorf"
             }]
         },
         "context": {}
