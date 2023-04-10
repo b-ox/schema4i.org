@@ -1,7 +1,7 @@
 {
     "type": "Collection",
     "uri": "http://schema4i.org/Collection",
-    "description": "A collection of items, e.g. creative works or products",
+    "description": "A collection of items like creative works or products.",
     "links": [{
         "url": "http://schema.org/Collection",
         "description": "Original Schema.org type"
