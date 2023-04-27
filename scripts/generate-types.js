@@ -49,6 +49,23 @@ const SKIP_TYPEOF_CHECKER = [
 ]
 
 /**
+ * 
+ * @param {string | { "@language": string, "@value": string } | { "@language": string, "@value": string }[]} rdfsValue 
+ */
+function getRdfsValue(rdfsValue) {
+    if (Array.isArray(rdfsValue)) {
+        rdfsValue = rdfsValue[0];
+    }
+    if (typeof rdfsValue === 'object' && rdfsValue !== null && typeof rdfsValue['@value'] === 'string') {
+        return rdfsValue['@value'];
+    }
+    if (typeof rdfsValue === 'string') {
+        return rdfsValue;
+    }
+    return '';
+}
+
+/**
  * @param {string} type
  * @param {any} typeObject
  * @param {boolean} ignoreMissing
@@ -183,7 +200,7 @@ class TypeDefinition {
 
             function getDescription(entry) {
                 if (entry['@id'] && entry['@id'].startsWith('schema:')) {
-                    return (schemaOrgDefs['@graph'].find(sType => sType['@id'] === entry['@id']) || {})['rdfs:comment'] || '';
+                    return getRdfsValue((schemaOrgDefs['@graph'].find(sType => sType['@id'] === entry['@id']) || {})['rdfs:comment']);
                 }
                 return '';
             }
