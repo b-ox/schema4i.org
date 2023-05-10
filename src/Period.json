@@ -1,0 +1,38 @@
+{
+    "type": "Period",
+    "uri": "http://schema4i.org/Period",
+    "description": "The interval in which a recurring event occurs.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Adjustment#Period" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Period": {
+                "@id": "s4i:Period",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumIntervalCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Period",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Period.jsonld"
+            ],
+            "Period": "1"
+        },
+        "context": {}
+    }]
+}

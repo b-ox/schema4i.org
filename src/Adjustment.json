@@ -1,0 +1,61 @@
+{
+    "type": "Adjustment",
+    "uri": "http://schema4i.org/Adjustment",
+    "description": "A regular modification to a numerical value, like a fee or a pension. This might be an increase or decrease by a linear value or a percentage, defined by the `Value`. Affected values should be referenced under `Affects`. If no `Affects` is given, it should be assumed that all relevant values on the object are affected.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/FinancialProduct#FinancialAdjustment" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/StructuredValue" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Adjustment": "s4i:Adjustment",
+            "Value": {
+                "@id": "schema:value",
+                "@type": "s4i:PropertyValue"
+            },
+            "Affects": {
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
+            "Period": {
+                "@id": "s4i:Period",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumIntervalCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Adjustment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Adjustment.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld"
+            ],
+            "Adjustment": {
+                "@type": "Adjustment",
+                "Value": {
+                    "@type": "PropertyValue",
+                    "UnitCode": "P1",
+                    "Value": 5
+                },
+                "Affects": {
+                    "@type": "Thing",
+                    "@id": "#AffectedThing"
+                },
+                "Period": "1"
+            }
+        },
+        "context": {}
+    }]
+}

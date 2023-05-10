@@ -42,6 +42,10 @@
             "PriceSpecification": {
                 "@id": "schema:priceSpecification",
                 "@type": "s4i:PriceSpecification"
+            },
+            "FinancialAdjustment": {
+                "@id": "s4i:FinancialAdjustment",
+                "@type": "s4i:Adjustment"
             }
         }
     },
@@ -119,6 +123,8 @@
             "@context": [
                 "http://schema4i.org/FinancialProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Adjustment.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
                 "http://schema4i.org/CompoundPriceSpecification.jsonld",
                 "http://schema4i.org/UnitPriceSpecification.jsonld",
                 "http://schema4i.org/PriceSpecification.jsonld",
@@ -141,6 +147,7 @@
             "Price": 153.21,
             "PriceCurrency": "EUR",
             "PriceSpecification": {
+                "@id": "#Beitrag",
                 "@type": "CompoundPriceSpecification",
                 "PriceComponent": [{
                     "@type": "UnitPriceSpecification",
@@ -155,6 +162,19 @@
                     "PriceCurrency": "EUR",
                     "Identifier": "16111274282323409"
                 }]
+            },
+            "FinancialAdjustment": {
+                "@type": "Adjustment",
+                "Value": {
+                    "@type": "PropertyValue",
+                    "UnitCode": "P1",
+                    "Value": 2
+                },
+                "Affects": {
+                    "@type": "CompoundPriceSpecification",
+                    "@id": "#Beitrag"
+                },
+                "Period": "1"
             }
         },
         "context": {}
