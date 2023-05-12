@@ -1,0 +1,24 @@
+{
+    "type": "FinancialAdjustment",
+    "uri": "http://schema4i.org/FinancialAdjustment",
+    "description": "A regular adjustment to an aspect of the `FinancialProduct` like the `PriceSpecification`.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/FinancialProduct#FinancialAdjustment"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "FinancialAdjustment": {
+                "@id": "s4i:FinancialAdjustment",
+                "@type": "s4i:Adjustment"
+            }
+        }
+    },
+    "playground": []
+}
