@@ -1,0 +1,40 @@
+{
+    "type": "PhysicalWork",
+    "uri": "http://schema4i.org/PhysicalWork",
+    "description": "The amount of manual labor associated with an employment, usually as a `PropertyValue` describing a percentage.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/EmployeeRole#PhysicalWork"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PhysicalWork": {
+                "@id": "s4i:PhysicalWork",
+                "@type": "s4i:PropertyValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample PhysicalWork",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld"
+            ],
+            "PhysicalWork": {
+                "@type": "PropertyValue",
+                "UnitCode": "P1",
+                "Value": 100
+            }
+        },
+        "context": {}
+    }]
+}

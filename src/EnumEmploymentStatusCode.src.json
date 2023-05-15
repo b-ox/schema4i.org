@@ -51,7 +51,8 @@
             "Dropped out": "s4i:EnumEmploymentStatusCode#33",
             "Exempt from work": "s4i:EnumEmploymentStatusCode#34",
             "Board of directors": "s4i:EnumEmploymentStatusCode#35",
-            "Other": "s4i:EnumEmploymentStatusCode#99"
+            "Other": "s4i:EnumEmploymentStatusCode#99",
+            "Family Employment": "s4i:EnumEmploymentStatusCode#001"
         }
     }
 }

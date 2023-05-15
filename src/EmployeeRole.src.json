@@ -26,6 +26,10 @@
             "HasOccupation": {
                 "@id": "s4i:Occupation",
                 "@type": "s4i:Occupation"
+            },
+            "PhysicalWork": {
+                "@id": "s4i:PhysicalWork",
+                "@type": "s4i:PropertyValue"
             }
         }
     },
@@ -51,7 +55,6 @@
                     "Value": 30000,
                     "Currency": "EUR"
                 },
-                "EmploymentStatus": "01",
                 "Name": "Softwareentwickler/in",
                 "OccupationalCategory": {
                     "@type": "DefinedTermSet",
@@ -61,6 +64,12 @@
                 "Qualifications": "10 Jahre Erfahrung mit React.js",
                 "Responsibilities": "Weiterentwicklung und Wartung der firmeninternen Website",
                 "Skills": ["Lernbereitschaft", "Motivation"]
+            },
+            "EmploymentStatus": "01",
+            "PhysicalWork": {
+                "@type": "PropertyValue",
+                "UnitCode": "P1",
+                "Value": 0
             }
         },
         "context": {}

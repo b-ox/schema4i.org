@@ -51,7 +51,8 @@
             "Ausgeschieden": "s4i:EnumEmploymentStatusCode#33",
             "Freigestellt": "s4i:EnumEmploymentStatusCode#34",
             "Vorstand": "s4i:EnumEmploymentStatusCode#35",
-            "Sonstiges": "s4i:EnumEmploymentStatusCode#99"
+            "Sonstiges": "s4i:EnumEmploymentStatusCode#99",
+            "Mitarbeitendes Familienmitglied": "s4i:EnumEmploymentStatusCode#001"
         }
     }
 }
