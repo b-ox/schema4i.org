@@ -1,0 +1,40 @@
+{
+    "type": "ManualLabor",
+    "uri": "http://schema4i.org/ManualLabor",
+    "description": "The amount of manual labor associated with an employment, usually as a `PropertyValue` describing a percentage.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/EmployeeRole#ManualLabor"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ManualLabor": {
+                "@id": "s4i:ManualLabor",
+                "@type": "s4i:PropertyValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ManualLabor",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld"
+            ],
+            "ManualLabor": {
+                "@type": "PropertyValue",
+                "UnitCode": "P1",
+                "Value": 100
+            }
+        },
+        "context": {}
+    }]
+}
