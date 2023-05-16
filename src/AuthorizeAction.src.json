@@ -1,0 +1,60 @@
+{
+    "type": "AuthorizeAction",
+    "uri": "http://schema4i.org/AuthorizeAction",
+    "description": "The act of granting permission to an object.",
+    "links": [{
+        "url": "http://schema.org/AuthorizeAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InteractionCounter#InteractionType" },
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {
+        "Recipient": [
+            { "@id": "http://schema4i.org/ContactPoint" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/UserAccount" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AuthorizeAction": "schema:AuthorizeAction",
+            "Recipient": {
+                "@id": "schema:recipient"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An AuthorizeAction using `Credentials` to authorize a `UserAccount`.",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/AuthorizeAction.jsonld",
+                "http://schema4i.org/UserAccount.jsonld",
+                "http://schema4i.org/Credentials.jsonld"
+            ],
+            "@type": "AuthorizeAction",
+            "Recipient": {
+                "@id": "https://api.b-ox.de/user/4711",
+                "@type": "UserAccount",
+                "Identifier": "4711"
+            },
+            "Object": {
+                "@type": "Credentials",
+                "Username": "my-user",
+                "Password": "my-password"
+            }
+        },
+        "context": {}
+    }]
+}
