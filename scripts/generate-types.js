@@ -1,6 +1,6 @@
-const fs = require("fs").promises;
-const path = require("path");
-const request = require('request');
+const fs = require("node:fs").promises;
+const path = require("node:path");
+const https = require("node:https");
 
 // configuration
 const FROM_PATH = "src/";
@@ -473,12 +473,36 @@ async function generateTypes(language, outputDir, includeExamples, strict, conso
     consoleLike.log(`fetching schema.org types from ${SCHEMAORG_TYPES_URL}`);
 
     const schemaOrgDefs = await new Promise((resolve, reject) => {
-        request.get(SCHEMAORG_TYPES_URL, {encoding: 'utf-8'}, (err, resp) => {
-            if (err || resp.statusCode !== 200) {
-                reject(err);
-            } else {
-                resolve(JSON.parse(resp.body));
+        https.get(SCHEMAORG_TYPES_URL, resp => {
+
+            let error;
+
+            const statusCode = resp.statusCode;
+            const contentType = resp.headers['content-type'];
+
+            if (statusCode !== 200) {
+                error = new Error(`Status Code: ${statusCode}`);
+            } else if (!/^application\/ld\+json/i.test(contentType)) {
+                error = new Error(`Invalid Content Type: ${contentType}`);
             }
+
+            if (error) {
+                resp.resume();
+                reject(error);
+                return;
+            }
+
+            resp.setEncoding('utf-8');
+            const chunks = [];
+            resp.on('data', (chunk) => chunks.push(chunk));
+            resp.on('end', () => {
+                try {
+                    const body = chunks.join('');
+                    resolve(JSON.parse(body));
+                } catch (e) {
+                    reject(e);
+                }
+            });
         });
     });
 
