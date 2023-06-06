@@ -90,7 +90,7 @@
             "Probandenversicherung": "s4i:EnumLineOfBusinessCode#034",
             "Unfallversicherung mit Beitragsrückgewähr": "s4i:EnumLineOfBusinessCode#038",
             "übrige und nicht aufgegliederte AllgemeineUnfallversicherung": "s4i:EnumLineOfBusinessCode#039",
-            "Privathaftpflichtversicherung (einschließlich Sportboot- undHundehalterhaftpflichtversicherung)": "s4i:EnumLineOfBusinessCode#041",
+            "Privathaftpflichtversicherung (einschließlich Sportboot- und Hundehalterhaftpflichtversicherung)": "s4i:EnumLineOfBusinessCode#041",
             "Betriebs- und Berufshaftpflichtversicherung": "s4i:EnumLineOfBusinessCode#042",
             "Umwelt- Haftpflichtversicherung": "s4i:EnumLineOfBusinessCode#043",
             "Vermögensschaden- Haftpflichtversicherung": "s4i:EnumLineOfBusinessCode#044",
