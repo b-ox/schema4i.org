@@ -1,0 +1,54 @@
+{
+    "type": "Damage",
+    "uri": "http://schema4i.org/Damage",
+    "description": "An impairment to an object or person that is detrimental to value, usefulness or functionality.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/DamageEvent#CauseOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Damage": "s4i:Damage",
+            "Affects": {
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
+            "CausedBy": {
+                "@id": "s4i:CausedBy",
+                "@type": "s4i:DamageEvent"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A example Damage on a Building",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Damage.jsonld",
+                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/DamageEvent.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "Damage",
+            "Name": "Burnt out",
+            "Affects": {
+                "@type": "Building",
+                "Name": "Notre-Dame de Paris"
+            },
+            "CausedBy": {
+                "@type": "DamageEvent",
+                "Name": "Roof fire",
+                "StartDate": "2019-04-15",
+                "EndDate": "2019-04-16"
+            }
+        },
+        "context": {}
+    }]
+}

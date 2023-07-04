@@ -1,0 +1,64 @@
+{
+    "type": "Loss",
+    "uri": "http://schema4i.org/Loss",
+    "description": "A type of `Damage` that led to a financial loss of some form, either directly or indirectly.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/LossEvent#CauseOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Damage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Loss": "s4i:Loss",
+            "Amount": {
+                "@id": "schema:amount",
+                "@type": "s4i:MonetaryAmount"
+            },
+            "DamageCause": {
+                "@id": "s4i:DamageCause",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDamageCauseCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example Loss",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Loss.jsonld",
+                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/LossEvent.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "Loss",
+            "Name": "Hailstorm damage",
+            "Description": "Hailstorm damage to 70000 buildings and 200000 cars",
+            "Affects": {
+                "@type": "City",
+                "Name": "Munich"
+            },
+            "CausedBy": {
+                "@type": "LossEvent",
+                "Name": "Hailstorm of Munich",
+                "StartDate": "1984-07-12",
+                "EndDate": "1984-07-12"
+            },
+            "DamageCause": "H",
+            "Amount": {
+                "@type": "MonetaryAmount",
+                "Currency": "DM",
+                "Value": 3000000000    
+            }
+        },
+        "context": {}
+    }]
+}
