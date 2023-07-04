@@ -4,7 +4,8 @@
     "description": "The person, thing or event that was the causal factor for this subject.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Damage#CausedBy" }
+        { "@id": "http://schema4i.org/Damage#CausedBy" },
+        { "@id": "http://schema4i.org/InsuranceClaim#CausedBy" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }

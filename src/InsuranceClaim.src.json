@@ -1,0 +1,64 @@
+{
+    "type": "InsuranceClaim",
+    "uri": "http://schema4i.org/InsuranceClaim",
+    "description": "An application for compensation for a loss that is covered by an insurance policy.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "InsuranceClaim": "s4i:InsuranceClaim",
+            "Category": {
+                "@id": "schema:category",
+                "@type": "schema:Text"
+            },
+            "Affects": {
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
+            "CausedBy": {
+                "@id": "s4i:CausedBy",
+                "@type": "s4i:LossEvent"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example InsuranceClaim",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/InsuranceClaim.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/LossEvent.jsonld",
+                "http://schema4i.org/PersonalInjuryDamage.jsonld"
+            ],
+            "@type": "InsuranceClaim",
+            "Affects": {
+                "@type": "Person",
+                "@id": "#VersichertePerson",
+                "Name": "Muster"
+            },
+            "CausedBy": {
+                "@type": "LossEvent",
+                "Description": "Unfall",
+                "CauseOf": {
+                    "@type": "PersonalInjuryDamage",
+                    "Amount": {
+                        "@type": "MonetaryAmount",
+                        "Value": 1000,
+                        "Currency": "EUR"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

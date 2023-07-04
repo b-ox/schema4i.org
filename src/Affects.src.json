@@ -4,7 +4,9 @@
     "description": "One thing affects another thing when there is any kind of circumstance that has an effect on the other thing. That might be any kind of act or even being there can have an impact on the other thing. The other thing is AffectedBy this one thing.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Risk#Affects" }
+        { "@id": "http://schema4i.org/Risk#Affects" },
+        { "@id": "http://schema4i.org/Damage#Affects" },
+        { "@id": "http://schema4i.org/InsuranceClaim#Affects" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
