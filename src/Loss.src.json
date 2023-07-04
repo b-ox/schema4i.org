@@ -20,6 +20,10 @@
                 "@id": "schema:amount",
                 "@type": "s4i:MonetaryAmount"
             },
+            "CauseOf": {
+                "@id": "s4i:CauseOf",
+                "@type": "s4i:Benefit"
+            },
             "DamageCause": {
                 "@id": "s4i:DamageCause",
                 "@type": "@vocab",
@@ -35,8 +39,10 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Loss.jsonld",
-                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/City.jsonld",
                 "http://schema4i.org/LossEvent.jsonld",
+                "http://schema4i.org/Benefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "Loss",
@@ -57,6 +63,15 @@
                 "@type": "MonetaryAmount",
                 "Currency": "DM",
                 "Value": 3000000000
+            },
+            "CauseOf": {
+                "@type": "Benefit",
+                "Name": "Insurance payout",
+                "Amount": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "DM",
+                    "Value": 1500000000
+                }
             }
         },
         "context": {}

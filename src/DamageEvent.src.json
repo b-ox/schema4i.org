@@ -17,7 +17,7 @@
             "schema": "http://schema.org/",
             "DamageEvent": "s4i:DamageEvent",
             "CauseOf": {
-                "@id": "schema:causeOf",
+                "@id": "s4i:CauseOf",
                 "@type": "s4i:Damage"
             }
         }
