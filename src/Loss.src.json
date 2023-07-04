@@ -4,7 +4,7 @@
     "description": "A type of `Damage` that led to a financial loss of some form, either directly or indirectly.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/LossEvent#CauseOf" }
+        { "@id": "http://schema4i.org/DamageEvent#CauseOf" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Damage" }
