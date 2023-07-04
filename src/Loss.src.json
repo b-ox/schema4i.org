@@ -56,7 +56,7 @@
             "Amount": {
                 "@type": "MonetaryAmount",
                 "Currency": "DM",
-                "Value": 3000000000    
+                "Value": 3000000000
             }
         },
         "context": {}

@@ -1,7 +1,7 @@
 {
     "type": "DamageEvent",
     "uri": "http://schema4i.org/DamageEvent",
-    "description": "An event that led to some form of damage to one or multiple objects or persons.",
+    "description": "An event that led to some form of damage to one or multiple objects or people.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Damage#CausedBy" }

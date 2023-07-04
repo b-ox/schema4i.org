@@ -1,0 +1,48 @@
+{
+    "type": "PropertyDamage",
+    "uri": "http://schema4i.org/PropertyDamage",
+    "description": "A type of `Loss` that resulted in damage to an inanimate object. The financial loss describes the cost for repair, replacement or loss in value.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Loss" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PropertyDamage": "s4i:PropertyDamage"
+        }
+    },
+    "playground": [{
+        "title": "An example PropertyDamage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/PropertyDamage.jsonld",
+                "http://schema4i.org/Building.jsonld",
+                "http://schema4i.org/LossEvent.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "PropertyDamage",
+            "Name": "Broken window",
+            "Affects": {
+                "@type": "Building"
+            },
+            "CausedBy": {
+                "@type": "LossEvent",
+                "Name": "Tossed stone",
+                "StartDate": "2023-07-30",
+                "EndDate": "2023-07-30"
+            },
+            "Amount": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 250
+            }
+        },
+        "context": {}
+    }]
+}

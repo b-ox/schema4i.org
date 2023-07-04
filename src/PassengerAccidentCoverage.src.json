@@ -1,7 +1,7 @@
 {
     "type": "PassengerAccidentCoverage",
     "uri": "http://schema4i.org/PassengerAccidentCoverage",
-    "description": "Provides accidence insurance coverage for persons in the car when crashing.",
+    "description": "Provides accidence insurance coverage for people in the car when crashing.",
     "links": [{
         "url": "https://openontology.org",
         "description": "OpenOntology.org"
