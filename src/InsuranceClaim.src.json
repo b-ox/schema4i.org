@@ -1,9 +1,12 @@
 {
     "type": "InsuranceClaim",
     "uri": "http://schema4i.org/InsuranceClaim",
-    "description": "An application for compensation for a loss that is covered by an insurance policy.",
+    "description": "A loss that is covered by an insurance policy. An insurance claim is a formal request by a policyholder to an insurance company for coverage or compensation for a covered loss or policy event. The insurance company validates the claim and, once approved, issues payment to the insured or an approved interested party on behalf of the insured. The communication on a claim or benefit case is usually presented via a Conversation.",
     "links": [],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BusinessTransferAction#Object" },
+        { "@id": "http://schema4i.org/BusinessTransferAction#Result" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
