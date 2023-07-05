@@ -9,7 +9,16 @@
     "base": [
         { "@id": "http://schema4i.org/Damage" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "ValidFrom": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ],
+        "ValidThrough": [
+            { "@id": "http://schema.org/Date" },
+            { "@id": "http://schema.org/DateTime" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -30,6 +39,12 @@
                 "@context": {
                     "@vocab": "s4i:EnumDamageCauseCode#"
                 }
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough"
             }
         }
     },
@@ -72,7 +87,9 @@
                     "Currency": "DM",
                     "Value": 1500000000
                 }
-            }
+            },
+            "ValidFrom": "1984-07-01",
+            "ValidThrough": "1984-08-01"
         },
         "context": {}
     }]
