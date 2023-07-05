@@ -9,16 +9,7 @@
     "base": [
         { "@id": "http://schema4i.org/Damage" }
     ],
-    "multipletypes": {
-        "ValidFrom": [
-            { "@id": "http://schema.org/Date" },
-            { "@id": "http://schema.org/DateTime" }
-        ],
-        "ValidThrough": [
-            { "@id": "http://schema.org/Date" },
-            { "@id": "http://schema.org/DateTime" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
@@ -41,10 +32,12 @@
                 }
             },
             "ValidFrom": {
-                "@id": "schema:validFrom"
+                "@id": "schema:validFrom",
+                "@type": "schema:Date"
             },
             "ValidThrough": {
-                "@id": "schema:validThrough"
+                "@id": "schema:validThrough",
+                "@type": "schema:Date"
             }
         }
     },
