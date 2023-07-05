@@ -1,0 +1,37 @@
+{
+    "type": "CauseOf",
+    "uri": "http://schema4i.org/CauseOf",
+    "description": "An effect, result or consequence caused by this thing, like a medical condition caused by a causative agent.",
+    "links": [{
+        "url": "http://schema.org/causeOf",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/DamageEvent#CauseOf" },
+        { "@id": "http://schema4i.org/Loss#CauseOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CauseOf": {
+                "@id": "s4i:CauseOf",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum CauseOf",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "CauseOf": {}
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "Benefit",
+    "uri": "http://schema4i.org/Benefit",
+    "description": "A financial benefit provided, for example an insurance payout as a result of a `Loss`.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#CauseOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Benefit": "s4i:Benefit",
+            "Amount": {
+                "@id": "schema:amount",
+                "@type": "s4i:MonetaryAmount"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example Benefit",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Benefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld"
+            ],
+            "@type": "Benefit",
+            "Amount": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 5000
+            }
+        },
+        "context": {}
+    }]
+}

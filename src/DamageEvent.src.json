@@ -1,0 +1,50 @@
+{
+    "type": "DamageEvent",
+    "uri": "http://schema4i.org/DamageEvent",
+    "description": "An event that led to some form of damage to one or multiple objects or people.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Damage#CausedBy" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Event" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DamageEvent": "s4i:DamageEvent",
+            "CauseOf": {
+                "@id": "s4i:CauseOf",
+                "@type": "s4i:Damage"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DamageEvent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/DamageEvent.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Damage.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "DamageEvent",
+            "Name": "Bushfires",
+            "StartDate": "2019-06-01",
+            "EndDate": "2020-05-01",
+            "Location": {
+                "@type": "Place",
+                "Name": "Australia"
+            },
+            "CauseOf": {
+                "@type": "Damage",
+                "Name": "243000 sqm burned"
+            }
+        },
+        "context": {}
+    }]
+}

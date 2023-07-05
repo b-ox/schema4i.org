@@ -1,0 +1,47 @@
+{
+    "type": "FinancialLoss",
+    "uri": "http://schema4i.org/FinancialLoss",
+    "description": "A type of `Loss` that resulted in direct financial damage, e.g. legal fees, rather than indirect financial damage, e.g. damage to some property.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Loss" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "FinancialLoss": "s4i:FinancialLoss"
+        }
+    },
+    "playground": [{
+        "title": "An example FinancialLoss",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/FinancialLoss.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/LossEvent.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "FinancialLoss",
+            "Name": "Lawyer fees",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Muster"
+            },
+            "CausedBy": {
+                "@type": "LossEvent",
+                "Name": "Litigation",
+                "StartDate": "2023-05-30",
+                "EndDate": "2023-07-30"
+            },
+            "Amount": {
+                
+            }
+        },
+        "context": {}
+    }]
+}

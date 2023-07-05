@@ -1,0 +1,59 @@
+{
+    "type": "LossEvent",
+    "uri": "http://schema4i.org/LossEvent",
+    "description": "A type of `DamageEvent` that led to some form of financial loss or several.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Damage#CausedBy" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/DamageEvent" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LossEvent": "s4i:LossEvent"
+        }
+    },
+    "playground": [{
+        "title": "Sample LossEvent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/LossEvent.jsonld",
+                "http://schema4i.org/City.jsonld",
+                "http://schema4i.org/Damage.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "LossEvent",
+            "Name": "Accident",
+            "StartDate": "2023-07-20T10:12:00",
+            "EndDate": "2023-07-20T10:12:00",
+            "Location": {
+                "@type": "City",
+                "Name": "Düsseldorf"
+            },
+            "CauseOf": [{
+                "@type": "Loss",
+                "Name": "Liability damage",
+                "Amount": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 15000
+                }
+            }, {
+                "@type": "Loss",
+                "Name": "Comprehensive coverage damage",
+                "Amount": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 20000
+                }
+            }]
+        },
+        "context": {}
+    }]
+}

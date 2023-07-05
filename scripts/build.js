@@ -74,7 +74,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
 
             // do some requiredd field checks
             consoleLike.log('Checking required attributes: type, uri, description, links, base, multipletypes, context.');
-            for (const field of['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
+            for (const field of ['type', 'uri', 'description', 'links', 'context', 'base', 'multipletypes', 'context']) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
                 }
@@ -118,7 +118,7 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             // console.log(dependencies);
 
             // check dependencies
-            for (const parentConfig of(dependencies || [])) {
+            for (const parentConfig of (dependencies || [])) {
                 // for (const parentConfig of(obj.parents || [])) {
                 const parent = parentConfig["@id"];
                 let objectName = "";
@@ -137,31 +137,27 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                     objectName = parent.substr(parent.lastIndexOf("/") + 1);
                     consoleLike.log('Checking dependency "' + objectName + '".');
                 }
-                try {
-                    let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
-                    parentFile = JSON.parse(parentFile);
+                let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
+                parentFile = JSON.parse(parentFile);
 
-                    if (obj.type.indexOf("Enumeration") === -1 && !obj.type.startsWith("Enum") && attributeName !== '') {
-                        // check parent of attribute
-                        if (!parentFile.context["@context"][attributeName]) {
-                            if (
-                                Array.isArray(
-                                    parentFile.context["@context"][objectName]["@context"]
-                                )
-                            ) {
-                                const ok = parentFile.context["@context"][objectName][
-                                    "@context"
-                                ].some((extContext) => extContext.endsWith(attributeName + ".jsonld"));
-                                if (!ok) {
-                                    throw new Error(`No attribute "${attributeName}" found in object "${objectName}".`);
-                                }
-                            } else {
+                if (obj.type.indexOf("Enumeration") === -1 && !obj.type.startsWith("Enum") && attributeName !== '') {
+                    // check parent of attribute
+                    if (!parentFile.context["@context"][attributeName]) {
+                        if (
+                            Array.isArray(
+                                parentFile.context["@context"][objectName]["@context"]
+                            )
+                        ) {
+                            const ok = parentFile.context["@context"][objectName][
+                                "@context"
+                            ].some((extContext) => extContext.endsWith(attributeName + ".jsonld"));
+                            if (!ok) {
                                 throw new Error(`No attribute "${attributeName}" found in object "${objectName}".`);
                             }
+                        } else {
+                            throw new Error(`No attribute "${attributeName}" found in object "${objectName}".`);
                         }
                     }
-                } catch (error) {
-                    throw new Error(error);
                 }
             };
 

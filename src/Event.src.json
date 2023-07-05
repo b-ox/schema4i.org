@@ -5,7 +5,7 @@
     "links": [{
         "url": "http://schema.org/Event",
         "description": "Original Schema.org type"
-}],
+    }],
     "parents": [],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
