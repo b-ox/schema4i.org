@@ -1,14 +1,12 @@
 {
     "type": "Claim",
     "uri": "http://schema4i.org/Claim",
-    "description": "A Claim represents a specific, factually-oriented claim that could be the ItemReviewed in a ClaimReview. The content of a claim can be summarized with the Text property. Variations on well known claims can have their common identity indicated via SameAs links, and summarized with a name. Ideally, a Claim description includes enough contextual information to minimize the risk of ambiguity or inclarity. In practice, many claims are better understood in the context in which they appear or the interpretations provided by claim reviews. Beyond ClaimReview, the Claim type can be associated with related creative works - for example a Article or Question might be about some Claim. In the insurance industry, claim is used both in property and personal insurance to formulate a claim for insurance benefits. An insurance claim is a formal request by a policyholder to an insurance company for coverage or compensation for a covered loss or policy event. The insurance company validates the claim and, once approved, issues payment to the insured or an approved interested party on behalf of the insured. The communication on a claim or benefit case is usually presented via a Conversation.",
+    "description": "A Claim represents a specific, factually-oriented claim that could be the ItemReviewed in a ClaimReview. The content of a claim can be summarized with the Text property. Variations on well known claims can have their common identity indicated via SameAs links, and summarized with a name. Ideally, a Claim description includes enough contextual information to minimize the risk of ambiguity or inclarity. In practice, many claims are better understood in the context in which they appear or the interpretations provided by claim reviews. Beyond ClaimReview, the Claim type can be associated with related creative works - for example a Article or Question might be about some Claim.",
     "links": [{
         "url": "http://schema.org/Claim",
         "description": "Original Schema.org type"
     }],
-    "parents": [{
-        "@id": "http://schema4i.org/BusinessTransferAction#Claim"
-    }],
+    "parents": [],
     "base": [
         { "@id": "http://schema4i.org/CreativeWork" }
     ],

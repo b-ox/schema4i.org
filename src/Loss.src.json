@@ -30,6 +30,14 @@
                 "@context": {
                     "@vocab": "s4i:EnumDamageCauseCode#"
                 }
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:Date"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:Date"
             }
         }
     },
@@ -72,7 +80,9 @@
                     "Currency": "DM",
                     "Value": 1500000000
                 }
-            }
+            },
+            "ValidFrom": "1984-07-01",
+            "ValidThrough": "1984-08-01"
         },
         "context": {}
     }]
