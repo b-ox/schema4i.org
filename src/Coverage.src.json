@@ -23,6 +23,10 @@
         "Deductible": [
             { "@id": "http://schema4i.org/QuantitativeValue" },
             { "@id": "http://schema4i.org/MonetaryAmount" }
+        ],
+        "Covers": [
+            { "@id": "http://schema4i.org/Risk" },
+            { "@id": "http://schema4i.org/Share" }
         ]
 
     },
@@ -40,8 +44,7 @@
                 "@id": "s4i:SumInsured"
             },
             "Covers": {
-                "@id": "s4i:Risk",
-                "@type": "s4i:Risk"
+                "@id": "s4i:Risk"
             },
             "AffectedBy": {
                 "@id": "s4i:AffectedBy",
