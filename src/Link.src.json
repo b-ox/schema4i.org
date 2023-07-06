@@ -1,7 +1,7 @@
 {
     "type": "Link",
     "uri": "http://schema4i.org/Link",
-    "description": "A relation between two objects. Whenever an object has a property that can either be another object or a Link (or any inheriting type), this Link may include a property of the same name and type without requiring this property to be explicitly mapped as property of the Link. If for example a Person has a property HasOccupation that could either be a Link or an Occupation, using a Link here would make the property HasOccupation of type Occupation available to use as property of the Link.",
+    "description": "A generic relation between two objects. Whenever an object has a property that can either be another object or a Link (or any inheriting type), this Link may include a property of the same name and type without requiring this property to be explicitly mapped as property of the Link. If for example a Person has a property HasOccupation that could either be a Link or an Occupation, using a Link here would make the property HasOccupation of type Occupation available to use as property of the Link.",
     "links": [],
     "parents": [],
     "base": [],
