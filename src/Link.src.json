@@ -1,0 +1,34 @@
+{
+    "type": "Link",
+    "uri": "http://schema4i.org/Link",
+    "description": "A relation between two objects. Whenever an object has a property that can either be another object or a Link (or any inheriting type), this Link may include a property of the same name and type without requiring this property to be explicitly mapped as property of the Link. If for example a Person has a property HasOccupation that could either be a Link or an Occupation, using a Link here would make the property HasOccupation of type Occupation available to use as property of the Link.",
+    "links": [],
+    "parents": [],
+    "base": [],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Link": "s4i:Link"
+        }
+    },
+    "playground": [{
+        "title": "A maximum Link",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https://schema4i.org/Link.jsonld",
+                "https://schema4i.org/Thing.jsonld",
+                "https://schema4i.org/Occupation.jsonld"
+            ],
+            "@type": "Link",
+            "HasOccupation": {
+                "@type": "Occupation",
+                "Name": "Softwareentwickler"
+            }
+            },
+        "context": {}
+    }]
+}
