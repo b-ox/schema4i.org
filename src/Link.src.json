@@ -4,7 +4,9 @@
     "description": "A generic relation between two objects. Whenever an object has a property that can either be another object or a Link (or any inheriting type, such as EmployeeRole or Share), this Link may include a property of the same name and type without requiring this property to be explicitly mapped as property of the Link.",
     "links": [],
     "parents": [],
-    "base": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
     "multipletypes": {},
     "context": {
         "@context": {
