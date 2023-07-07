@@ -44,7 +44,7 @@
                 "@id": "s4i:SumInsured"
             },
             "Covers": {
-                "@id": "s4i:Risk"
+                "@id": "s4i:Covers"
             },
             "AffectedBy": {
                 "@id": "s4i:AffectedBy",
@@ -66,9 +66,17 @@
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/Share.jsonld",
+                "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Question.jsonld",
                 "http://schema4i.org/Answer.jsonld",
                 "http://schema4i.org/PropertyValue.jsonld",
+                {
+                    "Covers": {
+                        "@id": "s4i:Covers",
+                        "@type": "s4i:Share"
+                    }
+                },
                 {
                     "SumInsured": {
                         "@id": "s4i:SumInsured",
@@ -90,7 +98,19 @@
                 "UnitCode": "P1"
             }],
             "Covers": [{
-                "@type": "Risk"
+                "@type": "Share",
+                "Covers": {
+                    "@type": "Risk",
+                    "Affects": {
+                        "@type": "Person",
+                        "Name": "Müller"
+                    }
+                },
+                "Value": {
+                    "@type": "QuantitativeValue",
+                    "UnitCode": "P1",
+                    "Value": "25"
+                }
             }],
             "SumInsured": "11",
             "AffectedBy": [{
