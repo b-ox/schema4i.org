@@ -78,6 +78,12 @@
                     }
                 },
                 {
+                    "Deductible": {
+                        "@id": "s4i:Deductible",
+                        "@type": "s4i:MonetaryAmount"
+                    }
+                },
+                {
                     "SumInsured": {
                         "@id": "s4i:SumInsured",
                         "@type": "@vocab",
