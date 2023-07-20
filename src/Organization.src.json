@@ -76,6 +76,10 @@
                 "@id": "schema:legalName",
                 "@type": "schema:Text"
             },
+            "LegalForm": {
+                "@id": "s4i:LegalForm",
+                "@type": "s4i:EnumLegalFormCode" 
+            },
             "Logo": {
                 "@id": "schema:logo"
             },
@@ -123,6 +127,7 @@
             "FaxNumber": "0211 41608 100",
             "FoundingDate": "2013-02-08",
             "LegalName": "b-tix GmbH",
+            "LegalForm": "05",
             "Logo": "https://www.b-tix.de/wp-content/uploads/2015/04/b-tix_logo_weiss_textlos_klein.png",
             "MemberOf": {},
             "NumberOfEmployees": {
@@ -165,6 +170,7 @@
             "Email": "noreply@b-tix.de",
             "FaxNumber": "0211 41608 100",
             "LegalName": "b-tix GmbH",
+            "LegalForm": "05",
             "Name": "b-tix",
             "NumberOfEmployees": {
                 "@type": "QuantitativeValue",

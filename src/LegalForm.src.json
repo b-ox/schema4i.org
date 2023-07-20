@@ -1,0 +1,44 @@
+{
+    "type": "LegalForm",
+    "uri": "http://schema4i.org/LegalForm",
+    "description": "A `LegalForm` refers to the structure or organizational type that a business or organization takes on, which is recognized and regulated by the law. It dictates how the entity is created, operates, and is taxed.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Organization#LegalForm" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LegalForm": {
+                "@id": "s4i:LegalForm",
+                "@type": "s4i:EnumLegalFormCode"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample LegalForm",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/EnumLegalFormCode.jsonld",
+                {
+                    "LegalForm": {
+                        "@id": "http://schema4i.org/LegalForm",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumLegalFormCode#"
+                        }
+                    }
+                }
+            ],
+            "LegalForm": "02"
+        },
+        "context": {}
+    }]
+}
