@@ -1,0 +1,44 @@
+{
+    "type": "Link",
+    "uri": "http://schema4i.org/Link",
+    "description": "A generic relation between two objects. Whenever an object has a property that can either be another object or a Link (or any inheriting type, such as EmployeeRole or Share), this Link may include a property of the same name and type without requiring this property to be explicitly mapped as property of the Link.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Link": "s4i:Link"
+        }
+    },
+    "playground": [{
+        "title": "A Person using EmployeeRole as subtype of Link to describe a relation between the Person and their Occupation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "https://schema4i.org/Link.jsonld",
+                "https://schema4i.org/Role.jsonld",
+                "https://schema4i.org/EmployeeRole.jsonld",
+                "https://schema4i.org/Thing.jsonld",
+                "https://schema4i.org/Person.jsonld",
+                "https://schema4i.org/Occupation.jsonld"
+            ],
+            "@type": "Person",
+            "Name": "Mustermann",
+            "GivenName": "Max",
+            "HasOccupation": {
+                "@type": "EmployeeRole",
+                "HasOccupation": {
+                    "@type": "Occupation",
+                    "Name": "Softwareentwickler"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

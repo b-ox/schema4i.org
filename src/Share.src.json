@@ -1,0 +1,53 @@
+{
+    "type": "Share",
+    "uri": "http://schema4i.org/Share",
+    "description": "Represents a relation between two objects, indicating that one object is only a part of the entire content that represents a property of the other object.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#Covers" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Link" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Share": "s4i:Share",
+            "Value": {
+                "@id": "schema:value",
+                "@type": "s4i:StructuredValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic Share",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing",
+                "http://schema4i.org/Link",
+                "http://schema4i.org/Share",
+                "http://schema4i.org/Risk",
+                "http://schema4i.org/QuantitativeValue",
+                "http://schema4i.org/Person"
+            ],
+            "@type": "Share",
+            "Value": {
+                "@type": "QuantitativeValue",
+                "UnitCode": "P1",
+                "Value": "25"
+            },
+            "Covers": {
+                "@type": "Risk",
+                "Affects": {
+                    "@type": "Person",
+                    "Name": "Müller"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

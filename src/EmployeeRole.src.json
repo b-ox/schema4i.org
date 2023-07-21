@@ -23,10 +23,6 @@
                 "@id": "s4i:EmploymentStatus",
                 "@type": "s4i:EnumEmploymentStatusCode"
             },
-            "HasOccupation": {
-                "@id": "s4i:Occupation",
-                "@type": "s4i:Occupation"
-            },
             "PhysicalWork": {
                 "@id": "s4i:PhysicalWork",
                 "@type": "s4i:PropertyValue"
