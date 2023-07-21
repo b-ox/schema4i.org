@@ -85,7 +85,7 @@
             "KGaA & Co.OHG":"s4i:EnumLegalFormCode#66",
             "OHG mbH":"s4i:EnumLegalFormCode#67",
             "Ohne Rechtsform":"s4i:EnumLegalFormCode#98",
-            "Sonstiges":"s4i:EnumLegalFormCode#99"
+            "Other":"s4i:EnumLegalFormCode#99"
         }
     }
 }
