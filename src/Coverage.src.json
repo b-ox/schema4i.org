@@ -80,7 +80,7 @@
                 {
                     "Deductible": {
                         "@id": "s4i:Deductible",
-                        "@type": "s4i:MonetaryAmount"
+                        "@type": "s4i:StructuredValue"
                     }
                 },
                 {
