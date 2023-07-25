@@ -53,6 +53,10 @@
                 "@id": "schema:confirmationNumber",
                 "@type": "schema:Text"
             },
+            "ContactPerson": {
+                "@id": "s4i:contactPerson",
+                "@type": "s4i:Person"
+            },
             "Customer": {
                 "@id": "schema:customer"
             },
@@ -86,7 +90,8 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Invoice.jsonld"
+                "http://schema4i.org/Invoice.jsonld",
+                "http://schema4i.ord/Person.jsonld"
             ],
             "@type": "Invoice",
             "AccountID": "KUNDEKTO-10424147",
@@ -94,6 +99,13 @@
             "Broker": {},
             "Category": "PREMIUM",
             "ConfirmationNumber": "ABRECHNUNG-15 -0000028",
+            "ContactPerson": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max",
+                "Telephone": "01234/567890",
+                "Email": "mustermann@muster.de"
+            },
             "Customer": {},
             "TotalPaymentDue": {},
             "PaymentDueDate": "2020-04-01",
