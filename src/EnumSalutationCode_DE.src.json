@@ -1,0 +1,26 @@
+{
+    "type": "EnumSalutationCode_DE",
+    "uri": "http://schema4i.org/EnumSalutationCode",
+    "description": "Ein Code, der die Anrede einer Person beschreibt",
+    "links": [{
+            "url": "http://schema4i.org/EnumSalutationCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#Salutation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Ohne Anrede": "s4i:EnumBasementFeatureCode#0",
+            "Frau": "s4i:EnumBasementFeatureCode#1",
+            "Herr": "s4i:EnumBasementFeatureCode#3"
+        }
+    }
+}
