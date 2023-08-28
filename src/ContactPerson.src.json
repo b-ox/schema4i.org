@@ -1,0 +1,41 @@
+{
+    "type": "ContactPerson",
+    "uri": "http://schema4i.org/ContactPerson",
+    "description": "A ContactPerson is the first responder for any issues related to a specific matter.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Invoice#ContactPerson" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "ContactPerson": {
+                "@id": "s4i:ContactPerson",
+                "@type": "s4i:Person"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ContactPerson",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "ContactPerson": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max",
+                "Telephone": "01234/567890",
+                "Email": "mustermann@muster.de"
+            }
+        },
+        "context": {}
+    }]
+}
