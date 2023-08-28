@@ -30,16 +30,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/EnumSalutationCode.jsonld",
-                {
-                    "Salutation": {
-                        "@id": "http://schema4i.org/Salutation",
-                        "@type": "@vocab",
-                        "@context": {
-                            "@vocab": "http://schema4i.org/EnumSalutationCode#"
-                        }
-                    }
-                }
+                "http://schema4i.org/EnumSalutationCode.jsonld"
             ],
             "Salutation": "3"
         },
