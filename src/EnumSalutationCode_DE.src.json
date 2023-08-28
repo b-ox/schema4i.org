@@ -1,7 +1,7 @@
 {
     "type": "EnumSalutationCode_DE",
     "uri": "http://schema4i.org/EnumSalutationCode",
-    "description": "Ein Code, der die Anrede einer Person beschreibt",
+    "description": "Ein Code, der die Anrede einer Person beschreibt.",
     "links": [{
             "url": "http://schema4i.org/EnumSalutationCode",
             "description": "Englische Dokumentation der Schlüsselwerte"
