@@ -1,0 +1,39 @@
+{
+    "type": "Salutation",
+    "uri": "http://schema4i.org/Salutation",
+    "description": "A salutation is a word or phrase used for greeting a recipient in business or personal correspondence.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#Salutation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Salutation": {
+                "@id": "s4i:Salutation",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSalutationCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Salutation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/EnumSalutationCode.jsonld"
+            ],
+            "Salutation": "3"
+        },
+        "context": {}
+    }]
+}

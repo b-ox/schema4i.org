@@ -1,0 +1,26 @@
+{
+    "type": "EnumSalutationCode",
+    "uri": "http://schema4i.org/EnumSalutationCode",
+    "description": "A Code, that describes the form of address for a person.",
+    "links": [{
+            "url": "http://schema4i.org/EnumSalutationCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#Salutation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Without Salutation": "s4i:EnumBasementFeatureCode#0",
+            "Mrs": "s4i:EnumBasementFeatureCode#1",
+            "Mr": "s4i:EnumBasementFeatureCode#3"
+        }
+    }
+}

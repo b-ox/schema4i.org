@@ -110,8 +110,11 @@
                 "@type": "s4i:Person"
             },
             "Salutation": {
-                "@id": "oo:person/salutation",
-                "@type": "oo:definitions/salutation"
+                "@id": "s4i:Salutation",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSalutationCode#"
+                }
             },
             "TaxID": {
                 "@id": "schema:taxID",
