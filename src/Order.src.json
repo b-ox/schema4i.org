@@ -148,6 +148,24 @@
             "Broker": {},
             "ConfirmationNumber": "BELEG-03 -0000014",
             "Customer": {},
+            "Delivery":  {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Delivery.jsonld",
+                    "http://schema4i.org/Organization.jsonld"
+                ],
+                "@type": "Delivery",
+                "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeMail",
+                "ItemShipped": {
+                    "@type": "InsuranceProduct"
+                },
+                "Provider": {
+                    "@type": "Organization",
+                    "Identifier": "1047",
+                    "Name": "IDEAL Versicherungsgruppe"
+                },
+                "TrackingNumber": "LID-4711"
+            },
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
