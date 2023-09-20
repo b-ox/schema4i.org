@@ -46,6 +46,10 @@
             "Customer": {
                 "@id": "schema:customer"
             },
+            "Delivery": {
+                "@id": "s4i:Delivery",
+                "@type": "s4i:Delivery"
+            },
             "Discount": {
                 "@id": "schema:discount",
                 "@type": "schema:Number"
