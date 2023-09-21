@@ -47,8 +47,8 @@
                 "@id": "schema:customer"
             },
             "Delivery": {
-                "@id": "s4i:Delivery",
-                "@type": "s4i:Delivery"
+                "@id": "s4i:ParcelDelivery",
+                "@type": "s4i:ParcelDelivery"
             },
             "Discount": {
                 "@id": "schema:discount",
@@ -148,16 +148,11 @@
             "Broker": {},
             "ConfirmationNumber": "BELEG-03 -0000014",
             "Customer": {},
-            "Delivery":  {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/Delivery.jsonld",
-                    "http://schema4i.org/Organization.jsonld"
-                ],
-                "@type": "Delivery",
-                "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeMail",
+            "Delivery": {
+                "@type": "ParcelDelivery",
+                "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
                 "ItemShipped": {
-                    "@type": "InsuranceProduct"
+                    "@type": "FinancialProduct"
                 },
                 "Provider": {
                     "@type": "Organization",
