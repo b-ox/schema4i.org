@@ -1,18 +1,24 @@
 {
     "type": "ParcelDelivery",
     "uri": "http://schema4i.org/ParcelDelivery",
-    "description": "The delivery of a parcel either via the postal service or a commercial service.",
+    "description": "The delivery of a parcel or digital service either via the postal service or a commercial service or digital.",
     "links": [{
         "url": "http://schema.org/ParcelDelivery",
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessTransactionDelivery" }
+        { "@id": "http://schema4i.org/BusinessTransactionDelivery" },
+        { "@id": "http://schema4i.org/Order#Delivery" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "ItemShipped": [
+            { "@id": "http://schema4i.org/Service" },
+            { "@id": "http://schema4i.org/Product" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -22,6 +28,9 @@
             "HasDeliveryMethod": {
                 "@id": "schema:hasDeliveryMethod",
                 "@type": "schema:DeliveryMethod"
+            },
+            "ItemShipped": {
+                "@id": "schema:itemShipped"
             },
             "Provider": {
                 "@id": "schema:provider",
@@ -44,6 +53,9 @@
             ],
             "@type": "ParcelDelivery",
             "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
+            "ItemShipped": {
+                "@type": "FinancialProduct"
+            },
             "Provider": {
                 "@type": "Organization",
                 "Identifier": "1047",
