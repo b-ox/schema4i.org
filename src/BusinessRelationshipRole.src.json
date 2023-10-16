@@ -12,7 +12,12 @@
     "base": [
         { "@id": "http://schema4i.org/Role" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "RelatedTo": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/BusinessRelationshipRole" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -22,6 +27,9 @@
             "RelationshipCode": {
                 "@id": "s4i:RoleCode",
                 "@type": "s4i:EnumBusinessRelationshipCode"
+            },
+            "RelatedTo": {
+                "@id": "s4i:RelatedTo"
             }
         }
     },
