@@ -1,0 +1,40 @@
+{
+    "type": "EnumBusinessRelationshipCode_DE",
+    "uri": "http://schema4i.org/EnumBusinessRelationshipCode",
+    "description": "Ein Code, der eine geschäftliche Beziehung beschreibt",
+    "links": [{
+            "url": "http://schema4i.org/EnumBusinessRelationshipCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/BusinessRelationshipRole#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "gesetzlicher Vertreter": "s4i:EnumBusinessRelationshipCode#13",
+            "Ansprechpartner": "s4i:EnumBusinessRelationshipCode#15",
+            "Mitarbeiter": "s4i:EnumBusinessRelationshipCode#23",
+            "Tochterunternehmen": "s4i:EnumBusinessRelationshipCode#24",
+            "Firmenverbund": "s4i:EnumBusinessRelationshipCode#26",
+            "Werksangehoeriger": "s4i:EnumBusinessRelationshipCode#27",
+            "Geschaeftsfuehrer": "s4i:EnumBusinessRelationshipCode#30",
+            "Gesellschafter": "s4i:EnumBusinessRelationshipCode#31",
+            "Inhaber": "s4i:EnumBusinessRelationshipCode#32",
+            "Autohaus": "s4i:EnumBusinessRelationshipCode#33",
+            "Altenteiler": "s4i:EnumBusinessRelationshipCode#34",
+            "Hoferbe": "s4i:EnumBusinessRelationshipCode#Interior 35",
+            "Miteigentümer": "s4i:EnumBusinessRelationshipCode#36",
+            "Trägerunternehmen von": "s4i:EnumBusinessRelationshipCode#37",
+            "Abeilung": "s4i:EnumBusinessRelationshipCode#38",
+            "Stellvertreter": "s4i:EnumBusinessRelationshipCode#48",
+            "Mitglied": "s4i:EnumBusinessRelationshipCode#49"
+        }
+    }
+}

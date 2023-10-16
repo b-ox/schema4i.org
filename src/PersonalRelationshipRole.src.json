@@ -1,0 +1,42 @@
+{
+    "type": "PersonalRelationshipRole",
+    "uri": "http://schema4i.org/PersonalRelationshipRole",
+    "description": "A PersonalRelationshipRole describes a relationship to a person",
+    "links": [{
+        "url": "http://schema.org/PersonalRelationshipRole",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#RelatedTo" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Role" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PersonalRelationshipRole": "schema:PersonalRelationshipRole",
+            "RoleCode": {
+                "@id": "s4i:RoleCode",
+                "@type": "s4i:EnumPersonalRelationshipCode"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A ecample PersonalRelationshipRole",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/PersonalRelationshipRole.jsonld"
+            ],
+            "@type": "PersonalRelationshipRole",
+            "RoleCode": "01"
+        },
+        "context": {}
+    }]
+}

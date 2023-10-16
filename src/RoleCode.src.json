@@ -1,0 +1,35 @@
+{
+    "type": "RoleCode",
+    "uri": "http://schema4i.org/RoleCode",
+    "description": "A RoleCode describes the role",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RoleCode": {
+                "@id": "s4i:RoleCode",
+                "@type": "http://schema.org/Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample RoleCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RoleCode.jsonld"
+            ],
+            "RoleCode": "Neighbour"
+        },
+        "context": {}
+    }]
+}

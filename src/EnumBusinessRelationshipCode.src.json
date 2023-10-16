@@ -1,0 +1,40 @@
+{
+    "type": "EnumBusinessRelationshipCode",
+    "uri": "http://schema4i.org/EnumBusinessRelationshipCode",
+    "description": "Ein Code, der eine geschäftliche Beziehung beschreibt",
+    "links": [{
+            "url": "http://schema4i.org/EnumBusinessRelationshipCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/BusinessRelationshipRole#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "legal representative": "s4i:EnumBusinessRelationshipCode#13",
+            "contact person": "s4i:EnumBusinessRelationshipCode#15",
+            "employeee": "s4i:EnumBusinessRelationshipCode#23",
+            "subsidiary": "s4i:EnumBusinessRelationshipCode#24",
+            "consolidated companies": "s4i:EnumBusinessRelationshipCode#26",
+            "factory employee": "s4i:EnumBusinessRelationshipCode#27",
+            "manager": "s4i:EnumBusinessRelationshipCode#30",
+            "shareholder": "s4i:EnumBusinessRelationshipCode#31",
+            "owner": "s4i:EnumBusinessRelationshipCode#32",
+            "car dealership": "s4i:EnumBusinessRelationshipCode#33",
+            "retirement home": "s4i:EnumBusinessRelationshipCode#34",
+            "farm heir": "s4i:EnumBusinessRelationshipCode#Interior 35",
+            "co-owner": "s4i:EnumBusinessRelationshipCode#36",
+            "carrier": "s4i:EnumBusinessRelationshipCode#37",
+            "department": "s4i:EnumBusinessRelationshipCode#38",
+            "representitive": "s4i:EnumBusinessRelationshipCode#48",
+            "member": "s4i:EnumBusinessRelationshipCode#49"
+        }
+    }
+}

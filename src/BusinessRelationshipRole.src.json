@@ -1,0 +1,42 @@
+{
+    "type": "BusinessRelationshipRole",
+    "uri": "http://schema4i.org/BusinessRelationshipRole",
+    "description": "A BusinessRelationshipRole describes a relation to a business",
+    "links": [{
+        "url": "http://schema.org/BusinessRelationshipRole",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Organization#RelatedTo" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Role" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BusinessRelationshipRole": "schema:BusinessRelationshipRole",
+            "RelationshipCode": {
+                "@id": "s4i:RoleCode",
+                "@type": "s4i:EnumBusinessRelationshipCode"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic BusinessRelationshipRole",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/BusinessRelationshipRole.jsonld"
+            ],
+            "@type": "BusinessRelationshipRole",
+            "RollCode": "30"
+        },
+        "context": {}
+    }]
+}

@@ -28,6 +28,10 @@
         "Logo": [
             { "@id": "http://schema4i.org/MediaObject" },
             { "@id": "http://schema.org/URL" }
+        ],
+        "RelatedTo": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/BusinessRelationshipRole" }
         ]
     },
     "context": {
@@ -89,6 +93,9 @@
             "NumberOfEmployees": {
                 "@id": "schema:numberOfEmployees",
                 "@type": "s4i:QuantitativeValue"
+            },
+            "RelatedTo": {
+                "@id": "s4i:RelatedTo"
             },
             "RelatedOrganization": {
                 "@id": "s4i:RelatedOrganization",

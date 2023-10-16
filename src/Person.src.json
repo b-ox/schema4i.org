@@ -29,6 +29,10 @@
         "HasOccupation": [
             { "@id": "http://schema4i.org/Occupation" },
             { "@id": "http://schema4i.org/EmployeeRole" }
+        ],
+        "RelatedTo": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/PersonalRelationshipRole" }
         ]
     },
     "context": {
@@ -106,8 +110,7 @@
                 }
             },
             "RelatedTo": {
-                "@id": "schema:relatedTo",
-                "@type": "s4i:Person"
+                "@id": "s4i:RelatedTo"
             },
             "Salutation": {
                 "@id": "s4i:Salutation",
