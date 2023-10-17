@@ -28,6 +28,10 @@
         "Logo": [
             { "@id": "http://schema4i.org/MediaObject" },
             { "@id": "http://schema.org/URL" }
+        ],
+        "BusinessRelationship": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/BusinessRelationshipRole" }
         ]
     },
     "context": {
@@ -47,6 +51,10 @@
             "BankAccount": {
                 "@id": "s4i:BankAccount",
                 "@type": "s4i:BankAccount"
+            },
+            "BusinessRelationship": {
+                "@id": "s4i:BusinessRelationship",
+                "@type": "http://schema4i.org/BusinessRelationshipRole"
             },
             "CICRegistrationNumber": {
                 "@id": "s4i:CICRegistrationNumber",
@@ -90,10 +98,6 @@
                 "@id": "schema:numberOfEmployees",
                 "@type": "s4i:QuantitativeValue"
             },
-            "RelatedOrganization": {
-                "@id": "s4i:RelatedOrganization",
-                "@type": "s4i:Organization"
-            },
             "TaxID": {
                 "@id": "schema:taxID",
                 "@type": "schema:Text"
@@ -134,7 +138,7 @@
                 "@type": "QuantitativeValue",
                 "Value": 10
             },
-            "RelatedOrganization": {
+            "BusinessRelationship": {
                 "@type": "Organization",
                 "Name": "A-va GmbH",
                 "Address": {

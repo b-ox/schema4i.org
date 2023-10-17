@@ -32,6 +32,10 @@
                 "@id": "schema:roleName",
                 "@type": "schema:Text"
             },
+            "RoleCode": {
+                "@id": "s4i:RoleCode",
+                "@type": "schema:Text"
+            },
             "Participant": {
                 "@id": "schema:participant"
             },
