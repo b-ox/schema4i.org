@@ -7,13 +7,13 @@
         "description": "Original Schema.org type"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/Organization#RelatedTo" }
+        { "@id": "http://schema4i.org/Organization#BusinessRelationship" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Role" }
     ],
     "multipletypes": {
-        "RelatedTo": [
+        "BusinessRelationship": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/BusinessRelationshipRole" }
         ]
@@ -28,8 +28,8 @@
                 "@id": "s4i:RoleCode",
                 "@type": "s4i:EnumBusinessRelationshipCode"
             },
-            "RelatedTo": {
-                "@id": "s4i:RelatedTo"
+            "BusinessRelationship": {
+                "@id": "s4i:BusinessRelationship"
             }
         }
     },

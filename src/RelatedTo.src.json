@@ -1,0 +1,38 @@
+{
+    "type": "RelatedTo",
+    "uri": "http://schema4i.org/RelatedTo",
+    "description": "RelatedTo describes the connection between a person or organization and another person or organization",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#RelatedTo" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RoleCode": {
+                "@id": "s4i:RoleCode",
+                "@type": "http://schema.org/Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample RelatedTo",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RelatedTo.jsonld"
+            ],
+            "RelatedTo": {
+                "@type": "PersonalRelationshipRole",
+                "RoleCode": "01"
+            }
+        },
+        "context": {}
+    }]
+}

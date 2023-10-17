@@ -14,7 +14,7 @@
         { "@id": "http://schema4i.org/Property" }
     ],
     "multipletypes": {
-        "RelatedTo": [
+        "BusinessRelationship": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/BusinessRelationshipRole" }
         ]
@@ -25,11 +25,7 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "BusinessRelationship": {
-                "@type": "BusinessRelationshipRole",
-                "RelationshipCode": {
-                    "@id": "s4i:RoleCode",
-                    "@type": "s4i:EnumBusinessRelationshipCode"
-                }
+                "@id": "s4i:BusinessRelationshipRole"
             }
             
         }

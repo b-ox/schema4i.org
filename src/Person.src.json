@@ -18,6 +18,10 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
+        "BusinessRelationship": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/BusinessRelationshipRole" }
+        ],
         "MemberOf": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/ProgramMembership" }
@@ -113,8 +117,7 @@
                 "@id": "s4i:RelatedTo"
             },
             "BusinessRelationship": {
-                "@id": "s4i:BusinessRelationship",
-                "@type": "http://schema4i.org/BusinessRelationshipRole"
+                "@id": "s4i:BusinessRelationship"
             },
             "Salutation": {
                 "@id": "s4i:Salutation",

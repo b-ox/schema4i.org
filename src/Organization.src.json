@@ -138,7 +138,7 @@
                 "@type": "QuantitativeValue",
                 "Value": 10
             },
-            "RelatedOrganization": {
+            "BusinessRelationship": {
                 "@type": "Organization",
                 "Name": "A-va GmbH",
                 "Address": {
