@@ -1,7 +1,7 @@
 {
     "type": "RelatedOrganization",
     "uri": "http://schema4i.org/RelatedOrganization",
-    "description": "An organization that is in some way related to another organization.",
+    "description": "An organization that is in some way related to another organization. This is deprecated. Please use BusinessRelationship instead",
     "links": [],
     "parents": [{
         "@id": "http://schema4i.org/Organization#RelatedOrganization"

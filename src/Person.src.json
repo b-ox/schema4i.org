@@ -112,6 +112,10 @@
             "RelatedTo": {
                 "@id": "s4i:RelatedTo"
             },
+            "BusinessRelationship": {
+                "@id": "s4i:BusinessRelationship",
+                "@type": "http://schema4i.org/BusinessRelationshipRole"
+            },
             "Salutation": {
                 "@id": "s4i:Salutation",
                 "@type": "@vocab",
