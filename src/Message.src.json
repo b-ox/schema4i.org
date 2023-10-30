@@ -19,21 +19,24 @@
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Credentials" },
-            { "@id": "http://schema4i.org/UserAccount" }
+            { "@id": "http://schema4i.org/UserAccount" },
+            { "@id": "http://schema4i.org/Service" }
         ],
         "CCRecipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Credentials" },
-            { "@id": "http://schema4i.org/UserAccount" }
+            { "@id": "http://schema4i.org/UserAccount" },
+            { "@id": "http://schema4i.org/Service" }
         ],
         "Recipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Credentials" },
-            { "@id": "http://schema4i.org/UserAccount" }
+            { "@id": "http://schema4i.org/UserAccount" },
+            { "@id": "http://schema4i.org/Service" }
         ],
         "Sender": [
             { "@id": "http://schema4i.org/ContactPoint" },
