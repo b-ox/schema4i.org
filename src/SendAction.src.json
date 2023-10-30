@@ -17,7 +17,8 @@
         "Recipient": [
             { "@id": "http://schema4i.org/ContactPoint" },
             { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Person" }
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Service" }
         ]
     },
     "context": {
