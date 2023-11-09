@@ -5,7 +5,7 @@
     "links": [],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Action" }
+        { "@id": "http://schema4i.org/CommunicateAction" }
     ],
     "multipletypes": {},
     "context": {
@@ -22,6 +22,7 @@
         "input": {
             "@context": [
                 "http://schema4i.org/SupportAction.jsonld",
+                "http://schema4i.org/CommunicateAction.jsonld",
                 "http://schema4i.org/Action.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/TechArticle.jsonld",
