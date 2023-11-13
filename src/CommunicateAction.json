@@ -1,0 +1,71 @@
+{
+    "type": "CommunicateAction",
+    "uri": "http://schema4i.org/CommunicateAction",
+    "description": "The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Action" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CommunicateAction": "s4i:CommunicateAction"
+        }
+    },
+    "playground": [{
+        "title": "A realistic CommunicateAction",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/CommunicateAction.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/Conversation.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "CommunicateAction",
+            "ActionStatus": "CompletedActionStatus",
+            "Result": {
+                "@type": "Conversation",
+                "Name": "Chat between Max and Moritz",
+                "HasPart": [{
+                    "@type": "Message",
+                    "Sender": {
+                        "@type": "Person",
+                        "Name": "Max"
+                    },
+                    "Recipient": {
+                        "@type": "Person",
+                        "Name": "Moritz"
+                    },
+                    "About": {
+                        "@type": "Thing",
+                        "Text": "Hi Moritz :-)"
+                    },
+                    "DatePublished": "2020-08-17T12:03:01"
+                }, {
+                    "@type": "Message",
+                    "Sender": {
+                        "@type": "Person",
+                        "Name": "Moritz"
+                    },
+                    "Recipient": {
+                        "@type": "Person",
+                        "Name": "Max"
+                    },
+                    "About": {
+                        "@type": "Thing",
+                        "Text": "Hello Max, how are you?"
+                    },
+                    "DatePublished": "2020-08-17T12:03:15"
+                }]
+            }
+        },
+        "context": {}
+    }]
+}
