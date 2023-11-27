@@ -38,6 +38,10 @@
                 "@id": "s4i:Dunning",
                 "@type": "s4i:Dunning"
             },
+            "FileReference": {
+                "@id": "s4i:FileReference",
+                "@type": "schema:Text"
+            },
             "TransactionCode": {
                 "@id": "s4i:TransactionCode",
                 "@type": "@vocab",
@@ -95,6 +99,7 @@
                 },
                 "TrackingNumber": "LID-4711"
             },
+            "FileReference": "211321/37",
             "ValidThrough": "2022-01-01T00:00:00",
             "Copy": true,
             "DateCreated": "2020-08-01T13:00:12",
