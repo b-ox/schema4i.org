@@ -1,0 +1,33 @@
+{
+    "type": "FileReference",
+    "uri": "http://schema4i.org/FileReference",
+    "description": "A number assigned to unambiguously reference a digital or analog document of any form or size relating to a financial or judicial process",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BusinessTransferAction#FileReference" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "FileReference": {
+                "@id": "s4i:FileReference",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample FileReference",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "FileReference": "211321/37"
+        },
+        "context": {}
+    }]
+}
