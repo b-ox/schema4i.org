@@ -1,0 +1,40 @@
+{
+    "type": "EnumCommunicationTypeCode",
+    "uri": "http://schema4i.org/EnumCommunicationTypeCode",
+    "description": "A code that describes the purpose of a communication information.",
+    "links": [{
+            "url": "http://schema4i.org/EnumCommunicationTypeCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/ContactPoint#ContactType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Telephone personal": "s4i:EnumCommunicationTypeCode#10",
+            "Telephone business": "s4i:EnumCommunicationTypeCode#20",
+            "Telephone mobile": "s4i:EnumCommunicationTypeCode#30",
+            "Telephone mobile personal": "s4i:EnumCommunicationTypeCode#31",
+            "Telephone mobile business": "s4i:EnumCommunicationTypeCode#32",
+            "Fax": "s4i:EnumCommunicationTypeCode#40",
+            "Fax private": "s4i:EnumCommunicationTypeCode#41",
+            "Fax business": "s4i:EnumCommunicationTypeCode#42",
+            "Email": "s4i:EnumCommunicationTypeCode#50",
+            "Email personal": "s4i:EnumCommunicationTypeCode#51",
+            "Email business": "s4i:EnumCommunicationTypeCode#52",
+            "Website": "s4i:EnumCommunicationTypeCode#60",
+            "Website personal": "s4i:EnumCommunicationTypeCode#61",
+            "Website business": "s4i:EnumCommunicationTypeCode#62",
+            "Online Service": "s4i:EnumCommunicationTypeCode#70",
+            "Online Service personal": "s4i:EnumCommunicationTypeCode#71",
+            "Online Service business": "s4i:EnumCommunicationTypeCode#72"
+        }
+    }
+}
