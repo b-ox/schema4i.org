@@ -44,7 +44,13 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Product.jsonld",
-                "http://schema4i.org/Person.jsonld"
+                "http://schema4i.org/Person.jsonld",
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
+                    }
+                }
             ],
             "@type": "Product",
             "Manufacturer": {},

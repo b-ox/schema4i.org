@@ -116,7 +116,13 @@
                 "http://schema4i.org/Thing",
                 "http://schema4i.org/Product",
                 "http://schema4i.org/Vehicle",
-                "http://schema4i.org/Person"
+                "http://schema4i.org/Person",
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
+                    }
+                }
             ],
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",

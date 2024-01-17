@@ -47,7 +47,13 @@
                 "http://schema4i.org/Animal.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Gender.jsonld",
-                "http://schema4i.org/Person.jsonld"
+                "http://schema4i.org/Person.jsonld",
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
+                    }
+                }
             ],
             "@type": "Animal",
             "Breed":  "Goldfish",

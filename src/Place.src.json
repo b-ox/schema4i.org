@@ -94,6 +94,12 @@
                         "@id": "s4i:Altitude",
                         "@type": "s4i:QuantitativeValue"
                     }
+                },
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
+                    }
                 }
             ],
             "@type": "Place",
