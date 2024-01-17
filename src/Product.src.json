@@ -12,7 +12,12 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Owner": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -26,6 +31,9 @@
             "Model": {
                 "@id": "schema:model",
                 "@type": "schema:Text"
+            },
+            "Owner": {
+                "@id": "s4i:Owner"
             }
         }
     },
@@ -39,7 +47,13 @@
             ],
             "@type": "Product",
             "Manufacturer": {},
-            "Model": "Model S"
+            "Model": "Model S",
+            "Owner": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max",
+                "Salutation": "3"
+            }
         },
         "context": {}
     }]
