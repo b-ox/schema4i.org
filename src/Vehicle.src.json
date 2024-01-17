@@ -115,7 +115,8 @@
             "@context": [
                 "http://schema4i.org/Thing",
                 "http://schema4i.org/Product",
-                "http://schema4i.org/Vehicle"
+                "http://schema4i.org/Vehicle",
+                "http://schema4i.org/Person"
             ],
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",

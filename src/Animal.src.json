@@ -46,7 +46,8 @@
             "@context": [
                 "http://schema4i.org/Animal.jsonld",
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Gender.jsonld"
+                "http://schema4i.org/Gender.jsonld",
+                "http://schema4i.org/Person.jsonld"
             ],
             "@type": "Animal",
             "Breed":  "Goldfish",

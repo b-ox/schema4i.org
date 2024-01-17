@@ -43,7 +43,8 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Product.jsonld"
+                "http://schema4i.org/Product.jsonld",
+                "http://schema4i.org/Person.jsonld"
             ],
             "@type": "Product",
             "Manufacturer": {},
