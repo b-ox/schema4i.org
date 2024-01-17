@@ -7,7 +7,12 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Owner": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -28,6 +33,9 @@
                 "@context": {
                     "@vocab": "s4i:EnumGenderCode#"
                 }
+            },
+            "Owner": {
+                "@id": "s4i:Owner"
             }
         }
     },
@@ -38,13 +46,26 @@
             "@context": [
                 "http://schema4i.org/Animal.jsonld",
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Gender.jsonld"
+                "http://schema4i.org/Gender.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
+                    }
+                }
             ],
             "@type": "Animal",
             "Breed":  "Goldfish",
             "Name": "Goldy",
             "BirthDate": "2021-10-04",
-            "Gender": "1"
+            "Gender": "1",
+            "Owner": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max",
+                "Salutation": "3"
+            }
         },
         "context": {}
     }]

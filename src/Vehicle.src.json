@@ -81,10 +81,6 @@
                     "@vocab": "s4i:EnumVehicleOwnershipCode#"
                 }
             },
-            "Owner": {
-                "@id": "s4i:Owner",
-                "@type": "s4i:Owner"
-            },
             "RegistrationArea": {
                 "@id": "oo:vehicle/registration-area"
             },
@@ -119,7 +115,14 @@
             "@context": [
                 "http://schema4i.org/Thing",
                 "http://schema4i.org/Product",
-                "http://schema4i.org/Vehicle"
+                "http://schema4i.org/Vehicle",
+                "http://schema4i.org/Person",
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
+                    }
+                }
             ],
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",
@@ -131,7 +134,12 @@
             "ModelKeyNumber": "AJM",
             "NumberPlate": "D-TX 718",
             "NumberPlateAddress": {},
-            "Owner": {},
+            "Owner": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max",
+                "Salutation": "3"
+            },
             "Ownership": "1",
             "RiskCode": "112",
             "TypeOfUse": "02",

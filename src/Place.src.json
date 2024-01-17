@@ -18,6 +18,10 @@
         "Altitude": [
             { "@id": "http://schema.org/Number" },
             { "@id": "http://schema4i.org/QuantitativeValue" }
+        ],
+        "Owner": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Person" }
         ]
     },
     "context": {
@@ -61,6 +65,9 @@
                 "@id": "schema:longitude",
                 "@type": "schema:Number"
             },
+            "Owner": {
+                "@id": "s4i:Owner"
+            },
             "Photo": {
                 "@id": "schema:photo",
                 "@type": "s4i:ImageObject"
@@ -81,10 +88,17 @@
                 "https://schema4i.org/ImageObject.jsonld",
                 "https://schema4i.org/CreativeWork.jsonld",
                 "https://schema4i.org/QuantitativeValue.jsonld",
+                "https://schema4i.org/Person.jsonld",
                 {
                     "Altitude": {
                         "@id": "s4i:Altitude",
                         "@type": "s4i:QuantitativeValue"
+                    }
+                },
+                {
+                    "Owner": {
+                        "@id": "s4i:Owner",
+                        "@type": "s4i:Person"
                     }
                 }
             ],
@@ -108,6 +122,12 @@
             "Keywords": "Wohnung, Eigentumswohnung",
             "Latitude": 26.55964,
             "Longitude": -81.951283,
+            "Owner": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max",
+                "Salutation": "3"
+            },
             "Altitude": {
                 "@type": "QuantitativeValue",
                 "UnitCode": "MTR",
