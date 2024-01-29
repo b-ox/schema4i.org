@@ -20,7 +20,12 @@
             "s4i": "http://schema4i.org/",
             "Without Salutation": "s4i:EnumBasementFeatureCode#0",
             "Mrs": "s4i:EnumBasementFeatureCode#1",
-            "Mr": "s4i:EnumBasementFeatureCode#3"
+            "Mr": "s4i:EnumBasementFeatureCode#3",
+            "Mr and Mrs": "s4i:EnumBasementFeatureCode#4",
+            "Ms": "s4i:EnumBasementFeatureCode#5",
+            "Union": "s4i:EnumBasementFeatureCode#6",
+            "Mmes": "s4i:EnumBasementFeatureCode#7",
+            "Messrs": "s4i:EnumBasementFeatureCode#8"
         }
     }
 }

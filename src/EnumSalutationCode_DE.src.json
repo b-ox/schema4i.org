@@ -20,7 +20,12 @@
             "s4i": "http://schema4i.org/",
             "Ohne Anrede": "s4i:EnumBasementFeatureCode#0",
             "Frau": "s4i:EnumBasementFeatureCode#1",
-            "Herr": "s4i:EnumBasementFeatureCode#3"
+            "Herr": "s4i:EnumBasementFeatureCode#3",
+            "Herr und Frau": "s4i:EnumBasementFeatureCode#4",
+            "Fräulein": "s4i:EnumBasementFeatureCode#5",
+            "Vereinigung": "s4i:EnumBasementFeatureCode#6",
+            "Damen": "s4i:EnumBasementFeatureCode#7",
+            "Herren": "s4i:EnumBasementFeatureCode#8"
         }
     }
 }
