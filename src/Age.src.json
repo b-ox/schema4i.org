@@ -1,0 +1,37 @@
+{
+    "type": "Age",
+    "uri": "http://schema4i.org/Age",
+    "description": "The age is the entry age.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuredPerson#Age" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Age": {
+                "@id": "s4i:Age",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic InsuredPerson",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Age.jsonld",
+                "http://schema4i.org/InsuredPerson.jsonld"
+            ],
+            "@type": "InsuredPerson",
+            "Age": 65
+        },
+        "context": {}
+    }]
+}
