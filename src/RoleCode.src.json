@@ -17,7 +17,7 @@
             "schema": "http://schema.org/",
             "RoleCode": {
                 "@id": "s4i:RoleCode",
-                "@type": "http://schema.org/Text"
+                "@type": "schema:Text"
             }
         }
     },
