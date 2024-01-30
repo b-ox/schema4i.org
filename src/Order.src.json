@@ -132,6 +132,14 @@
             "ComplementsOrder": {
                 "@id": "s4i:ComplementsOrder",
                 "@type": "s4i:Order"
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:Date"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:Date"
             }
         }
     },
@@ -177,7 +185,9 @@
             "Payer": {},
             "PaymentDueDate": "2022-12-31",
             "ReplacesOrder": {},
-            "ComplementsOrder": {}
+            "ComplementsOrder": {},
+            "ValidFrom": "2020-01-01",
+            "ValidThrough": "2099-01-01"
         },
         "context": {}
     }]
