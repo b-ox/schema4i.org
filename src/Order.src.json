@@ -62,6 +62,10 @@
                 "@id": "schema:dateModified",
                 "@type": "schema:Date"
             },
+            "Group": {
+                "@id": "s4i:Group",
+                "@type": "s4i:Group"
+            },
             "ModificationCode": {
                 "@id": "s4i:OrderModificationCode",
                 "@type": "@vocab",
