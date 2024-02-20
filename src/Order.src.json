@@ -62,6 +62,10 @@
                 "@id": "schema:dateModified",
                 "@type": "schema:Date"
             },
+            "Group": {
+                "@id": "s4i:Group",
+                "@type": "s4i:Group"
+            },
             "ModificationCode": {
                 "@id": "s4i:OrderModificationCode",
                 "@type": "@vocab",
@@ -132,6 +136,14 @@
             "ComplementsOrder": {
                 "@id": "s4i:ComplementsOrder",
                 "@type": "s4i:Order"
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:Date"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:Date"
             }
         }
     },
@@ -164,6 +176,7 @@
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
+            "Group": {},
             "OrderDate": "2020-07-30",
             "OrderedItem": {},
             "OrderNumber": "A-Nr.4711",
@@ -177,7 +190,9 @@
             "Payer": {},
             "PaymentDueDate": "2022-12-31",
             "ReplacesOrder": {},
-            "ComplementsOrder": {}
+            "ComplementsOrder": {},
+            "ValidFrom": "2020-01-01",
+            "ValidThrough": "2099-01-01"
         },
         "context": {}
     }]
