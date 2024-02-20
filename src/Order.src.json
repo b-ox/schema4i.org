@@ -176,6 +176,7 @@
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
+            "Group": {},
             "OrderDate": "2020-07-30",
             "OrderedItem": {},
             "OrderNumber": "A-Nr.4711",
