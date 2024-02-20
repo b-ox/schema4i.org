@@ -1,0 +1,36 @@
+{
+    "type": "InsuredPerson",
+    "uri": "http://schema4i.org/InsuredPerson",
+    "description": "A InsuredPerson is the Person covered by an insurance product.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Role" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "InsuredPerson": "schema:InsuredPerson",
+            "Age": {
+                "@id": "s4i:Age",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic InsuredPerson",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Age.jsonld",
+                "http://schema4i.org/InsuredPerson.jsonld"
+            ],
+            "@type": "InsuredPerson",
+            "Age": 65
+        },
+        "context": {}
+    }]
+}
