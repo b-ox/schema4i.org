@@ -18,9 +18,14 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Without Salutation": "s4i:EnumBasementFeatureCode#0",
-            "Mrs": "s4i:EnumBasementFeatureCode#1",
-            "Mr": "s4i:EnumBasementFeatureCode#3"
+            "Without Salutation": "s4i:EnumSalutationCode#0",
+            "Mrs": "s4i:EnumSalutationCode#1",
+            "Mr": "s4i:EnumSalutationCode#3",
+            "Mr and Mrs": "s4i:EnumSalutationCode#4",
+            "Ms": "s4i:EnumSalutationCode#5",
+            "Union": "s4i:EnumSalutationCode#6",
+            "Mmes": "s4i:EnumSalutationCode#7",
+            "Messrs": "s4i:EnumSalutationCode#8"
         }
     }
 }
