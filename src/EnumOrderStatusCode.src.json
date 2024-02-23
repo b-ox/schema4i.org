@@ -9,9 +9,11 @@
         "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl24.htm",
         "description": "GDV contract status"
     }],
-    "parents": [{
-        "@id": "http://schema4i.org/Order#OrderStatus"
-    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#Status"},
+        { "@id": "http://schema4i.org/Offer#Status" },
+        { "@id": "http://schema4i.org/Order#OrderStatus" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
     ],
