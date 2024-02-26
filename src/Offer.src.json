@@ -25,6 +25,10 @@
         "Seller": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
+        ],
+        "Status": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumOrderStatusCode" }
         ]
     },
     "context": {
@@ -102,6 +106,9 @@
                 "@id": "schema:serialNumber",
                 "@type": "schema:Text"
             },
+            "Status": {
+                "@id": "schema:orderStatus"
+            },
             "ValidFrom": {
                 "@id": "schema:validFrom",
                 "@type": "schema:DateTime"
@@ -122,7 +129,13 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Offer.jsonld"
+                "http://schema4i.org/Offer.jsonld",
+                {
+                    "Status": {
+                        "@id": "schema:orderStatus",
+                        "@type": "schema:Text"
+                    }
+                }
             ],
             "@type": "Offer",
             "AcceptedPaymentMethod": [
@@ -144,6 +157,7 @@
             "PriceCurrency": "EUR",
             "PriceSpecification": [],
             "SerialNumber": "A4711BC",
+            "Status": "lebend",
             "ValidFrom": "2021-01-01T00:00:00",
             "ValidThrough": "2022-01-01T00:00:00"
         },

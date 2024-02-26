@@ -11,7 +11,12 @@
     "base": [
         { "@id": "http://schema4i.org/FinancialProduct" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Status": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumOrderStatusCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -30,6 +35,9 @@
             "ProvisionalCover": {
                 "@id": "s4i:ProvisionalCover",
                 "@type": "s4i:Order"
+            },
+            "Status": {
+                "@id": "schema:orderStatus"
             }
         }
     },
@@ -46,7 +54,17 @@
                 "http://schema4i.org/Order.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
-                "http://schema4i.org/Thing.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/EnumOrderStatusCode.jsonld",
+                {
+                    "Status": {
+                        "@id": "schema:orderStatus",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderStatusCode#"
+                        }
+                    }
+                }
             ],
             "@type": "InsuranceProduct",
             "Category": "RENTE",
@@ -59,6 +77,7 @@
                 "Identifier": "1047",
                 "Name": "IDEAL"
             },
+            "Status":  "1",
             "SubjectOf": {
                 "@type": "CreativeWork",
                 "Keywords": "Selbstständig, Freiberuflich, Kleingewerbe, Unternehmer, Versicherungskonto, Zinsen, Flexibel, Rücklagen, Universal, Life"
