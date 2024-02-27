@@ -1,0 +1,80 @@
+{
+    "type": "BuyAction",
+    "uri": "http://schema4i.org/BuyAction",
+    "description": "The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price.",
+    "links": [{
+        "url": "http://schema.org/BuyAction",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Thing#PotentialAction" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/TradeAction" }
+    ],
+    "multipletypes": {
+        "Seller": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BuyAction": "schema:BuyAction",
+            "Seller": {
+                "@id": "schema:seller"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Pay for a shipment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Message.jsonld",
+                "http://schema4i.org/Action.jsonld",
+                "http://schema4i.org/TradeAction.jsonld",
+                "http://schema4i.org/BuyAction.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/CompountPriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld",
+                {
+                    "Seller": {
+                        "@id": "schema:seller",
+                        "@type": "s4i:Organization"
+                    }
+                }
+            ],
+            "@type": "BuyAction",
+            "Object": {
+                "@id": "https://api.b-ox.de/messages/4711",
+                "@type": "Message"
+            },
+            "Price": 1.19,
+            "PriceCurrency": "EUR",
+            "PriceSpecification": {
+                "@type": "CompountPriceSpecification",
+                "PriceComponent": [{
+                    "@type": "UnitPriceSpecification",
+                    "Name": "Sum",
+                    "Price": 1.00
+                }, {
+                    "@type": "UnitPriceSpecification",
+                    "Name": "VAT",
+                    "Price": 0.19
+                }]
+            },
+            "Seller": {
+                "@type": "Organization",
+                "Identifier": "4711",
+                "Name": "Message Provider GmbH"
+            }
+        },
+        "context": {}
+    }]
+}
