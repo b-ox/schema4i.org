@@ -80,7 +80,7 @@
                         }
                     },
                     "InDefinedTermSet": {
-                        "@id": "http://schema.org/InDefinedTermSet",
+                        "@id": "http://schema.org/inDefinedTermSet",
                         "@type": "http://schema4i.org/DefinedTermSet"
                     }
                 }
