@@ -38,6 +38,14 @@
             },
             "Status": {
                 "@id": "schema:orderStatus"
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:DateTime"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:DateTime"
             }
         }
     },
@@ -101,7 +109,9 @@
             "ProvisionalCover": {
                 "@type": "Order",
                 "OrderStatus": "C"
-            }
+            },
+            "ValidFrom": "2021-01-01T00:00:00",
+            "ValidThrough": "2022-01-01T00:00:00"
         },
         "context": {}
     }, {
@@ -148,7 +158,9 @@
                     "PriceCurrency": "EUR",
                     "Identifier": "16111274282323409"
                 }]
-            }
+            },
+            "ValidFrom": "2021-01-01T00:00:00",
+            "ValidThrough": "2022-01-01T00:00:00"
         },
         "context": {}
     }]
