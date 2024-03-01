@@ -1,0 +1,33 @@
+{
+    "type": "EnumPaymentMethodCode_DE",
+    "uri": "http://schema4i.org/EnumPaymentMethodCode_DE",
+    "description": "Ein Code, der die Art beschreibt, wie eine finanzielle Transaktion durchgeführt wird",
+    "links": [{
+        "url": "http://schema4i.org/EnumPaymentMethodCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Order#PaymentMethod"}
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Lastschrift": "s4i:EnumPaymentMethodCode#1",
+            "Rechnung (Überweisung)": "s4i:EnumPaymentMethodCode#2",
+            "Dauerauftrag": "s4i:EnumPaymentMethodCode#3",
+            "Depot": "s4i:EnumPaymentMethodCode#4",
+            "Gehaltsabzug": "s4i:EnumPaymentMethodCode#5",
+            "Kreditkarte": "s4i:EnumPaymentMethodCode#6",
+            "Sammeleinzug/Sammelinkasso": "s4i:EnumPaymentMethodCode#7",
+            "Scheck": "s4i:EnumPaymentMethodCode#8",
+            "Sonstiges": "s4i:EnumPaymentMethodCode#9",
+            "Barzahlung": "s4i:EnumPaymentMethodCode#10",
+            "Elektronisches Bezahlverfahren": "s4i:EnumPaymentMethodCode#11"
+        }
+    }
+}

@@ -24,6 +24,10 @@
         "Payer": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
+        ],
+        "PaymentMethod": [
+            { "@id": "http://schema.org/PaymentMethod" },
+            { "@id": "http://schema4i.org/EnumPaymentMethodCode" }
         ]
     },
     "context": {
@@ -119,8 +123,7 @@
                 "@type": "s4i:Offer"
             },
             "PaymentMethod": {
-                "@id": "schema:paymentMethod",
-                "@type": "schema:PaymentMethod"
+                "@id": "schema:paymentMethod"
             },
             "Payer": {
                 "@id": "s4i:Payer"
@@ -153,7 +156,13 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Order.jsonld"
+                "http://schema4i.org/Order.jsonld",
+                {
+                    "PaymentMethod": {
+                        "@id": "http://schema.org/paymentMethod",
+                        "@type": "http://schema.org/PaymentMethod"
+                    }
+                }
             ],
             "@type": "Order",
             "BillingAddress": {},
