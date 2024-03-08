@@ -18,6 +18,7 @@
             "Feuer": "s4i:EnumDamageCauseCode#F",
             "Leitungswasser": "s4i:EnumDamageCauseCode#L",
             "Hagel": "s4i:EnumDamageCauseCode#H",
+            "Sturm": "s4i:EnumDamageCauseCode#S",
             "Einbruchdiebstahl": "s4i:EnumDamageCauseCode#E",
             "Glas": "s4i:EnumDamageCauseCode#G",
             "Ueberspannungsschaeden": "s4i:EnumDamageCauseCode#U",

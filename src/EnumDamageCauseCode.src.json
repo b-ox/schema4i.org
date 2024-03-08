@@ -18,6 +18,7 @@
             "Fire": "s4i:EnumDamageCauseCode#F",
             "Tap Water": "s4i:EnumDamageCauseCode#L",
             "Hail": "s4i:EnumDamageCauseCode#H",
+            "Storm": "s4i:EnumDamageCauseCode#S",
             "burglary": "s4i:EnumDamageCauseCode#E",
             "Glas": "s4i:EnumDamageCauseCode#G",
             "Overvoltage damage": "s4i:EnumDamageCauseCode#U",
