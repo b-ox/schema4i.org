@@ -17,7 +17,10 @@
         { "@id": "http://schema4i.org/Motorcycle" },
         { "@id": "http://schema4i.org/Trailer" },
         { "@id": "http://schema4i.org/TrikeOrQuad" },
-        { "@id": "http://schema4i.org/BusOrCoach" }
+        { "@id": "http://schema4i.org/BusOrCoach" },
+        { "@id": "http://schema4i.org/BusOrCoach" },
+        { "@id": "http://schema4i.org/Bicycle" }
+
     ],
     "base": [
         { "@id": "http://schema4i.org/Product" }

@@ -1,0 +1,33 @@
+{
+    "type": "Bicycle",
+    "uri": "http://schema4i.org/Bicycle",
+    "description": "A bicycle is a two-wheeled vehicle powered by pedals, used for transportation, recreation, and exercise.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Bicycle": "s4i:Bicycle"
+        }
+    },
+    "playground": [{
+        "title": "A minimal Bicycle",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Bicycle",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "Bicycle",
+            "VehicleIdentificationNumber": "GZ1002020",
+            "Identifier": "D0002283048BG24",
+            "Description": "Gazelle Classic R7T Wave 2022"
+        },
+        "context": {}
+    }]
+}
