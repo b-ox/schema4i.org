@@ -3,25 +3,22 @@
     "uri": "http://schema4i.org/Deductible",
     "description": "A sum of money deducted from a benefit. In insurance products this usually refers to an amount the insured person has to cover themselves in case of a claim.",
     "links": [],
-    "parents": [{
-        "@id": "http://schema4i.org/Coverage#Deductible"
-    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#Deductible" },
+        { "@id": "http://schema4i.org/InsuranceProduct#Deductible"}
+    ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],
-    "multipletypes": {
-        "Deductible": [
-            { "@id": "http://schema4i.org/QuantitativeValue" },
-            { "@id": "http://schema4i.org/MonetaryAmount" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Deductible": {
-                "@id": "s4i:Deductible"
+                "@id": "s4i:Deductible",
+                "@type": "s4i:StructuredValue"
             }
         }
     },
@@ -31,7 +28,13 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing",
-                "http://schema4i.org/MonetaryAmount"
+                "http://schema4i.org/MonetaryAmount",
+                {
+                    "Deductible": {
+                        "@id": "s4i:Deductible",
+                        "@type": "s4i:MonetaryAmount"
+                    }
+                }
             ],
             "Deductible": {
                 "@type": "MonetaryAmount",

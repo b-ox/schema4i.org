@@ -24,6 +24,10 @@
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
             "InsuranceProduct": "schema:InsuranceProduct",
+            "Deductible": {
+                "@id": "s4i:Deductible",
+                "@type": "s4i:StructuredValue"
+            },
             "Insured": {
                 "@id": "s4i:Insured",
                 "@type": "s4i:Thing"
@@ -57,10 +61,8 @@
                 "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/FinancialProduct.jsonld",
-                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Order.jsonld",
-                "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/EnumOrderStatusCode.jsonld",
@@ -90,14 +92,6 @@
                 "@type": "CreativeWork",
                 "Keywords": "Selbstständig, Freiberuflich, Kleingewerbe, Unternehmer, Versicherungskonto, Zinsen, Flexibel, Rücklagen, Universal, Life"
             },
-            "Offers": [{
-                "@type": "Coverage",
-                "Deductible": {
-                    "@type": "MonetaryAmount",
-                    "Value": 300,
-                    "Currency": "EUR"    
-                }
-            }],
             "License": {
                 "@type": "DigitalDocument",
                 "@id": "https://api.b-ox.de/produkte/1047/bedingungen",
@@ -125,16 +119,43 @@
                 "http://schema4i.org/CompoundPriceSpecification.jsonld",
                 "http://schema4i.org/UnitPriceSpecification.jsonld",
                 "http://schema4i.org/PriceSpecification.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
                 "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/Offer.jsonld",                
                 "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "InsuranceProduct",
             "Category": "RENTE",
             "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
+            "Deductible": [{
+                "@type": "MonetaryAmount",
+                "Value": 1000,
+                "Currency": "EUR"
+            },{
+                "@type": "QuantitativeValue",
+                "Value": 2,
+                "UnitCode": "P1"
+            }],
             "Identifier": "1047.IUL.Selbststaendige",
             "Package": "Klassik Exklusiv",
             "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
             "Name": "Rente für Selbstständige",
+            "Offers": [{
+                "@context": {
+                    "Deductible": {
+                        "@id": "s4i:Deductible",
+                        "@type": "s4i:MonetaryAmount"
+                    }
+                },
+                "@type": "Coverage",
+                "Deductible": {
+                    "@type": "MonetaryAmount",
+                    "Value": 300,
+                    "Currency": "EUR"    
+                }
+            }],            
             "Provider": {
                 "@type": "Organization",
                 "Identifier": "1047",
