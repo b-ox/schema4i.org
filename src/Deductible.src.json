@@ -3,9 +3,10 @@
     "uri": "http://schema4i.org/Deductible",
     "description": "A sum of money deducted from a benefit. In insurance products this usually refers to an amount the insured person has to cover themselves in case of a claim.",
     "links": [],
-    "parents": [{
-        "@id": "http://schema4i.org/Coverage#Deductible"
-    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#Deductible" },
+        { "@id": "http://schema4i.org/InsuranceProduct#Deductible"}
+    ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],

@@ -12,6 +12,10 @@
         { "@id": "http://schema4i.org/FinancialProduct" }
     ],
     "multipletypes": {
+        "Deductible": [
+            { "@id": "http://schema4i.org/QuantitativeValue" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
+        ],
         "Status": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumOrderStatusCode" }
@@ -24,6 +28,9 @@
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
             "InsuranceProduct": "schema:InsuranceProduct",
+            "Deductible": {
+                "@id": "s4i:Deductible"
+            },
             "Insured": {
                 "@id": "s4i:Insured",
                 "@type": "s4i:Thing"
@@ -72,11 +79,26 @@
                             "@vocab": "http://schema4i.org/EnumOrderStatusCode#"
                         }
                     }
+                },
+                {
+                    "Deductible": {
+                        "@id": "s4i:Deductible",
+                        "@type": "s4i:StructuredValue"
+                    }
                 }
             ],
             "@type": "InsuranceProduct",
             "Category": "RENTE",
             "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
+            "Deductible": [{
+                "@type": "MonetaryAmount",
+                "Value": 1000,
+                "Currency": "EUR"
+            },{
+                "@type": "QuantitativeValue",
+                "Value": 2,
+                "UnitCode": "P1"
+            }],
             "Identifier": "1047.IUL.Selbststaendige",
             "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
             "Name": "Rente für Selbstständige",
