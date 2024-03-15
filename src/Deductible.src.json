@@ -10,19 +10,15 @@
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],
-    "multipletypes": {
-        "Deductible": [
-            { "@id": "http://schema4i.org/QuantitativeValue" },
-            { "@id": "http://schema4i.org/MonetaryAmount" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Deductible": {
-                "@id": "s4i:Deductible"
+                "@id": "s4i:Deductible",
+                "@type": "s4i:StructuredValue"
             }
         }
     },
@@ -32,7 +28,13 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing",
-                "http://schema4i.org/MonetaryAmount"
+                "http://schema4i.org/MonetaryAmount",
+                {
+                    "Deductible": {
+                        "@id": "s4i:Deductible",
+                        "@type": "s4i:MonetaryAmount"
+                    }
+                }
             ],
             "Deductible": {
                 "@type": "MonetaryAmount",
