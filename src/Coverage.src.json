@@ -20,10 +20,6 @@
             { "@id": "http://schema4i.org/MonetaryAmount" },
             { "@id": "http://schema.org/Text" }
         ],
-        "Deductible": [
-            { "@id": "http://schema4i.org/QuantitativeValue" },
-            { "@id": "http://schema4i.org/MonetaryAmount" }
-        ],
         "Covers": [
             { "@id": "http://schema4i.org/Risk" },
             { "@id": "http://schema4i.org/Share" }
@@ -38,7 +34,8 @@
             "oo": "https://schema.openontology.org/",
             "Coverage": "s4i:Coverage",
             "Deductible": {
-                "@id": "s4i:Deductible"
+                "@id": "s4i:Deductible",
+                "@type": "s4i:StructuredValue"
             },
             "SumInsured": {
                 "@id": "s4i:SumInsured"
