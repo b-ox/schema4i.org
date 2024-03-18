@@ -1,0 +1,33 @@
+{
+    "type": "WaiverUnderinsurance",
+    "uri": "http://schema4i.org/WaiverUnderinsurance",
+    "description": "WaiverUnderinsurance is an agreement in insurance policies stating that the insurance company waives the right to reduce the compensation amount due to underinsurance in the event of a claim.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Coverage#WaiverUnderinsurance"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "WaiverUnderinsurance": {
+                "@id": "s4i:WaiverUnderinsurance",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample WaiverUnderinsurance",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "WaiverUnderinsurance": false
+        },
+        "context": {}
+    }]
+}

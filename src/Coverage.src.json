@@ -53,6 +53,10 @@
             "WaitingPeriod": {
                 "@id": "s4i:WaitingPeriod",
                 "@type": "schema:Duration"
+            },
+            "WaiverUnderinsurance": {
+                "@id": "s4i:WaiverUnderinsurance",
+                "@type": "schema:Boolean"
             }
         }
     },
@@ -132,7 +136,8 @@
                     }
                 }
             }],
-            "WaitingPeriod": "P14D"
+            "WaitingPeriod": "P14D",
+            "WaiverUnderinsurance": false
         },
         "context": {}
     }]
