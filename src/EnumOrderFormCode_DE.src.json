@@ -1,0 +1,29 @@
+{
+    "type": "EnumOrderFormCode_DE",
+    "uri": "http://schema4i.org/EnumOrderFormCode",
+    "description": "Ein Code, der die verschiedene Arten von Zusammenschlüssen für Versicherungszwecke beschreit.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOrderFormCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#OrderForm"}
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Firmengruppen": "s4i:EnumOrderFormCode#1",
+            "Vereinsgruppen": "s4i:EnumOrderFormCode#2",
+            "Verbandsgruppen": "s4i:EnumOrderFormCode#3",
+            "Sammelversicherung": "s4i:EnumOrderFormCode#4",
+            "Rahmenvertrag / Generalvertrag / Maklervertrag": "s4i:EnumOrderFormCode#5",
+            "Gruppenvertrag/-tarif, nicht näher spezifiziert": "s4i:EnumOrderFormCode#6",
+            "Sonstiges": "s4i:EnumOrderFormCode#9"
+        }
+    }
+}

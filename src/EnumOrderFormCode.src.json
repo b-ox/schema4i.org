@@ -1,0 +1,29 @@
+{
+    "type": "EnumOrderFormCode",
+    "uri": "http://schema4i.org/EnumOrderFormCode",
+    "description": "A code that represents the different classifications of entities that pool together for insurance coverage.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOrderFormCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#OrderForm"}
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Company groups": "s4i:EnumOrderFormCodee#1",
+            "Club groups": "s4i:EnumOrderFormCodee#2",
+            "Association groups": "s4i:EnumOrderFormCodee#3",
+            "Group insurance": "s4i:EnumOrderFormCodee#4",
+            "Framework contract / General contract / Broker contract": "s4i:EnumOrderFormCodee#5",
+            "Group contract / tariff, not further specified": "s4i:EnumOrderFormCodee#6",
+            "Other": "s4i:EnumOrderFormCodee#9"
+        }
+    }
+}
