@@ -39,6 +39,13 @@
                 "@id": "s4i:License",
                 "@type": "s4i:DigitalDocument"
             },
+            "OrderForm": {
+                "@id": "s4i:OrderForm",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderFormCode#"
+                }
+            },
             "ProvisionalCover": {
                 "@id": "s4i:ProvisionalCover",
                 "@type": "s4i:Order"
