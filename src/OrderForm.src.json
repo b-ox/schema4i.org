@@ -1,0 +1,38 @@
+{
+    "type": "OrderForm",
+    "uri": "http://schema4i.org/OrderForm",
+    "description": "OrderForm is used to describe the different classifications of entities that pool together for insurance coverage.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#OrderForm" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "OrderForm": {
+                "@id": "s4i:OrderForm",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderFormCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample OrderForm",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/OrderForm.jsonld"
+            ],
+            "OrderForm": "3"
+        },
+        "context": {}
+    }]
+}
