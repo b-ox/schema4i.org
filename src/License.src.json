@@ -1,9 +1,10 @@
 {
     "type": "License",
     "uri": "http://schema4i.org/License",
-    "description": "A document containing rules, specifications or requirements for the use of a service or platform, e.g. terms of use, data protection agreements, or privacy policies.",
+    "description": "A document containing rules, specifications or requirements for the use of a service or platform, e.g. terms of use, data protection agreements, or privacy policies. In the insurance industry a License is the terms and conditions of the policy.",
     "links": [],
     "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#License"},
         { "@id": "http://schema4i.org/UserAccount#License" }
     ],
     "base": [
