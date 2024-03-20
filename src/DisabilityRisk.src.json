@@ -1,0 +1,46 @@
+{
+    "type": "DisabilityRisk",
+    "uri": "http://schema4i.org/DisabilityRisk",
+    "description": "Describes a risk of becomming unable to perform a job due to illness or accident, thus losing the ability to earn income from professional activities.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Risk" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DisabilityRisk": "s4i:DisabilityRisk",
+            "DamageCause": {
+                "@id": "s4i:DamageCause",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDisabilityDamageCauseCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DisabilityRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/DisabilityRisk.jsonld",
+                "http://schema4i.org/EnumDisabilityDamageCauseCode.jsonld"
+            ],
+            "@type": "DisabilityRisk",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Müller"
+            },
+            "DamageCause": "BU"
+        },
+        "context": {}
+    }]
+}

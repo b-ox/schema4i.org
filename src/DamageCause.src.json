@@ -4,6 +4,7 @@
     "description": "Describes a damage cause, e.g. F for Fire",
     "links": [],
     "parents": [
+        { "@id": "http://schema4i.org/Loss#DamageCause" },
         { "@id": "http://schema4i.org/PropertyDamageRisk#DamageCause" }
     ],
     "base": [

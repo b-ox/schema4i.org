@@ -1,0 +1,42 @@
+{
+    "type": "DisabilityCoverage",
+    "uri": "http://schema4i.org/DisabilityCoverage",
+    "description": "Provides coverage for an individual's income if they become unable to work due to illness or injury.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DisabilityCoverage": "s4i:DisabilityCoverage"
+        }
+    },
+    "playground": [{
+        "title": "A maximum DisabilityCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/DisabilityCoverage.jsonld",
+                "http://schema4i.org/DisabilityRisk.jsonld"
+            ],
+            "@type": "DisabilityCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
+            },
+            "Covers": {
+                "@type": "DisabilityRisk"
+            }
+        },
+        "context": {}
+    }]
+}
