@@ -7,6 +7,7 @@
         { "@id": "http://schema4i.org/LiabilityCoverage" },
         { "@id": "http://schema4i.org/AccidentCoverage" },
         { "@id": "http://schema4i.org/ContentsInsuranceCoverage" },
+        { "@id": "http://schema4i.org/DisabilityCoverage" },
         { "@id": "http://schema4i.org/VehicleLiabilityCoverage" },
         { "@id": "http://schema4i.org/FullyComprehensiveCoverage" },
         { "@id": "http://schema4i.org/PartialComprehensiveCoverage" },
@@ -33,6 +34,10 @@
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
             "Coverage": "s4i:Coverage",
+            "DateModified": {
+                "@id": "schema:dateModified",
+                "@type": "schema:Date"
+            },
             "Deductible": {
                 "@id": "s4i:Deductible",
                 "@type": "s4i:StructuredValue"
@@ -95,6 +100,7 @@
                 }
             ],
             "@type": "Coverage",
+            "DateModified": "2020-08-24",
             "Deductible": [{
                 "@type": "MonetaryAmount",
                 "Value": 1000,
