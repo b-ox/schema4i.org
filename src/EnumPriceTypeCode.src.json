@@ -1,7 +1,7 @@
 {
     "type": "EnumPriceTypeCode",
     "uri": "http://schema4i.org/EnumPriceTypeCode",
-    "description": "Code for coding the contribution types according to BiPRO.",
+    "description": "Code for coding the contribution types bases on BiPRO.",
     "links": [{
         "url": "http://schema4i.org/EnumPriceTypeCode_DE",
         "description": "Original German documentation"
@@ -36,7 +36,10 @@
             "Claims/Benefit payment": "s4i:EnumPriceTypeCode#LOSS_EXPENSES",
             "Claims/Goodwill payment": "s4i:EnumPriceTypeCode#GOODWILL",
             "Claims/Recourse payment": "s4i:EnumPriceTypeCode#REGRESS",
-            "Claims/Salvage payment": "s4i:EnumPriceTypeCode#PROVENUE"
+            "Claims/Salvage payment": "s4i:EnumPriceTypeCode#PROVENUE",
+            "Discount": "s4i:EnumPriceTypeCode#DISCOUNT",
+            "Surcharge": "s4i:EnumPriceTypeCode#SURCHARGE"
+
         }
     }
 }

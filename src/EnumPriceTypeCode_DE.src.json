@@ -1,7 +1,7 @@
 {
     "type": "EnumPriceTypeCode_DE",
     "uri": "http://schema4i.org/EnumPriceTypeCode_DE",
-    "description": "Code für die Schlüsselung der Beitragsarten nach BiPRO.",
+    "description": "Code für die Schlüsselung der Beitragsarten angelehnt an BiPRO.",
     "links": [{
         "url": "http://schema4i.org/EnumPriceTypeCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
@@ -36,7 +36,9 @@
             "Schaden-/Leistungszahlung": "s4i:EnumPriceTypeCode#LOSS_EXPENSES",
             "Schaden-/Kulanzzahlung": "s4i:EnumPriceTypeCode#GOODWILL",
             "Schaden-/Regresszahlung": "s4i:EnumPriceTypeCode#REGRESS",
-            "Schaden-/Provenuezahlung": "s4i:EnumPriceTypeCode#PROVENUE"
+            "Schaden-/Provenuezahlung": "s4i:EnumPriceTypeCode#PROVENUE",
+            "Abschlag": "s4i:EnumPriceTypeCode#DISCOUNT",
+            "Zuschlag": "s4i:EnumPriceTypeCode#SURCHARGE"
         }
     }
 }
