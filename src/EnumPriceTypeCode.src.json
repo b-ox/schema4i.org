@@ -1,7 +1,7 @@
 {
     "type": "EnumPriceTypeCode",
     "uri": "http://schema4i.org/EnumPriceTypeCode",
-    "description": "Code for coding the contribution types bases on BiPRO.",
+    "description": "Code for coding the contribution types based on BiPRO.",
     "links": [{
         "url": "http://schema4i.org/EnumPriceTypeCode_DE",
         "description": "Original German documentation"
