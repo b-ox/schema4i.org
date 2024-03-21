@@ -6,9 +6,7 @@
         "url": "http://schema.org/EmployeeRole",
         "description": "Original Schema.org type"
     }],
-    "parents": [
-        { "@id": "http://schema4i.org/Person#HasOccupation" }
-    ],
+    "parents": [],
     "base": [
         { "@id": "http://schema4i.org/Role" }
     ],
@@ -36,6 +34,7 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Role.jsonld",
                 "http://schema4i.org/EmployeeRole.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
@@ -77,6 +76,7 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
+                "http://schema4i.org/Role.jsonld",
                 "http://schema4i.org/EmployeeRole.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",

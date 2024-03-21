@@ -59,7 +59,8 @@
                 "http://schema4i.org/Credentials",
                 "http://schema4i.org/Order",
                 "http://schema4i.org/CreativeWork",
-                "http://schema4i.org/DigitalDocument"
+                "http://schema4i.org/DigitalDocument",
+                "http://schema4i.org/Role.jsonld"
             ],
             "@type": "UserAccount",
             "@id": "https://api.b-ox.de/user/asdfghjk",
