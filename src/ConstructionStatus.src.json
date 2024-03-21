@@ -1,0 +1,33 @@
+{
+    "type": "ConstructionStatus",
+    "uri": "http://schema4i.org/ConstructionStatus",
+    "description": "The construction status of a building refers to its current stage of development.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BuildingLifeCycleEvent#ConstructionStatus" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ConstructionStatus": {
+                "@id": "s4i:ConstructionStatus",
+                "@type": "s4i:EnumConstructionStatusCode"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A simple ConstructionStatus",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ConstructionStatus": "Completed"
+        },
+        "context": {}
+    }]
+}
