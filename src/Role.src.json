@@ -14,10 +14,6 @@
         { "@id": "http://schema4i.org/Link" }
     ],
     "multipletypes": {
-        "Participant": [
-            { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Organization" }
-        ],
         "MemberOf": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/ProgramMembership" }
@@ -36,9 +32,6 @@
             "RoleCode": {
                 "@id": "s4i:RoleCode",
                 "@type": "schema:Text"
-            },
-            "Participant": {
-                "@id": "schema:participant"
             },
             "MemberOf": {
                 "@id": "schema:memberOf"
