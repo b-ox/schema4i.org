@@ -52,6 +52,13 @@
                 "@id": "s4i:AffectedBy",
                 "@type": "s4i:Thing"
             },
+            "ModificationCode": {
+                "@id": "s4i:OrderModificationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTransactionCode#"
+                }
+            },
             "WaitingPeriod": {
                 "@id": "s4i:WaitingPeriod",
                 "@type": "schema:Duration"
@@ -77,6 +84,8 @@
                 "http://schema4i.org/Question.jsonld",
                 "http://schema4i.org/Answer.jsonld",
                 "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/OrderModificationCode.jsonld",
+                "http://schema4i.org/EnumTransactionCode.jsonld",
                 {
                     "Covers": {
                         "@id": "s4i:Covers",
@@ -139,6 +148,7 @@
                     }
                 }
             }],
+            "ModificationCode": "140010000",
             "WaitingPeriod": "P14D",
             "WaiverUnderinsurance": false
         },

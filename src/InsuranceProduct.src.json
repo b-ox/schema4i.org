@@ -26,8 +26,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "InsuranceProduct": "schema:InsuranceProduct",
+            "DateModified": {
+                "@id": "schema:dateModified",
+                "@type": "schema:Date"
+            },
             "Deductible": {
                 "@id": "s4i:Deductible"
             },
@@ -38,6 +41,13 @@
             "License": {
                 "@id": "s4i:License",
                 "@type": "s4i:DigitalDocument"
+            },
+            "ModificationCode": {
+                "@id": "s4i:OrderModificationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTransactionCode#"
+                }
             },
             "OrderForm": {
                 "@id": "s4i:OrderForm",
@@ -96,29 +106,25 @@
             ],
             "@type": "InsuranceProduct",
             "Category": "RENTE",
-            "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
+            "Description": "IDEAL Privathaftpflicht",
             "Deductible": [{
                 "@type": "MonetaryAmount",
-                "Value": 1000,
+                "Value": 150,
                 "Currency": "EUR"
             },{
                 "@type": "QuantitativeValue",
                 "Value": 2,
                 "UnitCode": "P1"
             }],
-            "Identifier": "1047.IUL.Selbststaendige",
+            "Identifier": "1047.PHV",
             "Logo": "https://www.ideal-versicherung.de/templates/masterbootstrap/images/elements/IDEAL-Logo.svg",
-            "Name": "Rente für Selbstständige",
+            "Name": "Privathaftpflicht",
             "Provider": {
                 "@type": "Organization",
                 "Identifier": "1047",
                 "Name": "IDEAL"
             },
             "Status":  "1",
-            "SubjectOf": {
-                "@type": "CreativeWork",
-                "Keywords": "Selbstständig, Freiberuflich, Kleingewerbe, Unternehmer, Versicherungskonto, Zinsen, Flexibel, Rücklagen, Universal, Life"
-            },
             "Offers": [{
                 "@type": "Coverage",
                 "Deductible": {
