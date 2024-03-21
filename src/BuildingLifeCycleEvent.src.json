@@ -16,10 +16,10 @@
             "s4i": "http://schema4i.org/",
             "BuildingLifeCycleEvent": "s4i:BuildingLifeCycleEvent",
             "ConstructionStatus": {
-                "@id": "http://schema4i.org/ConstructionStatus",
+                "@id": "s4i:ConstructionStatus",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "http://schema4i.org/EnumConstructionStatusCode#"
+                    "@vocab": "s4i:EnumConstructionStatusCode#"
                 }
             }
         }
