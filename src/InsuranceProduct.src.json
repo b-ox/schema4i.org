@@ -28,6 +28,10 @@
             "schema": "http://schema.org/",
             "oo": "https://schema.openontology.org/",
             "InsuranceProduct": "schema:InsuranceProduct",
+            "DateModified": {
+                "@id": "schema:dateModified",
+                "@type": "schema:Date"
+            },
             "Deductible": {
                 "@id": "s4i:Deductible"
             },
@@ -38,6 +42,13 @@
             "License": {
                 "@id": "s4i:License",
                 "@type": "s4i:DigitalDocument"
+            },
+            "ModificationCode": {
+                "@id": "s4i:OrderModificationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTransactionCode#"
+                }
             },
             "OrderForm": {
                 "@id": "s4i:OrderForm",
