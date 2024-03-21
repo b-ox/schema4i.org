@@ -118,7 +118,8 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Organization.jsonld"
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld"
             ],
             "@type": "Organization",
             "AdditionalName": ["c/o X-PLOR GmbH", "4. Etage"],

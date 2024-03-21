@@ -41,7 +41,8 @@
                 "http://schema4i.org/Link",
                 "http://schema4i.org/Person",
                 "http://schema4i.org/Role",
-                "http://schema4i.org/ProgramMembership"
+                "http://schema4i.org/ProgramMembership",
+                "http://schema4i.org/Role.jsonld"
             ],
             "@type": "Person",
             "MemberOf": {

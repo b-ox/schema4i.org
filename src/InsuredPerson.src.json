@@ -26,7 +26,8 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Age.jsonld",
-                "http://schema4i.org/InsuredPerson.jsonld"
+                "http://schema4i.org/InsuredPerson.jsonld",
+                "http://schema4i.org/Role.jsonld"
             ],
             "@type": "InsuredPerson",
             "Age": 65
