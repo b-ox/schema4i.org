@@ -30,10 +30,6 @@
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/Thing" }
         ],
-        "HasOccupation": [
-            { "@id": "http://schema4i.org/Occupation" },
-            { "@id": "http://schema4i.org/EmployeeRole" }
-        ],
         "RelatedTo": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/PersonalRelationshipRole" }
@@ -90,7 +86,8 @@
                 "@type": "schema:Text"
             },
             "HasOccupation": {
-                "@id": "schema:hasOccupation"
+                "@id": "schema:hasOccupation",
+                "@type": "s4i:Occupation"
             },
             "HonorificPrefix": {
                 "@id": "schema:honorificPrefix",
