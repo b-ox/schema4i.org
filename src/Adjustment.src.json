@@ -13,6 +13,10 @@
         "Identifier": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumAdjustmentIdentifierCode" }
+        ],
+        "Value": [
+            { "@id": "http://schema4i.org/PropertyValue" },
+            { "@id": "http://schema4i.org/MoneytaryAmount" }
         ]
     },
     "context": {
@@ -22,8 +26,7 @@
             "schema": "http://schema.org/",
             "Adjustment": "s4i:Adjustment",
             "Value": {
-                "@id": "schema:value",
-                "@type": "s4i:PropertyValue"
+                "@id": "schema:value"
             },
             "Identifier": {
                 "@id": "schema:identifier"
@@ -49,14 +52,19 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Adjustment.jsonld",
                 "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/MoneytaryAmount.jsonld",
                 "http://schema4i.org/EnumAdjustmentIdentifierCode.jsonld",
                 {
                     "Identifier": {
                         "@id": "schema:identifier",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "http://schema4i.org//EnumAdjustmentIdentifierCode#"
+                            "@vocab": "http://schema4i.org/EnumAdjustmentIdentifierCode#"
                         }
+                    },
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema4i.org/PropertyValue"
                     }
                 }
             ],
