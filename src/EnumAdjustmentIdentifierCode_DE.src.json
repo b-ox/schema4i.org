@@ -1,0 +1,45 @@
+{
+    "type": "EnumAdjustmentIdentifierCode_DE",
+    "uri": "http://schema4i.org/EnumAdjustmentIdentifierCode_DE",
+    "description": "Ein Code der beschreibt, wie sich Versicherungsprämien, Leistungen oder andere Bedingungen im Laufe der Zeit ändern können.",
+    "links": [{
+        "url": "http://schema4i.org/EnumAdjustmentIdentifierCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Adjustment#Identifier" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "keine Dynamik": "s4i:EnumAdjustmentIdentifierCode#00",
+            "progressive Dynamik": "s4i:EnumAdjustmentIdentifierCode#01",
+            "lineare Dynamik": "s4i:EnumAdjustmentIdentifierCode#02",
+            "gemäß Anpassung der Beitragsbemessungsgrenze der gesetzlichen Rentenversicherung": "s4i:EnumAdjustmentIdentifierCode#03",
+            "gemäß Anpassung der Beitragsbemessungsgrenze der gesetzlichen Rentenversicherung, maximal jedoch bis zu einem Jahresbeitrag in Höhe von 4% der Beitragsbemessungsgrenze": "s4i:EnumAdjustmentIdentifierCode#04",
+            "gemäß Anpassung der Beitragsbemessungsgrenze der gesetzlichen Rentenversicherung, maximal jedoch bis zu einem Jahresbeitrag in Höhe von 4% der Beitragsbemessungsgrenze plus 1.800,00 € (Steuerfreigrenze bAV nach §3 Nr. 63 EStG, wenn keine pauschalbesteuerte betriebliche Altersvorsorge nach altem Steuerrecht (§40b EStG a.F.) vorliegt)": "s4i:EnumAdjustmentIdentifierCode#05",
+            "gemäß Verbraucherpreisindex in Deutschland": "s4i:EnumAdjustmentIdentifierCode#06",
+            "Hausrat-Summenanpassung gem. Preisindex VHB": "s4i:EnumAdjustmentIdentifierCode#07",
+            "feste Hausrat-Summenanpassung": "s4i:EnumAdjustmentIdentifierCode#08",
+            "Glaspreisanpassung": "s4i:EnumAdjustmentIdentifierCode#09",
+            "Beitragsangleichung": "s4i:EnumAdjustmentIdentifierCode#10",
+            "Absoluter Anpassungsbetrag": "s4i:EnumAdjustmentIdentifierCode#11",
+            "Prämienfaktor (Gebäudeversicherung)": "s4i:EnumAdjustmentIdentifierCode#12",
+            "Gleitender Neuwertfaktor (Gebäudeversicherung)": "s4i:EnumAdjustmentIdentifierCode#13",
+            "Anpassungsfaktor (Gebäudeversicherung)": "s4i:EnumAdjustmentIdentifierCode#14",
+            "Gehaltsanpassung, maximal jedoch bis zu einem Jahresbeitrag in Höhe von 4% der Beitragsbemessungsgrenze (Steuerfreigrenze bAV nach §3 Nr. 63 EStG)": "s4i:EnumAdjustmentIdentifierCode#15",
+            "Gehaltsanpassung, maximal jedoch bis zu einem Jahresbeitrag in Höhe von 4% der Beitragsbemessungsgrenze plus 1.800,00 € (Steuerfreigrenze bAV nach §3 Nr. 63 EStG, wenn keine pauschalbesteuerte betriebliche Altersvorsorge nach altem Steuerrecht (§40b EStG a.F.) vorliegt)": "s4i:EnumAdjustmentIdentifierCode#16",
+            "gemäß Gehaltsanpassung (ohne Begrenzung auf die Steuerfreigrenze nach §3 Nr. 63 EStG)": "s4i:EnumAdjustmentIdentifierCode#17",
+            "individuelle Anpassung": "s4i:EnumAdjustmentIdentifierCode#18",
+            "Progressive Dynamik, maximal jedoch bis zu einem Jahresbeitrag in Höhe von 4% der Beitragsbemessungsgrenze (Steuerfreigrenze bAV nach §3 Nr. 63 EStG).": "s4i:EnumAdjustmentIdentifierCode#19",
+            "Progressive Dynamik, maximal jedoch bis zu einem Jahresbeitrag in Höhe von 4% der Beitragsbemessungsgrenze plus 1.800,00 € (Steuerfreigrenze bAV nach §3 Nr. 63 EStG, wenn keine pauschalbesteuerte betriebliche Altersvorsorge nach altem Steuerrecht (§40b EStG a.F.) vorliegt).": "s4i:EnumAdjustmentIdentifierCode#20",
+            "Summenanpassung nach GDV Klausel 1701 (Geschäftsinhalt)": "s4i:EnumAdjustmentIdentifierCode#21",
+            "Beitragsanpassung nach Klausel. Eine Beitragsanpassungsklausel ist eine individuelle Beitragsanpassung, unabhängig von der Beitragsangleichung auf Basis der GDV-Zahlen.": "s4i:EnumAdjustmentIdentifierCode#22"
+        }
+    }
+}

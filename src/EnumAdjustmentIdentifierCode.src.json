@@ -1,0 +1,45 @@
+{
+    "type": "EnumAdjustmentIdentifierCode",
+    "uri": "http://schema4i.org/EnumAdjustmentIdentifierCode",
+    "description": "A code that describes how insurance premiums, benefits, or other conditions can change over time.",
+    "links": [{
+        "url": "http://schema4i.org/EnumAdjustmentIdentifierCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Adjustment#Identifier" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "no dynamics": "s4i:EnumAdjustmentIdentifierCode#00",
+            "progressive dynamics": "s4i:EnumAdjustmentIdentifierCode#01",
+            "linear dynamics": "s4i:EnumAdjustmentIdentifierCode#02",
+            "according to adjustment of the contribution assessment ceiling of the statutory pension insurance": "s4i:EnumAdjustmentIdentifierCode#03",
+            "according to adjustment of the contribution assessment ceiling of the statutory pension insurance, but up to an annual contribution amount of 4% of the contribution assessment ceiling": "s4i:EnumAdjustmentIdentifierCode#04",
+            "according to adjustment of the contribution assessment ceiling of the statutory pension insurance, but up to an annual contribution amount of 4% of the contribution assessment ceiling plus €1,800.00 (tax-free limit for company pension schemes according to §3 No. 63 EStG, if no lump-sum taxed occupational pension scheme exists according to old tax law (§40b EStG a.F.))": "s4i:EnumAdjustmentIdentifierCode#05",
+            "according to consumer price index in Germany": "s4i:EnumAdjustmentIdentifierCode#06",
+            "household contents-sum adjustment according to price index VHB": "s4i:EnumAdjustmentIdentifierCode#07",
+            "fixed household contents-sum adjustment": "s4i:EnumAdjustmentIdentifierCode#08",
+            "glass price adjustment": "s4i:EnumAdjustmentIdentifierCode#09",
+            "premium adjustment": "s4i:EnumAdjustmentIdentifierCode#10",
+            "absolute adjustment amount": "s4i:EnumAdjustmentIdentifierCode#11",
+            "premium factor (building insurance)": "s4i:EnumAdjustmentIdentifierCode#12",
+            "smoothed new value factor (building insurance)": "s4i:EnumAdjustmentIdentifierCode#13",
+            "adjustment factor (building insurance)": "s4i:EnumAdjustmentIdentifierCode#14",
+            "salary adjustment, but up to an annual contribution amount of 4% of the contribution assessment ceiling (tax-free limit for company pension schemes according to §3 No. 63 EStG)": "s4i:EnumAdjustmentIdentifierCode#15",
+            "salary adjustment, but up to an annual contribution amount of 4% of the contribution assessment ceiling plus €1,800.00 (tax-free limit for company pension schemes according to §3 No. 63 EStG, if no lump-sum taxed occupational pension scheme exists according to old tax law (§40b EStG a.F.))": "s4i:EnumAdjustmentIdentifierCode#16",
+            "according to salary adjustment (without limitation to the tax-free limit according to §3 No. 63 EStG)": "s4i:EnumAdjustmentIdentifierCode#17",
+            "individual adjustment": "s4i:EnumAdjustmentIdentifierCode#18",
+            "progressive dynamics, but up to an annual contribution amount of 4% of the contribution assessment ceiling (tax-free limit for company pension schemes according to §3 No. 63 EStG).": "s4i:EnumAdjustmentIdentifierCode#19",
+            "progressive dynamics, but up to an annual contribution amount of 4% of the contribution assessment ceiling plus €1,800.00 (tax-free limit for company pension schemes according to §3 No. 63 EStG, if no lump-sum taxed occupational pension scheme exists according to old tax law (§40b EStG a.F.)).": "s4i:EnumAdjustmentIdentifierCode#20",
+            "sum adjustment according to GDV Clause 1701 (business contents)": "s4i:EnumAdjustmentIdentifierCode#21",
+            "contribution adjustment according to clause. A contribution adjustment clause is an individual contribution adjustment, regardless of the premium adjustment based on GDV figures.": "s4i:EnumAdjustmentIdentifierCode#22"
+        }
+    }
+}
