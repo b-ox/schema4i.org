@@ -26,10 +26,10 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing",
-                "http://schema4i.org/ProfilePage",
-                "http://schema4i.org/Person",
-                "http://schema4i.org/PostalAddress"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ProfilePage.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
             ],
             "@type": "ProfilePage",
             "About": {
@@ -51,10 +51,10 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing",
-                "http://schema4i.org/ProfilePage",
-                "http://schema4i.org/Person",
-                "http://schema4i.org/PostalAddress"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ProfilePage.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
             ],
             "@type": "ProfilePage",
             "About": {
