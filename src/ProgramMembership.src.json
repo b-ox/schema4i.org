@@ -40,9 +40,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing",
-                "http://schema4i.org/ProgramMembership",
-                "http://schema4i.org/Organization"
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ProgramMembership.jsonld",
+                "http://schema4i.org/Organization.jsonld"
             ],
             "@type": "ProgramMembership",
             "Identifier": "CE",
