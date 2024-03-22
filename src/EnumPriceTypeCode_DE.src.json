@@ -16,7 +16,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "Netto-Beitrag (ohne Versicherungssteuer, inkl. Zuschläge, Rabatte)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET",
-            "Netto-Beitragsrsatz": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_RATE",
+            "Netto-Beitragssatz": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_RATE",
             "Jahres-Netto-Beitrag inklusive etwaigem Ratenzahlungszuschlag": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_NET_ANNUAL",
             "Versicherungssteuersatz": "s4i:EnumPriceTypeCode#INSURANCE_TAX_RATE",
             "Versicherungssteuer": "s4i:EnumPriceTypeCode#INSURANCE_TAX",
