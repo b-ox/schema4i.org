@@ -16,7 +16,7 @@
         ],
         "Value": [
             { "@id": "http://schema4i.org/PropertyValue" },
-            { "@id": "http://schema4i.org/MoneytaryAmount" }
+            { "@id": "http://schema4i.org/MonetaryAmount" }
         ]
     },
     "context": {
@@ -52,7 +52,6 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Adjustment.jsonld",
                 "http://schema4i.org/PropertyValue.jsonld",
-                "http://schema4i.org/MoneytaryAmount.jsonld",
                 "http://schema4i.org/EnumAdjustmentIdentifierCode.jsonld",
                 {
                     "Identifier": {
