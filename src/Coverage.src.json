@@ -42,6 +42,10 @@
                 "@id": "s4i:Deductible",
                 "@type": "s4i:StructuredValue"
             },
+            "FinancialAdjustment": {
+                "@id": "s4i:FinancialAdjustment",
+                "@type": "s4i:Adjustment"
+            },
             "SumInsured": {
                 "@id": "s4i:SumInsured"
             },
@@ -86,6 +90,10 @@
                 "http://schema4i.org/PropertyValue.jsonld",
                 "http://schema4i.org/OrderModificationCode.jsonld",
                 "http://schema4i.org/EnumTransactionCode.jsonld",
+                "http://schema4i.org/Adjustment.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/CompoundPriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld",
                 {
                     "Covers": {
                         "@id": "s4i:Covers",
@@ -119,6 +127,19 @@
                 "Value": 2,
                 "UnitCode": "P1"
             }],
+            "FinancialAdjustment": {
+                "@type": "Adjustment",
+                "Value": {
+                    "@type": "PropertyValue",
+                    "UnitCode": "P1",
+                    "Value": 2
+                },
+                "Affects": {
+                    "@type": "CompoundPriceSpecification",
+                    "@id": "#Beitrag"
+                },
+                "Period": "1"
+            },
             "Covers": [{
                 "@type": "Share",
                 "Covers": {
