@@ -46,6 +46,10 @@
                 "@id": "s4i:FinancialAdjustment",
                 "@type": "s4i:Adjustment"
             },
+            "HasBeneficialOwnership": {
+                "@id": "s4i:BeneficialOwnership",
+                "@type": "s4i:BeneficialOwnership"
+            },
             "SumInsured": {
                 "@id": "s4i:SumInsured"
             },
