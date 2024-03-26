@@ -1,0 +1,35 @@
+{
+    "type": "EnumBeneficialOwnershipTypeCode_DE",
+    "uri": "http://schema4i.org/EnumBeneficialOwnershipTypeCode_DE",
+    "description": "Ein Code der beschreibt, wer die Leistungen der Versicherung erhählt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumBeneficialOwnershipTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#HasBeneficialOwnership" },
+        { "@id": "http://schema4i.org/Coverage#HasBeneficialOwnership" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Versicherungsnehmer": "s4i:EnumBeneficialOwnershipTypeCode#1",
+            "Versicherte Person": "s4i:EnumBeneficialOwnershipTypeCode#2",
+            "Ehepartner zum Zeitpunkt des Leistungsfalls": "s4i:EnumBeneficialOwnershipTypeCode#3",
+            "Mitversicherte Person": "s4i:EnumBeneficialOwnershipTypeCode#4",
+            "Gesetzliche Erbfolge": "s4i:EnumBeneficialOwnershipTypeCode#5",
+            "Reihenfolge: Ehegatte, Kinder, Eltern, Erben": "s4i:EnumBeneficialOwnershipTypeCode#6",
+            "Leistungsberechtigte im Sinne des § 10 Abs.1, Nr. 2b EStG (Rürup-Rente)": "s4i:EnumBeneficialOwnershipTypeCode#7",
+            "individuell": "s4i:EnumBeneficialOwnershipTypeCode#9",
+            "Lebensgefährte": "s4i:EnumBeneficialOwnershipTypeCode#10",
+            "Kinder": "s4i:EnumBeneficialOwnershipTypeCode#11",
+            "§32 EStG (enger Hinterbliebenenbegriff gemäß BMF-Schreiben 31.03.10)": "s4i:EnumBeneficialOwnershipTypeCode#12",
+            "Begünstigter Personenkreis gemäß § 3.63 EStG": "s4i:EnumBeneficialOwnershipTypeCode#13"
+        }
+    }
+}

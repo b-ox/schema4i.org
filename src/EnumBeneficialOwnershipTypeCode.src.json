@@ -1,0 +1,35 @@
+{
+    "type": "EnumBeneficialOwnershipTypeCode",
+    "uri": "http://schema4i.org/EnumBeneficialOwnershipTypeCode",
+    "description": "A code that describes who receives the benefits of the insurance.",
+    "links": [{
+        "url": "http://schema4i.org/EnumBeneficialOwnershipTypeCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#HasBeneficialOwnership" },
+        { "@id": "http://schema4i.org/Coverage#HasBeneficialOwnership" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Policyholder": "s4i:EnumBeneficialOwnershipTypeCode#1",
+            "Insured Person": "s4i:EnumBeneficialOwnershipTypeCode#2",
+            "Spouse at the time of the event": "s4i:EnumBeneficialOwnershipTypeCode#3",
+            "Co-insured Person": "s4i:EnumBeneficialOwnershipTypeCode#4",
+            "Statutory succession": "s4i:EnumBeneficialOwnershipTypeCode#5",
+            "Order: Spouse, Children, Parents, Heirs": "s4i:EnumBeneficialOwnershipTypeCode#6",
+            "Eligible beneficiaries within the meaning of § 10 (1), No. 2b EStG (Rürup pension)": "s4i:EnumBeneficialOwnershipTypeCode#7",
+            "Individual": "s4i:EnumBeneficialOwnershipTypeCode#9",
+            "Life partner": "s4i:EnumBeneficialOwnershipTypeCode#10",
+            "Children": "s4i:EnumBeneficialOwnershipTypeCode#11",
+            "§32 EStG (narrow definition of survivors according to BMF letter dated 31.03.10)": "s4i:EnumBeneficialOwnershipTypeCode#12",
+            "Beneficiaries according to § 3.63 EStG": "s4i:EnumBeneficialOwnershipTypeCode#13"
+        }
+    }
+}
