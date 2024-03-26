@@ -34,6 +34,10 @@
             "Deductible": {
                 "@id": "s4i:Deductible"
             },
+            "HasBeneficialOwnership": {
+                "@id": "s4i:BeneficialOwnership",
+                "@type": "s4i:BeneficialOwnership"
+            },
             "Insured": {
                 "@id": "s4i:Insured",
                 "@type": "s4i:Thing"
