@@ -15,8 +15,8 @@
             "schema": "http://schema.org/",
             "HumanLifeCycleEvent": "s4i:HumanLifeCycleEvent",
             "Code": {
-                "@id": "schema:MedicalCode",
-                "@type": "schema:MedicalCode"
+                "@id": "s4i:MedicalCode",
+                "@type": "s4i:MedicalCode"
             }
         }
     },
