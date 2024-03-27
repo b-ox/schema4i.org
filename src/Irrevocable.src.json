@@ -1,0 +1,30 @@
+{
+    "type": "Irrevocable",
+    "uri": "http://schema4i.org/Irrevocable",
+    "description": "Describes wether something can be revoked.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Irrevocable": "s4i:Irrevocable"
+        }
+    },
+    "playground": [{
+        "title": "A realistic Irrevocable",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Irrevocable.jsonld"
+            ],
+            "Irrevocable":false
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "BeneficialOwner",
+    "uri": "http://schema4i.org/BeneficialOwner",
+    "description": "A BeneficialOwner is the entitled parties who have the right to receive benefits from a contract.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BeneficialOwner": "s4i:BeneficialOwner"
+        }
+    },
+    "playground": [{
+        "title": "A realistic BeneficialOwner",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Age.jsonld",
+                "http://schema4i.org/BeneficialOwner.jsonld",
+                "http://schema4i.org/Role.jsonld"
+            ],
+            "BeneficialOwner": {
+                "@type": "Person",
+                "BirthDate": "1973-11-16",
+                "Name": "Heussen",
+                "GivenName": "Markus"
+            }
+        },
+        "context": {}
+    }]
+}

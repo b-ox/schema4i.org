@@ -1,0 +1,92 @@
+{
+    "type": "BeneficialOwnership",
+    "uri": "http://schema4i.org/BeneficialOwnership",
+    "description": "BeneficialOwnership refers to the entitled party or parties who have the right to receive benefits like death benefits or policy proceeds.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceProduct#HasBeneficialOwnership" },
+        { "@id": "http://schema4i.org/Coverage#HasBeneficialOwnership" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "BeneficialOwner": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BeneficialOwnership": "s4i:BeneficialOwnership",
+            "Type": {
+                "@id": "s4i:DamageCause",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumBeneficialOwnershipTypeCode#"
+                }
+            },
+            "BeneficialOwner": {
+                "@id": "s4i:BeneficialOwner"
+            },
+            "Irrevocable": {
+                "@id": "s4i:Irrevocable",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic BeneficialOwnership containing a Person as BeneficialOwner",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/BeneficialOwnership.jsonld",
+                "http://schema4i.org/EnumBeneficialOwnershipTypeCode.jsonld"
+            ],
+            "@type": "BeneficialOwnership",
+            "Type": "9",
+            "BeneficialOwner": {
+                "@type": "Person",
+                "BirthDate": "1973-11-16",
+                "Name": "Heussen",
+                "GivenName": "Markus"
+            },
+            "Irrevocable": false
+        },
+        "context": {}
+    }, {
+        "title": "A realistic BeneficialOwnership containing a individual BeneficialOwnership",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/BeneficialOwnership.jsonld",
+                "http://schema4i.org/EnumBeneficialOwnershipTypeCode.jsonld"
+            ],
+            "@type": "BeneficialOwnership",
+            "Type": "9",
+            "Name": "Sofern im Antrag ein namentliches Bezugsrecht verfügt wurde, haben wir uns dies entsprechend vermerkt.",
+            "Irrevocable": true
+        },
+        "context": {}
+    },{
+        "title": "A realistic BeneficialOwnership containing the policyholder as BeneficialOwner",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/BeneficialOwnership.jsonld",
+                "http://schema4i.org/EnumBeneficialOwnershipTypeCode.jsonld"
+            ],
+            "@type": "BeneficialOwnership",
+            "Type": "1",
+            "Irrevocable": false
+        },
+        "context": {}
+    }]
+}
