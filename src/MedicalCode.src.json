@@ -1,0 +1,55 @@
+{
+    "type": "MedicalCode",
+    "uri": "http://schema4i.org/MedicalCode",
+    "description": "A medical code for describe the medical condition, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc. ",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/HumanLifeCycleEvent#Code" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CodeValue": {
+                "@id": "schema:codeValue",
+                "@type": "schema:Text"
+            },
+            "CodingSystem": {
+                "@id": "schema:codingSystem",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Birth as MedicalCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/MedicalCode.jsonld"
+            ],
+            "type": "MedicalCode",
+            "Code": "11636-8",
+            "CodingSystem": "LOINC"
+            
+        },
+        "context": {}
+    },
+    {
+        "title": "Death as MedicalCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/MedicalCode.jsonld"
+            ],
+            "type": "MedicalCode",
+            "Code": "R99",
+            "CodingSystem": "ICD-10"            
+        },
+        "context": {}
+    }]
+}
