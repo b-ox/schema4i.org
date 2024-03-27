@@ -32,6 +32,7 @@
             "Deferral of premium": "s4i:EnumOrderStatusCode#8",
             "miscellaneous": "s4i:EnumOrderStatusCode#9",
             "In performance": "s4i:EnumOrderStatusCode#A",
+            "In payment": "s4i:EnumOrderStatusCode#A1",
             "On call": "s4i:EnumOrderStatusCode#B",
             "Provisional coverage": "s4i:EnumOrderStatusCode#C"
         }
