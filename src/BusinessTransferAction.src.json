@@ -7,7 +7,12 @@
     "base": [
         { "@id": "http://schema4i.org/Action" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Category": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -15,8 +20,7 @@
             "schema": "http://schema.org/",
             "BusinessTransferAction": "s4i:BusinessTransferAction",
             "Category": {
-                "@id": "schema:category",
-                "@type": "schema:Text"
+                "@id": "schema:category"
             },
             "Claim": {
                 "@id": "schema:Claim",
@@ -79,14 +83,21 @@
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/BusinessTransactionDelivery.jsonld",
-                "http://schema4i.org/ParcelDelivery.jsonld"
+                "http://schema4i.org/ParcelDelivery.jsonld",
+                {
+                    "@id": "schema:category",
+                    "@type": "@vocab",
+                    "@context": {
+                        "@vocab": "s4i:EnumLineOfBusinessCode"
+                    }
+                }
             ],
             "@type": "BusinessTransferAction",
             "Identifier": "4711",
             "IdentifierReference": "VNR-4712",
             "TransactionCode": "100007000",
             "TransactionTrigger": "001",
-            "Category": "Antrag/Neugeschäft",
+            "Category": "030",
             "Name": "Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",
             "Description": "Policierung / Dokument erstellt",
             "Delivery": {
