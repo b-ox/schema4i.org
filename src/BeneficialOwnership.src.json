@@ -56,6 +56,15 @@
                 "Name": "Heussen",
                 "GivenName": "Markus"
             },
+            "AffectedBy": [{
+                "@type": "HumanLifeCycleEvent",
+                "Name": "Tod",
+                "Code": {
+                    "type": "MedicalCode",
+                    "CodeValue": "R99",
+                    "CodingSystem": "ICD-10"
+                }
+            }],
             "Irrevocable": false
         },
         "context": {}
@@ -71,7 +80,11 @@
             "@type": "BeneficialOwnership",
             "Type": "9",
             "Name": "Sofern im Antrag ein namentliches Bezugsrecht verfügt wurde, haben wir uns dies entsprechend vermerkt.",
-            "Irrevocable": true
+            "Irrevocable": true,
+            "AffectedBy": [{
+                "@type": "ContractLifeCycleEvent",
+                "Code": "A1"
+            }]
         },
         "context": {}
     },{
