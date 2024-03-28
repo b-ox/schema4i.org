@@ -1,0 +1,42 @@
+{
+    "type": "ContractLifeCycleEvent",
+    "uri": "http://schema4i.org/ContractLifeCycleEvent",
+    "description": "ContractLifeCycleEvent refers to the stages from creation to termination of contracts, ",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/LifeCycleEvent" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ContractLifeCycleEvent": "s4i:ContractLifeCycleEvent",
+            "Code": {
+                "@id": "schema:orderStatus",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderStatusCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A Sample ContractLifeCycleEvent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ContractLifeCycleEvent.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Thing.jsonld"                
+            ],
+            "@type": "ContractLifeCycleEvent",
+            "Code": "1",
+            "StartDate": "2024-03-13T12:00:00"
+        },
+        "context": {}
+    }]
+}

@@ -7,6 +7,12 @@
         "@id": "http://schema4i.org/Building#LifeCycle"
     }, {
         "@id": "http://schema4i.org/BuildingLifeCycleEvent"
+    },
+    {
+        "@id": "http://schema4i.org/ContractLifeCycleEvent"
+    },
+    {
+        "@id": "http://schema4i.org/HumanLifeCycleEvent"
     }],
     "base": [
         { "@id": "http://schema4i.org/Event" }
