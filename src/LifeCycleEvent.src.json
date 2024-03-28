@@ -26,7 +26,7 @@
         }
     },
     "playground": [{
-        "title": "Sample Event",
+        "title": "Sample LifeCycleEvent",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -35,17 +35,8 @@
                 "http://schema4i.org/Thing.jsonld"                
             ],
             "@type": "Event",
-            "Name": "Live Aid",
             "StartDate": "1985-07-13T12:00:00",
-            "EndDate": "1985-07-13T22:00:00",
-            "Location": [{
-                "@type": "Place",
-                "Name": "Wembley Stadium"
-            }, {
-                "@type": "Place",
-                "Name": "John F. Kennedy Stadium"
-            }],
-            "Duration": "T10H"
+            "EndDate": "1985-07-13T22:00:00"
         },
         "context": {}
     }]
