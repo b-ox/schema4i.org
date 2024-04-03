@@ -16,6 +16,10 @@
             { "@id": "http://schema4i.org/QuantitativeValue" },
             { "@id": "http://schema4i.org/MonetaryAmount" }
         ],
+        "ModificationCode": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumTransactionCode" }
+        ],
         "Status": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumOrderStatusCode" }
@@ -47,11 +51,7 @@
                 "@type": "s4i:DigitalDocument"
             },
             "ModificationCode": {
-                "@id": "s4i:OrderModificationCode",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumTransactionCode#"
-                }
+                "@id": "s4i:OrderModificationCode"
             },
             "OrderForm": {
                 "@id": "s4i:OrderForm",
@@ -92,6 +92,7 @@
                 "http://schema4i.org/CreativeWork.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/EnumOrderStatusCode.jsonld",
+                "http://schema4i.org/EnumOrderFormCode.jsonld",
                 {
                     "Status": {
                         "@id": "schema:orderStatus",
@@ -106,6 +107,24 @@
                         "@id": "s4i:Deductible",
                         "@type": "s4i:StructuredValue"
                     }
+                },
+                {
+                    "ModificationCode": {
+                        "@id": "s4i:OrderModificationCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumTransactionCode#"
+                        }
+                    }
+                },
+                {
+                    "Category": {
+                        "@id": "http://schema.org/category",
+                        "@type": "@vocab",
+                        "@context": {
+                          "@vocab": "http://schema4i.org/EnumInsuranceProductCategoryCode#"
+                        }
+                      }
                 }
             ],
             "@type": "InsuranceProduct",
@@ -145,13 +164,8 @@
                 "Description": "Vertragsbedingungen",
                 "EncodingFormat": "application/pdf"
             },
-            "OrderForm": {
-                "@id": "s4i:OrderForm",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumOrderFormCode#"
-                }
-            },
+            "ModificationCode": "100001011",
+            "OrderForm": "2",
             "ProvisionalCover": {
                 "@type": "Order",
                 "OrderStatus": "C"
@@ -173,10 +187,19 @@
                 "http://schema4i.org/PriceSpecification.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/EnumOrderFormCode.jsonld"
+                "http://schema4i.org/EnumOrderFormCode.jsonld",
+                {
+                    "Category": {
+                        "@id": "http://schema.org/category",
+                        "@type": "@vocab",
+                        "@context": {
+                          "@vocab": "http://schema4i.org/EnumLineOfBusinessCode#"
+                        }
+                      }
+                }
             ],
             "@type": "InsuranceProduct",
-            "Category": "RENTE",
+            "Category": "010",
             "Description": "IDEAL UniversalLife - Hohe Sicherheit bei 3,3% Verzinsung",
             "Identifier": "1047.IUL.Selbststaendige",
             "Package": "Klassik Exklusiv",
