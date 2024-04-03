@@ -7,7 +7,7 @@
         "description": "German translation"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/Accommodation#RoofFeature" }
+        { "@id": "http://schema4i.org/Building#RoofFeature" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
