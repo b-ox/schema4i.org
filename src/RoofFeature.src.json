@@ -1,0 +1,43 @@
+{
+    "type": "RoofFeature",
+    "uri": "http://schema4i.org/RoofFeature",
+    "description": "A RoofFeature descibes the structure, desing and material of a roof.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Building#RoofFeature"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/"
+        }
+    },
+    "playground": [{
+        "title": "A maximum RoofFeature",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RoofFeature",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                {
+                    "RoofFeature": {
+                        "@id": "http://schema4i.org/RoofFeature",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumRoofFeatureCode#"
+                        }
+                    }
+                }
+            ],
+            
+            "RoofFeature": "SpanishTile"
+        },
+        "context": {}
+    }]
+}
