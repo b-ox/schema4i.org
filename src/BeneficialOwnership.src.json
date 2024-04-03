@@ -29,6 +29,10 @@
                     "@vocab": "s4i:EnumBeneficialOwnershipTypeCode#"
                 }
             },
+            "AffectedBy": {
+                "@id": "s4i:AffectedBy",
+                "@type": "s4i:Thing"
+            },
             "BeneficialOwner": {
                 "@id": "s4i:BeneficialOwner"
             },

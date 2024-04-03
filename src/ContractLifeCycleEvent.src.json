@@ -1,9 +1,11 @@
 {
     "type": "ContractLifeCycleEvent",
     "uri": "http://schema4i.org/ContractLifeCycleEvent",
-    "description": "ContractLifeCycleEvent refers to the stages from creation to termination of contracts, ",
+    "description": "ContractLifeCycleEvent refers to the stages from creation to termination of contracts.",
     "links": [],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BeneficialOwnership#AffectedBy" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/LifeCycleEvent" }
     ],
