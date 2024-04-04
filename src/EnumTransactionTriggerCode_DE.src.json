@@ -17,16 +17,16 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Versicherungsunternehmen": "s4i:EnumTransactionTriggerCode_DE#001",
-            "Versicherungsnehmer": "s4i:EnumTransactionTriggerCode_DE#002",
-            "Versicherte Person": "s4i:EnumTransactionTriggerCode_DE#003",
-            "Vermittler": "s4i:EnumTransactionTriggerCode_DE#004",
-            "Beitragszahler": "s4i:EnumTransactionTriggerCode_DE#005",
-            "Gläubiger": "s4i:EnumTransactionTriggerCode_DE#006",
-            "Wirtschaftlich Berechtigter": "s4i:EnumTransactionTriggerCode_DE#007",
-            "Postempfänger": "s4i:EnumTransactionTriggerCode_DE#008",
-            "Bezugsberechtigter": "s4i:EnumTransactionTriggerCode_DE#009",
-            "Leistungsempfänger": "s4i:EnumTransactionTriggerCode_DE#010"
+            "Versicherungsunternehmen": "s4i:EnumTransactionTriggerCode#001",
+            "Versicherungsnehmer": "s4i:EnumTransactionTriggerCode#002",
+            "Versicherte Person": "s4i:EnumTransactionTriggerCode#003",
+            "Vermittler": "s4i:EnumTransactionTriggerCode#004",
+            "Beitragszahler": "s4i:EnumTransactionTriggerCode#005",
+            "Gläubiger": "s4i:EnumTransactionTriggerCode#006",
+            "Wirtschaftlich Berechtigter": "s4i:EnumTransactionTriggerCode#007",
+            "Postempfänger": "s4i:EnumTransactionTriggerCode#008",
+            "Bezugsberechtigter": "s4i:EnumTransactionTriggerCode#009",
+            "Leistungsempfänger": "s4i:EnumTransactionTriggerCode#010"
         }
     }
 }
