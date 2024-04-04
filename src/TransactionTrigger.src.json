@@ -1,0 +1,36 @@
+{
+    "type": "TransactionTrigger",
+    "uri": "http://schema4i.org/TransactionTrigger",
+    "description": "The TransactionTrigger describes which party triggered a (business) transaction.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BusinessTransferAction#TransactionTrigger" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "TransactionTrigger": {
+                "@id": "s4i:TransactionTrigger",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTransactionTriggerCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample TransactionTrigger",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "TransactionTrigger": "001"
+        },
+        "context": {}
+    }]
+}

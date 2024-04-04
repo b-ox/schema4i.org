@@ -17,16 +17,16 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Insurance company": "s4i:EnumTransactionTriggerCode_DE#001",
-            "Policyholder": "s4i:EnumTransactionTriggerCode_DE#002",
-            "Insured person": "s4i:EnumTransactionTriggerCode_DE#003",
-            "Broker": "s4i:EnumTransactionTriggerCode_DE#004",
-            "Premium payer": "s4i:EnumTransactionTriggerCode_DE#005",
-            "Creditor": "s4i:EnumTransactionTriggerCode_DE#006",
-            "Beneficial owner": "s4i:EnumTransactionTriggerCode_DE#007",
-            "Mail recipient": "s4i:EnumTransactionTriggerCode_DE#008",
-            "Beneficiary": "s4i:EnumTransactionTriggerCode_DE#009",
-            "Benefit recipient": "s4i:EnumTransactionTriggerCode_DE#010"
+            "Insurance company": "s4i:EnumTransactionTriggerCode#001",
+            "Policyholder": "s4i:EnumTransactionTriggerCode#002",
+            "Insured person": "s4i:EnumTransactionTriggerCode#003",
+            "Broker": "s4i:EnumTransactionTriggerCode#004",
+            "Premium payer": "s4i:EnumTransactionTriggerCode#005",
+            "Creditor": "s4i:EnumTransactionTriggerCode#006",
+            "Beneficial owner": "s4i:EnumTransactionTriggerCode#007",
+            "Mail recipient": "s4i:EnumTransactionTriggerCode#008",
+            "Beneficiary": "s4i:EnumTransactionTriggerCode#009",
+            "Benefit recipient": "s4i:EnumTransactionTriggerCode#010"
         }
     }
 }
