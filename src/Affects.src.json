@@ -5,8 +5,7 @@
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Risk#Affects" },
-        { "@id": "http://schema4i.org/Damage#Affects" },
-        { "@id": "http://schema4i.org/InsuranceClaim#Affects" }
+        { "@id": "http://schema4i.org/Damage#Affects" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
