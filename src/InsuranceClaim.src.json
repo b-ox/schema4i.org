@@ -21,10 +21,6 @@
                 "@id": "schema:category",
                 "@type": "schema:Text"
             },
-            "Affects": {
-                "@id": "s4i:Affects",
-                "@type": "s4i:Thing"
-            },
             "CausedBy": {
                 "@id": "s4i:CausedBy",
                 "@type": "s4i:LossEvent"
@@ -44,11 +40,6 @@
                 "http://schema4i.org/PersonalInjuryDamage.jsonld"
             ],
             "@type": "InsuranceClaim",
-            "Affects": {
-                "@type": "Person",
-                "@id": "#VersichertePerson",
-                "Name": "Muster"
-            },
             "CausedBy": {
                 "@type": "LossEvent",
                 "Description": "Unfall",
