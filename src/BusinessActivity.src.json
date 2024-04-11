@@ -21,6 +21,10 @@
             "BusinessActivity": "s4i:BusinessActivity",
             "Category": {
                 "@id": "schema:category"
+            },
+            "YearlyRevenue": {
+                "@id": "schema:yearlyRevenue",
+                "@type": "s4i:QuantitativeValue"
             }
         }
     },
@@ -57,7 +61,13 @@
                         "Name": "Münchener Verein"
                     }
                 },
-                "TermCode": "4711"
+                "TermCode": "4711",
+                "YearlyRevenue": {
+                    "@type": "QuantitativeValue",
+                    "Value": 100000,
+                    "UnitCode": "M4",
+                    "UnitText": "EUR"
+                }
             }
         },
         "context": {}
