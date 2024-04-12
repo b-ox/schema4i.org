@@ -41,6 +41,14 @@
                 "@context": {
                     "@vocab": "s4i:EnumIntervalCode#"
                 }
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:DateTime"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:DateTime"
             }
         }
     },
@@ -79,7 +87,9 @@
                     "@type": "Thing",
                     "@id": "#AffectedThing"
                 },
-                "Period": "1"
+                "Period": "1",
+                "ValidFrom": "2021-01-01T00:00:00",
+                "ValidThrough": "2022-01-01T00:00:00"
             }
         },
         "context": {}
