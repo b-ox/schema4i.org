@@ -40,7 +40,7 @@
             },
             "LifeCycle": {
                 "@id": "s4i:LifeCycle",
-                "@type": "s4i:Event"
+                "@type": "s4i:BuildingLifeCycleEvent"
             },
             "RoofFeature": {
                 "@id": "s4i:RoofFeature",
