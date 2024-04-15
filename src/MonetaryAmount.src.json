@@ -42,6 +42,14 @@
                 "@context": {
                     "@vocab": "s4i:EnumIntervalCode#"
                 }
+            },
+            "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:DateTime"
+            },
+            "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:DateTime"
             }
         }
     },
@@ -56,7 +64,9 @@
             "@type": "MonetaryAmount",
             "Currency": "EUR",
             "Value": 3332.00,
-            "PaymentInterval": "8"
+            "PaymentInterval": "8",
+            "ValidFrom": "2021-01-01T00:00:00",
+            "ValidThrough": "2022-01-01T00:00:00"
         },
         "context": {}
     }]
