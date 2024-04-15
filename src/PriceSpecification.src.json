@@ -20,6 +20,14 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "PriceSpecification": "schema:PriceSpecification",
+            "EligibleQuantity": {
+                "@id": "schema:eligibleQuantity",
+                "@type": "s4i:QuantitativeValue"
+            },
+            "EligibleTransactionVolume": {
+                "@id": "schema:eligibleTransactionVolume",
+                "@type": "s4i:PriceSpecification"
+            },
             "Price": {
                 "@id": "schema:price",
                 "@type": "schema:Number"
@@ -52,6 +60,14 @@
             ],
             "@type": "PriceSpecification",
             "Price": 4200.00,
+            "EligibleTransactionVolume": {
+                "@type": "PriceSpecification",
+                "EligibleQuantity": {
+                    "@type": "QuantitativeValue",
+                    "Name": "Maximale Stückzahl",
+                    "Value": 10
+                }
+            },
             "PriceCurrency": "EUR",
             "ValidFrom": "2020-06-01",
             "ValidThrough": "2020-07-01",
