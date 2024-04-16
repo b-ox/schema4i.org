@@ -1,0 +1,25 @@
+{
+    "type": "AdjustmentCode",
+    "uri": "http://schema4i.org/AdjustmentCode",
+    "description": "Code for coding the state of a adjustment",
+    "links": [{
+        "url": "http://schema4i.org/AdjustmentCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Adjustment start": "s4i:AdjustmentCode#Dynamikstart",
+            "Adjustment stop": "s4i:AdjustmentCode#Dynamikstopp",
+            "next Adjustment": "s4i:AdjustmentCode#NaechsteAnpassung",
+            "last Adjustment": "s4i:AdjustmentCode#LetzteAnpassung",
+            "objection": "s4i:AdjustmentCode#Widerspruch"
+        }
+    }
+}
