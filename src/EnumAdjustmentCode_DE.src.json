@@ -1,0 +1,25 @@
+{
+    "type": "AdjustmentCode_DE",
+    "uri": "http://schema4i.org/AdjustmentCode_DE",
+    "description": "Code für die Schlüsselung des Status der Dynamik.",
+    "links": [{
+        "url": "http://schema4i.org/AdjustmentCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Dynamikstart": "s4i:AdjustmentCode#Dynamikstart",
+            "Dynamikstopp": "s4i:AdjustmentCode#Dynamikstopp",
+            "Nächste Anpassung": "s4i:AdjustmentCode#NaechsteAnpassung",
+            "Letzte Anpassung": "s4i:AdjustmentCode#LetzteAnpassung",
+            "Widerspruch": "s4i:AdjustmentCode#Widerspruch"
+        }
+    }
+}

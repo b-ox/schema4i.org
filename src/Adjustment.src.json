@@ -35,6 +35,10 @@
                 "@id": "s4i:Affects",
                 "@type": "s4i:Thing"
             },
+            "LifeCycle": {
+                "@id": "s4i:LifeCycle",
+                "@type": "s4i:AdjustmentLifeCycleEvent"
+            },
             "Period": {
                 "@id": "s4i:Period",
                 "@type": "@vocab",
@@ -59,6 +63,9 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Adjustment.jsonld",
+                "http://schema4i.org/AdjustmentLifeCycleEvent.jsonld",
+                "http://schema4i.org/EnumAdjustmentCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/PropertyValue.jsonld",
                 "http://schema4i.org/EnumAdjustmentIdentifierCode.jsonld",
                 {
@@ -87,9 +94,14 @@
                     "@type": "Thing",
                     "@id": "#AffectedThing"
                 },
+                "LifeCycle": [{
+                    "@type": "AdjustmentLifeCycleEvent",
+                    "Code": "LetzteAnpassung",
+                    "StartDate": "2022-03-13T12:00:00"
+                }],
                 "Period": "1",
                 "ValidFrom": "2021-01-01T00:00:00",
-                "ValidThrough": "2022-01-01T00:00:00"
+                "ValidThrough": "2024-01-01T00:00:00"
             }
         },
         "context": {}

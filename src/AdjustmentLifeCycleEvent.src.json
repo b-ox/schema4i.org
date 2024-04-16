@@ -1,0 +1,44 @@
+{
+    "type": "AdjustmentLifeCycleEvent",
+    "uri": "http://schema4i.org/AdjustmentLifeCycleEvent",
+    "description": "Describes a event that an adjustment goes through.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Building#LifeCycle"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/LifeCycleEvent" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "AdjustmentLifeCycleEvent": "s4i:AdjustmentLifeCycleEvent",
+            "Code": {
+                "@id": "s4i:Code",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumAdjustmentCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample AdjustmentLifeCycleEvent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/AdjustmentLifeCycleEvent.jsonld",
+                "http://schema4i.org/EnumAdjustmentCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Thing.jsonld"                
+            ],
+            "@type": "AdjustmentLifeCycleEvent",
+            "Code": "LetzteAnpassung",
+            "StartDate": "2023-03-13T12:00:00"
+        },
+        "context": {}
+    }]
+}
