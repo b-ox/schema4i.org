@@ -1,9 +1,9 @@
 {
-    "type": "AdjustmentCode_DE",
-    "uri": "http://schema4i.org/AdjustmentCode_DE",
+    "type": "EnumAdjustmentCode_DE",
+    "uri": "http://schema4i.org/EnumAdjustmentCode_DE",
     "description": "Code für die Schlüsselung des Status der Dynamik.",
     "links": [{
-        "url": "http://schema4i.org/AdjustmentCode",
+        "url": "http://schema4i.org/EnumAdjustmentCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
     "parents": [],
@@ -15,11 +15,11 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Dynamikstart": "s4i:AdjustmentCode#Dynamikstart",
-            "Dynamikstopp": "s4i:AdjustmentCode#Dynamikstopp",
-            "Nächste Anpassung": "s4i:AdjustmentCode#NaechsteAnpassung",
-            "Letzte Anpassung": "s4i:AdjustmentCode#LetzteAnpassung",
-            "Widerspruch": "s4i:AdjustmentCode#Widerspruch"
+            "Dynamikstart": "s4i:EnumAdjustmentCode#Dynamikstart",
+            "Dynamikstopp": "s4i:EnumAdjustmentCode#Dynamikstopp",
+            "Nächste Anpassung": "s4i:EnumAdjustmentCode#NaechsteAnpassung",
+            "Letzte Anpassung": "s4i:EnumAdjustmentCode#LetzteAnpassung",
+            "Widerspruch": "s4i:EnumAdjustmentCode#Widerspruch"
         }
     }
 }
