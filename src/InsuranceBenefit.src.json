@@ -1,0 +1,86 @@
+{
+    "type": "InsuranceBenefit",
+    "uri": "http://schema4i.org/InsuranceBenefit",
+    "description": "This type can be used to represent insurance sums or benefits.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#SumInsured" },
+        { "@id": "http://schema4i.org/InsuranceProduct#SumInsured" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "Value": [
+            { "@id": "http://schema4i.org/QuantitativeValue" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "InsuranceBenefit": "schema:InsuranceBenefit",
+            "BenefitType": {
+                "@id": "s4i:BenefitType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumInsuranceBenefitCode#"
+                }
+            },
+            "Value": {
+                 "@id": "s4i:SumInsured"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample InsuranceBenefit as MonetaryAmount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    }
+                }
+            ],
+            "@type": "InsuranceBenefit",
+            "BenefitType": "GesamteTodesfallleistung",
+            "Value": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 3332.00
+            }
+        },
+        "context": {}
+    },
+    {
+        "title": "A sample InsuranceBenefit with a text as value",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumMotorInsuranceLiabilityCoverageCode#"
+                        }
+                    }
+                }
+            ],
+            "@type": "InsuranceBenefit",
+            "Value": "51"
+        },
+        "context": {}
+    }]
+}
