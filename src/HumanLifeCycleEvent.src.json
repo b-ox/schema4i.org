@@ -52,7 +52,17 @@
                 "http://schema4i.org/MedicalCode.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld"                
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    },
+                    "EndDate": {
+                        "@id": "schema:endDate",
+                        "@type": "schema:DateTime"
+                    }
+                }                 
             ],
             "@type": "HumanLifeCycleEvent",
             "Name": "Tod",

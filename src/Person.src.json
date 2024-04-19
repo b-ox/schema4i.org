@@ -12,7 +12,8 @@
         { "@id": "http://schema4i.org/Invoice#Broker" },
         { "@id": "http://schema4i.org/Invoice#Customer" },
         { "@id": "http://schema4i.org/Invoice#Provider" },
-        { "@id": "http://schema4i.org/Order#Customer" }
+        { "@id": "http://schema4i.org/Order#Customer" },
+        { "@id": "http://schema4i.org/Event#Attendee" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }

@@ -17,7 +17,7 @@
             "schema": "http://schema.org/",
             "ContractLifeCycleEvent": "s4i:ContractLifeCycleEvent",
             "Code": {
-                "@id": "schema:orderStatus",
+                "@id": "s4i:Code",
                 "@type": "@vocab",
                 "@context": {
                     "@vocab": "s4i:EnumOrderStatusCode#"
@@ -33,7 +33,13 @@
                 "http://schema4i.org/ContractLifeCycleEvent.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld"                
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    }
+                }                 
             ],
             "@type": "ContractLifeCycleEvent",
             "Code": "1",

@@ -15,7 +15,8 @@
         { "@id": "http://schema4i.org/Invoice#Provider" },
         { "@id": "http://schema4i.org/Service#Provider" },
         { "@id": "http://schema4i.org/Order#Customer" },
-        { "@id": "http://schema4i.org/ProgramMembership#HostingOrganization" }
+        { "@id": "http://schema4i.org/ProgramMembership#HostingOrganization" },
+        { "@id": "http://schema4i.org/Event#Attendee" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
