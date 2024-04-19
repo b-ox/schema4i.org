@@ -33,7 +33,13 @@
                 "http://schema4i.org/EnumAdjustmentCode.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld"                
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    }
+                }                 
             ],
             "@type": "AdjustmentLifeCycleEvent",
             "Code": "LetzteAnpassung",
