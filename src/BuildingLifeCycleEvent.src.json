@@ -32,7 +32,17 @@
                 "http://schema4i.org/BuildingLifeCycleEvent.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld"                
+                "http://schema4i.org/Thing.jsonld" ,
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    },
+                    "EndDate": {
+                        "@id": "schema:endDate",
+                        "@type": "schema:DateTime"
+                    }
+                }              
             ],
             "@type": "BuildingLifeCycleEvent",
             "Name": "Rohbau",

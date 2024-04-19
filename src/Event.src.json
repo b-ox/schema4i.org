@@ -15,6 +15,10 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
+        "Attendee": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ],
         "StartDate": [
             { "@id": "http://schema.org/Date" },
             { "@id": "http://schema.org/DateTime" }
@@ -34,6 +38,9 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Event": "schema:Event",
+            "Attendee": {
+                "@id": "schema:attendee"
+            },
             "About": {
                 "@id": "schema:about",
                 "@type": "s4i:Thing"
@@ -75,9 +82,33 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Place.jsonld"
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                {
+                    "Attendee": {
+                        "@id": "schema:attendee",
+                        "@type": "http://schema4i.org/Person"
+                },
+                "StartDate": {
+                    "@id": "schema:startDate",
+                    "@type": "schema:DateTime"
+                },
+                "EndDate": {
+                    "@id": "schema:endDate",
+                    "@type": "schema:DateTime"
+                },
+                "Location": {
+                    "@id": "schema:location",
+                    "@type": "s4i:Place"
+                }
+            }
             ],
             "@type": "Event",
+            "Attendee": {
+                "@type": "Person",
+                "Name": "Müller",
+                "GivenName": "Ted"
+            },
             "Name": "Live Aid",
             "StartDate": "1985-07-13T12:00:00",
             "EndDate": "1985-07-13T22:00:00",

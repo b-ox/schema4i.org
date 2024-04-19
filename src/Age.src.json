@@ -1,7 +1,7 @@
 {
     "type": "Age",
     "uri": "http://schema4i.org/Age",
-    "description": "The age of a Person or Thing in years. In case of life insurance the actuarial age of the insured person at entry.",
+    "description": "The age of a Person or Thing in years.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/InsuredPerson#Age" }
