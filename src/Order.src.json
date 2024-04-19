@@ -21,6 +21,10 @@
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
         ],
+        "OrderStatus": [
+            { "@id": "http://schema4i.org/EnumOrderStatusCode" },
+            { "@id": "http://schema4i.org/ContractLifeCycleEvent" }
+        ],
         "Payer": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
@@ -90,11 +94,7 @@
                 "@type": "schema:Text"
             },
             "OrderStatus": {
-                "@id": "schema:orderStatus",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumOrderStatusCode#"
-                }
+                "@id": "schema:orderStatus"
             },
             "PartOfInvoice": {
                 "@id": "schema:partOfInvoice",
@@ -161,6 +161,13 @@
                     "PaymentMethod": {
                         "@id": "http://schema.org/paymentMethod",
                         "@type": "http://schema.org/PaymentMethod"
+                    },
+                    "OrderStatus": {
+                        "@id": "schema:orderStatus",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumOrderStatusCode#"
+                        }
                     }
                 }
             ],
