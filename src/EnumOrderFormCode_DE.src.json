@@ -1,18 +1,13 @@
 {
-    "type": "EnumOrderStatusCode_DE",
-    "uri": "http://schema4i.org/EnumOrderStatusCode_DE",
-    "description": "Ein Code, der den Status eines Versicherungsvertrags gemäß dem deutschen GDV Standard mit Releasedatum 01.07.2018 darstellt, z.B. 4 = storniert.",
+    "type": "EnumOrderFormCode_DE",
+    "uri": "http://schema4i.org/EnumOrderFormCode",
+    "description": "Ein Code, der die verschiedene Arten von Zusammenschlüssen für Versicherungszwecke beschreit.",
     "links": [{
-        "url": "http://schema4i.org/EnumOrderStatusCode",
+        "url": "http://schema4i.org/EnumOrderFormCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
-    }, {
-        "url": "http://www.gdv-online.de/vuvm/bestand/rel2018/anl24.htm",
-        "description": "GDV Vertragsstatus"
     }],
     "parents": [
-        { "@id": "http://schema4i.org/InsuranceProduct#Status"},
-        { "@id": "http://schema4i.org/Offer#Status" },
-        { "@id": "http://schema4i.org/Order#OrderStatus" }
+        { "@id": "http://schema4i.org/InsuranceProduct#OrderForm"}
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
@@ -22,21 +17,13 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "lebend": "s4i:EnumContractStatusCode#1",
-            "Vertragsbeginn": "s4i:EnumContractStatusCode#1A",
-            "Vertragsablauf": "s4i:EnumContractStatusCode#1B",
-            "lebend kurzfristig unterjährig": "s4i:EnumContractStatusCode#2",
-            "ruhend Anwartschaft": "s4i:EnumContractStatusCode#3",
-            "storniert": "s4i:EnumContractStatusCode#4",
-            "ruhend beitragsfrei": "s4i:EnumContractStatusCode#5",
-            "beitragsfrei": "s4i:EnumContractStatusCode#6",
-            "beitragsfrei durch Leistung": "s4i:EnumContractStatusCode#7",
-            "Beitragsstundung": "s4i:EnumContractStatusCode#8",
-            "Sonstiges": "s4i:EnumContractStatusCode#9",
-            "In Leistung": "s4i:EnumContractStatusCode#A",
-            "In Auszahlung": "s4i:EnumContractStatusCode#A1",
-            "In Abrufphase": "s4i:EnumContractStatusCode#B",
-            "Vorläufige Deckung": "s4i:EnumContractStatusCode#C"
+            "Firmengruppen": "s4i:EnumOrderFormCode#1",
+            "Vereinsgruppen": "s4i:EnumOrderFormCode#2",
+            "Verbandsgruppen": "s4i:EnumOrderFormCode#3",
+            "Sammelversicherung": "s4i:EnumOrderFormCode#4",
+            "Rahmenvertrag / Generalvertrag / Maklervertrag": "s4i:EnumOrderFormCode#5",
+            "Gruppenvertrag/-tarif, nicht näher spezifiziert": "s4i:EnumOrderFormCode#6",
+            "Sonstiges": "s4i:EnumOrderFormCode#9"
         }
     }
 }
