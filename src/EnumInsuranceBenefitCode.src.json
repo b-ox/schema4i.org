@@ -1,7 +1,7 @@
 {
     "type": "EnumInsuranceBenefitCode",
     "uri": "http://schema4i.org/EnumInsuranceBenefitCode",
-    "description": "A German 3-digit code for identifying any kind of vehicle.",
+    "description": "A code describing the details of a insurance benefit.",
     "links": [{
             "url": "http://schema4i.org/EnumInsuranceBenefitCode_DE",
             "description": "Original German documentation"
