@@ -17,7 +17,7 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Einzel": "s4i:EnumOrderFormCode#0",
+            "Einzelvertrag": "s4i:EnumOrderFormCode#0",
             "Firmengruppen": "s4i:EnumOrderFormCode#1",
             "Vereinsgruppen": "s4i:EnumOrderFormCode#2",
             "Verbandsgruppen": "s4i:EnumOrderFormCode#3",
