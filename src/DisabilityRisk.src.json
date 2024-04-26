@@ -14,11 +14,11 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DisabilityRisk": "s4i:DisabilityRisk",
-            "DamageCause": {
-                "@id": "s4i:DamageCause",
+            "DisabilityCause": {
+                "@id": "s4i:DisabilityCause",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "s4i:EnumDisabilityDamageCauseCode#"
+                    "@vocab": "s4i:EnumDisabilityCauseCode#"
                 }
             }
         }
@@ -32,14 +32,14 @@
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Risk.jsonld",
                 "http://schema4i.org/DisabilityRisk.jsonld",
-                "http://schema4i.org/EnumDisabilityDamageCauseCode.jsonld"
+                "http://schema4i.org/EnumDisabilityCauseCode.jsonld"
             ],
             "@type": "DisabilityRisk",
             "Affects": {
                 "@type": "Person",
                 "Name": "Müller"
             },
-            "DamageCause": "BU"
+            "DisabilityCause": "BU"
         },
         "context": {}
     }]
