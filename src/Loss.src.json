@@ -5,7 +5,7 @@
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/DamageEvent#CauseOf" },
-        { "@id": "http://schema4i.org/PersonaInjuryDamage" },
+        { "@id": "http://schema4i.org/PersonalInjuryDamage" },
         { "@id": "http://schema4i.org/PropertyDamage" }
     ],
     "base": [
