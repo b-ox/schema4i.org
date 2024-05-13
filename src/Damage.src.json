@@ -4,7 +4,8 @@
     "description": "An impairment to an object or person that is detrimental to value, usefulness or functionality.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/DamageEvent#CauseOf" }
+        { "@id": "http://schema4i.org/DamageEvent#CauseOf" },
+        { "@id": "http://schema4i.org/Loss" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
