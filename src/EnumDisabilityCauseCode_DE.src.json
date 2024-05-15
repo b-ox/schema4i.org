@@ -1,0 +1,29 @@
+{
+    "type": "EnumDisabilityCauseCode_DE",
+    "uri": "http://schema4i.org/EnumDisabilityCauseCode_DE",
+    "description": "Code für die Schadensursachen von Einkommensverlusten aufgrund von Arbeitsunfähigkeit.",
+    "links": [{
+        "url": "http://schema4i.org/EnumDisabilityCauseCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/DisabilityRisk#DamageCause" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "EU": "s4i:EnumDisabilityCauseCode#EU",
+            "EM": "s4i:EnumDisabilityCauseCode#EM",
+            "BU": "s4i:EnumDisabilityCauseCode#BU",
+            "KomfortBU": "s4i:EnumDisabilityCauseCode#KomfortBU",
+            "UnfallBU": "s4i:EnumDisabilityCauseCode#UBU",
+            "Dread Disease": "s4i:EnumDisabilityCauseCode#DD",
+            "Verlust von bestimmten definierten Grundfähigkeiten wie Gehen, Treppensteigen oder Autofahren (Grundfaehigkeitsrente)": "s4i:EnumDisabilityCauseCode#GF"
+        }
+    }
+}
