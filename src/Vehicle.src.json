@@ -54,6 +54,10 @@
                 "@id": "schema:dateVehicleFirstRegistered",
                 "@type": "schema:Date"
             },
+            "Driver": {
+                "@id": "s4i:Driver",
+                "@type": "s4i:Person"
+            },
             "Garage": {
                 "@id": "oo:vehicle/garage"
             },
@@ -130,6 +134,12 @@
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",
             "DateVehicleFirstRegistered": "2020-07-16",
+            "Driver": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Martha",
+                "Salutation": "1"
+            },
             "Garage": false,
             "Manufacturer": {},
             "ManufacturerKeyNumber": "0583",

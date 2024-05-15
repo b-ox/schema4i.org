@@ -1,0 +1,43 @@
+{
+    "type": "Driver",
+    "uri": "http://schema4i.org/Driver",
+    "description": "A person steering a vehicle such as a car or motorcycle.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#Driver" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Driver": {
+                "@id": "s4i:Driver",
+                "@type": "s4i:Person"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample Vehicle including a Person as a Driver",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "@type": "Vehicle",
+            "Manufacturer": {
+                "@type": "Organization",
+                "Name": "Musterfirma GmbH"
+            },
+            "Model": "C1",
+            "Driver": {
+                "@type": "Person",
+                "Name": "Rennfahrer",
+                "GivenName": "Rene"
+            }
+        },
+        "context": {}
+    }]
+}
