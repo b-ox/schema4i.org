@@ -11,6 +11,10 @@
         "MemberOf": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/ProgramMembership" }
+        ],
+        "RoleCode": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumEventParticipantRoleCode" }
         ]
     },
     "context": {
@@ -24,8 +28,7 @@
                 "@type": "schema:Text"
             },
             "RoleCode": {
-                "@id": "s4i:RoleCode",
-                "@type": "schema:Text"
+                "@id": "s4i:RoleCode"
             },
             "MemberOf": {
                 "@id": "schema:memberOf"
@@ -42,12 +45,19 @@
                 "http://schema4i.org/Person",
                 "http://schema4i.org/Role",
                 "http://schema4i.org/ProgramMembership",
-                "http://schema4i.org/Role.jsonld"
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                }
             ],
             "@type": "Person",
             "MemberOf": {
                 "@type": "Role",
                 "RoleName": "Mitglied",
+                "RoleCode": "Member",
                 "MemberOf": {
                     "@type": "ProgramMembership",
                     "ProgramName": "Golf Community"

@@ -13,7 +13,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "PersonalInjuryDamage": "s4i:PersonalInjuryDamage"
+            "PersonalInjuryDamage": "s4i:PersonalInjuryDamage",
+            "Code": {
+                "@id": "s4i:Code",
+                "@type": "s4i:MedicalCode"
+            }
         }
     },
     "playground": [{
@@ -23,6 +27,7 @@
             "@context": [
                 "http://schema4i.org/PersonalInjuryDamage.jsonld",
                 "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/MedicalCode.jsonld",
                 "http://schema4i.org/LossEvent.jsonld",
                 "http://schema4i.org/Thing.jsonld"
             ],
@@ -31,6 +36,11 @@
             "Affects": {
                 "@type": "Person",
                 "Name": "Muster"
+            },
+            "Code": {
+                "@type": "MedicalCode",
+                "CodeValue": "S82.9",
+                "CodingSystem": "ICD-10"
             },
             "CausedBy": {
                 "@type": "LossEvent",
