@@ -25,7 +25,12 @@
         "title": "A sample Vehicle including a Person as a Driver",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                "http://schema4i.org/Vehicle.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
             "@type": "Vehicle",
             "Manufacturer": {
                 "@type": "Organization",
