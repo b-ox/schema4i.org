@@ -20,9 +20,9 @@
             "s4i": "http://schema4i.org/",
             "Melder": "s4i:EnumEventParticipantRoleCode#REPORTER",
             "Entdecker": "s4i:EnumEventParticipantRoleCode#DISCOVERER",
-            "Täter": "s4i:EnumEventParticipantRoleCode#CULPRIT",
+            "Täter": "s4i:EnumEventParticipantRoleCode#OFFENDER",
             "Zeuge": "s4i:EnumEventParticipantRoleCode#WITNESS",
-            "Verursacher": "s4i:EnumEventParticipantRoleCode#CAUSE"
+            "Verursacher": "s4i:EnumEventParticipantRoleCode#POLLUTER"
         }
     }
 }
