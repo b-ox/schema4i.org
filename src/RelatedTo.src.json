@@ -7,7 +7,7 @@
         { "@id": "http://schema4i.org/Person#RelatedTo" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Property" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {
@@ -17,7 +17,7 @@
             "schema": "http://schema.org/",
             "RoleCode": {
                 "@id": "s4i:RoleCode",
-                "@type": "http://schema.org/Text"
+                "@type": "schema:Text"
             }
         }
     },
