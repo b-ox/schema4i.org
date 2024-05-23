@@ -18,7 +18,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Audience": "schema:Audience"
+            "Audience": "schema:Audience",
+            "AudienceType": {
+                "@id": "s4i:AudienceType",
+                "@type": "schema:Text"
+            }
         }
     },
     "playground": [{
