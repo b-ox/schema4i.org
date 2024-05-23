@@ -6,7 +6,9 @@
         "url": "https://schema.org/audience",
         "description": "Original Schema.org type"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/CreativeWork#Audience" }
+    ],
     "base": [
         {"@id": "http://schema4i.org/Thing"}
     ],
@@ -16,7 +18,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Audience": "schema4i:Audience"
+            "Audience": "schema:Audience"
         }
     },
     "playground": [{
@@ -28,7 +30,7 @@
                 "http://schema.org/Audience"
             ],
             "@type": "Audience",
-            "AudienceType": "Customers"
+            "AudienceType": "Customer"
         }
     }]
 }
