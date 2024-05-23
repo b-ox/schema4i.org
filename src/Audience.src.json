@@ -20,7 +20,7 @@
             "schema": "http://schema.org/",
             "Audience": "schema:Audience",
             "AudienceType": {
-                "@id": "s4i:AudienceType",
+                "@id": "schema:audienceType",
                 "@type": "schema:Text"
             }
         }
