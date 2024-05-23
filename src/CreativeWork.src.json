@@ -110,6 +110,10 @@
             "Review": {
                 "@id": "schema:review",
                 "@type": "s4i:Review"
+            },
+            "Audience": {
+                "@id": "schema:audience",
+                "@type": "s4i:Audience"
             }
         }
     },

@@ -1,0 +1,40 @@
+{
+    "type": "Audience",
+    "uri": "https://schema4i.org/Audience",
+    "description": "An intended audience, i.e. a group for whom something was created.",
+    "links": [{
+        "url": "https://schema.org/audience",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/CreativeWork#Audience" }
+    ],
+    "base": [
+        {"@id": "http://schema4i.org/Thing"}
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Audience": "schema:Audience",
+            "AudienceType": {
+                "@id": "s4i:AudienceType",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An Audience",
+        "tab": "tab-expanded",
+        "input":{
+            "@context": [
+                "https://schema4i.org/Thing.jsonld",
+                "http://schema.org/Audience"
+            ],
+            "@type": "Audience",
+            "AudienceType": "Customer"
+        }
+    }]
+}
