@@ -15,7 +15,7 @@
             "schema": "http://schema.org/",
             "HumanLifeCycleEvent": "s4i:HumanLifeCycleEvent",
             "Code": {
-                "@id": "s4i:MedicalCode",
+                "@id": "s4i:Code",
                 "@type": "s4i:MedicalCode"
             }
         }
@@ -52,7 +52,17 @@
                 "http://schema4i.org/MedicalCode.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld"                
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    },
+                    "EndDate": {
+                        "@id": "schema:endDate",
+                        "@type": "schema:DateTime"
+                    }
+                }                 
             ],
             "@type": "HumanLifeCycleEvent",
             "Name": "Tod",

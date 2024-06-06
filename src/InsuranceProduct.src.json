@@ -23,6 +23,11 @@
         "Status": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumOrderStatusCode" }
+        ],
+        "SumInsured": [
+            { "@id": "http://schema4i.org/MonetaryAmount" },
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/InsuranceBenefit" }
         ]
     },
     "context": {
@@ -67,6 +72,9 @@
             "Status": {
                 "@id": "schema:orderStatus"
             },
+            "SumInsured": {
+                "@id": "s4i:SumInsured"
+            },
             "ValidFrom": {
                 "@id": "schema:validFrom",
                 "@type": "schema:DateTime"
@@ -104,13 +112,13 @@
                 },
                 {
                     "Deductible": {
-                        "@id": "s4i:Deductible",
-                        "@type": "s4i:StructuredValue"
+                        "@id": "http://schema4i.org/Deductible",
+                        "@type": "http://schema4i.org/StructuredValue"
                     }
                 },
                 {
                     "ModificationCode": {
-                        "@id": "s4i:OrderModificationCode",
+                        "@id": "http://schema4i.org/OrderModificationCode",
                         "@type": "@vocab",
                         "@context": {
                             "@vocab": "http://schema4i.org/EnumTransactionCode#"
@@ -125,6 +133,12 @@
                           "@vocab": "http://schema4i.org/EnumInsuranceProductCategoryCode#"
                         }
                       }
+                },
+                {
+                    "SumInsured": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/InsuranceBenefit"
+                    }
                 }
             ],
             "@type": "InsuranceProduct",
@@ -148,6 +162,25 @@
                 "Name": "IDEAL"
             },
             "Status":  "1",
+            "SumInsured": {
+                "@context": [
+                    "http://schema4i.org/InsuranceBenefit.jsonld",
+                    "http://schema4i.org/MonetaryAmount.jsonld",
+                    {
+                        "Value": {
+                            "@id": "http://schema4i.org/SumInsured",
+                            "@type": "http://schema4i.org/MonetaryAmount"
+                        }
+                    }
+                ],
+                "@type": "InsuranceBenefit",
+                "BenefitType": "GesamteRente",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 3332.00
+                }
+            },
             "Offers": [{
                 "@type": "Coverage",
                 "Deductible": {

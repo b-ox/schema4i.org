@@ -1,0 +1,28 @@
+{
+    "type": "EnumEventParticipantRoleCode",
+    "uri": "http://schema4i.org/EnumEventParticipantRoleCode",
+    "description": "A code describing in which way a person or organization is affiliated with a certain event.",
+    "links": [{
+            "url": "http://schema4i.org/EnumEventParticipantRoleCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Reporter": "s4i:EnumEventParticipantRoleCode#REPORTER",
+            "Discoverer": "s4i:EnumEventParticipantRoleCode#DISCOVERER",
+            "Offender": "s4i:EnumEventParticipantRoleCode#OFFENDER",
+            "Witness": "s4i:EnumEventParticipantRoleCode#WITNESS",
+            "Polluter": "s4i:EnumEventParticipantRoleCode#POLLUTER"
+        }
+    }
+}

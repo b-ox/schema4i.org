@@ -19,7 +19,8 @@
     "multipletypes": {
         "SumInsured": [
             { "@id": "http://schema4i.org/MonetaryAmount" },
-            { "@id": "http://schema.org/Text" }
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/InsuranceBenefit" }
         ],
         "Covers": [
             { "@id": "http://schema4i.org/Risk" },
@@ -113,10 +114,7 @@
                 {
                     "SumInsured": {
                         "@id": "s4i:SumInsured",
-                        "@type": "@vocab",
-                        "@context": {
-                            "@vocab": "s4i:EnumMotorInsuranceLiabilityCoverageCode#"
-                        }
+                        "@type": "s4i:MonetaryAmount"
                     }
                 }
             ],
@@ -159,7 +157,27 @@
                     "Value": "25"
                 }
             }],
-            "SumInsured": "11",
+            "SumInsured": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/InsuranceBenefit.jsonld",
+                    "http://schema4i.org/MonetaryAmount.jsonld",
+                    "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                    {
+                        "Value": {
+                            "@id": "http://schema4i.org/SumInsured",
+                            "@type": "http://schema4i.org/MonetaryAmount"
+                        }
+                    }
+                ],
+                "@type": "InsuranceBenefit",
+                "BenefitType": "DeckungssummeVermoegensschaden",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 32323.23
+                }
+            },
             "AffectedBy": [{
                 "@type": "Question",
                 "Name": "Soll das Premium Deckungspaket eingeschlossen werden?",

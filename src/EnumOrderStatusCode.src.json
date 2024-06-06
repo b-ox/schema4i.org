@@ -23,6 +23,8 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "live": "s4i:EnumOrderStatusCode#1",
+            "start": "s4i:EnumContractStatusCode#1A",
+            "end": "s4i:EnumContractStatusCode#1B",
             "live short term during the year": "s4i:EnumOrderStatusCode#2",
             "dormant entitlement": "s4i:EnumOrderStatusCode#3",
             "canceled": "s4i:EnumOrderStatusCode#4",

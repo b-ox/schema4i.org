@@ -7,7 +7,7 @@
         { "@id": "http://schema4i.org/HumanLifeCycleEvent#Code" }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Property" }
+        { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {},
     "context": {

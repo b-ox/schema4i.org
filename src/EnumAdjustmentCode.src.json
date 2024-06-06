@@ -1,0 +1,25 @@
+{
+    "type": "EnumAdjustmentCode",
+    "uri": "http://schema4i.org/EnumAdjustmentCode",
+    "description": "Code for coding the state of a adjustment",
+    "links": [{
+        "url": "http://schema4i.org/EnumAdjustmentCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Adjustment start": "s4i:EnumAdjustmentCode#Dynamikstart",
+            "Adjustment stop": "s4i:EnumAdjustmentCode#Dynamikstopp",
+            "next Adjustment": "s4i:EnumAdjustmentCode#NaechsteAnpassung",
+            "last Adjustment": "s4i:EnumAdjustmentCode#LetzteAnpassung",
+            "objection": "s4i:EnumAdjustmentCode#Widerspruch"
+        }
+    }
+}

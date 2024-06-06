@@ -23,6 +23,8 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "lebend": "s4i:EnumContractStatusCode#1",
+            "Vertragsbeginn": "s4i:EnumContractStatusCode#1A",
+            "Vertragsablauf": "s4i:EnumContractStatusCode#1B",
             "lebend kurzfristig unterjährig": "s4i:EnumContractStatusCode#2",
             "ruhend Anwartschaft": "s4i:EnumContractStatusCode#3",
             "storniert": "s4i:EnumContractStatusCode#4",

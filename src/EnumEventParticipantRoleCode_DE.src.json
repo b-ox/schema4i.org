@@ -1,0 +1,28 @@
+{
+    "type": "EnumEventParticipantRoleCode_DE",
+    "uri": "http://schema4i.org/EnumEventParticipantRoleCode_DE",
+    "description": "Ein Code der beschreibt, welche Rolle eine Person oder Organisation bei einem Ereignis spielt",
+    "links": [{
+            "url": "http://schema4i.org/EnumEventParticipantRoleCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Melder": "s4i:EnumEventParticipantRoleCode#REPORTER",
+            "Entdecker": "s4i:EnumEventParticipantRoleCode#DISCOVERER",
+            "Täter": "s4i:EnumEventParticipantRoleCode#OFFENDER",
+            "Zeuge": "s4i:EnumEventParticipantRoleCode#WITNESS",
+            "Verursacher": "s4i:EnumEventParticipantRoleCode#POLLUTER"
+        }
+    }
+}

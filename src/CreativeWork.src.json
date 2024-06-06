@@ -110,6 +110,10 @@
             "Review": {
                 "@id": "schema:review",
                 "@type": "s4i:Review"
+            },
+            "Audience": {
+                "@id": "schema:audience",
+                "@type": "s4i:Audience"
             }
         }
     },
@@ -124,6 +128,7 @@
             ],
             "@type": "CreativeWork",
             "About": {},
+            "Audience": {},
             "Creator": {},
             "DateCreated": "2020-06-26T14:48:13",
             "DateModified": "2020-06-26T15:18:30",

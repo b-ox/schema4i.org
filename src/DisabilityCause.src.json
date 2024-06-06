@@ -1,0 +1,36 @@
+{
+    "type": "DisabilityCause",
+    "uri": "http://schema4i.org/DisabilityCause",
+    "description": "Describes the cause of a disability that is usually covered by a 'DisabilityRisk'",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/DisabilityRisk#DisabilityCause" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DisabilityCause": {
+                "@id": "s4i:DisabilityCause",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDisabilityCauseCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DisabilityCause",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DisabilityCause": "BU"
+        },
+        "context": {}
+    }]
+}

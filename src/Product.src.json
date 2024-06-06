@@ -24,6 +24,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Product": "schema:Product",
+            "ItemCondition": {
+                "@id": "schema:itemCondition",
+                "@type": "schema:OfferItemCondition"
+            },
             "Manufacturer": {
                 "@id": "schema:manufacturer",
                 "@type": "s4i:Organization"
@@ -55,6 +59,7 @@
             "@type": "Product",
             "Manufacturer": {},
             "Model": "Model S",
+            "ItemCondition": "NewCondition",
             "Owner": {
                 "@type": "Person",
                 "Name": "Mustermann",

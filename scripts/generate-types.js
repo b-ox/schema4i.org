@@ -31,6 +31,7 @@ const PRIMITIVE_TYPE_MAPPINGS = {
     'schema:PaymentMethod': 'string',
     'schema:paymentStatusType': 'string',
     'schema:ItemListOrderType': 'string',
+    'schema:OfferItemCondition': 'string',
     'schema:BusinessFunction': 'string',
     'schema:DeliveryMethod': 'string',
     'oo:definitions/string': 'string',

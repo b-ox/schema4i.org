@@ -54,6 +54,10 @@
                 "@id": "schema:dateVehicleFirstRegistered",
                 "@type": "schema:Date"
             },
+            "Driver": {
+                "@id": "s4i:Driver",
+                "@type": "s4i:Person"
+            },
             "Garage": {
                 "@id": "oo:vehicle/garage"
             },
@@ -64,6 +68,10 @@
             "ManufacturerKeyNumber": {
                 "@id": "oo:vehicle/hsn",
                 "@type": "oo:definitions/string"
+            },
+            "MileageFromOdometer": {
+                "@id": "schema:mileageFromOdometer",
+                "@type": "s4i:QuantitativeValue"
             },
             "ModelKeyNumber": {
                 "@id": "oo:vehicle/tsn",
@@ -116,10 +124,11 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Thing",
-                "http://schema4i.org/Product",
-                "http://schema4i.org/Vehicle",
-                "http://schema4i.org/Person",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Product.jsonld",
+                "http://schema4i.org/Vehicle.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
                 {
                     "Owner": {
                         "@id": "s4i:Owner",
@@ -130,9 +139,20 @@
             "@type": "Vehicle",
             "DateHolderFirstRegistered": "2020-07-16",
             "DateVehicleFirstRegistered": "2020-07-16",
+            "Driver": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Martha",
+                "Salutation": "1"
+            },
             "Garage": false,
             "Manufacturer": {},
             "ManufacturerKeyNumber": "0583",
+            "MileageFromOdometer": {
+                "@type": "QuantitativeValue",
+                "Value": "150524.92",
+                "UnitCode": "MTR"
+            },
             "Model": "",
             "ModelKeyNumber": "AJM",
             "NumberPlate": "D-TX 718",
