@@ -37,6 +37,10 @@
                 "@id": "schema:addressRegion",
                 "@type": "schema:Text"
             },
+            "District": {
+                "@id": "s4i:District",
+                "@type": "schema:Text"
+            },
             "PostOfficeBoxNumber": {
                 "@id": "schema:postOfficeBoxNumber",
                 "@type": "schema:Text"
@@ -68,6 +72,7 @@
             "AddressCountry": "D",
             "AddressLocality": "Düsseldorf",
             "AddressRegion": "NRW",
+            "District": "Flingern",
             "PostOfficeBoxNumber": "Postfach 4711",
             "PostalCode": "40233",
             "StreetAddress": "Lindenstr.",
