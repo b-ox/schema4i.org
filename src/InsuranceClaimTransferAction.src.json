@@ -1,5 +1,5 @@
 {
-    "type": "InsuranceClaimTransferActon",
+    "type": "InsuranceClaimTransferAction",
     "uri": "http://schema4i.org/InsuranceClaimTransferAction",
     "description": "An Action to transfer details concerning a claim for compensation for any damage to properties or living beings covered by insurance. This action may include information about the event and its participants as well as the insurance contract that covers such damages.",
     "links": [],
