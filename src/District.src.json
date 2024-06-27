@@ -4,7 +4,7 @@
     "description": "A District is a designated administrative division of a city.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/PostalAddress#District" }
+        { "@id": "http://schema4i.org/City#District" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
