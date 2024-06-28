@@ -16,7 +16,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "City": "schema:City"
+            "City": "schema:City",
+            "District": {
+                "@id": "s4i:District",
+                "@type": "schema:Text"
+            }
         }
     },
     "playground": [{
@@ -24,7 +28,19 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "@type": "City"
+            "@type": "City",
+            "Name": "Düsseldorf",
+            "District": "Flingern",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressCountry": "D",
+                "AddressLocality": "Düsseldorf",
+                "AddressRegion": "NRW",
+                "PostOfficeBoxNumber": "Postfach 4711",
+                "PostalCode": "40233",
+                "StreetAddress": "Lindenstr.",
+                "HouseNumber": "48-52"
+            }
         },
         "context": {}
     }]
