@@ -1,0 +1,40 @@
+{
+    "type": "EnumCATZoneCode",
+    "uri": "http://schema4i.org/EnumCATZoneCode",
+    "description": "A code representing geospatial zones in which certain dangers or risks may affect the insurability of buildings",
+    "links": [{
+        "url": "http://schema4i.org/EnumCATZoneCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/CATZone#Category" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "General tariff zone": "s4i:EnumCATZoneCode#000",
+            "Tariff zone - Household": "s4i:EnumCATZoneCode#001",
+            "Tariff zone - Residental building": "s4i:EnumCATZoneCode#002",
+            "Tap water zone": "s4i:EnumCATZoneCode#010",
+            "Burglary zone": "s4i:EnumCATZoneCode#011",
+            "Storm zone": "s4i:EnumCATZoneCode#012",
+            "Fire zone": "s4i:EnumCATZoneCode#013",
+            "Heavy rain zone": "s4i:EnumCATZoneCode#014",
+            "Earthquake zone": "s4i:EnumCATZoneCode#020",
+            "Hazard class - Elemental damage": "s4i:EnumCATZoneCode#021",
+            "Creek and island zone": "s4i:EnumCATZoneCode#022",
+            "Hazard class - Flood ZUERS": "s4i:EnumCATZoneCode#023",
+            "Flood area": "s4i:EnumCATZoneCode#023A",
+            "Island zone": "s4i:EnumCATZoneCode#024",
+            "Coastal zone": "s4i:EnumCATZoneCode#024A",
+            "Creek zone": "s4i:EnumCATZoneCode#025",
+            "Bicycle zone": "s4i:EnumCATZoneCode#030",
+            "Overvoltage": "s4i:EnumCATZoneCode#040"
+        }
+    }
+}
