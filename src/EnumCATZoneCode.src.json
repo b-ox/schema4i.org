@@ -1,7 +1,7 @@
 {
     "type": "EnumCATZoneCode",
     "uri": "http://schema4i.org/EnumCATZoneCode",
-    "description": "A code representing geospatial zones in which certain dangers or risks may affect the insurability of buildings",
+    "description": "A code representing geospatial zones in which certain dangers or risks may affect the insurability of buildings.",
     "links": [{
         "url": "http://schema4i.org/EnumCATZoneCode_DE",
         "description": "Original German documentation"
