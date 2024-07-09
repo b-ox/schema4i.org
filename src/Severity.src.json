@@ -1,7 +1,7 @@
 {
     "type": "Severity",
     "uri": "http://schema4i.org/Severity",
-    "description": "A numerical estimation of the seriousness of a situation",
+    "description": "A numerical estimation of the seriousness of a situation.",
     "links": [],
     "parents": [{
         "@id": "http://schema4i.org/CATZone#Severity"
