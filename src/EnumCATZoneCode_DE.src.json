@@ -1,7 +1,7 @@
 {
     "type": "EnumCATZoneCode_DE",
     "uri": "http://schema4i.org/EnumCATZoneCode_DE",
-    "description": "Ein Code der geographische Zonen beschreibt, in denen bestimmte Gefahren oder Risiken die Versicherbarkeit von Gebäuden beeinflussen.",
+    "description": "Ein Code, der geographische Zonen beschreibt, in denen bestimmte Gefahren oder Risiken die Versicherbarkeit von Gebäuden beeinflussen.",
     "links": [{
         "url": "http://schema4i.org/EnumCATZoneCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
