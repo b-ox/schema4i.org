@@ -1,0 +1,77 @@
+{
+    "type": "CATZone",
+    "uri": "http://schema4i.org/CATZone",
+    "description": "CATZones are geospatial areas prone to catastrophic natural disasters, such as frequent floods or wildfires that can affect the insurability of buildings in that area",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {
+        "Category": [
+            { "@id": "http://schema4i.org/EnumCATZoneCode" },
+            { "@id": "http://schema.org/Text" }
+        ]
+
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CATZone": "s4i:CATZone",
+            "Category": {
+                "@id": "schema:category"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A property damage risk for a building affected by a CATZone",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/Share.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Question.jsonld",
+                "http://schema4i.org/Answer.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/OrderModificationCode.jsonld",
+                "http://schema4i.org/EnumTransactionCode.jsonld",
+                "http://schema4i.org/Adjustment.jsonld",
+                "http://schema4i.org/PropertyValue.jsonld",
+                "http://schema4i.org/CompoundPriceSpecification.jsonld",
+                "http://schema4i.org/UnitPriceSpecification.jsonld",
+                {
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "s4i:EnumCATZoneCode"
+                    }
+                }
+            ],
+            "@type": "PropertyDamageRisk",
+            "DamageCause": "F",
+            "Affects": {
+                "@type": "Place",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "AddressCountry": "D",
+                    "AddressLocality": "Musterstadt",
+                    "HouseNumber": 19,
+                    "PostalCode": "12345",
+                    "StreetAddress": "Musterstraße"
+                },
+                "GeoWithin": {
+                    "@type": "CATZone",
+                    "Description": "Von Waldbränden bedrohte Zone",
+                    "Category": "013"
+                }
+            }
+        },
+        "context": {}
+    }]
+}
