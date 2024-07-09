@@ -22,6 +22,10 @@
             "CATZone": "s4i:CATZone",
             "Category": {
                 "@id": "schema:category"
+            },
+            "Severity": {
+                "@id": "s4i:Severity",
+                "@type": "s4i:QuantitativeValue"
             }
         }
     },
@@ -34,6 +38,8 @@
                 "http://schema4i.org/CATZone.jsonld",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
                 {
                     "Category": {
                         "@id": "schema:category",
@@ -42,7 +48,7 @@
                 }
             ],
             "@type": "PropertyDamageRisk",
-            "DamageCause": "F",
+            "DamageCause": "M01",
             "Affects": {
                 "@type": "Place",
                 "Address": {
@@ -55,8 +61,12 @@
                 },
                 "GeoWithin": {
                     "@type": "CATZone",
-                    "Description": "Von Waldbränden bedrohte Zone",
-                    "Category": "013"
+                    "Description": "Hochwasserklasse 2",
+                    "Category": "023",
+                    "Severity": {
+                        "@type": "QuantitativeValue",
+                        "Value": 2
+                    }
                 }
             }
         },
