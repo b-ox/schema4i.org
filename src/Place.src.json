@@ -50,6 +50,46 @@
                 "@id": "schema:containsPlace",
                 "@type": "s4i:Place"
             },
+            "GeoContains": {
+                "@id": "schema:geoContains",
+                "@type": "s4i:Place"
+            },
+            "GeoCoveredBy": {
+                "@id": "schema:geoCoveredBy",
+                "@type": "s4i:Place"
+            },
+            "GeoCovers": {
+                "@id": "schema:geoCovers",
+                "@type": "s4i:Place"
+            },
+            "GeoCrosses": {
+                "@id": "schema:geoCrosses",
+                "@type": "s4i:Place"
+            },
+            "GeoDisjoint": {
+                "@id": "schema:geoDisjoint",
+                "@type": "s4i:Place"
+            },
+            "GeoEquals": {
+                "@id": "schema:geoEquals",
+                "@type": "s4i:Place"
+            },
+            "GeoIntersects": {
+                "@id": "schema:geoIntersects",
+                "@type": "s4i:Place"
+            },
+            "GeoOverlaps": {
+                "@id": "schema:geoOverlaps",
+                "@type": "s4i:Place"
+            },
+            "GeoTouches": {
+                "@id": "schema:geoTouches",
+                "@type": "s4i:Place"
+            },
+            "GeoWithin": {
+                "@id": "schema:geoWithin",
+                "@type": "s4i:Place"
+            },
             "HasMap": {
                 "@id": "schema:hasMap",
                 "@type": "schema:URL"
