@@ -31,21 +31,9 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Offer.jsonld",
-                "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/MonetaryAmount.jsonld",
-                "http://schema4i.org/Risk.jsonld",
-                "http://schema4i.org/Share.jsonld",
-                "http://schema4i.org/Person.jsonld",
-                "http://schema4i.org/Question.jsonld",
-                "http://schema4i.org/Answer.jsonld",
-                "http://schema4i.org/PropertyValue.jsonld",
-                "http://schema4i.org/OrderModificationCode.jsonld",
-                "http://schema4i.org/EnumTransactionCode.jsonld",
-                "http://schema4i.org/Adjustment.jsonld",
-                "http://schema4i.org/PropertyValue.jsonld",
-                "http://schema4i.org/CompoundPriceSpecification.jsonld",
-                "http://schema4i.org/UnitPriceSpecification.jsonld",
+                "http://schema4i.org/CATZone.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
                 {
                     "Category": {
                         "@id": "schema:category",

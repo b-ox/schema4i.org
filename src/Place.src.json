@@ -9,6 +9,7 @@
     "parents": [
         { "@id": "http://schema4i.org/AdministrativeArea" },
         { "@id": "http://schema4i.org/Building" },
+        { "@id": "http://schema4i.org/CATZone" },
         { "@id": "http://schema4i.org/ParkingFacility" },
         { "@id": "http://schema4i.org/LandmarksOrHistoricalBuildings" }
     ],
