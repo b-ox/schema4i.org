@@ -1,0 +1,42 @@
+{
+    "type": "Severity",
+    "uri": "http://schema4i.org/Severity",
+    "description": "A numerical estimation of the seriousness of a situation.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/CATZone#Severity"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Severity": {
+                "@id": "s4i:Severity",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [{
+            "title": "A CATZone describing flood risks including the Severity to define the actual risk level of flooding",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/CATZone.jsonld",
+                    "http://schema4i.org/Place.jsonld",
+                    "http://schema4i.org/QuantitativeValue"
+                ],
+                "@type": "CATZone",
+                "Category": "023",
+                "Severity": {
+                    "@type": "QuantitativeValue",
+                    "Value": 2
+                }
+            }
+        }
+    ]
+}

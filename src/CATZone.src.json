@@ -1,0 +1,75 @@
+{
+    "type": "CATZone",
+    "uri": "http://schema4i.org/CATZone",
+    "description": "CATZones are geospatial areas prone to catastrophic natural disasters, such as frequent floods or wildfires that can affect the insurability of buildings in that area",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Place" }
+    ],
+    "multipletypes": {
+        "Category": [
+            { "@id": "http://schema4i.org/EnumCATZoneCode" },
+            { "@id": "http://schema.org/Text" }
+        ]
+
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CATZone": "s4i:CATZone",
+            "Category": {
+                "@id": "schema:category"
+            },
+            "Severity": {
+                "@id": "s4i:Severity",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A property damage risk for a building affected by a CATZone",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CATZone.jsonld",
+                "http://schema4i.org/Place.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                {
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "s4i:EnumCATZoneCode"
+                    }
+                }
+            ],
+            "@type": "PropertyDamageRisk",
+            "DamageCause": "M01",
+            "Affects": {
+                "@type": "Place",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "AddressCountry": "D",
+                    "AddressLocality": "Musterstadt",
+                    "HouseNumber": 19,
+                    "PostalCode": "12345",
+                    "StreetAddress": "Musterstraße"
+                },
+                "GeoWithin": {
+                    "@type": "CATZone",
+                    "Description": "Hochwasserklasse 2",
+                    "Category": "023",
+                    "Severity": {
+                        "@type": "QuantitativeValue",
+                        "Value": 2
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

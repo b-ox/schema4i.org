@@ -1,0 +1,40 @@
+{
+    "type": "EnumCATZoneCode_DE",
+    "uri": "http://schema4i.org/EnumCATZoneCode_DE",
+    "description": "Ein Code, der geographische Zonen beschreibt, in denen bestimmte Gefahren oder Risiken die Versicherbarkeit von Gebäuden beeinflussen.",
+    "links": [{
+        "url": "http://schema4i.org/EnumCATZoneCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/CATZone#Category" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Tarifzone allgemein": "s4i:EnumCATZoneCode#000",
+            "Tarifzone Hausrat": "s4i:EnumCATZoneCode#001",
+            "Tarifzone Wohngebaeude": "s4i:EnumCATZoneCode#002",
+            "Leitungswasserzone": "s4i:EnumCATZoneCode#010",
+            "ED-Zone": "s4i:EnumCATZoneCode#011",
+            "Sturmzone": "s4i:EnumCATZoneCode#012",
+            "Feuerzone": "s4i:EnumCATZoneCode#013",
+            "Starkregenzone": "s4i:EnumCATZoneCode#014",
+            "Erdbebenzone": "s4i:EnumCATZoneCode#020",
+            "Gefaehrdungsklasse Elementar": "s4i:EnumCATZoneCode#021",
+            "Bach- und Inselzone": "s4i:EnumCATZoneCode#022",
+            "Gefaehrdungsklasse Überschwemmung ZÜRS": "s4i:EnumCATZoneCode#023",
+            "Überschwemmungsgebiet": "s4i:EnumCATZoneCode#023A",
+            "Inselzone": "s4i:EnumCATZoneCode#024",
+            "Küstenzone": "s4i:EnumCATZoneCode#024A",
+            "Bachzone": "s4i:EnumCATZoneCode#025",
+            "Fahrradzone": "s4i:EnumCATZoneCode#030",
+            "Überspannung": "s4i:EnumCATZoneCode#040"
+        }
+    }
+}

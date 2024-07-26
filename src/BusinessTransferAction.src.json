@@ -4,8 +4,7 @@
     "description": "An Action to transfer some form of business transaction. It is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/MoneyTransferAction" },
-        { "@id": "http://schema4i.org/InsuranceClaimTransferAction" }
+        { "@id": "http://schema4i.org/MoneyTransferAction" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Action" }
