@@ -313,9 +313,9 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
             return output;
         },
         otherFile: 'schema4i-util.ts',
-        writeOther: (/** @type {TypeDefinition[]}*/ typeDefinitions) => {
+        writeOther: (/** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {boolean} */esm) => {
             let output = `
-import * as s4i from './schema4i';
+import * as s4i from './schema4i${esm ? '.js' : ''}';
 
 const ENUMS = new Map<string, Map<string, string>>();
 
@@ -409,10 +409,10 @@ export function getDescendants(type: string): string[] {
             return output;
         },
         exampleFile: 'schema4i-examples.ts',
-        writeExamples: (typeDefinitions) => {
+        writeExamples: (typeDefinitions, esm) => {
             const exampleTypes = typeDefinitions.filter(t => !t.simpleType && t.examples.length > 0);
             let output = `
-import * as s4i from './schema4i';
+import * as s4i from './schema4i${esm ? '.js' : ''}';
 
 const EXAMPLES = new Map<string, s4i.Thing[]>();
 `;
@@ -451,7 +451,7 @@ EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
     }
 };
 
-async function generateTypes(language, outputDir, includeExamples, strict, consoleLike) {
+async function generateTypes(language, outputDir, includeExamples, strict, esm, consoleLike) {
 
     consoleLike = Object.assign({}, console, consoleLike);
 
@@ -521,12 +521,12 @@ async function generateTypes(language, outputDir, includeExamples, strict, conso
 
     let exampleOutput = '';
     if (includeExamples) {
-        exampleOutput = languageProcessor.writeExamples(types);
+        exampleOutput = languageProcessor.writeExamples(types, esm);
     }
 
     let otherOutput = '';
     if (typeof languageProcessor.writeOther === 'function') {
-        otherOutput = languageProcessor.writeOther(types);
+        otherOutput = languageProcessor.writeOther(types, esm);
     }
 
     const typeOutputFile = path.resolve(outputDir, languageProcessor.typeFile);
