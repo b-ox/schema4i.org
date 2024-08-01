@@ -75,6 +75,10 @@
             "WaiverUnderinsurance": {
                 "@id": "s4i:WaiverUnderinsurance",
                 "@type": "schema:Boolean"
+            },
+            "License": {
+                "@id": "s4i:License",
+                "@type": "s4i:CreativeWork"
             }
         }
     },
@@ -99,6 +103,7 @@
                 "http://schema4i.org/PropertyValue.jsonld",
                 "http://schema4i.org/CompoundPriceSpecification.jsonld",
                 "http://schema4i.org/UnitPriceSpecification.jsonld",
+                "http://schema4i.org/License.jsonld",
                 {
                     "Covers": {
                         "@id": "s4i:Covers",
@@ -193,7 +198,13 @@
             }],
             "ModificationCode": "140010000",
             "WaitingPeriod": "P14D",
-            "WaiverUnderinsurance": false
+            "WaiverUnderinsurance": false,
+            "License": {
+                "@type": "CreativeWork",
+                "Identifier": "4711",
+                "Name": "Formularbezeichnung",
+                "Description": "Klauseltext"
+            }
         },
         "context": {}
     }]

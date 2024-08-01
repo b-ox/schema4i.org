@@ -53,7 +53,7 @@
             },
             "License": {
                 "@id": "s4i:License",
-                "@type": "s4i:DigitalDocument"
+                "@type": "s4i:CreativeWork"
             },
             "ModificationCode": {
                 "@id": "s4i:OrderModificationCode"
