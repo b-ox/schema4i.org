@@ -190,12 +190,10 @@
                 }
             }],
             "License": {
-                "@type": "DigitalDocument",
-                "@id": "https://api.b-ox.de/produkte/1047/bedingungen",
-                "Identifier": "terms",
-                "Name": "Vertragsbedingungen.pdf",
-                "Description": "Vertragsbedingungen",
-                "EncodingFormat": "application/pdf"
+               "@type": "CreativeWork",
+               "Identifier": "4711",
+               "Name": "Formularbezeichnung",
+               "Description": "Klauseltext"
             },
             "ModificationCode": "100001011",
             "OrderForm": "2",
