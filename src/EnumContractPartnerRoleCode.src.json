@@ -1,0 +1,25 @@
+{
+    "type": "EnumContractPartnerRoleCode",
+    "uri": "http://schema4i.org/EnumContractPartnerRoleCode",
+    "description": "A code that represents role a person or organization inherits in the given context.",
+    "links": [{
+        "url": "http://schema4i.org/EnumContractPartnerRoleCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Insurer": "s4i:EnumConstructionStatusCode#INSURER",
+            "Customer": "s4i:EnumConstructionStatusCode#CUSTOMER",
+            "Insured Person": "s4i:EnumConstructionStatusCode#INSURED",
+            "Broker": "s4i:EnumConstructionStatusCode#BROKER",
+            "Other": "s4i:EnumConstructionStatusCode#OTHER"
+        }
+    }
+}

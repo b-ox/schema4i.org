@@ -1,0 +1,25 @@
+{
+    "type": "EnumContractPartnerRoleCode_DE",
+    "uri": "http://schema4i.org/EnumContractPartnerRoleCode_DE",
+    "description": "Ein Code, der die Rolle beschreibt, die eine Person oder Unternehmen in einen gegebenen Kontext einnimmt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumContractPartnerRoleCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Versicherer": "s4i:EnumConstructionStatusCode#INSURER",
+            "Vertragspartner": "s4i:EnumConstructionStatusCode#CUSTOMER",
+            "Versicherte Person": "s4i:EnumConstructionStatusCode#INSURED",
+            "Vermittler": "s4i:EnumConstructionStatusCode#BROKER",
+            "Sonstiger": "s4i:EnumConstructionStatusCode#OTHER"
+        }
+    }
+}
