@@ -1,0 +1,72 @@
+{
+    "type": "ID",
+    "uri": "http://schema4i.org/ID",
+    "description": "An identifying number that, with respect to its creator and format, unambiguously references an object or ressource.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {
+        "Value": [
+            { "@id": "http://schema.org/Number" },
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/Boolean" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ID": "s4i:ID",
+            "Value": {
+                "@id": "schema:value"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "An example ID",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/ID.jsonld",
+                    "http://schema4i.org/CreativeWork.jsonld",
+                    "http://schema4i.org/Role.jsonld",
+                    "http://schema4i.org/Organization.jsonld",
+                    "http://schema4i.org/Thing.jsonld",
+                    {
+                        "Value": {
+                            "@id": "http://schema.org/value",
+                            "@type": "http://schema.org/Number"
+                        }
+                    },
+                    {
+                        "EncodingFormat": {
+                            "@id": "schema:encodingFormat",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumIdentifierFormatCode#"
+                            }
+                        }
+                    }
+                ],
+                "@type": "ID",
+                "Name": "Druckaufbereitete Vertragsnummer des Versicherers",
+                "Value": "V34.929.82638",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711",
+                        "Name": "Musterversicherer GmbH"
+                    }
+                }
+            },
+            "context": {}
+        }
+    ]
+}
