@@ -1,0 +1,64 @@
+{
+    "type": "ContractRevisionNumber",
+    "uri": "http://schema4i.org/ContractRevisionNumber",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing a certain version of a contract.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#ContractRevisionNumber"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ContractRevisionNumber": {
+                "@id": "s4i:ContractRevisionNumber",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic ContractRevisionNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                }
+            ],
+            "ContractRevisionNumber": {
+                "@type": "ID",
+                "Value": "V34.989.1234567-2408281150",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

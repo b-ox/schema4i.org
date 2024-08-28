@@ -40,6 +40,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Order": "schema:Order",
+            "ApplicationNumber": {
+                "@id": "s4i:ApplicationNumber",
+                "@type": "s4i:ID"
+            },
             "BillingAddress": {
                 "@id": "schema:billingAddress",
                 "@type": "s4i:PostalAddress"
@@ -50,6 +54,14 @@
             "ConfirmationNumber": {
                 "@id": "schema:confirmationNumber",
                 "@type": "schema:Text"
+            },
+            "ContractNumber": {
+                "@id": "s4i:ContractNumber",
+                "@type": "s4i:ID"
+            },
+            "ContractRevisionNumber": {
+                "@id": "s4i:ContractRevisionNumber",
+                "@type": "s4i:ID"
             },
             "Customer": {
                 "@id": "schema:customer"
@@ -69,6 +81,10 @@
             "DateModified": {
                 "@id": "schema:dateModified",
                 "@type": "schema:Date"
+            },
+            "FileReference": {
+                "@id": "s4i:FileReference",
+                "@type": "s4i:ID"
             },
             "Group": {
                 "@id": "s4i:Group",
@@ -157,6 +173,24 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Order.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                },
                 {
                     "PaymentMethod": {
                         "@id": "http://schema.org/paymentMethod",
@@ -172,9 +206,44 @@
                 }
             ],
             "@type": "Order",
+            "ApplicationNumber": {
+                "@type": "ID",
+                "Value": "A38",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            },
             "BillingAddress": {},
             "Broker": {},
             "ConfirmationNumber": "BELEG-03 -0000014",
+            "ContractNumber": [{
+                "@type": "ID",
+                "Value": "BELEG-03 -0000014",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            }, {
+                "@type": "ID",
+                "Value": "V34.989.1234567",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Broker"
+                }
+            }],
+            "ContractRevisionNumber": {
+                "@type": "ID",
+                "Value": "V34.989.1234567-2408281150",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            },
             "Customer": {},
             "Delivery": {
                 "@type": "ParcelDelivery",
@@ -192,6 +261,15 @@
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
+            "FileReference": {
+                "@type": "ID",
+                "Value": "211321/37",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            },
             "Group": {},
             "OrderDate": "2020-07-30",
             "OrderedItem": {},

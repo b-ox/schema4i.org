@@ -1,0 +1,64 @@
+{
+    "type": "ApplicationNumber",
+    "uri": "http://schema4i.org/ApplicationNumber",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing the process of the application of this order.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#ApplicationNumber"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ApplicationNumber": {
+                "@id": "s4i:ApplicationNumber",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic ApplicationNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                }
+            ],
+            "ApplicationNumber": {
+                "@type": "ID",
+                "Value": "A38",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

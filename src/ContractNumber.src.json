@@ -1,0 +1,64 @@
+{
+    "type": "ContractNumber",
+    "uri": "http://schema4i.org/ContractNumber",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing a contract.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#ContractNumber"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ContractNumber": {
+                "@id": "s4i:ContractNumber",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic ContractNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                }
+            ],
+            "ContractNumber": {
+                "@type": "ID",
+                "Value": "V34.989.1234567",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

@@ -55,6 +55,10 @@
                     "@vocab": "s4i:EnumTransactionCode#"
                 }
             },
+            "TransactionNumber": {
+                "@id": "s4i:TransactionNumber",
+                "@type": "s4i:ID"
+            },
             "TransactionTrigger": {
                 "@id": "s4i:TransactionTrigger",
                 "@type": "@vocab",
@@ -86,6 +90,23 @@
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/BusinessTransactionDelivery.jsonld",
                 "http://schema4i.org/ParcelDelivery.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                },
                 {
                     "@id": "schema:category",
                     "@type": "@vocab",
@@ -98,6 +119,23 @@
             "Identifier": "4711",
             "IdentifierReference": "VNR-4712",
             "TransactionCode": "100007000",
+            "TransactionNumber": [{
+                "@type": "ID",
+                "Value": "4711",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            }, {
+                "@type": "ID",
+                "Value": "VNR-4712",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Broker"
+                }
+            }],
             "TransactionTrigger": "001",
             "Category": "030",
             "Name": "Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",

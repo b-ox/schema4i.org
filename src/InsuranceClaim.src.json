@@ -24,6 +24,10 @@
             "CausedBy": {
                 "@id": "s4i:CausedBy",
                 "@type": "s4i:LossEvent"
+            },
+            "ClaimNumber": {
+                "@id": "s4i:ClaimNumber",
+                "@type": "s4i:ID"
             }
         }
     },
@@ -37,9 +41,36 @@
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/LossEvent.jsonld",
-                "http://schema4i.org/PersonalInjuryDamage.jsonld"
+                "http://schema4i.org/PersonalInjuryDamage.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                }
             ],
             "@type": "InsuranceClaim",
+            "ClaimNumber": {
+                "@type": "ID",
+                "Value": "PD8734675",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            },
             "CausedBy": {
                 "@type": "LossEvent",
                 "Description": "Unfall",

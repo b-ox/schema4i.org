@@ -1,0 +1,65 @@
+{
+    "type": "EntityCode",
+    "uri": "http://schema4i.org/EntityCode",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing a person or organization affiliated with a contract or business transaction.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#EntityCode" },
+        { "@id": "http://schema4i.org/Organization#EntityCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "EntityCode": {
+                "@id": "s4i:EntityCode",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic EntityCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    }
+                },
+                {
+                    "EncodingFormat": {
+                        "@id": "schema:encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                        }
+                    }
+                }
+            ],
+            "EntityCode": {
+                "@type": "ID",
+                "Value": "4711",
+                "EncodingFormat": "Printable",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

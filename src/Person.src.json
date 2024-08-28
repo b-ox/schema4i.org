@@ -71,6 +71,10 @@
                 "@id": "schema:email",
                 "@type": "schema:Text"
             },
+            "EntityCode": {
+                "@id": "s4i:EntityCode",
+                "@type": "s4i:ID"
+            },
             "FaxNumber": {
                 "@id": "schema:faxNumber",
                 "@type": "schema:Text"
