@@ -1,0 +1,26 @@
+{
+    "type": "EnumIdentifierFormatCode",
+    "uri": "http://schema4i.org/EnumIdentifierFormatCode",
+    "description": "A code that describes the format in which an identifying number, such as a contract number or a transaction number is structured.",
+    "links": [{
+        "url": "http://schema4i.org/EnumIdentifierFormatCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Raw": "s4i:EnumConstructionStatusCode#Raw",
+            "Printable": "s4i:EnumConstructionStatusCode#Printable",
+            "Legacy": "s4i:EnumConstructionStatusCode#Legacy",
+            "Standardized": "s4i:EnumConstructionStatusCode#Standardized",
+            "User-Entered": "s4i:EnumConstructionStatusCode#UserEntered",
+            "Other": "s4i:EnumConstructionStatusCode#Other"
+        }
+    }
+}

@@ -15,11 +15,11 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Versicherer": "s4i:EnumConstructionStatusCode#INSURER",
-            "Vertragspartner": "s4i:EnumConstructionStatusCode#CUSTOMER",
-            "Versicherte Person": "s4i:EnumConstructionStatusCode#INSURED",
-            "Vermittler": "s4i:EnumConstructionStatusCode#BROKER",
-            "Sonstiger": "s4i:EnumConstructionStatusCode#OTHER"
+            "Versicherer": "s4i:EnumConstructionStatusCode#Insurer",
+            "Vertragspartner": "s4i:EnumConstructionStatusCode#Customer",
+            "Versicherte Person": "s4i:EnumConstructionStatusCode#Insured",
+            "Vermittler": "s4i:EnumConstructionStatusCode#Broker",
+            "Sonstiger": "s4i:EnumConstructionStatusCode#Other"
         }
     }
 }

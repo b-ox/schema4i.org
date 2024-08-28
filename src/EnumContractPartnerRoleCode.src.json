@@ -15,11 +15,11 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Insurer": "s4i:EnumConstructionStatusCode#INSURER",
-            "Customer": "s4i:EnumConstructionStatusCode#CUSTOMER",
-            "Insured Person": "s4i:EnumConstructionStatusCode#INSURED",
-            "Broker": "s4i:EnumConstructionStatusCode#BROKER",
-            "Other": "s4i:EnumConstructionStatusCode#OTHER"
+            "Insurer": "s4i:EnumConstructionStatusCode#Insurer",
+            "Customer": "s4i:EnumConstructionStatusCode#Customer",
+            "Insured Person": "s4i:EnumConstructionStatusCode#Insured",
+            "Broker": "s4i:EnumConstructionStatusCode#Broker",
+            "Other": "s4i:EnumConstructionStatusCode#Other"
         }
     }
 }
