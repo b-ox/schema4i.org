@@ -59,10 +59,6 @@
                 "@id": "s4i:ContractNumber",
                 "@type": "s4i:ID"
             },
-            "ContractRevisionNumber": {
-                "@id": "s4i:ContractRevisionNumber",
-                "@type": "s4i:ID"
-            },
             "Customer": {
                 "@id": "schema:customer"
             },
@@ -235,15 +231,6 @@
                     "RoleCode": "Broker"
                 }
             }],
-            "ContractRevisionNumber": {
-                "@type": "ID",
-                "Value": "V34.989.1234567-2408281150",
-                "EncodingFormat": "Printable",
-                "Creator": {
-                    "@type": "Role",
-                    "RoleCode": "Insurer"
-                }
-            },
             "Customer": {},
             "Delivery": {
                 "@type": "ParcelDelivery",
