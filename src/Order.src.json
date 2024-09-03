@@ -40,8 +40,8 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Order": "schema:Order",
-            "ApplicationNumber": {
-                "@id": "s4i:ApplicationNumber",
+            "ApplicationID": {
+                "@id": "s4i:ApplicationID",
                 "@type": "s4i:ID"
             },
             "BillingAddress": {
@@ -59,8 +59,8 @@
                 "@id": "schema:confirmationNumber",
                 "@type": "schema:Text"
             },
-            "ContractNumber": {
-                "@id": "s4i:ContractNumber",
+            "ContractID": {
+                "@id": "s4i:ContractID",
                 "@type": "s4i:ID"
             },
             "Customer": {
@@ -86,8 +86,8 @@
                 "@id": "schema:dateModified",
                 "@type": "schema:Date"
             },
-            "FileReference": {
-                "@id": "s4i:FileReference",
+            "FileReferenceID": {
+                "@id": "s4i:FileReferenceID",
                 "@type": "s4i:ID"
             },
             "Group": {
@@ -210,7 +210,7 @@
                 }
             ],
             "@type": "Order",
-            "ApplicationNumber": {
+            "ApplicationID": {
                 "@type": "ID",
                 "Value": "A38",
                 "EncodingFormat": "Raw",
@@ -234,7 +234,7 @@
                 }
             },
             "ConfirmationNumber": "BELEG-03 -0000014",
-            "ContractNumber": [{
+            "ContractID": [{
                 "@type": "ID",
                 "Value": "BELEG-03 -0000014",
                 "EncodingFormat": "Printable",
@@ -281,7 +281,7 @@
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
-            "FileReference": {
+            "FileReferenceID": {
                 "@type": "ID",
                 "Value": "211321/37",
                 "EncodingFormat": "Printable",

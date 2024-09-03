@@ -1,10 +1,10 @@
 {
-    "type": "TransactionNumber",
-    "uri": "http://schema4i.org/TransactionNumber",
-    "description": "A code, assigned by one of the involved parties, unambiguously referencing a single business transaction.",
+    "type": "ContractID",
+    "uri": "http://schema4i.org/ContractID",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing a contract.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/BusinessTransferAction#TransactionNumber"
+        "@id": "http://schema4i.org/Order#ContractID"
     }],
     "base": [
         { "@id": "http://schema4i.org/Property" }
@@ -15,14 +15,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "TransactionNumber": {
-                "@id": "s4i:TransactionNumber",
+            "ContractID": {
+                "@id": "s4i:ContractID",
                 "@type": "s4i:ID"
             }
         }
     },
     "playground": [{
-        "title": "A realistic TransactionNumber",
+        "title": "A realistic ContractID",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -45,9 +45,9 @@
                     }
                 }
             ],
-            "TransactionNumber": {
+            "ContractID": {
                 "@type": "ID",
-                "Value": "TA202408281157123",
+                "Value": "V34.989.1234567",
                 "EncodingFormat": "Printable",
                 "Creator": {
                     "@type": "Role",

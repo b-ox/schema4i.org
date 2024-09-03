@@ -25,8 +25,8 @@
                 "@id": "s4i:CausedBy",
                 "@type": "s4i:LossEvent"
             },
-            "ClaimNumber": {
-                "@id": "s4i:ClaimNumber",
+            "ClaimID": {
+                "@id": "s4i:ClaimID",
                 "@type": "s4i:ID"
             }
         }
@@ -62,7 +62,7 @@
                 }
             ],
             "@type": "InsuranceClaim",
-            "ClaimNumber": {
+            "ClaimID": {
                 "@type": "ID",
                 "Value": "PD8734675",
                 "EncodingFormat": "Raw",

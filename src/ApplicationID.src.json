@@ -1,10 +1,10 @@
 {
-    "type": "ClaimNumber",
-    "uri": "http://schema4i.org/ClaimNumber",
-    "description": "A code, assigned by one of the involved parties, unambiguously referencing an insurance claim.",
+    "type": "ApplicationID",
+    "uri": "http://schema4i.org/ApplicationID",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing the process of the application of this order.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/InsuranceClaim#ClaimNumber"
+        "@id": "http://schema4i.org/Order#ApplicationID"
     }],
     "base": [
         { "@id": "http://schema4i.org/Property" }
@@ -15,14 +15,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "ClaimNumber": {
-                "@id": "s4i:ClaimNumber",
+            "ApplicationID": {
+                "@id": "s4i:ApplicationID",
                 "@type": "s4i:ID"
             }
         }
     },
     "playground": [{
-        "title": "A realistic ClaimNumber",
+        "title": "A realistic ApplicationID",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -45,10 +45,10 @@
                     }
                 }
             ],
-            "ClaimNumber": {
+            "ApplicationID": {
                 "@type": "ID",
-                "Value": "PD8734675",
-                "EncodingFormat": "Printable",
+                "Value": "A38",
+                "EncodingFormat": "Raw",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer",

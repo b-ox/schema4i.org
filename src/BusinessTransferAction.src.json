@@ -55,8 +55,8 @@
                     "@vocab": "s4i:EnumTransactionCode#"
                 }
             },
-            "TransactionNumber": {
-                "@id": "s4i:TransactionNumber",
+            "TransactionID": {
+                "@id": "s4i:TransactionID",
                 "@type": "s4i:ID"
             },
             "TransactionTrigger": {
@@ -119,7 +119,7 @@
             "Identifier": "4711",
             "IdentifierReference": "VNR-4712",
             "TransactionCode": "100007000",
-            "TransactionNumber": [{
+            "TransactionID": [{
                 "@type": "ID",
                 "Value": "4711",
                 "EncodingFormat": "Raw",
