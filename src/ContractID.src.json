@@ -47,7 +47,7 @@
             ],
             "ContractID": {
                 "@type": "ID",
-                "Value": "V34.989.1234567",
+                "Value": "V3.989.1234567",
                 "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",

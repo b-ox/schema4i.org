@@ -1,10 +1,10 @@
 {
-    "type": "BrokerID",
-    "uri": "http://schema4i.org/BrokerID",
-    "description": "A unique code, referencing the broker of a given order.",
+    "type": "ReplacesID",
+    "uri": "http://schema4i.org/ReplacesID",
+    "description": "A predecessor value that has been replaced by another ID. In the insurance industry, this could i.e. be a deprecated contract number",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/Order#BrokerID"
+        "@id": "http://schema4i.org/ID#ReplacesID"
     }],
     "base": [
         { "@id": "http://schema4i.org/Property" }
@@ -15,14 +15,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "BrokerID": {
-                "@id": "s4i:BrokerID",
+            "ReplacesID": {
+                "@id": "s4i:ReplacesID",
                 "@type": "s4i:ID"
             }
         }
     },
     "playground": [{
-        "title": "A realistic BrokerID",
+        "title": "An example for an ID and its predecessor in the ReplacesID property",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -45,18 +45,21 @@
                     }
                 }
             ],
-            "BrokerID": {
-                "@type": "ID",
-                "Value": "25565",
-                "EncodingFormat": "Raw",
+            "@type": "ID",
+            "Value": "V3.989.1234567",
+            "EncodingFormat": "PrintOptimized",
+            "Creator": {
+                "@type": "Role",
+                "RoleCode": "Insurer",
                 "Creator": {
-                    "@type": "Role",
-                    "RoleCode": "Broker",
-                    "Creator": {
-                        "@type": "Organization",
-                        "Identifier": "4711"
-                    }
+                    "@type": "Organization",
+                    "Identifier": "4711"
                 }
+            },
+            "ReplacesID": {
+                "@type": "ID",
+                "Name": "Veraltete Vertragsnummer",
+                "Value": "V2.989.1234567"
             }
         },
         "context": {}

@@ -20,6 +20,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ID": "s4i:ID",
+            "ReplacesID": {
+                "@id": "s4i:ReplacesID",
+                "@type": "s4i:ID"
+            },
             "Value": {
                 "@id": "schema:value"
             }
@@ -54,7 +58,7 @@
                 ],
                 "@type": "ID",
                 "Name": "Druckaufbereitete Vertragsnummer des Versicherers",
-                "Value": "V34.929.82638",
+                "Value": "V3.929.82638",
                 "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
@@ -64,6 +68,11 @@
                         "Identifier": "4711",
                         "Name": "Musterversicherer GmbH"
                     }
+                },
+                "ReplacesID": {
+                    "@type": "ID",
+                    "Name": "Veraltete Vertragsnummer",
+                    "Value": "V2.929.82638"
                 }
             },
             "context": {}
