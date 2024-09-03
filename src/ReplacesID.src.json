@@ -1,7 +1,7 @@
 {
     "type": "ReplacesID",
     "uri": "http://schema4i.org/ReplacesID",
-    "description": "A predecessor value that has been replaced by another ID. In the insurance industry, this could i.e. be a deprecated contract number",
+    "description": "A predecessor value that has been replaced by another ID. In the insurance industry, this could for example be a deprecated contract number",
     "links": [],
     "parents": [{
         "@id": "http://schema4i.org/ID#ReplacesID"

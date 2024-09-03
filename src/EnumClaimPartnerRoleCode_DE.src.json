@@ -15,20 +15,20 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Versicherungsnehmer": "s4i:EnumClaimPartnerCode#01",
-            "Versicherte Person": "s4i:EnumClaimPartnerCode#02",
-            "Anspruchsteller": "s4i:EnumClaimPartnerCode#03",
-            "Reparaturfirma": "s4i:EnumClaimPartnerCode#04",
-            "Sachverständiger": "s4i:EnumClaimPartnerCode#05",
-            "Zeuge": "s4i:EnumClaimPartnerCode#06",
-            "Rechtsanwalt": "s4i:EnumClaimPartnerCode#07",
-            "Sicherungsgläubiger": "s4i:EnumClaimPartnerCode#08",
-            "Versicherungsunternehmen": "s4i:EnumClaimPartnerCode#09",
-            "Dienstleister": "s4i:EnumClaimPartnerCode#10",
-            "Arzt": "s4i:EnumClaimPartnerCode#11",
-            "Krankenhaus": "s4i:EnumClaimPartnerCode#12",
-            "Vermittler": "s4i:EnumClaimPartnerCode#13",
-            "Sonstige": "s4i:EnumClaimPartnerCode#99"
+            "Versicherungsnehmer": "s4i:EnumClaimPartnerRoleCode#01",
+            "Versicherte Person": "s4i:EnumClaimPartnerRoleCode#02",
+            "Anspruchsteller": "s4i:EnumClaimPartnerRoleCode#03",
+            "Reparaturfirma": "s4i:EnumClaimPartnerRoleCode#04",
+            "Sachverständiger": "s4i:EnumClaimPartnerRoleCode#05",
+            "Zeuge": "s4i:EnumClaimPartnerRoleCode#06",
+            "Rechtsanwalt": "s4i:EnumClaimPartnerRoleCode#07",
+            "Sicherungsgläubiger": "s4i:EnumClaimPartnerRoleCode#08",
+            "Versicherungsunternehmen": "s4i:EnumClaimPartnerRoleCode#09",
+            "Dienstleister": "s4i:EnumClaimPartnerRoleCode#10",
+            "Arzt": "s4i:EnumClaimPartnerRoleCode#11",
+            "Krankenhaus": "s4i:EnumClaimPartnerRoleCode#12",
+            "Vermittler": "s4i:EnumClaimPartnerRoleCode#13",
+            "Sonstige": "s4i:EnumClaimPartnerRoleCode#99"
         }
     }
 }

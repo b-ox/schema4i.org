@@ -87,7 +87,7 @@
                 "@type": "schema:Date"
             },
             "FileReferenceID": {
-                "@id": "s4i:FileReferenceID",
+                "@id": "s4i:FileReference",
                 "@type": "s4i:ID"
             },
             "Group": {
