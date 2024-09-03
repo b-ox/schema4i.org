@@ -73,10 +73,6 @@
                 "@id": "schema:email",
                 "@type": "schema:Text"
             },
-            "EntityCode": {
-                "@id": "s4i:EntityCode",
-                "@type": "s4i:ID"
-            },
             "FaxNumber": {
                 "@id": "schema:faxNumber",
                 "@type": "schema:Text"
@@ -150,19 +146,6 @@
             "CommercialRegistrationNumber": "HRB 8297",
             "ContactPoint": {},
             "Email": "noreply@b-tix.de",
-            "EntityCode": {
-                "@type": "ID",
-                "Value": "BTIX",
-                "EncodingFormat": "Printable",
-                "Creator": {
-                    "@type": "Role",
-                    "RoleCode": "Insurer",
-                    "Creator": {
-                        "@type": "Organization",
-                        "Identifier": "4711"
-                    }
-                }
-            },
             "FaxNumber": "0211 41608 100",
             "FoundingDate": "2013-02-08",
             "LegalName": "b-tix GmbH",

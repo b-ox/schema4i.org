@@ -51,6 +51,10 @@
             "Broker": {
                 "@id": "schema:broker"
             },
+            "BrokerID": {
+                "@id": "s4i:BrokerID",
+                "@type": "s4i:ID"
+            },
             "ConfirmationNumber": {
                 "@id": "schema:confirmationNumber",
                 "@type": "schema:Text"
@@ -61,6 +65,10 @@
             },
             "Customer": {
                 "@id": "schema:customer"
+            },
+            "CustomerID": {
+                "@id": "s4i:CustomerID",
+                "@type": "s4i:ID"
             },
             "Delivery": {
                 "@id": "s4i:ParcelDelivery",
@@ -212,7 +220,19 @@
                 }
             },
             "BillingAddress": {},
-            "Broker": {},
+            "Broker": {
+                "@type": "Organization",
+                "Identifier": "makler-muster"
+            },
+            "BrokerID": {
+                "@type": "ID",
+                "Value": "25565",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Broker"
+                }
+            },
             "ConfirmationNumber": "BELEG-03 -0000014",
             "ContractNumber": [{
                 "@type": "ID",
@@ -231,7 +251,20 @@
                     "RoleCode": "Broker"
                 }
             }],
-            "Customer": {},
+            "Customer": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max"
+            },
+            "CustomerID": {
+                "@type": "ID",
+                "Value": "17009000302",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "Insurer"
+                }
+            },
             "Delivery": {
                 "@type": "ParcelDelivery",
                 "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",

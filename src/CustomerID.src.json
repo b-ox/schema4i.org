@@ -1,12 +1,11 @@
 {
-    "type": "EntityCode",
-    "uri": "http://schema4i.org/EntityCode",
-    "description": "A code, assigned by one of the involved parties, unambiguously referencing a person or organization affiliated with a contract or business transaction.",
+    "type": "CustomerID",
+    "uri": "http://schema4i.org/CustomerID",
+    "description": "A unique code, referencing the customer of a given order.",
     "links": [],
-    "parents": [
-        { "@id": "http://schema4i.org/Person#EntityCode" },
-        { "@id": "http://schema4i.org/Organization#EntityCode" }
-    ],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#CustomerID"
+    }],
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],
@@ -16,14 +15,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "EntityCode": {
-                "@id": "s4i:EntityCode",
+            "CustomerID": {
+                "@id": "s4i:CustomerID",
                 "@type": "s4i:ID"
             }
         }
     },
     "playground": [{
-        "title": "A realistic EntityCode",
+        "title": "A realistic CustomerID",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -46,10 +45,10 @@
                     }
                 }
             ],
-            "EntityCode": {
+            "CustomerID": {
                 "@type": "ID",
-                "Value": "4711",
-                "EncodingFormat": "Printable",
+                "Value": "17009000302",
+                "EncodingFormat": "Raw",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer",
