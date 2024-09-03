@@ -184,18 +184,21 @@
                     "Value": {
                         "@id": "http://schema.org/value",
                         "@type": "http://schema.org/Number"
-                    }
-                },
-                {
+                    },
                     "EncodingFormat": {
-                        "@id": "schema:encodingFormat",
+                        "@id": "http://schema.org/encodingFormat",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumIDFormatCode#"
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
                         }
-                    }
-                },
-                {
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
+                    },
                     "PaymentMethod": {
                         "@id": "http://schema.org/paymentMethod",
                         "@type": "http://schema.org/PaymentMethod"
@@ -216,7 +219,7 @@
                 "EncodingFormat": "Raw",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Insurer"
+                    "RoleCode": "001"
                 }
             },
             "BillingAddress": {},
@@ -230,7 +233,7 @@
                 "EncodingFormat": "Raw",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Broker"
+                    "RoleCode": "004"
                 }
             },
             "ConfirmationNumber": "BELEG-03 -0000014",
@@ -240,7 +243,7 @@
                 "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Insurer"
+                    "RoleCode": "001"
                 }
             }, {
                 "@type": "ID",
@@ -248,7 +251,7 @@
                 "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Broker"
+                    "RoleCode": "004"
                 },
                 "ReplacesID": {
                     "@type": "ID",
@@ -267,7 +270,7 @@
                 "EncodingFormat": "Raw",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Insurer"
+                    "RoleCode": "001"
                 }
             },
             "Delivery": {
@@ -292,7 +295,7 @@
                 "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Insurer"
+                    "RoleCode": "001"
                 }
             },
             "Group": {},

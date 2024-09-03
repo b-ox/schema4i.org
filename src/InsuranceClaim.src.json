@@ -49,14 +49,19 @@
                     "Value": {
                         "@id": "http://schema.org/value",
                         "@type": "http://schema.org/Number"
-                    }
-                },
-                {
+                    },
                     "EncodingFormat": {
-                        "@id": "schema:encodingFormat",
+                        "@id": "http://schema.org/encodingFormat",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumIDFormatCode#"
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
                         }
                     }
                 }
@@ -68,7 +73,7 @@
                 "EncodingFormat": "Raw",
                 "Creator": {
                     "@type": "Role",
-                    "RoleCode": "Insurer"
+                    "RoleCode": "001"
                 }
             },
             "CausedBy": {
