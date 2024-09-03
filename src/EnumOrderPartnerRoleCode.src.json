@@ -1,0 +1,30 @@
+{
+    "type": "EnumOrderPartnerRoleCode",
+    "uri": "http://schema4i.org/EnumOrderPartnerRoleCode",
+    "description": "A code that represents the role a person or organization inherits for a given order.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOrderPartnerRoleCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Insurer": "s4i:EnumOrderPartnerRoleCode#001",
+            "Customer": "s4i:EnumOrderPartnerRoleCode#002",
+            "Insured Person": "s4i:EnumOrderPartnerRoleCode#003",
+            "Broker": "s4i:EnumOrderPartnerRoleCode#004",
+            "Payer": "s4i:EnumOrderPartnerRoleCode#005",
+            "Creditor": "s4i:EnumOrderPartnerRoleCode#006",
+            "Beneficial Owner": "s4i:EnumOrderPartnerRoleCode#007",
+            "Mail Recipient": "s4i:EnumOrderPartnerRoleCode#008",
+            "Reference Recipient": "s4i:EnumOrderPartnerRoleCode#009",
+            "Beneficiary": "s4i:EnumOrderPartnerRoleCode#010"
+        }
+    }
+}
