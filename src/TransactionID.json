@@ -40,7 +40,7 @@
                         "@id": "schema:encodingFormat",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                            "@vocab": "s4i:EnumIDFormatCode#"
                         }
                     }
                 }
@@ -48,7 +48,7 @@
             "TransactionID": {
                 "@type": "ID",
                 "Value": "TA202408281157123",
-                "EncodingFormat": "Printable",
+                "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer",

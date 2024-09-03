@@ -8,7 +8,7 @@
         }
     ],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessRelationshipRole#RoleCode" }
+        { "@id": "http://schema4i.org/PersonalRelationshipRole#RoleCode" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
@@ -18,30 +18,30 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "spouse": "s4i:EnumBusinessRelationshipCode#01",
-            "partner": "s4i:EnumBusinessRelationshipCode#02",
-            "child": "s4i:EnumBusinessRelationshipCode#03",
-            "stepchild": "s4i:EnumBusinessRelationshipCode#04",
-            "foster child": "s4i:EnumBusinessRelationshipCode#05",
-            "parent": "s4i:EnumBusinessRelationshipCode#06",
-            "grandchild": "s4i:EnumBusinessRelationshipCode#07",
-            "sibling": "s4i:EnumBusinessRelationshipCode#08",
-            "not related": "s4i:EnumBusinessRelationshipCode#09",
-            "other": "s4i:EnumBusinessRelationshipCode#10",
-            "grandparent": "s4i:EnumBusinessRelationshipCode#11",
-            "other realtive": "s4i:EnumBusinessRelationshipCode#12",
-            "common household": "s4i:EnumBusinessRelationshipCode#16",
-            "roommate": "s4i:EnumBusinessRelationshipCode#17",
-            "potetentiel roommate": "s4i:EnumBusinessRelationshipCode#18",
-            "adoptive parent": "s4i:EnumBusinessRelationshipCode#39",
-            "adopted child": "s4i:EnumBusinessRelationshipCode#40",
-            "parent-in-law": "s4i:EnumBusinessRelationshipCode#41",
-            "child-in-law": "s4i:EnumBusinessRelationshipCode#41",
-            "Stepparent": "s4i:EnumBusinessRelationshipCode#42",
-            "foster parent": "s4i:EnumBusinessRelationshipCode#44",
-            "family member": "s4i:EnumBusinessRelationshipCode#45",
-            "subtenant": "s4i:EnumBusinessRelationshipCode#44",
-            "visitor": "s4i:EnumBusinessRelationshipCode#47"
+            "spouse": "s4i:EnumPersonalRelationshipCode#01",
+            "partner": "s4i:EnumPersonalRelationshipCode#02",
+            "child": "s4i:EnumPersonalRelationshipCode#03",
+            "stepchild": "s4i:EnumPersonalRelationshipCode#04",
+            "foster child": "s4i:EnumPersonalRelationshipCode#05",
+            "parent": "s4i:EnumPersonalRelationshipCode#06",
+            "grandchild": "s4i:EnumPersonalRelationshipCode#07",
+            "sibling": "s4i:EnumPersonalRelationshipCode#08",
+            "not related": "s4i:EnumPersonalRelationshipCode#09",
+            "other": "s4i:EnumPersonalRelationshipCode#10",
+            "grandparent": "s4i:EnumPersonalRelationshipCode#11",
+            "other relative": "s4i:EnumPersonalRelationshipCode#12",
+            "common household": "s4i:EnumPersonalRelationshipCode#16",
+            "roommate": "s4i:EnumPersonalRelationshipCode#17",
+            "potential roommate": "s4i:EnumPersonalRelationshipCode#18",
+            "adoptive parent": "s4i:EnumPersonalRelationshipCode#39",
+            "adopted child": "s4i:EnumPersonalRelationshipCode#40",
+            "parent-in-law": "s4i:EnumPersonalRelationshipCode#41",
+            "child-in-law": "s4i:EnumPersonalRelationshipCode#42",
+            "stepparent": "s4i:EnumPersonalRelationshipCode#43",
+            "foster parent": "s4i:EnumPersonalRelationshipCode#44",
+            "family member": "s4i:EnumPersonalRelationshipCode#45",
+            "subtenant": "s4i:EnumPersonalRelationshipCode#46",
+            "visitor": "s4i:EnumPersonalRelationshipCode#47"
         }
     }
 }

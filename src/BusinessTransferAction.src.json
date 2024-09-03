@@ -103,7 +103,7 @@
                         "@id": "schema:encodingFormat",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                            "@vocab": "s4i:EnumIDFormatCode#"
                         }
                     }
                 },

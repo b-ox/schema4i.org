@@ -1,0 +1,24 @@
+{
+    "type": "EnumIDFormatCode_DE",
+    "uri": "http://schema4i.org/EnumIDFormatCode_DE",
+    "description": "Ein Code, der beschreibt, in welchem Format eine eindeutige Kennung, wie beispielsweise eine Vertrags- oder Vorgangsnummr, vorliegt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumIDFormatCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/CreativeWork#EncodingFormat" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Unformattiert": "s4i:EnumIDFormatCode#Raw",
+            "Druckaufbereitet": "s4i:EnumIDFormatCode#PrintOptimized"
+        }
+    }
+}

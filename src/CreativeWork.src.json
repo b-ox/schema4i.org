@@ -28,7 +28,7 @@
         ],
         "EncodingFormat": [
             { "@id": "http://schema.org/Text" },
-            { "@id": "http://schema4i.org/EnumIdentifierFormatCode" }
+            { "@id": "http://schema4i.org/EnumIDFormatCode" }
         ],
         "HasPart": [
             { "@id": "http://schema4i.org/CreativeWork" }

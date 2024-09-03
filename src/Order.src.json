@@ -191,7 +191,7 @@
                         "@id": "schema:encodingFormat",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                            "@vocab": "s4i:EnumIDFormatCode#"
                         }
                     }
                 },
@@ -237,7 +237,7 @@
             "ContractID": [{
                 "@type": "ID",
                 "Value": "BELEG-03 -0000014",
-                "EncodingFormat": "Printable",
+                "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer"
@@ -245,7 +245,7 @@
             }, {
                 "@type": "ID",
                 "Value": "V34.989.1234567",
-                "EncodingFormat": "Printable",
+                "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Broker"
@@ -284,7 +284,7 @@
             "FileReferenceID": {
                 "@type": "ID",
                 "Value": "211321/37",
-                "EncodingFormat": "Printable",
+                "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer"

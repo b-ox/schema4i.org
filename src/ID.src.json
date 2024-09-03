@@ -47,7 +47,7 @@
                             "@id": "schema:encodingFormat",
                             "@type": "@vocab",
                             "@context": {
-                                "@vocab": "s4i:EnumIdentifierFormatCode#"
+                                "@vocab": "s4i:EnumIDFormatCode#"
                             }
                         }
                     }
@@ -55,7 +55,7 @@
                 "@type": "ID",
                 "Name": "Druckaufbereitete Vertragsnummer des Versicherers",
                 "Value": "V34.929.82638",
-                "EncodingFormat": "Printable",
+                "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer",

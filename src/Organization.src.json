@@ -121,22 +121,7 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Role.jsonld",
-                "http://schema4i.org/ID.jsonld",
-                {
-                    "Value": {
-                        "@id": "http://schema.org/value",
-                        "@type": "http://schema.org/Number"
-                    }
-                },
-                {
-                    "EncodingFormat": {
-                        "@id": "schema:encodingFormat",
-                        "@type": "@vocab",
-                        "@context": {
-                            "@vocab": "s4i:EnumIdentifierFormatCode#"
-                        }
-                    }
-                }
+                "http://schema4i.org/ID.jsonld"
             ],
             "@type": "Organization",
             "AdditionalName": ["c/o X-PLOR GmbH", "4. Etage"],

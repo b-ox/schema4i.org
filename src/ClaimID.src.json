@@ -40,7 +40,7 @@
                         "@id": "schema:encodingFormat",
                         "@type": "@vocab",
                         "@context": {
-                            "@vocab": "s4i:EnumIdentifierFormatCode#"
+                            "@vocab": "s4i:EnumIDFormatCode#"
                         }
                     }
                 }
@@ -48,7 +48,7 @@
             "ClaimID": {
                 "@type": "ID",
                 "Value": "PD8734675",
-                "EncodingFormat": "Printable",
+                "EncodingFormat": "PrintOptimized",
                 "Creator": {
                     "@type": "Role",
                     "RoleCode": "Insurer",
