@@ -55,6 +55,10 @@
                     "@vocab": "s4i:EnumTransactionCode#"
                 }
             },
+            "TransactionID": {
+                "@id": "s4i:TransactionID",
+                "@type": "s4i:ID"
+            },
             "TransactionTrigger": {
                 "@id": "s4i:TransactionTrigger",
                 "@type": "@vocab",
@@ -86,11 +90,33 @@
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/BusinessTransactionDelivery.jsonld",
                 "http://schema4i.org/ParcelDelivery.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Role.jsonld",
                 {
-                    "@id": "schema:category",
-                    "@type": "@vocab",
-                    "@context": {
-                        "@vocab": "s4i:EnumLineOfBusinessCode"
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumLineOfBusinessCode"
+                        }
+                    },
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
                     }
                 }
             ],
@@ -98,6 +124,23 @@
             "Identifier": "4711",
             "IdentifierReference": "VNR-4712",
             "TransactionCode": "100007000",
+            "TransactionID": [{
+                "@type": "ID",
+                "Value": "4711",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001"
+                }
+            }, {
+                "@type": "ID",
+                "Value": "VNR-4712",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "004"
+                }
+            }],
             "TransactionTrigger": "001",
             "Category": "030",
             "Name": "Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",

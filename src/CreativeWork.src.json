@@ -26,6 +26,10 @@
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
         ],
+        "EncodingFormat": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumIDFormatCode" }
+        ],
         "HasPart": [
             { "@id": "http://schema4i.org/CreativeWork" }
         ],
@@ -66,8 +70,7 @@
                 "@type": "schema:DateTime"
             },
             "EncodingFormat": {
-                "@id": "schema:encodingFormat",
-                "@type": "schema:Text"
+                "@id": "schema:encodingFormat"
             },
             "Expires": {
                 "@id": "schema:expires",

@@ -1,0 +1,30 @@
+{
+    "type": "EnumOrderPartnerRoleCode_DE",
+    "uri": "http://schema4i.org/EnumOrderPartnerRoleCode_DE",
+    "description": "Ein Code, der die Rolle beschreibt, die eine Person oder Unternehmen für einen gegebenen Antrag oder Vertrag einnimmt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOrderPartnerRoleCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Unternehmen": "s4i:EnumOrderPartnerRoleCode#001",
+            "Vertragspartner": "s4i:EnumOrderPartnerRoleCode#002",
+            "Versicherte Person": "s4i:EnumOrderPartnerRoleCode#003",
+            "Vermittler": "s4i:EnumOrderPartnerRoleCode#004",
+            "Beitragszahler": "s4i:EnumOrderPartnerRoleCode#005",
+            "Gläubiger": "s4i:EnumOrderPartnerRoleCode#006",
+            "Wirtschaftlich Berechtigter": "s4i:EnumOrderPartnerRoleCode#007",
+            "Postempfänger": "s4i:EnumOrderPartnerRoleCode#008",
+            "Bezugsberechtigter": "s4i:EnumOrderPartnerRoleCode#009",
+            "Leistungsempfänger": "s4i:EnumOrderPartnerRoleCode#010"
+        }
+    }
+}

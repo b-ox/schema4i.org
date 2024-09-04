@@ -1,0 +1,69 @@
+{
+    "type": "TransactionID",
+    "uri": "http://schema4i.org/TransactionID",
+    "description": "A code, assigned by one of the involved parties, unambiguously referencing a single business transaction.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/BusinessTransferAction#TransactionID"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "TransactionID": {
+                "@id": "s4i:TransactionID",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic TransactionID",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
+                    }
+                }
+            ],
+            "TransactionID": {
+                "@type": "ID",
+                "Value": "TA202408281157123",
+                "EncodingFormat": "PrintOptimized",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

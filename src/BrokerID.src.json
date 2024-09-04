@@ -1,0 +1,69 @@
+{
+    "type": "BrokerID",
+    "uri": "http://schema4i.org/BrokerID",
+    "description": "A unique code, referencing the broker of a given order.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Order#BrokerID"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BrokerID": {
+                "@id": "s4i:BrokerID",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic BrokerID",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
+                    }
+                }
+            ],
+            "BrokerID": {
+                "@type": "ID",
+                "Value": "25565",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "004",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}

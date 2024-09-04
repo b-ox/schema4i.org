@@ -8,7 +8,7 @@
         }
     ],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessRelationshipRole#RoleCode" }
+        { "@id": "http://schema4i.org/PersonalRelationshipRole#RoleCode" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
@@ -18,30 +18,30 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Ehepartner": "s4i:EnumBusinessRelationshipCode#01",
-            "Lebenspartner": "s4i:EnumBusinessRelationshipCode#02",
-            "Kind": "s4i:EnumBusinessRelationshipCode#03",
-            "Stiefkind": "s4i:EnumBusinessRelationshipCode#04",
-            "Pflegekind": "s4i:EnumBusinessRelationshipCode#05",
-            "Elternteil": "s4i:EnumBusinessRelationshipCode#06",
-            "Enkelkind": "s4i:EnumBusinessRelationshipCode#07",
-            "Geschwisterteil": "s4i:EnumBusinessRelationshipCode#08",
-            "nicht verwandt": "s4i:EnumBusinessRelationshipCode#09",
-            "sonstiges": "s4i:EnumBusinessRelationshipCode#10",
-            "Großelternteil": "s4i:EnumBusinessRelationshipCode#11",
-            "sonstiger Verwandter. Sonstige Verwandte sind Neffen, Nichten, Onkel Tanten, etc": "s4i:EnumBusinessRelationshipCode#12",
-            "Häusliche Gemeinschaft": "s4i:EnumBusinessRelationshipCode#16",
-            "Mitbewohner": "s4i:EnumBusinessRelationshipCode#17",
-            "potenzieller Mitbewohner": "s4i:EnumBusinessRelationshipCode#18",
-            "Adoptivelternteil": "s4i:EnumBusinessRelationshipCode#39",
-            "Adoptivkind": "s4i:EnumBusinessRelationshipCode#40",
-            "Schwiegerelternteil": "s4i:EnumBusinessRelationshipCode#41",
-            "Schwiegerkind": "s4i:EnumBusinessRelationshipCode#41",
-            "Stiefelternteil": "s4i:EnumBusinessRelationshipCode#42",
-            "Pflegeelternteil": "s4i:EnumBusinessRelationshipCode#44",
-            "Familienangehöriger. Familienangehörige sind Eltern mit ihren Kindern.": "s4i:EnumBusinessRelationshipCode#45",
-            "Untermieter": "s4i:EnumBusinessRelationshipCode#44",
-            "Besucher": "s4i:EnumBusinessRelationshipCode#47"
+            "Ehepartner": "s4i:EnumPersonalRelationshipCode#01",
+            "Lebenspartner": "s4i:EnumPersonalRelationshipCode#02",
+            "Kind": "s4i:EnumPersonalRelationshipCode#03",
+            "Stiefkind": "s4i:EnumPersonalRelationshipCode#04",
+            "Pflegekind": "s4i:EnumPersonalRelationshipCode#05",
+            "Elternteil": "s4i:EnumPersonalRelationshipCode#06",
+            "Enkelkind": "s4i:EnumPersonalRelationshipCode#07",
+            "Geschwisterteil": "s4i:EnumPersonalRelationshipCode#08",
+            "nicht verwandt": "s4i:EnumPersonalRelationshipCode#09",
+            "sonstiges": "s4i:EnumPersonalRelationshipCode#10",
+            "Großelternteil": "s4i:EnumPersonalRelationshipCode#11",
+            "sonstiger Verwandter. Sonstige Verwandte sind Neffen, Nichten, Onkel, Tanten, etc": "s4i:EnumPersonalRelationshipCode#12",
+            "Häusliche Gemeinschaft": "s4i:EnumPersonalRelationshipCode#16",
+            "Mitbewohner": "s4i:EnumPersonalRelationshipCode#17",
+            "potenzieller Mitbewohner": "s4i:EnumPersonalRelationshipCode#18",
+            "Adoptivelternteil": "s4i:EnumPersonalRelationshipCode#39",
+            "Adoptivkind": "s4i:EnumPersonalRelationshipCode#40",
+            "Schwiegerelternteil": "s4i:EnumPersonalRelationshipCode#41",
+            "Schwiegerkind": "s4i:EnumPersonalRelationshipCode#42",
+            "Stiefelternteil": "s4i:EnumPersonalRelationshipCode#43",
+            "Pflegeelternteil": "s4i:EnumPersonalRelationshipCode#44",
+            "Familienangehöriger. Familienangehörige sind Eltern mit ihren Kindern.": "s4i:EnumPersonalRelationshipCode#45",
+            "Untermieter": "s4i:EnumPersonalRelationshipCode#46",
+            "Besucher": "s4i:EnumPersonalRelationshipCode#47"
         }
     }
 }

@@ -4,20 +4,25 @@
     "description": "A number or alphanumeric identifier assigned to unambiguously reference a digital or analog document of any form or size often relating to administrational, financial or judicial business transactions or processes.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessTransferAction#FileReference" }
+        { "@id": "http://schema4i.org/BusinessTransferAction#FileReference" },
+        { "@id": "http://schema4i.org/Order#FileReferenceID" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "FileReference": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/ID" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "FileReference": {
-                "@id": "s4i:FileReference",
-                "@type": "schema:Text"
+                "@id": "s4i:FileReference"
             }
         }
     },

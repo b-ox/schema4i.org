@@ -24,6 +24,10 @@
             "CausedBy": {
                 "@id": "s4i:CausedBy",
                 "@type": "s4i:LossEvent"
+            },
+            "ClaimID": {
+                "@id": "s4i:ClaimID",
+                "@type": "s4i:ID"
             }
         }
     },
@@ -37,9 +41,41 @@
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/LossEvent.jsonld",
-                "http://schema4i.org/PersonalInjuryDamage.jsonld"
+                "http://schema4i.org/PersonalInjuryDamage.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
+                    }
+                }
             ],
             "@type": "InsuranceClaim",
+            "ClaimID": {
+                "@type": "ID",
+                "Value": "PD8734675",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001"
+                }
+            },
             "CausedBy": {
                 "@type": "LossEvent",
                 "Description": "Unfall",

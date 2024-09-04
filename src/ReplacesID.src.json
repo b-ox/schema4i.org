@@ -1,0 +1,72 @@
+{
+    "type": "ReplacesID",
+    "uri": "http://schema4i.org/ReplacesID",
+    "description": "A predecessor value that has been replaced by another ID. In the insurance industry, this could for example be a deprecated contract number",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/ID#ReplacesID"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ReplacesID": {
+                "@id": "s4i:ReplacesID",
+                "@type": "s4i:ID"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example for an ID and its predecessor in the ReplacesID property",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
+                    }
+                }
+            ],
+            "@type": "ID",
+            "Value": "V3.989.1234567",
+            "EncodingFormat": "PrintOptimized",
+            "Creator": {
+                "@type": "Role",
+                "RoleCode": "001",
+                "Creator": {
+                    "@type": "Organization",
+                    "Identifier": "4711"
+                }
+            },
+            "ReplacesID": {
+                "@type": "ID",
+                "Name": "Veraltete Vertragsnummer",
+                "Value": "V2.989.1234567"
+            }
+        },
+        "context": {}
+    }]
+}

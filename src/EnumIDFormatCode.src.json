@@ -1,0 +1,24 @@
+{
+    "type": "EnumIDFormatCode",
+    "uri": "http://schema4i.org/EnumIDFormatCode",
+    "description": "A code that describes the format in which an identifying number, such as a contract number or a transaction number is structured.",
+    "links": [{
+        "url": "http://schema4i.org/EnumIDFormatCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/CreativeWork#EncodingFormat" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Raw": "s4i:EnumIDFormatCode#Raw",
+            "Print-optimized": "s4i:EnumIDFormatCode#PrintOptimized"
+        }
+    }
+}

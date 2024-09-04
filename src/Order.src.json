@@ -40,6 +40,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Order": "schema:Order",
+            "ApplicationID": {
+                "@id": "s4i:ApplicationID",
+                "@type": "s4i:ID"
+            },
             "BillingAddress": {
                 "@id": "schema:billingAddress",
                 "@type": "s4i:PostalAddress"
@@ -47,12 +51,24 @@
             "Broker": {
                 "@id": "schema:broker"
             },
+            "BrokerID": {
+                "@id": "s4i:BrokerID",
+                "@type": "s4i:ID"
+            },
             "ConfirmationNumber": {
                 "@id": "schema:confirmationNumber",
                 "@type": "schema:Text"
             },
+            "ContractID": {
+                "@id": "s4i:ContractID",
+                "@type": "s4i:ID"
+            },
             "Customer": {
                 "@id": "schema:customer"
+            },
+            "CustomerID": {
+                "@id": "s4i:CustomerID",
+                "@type": "s4i:ID"
             },
             "Delivery": {
                 "@id": "s4i:ParcelDelivery",
@@ -69,6 +85,10 @@
             "DateModified": {
                 "@id": "schema:dateModified",
                 "@type": "schema:Date"
+            },
+            "FileReferenceID": {
+                "@id": "s4i:FileReference",
+                "@type": "s4i:ID"
             },
             "Group": {
                 "@id": "s4i:Group",
@@ -157,7 +177,28 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Order.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
                 {
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
+                    },
                     "PaymentMethod": {
                         "@id": "http://schema.org/paymentMethod",
                         "@type": "http://schema.org/PaymentMethod"
@@ -172,10 +213,66 @@
                 }
             ],
             "@type": "Order",
+            "ApplicationID": {
+                "@type": "ID",
+                "Value": "A38",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001"
+                }
+            },
             "BillingAddress": {},
-            "Broker": {},
+            "Broker": {
+                "@type": "Organization",
+                "Identifier": "makler-muster"
+            },
+            "BrokerID": {
+                "@type": "ID",
+                "Value": "25565",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "004"
+                }
+            },
             "ConfirmationNumber": "BELEG-03 -0000014",
-            "Customer": {},
+            "ContractID": [{
+                "@type": "ID",
+                "Value": "BELEG-03 -0000014",
+                "EncodingFormat": "PrintOptimized",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001"
+                }
+            }, {
+                "@type": "ID",
+                "Value": "V3.989.1234567",
+                "EncodingFormat": "PrintOptimized",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "004"
+                },
+                "ReplacesID": {
+                    "@type": "ID",
+                    "Value": "V2.989.1234567",
+                    "Name": "Veraltete Vertragsnummer"
+                }
+            }],
+            "Customer": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max"
+            },
+            "CustomerID": {
+                "@type": "ID",
+                "Value": "17009000302",
+                "EncodingFormat": "Raw",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001"
+                }
+            },
             "Delivery": {
                 "@type": "ParcelDelivery",
                 "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
@@ -192,6 +289,15 @@
             "Discount": 100.00,
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
+            "FileReferenceID": {
+                "@type": "ID",
+                "Value": "211321/37",
+                "EncodingFormat": "PrintOptimized",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001"
+                }
+            },
             "Group": {},
             "OrderDate": "2020-07-30",
             "OrderedItem": {},
