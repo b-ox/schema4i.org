@@ -1,0 +1,41 @@
+{
+    "type": "CareIncomeCoverage",
+    "uri": "http://schema4i.org/CareIncomeCoverage",
+    "description": "A coverage for individuals needing care due to age, illness, or disability",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CareIncomeCoverage": "s4i:CareIncomeCoverage"
+        }
+    },
+    "playground": [{
+        "title": "sample CareIncomeCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/CareIncomeCoverage.jsonld"
+            ],
+            "@type": "CareIncomeCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
+            },
+            "Covers": {
+                "@type": "CareRisk"
+            }
+        },
+        "context": {}
+    }]
+}
