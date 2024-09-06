@@ -1,7 +1,7 @@
 {
     "type": "RetirementIncomeCoverage",
     "uri": "http://schema4i.org/RetirementIncomeCoverage",
-    "description": "Provides coverage for an individual's income during their retirement years.",
+    "description": "Provides a coverage for an individual's income during their retirement years.",
     "links": [],
     "parents": [],
     "base": [
