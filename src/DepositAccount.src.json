@@ -1,0 +1,44 @@
+{
+    "type": "DepositAccount",
+    "uri": "http://schema4i.org/DepositAccount",
+    "description": "A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/BankAccount" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DepositAccount": "schema:DepositAccount"
+        }
+    },
+    "playground": [{
+        "title": "sample DepositAccount",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/BankAccount.jsonld",
+                "http://schema4i.org/DepositAccount.jsonld",
+                 "http://schema4i.org/PostalAddress.jsonld"
+            ],
+            "@type": "DepositAccount",
+            "BIC": "PBNKDEFF",
+            "IBAN": "DE41500105170123456789",
+            "Name": "Max Mustermann",
+            "Provider": {
+                "@type": "Organization",
+                "Name": "Postbank",
+                "Address": {
+                "@type": "PostalAddress",
+                "AddressLocality": "Düsseldorf"
+                }
+            }
+        },
+        "context": {}
+    }]
+}
