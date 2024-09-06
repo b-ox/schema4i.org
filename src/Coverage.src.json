@@ -8,6 +8,7 @@
         { "@id": "http://schema4i.org/AccidentCoverage" },
         { "@id": "http://schema4i.org/CareIncomeCoverage" },
         { "@id": "http://schema4i.org/ContentsInsuranceCoverage" },
+        { "@id": "http://schema4i.org/DeathCoverage" },
         { "@id": "http://schema4i.org/DisabilityCoverage" },
         { "@id": "http://schema4i.org/VehicleLiabilityCoverage" },
         { "@id": "http://schema4i.org/FullyComprehensiveCoverage" },
