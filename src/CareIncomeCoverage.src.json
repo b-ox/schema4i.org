@@ -33,7 +33,7 @@
                 "Currency": "EUR"
             },
             "Covers": {
-                "@type": "Risk"
+                "@type": "CareRisk"
             }
         },
         "context": {}
