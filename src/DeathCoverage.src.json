@@ -1,0 +1,42 @@
+{
+    "type": "DeathCoverage",
+    "uri": "http://schema4i.org/DeathCoverage",
+    "description": "A coverage designed to support the insured's family or dependents, helping them cope with the financial impact of losing their primary source of income by paying a lump sum or series of payments to beneficiaries when the insured person dies.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DeathCoverage": "s4i:DeathCoverage"
+        }
+    },
+    "playground": [{
+        "title": "sample DeathCoverage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/DisabilityCoverage.jsonld",
+                "http://schema4i.org/DisabilityRisk.jsonld"
+            ],
+            "@type": "DeathCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
+            },
+            "Covers": {
+                "@type": "Risk"
+            }
+        },
+        "context": {}
+    }]
+}

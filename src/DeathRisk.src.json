@@ -1,0 +1,37 @@
+{
+    "type": "DeathRisk",
+    "uri": "http://schema4i.org/DeathRisk",
+    "description": "Describes a risk of an individual dying within a certain period, often assessed using various factors like age, health status, lifestyle, and occupation.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Risk" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DeathRisk": "s4i:DeathRisk"
+        }
+    },
+    "playground": [{
+        "title": "A sample DeathRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/DeathRisk.jsonld"
+            ],
+            "@type": "DeathRisk",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Müller"
+            }
+        },
+        "context": {}
+    }]
+}
