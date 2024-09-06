@@ -11,7 +11,8 @@
         { "@id": "http://schema4i.org/VehicleLiabilityCoverage" },
         { "@id": "http://schema4i.org/FullyComprehensiveCoverage" },
         { "@id": "http://schema4i.org/PartialComprehensiveCoverage" },
-        { "@id": "http://schema4i.org/PassengerAccidentCoverage" }
+        { "@id": "http://schema4i.org/PassengerAccidentCoverage" },
+        { "@id": "http://schema4i.org/RetirementIncomeCoverage" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Offer" }

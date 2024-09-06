@@ -7,6 +7,7 @@
         { "@id": "http://schema4i.org/Coverage#Covers" },
         { "@id": "http://schema4i.org/DisabilityRisk" },
         { "@id": "http://schema4i.org/LiabilityDamageRisk" },
+        { "@id": "http://schema4i.org/LongevityRisk" },
         { "@id": "http://schema4i.org/PropertyDamageRisk" },
         { "@id": "http://schema4i.org/PersonalInjuryRisk" }
     ],

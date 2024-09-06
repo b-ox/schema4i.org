@@ -1,0 +1,37 @@
+{
+    "type": "LongevityRisk",
+    "uri": "http://schema4i.org/LongevityRisk",
+    "description": "Describes a risk of the risk that individuals will live longer than expected, resulting in the need for more financial resources to sustain their lifestyle, healthcare needs, and other expenses in retirement.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Risk" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LongevityRisk": "s4i:LongevityRisk"
+        }
+    },
+    "playground": [{
+        "title": "A maximum LongevityRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/LongevityRisk.jsonld"
+            ],
+            "@type": "LongevityRisk",
+            "Affects": {
+                "@type": "Person",
+                "Name": "Müller"
+            }
+        },
+        "context": {}
+    }]
+}
