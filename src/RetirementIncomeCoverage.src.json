@@ -1,0 +1,64 @@
+{
+    "type": "RetirementIncomeCoverage",
+    "uri": "http://schema4i.org/RetirementIncomeCoverage",
+    "description": "Provides coverage for an individual's income during their retirement years.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RetirementIncomeCoverage": "s4i:RetirementIncomeCoverage"
+        }
+    },
+    "playground": [{
+        "title": "RetirementIncomeCoverage with simple Risk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/DisabilityCoverage.jsonld",
+                "http://schema4i.org/DisabilityRisk.jsonld"
+            ],
+            "@type": "RetirementIncomeCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
+            },
+            "Covers": {
+                "@type": "Risk"
+            }
+        },
+        "context": {}
+    },{
+        "title": "RetirementIncomeCoverage with LongevityRisk",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/DisabilityCoverage.jsonld",
+                "http://schema4i.org/LongevityRisk.jsonld"
+            ],
+            "@type": "RetirementIncomeCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
+            },
+            "Covers": {
+                "@type": "LongevityRisk"
+            }
+        },
+        "context": {}
+    }]
+}
