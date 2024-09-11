@@ -1,0 +1,37 @@
+{
+    "type": "HealthInsuranceProduct",
+    "uri": "http://schema4i.org/HealthInsuranceProduct",
+    "description": "A health insurance product like a daily sickness allowance insurance.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HealthInsuranceProduct": "s4i:HealthInsuranceProduct"
+        }
+    },
+    "playground": [{
+        "title": "A real HealthInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/HealthInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld"
+            ],
+            "@type": "HealthInsuranceProduct",
+            "Offers": []
+        },
+        "context": {}
+    }]
+}
