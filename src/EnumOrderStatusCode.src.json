@@ -35,6 +35,7 @@
             "miscellaneous": "s4i:EnumOrderStatusCode#9",
             "In performance": "s4i:EnumOrderStatusCode#A",
             "In payment": "s4i:EnumOrderStatusCode#A1",
+            "before performance": "s4i:EnumOrderStatusCode#A2",
             "On call": "s4i:EnumOrderStatusCode#B",
             "Provisional coverage": "s4i:EnumOrderStatusCode#C"
         }
