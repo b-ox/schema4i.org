@@ -13,26 +13,58 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DeathCoverage": "s4i:DeathCoverage"
+            "DeathCoverage": "s4i:DeathCoverage",
+            "DeathCause": {
+                "@id": "s4i:Code",
+                "@type": "s4i:MedicalCode"
+            }
         }
     },
     "playground": [{
-        "title": "sample DeathCoverage",
+        "title": "sample DeathCoverage with DeathCode for Accident resulting in Death",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/DisabilityCoverage.jsonld",
-                "http://schema4i.org/DisabilityRisk.jsonld"
+                "http://schema4i.org/DeathRisk.jsonld",
+                "http://schema4i.org/DeathRisk.jsonld",
+                 "http://schema4i.org/MedicalCode.jsonld"
             ],
-            "@type": "DeathCoverage",
-            "SumInsured": {
-                "@type": "MonetaryAmount",
-                "Value": 10000000,
-                "Currency": "EUR"
+            "@type": "DeathRisk",
+            "SumInsured":  {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/InsuranceBenefit.jsonld",
+                    "http://schema4i.org/MonetaryAmount.jsonld",
+                    "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                    {
+                        "Value": {
+                            "@id": "http://schema4i.org/SumInsured",
+                            "@type": "http://schema4i.org/MonetaryAmount"
+                        }
+                    }
+                ],
+                "@type": "InsuranceBenefit",
+                "BenefitType": "GarantierteTodesfalleistung",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 10000000
+                }
             },
+            "DeathCause":[{
+                "type": "MedicalCode",
+                "CodeValue": "T76",
+                "CodingSystem": "ICD-10"
+
+            },{
+                "type": "MedicalCode",
+                "CodeValue": "R99",
+                "CodingSystem": "ICD-10"
+
+            }],
             "Covers": {
                 "@type": "DeathRisk"
             }
