@@ -1,0 +1,112 @@
+{
+    "type": "Dividends",
+    "uri": "http://schema4i.org/Dividends",
+    "description": "Dividends are profits that can arise from higher investment returns, lower costs, or fewer insurance claims than originally calculated",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Dividends": "s4i:Dividends",
+            "Amount": {
+                "@id": "schema:Amount",
+                "@type": "s4i:StructuredValue"
+            },
+            "Code": {
+                "@id": "s4i:Code",
+                "@type": "s4i:EnumDividendUsageCode"
+            },
+            "LifeCycle": {
+                "@id": "s4i:LifeCycle",
+                "@type": "s4i:ContractLifeCycleEvent"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A Sample Dividends (Bonusrente als Überschussverwendung nach Leistung)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Code.jsonld",
+                "http://schema4i.org/EnumDividendUsageCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/ContractLifeCycleEvent.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "@type": "Dividends",
+            "Amount": {
+                "@type": "QuantitativeValue",
+                "Value": "100",
+                "UnitCode": "P1"
+            },
+            "Code":  "10",
+            "LifeCycle": {
+                "@type": "ContractLifeCycleEvent",
+                "Code": "A"
+            }
+        },
+        "context": {}
+    },{
+        "title": "A Sample Dividends (Beitragsverrechnung als Überschussverwendung vor Leistung)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Code.jsonld",
+                "http://schema4i.org/EnumDividendUsageCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/ContractLifeCycleEvent.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "@type": "Dividends",
+            "Amount": {
+                "@type": "QuantitativeValue",
+                "Value": "100",
+                "UnitCode": "P1"
+            },
+            "Code":  "08",
+            "LifeCycle": {
+                "@type": "ContractLifeCycleEvent",
+                "Code": "A2"
+            }
+        },
+        "context": {}
+    },
+    {
+        "title": "A Sample Dividends (Ansammlung als Überschussverwendung in einer beitragsfreien Zeit)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Code.jsonld",
+                "http://schema4i.org/EnumDividendUsageCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/ContractLifeCycleEvent.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "@type": "Dividends",
+            "Amount": {
+                "@type": "QuantitativeValue",
+                "Value": "100",
+                "UnitCode": "P1"
+            },
+            "Code":  "00",
+            "LifeCycle": {
+                "@type": "ContractLifeCycleEvent",
+                "Code": "A2"
+            }
+        },
+        "context": {}
+    }]
+}
