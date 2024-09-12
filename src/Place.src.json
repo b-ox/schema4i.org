@@ -113,6 +113,10 @@
             "Photo": {
                 "@id": "schema:photo",
                 "@type": "s4i:ImageObject"
+            },
+            "PlaceID": {
+                "@id": "s4i:PlaceID",
+                "@type": "s4i:ID"
             }
         }
     },
@@ -131,16 +135,35 @@
                 "https://schema4i.org/CreativeWork.jsonld",
                 "https://schema4i.org/QuantitativeValue.jsonld",
                 "https://schema4i.org/Person.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Role.jsonld",
                 {
                     "Altitude": {
                         "@id": "s4i:Altitude",
                         "@type": "s4i:QuantitativeValue"
-                    }
-                },
-                {
+                    },
                     "Owner": {
                         "@id": "s4i:Owner",
                         "@type": "s4i:Person"
+                    },
+                    "Value": {
+                        "@id": "http://schema.org/value",
+                        "@type": "http://schema.org/Number"
+                    },
+                    "EncodingFormat": {
+                        "@id": "http://schema.org/encodingFormat",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumIDFormatCode#"
+                        }
+                    },
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumOrderPartnerRoleCode#"
+                        }
                     }
                 }
             ],
@@ -178,7 +201,20 @@
             "Photo": [{
                 "@type": "ImageObject",
                 "ContentUrl": "https://test.tld/photo1.png"
-            }]
+            }],
+            "PlaceID": {
+                "@type": "ID",
+                "Value": "INSBUI0815",
+                "EncodingFormat": "PrintOptimized",
+                "Creator": {
+                    "@type": "Role",
+                    "RoleCode": "001",
+                    "Creator": {
+                        "@type": "Organization",
+                        "Identifier": "4711"
+                    }
+                }
+            }
         },
         "context": {}
     }]
