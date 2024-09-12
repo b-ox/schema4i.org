@@ -1,7 +1,7 @@
 {
     "type": "EnumDividendUsageCode",
     "uri": "http://schema4i.org/EnumDividendUsageCode",
-    "description": "Code for the usage of dividends",
+    "description": "Code for the usage of Dividend",
     "links": [{
         "url": "http://schema4i.org/EnumDividendUsageCode_DE",
         "description": "German translation"

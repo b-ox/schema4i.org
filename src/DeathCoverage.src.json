@@ -14,9 +14,9 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DisabilityCoverage": "s4i:DisabilityCoverage",
-            "DividendsUsage": {
-                "@id": "s4i:DividendsUsage",
-                "@type": "s4i:Dividends"
+            "DividendUsage": {
+                "@id": "s4i:DividendUsage",
+                "@type": "s4i:Dividend"
             }
         }
     },
@@ -40,14 +40,14 @@
             "Covers": {
                 "@type": "DisabilityRisk"
             },
-            "DividendsUsage": {
+            "DividendUsage": {
                 "@context": [
-                    "http://schema4i.org/Dividends.jsonld",
+                    "http://schema4i.org/Dividend.jsonld",
                     "http://schema4i.org/QuantitativeValue.jsonld",
                     "http://schema4i.org/LifeCycleEvent.jsonld"
 
                 ],
-                "@type": "Dividends",
+                "@type": "Dividend",
                 "Amount": {
                     "@type": "QuantitativeValue",
                     "Value": "100",

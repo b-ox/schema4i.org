@@ -4,7 +4,7 @@
     "description": "The usage of dividents.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/CareIncomCoverage#DividendUsage" },
+        { "@id": "http://schema4i.org/CareIncomeCoverage#DividendUsage" },
         { "@id": "http://schema4i.org/DeathCoverage#DividendUsage" },
         { "@id": "http://schema4i.org/DisabilityCoverage#DividendUsage" },
         { "@id": "http://schema4i.org/RetirementIncomeCoverage#DividendUsage" }
@@ -38,7 +38,7 @@
                 "http://schema4i.org/QuantitativeValue.jsonld"
             ],
             "DividendUsage": {
-                "@type": "Dividends",
+                "@type": "Dividend",
                 "Amount": {
                     "@type": "QuantitativeValue",
                     "Value": "100",
