@@ -35,6 +35,25 @@
             },
             "Covers": {
                 "@type": "DisabilityRisk"
+            },
+            "DividendsUsage": {
+                "@context": [
+                    "http://schema4i.org/Dividends.jsonld",
+                    "http://schema4i.org/QuantitativeValue.jsonld",
+                    "http://schema4i.org/LifeCycleEvent.jsonld"
+
+                ],
+                "@type": "Dividends",
+                "Amount": {
+                    "@type": "QuantitativeValue",
+                    "Value": "100",
+                    "UnitCode": "P1"
+                },
+                "Code":  "08",
+                "LifeCycle": {
+                    "@type": "ContractLifeCycleEvent",
+                    "Code": "A2"
+                }
             }
         },
         "context": {}
