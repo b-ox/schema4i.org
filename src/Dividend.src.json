@@ -1,7 +1,7 @@
 {
     "type": "Dividend",
     "uri": "http://schema4i.org/Dividend",
-    "description": "Dividends are profits that can arise from higher investment returns, lower costs, or fewer insurance claims than originally calculated",
+    "description": "Dividends are profits that can arise from higher investment returns, lower costs, or fewer insurance claims than originally calculated.",
     "links": [],
     "parents": [],
     "base": [
@@ -35,12 +35,11 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Code.jsonld",
-                "http://schema4i.org/EnumDividendUsageCode.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/ContractLifeCycleEvent.jsonld",
                 "http://schema4i.org/StructuredValue.jsonld",
-                "http://schema4i.org/QuantitativeValue.jsonld"
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                "http://schema4i.org/Dividend.jsonld"
             ],
             "@type": "Dividend",
             "Amount": {
@@ -61,8 +60,7 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Code.jsonld",
-                "http://schema4i.org/EnumDividendUsageCode.jsonld",
+                "http://schema4i.org/Dividend.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/ContractLifeCycleEvent.jsonld",
                 "http://schema4i.org/StructuredValue.jsonld",
@@ -88,8 +86,7 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Code.jsonld",
-                "http://schema4i.org/EnumDividendUsageCode.jsonld",
+                "http://schema4i.org/Dividend.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/ContractLifeCycleEvent.jsonld",
                 "http://schema4i.org/StructuredValue.jsonld",
