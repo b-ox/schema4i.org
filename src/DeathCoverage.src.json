@@ -46,7 +46,7 @@
                     "http://schema4i.org/QuantitativeValue.jsonld",
                     "http://schema4i.org/StructuredValue.jsonld",
                     "http://schema4i.org/ContractLifeCycleEvent.jsonld",
-                    "http://schema4i.org/LifeCycleEvent.jsonld"
+                    "http://schema4i.org/LifeCycleEvent.jsonld",
                     "http://schema4i.org/Event.jsonld"
                 ],
                 "@type": "Dividend",
