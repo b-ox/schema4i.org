@@ -1,0 +1,42 @@
+{
+    "type": "Load",
+    "uri": "http://schema4i.org/Load",
+    "description": "The content of a cargo transportation. The different goods can be described either as an explicit list of group members or using common characteristics.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Cargo#Load"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Load": {
+                "@id": "s4i:Load",
+                "@type": "s4i:Group"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample cargo load",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Load": {
+                "@type": "Group",
+                "Characteristics": {
+                    "@type": "Filter",
+                    "FilterItem": {
+                         "@type": "Thing",
+                         "Name": "Petrol"
+                    }
+                }
+            }
+        },
+        "context": {}
+    }]
+}
