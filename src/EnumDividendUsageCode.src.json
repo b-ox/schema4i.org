@@ -1,0 +1,39 @@
+{
+    "type": "EnumDividendUsageCode",
+    "uri": "http://schema4i.org/EnumDividendUsageCode",
+    "description": "Code for the usage of Dividend",
+    "links": [{
+        "url": "http://schema4i.org/EnumDividendUsageCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Accumulation": "s4i:EnumDividendUsageCode#00",
+            "Maturity reduction": "s4i:EnumDividendUsageCode#01",
+            "Total increase": "s4i:EnumDividendUsageCode#02",
+            "according to capital formation law": "s4i:EnumDividendUsageCode#03",
+            "Cash payout": "s4i:EnumDividendUsageCode#04",
+            "Bonus death benefit": "s4i:EnumDividendUsageCode#05",
+            "Bonus survival": "s4i:EnumDividendUsageCode#06",
+            "Bonus death and survival": "s4i:EnumDividendUsageCode#07",
+            "Premium offset": "s4i:EnumDividendUsageCode#08",
+            "Other": "s4i:EnumDividendUsageCode#09",
+            "Bonus annuity": "s4i:EnumDividendUsageCode#10",
+            "Final dividend": "s4i:EnumDividendUsageCode#11",
+            "Investment (surpluses are invested in funds/deposits)": "s4i:EnumDividendUsageCode#12",
+            "constant bonus annuity": "s4i:EnumDividendUsageCode#13",
+            "dynamic bonus annuity": "s4i:EnumDividendUsageCode#14",
+            "semi-dynamic bonus annuity": "s4i:EnumDividendUsageCode#15",
+            "declining bonus annuity": "s4i:EnumDividendUsageCode#16",
+            "Index participation": "s4i:EnumDividendUsageCode#17",
+            "Combination": "s4i:EnumDividendUsageCode#18"
+        }
+    }
+}

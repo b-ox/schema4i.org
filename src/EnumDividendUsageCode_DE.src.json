@@ -1,0 +1,39 @@
+{
+    "type": "EnumDividendUsageCode_DE",
+    "uri": "http://schema4i.org/EnumDividendUsageCode_DE",
+    "description": "Code für die Schlüsselung der Überschussverwendung.",
+    "links": [{
+        "url": "http://schema4i.org/EnumDividendUsageCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Ansammlung": "s4i:EnumDividendUsageCode#00",
+            "Laufzeitverkuerzung": "s4i:EnumDividendUsageCode#01",
+            "Summenerhöhung": "s4i:EnumDividendUsageCode#02",
+            "Laut Vermögensbildungsgesetz": "s4i:EnumDividendUsageCode#03",
+            "Barauszahlung": "s4i:EnumDividendUsageCode#04",
+            "Bonus Todesfall": "s4i:EnumDividendUsageCode#05",
+            "Bonus Erlebensfall": "s4i:EnumDividendUsageCode#06",
+            "Bonus Todes- und Erlebensfall": "s4i:EnumDividendUsageCode#07",
+            "Beitragsverrechnung": "s4i:EnumDividendUsageCode#08",
+            "Sonstiges": "s4i:EnumDividendUsageCode#09",
+            "Bonusrente": "s4i:EnumDividendUsageCode#10",
+            "Schlussdividende": "s4i:EnumDividendUsageCode#11",
+            "Investmentanlage (Überschüsse werden in Fonds/Depots investiert)": "s4i:EnumDividendUsageCode#12",
+            "Konstante Bonusrente": "s4i:EnumDividendUsageCode#13",
+            "Dynamische Bonusrente": "s4i:EnumDividendUsageCode#14",
+            "Teildynamische Bonusrente": "s4i:EnumDividendUsageCode#15",
+            "Fallende Bonusrente": "s4i:EnumDividendUsageCode#16",
+            "Indexbeteiligung": "s4i:EnumDividendUsageCode#17",
+            "Kombination": "s4i:EnumDividendUsageCode#18"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 {
-    "type": "DeathCoverage",
-    "uri": "http://schema4i.org/DeathCoverage",
-    "description": "A coverage designed to support the insured's family or dependents, helping them cope with the financial impact of losing their primary source of income by paying a lump sum or series of payments to beneficiaries when the insured person dies.",
+    "type": "DisabilityCoverage",
+    "uri": "http://schema4i.org/DisabilityCoverage",
+    "description": "Provides coverage for an individual's income if they become unable to work due to illness or injury.",
     "links": [],
     "parents": [],
     "base": [
@@ -13,60 +13,53 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DeathCoverage": "s4i:DeathCoverage",
-            "DeathCause": {
-                "@id": "s4i:Code",
-                "@type": "s4i:MedicalCode"
+            "DisabilityCoverage": "s4i:DisabilityCoverage",
+            "DividendUsage": {
+                "@id": "s4i:DividendUsage",
+                "@type": "s4i:Dividend"
             }
         }
     },
     "playground": [{
-        "title": "sample DeathCoverage with DeathCode for Accident resulting in Death",
+        "title": "A maximum DisabilityCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/DeathRisk.jsonld",
-                "http://schema4i.org/DeathRisk.jsonld",
-                 "http://schema4i.org/MedicalCode.jsonld"
+                "http://schema4i.org/DisabilityCoverage.jsonld",
+                "http://schema4i.org/DisabilityRisk.jsonld"
             ],
-            "@type": "DeathRisk",
-            "SumInsured":  {
-                "@context": [
-                    "http://schema4i.org/Thing.jsonld",
-                    "http://schema4i.org/InsuranceBenefit.jsonld",
-                    "http://schema4i.org/MonetaryAmount.jsonld",
-                    "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
-                    {
-                        "Value": {
-                            "@id": "http://schema4i.org/SumInsured",
-                            "@type": "http://schema4i.org/MonetaryAmount"
-                        }
-                    }
-                ],
-                "@type": "InsuranceBenefit",
-                "BenefitType": "GarantierteTodesfalleistung",
-                "Value": {
-                    "@type": "MonetaryAmount",
-                    "Currency": "EUR",
-                    "Value": 10000000
-                }
+            "@type": "DisabilityCoverage",
+            "SumInsured": {
+                "@type": "MonetaryAmount",
+                "Value": 10000000,
+                "Currency": "EUR"
             },
-            "DeathCause":[{
-                "type": "MedicalCode",
-                "CodeValue": "T76",
-                "CodingSystem": "ICD-10"
-
-            },{
-                "type": "MedicalCode",
-                "CodeValue": "R99",
-                "CodingSystem": "ICD-10"
-
-            }],
             "Covers": {
-                "@type": "DeathRisk"
+                "@type": "DisabilityRisk"
+            },
+            "DividendUsage": {
+                "@context": [
+                    "http://schema4i.org/Dividend.jsonld",
+                    "http://schema4i.org/QuantitativeValue.jsonld",
+                    "http://schema4i.org/StructuredValue.jsonld",
+                    "http://schema4i.org/ContractLifeCycleEvent.jsonld",
+                    "http://schema4i.org/LifeCycleEvent.jsonld",
+                    "http://schema4i.org/Event.jsonld"
+                ],
+                "@type": "Dividend",
+                "Amount": {
+                    "@type": "QuantitativeValue",
+                    "Value": "100",
+                    "UnitCode": "P1"
+                },
+                "Code":  "08",
+                "LifeCycle": {
+                    "@type": "ContractLifeCycleEvent",
+                    "Code": "A2"
+                }
             }
         },
         "context": {}

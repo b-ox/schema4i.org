@@ -13,7 +13,11 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "RetirementIncomeCoverage": "s4i:RetirementIncomeCoverage"
+            "RetirementIncomeCoverage": "s4i:RetirementIncomeCoverage",
+            "DividendUsage": {
+                "@id": "s4i:DividendUsage",
+                "@type": "s4i:Dividend"
+            }
         }
     },
     "playground": [{
@@ -57,6 +61,25 @@
             },
             "Covers": {
                 "@type": "LongevityRisk"
+            },
+            "DividendUsage": {
+                "@context": [
+                    "http://schema4i.org/Dividend.jsonld",
+                    "http://schema4i.org/QuantitativeValue.jsonld",
+                    "http://schema4i.org/LifeCycleEvent.jsonld"
+
+                ],
+                "@type": "Dividend",
+                "Amount": {
+                    "@type": "QuantitativeValue",
+                    "Value": "100",
+                    "UnitCode": "P1"
+                },
+                "Code":  "08",
+                "LifeCycle": {
+                    "@type": "ContractLifeCycleEvent",
+                    "Code": "A2"
+                }
             }
         },
         "context": {}

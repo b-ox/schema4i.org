@@ -1,0 +1,55 @@
+{
+    "type": "DividendUsage",
+    "uri": "http://schema4i.org/DividendUsage",
+    "description": "The usage of dividents.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/CareIncomeCoverage#DividendUsage" },
+        { "@id": "http://schema4i.org/DeathCoverage#DividendUsage" },
+        { "@id": "http://schema4i.org/DisabilityCoverage#DividendUsage" },
+        { "@id": "http://schema4i.org/RetirementIncomeCoverage#DividendUsage" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DividendUsage": {
+                "@id": "s4i:DividendUsage",
+                "@type": "s4i:Dividend"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample DividendUsage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Dividend.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/ContractLifeCycleEvent.jsonld",
+                "http://schema4i.org/StructuredValue.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld"
+            ],
+            "DividendUsage": {
+                "@type": "Dividend",
+                "Amount": {
+                    "@type": "QuantitativeValue",
+                    "Value": "100",
+                    "UnitCode": "P1"
+                },
+                "Code":  "10",
+                "LifeCycle": {
+                    "@type": "ContractLifeCycleEvent",
+                    "Code": "A"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

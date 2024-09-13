@@ -35,6 +35,7 @@
             "Sonstiges": "s4i:EnumContractStatusCode#9",
             "In Leistung": "s4i:EnumContractStatusCode#A",
             "In Auszahlung": "s4i:EnumContractStatusCode#A1",
+            "Vor Leistung": "s4i:EnumContractStatusCode#A2",
             "In Abrufphase": "s4i:EnumContractStatusCode#B",
             "Vorläufige Deckung": "s4i:EnumContractStatusCode#C"
         }
