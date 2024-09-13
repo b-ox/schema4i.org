@@ -1,0 +1,59 @@
+{
+    "type": "Cargo",
+    "uri": "http://schema4i.org/Cargo",
+    "description": "Goods carried on a ship, aircraft, or motor vehicle",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Cargo": "s4i:Cargo",
+            "Load": {
+                "@id": "s4i:Load",
+                "@type": "s4i:Group"
+            },
+            "CargoVolume": {
+                "@id": "schema:cargoVolume",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "An example Cargo",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Cargo.jsonld",
+                    "http://schema4i.org/QuantitativeValue.jsonld",
+                    "http://schema4i.org/Group.jsonld",
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Filter.jsonld"
+                ],
+                "@type": "Cargo",
+                "CargoVolume": {
+                    "@type": "QuantiativeValue",
+                    "Value": "100",
+                    "UnitCode": "LTR"
+                },
+                "Load": {
+                    "@type": "Group",
+                    "Characteristics": {
+                        "@type": "Filter",
+                        "FilterItem": {
+                             "@type": "Thing",
+                             "Name": "Petrol"
+                        }
+                    }
+                }
+            },
+            "context": {}
+        }
+    ]
+}
