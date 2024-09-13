@@ -30,8 +30,7 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Code.jsonld",
-                "http://schema4i.org/EnumDividendUsageCode.jsonld",
+                "http://schema4i.org/Dividend.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/ContractLifeCycleEvent.jsonld",
                 "http://schema4i.org/StructuredValue.jsonld",
