@@ -1,7 +1,7 @@
 {
-    "type": "DisabilityCoverage",
-    "uri": "http://schema4i.org/DisabilityCoverage",
-    "description": "Provides coverage for an individual's income if they become unable to work due to illness or injury.",
+    "type": "DeathCoverage",
+    "uri": "http://schema4i.org/DeathCoverage",
+    "description": "A coverage designed to support the insured's family or dependents, helping them cope with the financial impact of losing their primary source of income by paying a lump sum or series of payments to beneficiaries when the insured person dies.",
     "links": [],
     "parents": [],
     "base": [
@@ -13,7 +13,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DisabilityCoverage": "s4i:DisabilityCoverage",
+            "DeathCoverage": "s4i:DeathCoverage",
             "DividendUsage": {
                 "@id": "s4i:DividendUsage",
                 "@type": "s4i:Dividend"
@@ -21,24 +21,24 @@
         }
     },
     "playground": [{
-        "title": "A maximum DisabilityCoverage",
+        "title": "A maximum DeathCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/DisabilityCoverage.jsonld",
+                "http://schema4i.org/DeathCoverage.jsonld",
                 "http://schema4i.org/DisabilityRisk.jsonld"
             ],
-            "@type": "DisabilityCoverage",
+            "@type": "DeathCoverage",
             "SumInsured": {
                 "@type": "MonetaryAmount",
                 "Value": 10000000,
                 "Currency": "EUR"
             },
             "Covers": {
-                "@type": "DisabilityRisk"
+                "@type": "DeathRisk"
             },
             "DividendUsage": {
                 "@context": [
