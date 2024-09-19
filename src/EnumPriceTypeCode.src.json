@@ -38,8 +38,9 @@
             "Claims/Recourse payment": "s4i:EnumPriceTypeCode#REGRESS",
             "Claims/Salvage payment": "s4i:EnumPriceTypeCode#PROVENUE",
             "Discount": "s4i:EnumPriceTypeCode#DISCOUNT",
-            "Surcharge": "s4i:EnumPriceTypeCode#SURCHARGE"
-
+            "Surcharge": "s4i:EnumPriceTypeCode#SURCHARGE",
+            "Employee discount": "s4i:EnumPriceTypeCode#DISCOUNT_EMPLOYER_SPONSORED",
+            "Group discount": "s4i:EnumPriceTypeCode#DISCOUNT_GROUP"
         }
     }
 }
