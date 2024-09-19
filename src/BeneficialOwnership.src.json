@@ -23,7 +23,7 @@
             "schema": "http://schema.org/",
             "BeneficialOwnership": "s4i:BeneficialOwnership",
             "Type": {
-                "@id": "s4i:DamageCause",
+                "@id": "s4i:BeneficialOwnershipType",
                 "@type": "@vocab",
                 "@context": {
                     "@vocab": "s4i:EnumBeneficialOwnershipTypeCode#"
