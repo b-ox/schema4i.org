@@ -1,0 +1,29 @@
+{
+    "type": "BeneficialOwnershipType",
+    "uri": "http://schema4i.org/BeneficialOwnershipType",
+    "description": "A BeneficialOwnershipType describes the beneficiary of an insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/BeneficialOwnership#Type" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/"
+        }
+    },
+    "playground": [{
+        "title": "Sample BeneficialOwnershipType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Type": "9"
+        },
+        "context": {}
+    }]
+}
