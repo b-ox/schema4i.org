@@ -22,7 +22,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "BeneficialOwnershipType": "9"
+            "Type": "9"
         },
         "context": {}
     }]
