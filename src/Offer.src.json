@@ -18,6 +18,10 @@
         { "@id": "http://schema4i.org/Thing" }
     ],
     "multipletypes": {
+        "Category": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumHealthInsuranceCategoryCode" }
+        ],
         "OfferedBy": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
@@ -66,8 +70,7 @@
                 "@type": "schema:BusinessFunction"
             },
             "Category": {
-                "@id": "schema:category",
-                "@type": "schema:Text"
+                "@id": "schema:category"
             },
             "ItemOffered": {
                 "@id": "schema:itemOffered",
@@ -133,6 +136,10 @@
                 {
                     "Status": {
                         "@id": "schema:orderStatus",
+                        "@type": "schema:Text"
+                    },
+                    "Category": {
+                        "@id": "schema:category",
                         "@type": "schema:Text"
                     }
                 }

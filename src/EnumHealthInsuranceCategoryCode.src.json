@@ -1,0 +1,52 @@
+{
+    "type": "EnumHealthInsuranceCategoryCode",
+    "uri": "http://schema4i.org/EnumHealthInsuranceCategoryCode",
+    "description": "A code that describes the different coverages of an health insurance.",
+    "links": [{
+        "url": "http://schema4i.org/EnumHealthInsuranceCategoryCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/HealthCoverage#Category" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "comprehensive health insurance - compact tariffs (outpatient, inpatient, dental)": "s4i:EnumHealthInsuranceCategoryCode#01",
+            "outpatient (comprehensive insurance)": "s4i:EnumHealthInsuranceCategoryCode#02",
+            "inpatient (comprehensive insurance)": "s4i:EnumHealthInsuranceCategoryCode#03",
+            "dental (comprehensive insurance)": "s4i:EnumHealthInsuranceCategoryCode#04",
+            "daily sickness allowance": "s4i:EnumHealthInsuranceCategoryCode#05",
+            "daily hospital allowance": "s4i:EnumHealthInsuranceCategoryCode#06",
+            "cure insurance": "s4i:EnumHealthInsuranceCategoryCode#07",
+            "inpatient supplementary insurance": "s4i:EnumHealthInsuranceCategoryCode#08",
+            "supplementary insurance": "s4i:EnumHealthInsuranceCategoryCode#09",
+            "travel health insurance": "s4i:EnumHealthInsuranceCategoryCode#10",
+            "mandatory long-term care insurance": "s4i:EnumHealthInsuranceCategoryCode#11",
+            "supplementary long-term care insurance": "s4i:EnumHealthInsuranceCategoryCode#12",
+            "option tariff": "s4i:EnumHealthInsuranceCategoryCode#13",
+            "supplements to comprehensive insurance that can be clearly assigned to other areas (e.g., combination of GOÄ extension, foreign coverage, and additional alternative practitioner services)": "s4i:EnumHealthInsuranceCategoryCode#14",
+            "other health insurance (if no other assignment is possible)": "s4i:EnumHealthInsuranceCategoryCode#15",
+            "statutory surcharge": "s4i:EnumHealthInsuranceCategoryCode#16",
+            "group insurance abroad": "s4i:EnumHealthInsuranceCategoryCode#17",
+            "GKV compulsory insured": "s4i:EnumHealthInsuranceCategoryCode#18",
+            "dental replacement insurance PKV": "s4i:EnumHealthInsuranceCategoryCode#19",
+            "dental supplementary tariff": "s4i:EnumHealthInsuranceCategoryCode#20",
+            "outpatient supplementary tariff": "s4i:EnumHealthInsuranceCategoryCode#21",
+            "GKV voluntarily insured": "s4i:EnumHealthInsuranceCategoryCode#22",
+            "contribution relief tariff": "s4i:EnumHealthInsuranceCategoryCode#23",
+            "statutory surcharge during the benefit phase": "s4i:EnumHealthInsuranceCategoryCode#24",
+            "contribution relief tariff during the benefit phase": "s4i:EnumHealthInsuranceCategoryCode#25",
+            "tariff bonus for premium adjustment (temporary tariff bonus granted to limit a premium adjustment)": "s4i:EnumHealthInsuranceCategoryCode#26",
+            "incoming tariffs for foreign guests in Germany": "s4i:EnumHealthInsuranceCategoryCode#27",
+            "outpatient / Dental (comprehensive insurance)": "s4i:EnumHealthInsuranceCategoryCode#28",
+            "budget tariff in corporate health insurance": "s4i:EnumHealthInsuranceCategoryCode#29",
+            "subsidized supplementary long-term care insurance under PNG (Pflege-Bahr)": "s4i:EnumHealthInsuranceCategoryCode#30"
+        }
+    }
+}
