@@ -10,6 +10,7 @@
         { "@id": "http://schema4i.org/ContentsInsuranceCoverage" },
         { "@id": "http://schema4i.org/DeathCoverage" },
         { "@id": "http://schema4i.org/DisabilityCoverage" },
+        { "@id": "http://schema4i.org/HealthCoverage" },
         { "@id": "http://schema4i.org/VehicleLiabilityCoverage" },
         { "@id": "http://schema4i.org/FullyComprehensiveCoverage" },
         { "@id": "http://schema4i.org/PartialComprehensiveCoverage" },

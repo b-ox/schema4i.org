@@ -1,0 +1,52 @@
+{
+    "type": "EnumHealthInsuranceCategoryCode_DE",
+    "uri": "http://schema4i.org/EnumHealthInsuranceCategoryCode_DE",
+    "description": "Ein Code der die Art der Krankenversicherung beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumHealthInsuranceCategoryCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/HealthCoverage#Category" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Krankenvollversicherung - Kompakttarife (ambulant, stationär, Zahn)": "s4i:EnumHealthInsuranceCategoryCode#01",
+            "Ambulant (Vollversicherung)": "s4i:EnumHealthInsuranceCategoryCode#02",
+            "Stationär (Vollversicherung)": "s4i:EnumHealthInsuranceCategoryCode#03",
+            "Zahn (Vollversicherung)": "s4i:EnumHealthInsuranceCategoryCode#04",
+            "Krankentagegeld": "s4i:EnumHealthInsuranceCategoryCode#05",
+            "Krankenhaustagegeld": "s4i:EnumHealthInsuranceCategoryCode#06",
+            "Kurversicherung": "s4i:EnumHealthInsuranceCategoryCode#07",
+            "Stationäre Zusatzversicherung": "s4i:EnumHealthInsuranceCategoryCode#08",
+            "Ergänzungsversicherung": "s4i:EnumHealthInsuranceCategoryCode#09",
+            "Auslandskrankenversicherung": "s4i:EnumHealthInsuranceCategoryCode#10",
+            "Pflegepflichtversicherung": "s4i:EnumHealthInsuranceCategoryCode#11",
+            "Pflegezusatzversicherung": "s4i:EnumHealthInsuranceCategoryCode#12",
+            "Optionstarif": "s4i:EnumHealthInsuranceCategoryCode#13",
+            "Zusätze zur Vollversicherung, die sich eindeutig anderen Bereichen zuordnen lassen (z.B. Kombination aus Erweiterung der GOÄ, Auslandsgeltung und zusätzliche Heilpraktikerleistung)": "s4i:EnumHealthInsuranceCategoryCode#14",
+            "Sonst. KV (wenn keine andere Zuordnung möglich ist)": "s4i:EnumHealthInsuranceCategoryCode#15",
+            "Gesetzlicher Zuschlag": "s4i:EnumHealthInsuranceCategoryCode#16",
+            "Gruppenversicherung Ausland": "s4i:EnumHealthInsuranceCategoryCode#17",
+            "GKV pflichtversichert": "s4i:EnumHealthInsuranceCategoryCode#18",
+            "Zahnersatzversicherung PKV": "s4i:EnumHealthInsuranceCategoryCode#19",
+            "Zahnzusatztarif": "s4i:EnumHealthInsuranceCategoryCode#20",
+            "ambulanter Zusatztarif": "s4i:EnumHealthInsuranceCategoryCode#21",
+            "GKV freiwillig versichert": "s4i:EnumHealthInsuranceCategoryCode#22",
+            "Beitragsentlastungstarif": "s4i:EnumHealthInsuranceCategoryCode#23",
+            "Gesetzlicher Zuschlag in der Leistungsphase": "s4i:EnumHealthInsuranceCategoryCode#24",
+            "Beitragsentlastungstarif in der Leistungsphase": "s4i:EnumHealthInsuranceCategoryCode#25",
+            "Tarifbonus Beitragsanpassung ( zeitlich befristeter Tarifbonus der zur Limitierung einer Beitragsanpassung gewährt wird.)": "s4i:EnumHealthInsuranceCategoryCode#26",
+            "Incomingtarife für ausländische Gäste in Deutschland": "s4i:EnumHealthInsuranceCategoryCode#27",
+            "Ambulant / Zahn (Vollversicherung)": "s4i:EnumHealthInsuranceCategoryCode#28",
+            "Budgettarif in der betrieblichen Krankenversicherung": "s4i:EnumHealthInsuranceCategoryCode#29",
+            "Geförderte ergänzende Pflegeversicherung nach PNG (Pflege-Bahr)": "s4i:EnumHealthInsuranceCategoryCode#30"
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "type": "HealthCoverage",
+    "uri": "http://schema4i.org/HealthCoverage",
+    "description": "A coverage designed to cover expenses of the beneficiary due to illness.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Coverage" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HealthCoverage": "s4i:HealthCoverage"
+        }
+    },
+    "playground": [{
+        "title": "A sample HealthCoverage (daily sickness allowance from day 43)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/HealthCoverage.jsonld",
+                "http://schema4i.org/Risk.jsonld",
+                "http://schema4i.org/EnumHealthInsuranceCategoryCode.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+
+                {
+                    "Category": {
+                        "@id": "schema:category",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumHealthInsuranceCategoryCode#"
+                        }
+                    }
+                }
+            ],
+            "@type": "HealthCoverage",
+           "SumInsured": [
+            {
+                "@context": {
+                    "Value": {
+                        "@id": "s4i:SumInsured",
+                        "@type": "s4i:MonetaryAmount"
+                    }
+                },
+                "@type": "InsuranceBenefit",
+                "BenefitType": "Krankentagegeld",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Value": 15,
+                    "Currency": "EUR"
+                }
+            },
+            { 
+                "@context": {
+                    "Value": {
+                        "@id": "s4i:SumInsured",
+                        "@type": "s4i:QuantitativeValue"
+                    }
+                },
+                "@type": "InsuranceBenefit",
+                "BenefitType": "LeistungAbTag",
+                "Value": {
+                    "@type": "QuantitativeValue",
+                    "Value": 43,
+                    "UnitCode": "D"
+                }
+            }
+        ],
+            "Covers": {
+                "@type": "Risk"
+            },
+            "Category": "05"
+        },
+        "context": {}
+    }]
+}
