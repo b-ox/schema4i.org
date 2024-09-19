@@ -1,0 +1,25 @@
+{
+    "type": "EnumHealthInsuranceTypeCode_DE",
+    "uri": "http://schema4i.org/EnumHealthInsuranceTypeCode_DE",
+    "description": "Ein Code der den Umfang einer Krankenversicherung beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumHealthInsuranceTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/HealthCoverage#Category" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Vollversicherung": "s4i:EnumHealthInsuranceTypeCode#01",
+            "Zusatzversicherung": "s4i:EnumHealthInsuranceTypeCode#02",
+            "Sonstiges": "s4i:EnumHealthInsuranceTypeCode#03"
+        }
+    }
+}

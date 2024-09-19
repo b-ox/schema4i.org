@@ -1,0 +1,29 @@
+{
+    "type": "HealthInsuranceType",
+    "uri": "http://schema4i.org/HealthInsuranceType",
+    "description": "A HealthInsuranceType describes the extent of coverage of a health insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/HealthInsuranceProduct#HealthInsuranceType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/"
+        }
+    },
+    "playground": [{
+        "title": "Sample HealthInsuranceType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "HealthInsuranceType": "1"
+        },
+        "context": {}
+    }]
+}
