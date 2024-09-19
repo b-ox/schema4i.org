@@ -17,7 +17,7 @@
         }
     },
     "playground": [{
-        "title": "A sample HealthCoverage (daily sickness allowance)",
+        "title": "A sample HealthCoverage (daily sickness allowance from day 43)",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -27,6 +27,9 @@
                 "http://schema4i.org/HealthCoverage.jsonld",
                 "http://schema4i.org/Risk.jsonld",
                 "http://schema4i.org/EnumHealthInsuranceCategoryCode.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+
                 {
                     "Category": {
                         "@id": "schema:category",
@@ -38,11 +41,38 @@
                 }
             ],
             "@type": "HealthCoverage",
-            "SumInsured": {
-                "@type": "MonetaryAmount",
-                "Value": 10000000,
-                "Currency": "EUR"
+           "SumInsured": [
+            {
+                "@context": {
+                    "Value": {
+                        "@id": "s4i:SumInsured",
+                        "@type": "s4i:MonetaryAmount"
+                    }
+                },
+                "@type": "InsuranceBenefit",
+                "BenefitType": "Krankentagegeld",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Value": 15,
+                    "Currency": "EUR"
+                }
             },
+            { 
+                "@context": {
+                    "Value": {
+                        "@id": "s4i:SumInsured",
+                        "@type": "s4i:QuantitativeValue"
+                    }
+                },
+                "@type": "InsuranceBenefit",
+                "BenefitType": "LeistungAbTag",
+                "Value": {
+                    "@type": "QuantitativeValue",
+                    "Value": 43,
+                    "UnitCode": "D"
+                }
+            }
+        ],
             "Covers": {
                 "@type": "Risk"
             },
