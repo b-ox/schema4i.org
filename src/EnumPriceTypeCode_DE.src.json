@@ -38,7 +38,9 @@
             "Schaden-/Regresszahlung": "s4i:EnumPriceTypeCode#REGRESS",
             "Schaden-/Provenuezahlung": "s4i:EnumPriceTypeCode#PROVENUE",
             "Abschlag": "s4i:EnumPriceTypeCode#DISCOUNT",
-            "Zuschlag": "s4i:EnumPriceTypeCode#SURCHARGE"
+            "Zuschlag": "s4i:EnumPriceTypeCode#SURCHARGE",
+            "Mitarbeiter-Rabatt": "s4i:EnumPriceTypeCode#DISCOUNT_EMPLOYER_SPONSORED",
+            "Gruppen-Rabatt": "s4i:EnumPriceTypeCode#DISCOUNT_GROUP"
         }
     }
 }
