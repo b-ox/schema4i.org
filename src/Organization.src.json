@@ -16,6 +16,7 @@
         { "@id": "http://schema4i.org/Service#Provider" },
         { "@id": "http://schema4i.org/Order#Customer" },
         { "@id": "http://schema4i.org/ProgramMembership#HostingOrganization" },
+        { "@id": "http://schema.org/PoliceStation" },
         { "@id": "http://schema4i.org/Event#Attendee" }
     ],
     "base": [

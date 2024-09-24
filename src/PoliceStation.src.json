@@ -1,0 +1,44 @@
+{
+    "type": "PoliceStation",
+    "uri": "http://schema4i.org/PoliceStation",
+    "description": "A police station.",
+    "links": [{
+        "url": "http://schema.org/PoliceStation",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Organization" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "oo": "https://schema.openontology.org/",
+            "PoliceStation": "schema:PoliceStation"
+        }
+    },
+    "playground": [{
+        "title": "A maximum PoliceStation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PoliceStation.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PostalAddress"
+            ],
+            "@type": "PoliceStation",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressLocality": "Düsseldorf",
+                "PostalCode": "40591",
+                "StreetAddress": "Kölner Landstraße 30"
+            },
+            "Name": "Polizeiwache Wersten"
+        },
+        "context": {}
+    }]
+}
