@@ -1,0 +1,33 @@
+{
+    "type": "ExpirationDate",
+    "uri": "http://schema4i.org/ExpirationDate",
+    "description": "The day on which the driving license is losing its validity.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DrivingLicense#ExpirationDate"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ExpirationDate": {
+                "@id": "s4i:ExpirationDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample ExpirationDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ExpirationDate": "2030-12-31"
+        },
+        "context": {}
+    }]
+}

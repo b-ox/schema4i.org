@@ -1,0 +1,37 @@
+{
+    "type": "IssueCountry",
+    "uri": "http://schema4i.org/IssueCountry",
+    "description": "The country in which the driving license was initially issued.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DrivingLicense#IssueCountry"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+        "IssueCountry": [
+            { "@id": "http://schema4i.org/Country" },
+            { "@id": "http://schema4i.org/EnumCountryCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "IssueCountry": {
+                "@id": "s4i:IssueCountry"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample IssueCountry",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "IssueAuthority": "D"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,33 @@
+{
+    "type": "IssueAuthority",
+    "uri": "http://schema4i.org/IssueAuthority",
+    "description": "The city or town in which the driving license was initially issued.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DrivingLicense#IssueAuthority"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "IssueAuthority": {
+                "@id": "s4i:IssueAuthority",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample IssueAuthority",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "IssueAuthority": "Düsseldorf"
+        },
+        "context": {}
+    }]
+}

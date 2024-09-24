@@ -1,0 +1,33 @@
+{
+    "type": "LicenseCategory",
+    "uri": "http://schema4i.org/LicenseCategory",
+    "description": "The category of the driving license which determines the types of vehicles, the owner of the driving license is allowed to use.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DrivingLicense#LicenseCategory"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LicenseCategory": {
+                "@id": "s4i:LicenseCategory",
+                "@type": "s4i:EnumDrivingLicenseCategoryCode"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample LicenseCategory",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "IssueAuthority": "B"
+        },
+        "context": {}
+    }]
+}
