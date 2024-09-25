@@ -1,7 +1,7 @@
 {
     "type": "PriorDamage",
     "uri": "http://schema4i.org/PriorDamage",
-    "description": "Describes a preexisting damage caused by an accident, that may have already been repaired. This does not include production faults.",
+    "description": "Describes a preexisting damage caused by an accident that may have already been repaired. This does not include production faults.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Building#PriorDamage" },

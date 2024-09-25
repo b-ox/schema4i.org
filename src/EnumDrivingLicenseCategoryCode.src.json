@@ -1,7 +1,7 @@
 {
     "type": "EnumDrivingLicenseCategoryCode",
     "uri": "http://schema4i.org/EnumDrivingLicenseCategoryCode",
-    "description": "A code for the category of a driving license, which determines the types of vehicles, the owner of the driving license is allowed to use.",
+    "description": "A code for the category of a driving license that which determines the types of vehicles that the owner of the driving license is allowed to use.",
     "links": [{
         "url": "http://schema4i.org/EnumDrivingLicenseCategoryCode_DE",
         "description": "German translation"

@@ -1,7 +1,7 @@
 {
     "type": "LicenseCategory",
     "uri": "http://schema4i.org/LicenseCategory",
-    "description": "The category of the driving license which determines the types of vehicles, the owner of the driving license is allowed to use.",
+    "description": "The category of the driving license that determines the types of vehicles that the owner of the driving license is allowed to use.",
     "links": [],
     "parents": [{
         "@id": "http://schema4i.org/DrivingLicense#LicenseCategory"
