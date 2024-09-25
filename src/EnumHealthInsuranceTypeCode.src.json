@@ -17,9 +17,9 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "comprehensive insurance": "s4i:EnumHealthInsuranceTypeCode#01",
-            "supplementary insurance": "s4i:EnumHealthInsuranceTypeCode#02",
-            "other": "s4i:EnumHealthInsuranceTypeCode#03"
+            "comprehensive insurance": "s4i:EnumHealthInsuranceTypeCode#1",
+            "supplementary insurance": "s4i:EnumHealthInsuranceTypeCode#2",
+            "other": "s4i:EnumHealthInsuranceTypeCode#3"
           
         }
     }
