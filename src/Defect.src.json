@@ -1,11 +1,14 @@
 {
     "type": "Defect",
     "uri": "http://schema4i.org/Defect",
-    "description": "Describes an imperfection or abnormality that impairs quality, function, or utility.",
+    "description": "Describes an imperfection or abnormality that impairs quality, function, or utility. This specifically refers to production faults, not damages caused by accidents",
     "links": [],
-    "parents": [{ "@id": "http://schema4i.org/Building#Defect" }],
+    "parents": [
+        { "@id": "http://schema4i.org/Building#Defect" },
+        { "@id": "http://schema4i.org/Product#Defect" }
+    ],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/Property" }
     ],
     "multipletypes": {},
     "context": {
@@ -13,15 +16,15 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Defect": "s4i:Defect"
+            "Defect": "s4i:Flaw"
         }
     },
     "playground": [{
-        "title": "A example Defect on a Building",
+        "title": "A realistic Defect",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/Flaw.jsonld",
                 "http://schema4i.org/DefinedTerm.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 {
@@ -31,13 +34,15 @@
                     }
                 }
             ],
-            "@type": "Defect",
-            "Name": "Durchnässung",
-            "Reference": [{
-                "@type": "DefinedTerm",
-                "InDefinedTermSet": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
-                "TermCode": "03"
-            }]
+            "Defect": {
+                "@type": "Flaw",
+                "Name": "Durchnässung",
+                "Reference": [{
+                    "@type": "DefinedTerm",
+                    "InDefinedTermSet": "http://www.bipro.bet/namespace/datentypen#ST_Mangelart",
+                    "TermCode": "03"
+                }]
+            }
         },
         "context": {}
     }]

@@ -24,6 +24,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "Product": "schema:Product",
+            "Defect": {
+                "@id": "s4i:Defect",
+                "@type": "s4i:Flaw"
+            },
             "ItemCondition": {
                 "@id": "schema:itemCondition",
                 "@type": "schema:OfferItemCondition"
@@ -38,6 +42,10 @@
             },
             "Owner": {
                 "@id": "s4i:Owner"
+            },
+            "PriorDamage": {
+                "@id": "s4i:PriorDamage",
+                "@type": "s4i:Damage"
             }
         }
     },
@@ -47,6 +55,7 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Flaw.jsonld",
                 "http://schema4i.org/Product.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 {
@@ -57,6 +66,15 @@
                 }
             ],
             "@type": "Product",
+            "Defect": {
+                "@type": "Flaw",
+                "Description": "Small rear mirror"
+            },
+            "PriorDamage": {
+                "@type": "Damage",
+                "Description": "Broken windshield",
+                "Repaired": true
+            },
             "Manufacturer": {},
             "Model": "Model S",
             "ItemCondition": "NewCondition",

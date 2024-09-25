@@ -25,7 +25,7 @@
             },
             "Defect": {
                 "@id": "s4i:Defect",
-                "@type": "s4i:Defect"
+                "@type": "s4i:Flaw"
             },
             "ConstructionClass": {
                 "@id": "s4i:ConstructionClass"
@@ -41,6 +41,10 @@
             "LifeCycle": {
                 "@id": "s4i:LifeCycle",
                 "@type": "s4i:BuildingLifeCycleEvent"
+            },
+            "PriorDamage": {
+                "@id": "s4i:PriorDamage",
+                "@type": "s4i:Damage"
             },
             "RoofFeature": {
                 "@id": "s4i:RoofFeature",
@@ -67,7 +71,7 @@
                 "http://schema4i.org/Event.jsonld",
                 "http://schema4i.org/Place.jsonld",
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Defect.jsonld",
+                "http://schema4i.org/Flaw.jsonld",
                 "http://schema4i.org/EnumRoofFeatureCode.jsonld",
                 "http://schema4i.org/EnumConstructionClassCode.jsonld",
                 "http://schema4i.org/Basement.jsonld",
@@ -108,7 +112,7 @@
                 "UnitCode": "P1"
             }, 
             "Defect": {
-                "@type": "Defect",
+                "@type": "Flaw",
                 "Reference": {
                   "@type": "DefinedTerm",
                   "Name": "Dach",
@@ -133,7 +137,11 @@
             "RoofFeature": "SpanishTile",
             "Stories": 2,
             "ConstructionClass": "2",
-            "BuilderName": "Baccio Pontelli"
+            "BuilderName": "Baccio Pontelli",
+            "PriorDamage": {
+                "@type": "Damage",
+                "Description": "Broken window"
+            }
         },
         "context": {}
     }]

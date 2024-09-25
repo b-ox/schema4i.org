@@ -1,0 +1,49 @@
+{
+    "type": "PriorDamage",
+    "uri": "http://schema4i.org/PriorDamage",
+    "description": "Describes a preexisting damage caused by an accident, that may have already been repaired. This does not include production faults.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Building#PriorDamage" },
+        { "@id": "http://schema4i.org/Product#PriorDamage" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PriorDamage": "s4i:Damage"
+        }
+    },
+    "playground": [{
+        "title": "A realistic PriorDamage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Damage.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/Vehicle.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "PriorDamage": {
+                "@type": "Damage",
+                "Description": "Broken windshield",
+                "Repaired": true,
+                "Affects": {
+                    "@type": "Vehicle",
+                    "Model": "Model S",
+                    "Manufacturer": {
+                        "@type": "Organization",
+                        "Name": "Tesla"
+                    }
+                }
+
+            }
+        },
+        "context": {}
+    }]
+}
