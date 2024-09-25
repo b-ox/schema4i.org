@@ -1,0 +1,32 @@
+{
+    "type": "DrugTestPerformed",
+    "uri": "http://schema4i.org/DrugTestPerformed",
+    "description": "Was the subject in question examined for drug abuse?",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/PoliceReport#DrugTestPerformed"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DrugTestPerformed": "s4i:DrugTestPerformed"
+        }
+    },
+    "playground": [{
+        "title": "A realistic answer for the examination of drug use",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/DrugTestPerformed"
+            ],
+            "DrugTestPerformed": true
+        },
+        "context": {}
+    }]
+}

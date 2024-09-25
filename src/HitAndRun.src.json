@@ -1,0 +1,32 @@
+{
+    "type": "HitAndRun",
+    "uri": "http://schema4i.org/HitAndRun",
+    "description": "Did the subject flee from the incident without leaving behind contact information?",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/PoliceReport#HitAndRun"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HitAndRun": "s4i:HitAndRun"
+        }
+    },
+    "playground": [{
+        "title": "A realistic answer for whether the person responsible fled the scene",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/HitAndRun"
+            ],
+            "HitAndRun": false
+        },
+        "context": {}
+    }]
+}

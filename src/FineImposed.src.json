@@ -1,0 +1,32 @@
+{
+    "type": "FineImposed",
+    "uri": "http://schema4i.org/FineImposed",
+    "description": "Was the subject in question sentenced to pay a fine?",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/PoliceReport#FineImposed"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "FineImposed": "s4i:FineImposed"
+        }
+    },
+    "playground": [{
+        "title": "A realistic answer for whether the person had to pay a fine",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/FineImposed"
+            ],
+            "FineImposed": true
+        },
+        "context": {}
+    }]
+}
