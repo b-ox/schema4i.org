@@ -1,7 +1,7 @@
 {
     "type": "VATDeductible",
     "uri": "http://schema4i.org/VATDeductible",
-    "description": "Is the person or organization eligible for a deduction of the value added tax",
+    "description": "Is the person or organization eligible for a deduction of the value added tax.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Person#VATDeductible" },
@@ -27,7 +27,7 @@
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "ExpirationDate": true
+            "VATDeductible": true
         },
         "context": {}
     }]

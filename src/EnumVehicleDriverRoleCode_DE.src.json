@@ -1,7 +1,7 @@
 {
     "type": "EnumVehicleDriverRoleCode_DE",
     "uri": "http://schema4i.org/EnumVehicleDriverRoleCode_DE",
-    "description": "Ein Code der beschreibt, in wiefern ein Fahrer berechtigt ist, ein gegebenes Fahrzeug zu nutzen",
+    "description": "Ein Code der beschreibt, in wiefern ein Fahrer berechtigt ist, ein gegebenes Fahrzeug zu nutzen.",
     "links": [{
         "url": "http://schema4i.org/EnumVehicleDriverRoleCode",
         "description": "Englische Dokumentation der Schlüsselwerte"

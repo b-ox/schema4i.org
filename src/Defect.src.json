@@ -1,7 +1,7 @@
 {
     "type": "Defect",
     "uri": "http://schema4i.org/Defect",
-    "description": "Describes an imperfection or abnormality that impairs quality, function, or utility. This specifically refers to production faults, not damages caused by accidents",
+    "description": "Describes an imperfection or abnormality that impairs quality, function, or utility. This specifically refers to production faults, not damages caused by accidents.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Building#Defect" },

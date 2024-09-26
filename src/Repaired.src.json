@@ -1,7 +1,7 @@
 {
     "type": "Repaired",
     "uri": "http://schema4i.org/Repaired",
-    "description": "Describes whether the damage was already repaired or otherwise fixed",
+    "description": "Describes whether the damage was already repaired or otherwise fixed.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Damage#Repaired" }

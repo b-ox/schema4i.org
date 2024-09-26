@@ -1,7 +1,7 @@
 {
     "type": "EnumDrivingLicenseCategoryCode_DE",
     "uri": "http://schema4i.org/EnumDrivingLicenseCategoryCode_DE",
-    "description": "Ein Code für die Kategorie eines Führerscheins, der beschreibt, welche Fahrzeugarten der Besitzer des Führerscheins fahren darf",
+    "description": "Ein Code für die Kategorie eines Führerscheins, der beschreibt, welche Fahrzeugarten der Besitzer des Führerscheins fahren darf.",
     "links": [{
         "url": "http://schema4i.org/EnumDrivingLicenseCategoryCode",
         "description": "Englische Übersetzung der Schlüsselwerte"

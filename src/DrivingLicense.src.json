@@ -56,7 +56,10 @@
                 {
                     "IssueCountry": {
                         "@id": "http://schema.org/value",
-                        "@type": "http://schema4i.org/EnumCountryCode"
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumCountryCode#"
+                        }
                     }
                 }
             ],
