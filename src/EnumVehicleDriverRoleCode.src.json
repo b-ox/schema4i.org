@@ -1,0 +1,29 @@
+{
+    "type": "EnumVehicleDriverRoleCode",
+    "uri": "http://schema4i.org/EnumVehicleDriverRoleCode",
+    "description": "A code that describes the authority a driver has for a given vehicle.",
+    "links": [{
+        "url": "http://schema4i.org/EnumVehicleDriverRoleCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Authorized Driver": "s4i:EnumVehicleDriverRoleCode#AuthorizedDriver",
+            "Unauthorized Driver": "s4i:EnumVehicleDriverRoleCode#UnauthorizedDriver",
+            "Accompanied Driver": "s4i:EnumVehicleDriverRoleCode#AccompaniedDriver",
+            "Unaccompanied Driver": "s4i:EnumVehicleDriverRoleCode#UnaccompaniedDriver",
+            "Dominant Driver": "s4i:EnumVehicleDriverRoleCode#DominantDriver",
+            "Non-Dominant Driver": "s4i:EnumVehicleDriverRoleCode#NonDominantDriver",
+            "Accompanying Person": "s4i.EnumVehicleDriverRoleCode#AccompanyingPerson"
+        }
+    }
+}

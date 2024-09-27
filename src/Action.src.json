@@ -40,7 +40,8 @@
         ],
         "Participant": [
             { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Organization" }
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Group" }
         ],
         "Result": [
             { "@id": "http://schema4i.org/Thing" }

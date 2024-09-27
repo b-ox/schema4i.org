@@ -1,0 +1,29 @@
+{
+    "type": "EnumVehicleDriverRoleCode_DE",
+    "uri": "http://schema4i.org/EnumVehicleDriverRoleCode_DE",
+    "description": "Ein Code der beschreibt, in wiefern ein Fahrer berechtigt ist, ein gegebenes Fahrzeug zu nutzen.",
+    "links": [{
+        "url": "http://schema4i.org/EnumVehicleDriverRoleCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Berechtigter Fahrer": "s4i:EnumVehicleDriverRoleCode#AuthorizedDriver",
+            "Unberechtigter Fahrer": "s4i:EnumVehicleDriverRoleCode#UnauthorizedDriver",
+            "Begleiteter Fahrer": "s4i:EnumVehicleDriverRoleCode#AccompaniedDriver",
+            "Unbegleiteter Fahrer": "s4i:EnumVehicleDriverRoleCode#UnaccompaniedDriver",
+            "Überwiegender Fahrer": "s4i:EnumVehicleDriverRoleCode#DominantDriver",
+            "Nicht überwiegender Fahrer": "s4i:EnumVehicleDriverRoleCode#NonDominantDriver",
+            "Begleitperson": "s4i.EnumVehicleDriverRoleCode#AccompanyingPerson"
+        }
+    }
+}

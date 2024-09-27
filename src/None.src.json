@@ -1,0 +1,41 @@
+{
+    "type": "None",
+    "uri": "http://schema4i.org/None",
+    "description": "If a property of any s4i object is missing, there is no real differentiation possible whether the object was just not provided by the data source or whether it is truly empty/non-existent. The None object serves to clarify that the given object/property is purposely empty. For example, if a Product uses a None object in its PriorDamage property, this indicates that the object has no prior damages as opposed to this information simply not being given. A None object can be inserted into any field without requiring the field to explicitly define defining it as allowed type.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "None": "s4i:None"
+        }
+    },
+    "playground": [{
+        "title": "A example None used in a vehicle to indicate that there are no prior damages",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/None.jsonld",
+                "http://schema4i.org/Product.jsonld",
+                "http://schema4i.org/Vehicle.jsonld",
+                "http://schema4i.org/Thing.jsonld"
+            ],
+            "@type": "Vehicle",
+            "Model": "Model S",
+            "Manufacturer": {
+                "@type": "Organization",
+                "Name": "Tesla"
+            },
+            "PriorDamage": {
+                "@type": "None"
+            }
+        },
+        "context": {}
+    }]
+}

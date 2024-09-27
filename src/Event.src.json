@@ -30,6 +30,11 @@
         "Location": [
             { "@id": "http://schema4i.org/Place" },
             { "@id": "http://schema4i.org/PostalAddress" }
+        ],
+        "Participant": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/Group" }
         ]
     },
     "context": {
@@ -65,6 +70,9 @@
             "Offers": {
                 "@id": "schema:offers",
                 "@type": "s4i:Offer"
+            },
+            "Participant": {
+                "@id": "schema:participant"
             },
             "SubEvent": {
                 "@id": "schema:subEvent",

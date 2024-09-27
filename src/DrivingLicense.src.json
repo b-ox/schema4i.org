@@ -9,33 +9,40 @@
     "base": [
         { "@id": "http://schema4i.org/Thing" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "IssueCountry": [
+            { "@id": "http://schema4i.org/Country" },
+            { "@id": "http://schema4i.org/EnumCountryCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "DrivingLicense": "s4i:DrivingLicense",
             "ExpirationDate": {
-                "@id": "oo:driving-license/expiration-date",
-                "@type": "oo:definitions/date"
+                "@id": "s4i:ExpirationDate",
+                "@type": "schema:Date"
             },
             "IdNumber": {
-                "@id": "oo:driving-license/id-number",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:IdNumber",
+                "@type": "schema:Text"
             },
             "IssueAuthority": {
-                "@id": "oo:driving-license/issue-authority",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:IssueAuthority",
+                "@type": "schema:Text"
             },
             "IssueCountry": {
-                "@id": "oo:driving-license/issue-country",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:IssueCountry"
             },
             "IssueDate": {
-                "@id": "oo:driving-license/issue-date",
-                "@type": "oo:definitions/date"
+                "@id": "s4i:IssueDate",
+                "@type": "schema:Date"
+            },
+            "LicenseCategory": {
+                "@id": "s4i:LicenseCategory",
+                "@type": "s4i:EnumDrivingLicenseCategoryCode"
             }
         }
     },
@@ -45,14 +52,24 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/DrivingLicense.jsonld"
+                "http://schema4i.org/DrivingLicense.jsonld",
+                {
+                    "IssueCountry": {
+                        "@id": "http://schema.org/value",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumCountryCode#"
+                        }
+                    }
+                }
             ],
             "@type": "DrivingLicense",
             "ExpirationDate": "2022-11-16",
             "IdNumber": "123456789",
             "IssueAuthority": "Viersen",
-            "IssueCountry": "DE",
-            "IssueDate": "2012-11-16"
+            "IssueCountry": "D",
+            "IssueDate": "2012-11-16",
+            "LicenseCategory": "B"
         },
         "context": {}
     }]

@@ -16,6 +16,7 @@
         { "@id": "http://schema4i.org/Service#Provider" },
         { "@id": "http://schema4i.org/Order#Customer" },
         { "@id": "http://schema4i.org/ProgramMembership#HostingOrganization" },
+        { "@id": "http://schema.org/PoliceStation" },
         { "@id": "http://schema4i.org/Event#Attendee" }
     ],
     "base": [
@@ -107,6 +108,14 @@
                 "@id": "schema:telephone",
                 "@type": "schema:Text"
             },
+            "VATDeductible": {
+                "@id": "s4i:VATDeductible",
+                "@type": "schema:Boolean"
+            },
+            "VATId": {
+                "@id": "schema:vatID",
+                "@type": "schema:Text"
+            },
             "YearlyRevenue": {
                 "@id": "schema:yearlyRevenue",
                 "@type": "s4i:QuantitativeValue"
@@ -153,6 +162,8 @@
             },
             "TaxID": "DE123123123",
             "Telephone": "0049 211 41608 400",
+            "VATDeductible": false,
+            "VATId": "123456789",
             "YearlyRevenue": {}
         },
         "context": {}

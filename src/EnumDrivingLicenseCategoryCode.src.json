@@ -1,0 +1,44 @@
+{
+    "type": "EnumDrivingLicenseCategoryCode",
+    "uri": "http://schema4i.org/EnumDrivingLicenseCategoryCode",
+    "description": "A code for the category of a driving license that which determines the types of vehicles that the owner of the driving license is allowed to use.",
+    "links": [{
+        "url": "http://schema4i.org/EnumDrivingLicenseCategoryCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "A": "s4i:EnumDrivingLicenseCategoryCode#A",
+            "A1": "s4i:EnumDrivingLicenseCategoryCode#A1",
+            "B": "s4i:EnumDrivingLicenseCategoryCode#B",
+            "BE": "s4i:EnumDrivingLicenseCategoryCode#BE",
+            "C1": "s4i:EnumDrivingLicenseCategoryCode#C1",
+            "C1E": "s4i:EnumDrivingLicenseCategoryCode#C1E",
+            "C": "s4i:EnumDrivingLicenseCategoryCode#C",
+            "CE": "s4i:EnumDrivingLicenseCategoryCode#CE",
+            "D1": "s4i:EnumDrivingLicenseCategoryCode#D1",
+            "D1E": "s4i:EnumDrivingLicenseCategoryCode#D1E",
+            "D": "s4i:EnumDrivingLicenseCategoryCode#D",
+            "DE": "s4i:EnumDrivingLicenseCategoryCode#DE",
+            "L": "s4i:EnumDrivingLicenseCategoryCode#L",
+            "M": "s4i:EnumDrivingLicenseCategoryCode#M",
+            "Moped": "s4i:EnumDrivingLicenseCategoryCode#Mofa",
+            "S": "s4i:EnumDrivingLicenseCategoryCode#S",
+            "T": "s4i:EnumDrivingLicenseCategoryCode#T",
+            "1": "s4i:EnumDrivingLicenseCategoryCode#1",
+            "1a": "s4i:EnumDrivingLicenseCategoryCode#1a",
+            "1b": "s4i:EnumDrivingLicenseCategoryCode#1b",
+            "2": "s4i:EnumDrivingLicenseCategoryCode#2",
+            "3": "s4i:EnumDrivingLicenseCategoryCode#3",
+            "4": "s4i:EnumDrivingLicenseCategoryCode#4",
+            "5": "s4i:EnumDrivingLicenseCategoryCode#5"
+        }
+    }
+}

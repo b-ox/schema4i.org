@@ -22,7 +22,8 @@
             "Entdecker": "s4i:EnumEventParticipantRoleCode#DISCOVERER",
             "Täter": "s4i:EnumEventParticipantRoleCode#OFFENDER",
             "Zeuge": "s4i:EnumEventParticipantRoleCode#WITNESS",
-            "Verursacher": "s4i:EnumEventParticipantRoleCode#POLLUTER"
+            "Verursacher": "s4i:EnumEventParticipantRoleCode#POLLUTER",
+            "Polizei": "s4i:EnumEventParticipantRoleCode#POLICE"
         }
     }
 }

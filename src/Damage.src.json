@@ -24,6 +24,10 @@
             "CausedBy": {
                 "@id": "s4i:CausedBy",
                 "@type": "s4i:DamageEvent"
+            },
+            "Repaired": {
+                "@id": "s4i:Repaired",
+                "@type": "schema:Boolean"
             }
         }
     },
@@ -48,7 +52,8 @@
                 "Name": "Roof fire",
                 "StartDate": "2019-04-15",
                 "EndDate": "2019-04-16"
-            }
+            },
+            "Repaired": true
         },
         "context": {}
     }]

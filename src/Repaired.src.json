@@ -1,0 +1,32 @@
+{
+    "type": "Repaired",
+    "uri": "http://schema4i.org/Repaired",
+    "description": "Describes whether the damage was already repaired or otherwise fixed.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Damage#Repaired" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Repaired": "schema:Boolean"
+        }
+    },
+    "playground": [{
+        "title": "A realistic answer for whether a damage was repaired",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Repaired.jsonld"
+            ],
+            "Repaired": true
+        },
+        "context": {}
+    }]
+}

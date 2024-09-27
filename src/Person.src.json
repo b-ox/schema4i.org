@@ -132,6 +132,14 @@
                 "@id": "schema:telephone",
                 "@type": "schema:Text"
             },
+            "VATDeductible": {
+                "@id": "s4i:VATDeductible",
+                "@type": "schema:Boolean"
+            },
+            "VATId": {
+                "@id": "schema:vatID",
+                "@type": "schema:Text"
+            },
             "WorksFor": {
                 "@id": "schema:worksFor",
                 "@type": "s4i:Organization"
@@ -171,6 +179,8 @@
             "Salutation": 3,
             "TaxID": "DE123123123",
             "Telephone": "+49 211 41608 400",
+            "VATDeductible": false,
+            "VATId": "123456789",
             "WorksFor": {}
         },
         "context": {}
