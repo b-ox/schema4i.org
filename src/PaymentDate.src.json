@@ -1,7 +1,7 @@
 {
     "type": "PaymentDate",
     "uri": "http://schema4i.org/PaymentDate",
-    "description": "A date by which a certain predetermined payment must be made",
+    "description": "A date by which a certain predetermined payment must be made.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/ClaimSettlement#PaymentDate" }

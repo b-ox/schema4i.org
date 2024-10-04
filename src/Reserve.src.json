@@ -1,7 +1,7 @@
 {
     "type": "Reserve",
     "uri": "http://schema4i.org/Reserve",
-    "description": "The limit for a sum of money reserved by the insurer to guarantee being able to perform a payout for an insurance claim with any additional included expenses",
+    "description": "The limit for a sum of money reserved by the insurer to guarantee being able to perform a payout for an insurance claim with any additional expenses included.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Loss#Reserve" }

@@ -25,7 +25,7 @@
         }
     },
     "playground": [{
-        "title": "A maximum ClaimStatus",
+        "title": "A maximum SharingAgreement",
         "tab": "tab-expanded",
         "input": {
             "@context": {},

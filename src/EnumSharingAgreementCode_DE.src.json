@@ -1,7 +1,7 @@
 {
     "type": "EnumSharingAgreementCode_DE",
     "uri": "http://schema4i.org/EnumSharingAgreementCode_DE",
-    "description": "Ein Code der beschreibt, in welcher Art und Weise mehrere an einem Schadenfall beteiligten Versicherer die auszuzahlende Schadensumme unter sich aufteilen",
+    "description": "Ein Code der beschreibt, in welcher Art und Weise mehrere an einem Schadenfall beteiligten Versicherer die auszuzahlende Schadensumme unter sich aufteilen.",
     "links": [{
             "url": "http://schema4i.org/EnumSharingAgreementCode",
             "description": "Englische Dokumentation der Schlüsselwerte"

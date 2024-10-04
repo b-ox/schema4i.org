@@ -1,7 +1,7 @@
 {
     "type": "EnumClaimStatusCode_DE",
     "uri": "http://schema4i.org/EnumClaimStatusCode_DE",
-    "description": "Ein Code der den aktuellen Fortschritt bei der Bearbeitung eines Schadenfalls als Teil einer Schadenmeldung beschreibt",
+    "description": "Ein Code der den aktuellen Fortschritt bei der Bearbeitung eines Schadenfalls als Teil einer Schadenmeldung beschreibt.",
     "links": [{
         "url": "http://schema4i.org/EnumClaimStatusCode",
         "description": "Englische Dokumentation der Schlüsselwerte"

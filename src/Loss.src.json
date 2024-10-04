@@ -62,7 +62,13 @@
                 "http://schema4i.org/LossEvent.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
-                "http://schema4i.org/Thing.jsonld"
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:Date"
+                    }
+                } 
             ],
             "@type": "Loss",
             "Name": "Hailstorm damage",
@@ -80,7 +86,7 @@
             "ClaimStatus": {
                 "@type": "ClaimLifeCycleEvent",
                 "Code": "CLOSED",
-                "StartDate": "2024-03-13T12:00:00"
+                "StartDate": "2024-03-13"
             },
             "DamageCause": "H",
             "Amount": {
