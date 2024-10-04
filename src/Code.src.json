@@ -6,6 +6,7 @@
     "parents": [
         { "@id": "http://schema4i.org/HumanLifeCycleEvent#Code" },
         { "@id": "http://schema4i.org/AdjustmentLifeCycleEvent#Code" },
+        { "@id": "http://schema4i.org/ClaimLifeCycleEvent#Code" },
         { "@id": "http://schema4i.org/PersonalInjuryDamage#Code" },
         { "@id": "http://schema4i.org/Dividend#Code" }
     ],
@@ -17,7 +18,11 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "schema": "http://schema.org/"
+            "schema": "http://schema.org/",
+            "Code": {
+                "@id": "s4i:Code",
+                "@type": "s4i:MedicalCode"
+            }
         }
     },
     "playground": [{
@@ -25,9 +30,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Code.jsonld"
+                "http://schema4i.org/MedicalCode.jsonld"
             ],
-            "type": "Code",
+            "@type": "MedicalCode",
             "Code": "11636-8",
             "CodingSystem": "LOINC"
             
@@ -39,9 +44,9 @@
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/Code.jsonld"
+                "http://schema4i.org/MedicalCode.jsonld"
             ],
-            "type": "Code",
+            "@type": "MedicalCode",
             "Code": "R99",
             "CodingSystem": "ICD-10"            
         },

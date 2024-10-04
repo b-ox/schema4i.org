@@ -1,0 +1,26 @@
+{
+    "type": "EnumClaimStatusCode_DE",
+    "uri": "http://schema4i.org/EnumClaimStatusCode_DE",
+    "description": "Ein Code der den aktuellen Fortschritt bei der Bearbeitung eines Schadenfalls als Teil einer Schadenmeldung beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumClaimStatusCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Offen": "s4i:EnumClaimStatusCode#OPEN",
+            "Gemeldet": "s4i:EnumClaimStatusCode#REPORTED",
+            "In Bearbeitung": "s4i:EnumClaimStatusCode#IN_PROGRESS",
+            "Geschlossen": "s4i:EnumClaimStatusCode#CLOSED"
+        }
+    }
+}

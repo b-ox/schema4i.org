@@ -28,6 +28,7 @@
             "Arzt": "s4i:EnumClaimPartnerRoleCode#11",
             "Krankenhaus": "s4i:EnumClaimPartnerRoleCode#12",
             "Vermittler": "s4i:EnumClaimPartnerRoleCode#13",
+            "Schadensacharbeiter": "s4i:EnumClaimPartnerRoleCode#14A",
             "Sonstige": "s4i:EnumClaimPartnerRoleCode#99"
         }
     }
