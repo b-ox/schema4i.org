@@ -28,6 +28,7 @@
             "Doctor": "s4i:EnumClaimPartnerRoleCode#11",
             "Hospital": "s4i:EnumClaimPartnerRoleCode#12",
             "Broker": "s4i:EnumClaimPartnerRoleCode#13",
+            "Claims adjuster": "s4i:EnumClaimPartnerRoleCode#14A",
             "Other": "s4i:EnumClaimPartnerRoleCode#99"
         }
     }
