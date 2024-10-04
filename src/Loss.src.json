@@ -37,6 +37,10 @@
                     "@vocab": "s4i:EnumDamageCauseCode#"
                 }
             },
+            "Reserve": {
+                "@id": "s4i:Reserve",
+                "@type": "s4i:MonetaryAmount"
+            },
             "ValidFrom": {
                 "@id": "schema:validFrom",
                 "@type": "schema:Date"
@@ -103,6 +107,11 @@
                 },
                 "PaymentDate": "2024-02-29",
                 "SharingAgreement": "0"
+            },
+            "Reserve": {
+                "@type": "MonetaryAmount",
+                "Value": 10000,
+                "Currency": "EUR"
             },
             "ValidFrom": "1984-07-01",
             "ValidThrough": "1984-08-01"

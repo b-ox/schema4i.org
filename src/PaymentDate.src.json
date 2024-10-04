@@ -17,7 +17,7 @@
             "schema": "http://schema.org/",
             "PaymentDate": {
                 "@id": "s4i:PaymentDate",
-                "@type": "schema:date"
+                "@type": "schema:Date"
             }
         }
     },
