@@ -1,0 +1,37 @@
+{
+    "type": "ClaimStatus",
+    "uri": "http://schema4i.org/ClaimStatus",
+    "description": "A status of the loss, describing how far the processing of this loss has progressed.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ClaimStatus": {
+                "@id": "s4i:ClaimStatus",
+                "@type": "s4i:ClaimLifeCycleEvent"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ClaimStatus",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ClaimStatus": {
+                "@type": "ClaimLifeCycleEvent",
+                "Code": "CLOSED",
+                "StartDate": "2024-03-13T12:00:00"
+            }
+        },
+        "context": {}
+    }]
+}

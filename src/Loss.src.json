@@ -26,6 +26,10 @@
                 "@id": "s4i:CauseOf",
                 "@type": "s4i:Benefit"
             },
+            "ClaimStatus": {
+                "@id": "s4i:ClaimStatus",
+                "@type": "s4i.ClaimLifeCycleEvent"
+            },
             "DamageCause": {
                 "@id": "s4i:DamageCause",
                 "@type": "@vocab",
@@ -67,6 +71,11 @@
                 "Name": "Hailstorm of Munich",
                 "StartDate": "1984-07-12",
                 "EndDate": "1984-07-12"
+            },
+            "ClaimStatus": {
+                "@type": "ClaimLifeCycleEvent",
+                "Code": "CLOSED",
+                "StartDate": "2024-03-13T12:00:00"
             },
             "DamageCause": "H",
             "Amount": {
