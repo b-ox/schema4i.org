@@ -1,0 +1,36 @@
+{
+    "type": "SharingAgreement",
+    "uri": "http://schema4i.org/SharingAgreement",
+    "description": "An agreement on how multiple involved insurers divide the amount to be paid for a Loss amongst themselves.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/ClaimSettlement#SharingAgreement" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SharingAgreement": {
+                "@id": "s4i:SharingAgreement",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSharingAgreementCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum ClaimStatus",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "SharingAgreement": "0"
+        },
+        "context": {}
+    }]
+}

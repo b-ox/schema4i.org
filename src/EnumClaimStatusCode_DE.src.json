@@ -6,7 +6,9 @@
         "url": "http://schema4i.org/EnumClaimStatusCode",
         "description": "Englische Dokumentation der Schlüsselwerte"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
     ],

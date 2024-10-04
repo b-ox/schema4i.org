@@ -24,11 +24,11 @@
             },
             "CauseOf": {
                 "@id": "s4i:CauseOf",
-                "@type": "s4i:Benefit"
+                "@type": "s4i:ClaimSettlement"
             },
             "ClaimStatus": {
                 "@id": "s4i:ClaimStatus",
-                "@type": "s4i.ClaimLifeCycleEvent"
+                "@type": "s4i:ClaimLifeCycleEvent"
             },
             "DamageCause": {
                 "@id": "s4i:DamageCause",
@@ -54,8 +54,9 @@
             "@context": [
                 "http://schema4i.org/Loss.jsonld",
                 "http://schema4i.org/City.jsonld",
+                "http://schema4i.org/ClaimSettlement.jsonld",
                 "http://schema4i.org/LossEvent.jsonld",
-                "http://schema4i.org/Benefit.jsonld",
+                "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Thing.jsonld"
             ],
@@ -84,13 +85,24 @@
                 "Value": 3000000000
             },
             "CauseOf": {
-                "@type": "Benefit",
-                "Name": "Insurance payout",
+                "@type": "ClaimSettlement",
                 "Amount": {
                     "@type": "MonetaryAmount",
-                    "Currency": "DM",
-                    "Value": 1500000000
-                }
+                    "Currency": "EUR",
+                    "Value": 5000
+                },
+                "Deductible": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": "250"
+                },
+                "Payee": {
+                    "@type": "Person",
+                    "Name": "Mustermann",
+                    "GivenName": "Max"
+                },
+                "PaymentDate": "2024-02-29",
+                "SharingAgreement": "0"
             },
             "ValidFrom": "1984-07-01",
             "ValidThrough": "1984-08-01"

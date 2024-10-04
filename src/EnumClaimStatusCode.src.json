@@ -6,7 +6,9 @@
         "url": "http://schema4i.org/EnumClaimStatusCode_DE",
         "description": "Original German documentation"
     }],
-    "parents": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
     ],
