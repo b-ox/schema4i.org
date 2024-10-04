@@ -1,7 +1,7 @@
 {
     "type": "ClaimLifeCycleEvent",
     "uri": "http://schema4i.org/ClaimLifeCycleEvent",
-    "description": "ClaimLifeCycleEvent refers to the stages from creation to termination of claims.",
+    "description": "ClaimLifeCycleEvent refers to the stages from the creation to the closing of claims.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Loss#ClaimStatus" }
