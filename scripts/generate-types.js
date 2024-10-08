@@ -405,6 +405,12 @@ export function getDescendants(type: string): string[] {
     return DESCENDANTS.get(type)?.slice() ?? [];
 }
 
+export function listEnum(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): Record<string, any> {
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    const enumDef = ENUMS.get(enumName);
+    return enumDef ? Object.fromEntries(enumDef) : undefined;
+}
+
 `;
             return output;
         },
