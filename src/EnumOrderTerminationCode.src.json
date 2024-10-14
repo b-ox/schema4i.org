@@ -63,6 +63,7 @@
             "Double insurance": "s4i:EnumContractTerminationCode#41",
             "Termination due to abandonment of the professional activity specified in the application": "s4i:EnumContractTerminationCode#42",
             "Due to a change, a new contract is legally created": "s4i:EnumContractTerminationCode#43",
+            "Termination according to contractually agreed termination terms regardless of the contract expiry": "s4i:EnumContractTerminationCode#50",
             "other reasons for cancellation": "s4i:EnumContractTerminationCode#99"
         }
     }
