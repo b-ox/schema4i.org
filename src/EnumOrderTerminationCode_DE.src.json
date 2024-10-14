@@ -63,6 +63,7 @@
             "Doppelversicherung": "s4i:EnumContractTerminationCode#41",
             "Beendigung wegen Aufgabe der im Antrag genannten beruflichen Tätigkeit": "s4i:EnumContractTerminationCode#42",
             "Aufgrund einer Änderung entsteht rechtlich ein neuer Vertrag": "s4i:EnumContractTerminationCode#43",
+            "Kündigung gemäß vertraglich vereinbarter Kündigungsmodalitäten unabhängig vom Vertragsablauf": "s4i:EnumContractTerminationCode#50",
             "sonstige Stornogründe": "s4i:EnumContractTerminationCode#99"
         }
     }
