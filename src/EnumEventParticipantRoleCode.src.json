@@ -22,7 +22,7 @@
             "Discoverer": "s4i:EnumEventParticipantRoleCode#DISCOVERER",
             "Offender": "s4i:EnumEventParticipantRoleCode#OFFENDER",
             "Witness": "s4i:EnumEventParticipantRoleCode#WITNESS",
-            "Polluter": "s4i:EnumEventParticipantRoleCode#POLLUTER",
+            "Tortfeasor": "s4i:EnumEventParticipantRoleCode#TORTFEASOR",
             "Police": "s4i:EnumEventParticipantRoleCode#POLICE"
         }
     }
