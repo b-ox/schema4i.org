@@ -56,7 +56,7 @@
             },
             "BusinessRelationship": {
                 "@id": "s4i:BusinessRelationship",
-                "@type": "http://schema4i.org/BusinessRelationshipRole"
+                "@type": "s4i:BusinessRelationshipRole"
             },
             "CICRegistrationNumber": {
                 "@id": "s4i:CICRegistrationNumber",
