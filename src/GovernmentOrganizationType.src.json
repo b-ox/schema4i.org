@@ -1,0 +1,29 @@
+{
+    "type": "GovernmentOrganizationType",
+    "uri": "http://schema4i.org/GovernmentOrganizationType",
+    "description": "A GovernmentOrganizationType  is a code  that represent a governmental institution in Germany. For example a 'Beihilfeträger', a governmental institution in Germany responsible for reimbursing partial healthcare costs for civil servants and their dependents",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/GovernmentOrganization#GovernmentOrganizationType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/"
+        }
+    },
+    "playground": [{
+        "title": "Sample GovernmentOrganizationType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "GovernmentOrganizationType": "KVB"
+        },
+        "context": {}
+    }]
+}
