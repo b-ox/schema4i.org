@@ -1,7 +1,7 @@
 {
     "type": "BenefitType",
     "uri": "http://schema4i.org/BenefitType",
-    "description": "An BenefitType describes the benefit",
+    "description": "Describes the benefit of an insurance product or coverage.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/InsuranceBenefit#BenefitType" }
