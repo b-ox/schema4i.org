@@ -1,7 +1,7 @@
 {
     "type": "EnumGovernmentOrganizationTypeCode_DE",
     "uri": "http://schema4i.org/EnumGovernmentOrganizationTypeCode_DE",
-    "description": "Ein Code der eine 'Government Organization' z.B. beschreibt.",
+    "description": "Ein Code der eine Regierungsorganization bzw. eine staatliche Institution beschreibt.",
     "links": [{
             "url": "http://schema4i.org/EnumGovernmentOrganizationTypeCode",
             "description": "Englische Dokumentation der Schlüsselwerte"
@@ -18,28 +18,28 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Brandenburg":"s4i:EnumGovernmentOrganizationTypeCode#BB",
-            "Berlin Ost":"s4i:EnumGovernmentOrganizationTypeCode#BLO",
-            "Berlin West":"s4i:EnumGovernmentOrganizationTypeCode#BLW",
-            "Bremen":"s4i:EnumGovernmentOrganizationTypeCode#BR",
-            "Baden-Württemberg":"s4i:EnumGovernmentOrganizationTypeCode#BW",
-            "Bayern":"s4i:EnumGovernmentOrganizationTypeCode#BY",
-            "Post":"s4i:EnumGovernmentOrganizationTypeCode#DP",
-            "Hamburg":"s4i:EnumGovernmentOrganizationTypeCode#HBG",
-            "Hessen":"s4i:EnumGovernmentOrganizationTypeCode#HES",
-            "Bundesbahn":"s4i:EnumGovernmentOrganizationTypeCode#KVB",
-            "Mecklenburg-Vorpommern":"s4i:EnumGovernmentOrganizationTypeCode#MV",
-            "Niedersachsen":"s4i:EnumGovernmentOrganizationTypeCode#NDS",
-            "Nordrhein-Westfalen":"s4i:EnumGovernmentOrganizationTypeCode#NW",
-            "Rheinland-Pfalz":"s4i:EnumGovernmentOrganizationTypeCode#RP",
-            "Sachsen-Anhalt":"s4i:EnumGovernmentOrganizationTypeCode#SA",
-            "Sachsen":"s4i:EnumGovernmentOrganizationTypeCode#SC",
-            "Schleswig-Holstein":"s4i:EnumGovernmentOrganizationTypeCode#SH",
-            "Saarland":"s4i:EnumGovernmentOrganizationTypeCode#SL",
+            "Land Brandenburg":"s4i:EnumGovernmentOrganizationTypeCode#BB",
+            "Land Berlin Ost":"s4i:EnumGovernmentOrganizationTypeCode#BLO",
+            "Land Berling / Berlin West":"s4i:EnumGovernmentOrganizationTypeCode#BLW",
+            "Land Bremen":"s4i:EnumGovernmentOrganizationTypeCode#BR",
+            "Land Baden-Württemberg":"s4i:EnumGovernmentOrganizationTypeCode#BW",
+            "Land Bayern":"s4i:EnumGovernmentOrganizationTypeCode#BY",
+            "Deutsche Post":"s4i:EnumGovernmentOrganizationTypeCode#DP",
+            "Land Hamburg":"s4i:EnumGovernmentOrganizationTypeCode#HBG",
+            "Land Hessen":"s4i:EnumGovernmentOrganizationTypeCode#HES",
+            "Deutsche Bundesbahn":"s4i:EnumGovernmentOrganizationTypeCode#KVB",
+            "Land Mecklenburg-Vorpommern":"s4i:EnumGovernmentOrganizationTypeCode#MV",
+            "Land Niedersachsen":"s4i:EnumGovernmentOrganizationTypeCode#NDS",
+            "Land Nordrhein-Westfalen":"s4i:EnumGovernmentOrganizationTypeCode#NW",
+            "Land Rheinland-Pfalz":"s4i:EnumGovernmentOrganizationTypeCode#RP",
+            "Land Sachsen-Anhalt":"s4i:EnumGovernmentOrganizationTypeCode#SA",
+            "Land Sachsen":"s4i:EnumGovernmentOrganizationTypeCode#SC",
+            "Land Schleswig-Holstein":"s4i:EnumGovernmentOrganizationTypeCode#SH",
+            "Land Saarland":"s4i:EnumGovernmentOrganizationTypeCode#SL",
             "Sonstige":"s4i:EnumGovernmentOrganizationTypeCode#SO",
-            "Thüringen":"s4i:EnumGovernmentOrganizationTypeCode#TH",
+            "Land Thüringen":"s4i:EnumGovernmentOrganizationTypeCode#TH",
             "Bund Ost":"s4i:EnumGovernmentOrganizationTypeCode#BDO",
-            "Bund West":"s4i:EnumGovernmentOrganizationTypeCode#BDW"
+            "Bund / Bunde West":"s4i:EnumGovernmentOrganizationTypeCode#BDW"
         }
     }
 }
