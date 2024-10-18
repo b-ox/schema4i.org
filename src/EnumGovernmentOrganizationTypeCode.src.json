@@ -1,7 +1,7 @@
 {
     "type": "EnumGovernmentOrganizationTypeCode",
     "uri": "http://schema4i.org/EnumGovernmentOrganizationTypeCode",
-    "description": "a code describing the details of a 'Government Organization'.",
+    "description": "A code describing a government organization.",
     "links": [{
             "url": "http://schema4i.org/EnumGovernmentOrganizationTypeCode_DE",
             "description": "German translation"
@@ -18,28 +18,28 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Brandenburg":"s4i:EnumGovernmentOrganizationTypeCode#BB",
-            "Berlin East":"s4i:EnumGovernmentOrganizationTypeCode#BLO",
-            "Berlin West":"s4i:EnumGovernmentOrganizationTypeCode#BLW",
-            "Bremen":"s4i:EnumGovernmentOrganizationTypeCode#BR",
-            "Baden-Württemberg":"s4i:EnumGovernmentOrganizationTypeCode#BW",
-            "Bavaria":"s4i:EnumGovernmentOrganizationTypeCode#BY",
-            "Post":"s4i:EnumGovernmentOrganizationTypeCode#DP",
-            "Hamburg":"s4i:EnumGovernmentOrganizationTypeCode#HBG",
-            "Hesse":"s4i:EnumGovernmentOrganizationTypeCode#HES",
-            "Federal Railway ":"s4i:EnumGovernmentOrganizationTypeCode#KVB",
-            "Mecklenburg-Western Pomerania":"s4i:EnumGovernmentOrganizationTypeCode#MV",
-            "Lower Saxony":"s4i:EnumGovernmentOrganizationTypeCode#NDS",
-            "North Rhine-Westphalia":"s4i:EnumGovernmentOrganizationTypeCode#NW",
-            "Rhineland-Palatinate":"s4i:EnumGovernmentOrganizationTypeCode#RP",
-            "Saxony-Anhalt":"s4i:EnumGovernmentOrganizationTypeCode#SA",
-            "Saxony":"s4i:EnumGovernmentOrganizationTypeCode#SC",
-            "Schleswig-Holstein":"s4i:EnumGovernmentOrganizationTypeCode#SH",
-            "Saarland":"s4i:EnumGovernmentOrganizationTypeCode#SL",
+            "State Brandenburg":"s4i:EnumGovernmentOrganizationTypeCode#BB",
+            "State Berlin East":"s4i:EnumGovernmentOrganizationTypeCode#BLO",
+            "State Berling / Berlin West":"s4i:EnumGovernmentOrganizationTypeCode#BLW",
+            "State Bremen":"s4i:EnumGovernmentOrganizationTypeCode#BR",
+            "State Baden-Württemberg":"s4i:EnumGovernmentOrganizationTypeCode#BW",
+            "State Bavaria":"s4i:EnumGovernmentOrganizationTypeCode#BY",
+            "German Post":"s4i:EnumGovernmentOrganizationTypeCode#DP",
+            "State Hamburg":"s4i:EnumGovernmentOrganizationTypeCode#HBG",
+            "State Hesse":"s4i:EnumGovernmentOrganizationTypeCode#HES",
+            "Federal Railway":"s4i:EnumGovernmentOrganizationTypeCode#KVB",
+            "State Mecklenburg-Western Pomerania":"s4i:EnumGovernmentOrganizationTypeCode#MV",
+            "State Lower Saxony":"s4i:EnumGovernmentOrganizationTypeCode#NDS",
+            "State North Rhine-Westphalia":"s4i:EnumGovernmentOrganizationTypeCode#NW",
+            "State Rhineland-Palatinate":"s4i:EnumGovernmentOrganizationTypeCode#RP",
+            "State Saxony-Anhalt":"s4i:EnumGovernmentOrganizationTypeCode#SA",
+            "State Saxony":"s4i:EnumGovernmentOrganizationTypeCode#SC",
+            "State Schleswig-Holstein":"s4i:EnumGovernmentOrganizationTypeCode#SH",
+            "State Saarland":"s4i:EnumGovernmentOrganizationTypeCode#SL",
             "Other":"s4i:EnumGovernmentOrganizationTypeCode#SO",
-            "Thuringia":"s4i:EnumGovernmentOrganizationTypeCode#TH",
-            "Bund East":"s4i:EnumGovernmentOrganizationTypeCode#BDO",
-            "Bund West":"s4i:EnumGovernmentOrganizationTypeCode#BDW"
+            "State Thuringia":"s4i:EnumGovernmentOrganizationTypeCode#TH",
+            "Germany East":"s4i:EnumGovernmentOrganizationTypeCode#BDO",
+            "Germany / Germany West":"s4i:EnumGovernmentOrganizationTypeCode#BDW"
         }
     }
 }
