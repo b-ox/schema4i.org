@@ -61,19 +61,19 @@
             },
             "ServiceOutput": [{
                 "@type": "InsuranceBenefit",
-                "BenefitType": "ambuklanteVollversicherung",
+                "BenefitType": "AmbulanteVollversicherung",
                 "Value": "45",
                 "UnitCode": "P1"
             },
             {
                 "@type": "InsuranceBenefit",
-                "BenefitType": "stationaereVollversicherung",
+                "BenefitType": "StationaereVollversicherung",
                 "Value": "50",
                 "UnitCode": "P1"
             }, 
             {
                 "@type": "InsuranceBenefit",
-                "BenefitType": "zahnVollversicherung",
+                "BenefitType": "ZahnVollversicherung",
                 "Value": "55",
                 "UnitCode": "P1"
             }]
