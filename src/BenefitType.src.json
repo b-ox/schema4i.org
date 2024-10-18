@@ -1,0 +1,54 @@
+{
+    "type": "BenefitType",
+    "uri": "http://schema4i.org/BenefitType",
+    "description": "An BenefitType describes the benefit",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/InsuranceBenefit#BenefitType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BenefitType": {
+                "@id": "s4i:BenefitType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumInsuranceBenefitCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BenefitType on an InsuranceBenefit",
+        "tab": "tab-expanded",
+        "input":  {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/BenefitType.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    }
+                }
+            ],
+            "@type": "InsuranceBenefit",
+            "BenefitType": "GesamteTodesfallleistung",
+            "Value": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 80000.00
+            }
+        },
+        "context": {}
+    }]
+}
