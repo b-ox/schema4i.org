@@ -19,7 +19,14 @@ let typeIndex = {
     types: [],
 };
 
-async function clean(dir, suffixes, consoleLike) {
+/**
+ * Emties a directory or creates it if it does not exist.
+ * 
+ * @param {string} dir 
+ * @param {string[]?} suffixes 
+ * @param {Console?} consoleLike 
+ */
+async function cleanDir(dir, suffixes, consoleLike) {
     try {
         await fs.access(dir);
         consoleLike.log("\nCleaning directory: " + dir);
@@ -29,32 +36,54 @@ async function clean(dir, suffixes, consoleLike) {
         }));
     } catch (e) {
         consoleLike.log("\nCreating directory: " + dir);
-        await fs.mkdir(dir);
+        await fs.mkdir(dir, { recursive: true });
     }
 }
 
-// build schema
-async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
+/**
+ * 
+ * Build the JSON-LD schema files from the source.
+ * 
+ * @param {string} domain The domain name of the target schema.
+ * @param {string} outputDir The directory where the output files are written.
+ * @param {{
+ *  sourceDir?: string,
+ *  clean?: boolean,
+ *  consoleLike?: Console
+ * }} options Options for the generation.
+ * @param options.sourceDir The path to the directory containing the JSON source files. If this is a relative path, it is resolved relative to the output directory.
+ * @param options.clean If true, the output directory is cleaned before the generation. Default is true.
+ * @param options.consoleLike an object with a log function similar to a console.
+ */
+async function buildSchema(domain, outputDir, options) {
 
-    consoleLike = Object.assign({}, console, consoleLike);
+    let sourceDir;
+    let clean = true;
+    let consoleLike = console;
 
-    let buildDir = '../build';
-    consoleLike.log('Build directory: ' + buildDir);
-    try {
-        await fs.access(buildDir);
-    } catch (e) {
-        consoleLike.log('Create missing build directory.');
-        await fs.mkdir(buildDir);
+    if (typeof options === 'string') {
+        sourceDir = options;
+        consoleLike = arguments[3];
+        consoleLike = Object.assign({}, console, consoleLike);
+        consoleLike.warn('WARN: Passing separate arguments is deprecated. Use "buildSchema(environment, outputDir, options)" syntax instead.');
+    } else if (options) {
+        sourceDir = options.sourceDir;
+        clean = options.clean !== false;
+        consoleLike = Object.assign({}, console, options.consoleLike);
     }
 
-    await clean(outputDir, ['.jsonld', 'index.json', '.md'], consoleLike);
+    if (clean) {
+        await cleanDir(outputDir, ['.jsonld', 'index.json', '.md'], consoleLike);
+    } else {
+        await fs.mkdir(outputDir, { recursive: true });
+    }
 
     consoleLike.log('Scanning: "src"');
 
     let absoluteSourceDir;
     if (sourceDir) {
         absoluteSourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(outputDir, sourceDir);
-        await clean(absoluteSourceDir, ['.src.json', '.md'], consoleLike);
+        await cleanDir(absoluteSourceDir, ['.src.json', '.md'], consoleLike);
     }
 
     // process all jsonld files
@@ -66,8 +95,8 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
             let data = await fs.readFile(fromPath + file, 'utf-8');
 
             // replace namespace to match environment
-            data = data.replace(/pending.schema4i.org\//g, environment + '/');
-            data = data.replace(/schema4i.org\//g, environment + '/');
+            data = data.replace(/pending.schema4i.org\//g, domain + '/');
+            data = data.replace(/schema4i.org\//g, domain + '/');
 
             // parse data
             const obj = JSON.parse(data);
@@ -99,16 +128,16 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
                     if (obj.context['@context'][key]['@type']) {
                         if (obj.context['@context'][key]['@type'].startsWith('s4i:')) {
                             dependencies.push({
-                                "@id": "http://" + environment + "/" + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
+                                "@id": "http://" + domain + "/" + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
                             })
                         } else if (obj.context['@context'][key]['@type'] === '@vocab') {
                             const vocab = obj.context['@context'][key]['@context']['@vocab'];
                             if (!vocab.startsWith('schema')) {
                                 dependencies.push({
-                                    "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#'))
+                                    "@id": "http://" + domain + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#'))
                                 });
                                 dependencies.push({
-                                    "@id": "http://" + environment + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE"
+                                    "@id": "http://" + domain + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE"
                                 });
                             }
                         }
@@ -234,18 +263,18 @@ async function buildSchema(environment, outputDir, sourceDir, consoleLike) {
     consoleLike.log("Write list of " + typeIndex.types.length + " types to " + outputDir + "/index.json");
 
     // write sitemap file
-    let sitemap = 'https://' + environment + '\n';
-    sitemap += 'https://' + environment + '/documentation\n';
-    sitemap += 'https://' + environment + '/samples\n';
-    sitemap += 'https://' + environment + '/models\n';
-    sitemap += 'https://' + environment + '/about\n';
+    let sitemap = 'https://' + domain + '\n';
+    sitemap += 'https://' + domain + '/documentation\n';
+    sitemap += 'https://' + domain + '/samples\n';
+    sitemap += 'https://' + domain + '/models\n';
+    sitemap += 'https://' + domain + '/about\n';
     for (const type of typeIndex.types) {
         sitemap += type.uri.replace('http', 'https') + '\n';
     }
     await fs.writeFile(outputDir + "/sitemap.txt", sitemap);
     consoleLike.log("Write sitemap.txt to " + outputDir + "/sitemap.txt");
 
-    let robots = 'Sitemap: https://' + environment + '/sitemap.txt';
+    let robots = 'Sitemap: https://' + domain + '/sitemap.txt';
     await fs.writeFile(outputDir + "/robots.txt", robots);
     consoleLike.log("Write robots.txt to " + outputDir + "/robots.txt");
 

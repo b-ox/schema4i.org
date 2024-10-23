@@ -9,21 +9,22 @@ const argv = require('minimist')(process.argv.slice(2), {
 });
 
 (async() => {
-    const environment = argv._[0];
-    if (!environment || argv.help) {
-        console.log('usage: npm run build [-- [-o=<OutputDir>] [-s=<SourceDir>]] <HostURL>');
-        console.log('\nHostURL: The URL that will be used to host the resulting schema.');
-        console.log('-o|--outputDir (optional): The directory where the jsonld-files will be placed. Defaults to ../<HostURL>.');
+    const schemaUrl = argv._[0];
+    if (!schemaUrl || argv.help) {
+        console.log('usage: npm run build [-- [-o=<OutputDir>] [-s=<SourceDir>]] <SchemaURL>');
+        console.log('\nSchemaURL: The URL that will be used to host the resulting schema.');
+        console.log('-o|--outputDir (optional): The directory where the jsonld-files will be placed. Defaults to ../<SchemaURL>.');
         console.log('-s|--includeSource (optional): A directory inside the outputDir where the source-files will be copied to. Omitted if empty.');
         console.log('-q|--quiet (optional): Reduce log output.');
         return;
     }
-    const hostUrl = environment.replace(/^[^:/]+:\/\//, '');
-    const outputDir = argv.o || `../${hostUrl}`;
-    const sourceDir = argv.s;
-    const quiet = !!argv.q;
-    const logger = quiet ? { log: () => {} } : undefined;
-    await buildSchema(hostUrl, path.resolve(outputDir), sourceDir, logger);
+    const domain = schemaUrl.replace(/^[^:/]+:\/\//, '');
+    const outputDir = argv.o || `../${domain}`;
+    const options = {
+        sourceDir: argv.s,
+        consoleLike: !!argv.q ? { log: () => {} } : undefined
+    }
+    await buildSchema(domain, path.resolve(outputDir), options);
 })().catch((e) => {
     console.error('build failed with error: ', e);
     process.exit(1);

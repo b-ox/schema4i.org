@@ -451,9 +451,43 @@ EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
     }
 };
 
-async function generateTypes(language, outputDir, includeExamples, strict, esm, consoleLike) {
+/**
+ * 
+ * Generates type definitions and example data for a given language.
+ * 
+ * @param {'typescript'} language The output language. Currently only 'typescript' is supported.
+ * @param {string} outputDir The directory where the output files are written.
+ * @param {{
+ *  includeExamples?: boolean,
+ *  strict?: boolean,
+ *  esm?: boolean,
+ *  consoleLike?: Console
+ * }} options Options for the generation.
+ * @param options.includeExamples If true, includes example objects for all types based on the playground data in a separate file.
+ * @param options.strict If true, emitted types only allow properties that are present in the schema. Otherwise types can contain arbitrary properties.
+ * @param options.esm If true, emit ESM compliant code. Only relevant for TypeScript / JavaScript.
+ * @param options.consoleLike an object with a log function similar to a console.
+ */
+async function generateTypes(language, outputDir, options) {
 
-    consoleLike = Object.assign({}, console, consoleLike);
+    let includeExamples = false;
+    let strict = false;
+    let esm = false;
+    let consoleLike = console;
+
+    if (typeof options === 'boolean') {
+        includeExamples = options;
+        strict = arguments[3];
+        esm = arguments[4];
+        consoleLike = arguments[5];
+        consoleLike = Object.assign({}, console, consoleLike);
+        consoleLike.warn('WARN: Passing separate arguments is deprecated. Use "generateTypes(language, outputDir, options)" syntax instead.');
+    } else if (options) {
+        includeExamples = options.includeExamples;
+        strict = options.strict;
+        esm = options.esm;
+        consoleLike = Object.assign({}, console, options.consoleLike);
+    }
 
     try {
         await fs.access(outputDir);

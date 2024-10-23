@@ -23,12 +23,13 @@ const argv = require('minimist')(process.argv.slice(2), {
         return;
     }
     const outputDir = argv.o || `../types`;
-    const includeExamples = !!argv.e;
-    const strict = !!argv.s;
-    const quiet = !!argv.q;
-    const esm = !!argv.m;
-    const logger = quiet ? { log: () => {} } : undefined;
-    await generateTypes(language, path.resolve(outputDir), includeExamples, strict, esm, logger);
+    const options = {
+        includeExamples: !!argv.e,
+        strict: !!argv.s,
+        esm: !!argv.m,
+        consoleLike: argv.q ? { log: () => {} } : undefined
+    }
+    await generateTypes(language, path.resolve(outputDir), options);
 })().catch((e) => {
     console.error('type generation failed with error: ', e);
     process.exit(1);
