@@ -1,0 +1,39 @@
+{
+    "type": "EnumHealtInsuranceEventCode",
+    "uri": "http://schema4i.org/EnumHealtInsuranceEventCode",
+    "description": "A code that describes a Event related to Health Insurance.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumHealtInsuranceEventCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/HumanLifeCycleEvent#Code"}
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Unemployment": "s4i:EnumHealthInsuranceEventCode#01",
+            "Switch to Statutory Health Insurance (SHI)": "s4i:EnumHealthInsuranceEventCode#02",
+            "Free Medical Care (for government employees)": "s4i:EnumHealthInsuranceEventCode#03",
+            "Basic Deferred Coverage": "s4i:EnumHealthInsuranceEventCode#04",
+            "Financial Hardship": "s4i:EnumHealthInsuranceEventCode#05",
+            "Compulsory Health Insurance": "s4i:EnumHealthInsuranceEventCode#06",
+            "Military Service/Civil Service": "s4i:EnumHealthInsuranceEventCode#07",
+            "Stay Abroad": "s4i:EnumHealthInsuranceEventCode#08",
+            "Insolvency": "s4i:EnumHealthInsuranceEventCode#09",
+            "Family Insurance Coverage": "s4i:EnumHealthInsuranceEventCode#10",
+            "Education/Studies": "s4i:EnumHealthInsuranceEventCode#11",
+            "Financial distress Tariff": "s4i:EnumHealthInsuranceEventCode#12",
+            "Other": "s4i:EnumHealthInsuranceEventCode#99"
+        }
+    }
+}
