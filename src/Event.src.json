@@ -50,15 +50,28 @@
                 "@id": "schema:about",
                 "@type": "s4i:Thing"
             },
-            "StartDate": {
-                "@id": "schema:startDate"
+            "AffectedBy": {
+                "@id": "s4i:AffectedBy",
+                "@type": "s4i:Thing"
             },
-            "EndDate": {
-                "@id": "schema:endDate"
+            "Affects": {
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
+            "CausedBy": {
+                "@id": "s4i:CausedBy",
+                "@type": "s4i:Thing"
+            },
+            "CauseOf": {
+                "@id": "s4i:CauseOf",
+                "@type": "s4i:Thing"
             },
             "Duration": {
                 "@id": "schema:duration",
                 "@type": "schema:Duration"
+            },
+            "EndDate": {
+                "@id": "schema:endDate"
             },
             "Keywords": {
                 "@id": "schema:keywords",
@@ -73,6 +86,9 @@
             },
             "Participant": {
                 "@id": "schema:participant"
+            },
+            "StartDate": {
+                "@id": "schema:startDate"
             },
             "SubEvent": {
                 "@id": "schema:subEvent",
