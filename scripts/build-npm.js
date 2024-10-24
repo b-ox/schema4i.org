@@ -21,7 +21,7 @@ const argv = require('minimist')(process.argv.slice(2), {
     const domain = schemaUrl.replace(/^[^:/]+:\/\//, '');
     const outputDir = argv.o || `../${domain}`;
     const options = {
-        sourceDir: argv.s,
+        outputSourceDir: argv.s,
         consoleLike: !!argv.q ? { log: () => {} } : undefined
     }
     await buildSchema(domain, path.resolve(outputDir), options);
