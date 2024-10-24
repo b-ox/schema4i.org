@@ -7,12 +7,14 @@ class Schema {
     /** @type {string} */
     domain;
     /** @type {TypeDefinition[]} */
-    types = [];
+    types;
     /** @type {string[]} */
-    dependsOn = [];
+    dependsOn;
 
-    constructor(/** @type {string} */ domain) {
+    constructor(/** @type {string} */ domain, /** @type {TypeDefinition[]} */ types, /** @type {string[]?} */ dependsOn) {
         this.domain = domain;
+        this.types = types;
+        this.dependsOn = dependsOn ?? [];
     }
 }
 

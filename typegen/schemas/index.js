@@ -60,27 +60,22 @@ async function loadFromSrc(loadConfig) {
 
     loadConfig.consoleLike.log(`fetching schema.org types from ${SCHEMAORG_TYPES_URL}`);
 
-    const schemaOrg = await fetchSchemaOrg();
+    const schemaOrgTypes = await fetchSchemaOrg();
 
     loadConfig.consoleLike.log('Scanning: "src"');
 
     const files = await fs.readdir(loadConfig.src);
     const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
         const data = JSON.parse(await fs.readFile(path.resolve(loadConfig.src, file), 'utf-8'));
-        return new TypeDefinition(data, schemaOrg);
+        return new TypeDefinition(data, schemaOrgTypes);
     }));
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);
 
-    const schema = new Schema(loadConfig.domain);
-    schema.types = types;
-    schema.dependsOn = [schemaOrg.DOMAIN];
-
-    return schema;
+    return new Schema(loadConfig.domain, types, [schemaOrg.DOMAIN]);
 }
 
 /**
- * 
  * @param {LoadSchemaConfig} loadConfig 
  * @returns {Promise<Schema>}
  */
@@ -94,4 +89,31 @@ async function loadSchema(loadConfig) {
     throw new Error(`Unknown schema ${loadConfig.domain}. Please make sure 'src' is set.`);
 }
 
-module.exports = loadSchema;
+/**
+ * @param {LoadSchemaConfig} loadConfig 
+ * @returns {Promise<Schema[]>}
+ */
+async function loadSchemaWithDependencies(loadConfig) {
+    const requiredDomains = [loadConfig.domain];
+    /** @type {Schema[]} */
+    const schemas = [];
+    while (true) {
+        const missingSchemas = requiredDomains.filter(domain => !schemas.some(schema => schema.domain === domain));
+        if (missingSchemas.length === 0) {
+            break;
+        }
+        schemas.push(...await Promise.all(missingSchemas.map(domain => loadSchema({
+            domain,
+            src: domain === loadConfig.domain ? loadConfig.src : undefined,
+            consoleLike: loadConfig.consoleLike
+        }))));
+        requiredDomains.push(...schemas.flatMap(schema => schema.dependsOn).filter(domain => !requiredDomains.includes(domain)));
+    }
+    return schemas;
+}
+
+module.exports = {
+    loadFromSrc,
+    loadSchema,
+    loadSchemaWithDependencies,
+};

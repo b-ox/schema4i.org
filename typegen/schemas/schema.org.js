@@ -29,13 +29,13 @@ let schema;
  */
 function load() {
     schema ??= (async () => {
-        const schemaOrg = new Schema(DOMAIN);
+        const types = [];
         for (const [type, primitive] of Object.entries(PRIMITIVE_TYPES)) {
             const typeDef = new TypeDefinition({type, context: { '@context': [] }});
             typeDef.simpleType = new FieldDefinition(type, '', [primitive], 'singleton');
-            schemaOrg.types.push(typeDef);
+            types.push(typeDef);
         }
-        return schemaOrg;
+        return new Schema(DOMAIN, types);
     })();
     return schema;
 }

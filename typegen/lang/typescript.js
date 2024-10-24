@@ -34,10 +34,9 @@ const LANGUAGE = {
         getFileName: (/** @type {Schema}*/ schema, /** @type {'types'|'util'|'examples'} */ purpose) => {
             return `${getFilenameComponent(schema)}${EXTENSIONS[purpose]}`;
         },
-        writeTypes: ( /** @type {Schema}*/ schema, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
+        writeTypes: ( /** @type {Schema}*/ schema, /** @type {Schema[]}*/ dependencies, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
             const typeDefinitions = schema.types;
             let output = `
-// tslint:disable: no-empty-interface
 
 export type OneOrMany<T> = T | T[];
 export type Context = OneOrMany<string | Record<string, any>>;
@@ -79,7 +78,7 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
         }
         return output;
     },
-    writeOther: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
+    writeOther: (/** @type {Schema}*/ schema, /** @type {Schema[]}*/ dependencies, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
         let output = `
 import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
@@ -175,9 +174,12 @@ return DESCENDANTS.get(type)?.slice() ?? [];
 `;
         return output;
     },
-    writeExamples: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
+    writeExamples: (/** @type {Schema}*/ schema, /** @type {Schema[]}*/ dependencies, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
         const exampleTypes = typeDefinitions.filter(t => !t.simpleType && t.examples.length > 0);
+        if (exampleTypes.length === 0) {
+            return null;
+        }
         let output = `
 import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
 

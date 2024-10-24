@@ -2,7 +2,7 @@ const fs = require("node:fs").promises;
 const path = require("node:path");
 
 const LANGUAGES = require('../typegen/lang');
-const loadSchema = require("../typegen/schemas");
+const {loadSchemaWithDependencies} = require("../typegen/schemas");
 
 /**
  * 
@@ -64,40 +64,46 @@ async function generateTypes(language, outputDir, options) {
         throw new Error(`language ${language} does not support examples.`);
     }
 
-    const schema = await loadSchema({
+    const schemas = await loadSchemaWithDependencies({
         domain: 'schema4i.org',
         src: sourceDir,
         consoleLike,
     });
 
-    consoleLike.log(`Loaded schema for ${schema.domain}`);
+    consoleLike.log(`Loaded schemas for ${schemas.map(s => s.domain).join(', ')}`);
 
-    const typeOutput = languageProcessor.writeTypes(schema, strict, langConfig);
+    for (const schema of schemas) {
 
-    let exampleOutput = '';
-    if (includeExamples) {
-        exampleOutput = languageProcessor.writeExamples(schema, langConfig);
-    }
+        const dependencies = schema.dependsOn.map(domain => schemas.find(s => s.domain === domain));
 
-    let otherOutput = '';
-    if (typeof languageProcessor.writeOther === 'function') {
-        otherOutput = languageProcessor.writeOther(schema, langConfig);
-    }
+        const typeOutput = languageProcessor.writeTypes(schema, dependencies, strict, langConfig);
 
-    const typeOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'types'));
-    consoleLike.log(`Writing type definitions to ${typeOutputFile}`);
-    await fs.writeFile(typeOutputFile, typeOutput, { encoding: 'utf-8' });
+        let exampleOutput = '';
+        if (includeExamples) {
+            exampleOutput = languageProcessor.writeExamples(schema, dependencies, langConfig);
+        }
 
-    if (otherOutput) {
-        const otherOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'util'));
-        consoleLike.log(`Writing additional code to ${otherOutputFile}`);
-        await fs.writeFile(otherOutputFile, otherOutput, { encoding: 'utf-8' });    
-    }
+        let otherOutput = '';
+        if (typeof languageProcessor.writeOther === 'function') {
+            otherOutput = languageProcessor.writeOther(schema, dependencies, langConfig);
+        }
 
-    if (includeExamples) {
-        const exampleOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'examples'));
-        consoleLike.log(`Writing examples to ${exampleOutputFile}`);
-        await fs.writeFile(exampleOutputFile, exampleOutput, { encoding: 'utf-8' });    
+        const typeOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'types'));
+        consoleLike.log(`Writing type definitions to ${typeOutputFile}`);
+        await fs.writeFile(typeOutputFile, typeOutput, { encoding: 'utf-8' });
+
+        if (otherOutput) {
+            const otherOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'util'));
+            consoleLike.log(`Writing additional code to ${otherOutputFile}`);
+            await fs.writeFile(otherOutputFile, otherOutput, { encoding: 'utf-8' });    
+        }
+
+        if (exampleOutput) {
+            const exampleOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'examples'));
+            consoleLike.log(`Writing examples to ${exampleOutputFile}`);
+            await fs.writeFile(exampleOutputFile, exampleOutput, { encoding: 'utf-8' });    
+        }
+
     }
 }
 
