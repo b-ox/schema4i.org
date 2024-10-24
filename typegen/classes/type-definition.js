@@ -92,22 +92,21 @@ class FieldDefinition {
 }
 
 class TypeDefinition {
-    context;
     /** @type {string} */
     type;
-    /** @type {string} */
+    /** @type {string?} */
     description;
     /** @type {string[]} */
     baseTypes = [];
-    /** @type {string} */
+    /** @type {string?} */
     url;
     /** @type {FieldDefinition[]} */
     fields = [];
-    /** @type {FieldDefinition} */
+    /** @type {FieldDefinition?} */
     simpleType;
     /** @type {{title: string, data: string}[]} */
     examples = [];
-    /** @type {Record<string, string>} */
+    /** @type {Record<string, string>?} */
     enumValues;
     constructor(srcFile, schemaOrgDefs) {
         try {
@@ -199,4 +198,7 @@ class TypeDefinition {
     }
 }
 
-module.exports = TypeDefinition;
+module.exports = {
+    TypeDefinition,
+    FieldDefinition,
+};

@@ -1,11 +1,8 @@
 const fs = require("node:fs").promises;
 const path = require("node:path");
-const https = require("node:https");
 
-const TypeDefinition = require('../typegen/src/type-definition');
 const LANGUAGES = require('../typegen/lang');
-
-const SCHEMAORG_TYPES_URL = 'https://schema.org/version/latest/schemaorg-current-https.jsonld';
+const loadSchema = require("../typegen/schemas");
 
 /**
  * 
@@ -67,76 +64,43 @@ async function generateTypes(language, outputDir, options) {
         throw new Error(`language ${language} does not support examples.`);
     }
 
-    consoleLike.log(`fetching schema.org types from ${SCHEMAORG_TYPES_URL}`);
-
-    const schemaOrgDefs = await new Promise((resolve, reject) => {
-        https.get(SCHEMAORG_TYPES_URL, resp => {
-
-            let error;
-
-            const statusCode = resp.statusCode;
-            const contentType = resp.headers['content-type'];
-
-            if (statusCode !== 200) {
-                error = new Error(`Status Code: ${statusCode}`);
-            } else if (!/^application\/ld\+json/i.test(contentType)) {
-                error = new Error(`Invalid Content Type: ${contentType}`);
-            }
-
-            if (error) {
-                resp.resume();
-                reject(error);
-                return;
-            }
-
-            resp.setEncoding('utf-8');
-            const chunks = [];
-            resp.on('data', (chunk) => chunks.push(chunk));
-            resp.on('end', () => {
-                try {
-                    const body = chunks.join('');
-                    resolve(JSON.parse(body));
-                } catch (e) {
-                    reject(e);
-                }
-            });
-        });
+    const schema = await loadSchema({
+        domain: 'schema.org',
+        consoleLike,
     });
 
-    consoleLike.log('Scanning: "src"');
+    /*const schema = await loadSchema({
+        domain: 'schema4i.org',
+        src: sourceDir,
+        consoleLike,
+    });*/
 
-    const files = await fs.readdir(sourceDir);
-    const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
-        const data = JSON.parse(await fs.readFile(path.resolve(sourceDir, file), 'utf-8'));
-        return new TypeDefinition(data, schemaOrgDefs);
-    }));
+    consoleLike.log(`Loaded schema for ${schema.domain}`);
 
-    consoleLike.log(`Processed ${types.length} types`);
-
-    const typeOutput = languageProcessor.writeTypes(types, strict, langConfig);
+    const typeOutput = languageProcessor.writeTypes(schema, strict, langConfig);
 
     let exampleOutput = '';
     if (includeExamples) {
-        exampleOutput = languageProcessor.writeExamples(types, langConfig);
+        exampleOutput = languageProcessor.writeExamples(schema, langConfig);
     }
 
     let otherOutput = '';
     if (typeof languageProcessor.writeOther === 'function') {
-        otherOutput = languageProcessor.writeOther(types, langConfig);
+        otherOutput = languageProcessor.writeOther(schema, langConfig);
     }
 
-    const typeOutputFile = path.resolve(outputDir, languageProcessor.typeFile);
+    const typeOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'types'));
     consoleLike.log(`Writing type definitions to ${typeOutputFile}`);
     await fs.writeFile(typeOutputFile, typeOutput, { encoding: 'utf-8' });
 
     if (otherOutput) {
-        const otherOutputFile = path.resolve(outputDir, languageProcessor.otherFile);
+        const otherOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'util'));
         consoleLike.log(`Writing additional code to ${otherOutputFile}`);
         await fs.writeFile(otherOutputFile, otherOutput, { encoding: 'utf-8' });    
     }
 
     if (includeExamples) {
-        const exampleOutputFile = path.resolve(outputDir, languageProcessor.exampleFile);
+        const exampleOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'examples'));
         consoleLike.log(`Writing examples to ${exampleOutputFile}`);
         await fs.writeFile(exampleOutputFile, exampleOutput, { encoding: 'utf-8' });    
     }

@@ -1,5 +1,5 @@
-const TypeDefinition = require('../src/type-definition');
-const { joinWithLineBreaks, formatDoc } = require('../src/util');
+const {Schema} = require('../classes/schema');
+const { joinWithLineBreaks, formatDoc } = require('../util');
 
 const PRIMITIVE_TYPES = {
     'URL': ['string'],
@@ -20,10 +20,23 @@ const SKIP_TYPEOF_CHECKER = [
  * @property {boolean} esm If true, the output is an ESM-compliant typescript code.
  */
 
+const EXTENSIONS = {
+    types: '.d.ts',
+    util: '-util.ts',
+    examples: '-examples.ts',
+}
+
+function getFilenameComponent(/** @type {Schema}*/ schema) {
+    return schema.domain.replace(/\.org$/, '');
+}
+
 const LANGUAGE = {
-        typeFile: `schema4i.d.ts`,
-        writeTypes: ( /** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
-                let output = `
+        getFileName: (/** @type {Schema}*/ schema, /** @type {'types'|'util'|'examples'} */ purpose) => {
+            return `${getFilenameComponent(schema)}${EXTENSIONS[purpose]}`;
+        },
+        writeTypes: ( /** @type {Schema}*/ schema, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
+            const typeDefinitions = schema.types;
+            let output = `
 // tslint:disable: no-empty-interface
 
 export type OneOrMany<T> = T | T[];
@@ -66,10 +79,10 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
         }
         return output;
     },
-    otherFile: 'schema4i-util.ts',
-    writeOther: (/** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {LangConfig} */ langConfig) => {
+    writeOther: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
+        const typeDefinitions = schema.types;
         let output = `
-import * as s4i from './schema4i${langConfig.esm ? '.js' : ''}';
+import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
 
 const ENUMS = new Map<string, Map<string, string>>();
 
@@ -162,11 +175,11 @@ return DESCENDANTS.get(type)?.slice() ?? [];
 `;
         return output;
     },
-    exampleFile: 'schema4i-examples.ts',
-    writeExamples: (/** @type {TypeDefinition[]}*/ typeDefinitions, /** @type {LangConfig} */ langConfig) => {
+    writeExamples: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
+        const typeDefinitions = schema.types;
         const exampleTypes = typeDefinitions.filter(t => !t.simpleType && t.examples.length > 0);
         let output = `
-import * as s4i from './schema4i${langConfig.esm ? '.js' : ''}';
+import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
 
 const EXAMPLES = new Map<string, s4i.Thing[]>();
 `;
