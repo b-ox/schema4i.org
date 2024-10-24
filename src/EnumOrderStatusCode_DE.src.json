@@ -12,7 +12,8 @@
     "parents": [
         { "@id": "http://schema4i.org/InsuranceProduct#Status"},
         { "@id": "http://schema4i.org/Offer#Status" },
-        { "@id": "http://schema4i.org/Order#OrderStatus" }
+        { "@id": "http://schema4i.org/Order#OrderStatus" },
+        { "@id": "http://schema4i.org/ContractLifeCycleEvent#Code" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
