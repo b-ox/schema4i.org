@@ -8,7 +8,7 @@ function urlToDomain(url) {
  * @param {Record<string, string>} knownPrefixes 
  */
 function resolvePrefixes(url, knownPrefixes){
-    const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)(\w+)#?$/.exec(url);
+    const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)(\w+)(?:#\w*)?$/.exec(url);
     if (!regexResult) {
         throw new Error(`${url} is not a valid url`);
     }
@@ -138,8 +138,8 @@ class TypeDefinition {
                 }
                 return new FieldDefinition(key, this.getFieldDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
             }).filter(v => typeof v !== 'undefined');
-            if (this.type.indexOf('Enumeration') === -1 && this.type.startsWith('Enum') && this.fields.length === 0) {
-                const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && entry.indexOf('s4i:Enumeration') === -1 && entry.startsWith('s4i:Enum')).map(([value, key]) => ({
+            if (this.baseTypes.includes('Enumeration')) {
+                const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && resolvePrefixes(entry, knownPrefixes).domain === domain).map(([value, key]) => ({
                     key: key.split('#').pop(),
                     value
                 }));
