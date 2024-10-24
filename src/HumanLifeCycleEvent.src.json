@@ -7,7 +7,12 @@
     "base": [
         { "@id": "http://schema4i.org/LifeCycleEvent" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "Code": [
+            { "@id": "http://schema4i.org/MedicalCode" },
+            { "@id": "http://schema4i.org/EnumHealtInsuranceEventCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
@@ -15,8 +20,7 @@
             "schema": "http://schema.org/",
             "HumanLifeCycleEvent": "s4i:HumanLifeCycleEvent",
             "Code": {
-                "@id": "s4i:Code",
-                "@type": "s4i:MedicalCode"
+                "@id": "s4i:Code"
             }
         }
     },
@@ -29,7 +33,21 @@
                 "http://schema4i.org/MedicalCode.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld"                
+                "http://schema4i.org/Thing.jsonld" ,
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    },
+                    "EndDate": {
+                        "@id": "schema:endDate",
+                        "@type": "schema:DateTime"
+                    },
+                    "Code": {
+                        "@id": "s4i:Code",
+                        "@type": "s4i:MedicalCode"
+                    }   
+                }          
             ],
             "@type": "HumanLifeCycleEvent",
             "Name": "Geburt",
@@ -61,7 +79,11 @@
                     "EndDate": {
                         "@id": "schema:endDate",
                         "@type": "schema:DateTime"
-                    }
+                    },
+                    "Code": {
+                        "@id": "s4i:Code",
+                        "@type": "s4i:MedicalCode"
+                    } 
                 }                 
             ],
             "@type": "HumanLifeCycleEvent",
