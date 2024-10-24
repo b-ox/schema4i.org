@@ -8,7 +8,6 @@ const fs = require("fs").promises;
 const path = require("path");
 
 // configuration
-const fromPath = "src/";
 let typeIndex = {
     name: "Schema4i.org",
     description: "Schema for insurances (S4i)",
@@ -48,26 +47,30 @@ async function cleanDir(dir, suffixes, consoleLike) {
  * @param {string} outputDir The directory where the output files are written.
  * @param {{
  *  sourceDir?: string,
+ *  outputSourceDir?: string,
  *  clean?: boolean,
  *  consoleLike?: Console
  * }} options Options for the generation.
- * @param options.sourceDir The path to the directory containing the JSON source files. If this is a relative path, it is resolved relative to the output directory.
+ * @param options.sourceDir The path to the directory containing the JSON source files. Default is the `src` directory of this project.
+ * @param options.outputSourceDir The path to the directory where the JSON source files should be copied to. If this is a relative path, it is resolved relative to the output directory.
  * @param options.clean If true, the output directory is cleaned before the generation. Default is true.
  * @param options.consoleLike an object with a log function similar to a console.
  */
 async function buildSchema(domain, outputDir, options) {
 
-    let sourceDir;
+    let sourceDir = 'src/';
+    let outputSourceDir;
     let clean = true;
     let consoleLike = console;
 
     if (typeof options === 'string') {
-        sourceDir = options;
+        outputSourceDir = options;
         consoleLike = arguments[3];
         consoleLike = Object.assign({}, console, consoleLike);
         consoleLike.warn('WARN: Passing separate arguments is deprecated. Use "buildSchema(environment, outputDir, options)" syntax instead.');
     } else if (options) {
-        sourceDir = options.sourceDir;
+        sourceDir = options.sourceDir ?? sourceDir;
+        outputSourceDir = options.outputSourceDir;
         clean = options.clean !== false;
         consoleLike = Object.assign({}, console, options.consoleLike);
     }
@@ -80,19 +83,23 @@ async function buildSchema(domain, outputDir, options) {
 
     consoleLike.log('Scanning: "src"');
 
-    let absoluteSourceDir;
-    if (sourceDir) {
-        absoluteSourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(outputDir, sourceDir);
-        await cleanDir(absoluteSourceDir, ['.src.json', '.md'], consoleLike);
+    if (outputSourceDir) {
+        outputSourceDir = path.isAbsolute(outputSourceDir) ? outputSourceDir : path.resolve(outputDir, outputSourceDir);
+        if (clean) {
+            await cleanDir(outputSourceDir, ['.src.json', '.md'], consoleLike);
+        } else {
+            await fs.mkdir(outputSourceDir, { recursive: true });
+        }
     }
+    sourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(__dirname, '..', sourceDir);
 
     // process all jsonld files
-    const files = await fs.readdir(fromPath);
+    const files = await fs.readdir(sourceDir);
     // export context from src files
     for (const file of files) {
         consoleLike.log("\nFound: " + file);
         if (file.endsWith(".src.json")) {
-            let data = await fs.readFile(fromPath + file, 'utf-8');
+            let data = await fs.readFile(path.resolve(sourceDir, file), 'utf-8');
 
             // replace namespace to match environment
             data = data.replace(/pending.schema4i.org\//g, domain + '/');
@@ -166,7 +173,7 @@ async function buildSchema(domain, outputDir, options) {
                     objectName = parent.substr(parent.lastIndexOf("/") + 1);
                     consoleLike.log('Checking dependency "' + objectName + '".');
                 }
-                let parentFile = await fs.readFile(fromPath + objectName + ".src.json", 'utf-8');
+                let parentFile = await fs.readFile(path.resolve(sourceDir, objectName + ".src.json"), 'utf-8');
                 parentFile = JSON.parse(parentFile);
 
                 if (obj.type.indexOf("Enumeration") === -1 && !obj.type.startsWith("Enum") && attributeName !== '') {
@@ -240,14 +247,14 @@ async function buildSchema(domain, outputDir, options) {
                 url: obj.uri + ".jsonld",
             });
 
-            if (absoluteSourceDir) {
+            if (outputSourceDir) {
                 // write source file 
-                await fs.writeFile(path.resolve(absoluteSourceDir, obj.type + ".src.json"),
+                await fs.writeFile(path.resolve(outputSourceDir, obj.type + ".src.json"),
                     JSON.stringify(obj, null, 2)
                 );
                 // copy readme source file
-                // if (absoluteSourceDir) {
-                //     fs.copyFile(path.resolve(fromPath, 'README.md'), path.resolve(absoluteSourceDir, 'README.md'));
+                // if (outputSourceDir) {
+                //     fs.copyFile(path.resolve(outputSourceDir, 'README.md'), path.resolve(outputSourceDir, 'README.md'));
                 // }
             }
 
