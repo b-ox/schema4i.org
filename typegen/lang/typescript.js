@@ -1,4 +1,5 @@
 const {Schema} = require('../classes/schema');
+const { FieldDefinition } = require('../classes/type-definition');
 const { joinWithLineBreaks, formatDoc } = require('../util');
 
 const PRIMITIVE_TYPES = {
@@ -44,6 +45,7 @@ ${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${
 `;
         for (const typeDefinition of typeDefinitions) {
             const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
+            /** @param {FieldDefinition} field */
             function getFieldTypes(field) {
                 const typeArray = (generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types);
                 const types = joinWithLineBreaks(typeArray, '|', '|\n    ');

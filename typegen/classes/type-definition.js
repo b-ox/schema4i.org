@@ -1,48 +1,50 @@
 
-const PRIMITIVE_TYPE_MAPPINGS = {
-    '@id': 'URL',
-    '@context': 'Context',
-    'schema:URL': 'URL',
-    'schema:Text': 'string',
-    'schema:Boolean': 'boolean',
-    'schema:Date': 'ISODateString',
-    'schema:DateTime': 'ISODateString',
-    'schema:Time': 'string',
-    'schema:Duration': 'string',
-    'schema:Integer': 'number',
-    'schema:Number': 'number',
-    'schema:PaymentMethod': 'string',
-    'schema:paymentStatusType': 'string',
-    'schema:ItemListOrderType': 'string',
-    'schema:OfferItemCondition': 'string',
-    'schema:BusinessFunction': 'string',
-    'schema:DeliveryMethod': 'string',
-    'oo:definitions/string': 'string',
-    'oo:definitions/boolean': 'boolean',
-    'oo:definitions/money': 'number',
-    'oo:definitions/date': 'ISODateString',
-    'oo:definitions/temporal-interval': 'number',
-    'oo:definitions/nonnegative-integer': 'number',
-    'oo:definitions/salutation': 'number',
-    '@vocab': 'string' // enums not in the s4i schema
+function urlToDomain(url) {
+    return /^(?:https?:\/\/)(.*?)\/?$/.exec(url)[1];
+}
+
+/**
+ * @param {string} url 
+ * @param {Record<string, string>} knownPrefixes 
+ */
+function resolvePrefixes(url, knownPrefixes){
+    const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)(\w+)#?$/.exec(url);
+    if (!regexResult) {
+        throw new Error(`${url} is not a valid url`);
+    }
+    const [, domain, prefix, localName] = regexResult;
+    if (prefix && !knownPrefixes[prefix]) {
+        throw new Error(`${url} references unknown prefix ${prefix}`);
+    }
+    return {
+        localName,
+        domain: prefix ? knownPrefixes[prefix] : domain,
+    }
 }
 
 /**
  * @param {string} type
  * @param {any} typeObject
- * @param {boolean} ignoreMissing
+ * @param {string} domain
+ * @param {Record<string, string>?} knownPrefixes
+ * @param {boolean?} ignoreMissing
  * @returns {string}
  */
-function processType(type, typeObject, ignoreMissing) {
-    const prefixedType = type.replace('http://schema.org/', 'schema:').replace('https://schema.openontology.org/', 'oo:');
-    if (type === '@vocab' && typeObject['@context'] && (typeObject['@context']['@vocab'].startsWith('s4i:') || typeObject['@context']['@vocab'].startsWith('http://schema.org/'))) {
-        type = typeObject['@context']['@vocab'].replace('#', '');
-    } else if (PRIMITIVE_TYPE_MAPPINGS[prefixedType]) {
-        return PRIMITIVE_TYPE_MAPPINGS[prefixedType];
+function processType(type, typeObject, domain, knownPrefixes, ignoreMissing) {
+    if (type === '@vocab' && typeObject['@context']) {
+        const { localName: vocabLocalName, domain: vocabDomain } = resolvePrefixes(typeObject['@context']['@vocab'], knownPrefixes);
+        if (vocabDomain === domain) {
+            return vocabLocalName;
+        }
+        // Foreign enums are not included in the types for the schema
+        return 'string';
     }
-    if (type.startsWith('s4i:') || type.startsWith('http://schema4i.org/')) {
-        return type.replace('s4i:', '').replace('http://schema4i.org/', '');
-    } else if (!ignoreMissing) {
+    const { localName, domain: typeDomain } = resolvePrefixes(type, knownPrefixes);
+    if (typeDomain === domain) {
+        return localName;
+    }
+    // TODO: Referencing types from foreign schemas is not supported yet
+    if (!ignoreMissing) {
         throw new Error(`Unknown type ${type}`);
     }
 }
@@ -101,27 +103,33 @@ class TypeDefinition {
             this.type = srcFile.type;
             this.description = srcFile.description;
             this.url = srcFile.uri;
-            this.baseTypes = (srcFile.base || []).map(base => processType(base['@id'], base));
+            this.baseTypes = (srcFile.base || []).map(base => processType(base['@id'], base, domain));
             if (!srcFile.context) {
                 throw new Error(`type ${this.type} has no context`);
             }
             /** @type {FieldDefinition} */
             let thisDef;
             const context = srcFile.context['@context'];
+            const knownPrefixes = Object.fromEntries(
+                Object.entries(context).
+                filter(([_, value]) => typeof value === 'string' && /^https?:\/\//.test(value)).
+                map(([prefix, url]) => [prefix, urlToDomain(url)])
+            );
+
             const fieldDefs = Object.entries(context).filter(([_, entry]) => typeof entry === 'object');
 
             function getEntryTypes(key, entry) {
                 if (entry['@type']) {
-                    return [processType(entry['@type'], entry)];
+                    return [processType(entry['@type'], entry, domain, knownPrefixes)];
                 } else if (srcFile.multipletypes[key]) {
-                    return srcFile.multipletypes[key].map(t => processType(t['@id'], t));
+                    return srcFile.multipletypes[key].map(t => processType(t['@id'], t, domain));
                 } else {
                     throw new Error(`Property ${key} on type ${this.type} has no type defined`);
                 }
             }
 
             this.fields = fieldDefs.map(([key, entry]) => {
-                if (processType(entry["@id"], entry, true) === this.type) {
+                if (processType(entry["@id"], entry, domain, knownPrefixes, true) === this.type) {
                     thisDef = new FieldDefinition(key, this.getFieldDescription(entry), getEntryTypes(key, entry), 'singleton');
                     return;
                 }
