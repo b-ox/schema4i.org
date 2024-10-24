@@ -65,15 +65,10 @@ async function generateTypes(language, outputDir, options) {
     }
 
     const schema = await loadSchema({
-        domain: 'schema.org',
-        consoleLike,
-    });
-
-    /*const schema = await loadSchema({
         domain: 'schema4i.org',
         src: sourceDir,
         consoleLike,
-    });*/
+    });
 
     consoleLike.log(`Loaded schema for ${schema.domain}`);
 
