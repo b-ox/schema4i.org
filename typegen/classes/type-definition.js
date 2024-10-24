@@ -28,23 +28,6 @@ const PRIMITIVE_TYPE_MAPPINGS = {
 }
 
 /**
- * 
- * @param {string | { "@language": string, "@value": string } | { "@language": string, "@value": string }[]} rdfsValue 
- */
-function getRdfsValue(rdfsValue) {
-    if (Array.isArray(rdfsValue)) {
-        rdfsValue = rdfsValue[0];
-    }
-    if (typeof rdfsValue === 'object' && rdfsValue !== null && typeof rdfsValue['@value'] === 'string') {
-        return rdfsValue['@value'];
-    }
-    if (typeof rdfsValue === 'string') {
-        return rdfsValue;
-    }
-    return '';
-}
-
-/**
  * @param {string} type
  * @param {any} typeObject
  * @param {boolean} ignoreMissing
@@ -108,7 +91,8 @@ class TypeDefinition {
     examples = [];
     /** @type {Record<string, string>?} */
     enumValues;
-    constructor(srcFile, schemaOrgDefs) {
+    
+    constructor(srcFile) {
         try {
             this.type = srcFile.type;
             this.description = srcFile.description;
@@ -132,21 +116,15 @@ class TypeDefinition {
                 }
             }
 
-            function getDescription(entry) {
-                if (entry['@id'] && entry['@id'].startsWith('schema:')) {
-                    return getRdfsValue((schemaOrgDefs['@graph'].find(sType => sType['@id'] === entry['@id']) || {})['rdfs:comment']);
-                }
-                return '';
-            }
             this.fields = fieldDefs.map(([key, entry]) => {
                 if (processType(entry["@id"], entry, true) === this.type) {
-                    thisDef = new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), 'singleton');
+                    thisDef = new FieldDefinition(key, this.getFieldDescription(entry), getEntryTypes(key, entry), 'singleton');
                     return;
                 }
                 if (key === 'URL') {
                     key = '@id';
                 }
-                return new FieldDefinition(key, getDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
+                return new FieldDefinition(key, this.getFieldDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
             }).filter(v => typeof v !== 'undefined');
             if (this.type.indexOf('Enumeration') === -1 && this.type.startsWith('Enum') && this.fields.length === 0) {
                 const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && entry.indexOf('s4i:Enumeration') === -1 && entry.startsWith('s4i:Enum')).map(([value, key]) => ({
@@ -162,10 +140,6 @@ class TypeDefinition {
             }
             if (this.fields.length === 0 && thisDef) {
                 this.simpleType = thisDef;
-            }
-            if (this.type === 'Thing') {
-                this.fields.push(new FieldDefinition('@type', '', ['string']));
-                this.fields.push(new FieldDefinition('@context', '', ['Context'], 'singleton'));
             }
             this.examples = (srcFile.playground || []).map(pg => ({ title: pg.title, data: pg.input }));
         } catch (e) {
@@ -195,6 +169,12 @@ class TypeDefinition {
             nextGenDescendants = typeDefinitions.filter(t => !allDescendants.includes(t) && nextGenDescendants.some(a => t.baseTypes.includes(a.type)));
         } while (nextGenDescendants.length > 0);
         return allDescendants;
+    }
+
+    getFieldDescription(entry) {
+        // TODO: Would be nice to read the description from the type definition. But at this point there is no way
+        // to guarantee that the type definition is already loaded. It would take a second round of processing for the fields.
+        return '';
     }
 }
 
