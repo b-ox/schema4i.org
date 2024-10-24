@@ -7,17 +7,6 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-// configuration
-let typeIndex = {
-    name: "Schema4i.org",
-    description: "Schema for insurances (S4i)",
-    release: 0.93,
-    modified: new Date(),
-    objects: 0,
-    enumerations: 0,
-    types: [],
-};
-
 /**
  * Emties a directory or creates it if it does not exist.
  * 
@@ -49,11 +38,13 @@ async function cleanDir(dir, suffixes, consoleLike) {
  *  sourceDir?: string,
  *  outputSourceDir?: string,
  *  clean?: boolean,
+ *  schemaDomainPlaceholder?: string | string[],
  *  consoleLike?: Console
  * }} options Options for the generation.
  * @param options.sourceDir The path to the directory containing the JSON source files. Default is the `src` directory of this project.
  * @param options.outputSourceDir The path to the directory where the JSON source files should be copied to. If this is a relative path, it is resolved relative to the output directory.
  * @param options.clean If true, the output directory is cleaned before the generation. Default is true.
+ * @param options.schemaDomainPlaceholder A string or an array of strings that are replaced in the schema files with the domain name. Default is `[pending.schema4i.org, schema4i.org]`.
  * @param options.consoleLike an object with a log function similar to a console.
  */
 async function buildSchema(domain, outputDir, options) {
@@ -62,6 +53,17 @@ async function buildSchema(domain, outputDir, options) {
     let outputSourceDir;
     let clean = true;
     let consoleLike = console;
+    let schemaDomainPlaceholder = ['pending.schema4i.org', 'schema4i.org'];
+
+    const typeIndex = {
+        name: domain,
+        description: "Schema for insurances (S4i)",
+        release: 0.93,
+        modified: new Date(),
+        objects: 0,
+        enumerations: 0,
+        types: [],
+    };
 
     if (typeof options === 'string') {
         outputSourceDir = options;
@@ -72,8 +74,17 @@ async function buildSchema(domain, outputDir, options) {
         sourceDir = options.sourceDir ?? sourceDir;
         outputSourceDir = options.outputSourceDir;
         clean = options.clean !== false;
+        schemaDomainPlaceholder = options.schemaDomainPlaceholder ?? schemaDomainPlaceholder;
         consoleLike = Object.assign({}, console, options.consoleLike);
     }
+
+    if (typeof schemaDomainPlaceholder === 'string') {
+        schemaDomainPlaceholder = [schemaDomainPlaceholder];
+    }
+
+    const domainReplacer = schemaDomainPlaceholder.length > 0 ? new RegExp(`(["']https?:\/\/)(${
+        schemaDomainPlaceholder.map(s => s.replaceAll('.', '\\.')).join('|')
+    })([/"])`, 'g') : null;
 
     if (clean) {
         await cleanDir(outputDir, ['.jsonld', 'index.json', '.md'], consoleLike);
@@ -101,9 +112,9 @@ async function buildSchema(domain, outputDir, options) {
         if (file.endsWith(".src.json")) {
             let data = await fs.readFile(path.resolve(sourceDir, file), 'utf-8');
 
-            // replace namespace to match environment
-            data = data.replace(/pending.schema4i.org\//g, domain + '/');
-            data = data.replace(/schema4i.org\//g, domain + '/');
+            if (domainReplacer) {
+                data = data.replace(domainReplacer, `$1${domain}$3`);
+            }
 
             // parse data
             const obj = JSON.parse(data);
@@ -114,49 +125,49 @@ async function buildSchema(domain, outputDir, options) {
                 if (!obj[field]) {
                     throw new Error(`No attribute "${field}" found in ${file}.`);
                 }
-
             }
 
             // prepare dependencies 
             consoleLike.log('Preparing dependencies (base, parents, multipletypes, @context)');
-            const dependencies = obj.parents.concat(obj.base);
+            let dependencies = obj.parents.concat(obj.base).map(o => o['@id']).filter(id => domainReplacer.test(id));
             for (const key in obj.multipletypes) {
                 for (const object of obj.multipletypes[key]) {
-                    if (!object['@id'].startsWith('http://schema.org') && !object['@id'].startsWith('https://schema.openontology.org'))
-                        dependencies.push(object);
-                    else
-                        consoleLike.log('Skip native schema type.')
+                    if (domainReplacer.test(object['@id'])) {
+                        dependencies.push(object['@id']);
+                    } else {
+                        consoleLike.log('Skip native schema type.');
+                    }
                 }
             }
-            for (const key in obj.context['@context']) {
-                if (typeof obj.context['@context'][key] === 'object') {
+            const context = obj.context['@context'];
+
+            const templatePrefixes = Object.entries(context).filter(([_, value]) => typeof value === 'string' && domainReplacer.test(value)).map(([prefix]) => `${prefix}:`);
+
+            for (const key in context) {
+                const contextObj = context[key];
+                if (typeof contextObj === 'object') {
                     // remove internal field for type generator, jsonld processor does not like this
-                    delete obj.context['@context'][key]['types-hint'];
-                    if (obj.context['@context'][key]['@type']) {
-                        if (obj.context['@context'][key]['@type'].startsWith('s4i:')) {
-                            dependencies.push({
-                                "@id": "http://" + domain + "/" + obj.context['@context'][key]['@type'].substring(obj.context['@context'][key]['@type'].indexOf(':') + 1)
-                            })
-                        } else if (obj.context['@context'][key]['@type'] === '@vocab') {
-                            const vocab = obj.context['@context'][key]['@context']['@vocab'];
-                            if (!vocab.startsWith('schema')) {
-                                dependencies.push({
-                                    "@id": "http://" + domain + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#'))
-                                });
-                                dependencies.push({
-                                    "@id": "http://" + domain + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE"
-                                });
+                    delete contextObj['types-hint'];
+                    const type = contextObj['@type'];
+                    if (type) {
+                        if (templatePrefixes.some(prefix => type.startsWith(prefix))) {
+                            dependencies.push("http://" + domain + "/" + type.substring(type.indexOf(':') + 1))
+                        } else if (type === '@vocab') {
+                            const vocab = contextObj['@context']['@vocab'];
+                            if (templatePrefixes.some(prefix => vocab.startsWith(prefix))) {
+                                dependencies.push("http://" + domain + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')));
+                                dependencies.push("http://" + domain + "/" + vocab.substring(vocab.indexOf(':') + 1, vocab.indexOf('#')) + "_DE");
                             }
                         }
                     }
                 }
             }
+            dependencies = dependencies.filter((dep, index, self) => self.indexOf(dep) === index);
             // console.log(dependencies);
 
             // check dependencies
-            for (const parentConfig of (dependencies || [])) {
+            for (const parent of dependencies) {
                 // for (const parentConfig of(obj.parents || [])) {
-                const parent = parentConfig["@id"];
                 let objectName = "";
                 let attributeName = "";
 
