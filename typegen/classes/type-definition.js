@@ -92,7 +92,11 @@ class TypeDefinition {
     /** @type {Record<string, string>?} */
     enumValues;
     
-    constructor(srcFile) {
+    /**
+     * @param {string} domain 
+     * @param {any} srcFile 
+     */
+    constructor(domain, srcFile) {
         try {
             this.type = srcFile.type;
             this.description = srcFile.description;

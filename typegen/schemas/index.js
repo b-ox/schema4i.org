@@ -4,11 +4,13 @@ const path = require("node:path");
 const {TypeDefinition} = require('../classes/type-definition');
 const schemaOrg = require('./schema.org');
 const schema4iOrg = require('./schema4i.org');
+const ooOrg = require('./schema.openontology.org');
 const {Schema} = require("../classes/schema");
 
 const WELL_KNOWN_SCHEMAS = {
     [schemaOrg.DOMAIN]: schemaOrg.load,
     [schema4iOrg.DOMAIN]: schema4iOrg.load,
+    [ooOrg.DOMAIN]: ooOrg.load,
 }
 
 /**
@@ -25,7 +27,7 @@ async function loadFromSrc(loadConfig) {
     const files = await fs.readdir(loadConfig.src);
     const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
         const data = JSON.parse(await fs.readFile(path.resolve(loadConfig.src, file), 'utf-8'));
-        return new TypeDefinition(data);
+        return new TypeDefinition(loadConfig.domain, data);
     }));
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);

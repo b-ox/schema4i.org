@@ -4,6 +4,7 @@ const https = require("node:https");
 
 const {TypeDefinition, FieldDefinition} = require('../classes/type-definition');
 const schemaOrg = require('./schema.org');
+const ooOrg = require('./schema.openontology.org');
 const {Schema} = require("../classes/schema");
 
 const DOMAIN = 'schema4i.org';
@@ -73,8 +74,8 @@ class S4iTypeDefinition extends TypeDefinition {
     
     static schemaOrgDefs;
 
-    constructor(srcFile) {
-        super(srcFile);
+    constructor(domain, srcFile) {
+        super(domain, srcFile);
         if (this.type === 'Thing') {
             this.fields.push(new FieldDefinition('@type', '', ['string']));
             this.fields.push(new FieldDefinition('@context', '', ['Context'], 'singleton'));
@@ -106,12 +107,12 @@ async function load(loadConfig) {
     const files = await fs.readdir(loadConfig.src);
     const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
         const data = JSON.parse(await fs.readFile(path.resolve(loadConfig.src, file), 'utf-8'));
-        return new S4iTypeDefinition(data);
+        return new S4iTypeDefinition(loadConfig.domain, data);
     }));
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);
 
-    return new Schema(loadConfig.domain, types, [schemaOrg.DOMAIN]);
+    return new Schema(loadConfig.domain, types, [schemaOrg.DOMAIN, ooOrg.DOMAIN]);
 }
 
 

@@ -27,7 +27,7 @@ const EXTENSIONS = {
 }
 
 function getFilenameComponent(/** @type {Schema}*/ schema) {
-    return schema.domain.replace(/\.org$/, '');
+    return schema.domain.replace(/\.org$/, ''); // maintain compatibility to the old name schema4i
 }
 
 const LANGUAGE = {
