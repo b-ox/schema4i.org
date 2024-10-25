@@ -30,12 +30,14 @@ let schema;
 function load() {
     schema ??= (async () => {
         const types = [];
+        /** @type {import('../classes/type-definition').Dependencies} */
+        const dependencies = [];
         for (const [type, primitive] of Object.entries(PRIMITIVE_TYPES)) {
             const typeDef = new TypeDefinition({type, context: { '@context': [] }});
             typeDef.simpleType = new FieldDefinition(type, '', [primitive], 'singleton');
             types.push(typeDef);
         }
-        return new Schema(DOMAIN, types);
+        return new Schema(DOMAIN, types, dependencies.map(d => d.domain));
     })();
     return schema;
 }

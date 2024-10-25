@@ -8,7 +8,7 @@ function urlToDomain(url) {
  * @param {Record<string, string>} knownPrefixes 
  */
 function resolvePrefixes(url, knownPrefixes){
-    const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)(\w+)(?:#\w*)?$/.exec(url);
+    const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)([\w-\/\.]+)(?:#\w*)?$/.exec(url);
     if (!regexResult) {
         throw new Error(`${url} is not a valid url`);
     }
@@ -19,6 +19,7 @@ function resolvePrefixes(url, knownPrefixes){
     return {
         localName,
         domain: prefix ? knownPrefixes[prefix] : domain,
+        prefix
     }
 }
 
@@ -26,11 +27,12 @@ function resolvePrefixes(url, knownPrefixes){
  * @param {string} type
  * @param {any} typeObject
  * @param {string} domain
+ * @param {Dependencies} dependencies
  * @param {Record<string, string>?} knownPrefixes
- * @param {boolean?} ignoreMissing
+ * @param {boolean?} ignoreExternal
  * @returns {string}
  */
-function processType(type, typeObject, domain, knownPrefixes, ignoreMissing) {
+function processType(type, typeObject, domain, dependencies, knownPrefixes, ignoreExternal) {
     if (type === '@vocab' && typeObject['@context']) {
         const { localName: vocabLocalName, domain: vocabDomain } = resolvePrefixes(typeObject['@context']['@vocab'], knownPrefixes);
         if (vocabDomain === domain) {
@@ -39,14 +41,24 @@ function processType(type, typeObject, domain, knownPrefixes, ignoreMissing) {
         // Foreign enums are not included in the types for the schema
         return 'string';
     }
-    const { localName, domain: typeDomain } = resolvePrefixes(type, knownPrefixes);
+    const { localName, domain: typeDomain, prefix } = resolvePrefixes(type, knownPrefixes);
     if (typeDomain === domain) {
         return localName;
     }
-    // TODO: Referencing types from foreign schemas is not supported yet
-    if (!ignoreMissing) {
-        throw new Error(`Unknown type ${type}`);
+    if (ignoreExternal) {
+        return;
     }
+    let dependency = dependencies.find(dep => dep.domain === typeDomain);
+    if (!dependency) {
+        let suggestedPrefix = prefix;
+        let prefixCounter = 0;
+        while (!suggestedPrefix || dependencies.some(dep => dep.prefix === suggestedPrefix)) {
+            suggestedPrefix = `ns${++prefixCounter}`;
+        }
+        dependency = { prefix: suggestedPrefix, domain: typeDomain };
+        dependencies.push(dependency);
+    }
+    return `${dependency.prefix}.${localName}`;
 }
 
 class FieldDefinition {
@@ -76,6 +88,10 @@ class FieldDefinition {
     }
 }
 
+/**
+ * @typedef {{prefix: string, domain: string}[]} Dependencies
+ */
+
 class TypeDefinition {
     /** @type {string} */
     type;
@@ -97,13 +113,14 @@ class TypeDefinition {
     /**
      * @param {string} domain 
      * @param {any} srcFile 
+     * @param {Dependencies} dependencies
      */
-    constructor(domain, srcFile) {
+    constructor(domain, srcFile, dependencies) {
         try {
             this.type = srcFile.type;
             this.description = srcFile.description;
             this.url = srcFile.uri;
-            this.baseTypes = (srcFile.base || []).map(base => processType(base['@id'], base, domain));
+            this.baseTypes = (srcFile.base || []).map(base => processType(base['@id'], base, domain, dependencies));
             if (!srcFile.context) {
                 throw new Error(`type ${this.type} has no context`);
             }
@@ -115,21 +132,24 @@ class TypeDefinition {
                 filter(([_, value]) => typeof value === 'string' && /^https?:\/\//.test(value)).
                 map(([prefix, url]) => [prefix, urlToDomain(url)])
             );
+            for (const knownPrefix of Object.keys(knownPrefixes)) {
+                delete context[knownPrefix];
+            }
 
             const fieldDefs = Object.entries(context).filter(([_, entry]) => typeof entry === 'object');
 
             function getEntryTypes(key, entry) {
                 if (entry['@type']) {
-                    return [processType(entry['@type'], entry, domain, knownPrefixes)];
+                    return [processType(entry['@type'], entry, domain, dependencies, knownPrefixes)];
                 } else if (srcFile.multipletypes[key]) {
-                    return srcFile.multipletypes[key].map(t => processType(t['@id'], t, domain));
+                    return srcFile.multipletypes[key].map(t => processType(t['@id'], t, domain, dependencies));
                 } else {
                     throw new Error(`Property ${key} on type ${this.type} has no type defined`);
                 }
             }
 
             this.fields = fieldDefs.map(([key, entry]) => {
-                if (processType(entry["@id"], entry, domain, knownPrefixes, true) === this.type) {
+                if (processType(entry["@id"], entry, domain, dependencies, knownPrefixes, true) === this.type) {
                     thisDef = new FieldDefinition(key, this.getFieldDescription(entry), getEntryTypes(key, entry), 'singleton');
                     return;
                 }
@@ -155,7 +175,9 @@ class TypeDefinition {
             }
             this.examples = (srcFile.playground || []).map(pg => ({ title: pg.title, data: pg.input }));
         } catch (e) {
-            throw new Error(`generating type ${this.type} failed: ${e.message}`);
+            const error = new Error();
+            error.stack = `generating type ${this.type} failed: ${e.stack}`;
+            throw error;
         }
     }
 

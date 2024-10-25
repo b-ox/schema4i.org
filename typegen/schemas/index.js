@@ -24,15 +24,17 @@ async function loadFromSrc(loadConfig) {
 
     loadConfig.consoleLike.log('Scanning: "src"');
 
+    /** @type {import('../classes/type-definition').Dependencies} */
+    const dependencies = [];
     const files = await fs.readdir(loadConfig.src);
     const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
         const data = JSON.parse(await fs.readFile(path.resolve(loadConfig.src, file), 'utf-8'));
-        return new TypeDefinition(loadConfig.domain, data);
+        return new TypeDefinition(loadConfig.domain, data, dependencies);
     }));
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);
 
-    return new Schema(loadConfig.domain, types, [schema4iOrg.DOMAIN]);
+    return new Schema(loadConfig.domain, types, dependencies.map(d => d.domain));
 }
 
 /**

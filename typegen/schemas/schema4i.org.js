@@ -74,8 +74,8 @@ class S4iTypeDefinition extends TypeDefinition {
     
     static schemaOrgDefs;
 
-    constructor(domain, srcFile) {
-        super(domain, srcFile);
+    constructor(domain, srcFile, dependencies) {
+        super(domain, srcFile, dependencies);
         if (this.type === 'Thing') {
             this.fields.push(new FieldDefinition('@type', '', ['string']));
             this.fields.push(new FieldDefinition('@context', '', ['Context'], 'singleton'));
@@ -104,15 +104,17 @@ async function load(loadConfig) {
 
     loadConfig.consoleLike.log('Scanning: "src"');
 
+    /** @type {import('../classes/type-definition').Dependencies} */
+    const dependencies = [];
     const files = await fs.readdir(loadConfig.src);
     const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
         const data = JSON.parse(await fs.readFile(path.resolve(loadConfig.src, file), 'utf-8'));
-        return new S4iTypeDefinition(loadConfig.domain, data);
+        return new S4iTypeDefinition(loadConfig.domain, data, dependencies);
     }));
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);
 
-    return new Schema(loadConfig.domain, types, [schemaOrg.DOMAIN, ooOrg.DOMAIN]);
+    return new Schema(loadConfig.domain, types, dependencies.map(d => d.domain));
 }
 
 
