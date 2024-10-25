@@ -34,7 +34,7 @@ async function loadFromSrc(loadConfig) {
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);
 
-    return new Schema(loadConfig.domain, types, dependencies.map(d => d.domain));
+    return new Schema(loadConfig.domain, types, dependencies);
 }
 
 /**
@@ -69,7 +69,7 @@ async function loadSchemaWithDependencies(loadConfig) {
             src: domain === loadConfig.domain ? loadConfig.src : undefined,
             consoleLike: loadConfig.consoleLike
         }))));
-        requiredDomains.push(...schemas.flatMap(schema => schema.dependsOn).filter(domain => !requiredDomains.includes(domain)));
+        requiredDomains.push(...schemas.flatMap(schema => schema.dependsOn.map(d => d.domain)).filter(domain => !requiredDomains.includes(domain)));
     }
     return schemas;
 }

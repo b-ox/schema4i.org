@@ -2,11 +2,6 @@ const {Schema} = require('../classes/schema');
 const { FieldDefinition } = require('../classes/type-definition');
 const { joinWithLineBreaks, formatDoc } = require('../util');
 
-const PRIMITIVE_TYPES = {
-    'URL': ['string'],
-    'ISODateString': ['string']
-}
-
 const DEFAULT_I18N_SUFFIX = 'EN';
 
 const I18N_SUFFIXES = [DEFAULT_I18N_SUFFIX, 'DE'];
@@ -27,7 +22,7 @@ const EXTENSIONS = {
     examples: '-examples.ts',
 }
 
-function getFilenameComponent(/** @type {Schema}*/ schema) {
+function getFilenameComponent(/** @type {{domain: string}}*/ schema) {
     return schema.domain.replace(/\.org$/, ''); // maintain compatibility to the old name schema4i
 }
 
@@ -35,13 +30,18 @@ const LANGUAGE = {
         getFileName: (/** @type {Schema}*/ schema, /** @type {'types'|'util'|'examples'} */ purpose) => {
             return `${getFilenameComponent(schema)}${EXTENSIONS[purpose]}`;
         },
-        writeTypes: ( /** @type {Schema}*/ schema, /** @type {Schema[]}*/ dependencies, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
+        writeTypes: ( /** @type {Schema}*/ schema, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
             const typeDefinitions = schema.types;
             let output = `
+`;
+            for (const dependency of schema.dependsOn) {
+                output += `import * as ${dependency.prefix} from './${getFilenameComponent(dependency)}${langConfig.esm ? '.js' : ''}';
+`;
+            }
+            output += `
 
 export type OneOrMany<T> = T | T[];
 export type Context = OneOrMany<string | Record<string, any>>;
-${Object.entries(PRIMITIVE_TYPES).map(([key, value]) => `export type ${key} = ${value.join('|')};`).join('\n')}
 `;
         for (const typeDefinition of typeDefinitions) {
             const generics = typeDefinition.fields.filter(f => f.types.includes('Thing')).map(f => `T_${f.name}`);
@@ -80,7 +80,7 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
         }
         return output;
     },
-    writeOther: (/** @type {Schema}*/ schema, /** @type {Schema[]}*/ dependencies, /** @type {LangConfig} */ langConfig) => {
+    writeOther: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
         let output = `
 import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
@@ -176,7 +176,7 @@ return DESCENDANTS.get(type)?.slice() ?? [];
 `;
         return output;
     },
-    writeExamples: (/** @type {Schema}*/ schema, /** @type {Schema[]}*/ dependencies, /** @type {LangConfig} */ langConfig) => {
+    writeExamples: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
         const exampleTypes = typeDefinitions.filter(t => !t.simpleType && t.examples.length > 0);
         if (exampleTypes.length === 0) {

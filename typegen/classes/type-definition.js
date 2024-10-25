@@ -8,6 +8,9 @@ function urlToDomain(url) {
  * @param {Record<string, string>} knownPrefixes 
  */
 function resolvePrefixes(url, knownPrefixes){
+    if (url === '@id') {
+        return { localName: '@id' };
+    }
     const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)([\w-\/\.]+)(?:#\w*)?$/.exec(url);
     if (!regexResult) {
         throw new Error(`${url} is not a valid url`);
@@ -42,6 +45,9 @@ function processType(type, typeObject, domain, dependencies, knownPrefixes, igno
         return 'string';
     }
     const { localName, domain: typeDomain, prefix } = resolvePrefixes(type, knownPrefixes);
+    if (localName === '@id' && !typeDomain) {
+        return 'string';
+    }
     if (typeDomain === domain) {
         return localName;
     }

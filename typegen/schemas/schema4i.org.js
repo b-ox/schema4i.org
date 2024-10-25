@@ -114,7 +114,7 @@ async function load(loadConfig) {
 
     loadConfig.consoleLike.log(`Processed ${types.length} types`);
 
-    return new Schema(loadConfig.domain, types, dependencies.map(d => d.domain));
+    return new Schema(loadConfig.domain, types, dependencies);
 }
 
 

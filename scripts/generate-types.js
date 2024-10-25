@@ -74,18 +74,16 @@ async function generateTypes(language, outputDir, options) {
 
     for (const schema of schemas) {
 
-        const dependencies = schema.dependsOn.map(domain => schemas.find(s => s.domain === domain));
-
-        const typeOutput = languageProcessor.writeTypes(schema, dependencies, strict, langConfig);
+        const typeOutput = languageProcessor.writeTypes(schema, strict, langConfig);
 
         let exampleOutput = '';
         if (includeExamples) {
-            exampleOutput = languageProcessor.writeExamples(schema, dependencies, langConfig);
+            exampleOutput = languageProcessor.writeExamples(schema, langConfig);
         }
 
         let otherOutput = '';
         if (typeof languageProcessor.writeOther === 'function') {
-            otherOutput = languageProcessor.writeOther(schema, dependencies, langConfig);
+            otherOutput = languageProcessor.writeOther(schema, langConfig);
         }
 
         const typeOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'types'));
