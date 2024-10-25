@@ -29,7 +29,7 @@
             "Inhaber": "s4i:EnumBusinessRelationshipCode#32",
             "Autohaus": "s4i:EnumBusinessRelationshipCode#33",
             "Altenteiler": "s4i:EnumBusinessRelationshipCode#34",
-            "Hoferbe": "s4i:EnumBusinessRelationshipCode#Interior 35",
+            "Hoferbe": "s4i:EnumBusinessRelationshipCode#35",
             "Miteigentümer": "s4i:EnumBusinessRelationshipCode#36",
             "Trägerunternehmen von": "s4i:EnumBusinessRelationshipCode#37",
             "Abeilung": "s4i:EnumBusinessRelationshipCode#38",

@@ -29,7 +29,7 @@
             "owner": "s4i:EnumBusinessRelationshipCode#32",
             "car dealership": "s4i:EnumBusinessRelationshipCode#33",
             "retirement home": "s4i:EnumBusinessRelationshipCode#34",
-            "farm heir": "s4i:EnumBusinessRelationshipCode#Interior 35",
+            "farm heir": "s4i:EnumBusinessRelationshipCode#35",
             "co-owner": "s4i:EnumBusinessRelationshipCode#36",
             "carrier": "s4i:EnumBusinessRelationshipCode#37",
             "department": "s4i:EnumBusinessRelationshipCode#38",
