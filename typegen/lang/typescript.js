@@ -1,6 +1,5 @@
 const {Schema} = require('../classes/schema');
 const { FieldDefinition } = require('../classes/type-definition');
-const { joinWithLineBreaks, formatDoc } = require('../util');
 
 const DEFAULT_I18N_SUFFIX = 'EN';
 
@@ -22,8 +21,59 @@ const EXTENSIONS = {
     examples: '-examples.ts',
 }
 
+/**
+ * @param {string} doc 
+ * @param {number} indentation 
+ * @returns {string}
+ */
+function formatDoc(doc, indentation = 0) {
+    let description = (doc || '').replace(/\n|\r|\t|\\[nrt]/g, '');
+    const descriptionParts = [];
+    while (description.length > 0) {
+        const currentSlice = Math.min(130, description.length);
+        const currentPart = description.slice(0, currentSlice).trim();
+        if (currentPart.length > 0) {
+            descriptionParts.push(`${' '.repeat(indentation)} * ${currentPart}`);
+        }
+        description = description.slice(currentSlice);
+    }
+    return descriptionParts.join('\n') || `${' '.repeat(indentation)} *`;
+}
+
+/**
+ * 
+ * @param {string[]} values 
+ * @param {string} joiner 
+ * @param {string} lbJoiner 
+ * @param {number} maxLength 
+ * @returns {string}
+ */
+function joinWithLineBreaks(values, joiner, lbJoiner, maxLength = 80) {
+    const lineParts = [];
+    let currentPart = [];
+    for (const value of values) {
+        if (currentPart.reduce((sum, p) => sum + p.length, 0) + value.length <= maxLength) {
+            currentPart.push(value);
+        } else {
+            lineParts.push(currentPart.join(joiner));
+            currentPart = [value];
+        }
+    }
+    if (currentPart.length > 0) {
+        lineParts.push(currentPart.join(joiner));
+    }
+    return lineParts.join(lbJoiner);
+}
+
 function getFilenameComponent(/** @type {{domain: string}}*/ schema) {
     return schema.domain.replace(/\.org$/, ''); // maintain compatibility to the old name schema4i
+}
+
+/**
+ * @param {string} identifier 
+ */
+function escape(identifier) {
+    return identifier.replaceAll(/[^a-zA-Z0-9_\.'"]/g, '_');
 }
 
 const LANGUAGE = {
@@ -48,31 +98,31 @@ export type Context = OneOrMany<string | Record<string, any>>;
             /** @param {FieldDefinition} field */
             function getFieldTypes(field) {
                 const typeArray = (generics.includes(`T_${field.name}`) ?  [`T_${field.name}`, ...field.types.filter(t => t !== 'Thing')] : field.types);
-                const types = joinWithLineBreaks(typeArray, '|', '|\n    ');
+                const types = joinWithLineBreaks(typeArray.map(escape), '|', '|\n    ');
                 return field.cardinality === 'one' ? types : (field.cardinality === 'many' ? `(${types})[]` : `OneOrMany<${types}>`);
             }
             const genericDeclaration = generics.length > 0 ? `<${generics.map(g => `${g} extends Thing = Thing`).join(', ')}>` : '';
             const doc = `/**
-* ${typeDefinition.type}
-*
+ * ${typeDefinition.type}
+ *
 ${formatDoc(typeDefinition.description)}
-* ${typeDefinition.url ? `@see ${typeDefinition.url}` : ''}
-*/`;
+ * ${typeDefinition.url ? `@see ${typeDefinition.url}` : ''}
+ */`;
             if (typeDefinition.simpleType) {
                 const simpleTypes = getFieldTypes(typeDefinition.simpleType);
                 output += `
 ${doc}
-export type ${typeDefinition.type} = ${simpleTypes};
+export type ${escape(typeDefinition.type)} = ${simpleTypes};
 `;
             } else {
                 output += `
 ${doc}
-export interface ${typeDefinition.type}${genericDeclaration}${typeDefinition.baseTypes.length ? ` extends ${typeDefinition.baseTypes.join(', ')}` : ''} {
+export interface ${escape(typeDefinition.type)}${genericDeclaration}${typeDefinition.baseTypes.length ? ` extends ${typeDefinition.baseTypes.map(escape).join(', ')}` : ''} {
 ${typeDefinition.fields.map(field => `
-/**
+    /**
 ${formatDoc(field.description, 4)}
- */
-'${field.name}'${field.required ? '' : '?'}: ${getFieldTypes(field)};`).join('\n')}
+     */
+    '${field.name}'${field.required ? '' : '?'}: ${getFieldTypes(field)};`).join('\n')}
 ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : ''}
 }
 `;
@@ -82,6 +132,8 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
     },
     writeOther: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
+        const enumDefinitions = typeDefinitions.filter(td => td.enumValues);
+        const complexTypeDefinitions = typeDefinitions.filter(td => !td.simpleType);
         let output = `
 import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
 
@@ -96,44 +148,42 @@ return typeof obj === 'object' && obj !== null && (Array.isArray(obj["@type"]) ?
 }
 
 `;
-        for (const typeDefinition of typeDefinitions) {
-            if (!typeDefinition.simpleType) {
-                const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type) && !SKIP_TYPEOF_CHECKER.includes(td.type));
-                const ancestors = typeDefinition.listAncestors(typeDefinitions);
-                const descendants = typeDefinition.listDescendants(typeDefinitions);
+        for (const typeDefinition of complexTypeDefinitions) {
+            const escaped = escape(typeDefinition.type);
+            const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type) && !SKIP_TYPEOF_CHECKER.includes(td.type));
+            const ancestors = typeDefinition.listAncestors(typeDefinitions);
+            const descendants = typeDefinition.listDescendants(typeDefinitions);
 
-                if (!SKIP_TYPEOF_CHECKER.includes(typeDefinition.type)) {
-                    output += `
+            if (!SKIP_TYPEOF_CHECKER.includes(typeDefinition.type)) {
+                output += `
 /**
 * Checks if the given object is an instance of ${typeDefinition.type}.
 */
-export function is${typeDefinition.type}(obj: any): obj is s4i.${typeDefinition.type} {
-return isType(obj, '${typeDefinition.type}')${ childTypes.length > 0 ? ' || ' + joinWithLineBreaks(childTypes.map(ct => `is${ct.type}(obj)`), ' || ', ` ||\n    `) : '' };
+export function is${escaped}(obj: any): obj is s4i.${escaped} {
+return isType(obj, '${typeDefinition.type}')${ childTypes.length > 0 ? ' || ' + joinWithLineBreaks(childTypes.map(ct => `is${escape(ct.type)}(obj)`), ' || ', ` ||\n    `) : '' };
 }
 
 `;
-                }
+            }
 
-                if (ancestors.length > 0) {
+            if (ancestors.length > 0) {
 
-                    output += `
+                output += `
 ANCESTORS.set('${typeDefinition.type}', ['${ joinWithLineBreaks(ancestors.map(a => a.type), `', '`, `',\n    '`) }']);
 `;
 
-                }
-                if (descendants.length > 0) {
+            }
+            if (descendants.length > 0) {
 
-                    output += `
+                output += `
 DESCENDANTS.set('${typeDefinition.type}', ['${ joinWithLineBreaks(descendants.map(a => a.type), `', '`, `',\n    '`) }']);
 `;
 
-                }
             }
         }
         output += `
 
 `;
-        const enumDefinitions = typeDefinitions.filter(td => td.enumValues);
         let enumCount = 0;
         for (const enumDefinition of enumDefinitions) {
             const count = enumCount++;
@@ -143,7 +193,7 @@ ENUMS.set('${enumDefinition.type}', E${count});
 ${Object.entries(enumDefinition.enumValues).map(([key, value]) => `E${count}.set('${key}', '${value.replace(/'/g, `\\'`)}');`).join('\n')}
 `;
         }
-        const enumTypes = enumDefinitions.filter(td => !I18N_SUFFIXES.some(suffix => td.type.endsWith(suffix))).map(td => td.type);
+        const enumTypes = enumDefinitions.filter(td => !I18N_SUFFIXES.some(suffix => td.type.endsWith(suffix))).map(td => escape(td.type));
         const joinedEnumTypes = joinWithLineBreaks(enumTypes, `'|'`, `'|\n    '`);
         output += `
 export type EnumTypes = '${joinedEnumTypes}';
@@ -179,7 +229,7 @@ return DESCENDANTS.get(type)?.slice() ?? [];
     writeExamples: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
         const exampleTypes = typeDefinitions.filter(t => !t.simpleType && t.examples.length > 0);
-        if (exampleTypes.length === 0) {
+        if (exampleTypes.length === 0 || !typeDefinitions.some(t => t.type === 'Thing')) {
             return null;
         }
         let output = `
@@ -194,15 +244,15 @@ const EXAMPLES = new Map<string, s4i.Thing[]>();
             }
             processedTypes.push(typeDefinition.type);
             output += `
-const examples${typeDefinition.type}: s4i.Thing[] = [${
+const examples${escape(typeDefinition.type)}: s4i.Thing[] = [${
 typeDefinition.examples.map(example => JSON.stringify(example.data, undefined, 2)).join(',\n')
 }];
-EXAMPLES.set('${typeDefinition.type}', examples${typeDefinition.type});
+EXAMPLES.set('${typeDefinition.type}', examples${escape(typeDefinition.type)});
 `
         }
         output += '\n';
         for (const typeDefinition of exampleTypes) {
-            output += `export function getExampleGenerator(type: '${typeDefinition.type}'): Generator<s4i.${typeDefinition.type}>;\n`;
+            output += `export function getExampleGenerator(type: '${typeDefinition.type}'): Generator<s4i.${escape(typeDefinition.type)}>;\n`;
         }
         output += `export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string): Generator<R> {
 const examples = EXAMPLES.get(type);
