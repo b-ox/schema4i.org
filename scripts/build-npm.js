@@ -4,6 +4,7 @@ const argv = require('minimist')(process.argv.slice(2), {
     alias: {
         o: 'outputDir',
         s: 'includeSource',
+        d: 'sourceDir',
         q: 'quiet',
         p: 'placeholders'
     }
@@ -16,6 +17,7 @@ const argv = require('minimist')(process.argv.slice(2), {
         console.log('\nSchemaURL: The URL that will be used to host the resulting schema.');
         console.log('-o|--outputDir (optional): The directory where the jsonld-files will be placed. Defaults to ../<SchemaURL>.');
         console.log('-s|--includeSource (optional): A directory inside the outputDir where the source-files will be copied to. Omitted if empty.');
+        console.log('-d|--sourceDir (optional): The source directory from which to build types. Default is "src".');
         console.log('-p|--placeholders (optional): One or multiple comma-delimited domain names that are replaced in the schema files with the domain name of the schema URL.');
         console.log('-q|--quiet (optional): Reduce log output.');
         return;
@@ -25,6 +27,7 @@ const argv = require('minimist')(process.argv.slice(2), {
     const placeholders = argv.p ? argv.p.split(',') : [];
     const options = {
         outputSourceDir: argv.s,
+        sourceDir: argv.d,
         schemaDomainPlaceholder: placeholders,
         consoleLike: !!argv.q ? { log: () => {} } : undefined
     }
