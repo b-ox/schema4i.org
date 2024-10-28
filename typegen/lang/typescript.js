@@ -150,7 +150,7 @@ return typeof obj === 'object' && obj !== null && (Array.isArray(obj["@type"]) ?
 `;
         for (const typeDefinition of complexTypeDefinitions) {
             const escaped = escape(typeDefinition.type);
-            const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type) && !SKIP_TYPEOF_CHECKER.includes(td.type));
+            const childTypes = typeDefinitions.filter(td => td.baseTypes.includes(typeDefinition.type) && !SKIP_TYPEOF_CHECKER.some(c => c.test(td.type)));
             const ancestors = typeDefinition.listAncestors(typeDefinitions);
             const descendants = typeDefinition.listDescendants(typeDefinitions);
 
