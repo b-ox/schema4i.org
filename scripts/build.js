@@ -49,11 +49,11 @@ async function cleanDir(dir, suffixes, consoleLike) {
  */
 async function buildSchema(domain, outputDir, options) {
 
-    let sourceDir = 'src/';
+    let sourceDir = 'src';
     let outputSourceDir;
     let clean = true;
     let consoleLike = console;
-    let schemaDomainPlaceholder = ['pending.schema4i.org', 'schema4i.org'];
+    let schemaDomainPlaceholder;
 
     const typeIndex = {
         name: domain,
@@ -78,8 +78,12 @@ async function buildSchema(domain, outputDir, options) {
         consoleLike = Object.assign({}, console, options.consoleLike);
     }
 
+    sourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(__dirname, '..', sourceDir);
+
     if (typeof schemaDomainPlaceholder === 'string') {
         schemaDomainPlaceholder = [schemaDomainPlaceholder];
+    } else if (schemaDomainPlaceholder.length === 0 && sourceDir === path.resolve(__dirname, '..', 'src')) {
+        schemaDomainPlaceholder = ['pending.schema4i.org', 'schema4i.org'];
     }
 
     const domainReplacer = schemaDomainPlaceholder.length > 0 ? new RegExp(`(["']https?:\/\/)(${
@@ -102,7 +106,6 @@ async function buildSchema(domain, outputDir, options) {
             await fs.mkdir(outputSourceDir, { recursive: true });
         }
     }
-    sourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(__dirname, '..', sourceDir);
 
     // process all jsonld files
     const files = await fs.readdir(sourceDir);
