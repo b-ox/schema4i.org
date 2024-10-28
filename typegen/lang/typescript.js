@@ -6,8 +6,8 @@ const DEFAULT_I18N_SUFFIX = 'EN';
 const I18N_SUFFIXES = [DEFAULT_I18N_SUFFIX, 'DE'];
 
 const SKIP_TYPEOF_CHECKER = [
-    'Property',
-    'Enumeration'
+    /([/w+]\.)?Property$/,
+    /([/w+]\.)?Enumeration$/,
 ]
 
 /**
@@ -154,7 +154,7 @@ return typeof obj === 'object' && obj !== null && (Array.isArray(obj["@type"]) ?
             const ancestors = typeDefinition.listAncestors(typeDefinitions);
             const descendants = typeDefinition.listDescendants(typeDefinitions);
 
-            if (!SKIP_TYPEOF_CHECKER.includes(typeDefinition.type)) {
+            if (!SKIP_TYPEOF_CHECKER.some(t => t.test(typeDefinition.type))) {
                 output += `
 /**
 * Checks if the given object is an instance of ${typeDefinition.type}.

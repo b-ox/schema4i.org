@@ -12,12 +12,14 @@ const {loadSchemaWithDependencies} = require("../typegen/schemas");
  * @param {string} outputDir The directory where the output files are written.
  * @param {{
  *  sourceDir?: string,
+ *  domain?: string,
  *  includeExamples?: boolean,
  *  strict?: boolean,
  *  langConfig?: Record<string, any>,
  *  consoleLike?: Console
  * }} options Options for the generation.
  * @param options.sourceDir The directory where the source files are located. Default is 'src'.
+ * @param options.domain The domain to generate types for. Default is the name of the folder containing the sourceDir (e.g. `schema4i.org` for sourceDir `schema4i.org/src`).
  * @param options.includeExamples If true, includes example objects for all types based on the playground data in a separate file.
  * @param options.strict If true, emitted types only allow properties that are present in the schema. Otherwise types can contain arbitrary properties.
  * @param options.langConfig Language-specific configuration options. Refer to the documentation in typegen/lang for details.
@@ -30,6 +32,7 @@ async function generateTypes(language, outputDir, options) {
     let langConfig = {};
     let consoleLike = console;
     let sourceDir = 'src';
+    let domain;
 
     if (typeof options === 'boolean') {
         includeExamples = options;
@@ -44,9 +47,11 @@ async function generateTypes(language, outputDir, options) {
         langConfig = Object.assign({}, langConfig, options.langConfig);
         consoleLike = Object.assign({}, console, options.consoleLike);
         sourceDir = options.sourceDir ?? sourceDir;
+        domain = options.domain;
     }
 
     sourceDir = path.isAbsolute(sourceDir) ? sourceDir : path.resolve(__dirname, '..', sourceDir);
+    domain ??= path.basename(path.dirname(sourceDir));
 
     try {
         await fs.access(outputDir);
@@ -65,7 +70,7 @@ async function generateTypes(language, outputDir, options) {
     }
 
     const schemas = await loadSchemaWithDependencies({
-        domain: 'schema4i.org',
+        domain,
         src: sourceDir,
         consoleLike,
     });

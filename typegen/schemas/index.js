@@ -43,7 +43,7 @@ async function loadFromSrc(loadConfig) {
  */
 async function loadSchema(loadConfig) {
     if (WELL_KNOWN_SCHEMAS[loadConfig.domain]) {
-        return await WELL_KNOWN_SCHEMAS[loadConfig.domain](loadConfig);
+        return await WELL_KNOWN_SCHEMAS[loadConfig.domain](loadConfig.consoleLike);
     }
     if (loadConfig.src) {
         return await loadFromSrc(loadConfig);

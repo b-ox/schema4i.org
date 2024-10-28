@@ -15,6 +15,8 @@ const DOMAIN = 'schema4i.org';
 
 const SCHEMAORG_TYPES_URL = 'https://schema.org/version/latest/schemaorg-current-https.jsonld';
 
+const src = path.resolve(__dirname, '../../src');
+
 /**
  * 
  * @param {string | { "@language": string, "@value": string } | { "@language": string, "@value": string }[]} rdfsValue 
@@ -92,29 +94,29 @@ class S4iTypeDefinition extends TypeDefinition {
 }
 
 /**
- * @param {LoadSchemaConfig} loadConfig 
+ * @param {Console} consoleLike 
  */
-async function load(loadConfig) {
+async function load(consoleLike) {
 
-    loadConfig.consoleLike.log(`fetching schema.org types from ${SCHEMAORG_TYPES_URL}`);
+    consoleLike.log(`fetching schema.org types from ${SCHEMAORG_TYPES_URL}`);
 
     const schemaOrgDefs = await fetchSchemaOrg();
 
     S4iTypeDefinition.schemaOrgDefs = schemaOrgDefs;
 
-    loadConfig.consoleLike.log('Scanning: "src"');
+    consoleLike.log('Scanning: "src"');
 
     /** @type {import('../classes/type-definition').Dependencies} */
     const dependencies = [];
-    const files = await fs.readdir(loadConfig.src);
+    const files = await fs.readdir(src);
     const types = await Promise.all(files.filter(file => file.endsWith(".src.json")).map(async file => {
-        const data = JSON.parse(await fs.readFile(path.resolve(loadConfig.src, file), 'utf-8'));
-        return new S4iTypeDefinition(loadConfig.domain, data, dependencies);
+        const data = JSON.parse(await fs.readFile(path.resolve(src, file), 'utf-8'));
+        return new S4iTypeDefinition(DOMAIN, data, dependencies);
     }));
 
-    loadConfig.consoleLike.log(`Processed ${types.length} types`);
+    consoleLike.log(`Processed ${types.length} types`);
 
-    return new Schema(loadConfig.domain, types, dependencies);
+    return new Schema(DOMAIN, types, dependencies);
 }
 
 

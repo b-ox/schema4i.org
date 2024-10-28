@@ -164,15 +164,14 @@ class TypeDefinition {
                 }
                 return new FieldDefinition(key, this.getFieldDescription(entry), getEntryTypes(key, entry), entry['types-hint']);
             }).filter(v => typeof v !== 'undefined');
-            if (this.baseTypes.includes('Enumeration')) {
+            if (this.baseTypes.some(t => /([/w+]\.)?Enumeration$/.test(t))) {
                 const enumValues = Object.entries(context).filter(([_, entry]) => typeof entry === 'string' && resolvePrefixes(entry, knownPrefixes).domain === domain).map(([value, key]) => ({
                     key: key.split('#').pop(),
                     value
                 }));
                 thisDef = new FieldDefinition(this.type, '', enumValues.map(({ key }) => `'${key}'`), 'singleton');
                 this.enumValues = {};
-                for (const { key, value }
-                    of enumValues) {
+                for (const { key, value } of enumValues) {
                     this.enumValues[key] = value;
                 }
             }
