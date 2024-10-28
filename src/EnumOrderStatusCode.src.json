@@ -12,7 +12,8 @@
     "parents": [
         { "@id": "http://schema4i.org/InsuranceProduct#Status"},
         { "@id": "http://schema4i.org/Offer#Status" },
-        { "@id": "http://schema4i.org/Order#OrderStatus" }
+        { "@id": "http://schema4i.org/Order#OrderStatus" },
+        { "@id": "http://schema4i.org/ContractLifeCycleEvent#Code" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
@@ -23,10 +24,12 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "Active": "s4i:EnumOrderStatusCode#1",
-            "Start": "s4i:EnumContractStatusCode#1A",
-            "End": "s4i:EnumContractStatusCode#1B",
+            "Start": "s4i:EnumOrderStatusCode#1A",
+            "End": "s4i:EnumOrderStatusCode#1B",
             "Active short term during the year": "s4i:EnumOrderStatusCode#2",
             "Dormant entitlement": "s4i:EnumOrderStatusCode#3",
+            "Dormant basic entitlement": "s4i:EnumOrderStatusCode#3A",
+            "Dormant comprehensive entitlement": "s4i:EnumOrderStatusCode#3B",
             "Canceled": "s4i:EnumOrderStatusCode#4",
             "Dormant no contribution": "s4i:EnumOrderStatusCode#5",
             "Free of charge": "s4i:EnumOrderStatusCode#6",

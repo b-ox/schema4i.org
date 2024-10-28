@@ -133,8 +133,8 @@
                 "@type": "schema:Text"
             },
             "Uses": {
-                "@id": "s4i:Service",
-                "@type": "s4i:Uses"
+                "@id": "s4i:Uses",
+                "@type": "s4i:Service"
             },
             "VATDeductible": {
                 "@id": "s4i:VATDeductible",

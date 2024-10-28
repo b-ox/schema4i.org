@@ -12,7 +12,8 @@
     "parents": [
         { "@id": "http://schema4i.org/InsuranceProduct#Status"},
         { "@id": "http://schema4i.org/Offer#Status" },
-        { "@id": "http://schema4i.org/Order#OrderStatus" }
+        { "@id": "http://schema4i.org/Order#OrderStatus" },
+        { "@id": "http://schema4i.org/ContractLifeCycleEvent#Code" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
@@ -22,22 +23,24 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "lebend": "s4i:EnumContractStatusCode#1",
-            "Vertragsbeginn": "s4i:EnumContractStatusCode#1A",
-            "Vertragsablauf": "s4i:EnumContractStatusCode#1B",
-            "lebend kurzfristig unterjährig": "s4i:EnumContractStatusCode#2",
-            "ruhend Anwartschaft": "s4i:EnumContractStatusCode#3",
-            "storniert": "s4i:EnumContractStatusCode#4",
-            "ruhend beitragsfrei": "s4i:EnumContractStatusCode#5",
-            "beitragsfrei": "s4i:EnumContractStatusCode#6",
-            "beitragsfrei durch Leistung": "s4i:EnumContractStatusCode#7",
-            "Beitragsstundung": "s4i:EnumContractStatusCode#8",
-            "Sonstiges": "s4i:EnumContractStatusCode#9",
-            "In Leistung": "s4i:EnumContractStatusCode#A",
-            "In Auszahlung": "s4i:EnumContractStatusCode#A1",
-            "Vor Leistung": "s4i:EnumContractStatusCode#A2",
-            "In Abrufphase": "s4i:EnumContractStatusCode#B",
-            "Vorläufige Deckung": "s4i:EnumContractStatusCode#C"
+            "lebend": "s4i:EnumOrderStatusCode#1",
+            "Vertragsbeginn": "s4i:EnumOrderStatusCode#1A",
+            "Vertragsablauf": "s4i:EnumOrderStatusCode#1B",
+            "lebend kurzfristig unterjährig": "s4i:EnumOrderStatusCode#2",
+            "ruhend Anwartschaft": "s4i:EnumOrderStatusCode#3",
+            "ruhend kleine Anwartschaft": "s4i:EnumOrderStatusCode#3A",
+            "ruhend große Anwartschaft": "s4i:EnumOrderStatusCode#3B",
+            "storniert": "s4i:EnumOrderStatusCode#4",
+            "ruhend beitragsfrei": "s4i:EnumOrderStatusCode#5",
+            "beitragsfrei": "s4i:EnumOrderStatusCode#6",
+            "beitragsfrei durch Leistung": "s4i:EnumOrderStatusCode#7",
+            "Beitragsstundung": "s4i:EnumOrderStatusCode#8",
+            "Sonstiges": "s4i:EnumOrderStatusCode#9",
+            "In Leistung": "s4i:EnumOrderStatusCode#A",
+            "In Auszahlung": "s4i:EnumOrderStatusCode#A1",
+            "Vor Leistung": "s4i:EnumOrderStatusCode#A2",
+            "In Abrufphase": "s4i:EnumOrderStatusCode#B",
+            "Vorläufige Deckung": "s4i:EnumOrderStatusCode#C"
         }
     }
 }
