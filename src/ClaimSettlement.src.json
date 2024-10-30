@@ -1,0 +1,79 @@
+{
+    "type": "ClaimSettlement",
+    "uri": "http://schema4i.org/ClaimSettlement",
+    "description": "An agreement on the amount and way an insurer will perform a payout as a result of a `Loss`.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#CauseOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "Payee": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ClaimSettlement": "s4i:ClaimSettlement",
+            "Amount": {
+                "@id": "schema:amount",
+                "@type": "s4i:MonetaryAmount"
+            },
+            "Deductible": {
+                "@id": "s4i:Deductible",
+                "@type": "s4i:MonetaryAmount"
+            },
+            "Payee": {
+                "@id": "s4i:Payee"
+            },
+            "PaymentDate": {
+                "@id": "s4i:PaymentDate",
+                "@type": "schema:Date"
+            },
+            "SharingAgreement": {
+                "@id": "s4i:SharingAgreement",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSharingAgreementCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example ClaimSettlement",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/ClaimSettlement.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld"
+            ],
+            "@type": "ClaimSettlement",
+            "Amount": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 5000
+            },
+            "Deductible": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": "250"
+            },
+            "Payee": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max"
+            },
+            "PaymentDate": "2024-02-29",
+            "SharingAgreement": "0"
+        },
+        "context": {}
+    }]
+}

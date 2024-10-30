@@ -132,6 +132,10 @@
                 "@id": "schema:telephone",
                 "@type": "schema:Text"
             },
+            "Uses": {
+                "@id": "s4i:Uses",
+                "@type": "s4i:Service"
+            },
             "VATDeductible": {
                 "@id": "s4i:VATDeductible",
                 "@type": "schema:Boolean"
@@ -154,7 +158,23 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/Occupation.jsonld",
-                "http://schema4i.org/Role.jsonld"
+                "http://schema4i.org/Role.jsonld",
+                "http://schema4i.org/GovernmentOrganizationType.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/GovernmentService.jsonld",
+                "http://schema4i.org/GovernmentOrganization.jsonld",
+                "http://schema4i.org/EnumHealthInsuranceCategoryCode.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                {
+                    "@context": {
+                        "Value": {
+                            "@id": "s4i:SumInsured",
+                            "@type": "s4i:QuantitativeValue"
+                     }
+                    }
+                }
             ],
             "@type": "Person",
             "AdditionalName": "c/o b-tix GmbH",
@@ -179,6 +199,110 @@
             "Salutation": 3,
             "TaxID": "DE123123123",
             "Telephone": "+49 211 41608 400",
+            "Uses": [
+                {
+                    "@context": {
+                        "Category": {
+                            "@id": "schema:category",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumHealthInsuranceCategoryCode#"
+                            }
+                        }
+                    },
+                    "@type": "GovernmentService",
+                    "Category": "02",
+                    "ServiceType": "HealthCare",
+                    "ServiceOperator": {
+                        "@type": "GovernmentOrganization",
+                        "GovernmentOrganizationType": "NW",
+                        "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen"
+                    },
+                    "ServiceOutput": {
+                        "@context": {
+                            "Value": {
+                                "@id": "http://schema4i.org/SumInsured",
+                                "@type": "http://schema4i.org/QuantitativeValue"
+                            }
+                        },
+                        "@type": "InsuranceBenefit",
+                        "BenefitType": "AmbulanteVollversicherung",
+                        "Value": {
+                            "@type": "QuantitativeValue",
+                            "Value": 50,
+                            "UnitCode": "P1"
+                        }
+                    }
+                },
+                {
+                    "@context": {
+                        "Category": {
+                            "@id": "schema:category",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumHealthInsuranceCategoryCode#"
+                            }
+                        }
+                    },
+                    "@type": "GovernmentService",
+                    "Category": "03",
+                    "ServiceType": "HealthCare",
+                    "ServiceOperator": {
+                        "@type": "GovernmentOrganization",
+                        "GovernmentOrganizationType": "NW",
+                        "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen"
+                    },
+                    "ServiceOutput": {
+                        "@context": {
+                            "Value": {
+                                "@id": "http://schema4i.org/SumInsured",
+                                "@type": "http://schema4i.org/QuantitativeValue"
+                            }
+                        },
+                        "@type": "InsuranceBenefit",
+                        "BenefitType": "StationaereVollversicherung",
+                        "Value": {
+                            "@type": "QuantitativeValue",
+                            "Value": 50,
+                            "UnitCode": "P1"
+                        }
+                    }
+                },
+                {
+                    "@context": {
+                        "Category": {
+                            "@id": "schema:category",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumHealthInsuranceCategoryCode#"
+                            }
+                        }
+                    },
+                    "@type": "GovernmentService",
+                    "Category": "04",
+                    "ServiceType": "HealthCare",
+                    "ServiceOperator": {
+                        "@type": "GovernmentOrganization",
+                        "GovernmentOrganizationType": "NW",
+                        "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen"
+                    },
+                    "ServiceOutput": {
+                        "@context": {
+                            "Value": {
+                                "@id": "http://schema4i.org/SumInsured",
+                                "@type": "http://schema4i.org/QuantitativeValue"
+                            }
+                        },
+                        "@type": "InsuranceBenefit",
+                        "BenefitType": "ZahnVollversicherung",
+                        "Value": {
+                            "@type": "QuantitativeValue",
+                            "Value": 100,
+                            "UnitCode": "P1"
+                        }
+                    }
+                }
+            ],
             "VATDeductible": false,
             "VATId": "123456789",
             "WorksFor": {}

@@ -1,0 +1,56 @@
+{
+    "type": "GovernmentOrganization",
+    "uri": "http://schema4i.org/GovernmentOrganization",
+    "description": "A governmental organization or agency.",
+    "links": [{
+        "url": "http://schema.org/GovernmentOrganization",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/GovernmentService#ServiceOperator" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Organization" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "GovernmentOrganization": "schema:GovernmentOrganization",
+            "GovernmentOrganizationType": {
+                "@id": "s4i:GovernmentOrganizationType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumGovernmentOrganizationTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic GovernmentOrganization",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/GovernmentOrganization.jsonld",
+                "http://schema4i.org/Organization.jsonld",
+                "http://schema4i.org/PostalAddress.jsonld"
+            ],
+            "@type": "GovernmentOrganization",
+            "GovernmentOrganizationType": "NW",
+            "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen",
+            "Address": {
+                "@type": "PostalAddress",
+                "AddressCountry": "D",
+                "AddressLocality": "Düsseldorf",
+                "PostalCode": "40476",
+                "StreetAddress": "Johannstraße",
+                "HouseNumber": "35"
+            },
+            "Telephone": "0049 211 602301"
+        },
+        "context": {}
+    }]
+}

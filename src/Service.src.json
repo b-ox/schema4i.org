@@ -17,7 +17,8 @@
         "Category": [
             { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumInsuranceProductCategoryCode" },
-            { "@id": "http://schema4i.org/EnumLineOfBusinessCode" }
+            { "@id": "http://schema4i.org/EnumLineOfBusinessCode" },
+            { "@id": "http://schema4i.org/EnumHealthInsuranceCategoryCode" }
         ],
         "Broker": [
             { "@id": "http://schema4i.org/Person" },

@@ -1,0 +1,160 @@
+{
+    "type": "Uses",
+    "uri": "http://schema4i.org/Uses",
+    "description": "Describes a service that can be used by the entity.",
+    "links": [],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/Person#Uses"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Property"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Uses": {
+                "@id": "s4i:Uses",
+                "@type": "s4i:PropertyValue"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "Sample Uses",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/GovernmentOrganizationType.jsonld",
+                    "http://schema4i.org/Organization.jsonld",
+                    "http://schema4i.org/GovernmentService.jsonld",
+                    "http://schema4i.org/GovernmentOrganization.jsonld",
+                    "http://schema4i.org/EnumHealthInsuranceCategoryCode.jsonld",
+                    "http://schema4i.org/Service.jsonld",
+                    "http://schema4i.org/InsuranceBenefit.jsonld",
+                    "http://schema4i.org/QuantitativeValue.jsonld",
+                    {
+                        "@context": {
+                            "Value": {
+                                "@id": "s4i:SumInsured",
+                                "@type": "s4i:QuantitativeValue"
+                            }
+                        }
+                    }
+                ],
+                "Uses": [
+                    {
+                        "@context": {
+                            "Category": {
+                                "@id": "schema:category",
+                                "@type": "@vocab",
+                                "@context": {
+                                    "@vocab": "s4i:EnumHealthInsuranceCategoryCode#"
+                                }
+                            }
+                        },
+                        "@type": "GovernmentService",
+                        "Category": "02",
+                        "ServiceType": "HealthCare",
+                        "ServiceOperator": {
+                            "@type": "GovernmentOrganization",
+                            "GovernmentOrganizationType": "NW",
+                            "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen"
+                        },
+                        "ServiceOutput": {
+                            "@context": {
+                                "Value": {
+                                    "@id": "http://schema4i.org/SumInsured",
+                                    "@type": "http://schema4i.org/QuantitativeValue"
+                                }
+                            },
+                            "@type": "InsuranceBenefit",
+                            "BenefitType": "AmbulanteVollversicherung",
+                            "Value": {
+                                "@type": "QuantitativeValue",
+                                "Value": 50,
+                                "UnitCode": "P1"
+                            }
+                        }
+                    },
+                    {
+                        "@context": {
+                            "Category": {
+                                "@id": "schema:category",
+                                "@type": "@vocab",
+                                "@context": {
+                                    "@vocab": "s4i:EnumHealthInsuranceCategoryCode#"
+                                }
+                            }
+                        },
+                        "@type": "GovernmentService",
+                        "Category": "03",
+                        "ServiceType": "HealthCare",
+                        "ServiceOperator": {
+                            "@type": "GovernmentOrganization",
+                            "GovernmentOrganizationType": "NW",
+                            "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen"
+                        },
+                        "ServiceOutput": {
+                            "@context": {
+                                "Value": {
+                                    "@id": "http://schema4i.org/SumInsured",
+                                    "@type": "http://schema4i.org/QuantitativeValue"
+                                }
+                            },
+                            "@type": "InsuranceBenefit",
+                            "BenefitType": "StationaereVollversicherung",
+                            "Value": {
+                                "@type": "QuantitativeValue",
+                                "Value": 50,
+                                "UnitCode": "P1"
+                            }
+                        }
+                    },
+                    {
+                        "@context": {
+                            "Category": {
+                                "@id": "schema:category",
+                                "@type": "@vocab",
+                                "@context": {
+                                    "@vocab": "s4i:EnumHealthInsuranceCategoryCode#"
+                                }
+                            }
+                        },
+                        "@type": "GovernmentService",
+                        "Category": "04",
+                        "ServiceType": "HealthCare",
+                        "ServiceOperator": {
+                            "@type": "GovernmentOrganization",
+                            "GovernmentOrganizationType": "NW",
+                            "Name": "LBV NRW - Landesamt für Besoldung und Versorgung Nordrhein-Westfalen"
+                        },
+                        "ServiceOutput": {
+                            "@context": {
+                                "Value": {
+                                    "@id": "http://schema4i.org/SumInsured",
+                                    "@type": "http://schema4i.org/QuantitativeValue"
+                                }
+                            },
+                            "@type": "InsuranceBenefit",
+                            "BenefitType": "ZahnVollversicherung",
+                            "Value": {
+                                "@type": "QuantitativeValue",
+                                "Value": 100,
+                                "UnitCode": "P1"
+                            }
+                        }
+                    }
+                ]
+            },
+            "context": {}
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "type": "EnumSharingAgreementCode",
+    "uri": "http://schema4i.org/EnumSharingAgreementCode",
+    "description": "A code describing in which way multiple involved insurers divide the amount to be paid for a Loss amongst themselves.",
+    "links": [{
+            "url": "http://schema4i.org/EnumSharingAgreementCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/ClaimSettlement#SharingAgreement" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "No sharing agreement": "s4i:EnumEventParticipantRoleCode#0",
+            "Non-onerous sharing agreement": "s4i:EnumEventParticipantRoleCode#1",
+            "Onerous sharing agreement": "s4i:EnumEventParticipantRoleCode#2"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "type": "Payee",
+    "uri": "http://schema4i.org/Payee",
+    "description": "The recipient of a predetermined payment.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/ClaimSettlement#Payee" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+        "Payee": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Payee": {
+                "@id": "s4i:Payee"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Payee",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [],
+            "Payee": {
+                "@type": "Person",
+                "Name": "Mustermann",
+                "GivenName": "Max"
+            }
+        },
+        "context": {}
+    }]
+}

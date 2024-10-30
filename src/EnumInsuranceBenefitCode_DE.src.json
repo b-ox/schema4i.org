@@ -18,7 +18,6 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Garantierte Ablaufleistung":"s4i:EnumInsuranceBenefitCode#GarantierteAblaufleistung",
             "Gesamte Ablaufleistung":"s4i:EnumInsuranceBenefitCode#GesamteAblaufleistung",
             "Garantierte Rente":"s4i:EnumInsuranceBenefitCode#GarantierteRente",
             "Gesamte Rente":"s4i:EnumInsuranceBenefitCode#GesamteRente",
@@ -203,7 +202,10 @@
             "Garantierte Hinterbliebenenrente":"s4i:EnumInsuranceBenefitCode#GarantierteHinterbliebenenrente",
             "Gesamte Hinterbliebenenrente":"s4i:EnumInsuranceBenefitCode#GesamteHinterbliebenenrente",
             "Versicherungssumme Aus Grunddeckung":"s4i:EnumInsuranceBenefitCode#VersicherungssummeAusGrunddeckung",
-            "Jahresgehalt":"s4i:EnumInsuranceBenefitCode#Jahresgehalt"            
+            "Jahresgehalt":"s4i:EnumInsuranceBenefitCode#Jahresgehalt",
+            "Ambulante Vollversicherung":"s4i:EnumInsuranceBenefitCode#AmbulanteVollversicherung",
+            "Stationäre Vollversicherung":"s4i:EnumInsuranceBenefitCode#StationaereVollversicherung",
+            "Zahn Vollversicherung":"s4i:EnumInsuranceBenefitCode#ZahnVollversicherung"       
 
         }
     }

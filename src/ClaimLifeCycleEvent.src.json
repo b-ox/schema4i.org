@@ -1,0 +1,50 @@
+{
+    "type": "ClaimLifeCycleEvent",
+    "uri": "http://schema4i.org/ClaimLifeCycleEvent",
+    "description": "ClaimLifeCycleEvent refers to the stages from the creation to the closing of claims.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/LifeCycleEvent" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ClaimLifeCycleEvent": "s4i:ClaimLifeCycleEvent",
+            "Code": {
+                "@id": "s4i:Code",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumClaimStatusCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A Sample ClaimLifeCycleEvent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/ClaimLifeCycleEvent.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
+                    }
+                }                 
+            ],
+            "@type": "ClaimLifeCycleEvent",
+            "Code": "CLOSED",
+            "StartDate": "2024-03-13T12:00:00"
+        },
+        "context": {}
+    }]
+}

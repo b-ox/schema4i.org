@@ -1,0 +1,33 @@
+{
+    "type": "PaymentDate",
+    "uri": "http://schema4i.org/PaymentDate",
+    "description": "A date by which a certain predetermined payment must be made.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/ClaimSettlement#PaymentDate" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PaymentDate": {
+                "@id": "s4i:PaymentDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample PaymentDate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [],
+            "PaymentDate": "2024-02-29"
+        },
+        "context": {}
+    }]
+}
