@@ -23,7 +23,7 @@
             "Bahama": "s4i:EnumRoofFeatureCode#Bahama",
             "Tonnendach": "s4i:EnumRoofFeatureCode#Barrel",
             "Bituthen-Dach": "s4i:EnumRoofFeatureCode#Bituthene",
-            "Aufgebautes Dach": "s4i:EnumRoofFeatureCode#Built-Up",
+            "Aufgebautes Dach": "s4i:EnumRoofFeatureCode#BuiltUp",
             "Kompositionsdach": "s4i:EnumRoofFeatureCode#Composition",
             "Betondach": "s4i:EnumRoofFeatureCode#Concrete",
             "Kupferdach": "s4i:EnumRoofFeatureCode#Copper",

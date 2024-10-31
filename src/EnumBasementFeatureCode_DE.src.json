@@ -33,7 +33,7 @@
             "Fertiggestellt": "s4i:EnumBasementFeatureCode#Finished",
             "Drainage": "s4i:EnumBasementFeatureCode#FrenchDrain",
             "Komplett": "s4i:EnumBasementFeatureCode#Full",
-            "Inneneingang": "s4i:EnumBasementFeatureCode#Interior Entry",
+            "Inneneingang": "s4i:EnumBasementFeatureCode#InteriorEntry",
             "Kein Keller": "s4i:EnumBasementFeatureCode#None",
             "Anderer Keller": "s4i:EnumBasementFeatureCode#Other",
             "Teilweise": "s4i:EnumBasementFeatureCode#Partial",

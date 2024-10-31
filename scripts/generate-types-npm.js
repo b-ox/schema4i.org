@@ -5,6 +5,7 @@ const argv = require('minimist')(process.argv.slice(2), {
         o: 'outputDir',
         e: 'includeExamples',
         s: 'strict',
+        d: 'sourceDir',
         q: 'quiet',
         m: 'esm'
     }
@@ -18,17 +19,20 @@ const argv = require('minimist')(process.argv.slice(2), {
         console.log('-o|--outputDir (optional): The directory where the type files will be placed. Defaults to ../types.');
         console.log('-e|--includeExamples (optional): Includes example generators for the types.');
         console.log('-s|--strict (optional): Disallow fields that are not defined in the schema on the generated types.');
+        console.log('-d|--sourceDir (optional): The source directory from which to build types. Default is "src".');
         console.log('-m|--esm (optional): Generates ESM module code instead of CommonJS.');
         console.log('-q|--quiet (optional): Reduce log output.');
         return;
     }
     const outputDir = argv.o || `../types`;
-    const includeExamples = !!argv.e;
-    const strict = !!argv.s;
-    const quiet = !!argv.q;
-    const esm = !!argv.m;
-    const logger = quiet ? { log: () => {} } : undefined;
-    await generateTypes(language, path.resolve(outputDir), includeExamples, strict, esm, logger);
+    const options = {
+        includeExamples: !!argv.e,
+        strict: !!argv.s,
+        sourceDir: argv.d,
+        esm: !!argv.m,
+        consoleLike: argv.q ? { log: () => {} } : undefined
+    }
+    await generateTypes(language, path.resolve(outputDir), options);
 })().catch((e) => {
     console.error('type generation failed with error: ', e);
     process.exit(1);

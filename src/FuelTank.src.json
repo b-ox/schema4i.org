@@ -15,7 +15,7 @@
             "schema": "http://schema.org/",
             "FuelTank": "s4i:FuelTank",
             "FuelCapacity": {
-                "@id": "schema:fuelCapacity,",
+                "@id": "schema:fuelCapacity",
                 "@type": "s4i:QuantitativeValue"
             }
         }
