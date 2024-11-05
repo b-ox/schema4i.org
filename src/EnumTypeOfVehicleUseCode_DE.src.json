@@ -21,12 +21,12 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "Überwiegend geschäftlich": "s4i:EnumTypeOfVehicleUseCode#01",
-            "Ausschließlich Privat": "s4i:EnumTypeOfVehicleUseCode#02",
+            "Überwiegend Privat": "s4i:EnumTypeOfVehicleUseCode#02",
             "Taxi": "s4i:EnumTypeOfVehicleUseCode#03",
             "Vermietung": "s4i:EnumTypeOfVehicleUseCode#04",
             "Sonstige": "s4i:EnumTypeOfVehicleUseCode#05",
             "Ausschließlich geschäftlich": "s4i:EnumTypeOfVehicleUseCode#06",
-            "Überwiegend Privat": "s4i:EnumTypeOfVehicleUseCode#07",
+            "Ausschließlich Privat": "s4i:EnumTypeOfVehicleUseCode#07",
             "Privat und geschäftlich": "s4i:EnumTypeOfVehicleUseCode#08",
             "Landwirtschaft": "s4i:EnumTypeOfVehicleUseCode#09"
         }
