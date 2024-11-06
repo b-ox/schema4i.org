@@ -28,7 +28,7 @@
                 "@id": "schema:permissionType",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "schema:"
+                    "@vocab": "schema:DigitalDocumentPermissionType#"
                 }
             },
             "Grantee": {

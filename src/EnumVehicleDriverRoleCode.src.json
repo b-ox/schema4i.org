@@ -23,7 +23,7 @@
             "Unaccompanied Driver": "s4i:EnumVehicleDriverRoleCode#UnaccompaniedDriver",
             "Dominant Driver": "s4i:EnumVehicleDriverRoleCode#DominantDriver",
             "Non-Dominant Driver": "s4i:EnumVehicleDriverRoleCode#NonDominantDriver",
-            "Accompanying Person": "s4i.EnumVehicleDriverRoleCode#AccompanyingPerson"
+            "Accompanying Person": "s4i:EnumVehicleDriverRoleCode#AccompanyingPerson"
         }
     }
 }

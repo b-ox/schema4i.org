@@ -23,7 +23,7 @@
             "Bahama": "s4i:EnumRoofFeatureCode#Bahama",
             "Barrel": "s4i:EnumRoofFeatureCode#Barrel",
             "Bituthene": "s4i:EnumRoofFeatureCode#Bituthene",
-            "Built-Up": "s4i:EnumRoofFeatureCode#Built-Up",
+            "Built-Up": "s4i:EnumRoofFeatureCode#BuiltUp",
             "Composition": "s4i:EnumRoofFeatureCode#Composition",
             "Concrete": "s4i:EnumRoofFeatureCode#Concrete",
             "Copper": "s4i:EnumRoofFeatureCode#Copper",

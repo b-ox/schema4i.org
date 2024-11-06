@@ -1,0 +1,39 @@
+{
+    "type": "EnumHealtInsuranceEventCode_DE",
+    "uri": "http://schema4i.org/EnumHealtInsuranceEventCode_DE",
+    "description": "Ein Code der Ereignisse im Zusammenhang mit einer Krankenversicherung beschreibt.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumHealtInsuranceEventCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/HumanLifeCycleEvent#Code"}
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Arbeitslosigkeit": "s4i:EnumHealtInsuranceEventCode#01",
+            "GKV-Übertritt": "s4i:EnumHealtInsuranceEventCode#02",
+            "Freie Heilfürsorge": "s4i:EnumHealtInsuranceEventCode#03",
+            "Kleine Anwartschaft": "s4i:EnumHealtInsuranceEventCode#04",
+            "Wirtschaftliche Notlage": "s4i:EnumHealtInsuranceEventCode#05",
+            "Pflichtversicherung": "s4i:EnumHealtInsuranceEventCode#06",
+            "Soldat/Zivildienst": "s4i:EnumHealtInsuranceEventCode#07",
+            "Auslandsaufenthalt": "s4i:EnumHealtInsuranceEventCode#08",
+            "Zahlungsunfähigkeit": "s4i:EnumHealtInsuranceEventCode#09",
+            "Familienversicherung": "s4i:EnumHealtInsuranceEventCode#10",
+            "Ausbildung/Studium": "s4i:EnumHealtInsuranceEventCode#11",
+            "Notlagentarif": "s4i:EnumHealtInsuranceEventCode#12",
+            "Sonstige Gründe": "s4i:EnumHealtInsuranceEventCode#99"
+        }
+    }
+}

@@ -2,10 +2,7 @@
     "type": "BusinessRelationship",
     "uri": "http://schema4i.org/BusinessRelationship",
     "description": "A BusinessRelationship describes a connection to a company or business",
-    "links": [{
-        "url": "http://schema.org/BusinessRelationship",
-        "description": "Original Schema.org type"
-    }],
+    "links": [],
     "parents": [
         { "@id": "http://schema4i.org/Organization#BusinessRelationship" },
         { "@id": "http://schema4i.org/Person#BusinessRelationship" }

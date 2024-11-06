@@ -57,7 +57,7 @@
                 "@id": "schema:actionStatus",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "schema:"
+                    "@vocab": "schema:ActionStatusType#"
                 }
             },
             "Agent": {
