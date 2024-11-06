@@ -4,8 +4,7 @@
     "description": "An ActivityType describes the kind of activity taking place, ",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Activity#ActivityType" },
-        { "@id": "http://schema4i.org/Dog#Breed" }
+        { "@id": "http://schema4i.org/Activity#ActivityType" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
