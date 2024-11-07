@@ -1,0 +1,52 @@
+{
+    "type": "ActivityType",
+    "uri": "http://schema4i.org/ActivityType",
+    "description": "An ActivityType describes the kind of activity taking place, ",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Activity#ActivityType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+        "ActivityType": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumActivityTypeCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ActivityType": {
+                "@id": "s4i:ActivityType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumActivityTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ActivityType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/EnumActivityTypeCode.jsonld",
+                {
+                    "ActivityType": {
+                        "@id": "http://schema4i.org/ActivityType",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumActivityTypeCode#"
+                        }
+                    }
+                }
+            ],
+            "ActivityType": "3001"
+        },
+        "context": {}
+    }]
+}
