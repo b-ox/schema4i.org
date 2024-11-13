@@ -30,6 +30,7 @@
             "Dormant entitlement": "s4i:EnumOrderStatusCode#3",
             "Dormant basic entitlement": "s4i:EnumOrderStatusCode#3A",
             "Dormant comprehensive entitlement": "s4i:EnumOrderStatusCode#3B",
+            "Dormant without entitlement": "s4i:EnumOrderStatusCode#3C",
             "Canceled": "s4i:EnumOrderStatusCode#4",
             "Dormant no contribution": "s4i:EnumOrderStatusCode#5",
             "Free of charge": "s4i:EnumOrderStatusCode#6",
