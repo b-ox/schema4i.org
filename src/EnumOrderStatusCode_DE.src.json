@@ -30,6 +30,7 @@
             "ruhend Anwartschaft": "s4i:EnumOrderStatusCode#3",
             "ruhend kleine Anwartschaft": "s4i:EnumOrderStatusCode#3A",
             "ruhend große Anwartschaft": "s4i:EnumOrderStatusCode#3B",
+            "ruhend ohne Anwartschaft": "s4i:EnumOrderStatusCode#3C",
             "storniert": "s4i:EnumOrderStatusCode#4",
             "ruhend beitragsfrei": "s4i:EnumOrderStatusCode#5",
             "beitragsfrei": "s4i:EnumOrderStatusCode#6",
