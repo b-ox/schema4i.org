@@ -43,7 +43,13 @@
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/PostalAddress.jsonld",
                 "http://schema4i.org/Organization.jsonld",
-                "http://schema4i.org/Role.jsonld"
+                "http://schema4i.org/Role.jsonld",
+                {
+                    "RoleCode": {
+                        "@id": "http://schema4i.org/RoleCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                }
             ],
             "@type": "DataLakeItem",
             "About": {
