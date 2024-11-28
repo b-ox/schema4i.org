@@ -1,11 +1,13 @@
 {
-    "type": "DataLakeItem",
-    "uri": "http://schema4i.org/DataLakeItem",
-    "description": "A Data Lake is a repository of data in a structured and unstructured form. A DataLakeItem is an item within this repository that contains one or more entries of a certain digital ressource as well as some related metadata.",
+    "type": "IsAssociatedTo",
+    "uri": "http://schema4i.org/IsAssociatedTo",
+    "description": "Describes a (technical or actual) unidirectional relationship from the DataLakeItem towards another object. If a s4i.Role is used here, the RoleCode describes the Role the DataLakeItem plays for the object inside of IsAssociatedTo.",
     "links": [],
-    "parents": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DataLakeItem#IsAssociatedTo"
+    }],
     "base": [
-        { "@id": "http://schema4i.org/CreativeWork" }
+        { "@id": "http://schema4i.org/Property" }
     ],
     "multipletypes": {},
     "context": {
@@ -13,27 +15,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DataLakeItem": "s4i:DataLakeItem",
-            "IsAssociatedFrom": {
-                "@id": "s4i:IsAssociatedFrom",
-                "@type": "s4i:Thing"
-            },
             "IsAssociatedTo": {
                 "@id": "s4i:IsAssociatedTo",
-                "@type": "s4i:Thing"
-            },
-            "ValidFrom": {
-                "@id": "schema:validFrom",
-                "@type": "schema:DateTime"
-            },
-            "ValidThrough": {
-                "@id": "schema:validThrough",
-                "@type": "schema:DateTime"
+                "@type": "schema:Thing"
             }
         }
     },
     "playground": [{
-        "title": "A realistic DataLakeItem containing a Person as information and an Organization as source of this information",
+        "title": "An example of how a DataLakeItem containing a Person is related to another object, in this case the persons workplace",
         "tab": "tab-expanded",
         "input": {
             "@context": [
