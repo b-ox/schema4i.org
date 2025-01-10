@@ -1,11 +1,13 @@
 {
-    "type": "DataLakeItem",
-    "uri": "http://schema4i.org/DataLakeItem",
-    "description": "A Data Lake is a repository of data in a structured and unstructured form. A DataLakeItem is an item within this repository that contains one or more entries of a certain digital ressource as well as some related metadata.",
+    "type": "IsAssociatedFrom",
+    "uri": "http://schema4i.org/IsAssociatedFrom",
+    "description": "Describes a (technical or actual) unidirectional relationship from another object towards the DataLakeItem. If a s4i.Role is used here, the RoleCode describes the Role the object inside of IsAssociatedFrom plays for the DataLakeItem.",
     "links": [],
-    "parents": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DataLakeItem#IsAssociatedFrom"
+    }],
     "base": [
-        { "@id": "http://schema4i.org/CreativeWork" }
+        { "@id": "http://schema4i.org/Property" }
     ],
     "multipletypes": {},
     "context": {
@@ -13,27 +15,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "DataLakeItem": "s4i:DataLakeItem",
             "IsAssociatedFrom": {
                 "@id": "s4i:IsAssociatedFrom",
-                "@type": "s4i:Thing"
-            },
-            "IsAssociatedTo": {
-                "@id": "s4i:IsAssociatedTo",
-                "@type": "s4i:Thing"
-            },
-            "ValidFrom": {
-                "@id": "schema:validFrom",
-                "@type": "schema:DateTime"
-            },
-            "ValidThrough": {
-                "@id": "schema:validThrough",
-                "@type": "schema:DateTime"
+                "@type": "schema:Thing"
             }
         }
     },
     "playground": [{
-        "title": "A realistic DataLakeItem containing a Person as information and an Organization as source of this information",
+        "title": "An example of a DataLakeItem containing an Organization and how another object, in this case one of the company's workers, is related to the DataLakeItem.",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -53,21 +42,21 @@
             ],
             "@type": "DataLakeItem",
             "About": {
-                "@type": "Person",
-                "Name": "Max Mustermann",
+                "@type": "Organization",
+                "LegalName": "Musterfirma GmbH",
                 "Address": {
                     "AddressLocality": "Musterstadt",
                     "PostalCode": "11111",
-                    "StreetAddress": "Musterstraße 1"
+                    "StreetAddress": "Musterstraße 19"
                 },
-                "Email": "max.mustermann@email.de"
+                "Email": "kontakt@musterfirma.de"
             },
-            "IsAssociatedTo": {
+            "IsAssociatedFrom": {
                 "@type": "Role",
                 "RoleCode": "MemberOf",
-                "IsAssociatedTo": {
-                    "@type": "Organization",
-                    "Name": "Musterfirma GmbH"
+                "IsAssociatedFrom": {
+                    "@type": "Person",
+                    "Name": "Max Mustermann"
                 }
             },
             "DateCreated": "2022-12-07T09:13:45",

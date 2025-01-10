@@ -4,21 +4,45 @@
     "description": "A generic term used to describe single or continuous operations performed by individuals or companies.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/BusinessActivity" }
+        {
+            "@id": "http://schema4i.org/BusinessActivity"
+        }
     ],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        {
+            "@id": "http://schema4i.org/Thing"
+        }
     ],
     "multipletypes": {
         "Participant": [
-            { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Role" }
+            {
+                "@id": "http://schema4i.org/Person"
+            },
+            {
+                "@id": "http://schema4i.org/Organization"
+            },
+            {
+                "@id": "http://schema4i.org/Role"
+            }
         ],
         "Agent": [
-            { "@id": "http://schema4i.org/Person" },
-            { "@id": "http://schema4i.org/Organization" },
-            { "@id": "http://schema4i.org/Role" }
+            {
+                "@id": "http://schema4i.org/Person"
+            },
+            {
+                "@id": "http://schema4i.org/Organization"
+            },
+            {
+                "@id": "http://schema4i.org/Role"
+            }
+        ],
+        "ActivityType": [
+            {
+                "@id": "http://schema.org/Text"
+            },
+            {
+                "@id": "http://schema4i.org/EnumActivityTypeCode"
+            }
         ]
     },
     "context": {
@@ -36,42 +60,47 @@
             "Object": {
                 "@id": "schema:object",
                 "@type": "s4i:Thing"
+            },
+            "ActivityType": {
+                "@id": "s4i:ActivityType"
             }
-
         }
     },
-    "playground": [{
-        "title": "A maximum Activity",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": [
-                "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Activity.jsonld",
-                "http://schema4i.org/DefinedTerm.jsonld",
-                "http://schema4i.org/DefinedTermSet.jsonld",
-                "http://schema4i.org/Role.jsonld",
-                "http://schema4i.org/Person.jsonld"
-            ],
-            "@type": "Activity",
-            "Name": "Buchfuehrung durchfuehren",
-            "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen",
-            "Participant": {
-                "@type": "Role",
-                "RoleName": "Abteilungsleiter",
+    "playground": [
+        {
+            "title": "A maximum Activity",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/Activity.jsonld",
+                    "http://schema4i.org/DefinedTerm.jsonld",
+                    "http://schema4i.org/DefinedTermSet.jsonld",
+                    "http://schema4i.org/Role.jsonld",
+                    "http://schema4i.org/Person.jsonld"
+                ],
+                "@type": "Activity",
+                "Name": "Buchfuehrung durchfuehren",
+                "Description": "Aufzeichnung und Verwaltung finanzieller Transaktionen",
                 "Participant": {
+                    "@type": "Role",
+                    "RoleName": "Abteilungsleiter",
+                    "Participant": {
+                        "@type": "Person",
+                        "Name": "Fr. Mustermann"
+                    }
+                },
+                "Agent": {
                     "@type": "Person",
-                    "Name": "Fr. Mustermann"
-                }
+                    "Name": "Hr. Mustermann"
+                },
+                "Object": {
+                    "@type": "Thing",
+                    "Name": "Kassenbuch"
+                },
+                "ActivityType": "Durchführung von Buchführung"
             },
-            "Agent": {
-                "@type": "Person",
-                "Name": "Hr. Mustermann"
-            },
-            "Object": {
-                "@type": "Thing",
-                "Name": "Kassenbuch"
-            }
-        },
-        "context": {}
-    }]
+            "context": {}
+        }
+    ]
 }
