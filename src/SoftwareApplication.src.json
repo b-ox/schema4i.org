@@ -24,6 +24,10 @@
             "ApplicationCategory": {
                 "@id": "schema:applicationCategory",
                 "@type": "schema:Text"
+            },
+            "ApplicationSubCategory": {
+                "@id": "schema:applicationSubCategory",
+                "@type": "schema:Text"
             }
         }
     },
@@ -39,7 +43,8 @@
             ],
             "@type": "SoftwareApplication",
             "SoftwareVersion": "2.2.22",
-            "ApplicationCategory": "Tarifrechner"
+            "ApplicationCategory": "Tarifrechner",
+            "ApplicationSubCategory": "KFZ"
         },
         "context": {}
     }]
