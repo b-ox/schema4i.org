@@ -91,23 +91,23 @@
                     "s4i": "http://schema4i.org/",
                     "AdditionalCosts": { 
                         "@id": "s4i:DunningAdditionalCosts",
-                        "@type": "schema:Number
+                        "@type": "schema:Number"
                     },
                     "Amount": { 
                         "@id": "s4i:DunningAmount",
-                        "@type": "schema:Number
+                        "@type": "schema:Number"
                     },
                     "BankBalance": { 
                         "@id": "s4i:BankBalance",
-                        "@type": "schema:Number
+                        "@type": "schema:Number"
                     },
                     "Costs": { 
                         "@id": "s4i:DunningCosts",
-                        "@type": "schema:Number
+                        "@type": "schema:Number"
                     },
                     "TotalAmount": { 
                         "@id": "s4i:TotalDunningAmount",
-                        "@type": "schema:Number
+                        "@type": "schema:Number"
                     }
                 }
             ],
