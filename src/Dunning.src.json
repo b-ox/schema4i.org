@@ -85,7 +85,31 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/Dunning.jsonld"
+                "http://schema4i.org/Dunning.jsonld",
+                {
+                    "schema": "http://schema.org/",
+                    "s4i": "http://schema4i.org/",
+                    "AdditionalCosts": { 
+                        "@id": "s4i:DunningAdditionalCosts",
+                        "@type": "schema:Number
+                    },
+                    "Amount": { 
+                        "@id": "s4i:DunningAmount",
+                        "@type": "schema:Number
+                    },
+                    "BankBalance": { 
+                        "@id": "s4i:BankBalance",
+                        "@type": "schema:Number
+                    },
+                    "Costs": { 
+                        "@id": "s4i:DunningCosts",
+                        "@type": "schema:Number
+                    },
+                    "TotalAmount": { 
+                        "@id": "s4i:TotalDunningAmount",
+                        "@type": "schema:Number
+                    }
+                }
             ],
             "@type": "Dunning",
             "AdditionalCosts": 25.00,
