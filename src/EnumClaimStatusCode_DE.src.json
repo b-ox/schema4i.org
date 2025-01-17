@@ -20,7 +20,11 @@
             "Offen": "s4i:EnumClaimStatusCode#OPEN",
             "Gemeldet": "s4i:EnumClaimStatusCode#REPORTED",
             "In Bearbeitung": "s4i:EnumClaimStatusCode#IN_PROGRESS",
-            "Geschlossen": "s4i:EnumClaimStatusCode#CLOSED"
+            "Geschlossen": "s4i:EnumClaimStatusCode#CLOSED",
+            "Vom Versicherer abgelehnt": "s4i:EnumClaimStatusCode#CLOSED_DENIED",
+            "Mit Zahlung geschlossen": "s4i:EnumClaimStatusCode#CLOSED_WITH_PAYMENT",
+            "Ohne Zahlung geschlossen": "s4i:EnumClaimStatusCode#CLOSED_WITHOUT_PAYMENT",
+            "Geschlossen aufgrund eines Fehlers in den Schadenangaben des Versicherungsnehmers": "s4i:EnumClaimStatusCode#CLOSED_MISTAKE"
         }
     }
 }
