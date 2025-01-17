@@ -59,6 +59,10 @@
                 "@id": "schema:birthDate",
                 "@type": "schema:Date"
             },
+            "BirthPlace": {
+                "@id": "schema:birthPlace",
+                "@type": "s4i:Place"
+            },
             "ContactPoint": {
                 "@id": "schema:contactPoint",
                 "@type": "s4i:ContactPoint"
@@ -181,6 +185,16 @@
             "Address": {},
             "BankAccount": {},
             "BirthDate": "1973-11-16",
+            "BirthPlace": {
+                "@type": "Place",
+                "Address": {
+                    "@type": "PostalAddress",
+                    "AddressCountry": "D",
+                    "AddressLocality": "Düsseldorf",
+                    "PostalCode": "40233",
+                    "StreetAddress": "Lindenstr."
+                }
+            },
             "ContactPoint": {},
             "DrivingLicense": {},
             "Email": "noreply@b-tix.de",
@@ -323,7 +337,7 @@
                 "AddressCountry": "D",
                 "AddressLocality": "Düsseldorf",
                 "PostalCode": "40233",
-                "StreetAddress": "Düsseldorf"
+                "StreetAddress": "Lindenstr."
             },
             "BirthDate": "1973-11-16",
             "Email": "noreply@b-tix.de",
