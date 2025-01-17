@@ -23,7 +23,10 @@
             },
             "CausedBy": {
                 "@id": "s4i:CausedBy",
-                "@type": "s4i:LossEvent"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDamageTypeCode"
+                }
             },
             "ClaimID": {
                 "@id": "s4i:ClaimID",
@@ -67,6 +70,7 @@
                 }
             ],
             "@type": "InsuranceClaim",
+            "Category": "810",
             "ClaimID": {
                 "@type": "ID",
                 "Value": "PD8734675",
