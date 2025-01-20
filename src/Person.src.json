@@ -105,6 +105,13 @@
             "KnowsAbout": {
                 "@id": "schema:knowsAbout"
             },
+            "MariatialStatus": {
+                "@id": "s4i:MariatialStatusCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumMariatalStatusCode#"
+                }
+            },
             "MemberOf": {
                 "@id": "schema:memberOf"
             },
@@ -168,6 +175,7 @@
                 "http://schema4i.org/GovernmentService.jsonld",
                 "http://schema4i.org/GovernmentOrganization.jsonld",
                 "http://schema4i.org/EnumHealthInsuranceCategoryCode.jsonld",
+                "http://schema4i.org/EnumMariatalStatusCode.jsonld",
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/InsuranceBenefit.jsonld",
                 "http://schema4i.org/QuantitativeValue.jsonld",
@@ -209,6 +217,7 @@
             "KnowsAbout": ["Insurances"],
             "MemberOf": {},
             "Nationality": "D",
+            "MariatialStatus": "2",
             "RelatedTo": {},
             "Salutation": 3,
             "TaxID": "DE123123123",

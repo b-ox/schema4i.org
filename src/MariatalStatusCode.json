@@ -1,0 +1,33 @@
+{
+    "type": "ConsentTypeCode",
+    "uri": "http://schema4i.org/ConsentTypeCode",
+    "description": "The marital status of a person describes their legal relationship status in terms of marriage",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/BankOrCreditUnion#ConsentTypeCode"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ConsentTypeCode": {
+                "@id": "s4i:ConsentTypeCode",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ConsentTypeCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ConsentTypeCode": "Cookie"
+        },
+        "context": {}
+    }]
+}

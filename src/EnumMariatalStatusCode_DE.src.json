@@ -1,0 +1,38 @@
+{
+  "type": "EnumMariatalStatusCode_DE",
+  "uri": "http://schema4i.org/EnumMariatalStatusCode",
+  "description": "Ein Code, der die rechtlichen Beziehungsstatus einer Person im Hinblick auf die Ehe beschreibt. ",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumMariatalStatusCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+    }
+  ],
+  "parents": [
+    {
+      "@id": "http://schema4i.org/Activity"
+    }
+  ],
+  "base": [
+    {
+      "@id": "http://schema4i.org/Enumeration"
+    }
+  ],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "ledig": "s4i:EnumMariatalStatusCode#1",
+      "verheiratet": "s4i:EnumMariatalStatusCode#2",
+      "geschieden": "s4i:EnumMariatalStatusCode#3",
+      "verwitwet": "s4i:EnumMariatalStatusCode#4",
+      "getrennt lebend": "s4i:EnumMariatalStatusCode#5",
+      "eheähnliche Gemeinschaft": "s4i:EnumMariatalStatusCode#6",
+      "eingetragene Lebenspartnerschaft": "s4i:EnumMariatalStatusCode#7",
+      "sonstiges": "s4i:EnumMariatalStatusCode#9"
+
+     
+    }
+  }
+}
