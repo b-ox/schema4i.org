@@ -19,14 +19,14 @@
             "InsuranceClaim": "s4i:InsuranceClaim",
             "Category": {
                 "@id": "schema:category",
-                "@type": "schema:Text"
-            },
-            "CausedBy": {
-                "@id": "s4i:CausedBy",
                 "@type": "@vocab",
                 "@context": {
                     "@vocab": "s4i:EnumDamageTypeCode"
                 }
+            },
+            "CausedBy": {
+                "@id": "s4i:CausedBy",
+                "@type": "s4i:LossEvent"
             },
             "ClaimID": {
                 "@id": "s4i:ClaimID",
