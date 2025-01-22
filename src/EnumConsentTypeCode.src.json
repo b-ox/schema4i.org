@@ -1,0 +1,30 @@
+{
+    "type": "EnumConsentTypeCode",
+    "uri": "http://schema4i.org/EnumConsentTypeCode",
+    "description": "A code that describes the tpye of a Consent.",
+    "links": [{
+        "url": "http://schema4i.org/EnumConsentTypeCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#ProvidedConsent" },
+        { "@id": "http://schema4i.org/Organization#ProvidedConsent" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Marketing": "s4i:EnumConsentTypeCode#Marketing",
+            "Cookie": "s4i:EnumConsentTypeCode#Cookie",
+            "Advice Waiver": "s4i:EnumConsentTypeCode#AdviceWaiver",
+            "Privacy Policy": "s4i:EnumConsentTypeCode#PrivacyPolicy",
+            "Terms and Conditions": "s4i:EnumConsentTypeCode#TermsAndConditions",
+            "Directdebit Mandate": "s4i:EnumConsentTypeCode#DirectDebitMandate",
+            "General Data Protection Regulation": "s4i:EnumConsentTypeCode#GDPR"
+        }
+    }
+}

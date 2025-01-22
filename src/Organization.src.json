@@ -100,6 +100,10 @@
                 "@id": "schema:numberOfEmployees",
                 "@type": "s4i:QuantitativeValue"
             },
+            "ProvidedConsent": {
+                "@id": "s4i:Consent",
+                "@type": "s4i:Consent"
+            },
             "TaxID": {
                 "@id": "schema:taxID",
                 "@type": "schema:Text"

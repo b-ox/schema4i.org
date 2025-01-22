@@ -1,0 +1,30 @@
+{
+    "type": "EnumConsentTypeCode_DE",
+    "uri": "http://schema4i.org/EnumConsentTypeCode_DE",
+    "description": "Ein Code der den Typen  der Zustimmung beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumConsentTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#ProvidedConsent" },
+        { "@id": "http://schema4i.org/Organization#ProvidedConsent" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Datenweiterleitung": "s4i:EnumConsentTypeCode#Datenweiterleitung",
+            "Cookie": "s4i:EnumConsentTypeCode#Cookie",
+            "Beratungsverzicht": "s4i:EnumConsentTypeCode#AdviceWaiver",
+            "Datenschutzerklärung": "s4i:EnumConsentTypeCode#PrivacyPolicy",
+            "Vertragsbedingungen": "s4i:EnumConsentTypeCode#TermsAndConditions",
+            "Einzugsermächtigung": "s4i:EnumConsentTypeCode#DirectDebitMandate",
+            "Auftragsverarbeitungsvertrag": "s4i:EnumConsentTypeCode#GDPR"
+        }
+    }
+}

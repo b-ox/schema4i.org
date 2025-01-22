@@ -115,6 +115,10 @@
                     "@vocab": "s4i:EnumCountryCode#"
                 }
             },
+            "ProvidedConsent": {
+                "@id": "s4i:Consent",
+                "@type": "s4i:Consent"
+            },
             "RelatedTo": {
                 "@id": "s4i:RelatedTo"
             },
