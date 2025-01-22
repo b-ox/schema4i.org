@@ -105,8 +105,8 @@
             "KnowsAbout": {
                 "@id": "schema:knowsAbout"
             },
-            "MariatialStatus": {
-                "@id": "s4i:MariatialStatusCode",
+            "MaritalStatus": {
+                "@id": "s4i:MaritalStatusCode",
                 "@type": "@vocab",
                 "@context": {
                     "@vocab": "s4i:EnumMariatalStatusCode#"
@@ -217,7 +217,7 @@
             "KnowsAbout": ["Insurances"],
             "MemberOf": {},
             "Nationality": "D",
-            "MariatialStatus": "2",
+            "MaritalStatus": "2",
             "RelatedTo": {},
             "Salutation": 3,
             "TaxID": "DE123123123",

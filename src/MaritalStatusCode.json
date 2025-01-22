@@ -1,10 +1,10 @@
 {
-    "type": "ConsentTypeCode",
-    "uri": "http://schema4i.org/ConsentTypeCode",
+    "type": "MaritalStatusCode",
+    "uri": "http://schema4i.org/MaritalStatusCode",
     "description": "The marital status of a person describes their legal relationship status in terms of marriage",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/BankOrCreditUnion#ConsentTypeCode"
+        "@id": "http://schema4i.org/Person#MaritalStatus"
     }],
     "base": [
         { "@id": "http://schema4i.org/Property" }
@@ -16,17 +16,17 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "ConsentTypeCode": {
-                "@id": "s4i:ConsentTypeCode",
+                "@id": "s4i:MaritalStatusCode",
                 "@type": "schema:Text"
             }
         }
     },
     "playground": [{
-        "title": "Sample ConsentTypeCode",
+        "title": "Sample MaritalStatusCode",
         "tab": "tab-expanded",
         "input": {
             "@context": {},
-            "ConsentTypeCode": "Cookie"
+            "MaritalStatusCode": "01"
         },
         "context": {}
     }]
