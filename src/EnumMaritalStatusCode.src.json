@@ -1,7 +1,7 @@
 {
     "type": "EnumMaritalStatusCode",
     "uri": "http://schema4i.org/EnumMaritalStatusCode",
-    "description": "A code that describes the describes their legal relationship status in terms of marriage",
+    "description": "A code that describes the describes their legal relationship status in terms of marriage.",
     "links": [
         {
             "url": "http://schema4i.org/EnumMaritalStatusCode_DE",
