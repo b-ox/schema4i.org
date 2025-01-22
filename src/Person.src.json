@@ -117,10 +117,7 @@
             },
             "ProvidedConsent": {
                 "@id": "s4i:Consent",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumConsentTypeCode#"
-                }
+                "@type": "s4i:Consent"
             },
             "RelatedTo": {
                 "@id": "s4i:RelatedTo"
