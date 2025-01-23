@@ -65,6 +65,10 @@
                 "@id": "schema:provider",
                 "@type": "s4i:Organization"
             },
+            "ServiceAudience": {
+                "@id": "schema:audience",
+                "@type": "schema:Text"
+            },
             "Slogan": {
                 "@id": "schema:slogan",
                 "@type": "schema:Text"
