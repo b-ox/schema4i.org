@@ -1,0 +1,49 @@
+{
+    "type": "EnumAnimalUseCode_DE",
+    "uri": "http://schema4i.org/EnumAnimalUseCode_DE",
+    "description": "Ein Code der beschreibt wie ein Tier von Menschen genutzt wird, z.B. als Arbeits-, Haus- oder Hoftier.",
+    "links": [{
+        "url": "http://schema4i.org/EnumAnimalUseCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Animal#AnimalUse" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Fohlen": "s4i:EnumAnimalUseCode#01",
+            "Gnadenbrotpferd": "s4i:EnumAnimalUseCode#02",
+            "Zuchttier": "s4i:EnumAnimalUseCode#03",
+            "Turnierpferd": "s4i:EnumAnimalUseCode#04",
+            "Dienstpferd": "s4i:EnumAnimalUseCode#05",
+            "Zugpferd": "s4i:EnumAnimalUseCode#06",
+            "Jagdhund mit Hundeprüfung": "s4i:EnumAnimalUseCode#07",
+            "Blindenhund": "s4i:EnumAnimalUseCode#08",
+            "Wachhund": "s4i:EnumAnimalUseCode#09",
+            "Beizvogel": "s4i:EnumAnimalUseCode#10",
+            "Begleit-/ Therapiehund": "s4i:EnumAnimalUseCode#11",
+            "Privates Tier": "s4i:EnumAnimalUseCode#12",
+            "Gewerblich genutztes Tier": "s4i:EnumAnimalUseCode#13",
+            "Rettungstier": "s4i:EnumAnimalUseCode#14",
+            "Aufzuchttier nicht Fohlen": "s4i:EnumAnimalUseCode#15",
+            "Pferd ohne Reiten": "s4i:EnumAnimalUseCode#16",
+            "Reittier": "s4i:EnumAnimalUseCode#17",
+            "Rennpferd": "s4i:EnumAnimalUseCode#18",
+            "Holzrückepferd": "s4i:EnumAnimalUseCode#19",
+            "Therapiepferd": "s4i:EnumAnimalUseCode#20",
+            "Voltigierpferd": "s4i:EnumAnimalUseCode#21",
+            "Dem Verein zum Unterricht überlassenes Tier": "s4i:EnumAnimalUseCode#22",
+            "Vereinseigenes Tier zu Schulzwecken": "s4i:EnumAnimalUseCode#23",
+            "Schultier": "s4i:EnumAnimalUseCode#24",
+            "Verleihtier": "s4i:EnumAnimalUseCode#25",
+            "Showtier": "s4i:EnumAnimalUseCode#26",
+            "Pferd für pferdegestützte Coachings / pferdegestützte Persönlichkeitsentwicklung": "s4i:EnumAnimalUseCode#27"
+        }
+    }
+}
