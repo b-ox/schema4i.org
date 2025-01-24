@@ -36,6 +36,13 @@
             },
             "Owner": {
                 "@id": "s4i:Owner"
+            },
+            "AnimalUse": {
+                "@id": "s4i:AnimalUse",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumAnimalUseCode#"
+                }
             }
         }
     },
@@ -65,7 +72,8 @@
                 "Name": "Mustermann",
                 "GivenName": "Max",
                 "Salutation": "3"
-            }
+            },
+            "AnimalUse": "12"
         },
         "context": {}
     }]

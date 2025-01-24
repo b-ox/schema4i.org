@@ -1,0 +1,39 @@
+{
+    "type": "ConsentType",
+    "uri": "http://schema4i.org/ConsentType",
+    "description": "Describes the type of activity or situation a consent is given for, e.g. a user giving consent for a website to set cookies in their browser.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Consent#ConsentType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ConsentType": {
+                "@id": "s4i:ConsentType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumConsentTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ConsentType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Consent.jsonld"
+            ],
+            "@type": "Consent",
+            "ConsentType": "Cookie"
+        },
+        "context": {}
+    }]
+}

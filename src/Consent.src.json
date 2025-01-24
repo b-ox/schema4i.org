@@ -13,12 +13,12 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Consent": "schema:Consent",
+            "Consent": "s4i:Consent",
             "ConsentType": {
-                "@id": "s4i:ContentType",
+                "@id": "s4i:ConsentType",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "s4i:EnumContentTypeCode"
+                    "@vocab": "s4i:EnumConsentTypeCode#"
                 }
             }
         }
