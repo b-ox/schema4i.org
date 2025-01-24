@@ -17,7 +17,7 @@
             "schema": "http://schema.org/",
             "IsAssociatedTo": {
                 "@id": "s4i:IsAssociatedTo",
-                "@type": "schema:Thing"
+                "@type": "s4i:Thing"
             }
         }
     },

@@ -1,0 +1,36 @@
+{
+  "type": "EnumMaritalStatusCode_DE",
+  "uri": "http://schema4i.org/EnumMaritalStatusCode",
+  "description": "Ein Code, der die rechtlichen Beziehungsstatus einer Person im Hinblick auf die Ehe beschreibt. ",
+  "links": [
+    {
+      "url": "http://schema4i.org/EnumMaritalStatusCode",
+      "description": "Englische Dokumentation der Schlüsselwerte"
+    }
+  ],
+  "parents": [
+    { "@id": "http://schema4i.org/Person#LegaMaritalStatus" }
+  ],
+  "base": [
+    {
+      "@id": "http://schema4i.org/Enumeration"
+    }
+  ],
+  "multipletypes": {},
+  "context": {
+    "@context": {
+      "@version": 1.1,
+      "s4i": "http://schema4i.org/",
+      "ledig": "s4i:EnumMaritalStatusCode#1",
+      "verheiratet": "s4i:EnumMaritalStatusCode#2",
+      "geschieden": "s4i:EnumMaritalStatusCode#3",
+      "verwitwet": "s4i:EnumMaritalStatusCode#4",
+      "getrennt lebend": "s4i:EnumMaritalStatusCode#5",
+      "eheähnliche Gemeinschaft": "s4i:EnumMaritalStatusCode#6",
+      "eingetragene Lebenspartnerschaft": "s4i:EnumMaritalStatusCode#7",
+      "sonstiges": "s4i:EnumMaritalStatusCode#9"
+
+     
+    }
+  }
+}
