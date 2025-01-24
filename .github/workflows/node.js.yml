@@ -27,5 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build localhost:4201
-    - run: npm run generate-types typescript
+    - run: npm run build -- -o dist/build localhost:4201
+    - run: npm run generate-types -- -o dist/types typescript
+    - run: npx tsc --noEmit --skipDefaultLibCheck

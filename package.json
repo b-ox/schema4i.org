@@ -32,6 +32,7 @@
     "author": "b-tix GmbH",
     "license": "Creative Commons Attribution-ShareAlike License 3.0",
     "devDependencies": {
-        "minimist": "^1.2.6"
+        "minimist": "^1.2.6",
+        "typescript": "^5.7.3"
     }
 }

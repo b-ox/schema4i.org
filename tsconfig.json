@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/compiled",
+    "sourceMap": false,
+    "declaration": false,
+    "useDefineForClassFields": true,
+    "downlevelIteration": false,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false,
+    "importHelpers": true,
+    "target": "es2020",
+    "allowJs": true,
+    "types": [],
+    "lib": [
+      "ES2020"
+    ],
+    "resolveJsonModule": true  
+  },
+  "include": ["dist/types/**/*.ts"]
+}
