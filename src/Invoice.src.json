@@ -8,9 +8,13 @@
     }],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/CreativeWork" }
     ],
     "multipletypes": {
+        "BillingPeriod": [
+            { "@id": "http://schema.org/Duration" },
+            { "@id": "http://schema.org/Text" }
+        ],
         "Broker": [
             { "@id": "http://schema4i.org/Person" },
             { "@id": "http://schema4i.org/Organization" }
@@ -39,8 +43,7 @@
                 "@type": "schema:Text"
             },
             "BillingPeriod": {
-                "@id": "schema:billingPeriod",
-                "@type": "schema:Duration"
+                "@id": "schema:billingPeriod"
             },
             "Broker": {
                 "@id": "schema:broker"
