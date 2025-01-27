@@ -1,0 +1,109 @@
+{
+    "type": "Consent",
+    "uri": "http://schema4i.org/Consent",
+    "description": "Consent is a voluntary, informed, and unambiguous agreement to participate in an activity or allow something to happen.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/CreativeWork" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Consent": "s4i:Consent",
+            "ConsentType": {
+                "@id": "s4i:ConsentType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumConsentTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A given Consent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Consent.jsonld",
+                "http://schema4i.org/AcceptAction.jsonld"
+            ],
+            "@type": "Consent",
+            "ConsentType": "Marketing",
+            "Identifier": "",
+            "About": {
+                "@type":"OrderedItem",
+                "Category": "030"
+            },
+            "Description": "",
+            "InteractionStatistic": {
+                "@type": "InteractionCounter",
+                "InteractionType": {
+                    "@type": "AcceptAction",
+                    "StartTime": "2025-01-01"
+                },
+                "UserInteractionCount": 1
+            }
+        },
+        "context": {}
+    }, {
+        "title": "A rejected Consent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Consent.jsonld",
+                "http://schema4i.org/RejectAction.jsonld"
+            ],
+            "@type": "Consent",
+            "ConsentType": "Marketing",
+            "Identifier": "",
+            "About": {
+                "@type":"OrderedItem",
+                "Category": "030"
+            },
+            "Description": "",
+            "InteractionStatistic": {
+                "@type": "InteractionCounter",
+                "InteractionType": {
+                    "@type": "RejectAction",
+                    "StartTime": "2025-01-01"
+                },
+                "UserInteractionCount": 1
+            }
+        },
+        "context": {}
+    }, {
+        "title": "A unknwon Consent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/Consent.jsonld",
+                "http://schema4i.org/None.jsonld"
+            ],
+            "@type": "Consent",
+            "ConsentType": "Marketing",
+            "Identifier": "",
+            "About": {
+                "@type":"OrderedItem",
+                "Category": "030"
+            },
+            "Description": "",
+            "InteractionStatistic":{
+                "@type": "None"
+              }
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,49 @@
+{
+    "type": "EnumAnimalUseCode",
+    "uri": "http://schema4i.org/EnumAnimalUseCode",
+    "description": "A code that describes how an animal is used by humans, e.g. as a working, domestic or farm animal.",
+    "links": [{
+        "url": "http://schema4i.org/EnumAnimalUseCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Animal#AnimalUse" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Foal": "s4i:EnumAnimalUseCode#01",
+            "Mercy horse": "s4i:EnumAnimalUseCode#02",
+            "Breeding animal": "s4i:EnumAnimalUseCode#03",
+            "Competition horse": "s4i:EnumAnimalUseCode#04",
+            "Service horse": "s4i:EnumAnimalUseCode#05",
+            "Draft horse": "s4i:EnumAnimalUseCode#06",
+            "Hunting dog with dog test": "s4i:EnumAnimalUseCode#07",
+            "Guide dog": "s4i:EnumAnimalUseCode#08",
+            "Guard dog": "s4i:EnumAnimalUseCode#09",
+            "Mating bird": "s4i:EnumAnimalUseCode#10",
+            "Companion / therapy dog": "s4i:EnumAnimalUseCode#11",
+            "Private pet": "s4i:EnumAnimalUseCode#12",
+            "Commercially used animal": "s4i:EnumAnimalUseCode#13",
+            "Rescue animal": "s4i:EnumAnimalUseCode#14",
+            "Rearing animal, not foal": "s4i:EnumAnimalUseCode#15",
+            "Horse without riding": "s4i:EnumAnimalUseCode#16",
+            "Mount": "s4i:EnumAnimalUseCode#17",
+            "Racehorse": "s4i:EnumAnimalUseCode#18",
+            "Logging horse": "s4i:EnumAnimalUseCode#19",
+            "Therapy horse": "s4i:EnumAnimalUseCode#20",
+            "Vaulting horse": "s4i:EnumAnimalUseCode#21",
+            "Animal given to the association for instruction": "s4i:EnumAnimalUseCode#22",
+            "Club-owned animal for educational purposes": "s4i:EnumAnimalUseCode#23",
+            "School animal": "s4i:EnumAnimalUseCode#24",
+            "Rental animal": "s4i:EnumAnimalUseCode#25",
+            "Show animal": "s4i:EnumAnimalUseCode#26",
+            "Horse for equine-assisted coaching / equine-assisted personal development": "s4i:EnumAnimalUseCode#27"
+        }
+    }
+}

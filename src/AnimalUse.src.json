@@ -1,0 +1,40 @@
+{
+    "type": "AnimalUse",
+    "uri": "http://schema4i.org/AnimalUse",
+    "description": "Describes how an animal is used by humans, e.g. as a working, domestic or farm animal.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Animal#AnimalUse" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AnimalUse": {
+                "@id": "s4i:AnimalUse",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumAnimalUseCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample AnimalUse",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Animal.jsonld",
+                "http://schema4i.org/AnimalUse.jsonld"
+            ],
+            "@type": "Animal",
+            "AnimalUse": "12"
+        },
+        "context": {}
+    }]
+}

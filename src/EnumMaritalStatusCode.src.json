@@ -1,0 +1,34 @@
+{
+    "type": "EnumMaritalStatusCode",
+    "uri": "http://schema4i.org/EnumMaritalStatusCode",
+    "description": "A code that describes the describes their legal relationship status in terms of marriage.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumMaritalStatusCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#LegaMaritalStatus" }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Single": "s4i:EnumMaritalStatusCode#1",
+            "Married": "s4i:EnumMaritalStatusCode#2",
+            "Divorced": "s4i:EnumMaritalStatusCode#3",
+            "Widowed": "s4i:EnumMaritalStatusCode#4",
+            "Separated": "s4i:EnumMaritalStatusCode#5",
+            "Domestic Partnership": "s4i:EnumMaritalStatusCode#6",
+            "Civil Partnership": "s4i:EnumMaritalStatusCode#7",
+            "Other": "s4i:EnumMaritalStatusCode#9"
+        }
+    }
+}
