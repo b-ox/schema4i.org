@@ -1,7 +1,7 @@
 {
     "type": "EnumDamageTypeCode_DE",
     "uri": "http://schema4i.org/EnumDamageTypeCode_DE",
-    "description": "Ein Code, der einen durch Versicherungsanspruch gemeldeten Schaden kategorisiert",
+    "description": "Ein Code, der einen durch Versicherungsanspruch gemeldeten Schaden kategorisiert.",
     "links": [{ 
         "url": "http://schema4i.org/EnumDamageTypeCode",
         "description": "Englische Dokumentation der Schlüsselwerte"

@@ -1,7 +1,7 @@
 {
     "type": "EnumDamageTypeCode",
     "uri": "http://schema4i.org/EnumDamageTypeCode",
-    "description": "A code that categorizes the damage reported by an insurance claim",
+    "description": "A code that categorizes the damage reported by an insurance claim.",
     "links": [{ 
         "url": "http://schema4i.org/EnumDamageTypeCode_DE",
         "description": "Original German documentation"
