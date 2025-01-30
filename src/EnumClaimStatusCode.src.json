@@ -20,7 +20,11 @@
             "Open": "s4i:EnumClaimStatusCode#OPEN",
             "Reported": "s4i:EnumClaimStatusCode#REPORTED",
             "In Progress": "s4i:EnumClaimStatusCode#IN_PROGRESS",
-            "Closed": "s4i:EnumClaimStatusCode#CLOSED"
+            "Closed": "s4i:EnumClaimStatusCode#CLOSED",
+            "Denied by insurer": "s4i:EnumClaimStatusCode#CLOSED_DENIED",
+            "Closed with payment": "s4i:EnumClaimStatusCode#CLOSED_WITH_PAYMENT",
+            "Closed without payment": "s4i:EnumClaimStatusCode#CLOSED_WITHOUT_PAYMENT",
+            "Closed due to a mistake in the claim by the customer": "s4i:EnumClaimStatusCode#CLOSED_MISTAKE"
         }
     }
 }

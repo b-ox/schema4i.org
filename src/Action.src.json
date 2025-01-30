@@ -70,6 +70,10 @@
             "Error": {
                 "@id": "schema:error"
             },
+            "Instrument": {
+                "@id": "schema:instrument",
+                "@type": "s4i:Thing"
+            },
             "Object": {
                 "@id": "schema:object"
             },

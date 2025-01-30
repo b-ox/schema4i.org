@@ -5,7 +5,7 @@
     "links": [],
     "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Thing" }
+        { "@id": "http://schema4i.org/CreativeWork" }
     ],
     "multipletypes": {
         "AdditionalCosts": [
