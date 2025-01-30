@@ -10,18 +10,19 @@
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "DamageCause": [
+            { "@id": "http://schema4i.org/EnumDamageCauseCode" },
+            { "@id": "http://schema4i.org/EnumDamageSourceCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DamageCause": {
-                "@id": "s4i:DamageCause",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumDamageCauseCode#"
-                }
+                "@id": "s4i:DamageCause"
             }
         }
     },
@@ -29,7 +30,17 @@
         "title": "Sample DamageCause",
         "tab": "tab-expanded",
         "input": {
-            "@context": {},
+            "@context": [
+                {
+                    "DamageCause": {
+                        "@id": "http://schema4i.org/DamageCause",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumDamageCauseCode#"
+                        }
+                    }
+                } 
+            ],
             "DamageCause": "F"
         },
         "context": {}

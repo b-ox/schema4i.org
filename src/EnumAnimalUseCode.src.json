@@ -26,7 +26,7 @@
             "Hunting dog with dog test": "s4i:EnumAnimalUseCode#07",
             "Guide dog": "s4i:EnumAnimalUseCode#08",
             "Guard dog": "s4i:EnumAnimalUseCode#09",
-            "Mating bird": "s4i:EnumAnimalUseCode#10",
+            "Hunting bird": "s4i:EnumAnimalUseCode#10",
             "Companion / therapy dog": "s4i:EnumAnimalUseCode#11",
             "Private pet": "s4i:EnumAnimalUseCode#12",
             "Commercially used animal": "s4i:EnumAnimalUseCode#13",
