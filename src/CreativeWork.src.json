@@ -39,6 +39,10 @@
         "IsPartOf": [
             { "@id": "http://schema4i.org/CreativeWork" },
             { "@id": "http://schema.org/URL" }
+        ],
+        "IsBasedOn": [
+            { "@id": "http://schema4i.org/CreativeWork" },
+            { "@id": "http://schema.org/URL" }
         ]
     },
     "context": {
@@ -84,8 +88,7 @@
                 "@type": "s4i:InteractionCounter"
             },
             "IsBasedOn": {
-                "@id": "schema:isBasedOn",
-                "@type": "schema:URL"
+                "@id": "schema:isBasedOn"
             },
             "IsPartOf": {
                 "@id": "schema:isPartOf"
