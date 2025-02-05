@@ -38,7 +38,7 @@
             "Beamtenanwärter": "s4i:EnumEmploymentStatusCode#20",
             "Mediziner im praktischen Jahr": "s4i:EnumEmploymentStatusCode#21",
             "Praktikant": "s4i:EnumEmploymentStatusCode#22",
-            "Angestellt im oeffentlichen Dienst": "s4i:EnumEmploymentStatusCode#23",
+            "Angestellt im öffentlichen Dienst": "s4i:EnumEmploymentStatusCode#23",
             "Leitend Angestellter": "s4i:EnumEmploymentStatusCode#24",
             "Altersteilzeit": "s4i:EnumEmploymentStatusCode#25",
             "Werkstudent": "s4i:EnumEmploymentStatusCode#26",
