@@ -1,10 +1,10 @@
 {
     "type": "ClaimStatus",
     "uri": "http://schema4i.org/ClaimStatus",
-    "description": "A status of the loss, describing how far the processing of this loss has progressed.",
+    "description": "A status of the insurance claim, describing how far the processing of this claim has progressed.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+        { "@id": "http://schema4i.org/InsuranceClaim#ClaimStatus" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }

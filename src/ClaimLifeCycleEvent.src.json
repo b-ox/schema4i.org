@@ -4,7 +4,7 @@
     "description": "ClaimLifeCycleEvent refers to the stages from the creation to the closing of claims.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Loss#ClaimStatus" }
+        { "@id": "http://schema4i.org/InsuranceClaim#ClaimStatus" }
     ],
     "base": [
         { "@id": "http://schema4i.org/LifeCycleEvent" }
