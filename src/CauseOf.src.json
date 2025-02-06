@@ -8,7 +8,7 @@
     }],
     "parents": [
         { "@id": "http://schema4i.org/DamageEvent#CauseOf" },
-        { "@id": "http://schema4i.org/Loss#CauseOf" }
+        { "@id": "http://schema4i.org/InsuranceClaim#CauseOf" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Property" }

@@ -28,9 +28,21 @@
                 "@id": "s4i:CausedBy",
                 "@type": "s4i:LossEvent"
             },
+            "CauseOf": {
+                "@id": "s4i:CauseOf",
+                "@type": "s4i:ClaimSettlement"
+            },
             "ClaimID": {
                 "@id": "s4i:ClaimID",
                 "@type": "s4i:ID"
+            },
+            "ClaimStatus": {
+                "@id": "s4i:ClaimStatus",
+                "@type": "s4i:ClaimLifeCycleEvent"
+            },
+            "Reserve": {
+                "@id": "s4i:Reserve",
+                "@type": "s4i:MonetaryAmount"
             }
         }
     },
@@ -43,8 +55,11 @@
                 "http://schema4i.org/InsuranceClaim.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/ClaimSettlement.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/LossEvent.jsonld",
                 "http://schema4i.org/PersonalInjuryDamage.jsonld",
+                "http://schema4i.org/ClaimLifeCycleEvent.jsonld",
                 "http://schema4i.org/ID.jsonld",
                 "http://schema4i.org/Organization.jsonld",
                 "http://schema4i.org/Role.jsonld",
@@ -80,6 +95,11 @@
                     "RoleCode": "001"
                 }
             },
+            "ClaimStatus": {
+                "@type": "ClaimLifeCycleEvent",
+                "Code": "CLOSED",
+                "StartDate": "2024-03-13"
+            },
             "CausedBy": {
                 "@type": "LossEvent",
                 "Description": "Unfall",
@@ -91,6 +111,31 @@
                         "Currency": "EUR"
                     }
                 }
+            },
+            "CauseOf": {
+                "@type": "ClaimSettlement",
+                "Amount": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 5000
+                },
+                "Deductible": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": "250"
+                },
+                "Payee": {
+                    "@type": "Person",
+                    "Name": "Mustermann",
+                    "GivenName": "Max"
+                },
+                "PaymentDate": "2024-02-29",
+                "SharingAgreement": "0"
+            },
+            "Reserve": {
+                "@type": "MonetaryAmount",
+                "Value": 10000,
+                "Currency": "EUR"
             }
         },
         "context": {}

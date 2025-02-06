@@ -1,10 +1,10 @@
 {
     "type": "ClaimSettlement",
     "uri": "http://schema4i.org/ClaimSettlement",
-    "description": "An agreement on the amount and way an insurer will perform a payout as a result of a `Loss`.",
+    "description": "An agreement on the amount and way an insurer will perform a payout as a result of an `InsuranceClaim`.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Loss#CauseOf" }
+        { "@id": "http://schema4i.org/InsuranceClaim#CauseOf" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Thing" }
