@@ -16,6 +16,11 @@
         "Owner": [
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/Person" }
+        ],
+        "Material": [
+            { "@id": "http://schema4i.org/Product" },
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema.org/URL" }
         ]
     },
     "context": {
@@ -35,6 +40,9 @@
             "Manufacturer": {
                 "@id": "schema:manufacturer",
                 "@type": "s4i:Organization"
+            },
+            "Material": {
+                "@id": "schema:material"
             },
             "Model": {
                 "@id": "schema:model",
@@ -76,6 +84,7 @@
                 "Repaired": true
             },
             "Manufacturer": {},
+            "Material": "Steel",
             "Model": "Model S",
             "ItemCondition": "NewCondition",
             "Owner": {
