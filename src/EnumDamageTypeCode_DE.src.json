@@ -41,6 +41,7 @@
             "Vertragsrechtsschutz (ohne Verkehrsbereich)": "s4i:EnumDamageTypeCode#461",
             "Vertragsrechtsschutz (Verkehrsbereich)": "s4i:EnumDamageTypeCode#462",
             "Rechtsschutz für Grundstücks- und Wohneigentum": "s4i:EnumDamageTypeCode#463",
+            "Kfz-Schaden mit/ohne sonstigem Sachschaden": "s4i:EnumDamageTypeCode#510",
             "Sachschaden ohne Kfz-Schaden": "s4i:EnumDamageTypeCode#520",
             "Ladungsschaden Fernverkehr": "s4i:EnumDamageTypeCode#580",	
             "Ladungsschaden Nahverkehr": "s4i:EnumDamageTypeCode#590",
