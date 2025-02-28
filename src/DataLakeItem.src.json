@@ -14,6 +14,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "DataLakeItem": "s4i:DataLakeItem",
+            "Attachment": {
+                "@id": "s4i:Attachment",
+                "@type": "s4i:CreativeWork"
+            },
             "IsAssociatedFrom": {
                 "@id": "s4i:IsAssociatedFrom",
                 "@type": "s4i:Thing"
@@ -39,6 +43,7 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DigitalDocument.jsonld",
                 "http://schema4i.org/DataLakeItem.jsonld",
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/PostalAddress.jsonld",
@@ -62,6 +67,14 @@
                 },
                 "Email": "max.mustermann@email.de"
             },
+            "Attachment": [
+                {
+                    "Keywords": ["Dokument"],
+                    "@type": "DigitalDocument",
+                    "@id": "https://api.b-ox.de/files/abcdef1234567890",
+                    "Name": "filename.txt"
+                }
+            ],
             "IsAssociatedTo": {
                 "@type": "Role",
                 "RoleCode": "MemberOf",

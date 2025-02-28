@@ -1,0 +1,59 @@
+{
+    "type": "Attachment",
+    "uri": "http://schema4i.org/Attachment",
+    "description": "A CreativeWork attached to a Thing.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/DataLakeItem#Attachment"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Attachment": {
+                "@id": "s4i:Attachment",
+                "@type": "s4i:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example of how a DataLakeItem with an Attachment",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/CreativeWork.jsonld",
+                "http://schema4i.org/DigitalDocument.jsonld",
+                "http://schema4i.org/DataLakeItem.jsonld"
+            ],
+            "@type": "DataLakeItem",
+            "About": {
+                "@type": "Person",
+                "Name": "Max Mustermann"
+            },
+            "Attachment": [
+                {
+                    "Keywords": ["Dokument"],
+                    "@type": "DigitalDocument",
+                    "@id": "https://api.b-ox.de/files/abcdef1234567890",
+                    "Name": "filename.txt"
+                }
+            ],
+            "DateCreated": "2022-12-07T09:13:45",
+            "DateModified": "2022-12-07T09:17:23",
+            "Creator": {
+                "@type": "Organization",
+                "Identifier": "Muster-Personaldienstleister",
+                "Name": "Muster-Personaldienstleiter GmbH"
+            },
+            "ValidFrom": "2023-01-01T00:00:00",
+            "ValidThrough": "2023-12-31T23:59:99"
+        },
+        "context": {}
+    }]
+}
