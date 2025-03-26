@@ -1,0 +1,54 @@
+{
+    "type": "EnumValueUnitCode",
+    "uri": "http://schema4i.org/EnumValueUnitCode",
+    "description": "A Code that describes the value unit of some value.",
+    "links": [{
+            "url": "http://schema4i.org/EnumValueUnitCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/QuantitativeValue#UnitCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "pieces": "s4i:EnumValueUnitCode#01",
+            "seats": "s4i:EnumValueUnitCode#02",
+            "residential units": "s4i:EnumValueUnitCode#03",
+            "commercial units": "s4i:EnumValueUnitCode#04",
+            "residential / commercial units": "s4i:EnumValueUnitCode#05",
+            "percent": "s4i:EnumValueUnitCode#10",
+            "per mille": "s4i:EnumValueUnitCode#11",
+            "currency": "s4i:EnumValueUnitCode#20",
+            "mark 1914": "s4i:EnumValueUnitCode#21",
+            "cm": "s4i:EnumValueUnitCode#30",
+            "mm (millimeters)": "s4i:EnumValueUnitCode#31",
+            "m (meters)": "s4i:EnumValueUnitCode#32",
+            "km (kilometers)": "s4i:EnumValueUnitCode#33",
+            "miles": "s4i:EnumValueUnitCode#34",
+            "sqm": "s4i:EnumValueUnitCode#40",
+            "ha (hectares)": "s4i:EnumValueUnitCode#41",
+            "liter": "s4i:EnumValueUnitCode#50",
+            "cc": "s4i:EnumValueUnitCode#51",
+            "cbm (cubic meters)": "s4i:EnumValueUnitCode#52",
+            "GRT (gross register tons)": "s4i:EnumValueUnitCode#53",
+            "GT (gross tonnage)": "s4i:EnumValueUnitCode#54",
+            "ts (standard ton, unit of measurement for standard displacement, also called 'long ton' in civilian use, 1 ts = 1016 kg)": "s4i:EnumValueUnitCode#56",
+            "calendar days": "s4i:EnumValueUnitCode#60",
+            "working days": "s4i:EnumValueUnitCode#61",
+            "years": "s4i:EnumValueUnitCode#62",
+            "hours": "s4i:EnumValueUnitCode#63",
+            "kW (kilowatt)": "s4i:EnumValueUnitCode#70",
+            "hp (horsepower)": "s4i:EnumValueUnitCode#71",
+            "kWp (kilowatt peak)": "s4i:EnumValueUnitCode#72",
+            "kg (kilogram)": "s4i:EnumValueUnitCode#80",
+            "t (tons)": "s4i:EnumValueUnitCode#81"
+        }
+    }
+}

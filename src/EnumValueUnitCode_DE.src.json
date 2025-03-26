@@ -1,0 +1,54 @@
+{
+    "type": "EnumValueUnitCode_DE",
+    "uri": "http://schema4i.org/EnumValueUnitCode_DE",
+    "description": "Ein Code, der eine Werteinheit beschreibt.",
+    "links": [{
+            "url": "http://schema4i.org/EnumValueUnitCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/QuantitativeValue#UnitCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Stück": "s4i:EnumValueUnitCode#01",
+            "Plätze": "s4i:EnumValueUnitCode#02",
+            "Wohneinheiten": "s4i:EnumValueUnitCode#03",
+            "Gewerbeeinheiten": "s4i:EnumValueUnitCode#04",
+            "Wohn- / Gewerbeeinheiten": "s4i:EnumValueUnitCode#05",
+            "Prozent": "s4i:EnumValueUnitCode#10",
+            "Promille": "s4i:EnumValueUnitCode#11",
+            "Währung": "s4i:EnumValueUnitCode#20",
+            "Mark 1914": "s4i:EnumValueUnitCode#21",
+            "cm": "s4i:EnumValueUnitCode#30",
+            "mm (Millimeter)": "s4i:EnumValueUnitCode#31",
+            "m (Meter)": "s4i:EnumValueUnitCode#32",
+            "km (Kilometer)": "s4i:EnumValueUnitCode#33",
+            "Meilen": "s4i:EnumValueUnitCode#34",
+            "qm": "s4i:EnumValueUnitCode#40",
+            "ha (Hektar)": "s4i:EnumValueUnitCode#41",
+            "Liter": "s4i:EnumValueUnitCode#50",
+            "ccm": "s4i:EnumValueUnitCode#51",
+            "qbm (Kubikmeter)": "s4i:EnumValueUnitCode#52",
+            "BRT (Bruttoregistertonnen)": "s4i:EnumValueUnitCode#53",
+            "BRZ (Bruttoraumzahl)": "s4i:EnumValueUnitCode#54",
+            "ts (Ton Standard, Maßeinheit für die Standardverdrängung, zivil auch 'ton long' genannt, 1 ts = 1016 kg)": "s4i:EnumValueUnitCode#56",
+            "Kalendertage": "s4i:EnumValueUnitCode#60",
+            "Arbeitstage": "s4i:EnumValueUnitCode#61",
+            "Jahre": "s4i:EnumValueUnitCode#62",
+            "Stunden": "s4i:EnumValueUnitCode#63",
+            "KW (Kilowatt)": "s4i:EnumValueUnitCode#70",
+            "PS (Pferdestärke)": "s4i:EnumValueUnitCode#71",
+            "kWP (Kilowatt Peak)": "s4i:EnumValueUnitCode#72",
+            "kg (Kilogramm)": "s4i:EnumValueUnitCode#80",
+            "t (Tonnen)": "s4i:EnumValueUnitCode#81"
+        }
+    }
+}
