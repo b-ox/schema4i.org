@@ -63,6 +63,10 @@
             },
             "ActivityType": {
                 "@id": "s4i:ActivityType"
+            },
+            "Location": {
+                "@id": "schema:location",
+                "@type": "s4i:Place"
             }
         }
     },
@@ -77,7 +81,8 @@
                     "http://schema4i.org/DefinedTerm.jsonld",
                     "http://schema4i.org/DefinedTermSet.jsonld",
                     "http://schema4i.org/Role.jsonld",
-                    "http://schema4i.org/Person.jsonld"
+                    "http://schema4i.org/Person.jsonld",
+                    "http://schema4i.org/Place.jsonld"
                 ],
                 "@type": "Activity",
                 "Name": "Buchfuehrung durchfuehren",
@@ -98,7 +103,17 @@
                     "@type": "Thing",
                     "Name": "Kassenbuch"
                 },
-                "ActivityType": "Durchführung von Buchführung"
+                "ActivityType": "Durchführung von Buchführung",
+                "Location": {
+                    "@type": "Place",
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "StreetAddress": "Musterstrasse 1",
+                        "PostalCode": "12345",
+                        "AddressLocality": "Musterstadt",
+                        "AddressRegion": "Musterland"
+                    }
+                }
             },
             "context": {}
         }
