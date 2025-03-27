@@ -81,7 +81,8 @@
                     "http://schema4i.org/DefinedTerm.jsonld",
                     "http://schema4i.org/DefinedTermSet.jsonld",
                     "http://schema4i.org/Role.jsonld",
-                    "http://schema4i.org/Person.jsonld"
+                    "http://schema4i.org/Person.jsonld",
+                    "http://schema4i.org/Place.jsonld"
                 ],
                 "@type": "Activity",
                 "Name": "Buchfuehrung durchfuehren",
