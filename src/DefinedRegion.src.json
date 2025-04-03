@@ -13,7 +13,8 @@
     "multipletypes": {
         "AddressCountry": [
             { "@id": "http://schema4i.org/Country" },
-            { "@id": "http://schema4i.org/EnumCountryCode" }
+            { "@id": "http://schema4i.org/EnumCountryCode" },
+            { "@id": "http://schema4i.org/EnumISO3166alpha2CountryCode" }
         ]
     },
     "context": {
