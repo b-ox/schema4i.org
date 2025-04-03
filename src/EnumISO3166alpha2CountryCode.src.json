@@ -4,7 +4,7 @@
     "description": "A code of the country according to the ISO 3166-1 alpha-2 standard",
     "links": [
         {
-            "url": "http://schema4i.org/EnumISO3166alpha2CountryCode_DE",
+            "url": "http://schema4i.org/EnumISO3166alpha2CountryCode",
             "description": "German documentation"
         },
         {
