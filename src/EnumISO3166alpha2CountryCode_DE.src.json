@@ -1,5 +1,5 @@
 {
-    "type": "EnumISO3166alpha2CountryCode",
+    "type": "EnumISO3166alpha2CountryCode_DE",
     "uri": "http://schema4i.org/EnumISO3166alpha2CountryCode_DE",
     "description": "Ein Länder-Code gemäß ISO 3166-1 alpha-2 standard",
     "links": [
