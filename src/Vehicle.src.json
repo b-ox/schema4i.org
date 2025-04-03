@@ -32,7 +32,8 @@
         ],
         "RegistrationArea": [
             { "@id": "https://schema.openontology.org/definitions/string" },
-            { "@id": "http://schema4i.org/EnumCountryCode" }
+            { "@id": "http://schema4i.org/EnumCountryCode" },
+            { "@id": "http://schema4i.org/EnumISO3166alpha2CountryCode" }
         ],
         "VehicleType": [
             { "@id": "https://schema.openontology.org/definitions/vehicle-type" },
