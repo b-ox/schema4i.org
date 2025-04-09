@@ -41,6 +41,12 @@
                         "Keywords": "Dokument"
                     }
                 }, {
+                    "@context": {
+                        "UnitCode": {
+                            "@id": "http://schema.org/unitCode",
+                            "@type": "http://schema.org/Text"
+                        }
+                    },
                     "@type": "QuantitativeValue",
                     "Value": "2",
                     "UnitCode": "P1"
@@ -68,6 +74,12 @@
                         "Keywords": "Dokument"
                     }
                 }, {
+                    "@context": {
+                        "UnitCode": {
+                            "@id": "http://schema.org/unitCode",
+                            "@type": "http://schema.org/Text"
+                        }
+                    },
                     "@type": "QuantitativeValue",
                     "Value": "30",
                     "UnitCode": "C62"

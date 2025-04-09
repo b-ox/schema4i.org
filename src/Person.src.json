@@ -255,6 +255,12 @@
                         "@type": "InsuranceBenefit",
                         "BenefitType": "AmbulanteVollversicherung",
                         "Value": {
+                            "@context": {
+                                "UnitCode": {
+                                    "@id": "http://schema.org/unitCode",
+                                    "@type": "http://schema.org/Text"
+                                }
+                            },
                             "@type": "QuantitativeValue",
                             "Value": 50,
                             "UnitCode": "P1"
@@ -289,6 +295,12 @@
                         "@type": "InsuranceBenefit",
                         "BenefitType": "StationaereVollversicherung",
                         "Value": {
+                            "@context": {
+                                "UnitCode": {
+                                    "@id": "http://schema.org/unitCode",
+                                    "@type": "http://schema.org/Text"
+                                }
+                            },
                             "@type": "QuantitativeValue",
                             "Value": 50,
                             "UnitCode": "P1"
@@ -323,6 +335,12 @@
                         "@type": "InsuranceBenefit",
                         "BenefitType": "ZahnVollversicherung",
                         "Value": {
+                            "@context": {
+                                "UnitCode": {
+                                    "@id": "http://schema.org/unitCode",
+                                    "@type": "http://schema.org/Text"
+                                }
+                            },
                             "@type": "QuantitativeValue",
                             "Value": 100,
                             "UnitCode": "P1"

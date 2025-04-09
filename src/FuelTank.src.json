@@ -29,6 +29,12 @@
             ],
             "@type": "FuelTank",
             "FuelCapacity": {
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
                 "@type": "QuantitativeValue",
                 "Name": "Capacity",
                 "Value": 320,

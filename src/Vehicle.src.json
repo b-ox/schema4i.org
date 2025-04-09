@@ -150,6 +150,12 @@
             "Manufacturer": {},
             "ManufacturerKeyNumber": "0583",
             "MileageFromOdometer": {
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
                 "@type": "QuantitativeValue",
                 "Value": "150524.92",
                 "UnitCode": "MTR"

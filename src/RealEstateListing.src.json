@@ -62,6 +62,12 @@
                     "FloorLevel": 1,
                     "AmenityFeature": [],
                     "FloorSize": {
+                        "@context": {
+                            "UnitCode": {
+                                "@id": "http://schema.org/unitCode",
+                                "@type": "http://schema.org/Text"
+                            }
+                        },
                         "@type": "QuantitativeValue",
                         "Name": "Size",
                         "Value": 1457,

@@ -33,6 +33,12 @@
             ],
             "@type": "FloorPlan",
             "NumberOfAccommodationUnits": {
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
                 "@type": "QuantitativeValue",
                 "UnitCode": "H87",
                 "Value": 4
