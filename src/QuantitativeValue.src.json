@@ -66,7 +66,15 @@
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
-                "http://schema4i.org/QuantitativeValue.jsonld"
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                {
+                    "@context": {
+                        "UnitCode": {
+                            "@id": "http://schema.org/unitCode",
+                            "@type": "http://schema.org/Text"
+                        }
+                    }
+                }
             ],
             "@type": "QuantitativeValue",
             "AdditionalProperty": {},

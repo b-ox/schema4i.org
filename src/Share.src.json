@@ -36,6 +36,12 @@
             ],
             "@type": "Share",
             "Value": {
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
                 "@type": "QuantitativeValue",
                 "UnitCode": "P1",
                 "Value": "25"

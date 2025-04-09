@@ -63,6 +63,12 @@
                 },
                 "TermCode": "4711",
                 "YearlyRevenue": {
+                    "@context": {
+                        "UnitCode": {
+                            "@id": "http://schema.org/unitCode",
+                            "@type": "http://schema.org/Text"
+                        }
+                    },
                     "@type": "QuantitativeValue",
                     "Value": 100000,
                     "UnitCode": "M4",

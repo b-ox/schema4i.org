@@ -67,6 +67,12 @@
                 "@type": "InsuranceBenefit",
                 "BenefitType": "LeistungAbTag",
                 "Value": {
+                    "@context": {
+                        "UnitCode": {
+                            "@id": "http://schema.org/unitCode",
+                            "@type": "http://schema.org/Text"
+                        }
+                    },
                     "@type": "QuantitativeValue",
                     "Value": 43,
                     "UnitCode": "D"

@@ -134,6 +134,12 @@
                 "Value": 1000,
                 "Currency": "EUR"
             },{
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
                 "@type": "QuantitativeValue",
                 "Value": 2,
                 "UnitCode": "P1"
@@ -161,6 +167,12 @@
                     }
                 },
                 "Value": {
+                    "@context": {
+                        "UnitCode": {
+                            "@id": "http://schema.org/unitCode",
+                            "@type": "http://schema.org/Text"
+                        }
+                    },
                     "@type": "QuantitativeValue",
                     "UnitCode": "P1",
                     "Value": "25"
