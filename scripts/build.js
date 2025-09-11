@@ -211,35 +211,43 @@ async function buildSchema(domain, outputDir, options) {
                 }
             };
 
-            if (obj.type.indexOf("Enumeration") === -1 && !obj.type.startsWith("Enum")) {
+            if (obj.type.indexOf("Enumeration") === 0) {
+
+            } else if (!obj.type.startsWith("Enum")) {
+                // regular type
                 // check examples for objects
                 if (!obj.playground) {
                     consoleLike.warn(`Playground examples not found in ${file}.`);
                 }
             } else {
-                // check if their is a translation link
+                // enum type
                 if (obj.type.indexOf("_DE") !== -1) {
+                    // DE Enumeration
                     // check for English documentation
-                    let ok = false;
-                    obj.links.forEach(function(link) {
-                        if (link.url.indexOf(obj.type.replace("_DE", "")) !== -1) {
-                            ok = true;
-                        }
+                    const ok = obj.links.some(function(link) {
+                        return link.url.indexOf(obj.type.replace("_DE", "") !== -1);
                     });
                     if (!ok) {
                         throw new Error(`Link to English documentation not found in "${obj.type}.src.json".`);
                     }
-                } else if (obj.type.indexOf("Enumeration") === -1) {
+                } else {
+                    // EN Enumeration
                     // check for German documentation
-                    let ok = false;
-                    obj.links.forEach(function(link) {
-                        if (link.url.indexOf(obj.type + "_DE") !== -1) {
-                            ok = true;
-                        }
+                    const ok = obj.links.some(function(link) {
+                        return link.url.indexOf(obj.type + "_DE") !== -1;
                     });
                     if (!ok) {
                         throw new Error(`Link to German documentation not found in "${obj.type}.src.json".`);
                     }
+                }
+                const ctxValues = Object.values(obj.context["@context"]);
+                const enumValues = ctxValues.filter((value) => typeof value === 'string' && !value.endsWith("/"));
+                const duplicates = new Set();
+                for (const value of enumValues) {
+                    if (duplicates.has(value)) {
+                        throw new Error(`Duplicate value "${value}" found in "${obj.type}.src.json".`);
+                    }
+                    duplicates.add(value);
                 }
             }
 

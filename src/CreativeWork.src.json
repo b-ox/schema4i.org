@@ -128,6 +128,14 @@
             {
                 "@id": "http://schema.org/URL"
             }
+        ],
+        "Version": [
+            {
+                "@id": "http://schema.org/Text"
+            },
+            {
+                "@id": "http://schema.org/Number"
+            }
         ]
     },
     "context": {
@@ -198,6 +206,9 @@
                 "@id": "schema:thumbnailUrl",
                 "@type": "schema:URL"
             },
+            "Version": {
+                "@id": "schema:version"
+            },
             "Review": {
                 "@id": "schema:review",
                 "@type": "s4i:Review"
@@ -236,7 +247,8 @@
                 "Review": {
                     "@type": "Review",
                     "ReviewBody": "Eine Bewertung dieser Nachricht."
-                }
+                },
+                "Version": "1.0"
             },
             "context": {}
         }

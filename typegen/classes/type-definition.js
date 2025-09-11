@@ -11,11 +11,11 @@ function resolvePrefixes(url, knownPrefixes){
     if (url === '@id') {
         return { localName: '@id' };
     }
-    const regexResult = /^(?:(?:https?:\/\/([^/]+)\/)|([\w]+):)([\w-\/\.]+)(?:#\w*)?$/.exec(url);
+    const regexResult = /^((https?:\/\/(?<domain>[^/]+)\/)|(?<prefix>[\w]+):)(?<localName>[\w/\-.]+)(#[\w\-.~%!$&'()*+,;=:@/?]*)?$/.exec(url);
     if (!regexResult) {
         throw new Error(`${url} is not a valid url`);
     }
-    const [, domain, prefix, localName] = regexResult;
+    const {domain, prefix, localName} = regexResult.groups ?? {};
     if (prefix && !knownPrefixes[prefix]) {
         throw new Error(`${url} references unknown prefix ${prefix}`);
     }
