@@ -84,6 +84,7 @@
             "KGaA & Co.KG":"s4i:EnumLegalFormCode#65",
             "KGaA & Co.OHG":"s4i:EnumLegalFormCode#66",
             "OHG mbH":"s4i:EnumLegalFormCode#67",
+            "PartG mbH (Partnerschaftsgesellschaft mit beschränkter Haftung)":"s4i:EnumLegalFormCode#68",
             "Ohne Rechtsform":"s4i:EnumLegalFormCode#98",
             "Sonstiges":"s4i:EnumLegalFormCode#99"
         }

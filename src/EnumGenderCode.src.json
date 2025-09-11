@@ -20,7 +20,9 @@
             "s4i": "http://schema4i.org/",
             "male": "s4i:EnumGenderCode#1",
             "female": "s4i:EnumGenderCode#2",
-            "divers": "s4i:EnumGenderCode#3"
+            "non-binary": "s4i:EnumGenderCode#3",
+            "prefer not to say": "s4i:EnumGenderCode#4"
+
         }
     }
 }
