@@ -1,0 +1,29 @@
+{
+    "type": "EnumMoneyTransferRoleCode_DE",
+    "uri": "http://schema4i.org/EnumMoneyTransferRoleCode_DE",
+    "description": "Ein Code der die Rolle beschreibt, die eine Person oder Organisation im Zusammenhang mit einer Geldtransaktion einnimmt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumMoneyTransferRoleCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Zahler": "s4i:EnumMoneyTransferRoleCode#Payer",
+            "Zahlungsempfänger": "s4i:EnumMoneyTransferRoleCode#Payee",
+            "Zahlunsfreigebender": "s4i:EnumMoneyTransferRoleCode#PaymentAuthorizer",
+            "Bank des Zahlers": "s4i:EnumMoneyTransferRoleCode#PayerBank",
+            "Bank des Zahlungsempfängers": "s4i:EnumMoneyTransferRoleCode#PayeeBank",
+            "Zahlungsdienstleister": "s4i:EnumMoneyTransferRoleCode#PaymentServiceProvider",
+            "Aufsichtsbehörde": "s4i:EnumMoneyTransferRoleCode#RegulatoryAuthority"
+        }
+    }
+}

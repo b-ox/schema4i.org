@@ -1,0 +1,29 @@
+{
+    "type": "EnumMoneyTransferRoleCode",
+    "uri": "http://schema4i.org/EnumMoneyTransferRoleCode",
+    "description": "A code that represents the role a person or organization fulfills with regard to a monetary transaction.",
+    "links": [{
+        "url": "http://schema4i.org/EnumMoneyTransferRoleCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Role#RoleCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Payer": "s4i:EnumMoneyTransferRoleCode#Payer",
+            "Payee": "s4i:EnumMoneyTransferRoleCode#Payee",
+            "Payment authorizer": "s4i:EnumMoneyTransferRoleCode#PaymentAuthorizer",
+            "Bank of payer": "s4i:EnumMoneyTransferRoleCode#PayerBank",
+            "Bank of payee": "s4i:EnumMoneyTransferRoleCode#PayeeBank",
+            "Payment service provider": "s4i:EnumMoneyTransferRoleCode#PaymentServiceProvider",
+            "Regulatory authority": "s4i:EnumMoneyTransferRoleCode#RegulatoryAuthority"
+        }
+    }
+}

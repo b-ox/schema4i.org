@@ -17,6 +17,7 @@
             { "@id": "http://schema4i.org/EnumEventParticipantRoleCode" },
             { "@id": "http://schema4i.org/EnumClaimPartnerRoleCode" },
             { "@id": "http://schema4i.org/EnumOrderPartnerRoleCode" },
+            { "@id": "http://schema4i.org/EnumMoneyTransferRoleCode" },
             { "@id": "http://schema4i.org/EnumVehicleDriverRoleCode" }
         ]
     },
