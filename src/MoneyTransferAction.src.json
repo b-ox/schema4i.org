@@ -50,6 +50,7 @@
                 "http://schema4i.org/FinancialProduct.jsonld",
                 "http://schema4i.org/InsuranceProduct.jsonld",
                 "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Role.jsonld",
                 "http://schema4i.org/Vehicle.jsonld",
                 "http://schema4i.org/Product.jsonld"
             ],
@@ -57,41 +58,71 @@
             "Identifier": "16086599439804662056313",
             "StartTime": "2020-12-22T17:59:03",
             "Participant": [{
-                "@id": "#e",
-                "@type": "Organization",
-                "Identifier": "293842",
-                "Name": "Test-e",
-                "AlternateName": "Test-e",
-                "AdditionalName": [],
-                "Address": {
-                    "@type": "PostalAddress",
-                    "StreetAddress": "Luxemburger Allee 4",
-                    "PostalCode": "45481",
-                    "AddressLocality": "MÃÂ¼hlheim",
-                    "AddressCountry": "D"
-                },
-                "Telephone": "0208/7006-0",
-                "ContactPoint": {
-                    "@type": "ContactPoint",
-                    "Identifier": "4711",
-                    "Name": "Max Mustermann",
-                    "Telephone": "040/5036-123",
-                    "FaxNumber": "040/5036-321",
-                    "Email": "max@mustermann.de"
+                "@context": [
+                    {
+                        "RoleCode": {
+                            "@id": "http://schema4i.org/RoleCode",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "http://schema4i.org/EnumMoneyTransferRoleCode#"
+                            }
+                        }
+                    }
+                ],
+                "@type": "Role",
+                "RoleCode": "Payee",
+                "Participant": {
+                    "@id": "#e",
+                    "@type": "Organization",
+                    "Identifier": "293842",
+                    "Name": "Test-e",
+                    "AlternateName": "Test-e",
+                    "AdditionalName": [],
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "StreetAddress": "Luxemburger Allee 4",
+                        "PostalCode": "45481",
+                        "AddressLocality": "Mühlheim",
+                        "AddressCountry": "D"
+                    },
+                    "Telephone": "0208/7006-0",
+                    "ContactPoint": {
+                        "@type": "ContactPoint",
+                        "Identifier": "4711",
+                        "Name": "Max Mustermann",
+                        "Telephone": "040/5036-123",
+                        "FaxNumber": "040/5036-321",
+                        "Email": "max@mustermann.de"
+                    }
                 }
             }, {
-                "@id": "#95368115",
-                "@type": "Organization",
-                "Identifier": "5438",
-                "Name": "R+V",
-                "AlternateName": "",
-                "AdditionalName": [],
-                "Address": {
-                    "@type": "PostalAddress",
-                    "StreetAddress": "Musterallee 1",
-                    "PostalCode": "12345",
-                    "AddressLocality": "Musterstadt",
-                    "AddressCountry": "D"
+                "@context": [
+                    {
+                        "RoleCode": {
+                            "@id": "http://schema4i.org/RoleCode",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "http://schema4i.org/EnumMoneyTransferRoleCode#"
+                            }
+                        }
+                    }
+                ],
+                "@type": "Role",
+                "RoleCode": "Payer",
+                "Participant": {
+                    "@id": "#95368115",
+                    "@type": "Organization",
+                    "Identifier": "5438",
+                    "Name": "R+V",
+                    "AlternateName": "",
+                    "AdditionalName": [],
+                    "Address": {
+                        "@type": "PostalAddress",
+                        "StreetAddress": "Musterallee 1",
+                        "PostalCode": "12345",
+                        "AddressLocality": "Musterstadt",
+                        "AddressCountry": "D"
+                    }
                 }
             }],
             "Result": {

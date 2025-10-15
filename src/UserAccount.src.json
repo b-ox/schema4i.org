@@ -12,6 +12,11 @@
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/ProgramMembership" },
             { "@id": "http://schema4i.org/UserAccount" }
+        ],
+        "Member": [
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/ProgramMembership" },
+            { "@id": "http://schema4i.org/UserAccount" }
         ]
     },
     "context": {
@@ -34,6 +39,9 @@
             },
             "MemberOf": {
                 "@id": "schema:memberOf"
+            },
+            "Member": {
+                "@id": "schema:member"
             },
             "Order": {
                 "@id": "s4i:Order",
