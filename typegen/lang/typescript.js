@@ -241,7 +241,12 @@ export function listEnum(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' =
         let output = `
 import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
 
-const EXAMPLES = new Map<string, s4i.Thing[]>();
+interface Example<T extends s4i.Thing> {
+    title: string;
+    body: T;
+}
+
+const EXAMPLES = new Map<string, Example<s4i.Thing>[]>();
 `;
         const processedTypes = [];
         for (const typeDefinition of exampleTypes) {
@@ -250,26 +255,26 @@ const EXAMPLES = new Map<string, s4i.Thing[]>();
             }
             processedTypes.push(typeDefinition.type);
             output += `
-const examples${escape(typeDefinition.type)}: s4i.Thing[] = [${
-typeDefinition.examples.map(example => JSON.stringify(example.data, undefined, 2)).join(',\n')
+const examples${escape(typeDefinition.type)} = [${
+typeDefinition.examples.map(example => `{title: "${example.title}", body: ${JSON.stringify(example.data)}}`).join(', \n')
 }];
 EXAMPLES.set('${typeDefinition.type}', examples${escape(typeDefinition.type)});
 `
         }
         output += '\n';
         for (const typeDefinition of exampleTypes) {
-            output += `export function getExampleGenerator(type: '${typeDefinition.type}'): Generator<s4i.${escape(typeDefinition.type)}>;\n`;
+            output += `export function getExampleGenerator(type: '${typeDefinition.type}'): Generator<Example<s4i.${escape(typeDefinition.type)}>>;\n`;
         }
-        output += `export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string): Generator<R> {
+        output += `export function* getExampleGenerator<R extends s4i.Thing = s4i.Thing>(type: string): Generator<Example<R>> {
 const examples = EXAMPLES.get(type);
 if (!examples) {
     return;
 }
 for (const example of examples) {
-    if (example['@type'] !== type) {
+    if (example.body['@type'] !== type) {
         continue;
     }
-    yield example as R;
+    yield example as Example<R>;
 }
 }
 `
