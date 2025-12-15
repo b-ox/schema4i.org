@@ -128,6 +128,15 @@ ${!strict && typeDefinition.type === 'Thing' ? '\n    [key: string]: any;\n' : '
 `;
             }
         }
+        output += `
+export type TypeNames = '${
+    joinWithLineBreaks(typeDefinitions.map(td => td.type), "'|'", "'|\n    '")
+}';
+
+export type TypeByName<T extends string> = ${
+    typeDefinitions.map(td => `T extends '${td.type}' ? ${escape(td.type)}`).join(' : \n')
+} : never;`;
+
         return output;
     },
     writeOther: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
