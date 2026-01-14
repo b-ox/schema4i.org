@@ -28,6 +28,8 @@
             "Guard dog": "s4i:EnumAnimalUseCode#09",
             "Hunting bird": "s4i:EnumAnimalUseCode#10",
             "Companion / therapy dog": "s4i:EnumAnimalUseCode#11",
+            "Companion dog with dog test": "s4i:EnumAnimalUseCode#11B",
+            "Certified working dog": "s4i:EnumAnimalUseCode#11C",
             "Private pet": "s4i:EnumAnimalUseCode#12",
             "Commercially used animal": "s4i:EnumAnimalUseCode#13",
             "Rescue animal": "s4i:EnumAnimalUseCode#14",
