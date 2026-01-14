@@ -24,6 +24,7 @@
             "Rechtsanwalt": "s4i:EnumClaimPartnerRoleCode#07",
             "Sicherungsgläubiger": "s4i:EnumClaimPartnerRoleCode#08",
             "Versicherungsunternehmen": "s4i:EnumClaimPartnerRoleCode#09",
+            "Krankenkasse": "s4i:EnumClaimPartnerRoleCode#09B",
             "Dienstleister": "s4i:EnumClaimPartnerRoleCode#10",
             "Arzt": "s4i:EnumClaimPartnerRoleCode#11",
             "Krankenhaus": "s4i:EnumClaimPartnerRoleCode#12",

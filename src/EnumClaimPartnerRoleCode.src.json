@@ -24,6 +24,7 @@
             "Lawyer": "s4i:EnumClaimPartnerRoleCode#07",
             "Secured creditor": "s4i:EnumClaimPartnerRoleCode#08",
             "Insurer": "s4i:EnumClaimPartnerRoleCode#09",
+            "Health insurer": "s4i:EnumClaimPartnerRoleCode#09B",
             "Service provider": "s4i:EnumClaimPartnerRoleCode#10",
             "Doctor": "s4i:EnumClaimPartnerRoleCode#11",
             "Hospital": "s4i:EnumClaimPartnerRoleCode#12",
