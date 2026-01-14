@@ -1,74 +1,33 @@
 {
-    "type": "HumanLifeCycleEvent",
-    "uri": "http://schema4i.org/HumanLifeCycleEvent",
-    "description": " A HumanLifeCycleEvent refers to significant milestones and transitions experienced by individuals, marking stages of development and change, such as birth, sickness and death",
+    "type": "AnimalLifeCycleEvent",
+    "uri": "http://schema4i.org/AnimalLifeCycleEvent",
+    "description": " A AnimalLifeCycleEvent refers to significant events in the life of an animal, marking stages of development and change, such as birth, sickness and death. MedicalCodes describing events should preferable use veterinary coding systems, like VTS SNOMED.",
     "links": [],
     "parents": [
-        { "@id": "http://schema4i.org/Person#LifeCycle" }
+        { "@id": "http://schema4i.org/Animal#LifeCycle" }
     ],
     "base": [
         { "@id": "http://schema4i.org/LifeCycleEvent" }
     ],
-    "multipletypes": {
-        "Code": [
-            { "@id": "http://schema4i.org/MedicalCode" },
-            { "@id": "http://schema4i.org/EnumHealtInsuranceEventCode" }
-        ]
-    },
+    "multipletypes": {},
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "HumanLifeCycleEvent": "s4i:HumanLifeCycleEvent",
+            "AnimalLifeCycleEvent": "s4i:AnimalLifeCycleEvent",
             "Code": {
-                "@id": "s4i:Code"
+                "@id": "s4i:Code",
+                "@type": "s4i:MedicalCode"
             }
         }
     },
     "playground": [{
-        "title": "Birth as HumanLifeCycleEvent",
+        "title": "Birth as AnimalLifeCycleEvent",
         "tab": "tab-expanded",
         "input": {
             "@context": [
-                "http://schema4i.org/HumanLifeCycleEvent.jsonld",
-                "http://schema4i.org/MedicalCode.jsonld",
-                "http://schema4i.org/LifeCycleEvent.jsonld",
-                "http://schema4i.org/Event.jsonld",
-                "http://schema4i.org/Thing.jsonld" ,
-                {
-                    "StartDate": {
-                        "@id": "schema:startDate",
-                        "@type": "schema:DateTime"
-                    },
-                    "EndDate": {
-                        "@id": "schema:endDate",
-                        "@type": "schema:DateTime"
-                    },
-                    "Code": {
-                        "@id": "s4i:Code",
-                        "@type": "s4i:MedicalCode"
-                    }   
-                }          
-            ],
-            "@type": "HumanLifeCycleEvent",
-            "Name": "Geburt",
-            "Code": {
-                "type": "MedicalCode",
-                "Code": "11636-8",
-                "CodingSystem": "LOINC"
-
-            },
-            "StartDate": "1965-03-13T12:00:00",
-            "EndDate": "1965-03-13T12:00:00"
-        },
-        "context": {}
-    }, {
-        "title": "Death as HumanLifeCycleEvent",
-        "tab": "tab-expanded",
-        "input": {
-            "@context": [
-                "http://schema4i.org/HumanLifeCycleEvent.jsonld",
+                "http://schema4i.org/AnimalLifeCycleEvent.jsonld",
                 "http://schema4i.org/MedicalCode.jsonld",
                 "http://schema4i.org/LifeCycleEvent.jsonld",
                 "http://schema4i.org/Event.jsonld",
@@ -81,20 +40,47 @@
                     "EndDate": {
                         "@id": "schema:endDate",
                         "@type": "schema:DateTime"
+                    }
+                }
+            ],
+            "@type": "AnimalLifeCycleEvent",
+            "Name": "Geburt",
+            "Code": {
+                "type": "MedicalCode",
+                "Code": "3950001",
+                "CodingSystem": "VTS SNOMED"
+            },
+            "StartDate": "1965-03-13T12:00:00",
+            "EndDate": "1965-03-13T12:00:00"
+        },
+        "context": {}
+    }, {
+        "title": "Death as AnimalLifeCycleEvent",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/AnimalLifeCycleEvent.jsonld",
+                "http://schema4i.org/MedicalCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "StartDate": {
+                        "@id": "schema:startDate",
+                        "@type": "schema:DateTime"
                     },
-                    "Code": {
-                        "@id": "s4i:Code",
-                        "@type": "s4i:MedicalCode"
-                    } 
+                    "EndDate": {
+                        "@id": "schema:endDate",
+                        "@type": "schema:DateTime"
+                    }
                 }                 
             ],
-            "@type": "HumanLifeCycleEvent",
+            "@type": "AnimalLifeCycleEvent",
             "Name": "Tod",
             "Code": {
                 "type": "MedicalCode",
-                "CodeValue": "R99",
-                "CodingSystem": "ICD-10"
-
+                "CodeValue": "418362005",
+                "CodingSystem": "VTS SNOMED"
             },
             "StartDate": "2024-03-13T12:00:00",
             "EndDate": "2024-03-13T12:00:00"

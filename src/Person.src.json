@@ -162,6 +162,10 @@
             "WorksFor": {
                 "@id": "schema:worksFor",
                 "@type": "s4i:Organization"
+            },
+            "LifeCycle": {
+                "@id": "s4i:LifeCycle",
+                "@type": "s4i:HumanLifeCycleEvent"
             }
         }
     },

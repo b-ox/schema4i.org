@@ -43,6 +43,10 @@
                 "@context": {
                     "@vocab": "s4i:EnumAnimalUseCode#"
                 }
+            },
+            "LifeCycle": {
+                "@id": "s4i:LifeCycle",
+                "@type": "s4i:AnimalLifeCycleEvent"
             }
         }
     },
@@ -55,6 +59,10 @@
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Gender.jsonld",
                 "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/AnimalLifeCycleEvent.jsonld",
+                "http://schema4i.org/MedicalCode.jsonld",
+                "http://schema4i.org/LifeCycleEvent.jsonld",
+                "http://schema4i.org/Event.jsonld",
                 {
                     "Owner": {
                         "@id": "s4i:Owner",
@@ -73,7 +81,18 @@
                 "GivenName": "Max",
                 "Salutation": "3"
             },
-            "AnimalUse": "12"
+            "AnimalUse": "12",
+            "LifeCycle": {
+                "@type": "AnimalLifeCycleEvent",
+                "Name": "Geburt",
+                "Code": {
+                    "type": "MedicalCode",
+                    "Code": "3950001",
+                    "CodingSystem": "VTS SNOMED"
+                },
+                "StartDate": "2021-10-04T12:00:00",
+                "EndDate": "2021-10-04T12:00:00"
+            }
         },
         "context": {}
     }]
