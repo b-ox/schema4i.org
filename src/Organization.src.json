@@ -90,6 +90,10 @@
                 "@id": "s4i:LegalForm",
                 "@type": "s4i:EnumLegalFormCode" 
             },
+            "LegalRepresentative": {
+                "@id": "schema:legalRepresentative",
+                "@type": "s4i:Person" 
+            },
             "Logo": {
                 "@id": "schema:logo"
             },
@@ -178,7 +182,8 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Organization.jsonld",
-                "http://schema4i.org/PostalAddress.jsonld"
+                "http://schema4i.org/PostalAddress.jsonld",
+                "http://schema4i.org/Person.jsonld"
             ],
             "@type": "Organization",
             "Address": {
@@ -192,6 +197,11 @@
             "FaxNumber": "0211 41608 100",
             "LegalName": "b-tix GmbH",
             "LegalForm": "05",
+            "LegalRepresentative": {
+                "@type": "Person",
+                "GivenName": "Max",
+                "Name": "Mustermann"
+            },
             "Name": "b-tix",
             "NumberOfEmployees": {
                 "@type": "QuantitativeValue",

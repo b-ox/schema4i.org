@@ -48,6 +48,10 @@
                 "@id": "s4i:DunningDate",
                 "@type": "schema:Date"
             },
+            "DunningLevel": {
+                "@id": "s4i:DunningLevel",
+                "@type": "schema:Text"
+            },
             "Costs": {
                 "@id": "s4i:DunningCosts"
             },
@@ -122,7 +126,8 @@
             "LiabilityEndDate": "2020-07-01",
             "PaymentsReceptionDate": "2020-07-25",
             "UnpaidSinceDate": "2020-07-01",
-            "TotalAmount": 150.00
+            "TotalAmount": 150.00,
+            "DunningLevel": "2"
         },
         "context": {}
     }]

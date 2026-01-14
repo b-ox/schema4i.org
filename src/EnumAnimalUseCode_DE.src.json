@@ -28,6 +28,8 @@
             "Wachhund": "s4i:EnumAnimalUseCode#09",
             "Beizvogel": "s4i:EnumAnimalUseCode#10",
             "Begleit-/ Therapiehund": "s4i:EnumAnimalUseCode#11",
+            "Begleithund mit Hundeprüfung": "s4i:EnumAnimalUseCode#11B",
+            "Zertifizierter Gebrauchshund": "s4i:EnumAnimalUseCode#11C",
             "Privates Tier": "s4i:EnumAnimalUseCode#12",
             "Gewerblich genutztes Tier": "s4i:EnumAnimalUseCode#13",
             "Rettungstier": "s4i:EnumAnimalUseCode#14",
