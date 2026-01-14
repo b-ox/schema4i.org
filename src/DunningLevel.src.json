@@ -1,0 +1,33 @@
+{
+    "type": "DunningLevel",
+    "uri": "http://schema4i.org/DunningLevel",
+    "description": "The stage in the automated process of collecting overdue customer payments, defining specific rules (days overdue, amount thresholds) and escalating communication (gentle reminder to firm letter to potential legal action) for unpaid invoices.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Dunning#DunningLevel" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DunningLevel": {
+                "@id": "s4i:DunningLevel",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum DunningLevel",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DunningLevel": "Level 1"
+        },
+        "context": {}
+    }]
+}
