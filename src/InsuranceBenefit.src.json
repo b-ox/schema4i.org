@@ -14,6 +14,10 @@
         "Value": [
             { "@id": "http://schema4i.org/QuantitativeValue" },
             { "@id": "http://schema4i.org/MonetaryAmount" }
+        ],
+        "BenefitType": [
+            { "@id": "http://schema4i.org/EnumInsuranceBenefitCode" },
+            { "@id": "http://schema4i.org/EnumPensionBenefitCode" }
         ]
     },
     "context": {
@@ -23,11 +27,7 @@
             "schema": "http://schema.org/",
             "InsuranceBenefit": "schema:InsuranceBenefit",
             "BenefitType": {
-                "@id": "s4i:BenefitType",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumInsuranceBenefitCode#"
-                }
+                "@id": "s4i:BenefitType"
             },
             "Value": {
                  "@id": "s4i:SumInsured"
@@ -47,6 +47,12 @@
                     "Value": {
                         "@id": "http://schema4i.org/SumInsured",
                         "@type": "http://schema4i.org/MonetaryAmount"
+                    },
+                    "BenefitType": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumInsuranceBenefitCode"
+                        }
                     }
                 }
             ],

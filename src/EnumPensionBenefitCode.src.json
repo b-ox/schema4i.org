@@ -1,0 +1,36 @@
+{
+    "type": "EnumPensionBenefitCode",
+    "uri": "http://schema4i.org/EnumPensionBenefitCode",
+    "description": "Describes the types of additional retirement and premium waiver benefits.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumPensionBenefitCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/InsuranceBenefit#BenefitType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Annuity": "s4i:EnumPensionBenefitCode#01",
+            "Waiver of Premium": "s4i:EnumPensionBenefitCode#02",
+            "Lump Sum Payment": "s4i:EnumPensionBenefitCode#03",
+            "Disability Annuity": "s4i:EnumPensionBenefitCode#04",
+            "Waiver and Annuity (Long Term Care)": "s4i:EnumPensionBenefitCode#05",
+            "Waiver - Child Care": "s4i:EnumPensionBenefitCode#06",
+            "Waiver - Provider Death or Disability": "s4i:EnumPensionBenefitCode#07",
+            "Waiver - Child Care or Provider Death or Disability": "s4i:EnumPensionBenefitCode#08"
+        }
+    }
+}

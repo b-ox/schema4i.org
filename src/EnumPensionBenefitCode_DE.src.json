@@ -1,0 +1,36 @@
+{
+    "type": "EnumPensionBenefitCode_DE",
+    "uri": "http://schema4i.org/EnumPensionBenefitCode_DE",
+    "description": "Beschreibt die Arten zusätzlicher Renten- und Beitragsbefreiungsleistungen",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumPensionBenefitCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/InsuranceBenefit#BenefitType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Rente": "s4i:EnumPensionBenefitCode#01",
+            "Beitragsbefreiung": "s4i:EnumPensionBenefitCode#02",
+            "Einmalauszahlung": "s4i:EnumPensionBenefitCode#03",
+            "Rente bei Erwerbsminderung": "s4i:EnumPensionBenefitCode#04",
+            "Beitragsbefreiung und Rente bei Pflegebedürftigkeit": "s4i:EnumPensionBenefitCode#05",
+            "Beitragsbefreiung bei Pflege eines Kindes": "s4i:EnumPensionBenefitCode#06",
+            "Beitragsbefreiung bei Tod oder BU des Versorgers": "s4i:EnumPensionBenefitCode#07",
+            "Beitragsbefreiung bei Pflege des Kindes oder bei Tod oder BU des Versorgers": "s4i:EnumPensionBenefitCode#08"
+        }
+    }
+}
