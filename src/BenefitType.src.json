@@ -9,18 +9,19 @@
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+        "BenefitType": [
+            { "@id": "http://schema4i.org/EnumInsuranceBenefitCode" },
+            { "@id": "http://schema4i.org/EnumDisabilityBenefitCode" }
+        ]
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "BenefitType": {
-                "@id": "s4i:BenefitType",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumInsuranceBenefitCode#"
-                }
+                "@id": "s4i:BenefitType"
             }
         }
     },

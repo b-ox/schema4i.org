@@ -17,7 +17,7 @@
         ],
         "BenefitType": [
             { "@id": "http://schema4i.org/EnumInsuranceBenefitCode" },
-            { "@id": "http://schema4i.org/EnumPensionBenefitCode" }
+            { "@id": "http://schema4i.org/EnumDisabilityBenefitCode" }
         ]
     },
     "context": {
@@ -86,6 +86,32 @@
             ],
             "@type": "InsuranceBenefit",
             "Value": "51"
+        },
+        "context": {}
+    }, {
+        "title": "A sample InsuranceBenefit as EnumDisabilityBenefitCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    },
+                    "BenefitType": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumDisabilityBenefitCode"
+                        }
+                    }
+                }
+            ],
+            "@type": "InsuranceBenefit",
+            "BenefitType": "01"
         },
         "context": {}
     }]
