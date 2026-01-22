@@ -17,7 +17,8 @@
         ],
         "BenefitType": [
             { "@id": "http://schema4i.org/EnumInsuranceBenefitCode" },
-            { "@id": "http://schema4i.org/EnumDisabilityBenefitCode" }
+            { "@id": "http://schema4i.org/EnumDisabilityBenefitCode" },
+             { "@id": "http://schema4i.org/EnumLifeInusaranceValueCode" }
         ]
     },
     "context": {
@@ -28,6 +29,14 @@
             "InsuranceBenefit": "schema:InsuranceBenefit",
             "BenefitType": {
                 "@id": "s4i:BenefitType"
+            },
+             "ValidFrom": {
+                "@id": "schema:validFrom",
+                "@type": "schema:DateTime"
+            },
+             "ValidThrough": {
+                "@id": "schema:validThrough",
+                "@type": "schema:DateTime"
             },
             "Value": {
                  "@id": "s4i:SumInsured"
@@ -89,13 +98,13 @@
         },
         "context": {}
     }, {
-        "title": "A sample InsuranceBenefit as EnumDisabilityBenefitCode",
+        "title": "A sample InsuranceBenefit as EnumDisabilityBenefitCode (leben:Art)",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/InsuranceBenefit.jsonld",
-                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
                 "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
                 {
                     "Value": {
@@ -112,6 +121,35 @@
             ],
             "@type": "InsuranceBenefit",
             "BenefitType": "01"
+        },
+        "context": {}
+    }, {
+        "title": "A sample InsuranceBenefit as EnumLifeInusaranceValueCode (Stichtagswert)",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumLifeInusaranceValueCode.jsonld",
+                {
+                   "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    },
+                    "BenefitType": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumLifeInusaranceValueCode"
+                        }
+                    }
+                }
+            ],
+            "@type": "InsuranceBenefit",
+            "BenefitType": "25",
+            "Value": 100.00,
+            "ValidFrom": "2026-01-01T00:00:00",
+            "ValidThrough": "2026-01-01T00:00:00"
         },
         "context": {}
     }]
