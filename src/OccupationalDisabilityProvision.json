@@ -22,6 +22,10 @@
             "VestingDate": {
                 "@id": "schema:validFrom",
                 "@type": "schema:Date"
+            },
+            "Commitment": {
+                 "@id": "schema:validFrom",
+                "@type": "schema:Date"
             }
         }
     },
