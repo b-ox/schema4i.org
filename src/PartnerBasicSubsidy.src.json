@@ -1,0 +1,37 @@
+{
+    "type": "PartnerBasicSubsidy",
+    "uri": "http://schema4i.org/PartnerBasicSubsidy",
+    "description": "Indicates whether the partner's basic subsidy should be considered",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/SubsidyInformation#PartnerBasicSubsidy" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PartnerBasicSubsidy": {
+                "@id": "s4i:PartnerBasicSubsidy",
+                "@type": "schema:Boolean" 
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample PartnerBasicSubsidy",
+        "tab": "tab-expanded",
+        "input":  {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PartnerBasicSubsidy.jsonld"
+            ],
+            "PartnerBasicSubsidy": true
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,35 @@
+{
+    "type": "SubsidyEligibility",
+    "uri": "http://schema4i.org/SubsidyEligibility",
+    "description": "Indicates whether the policyholder qualifies for subsidies",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/SubsidyInformation#SubsidyEligibility" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SubsidyEligibility": {
+                "@id": "s4i:SubsidyEligibility",
+                "@type": "schema:Boolean" 
+            }
+        }
+    },
+    "playground": [{
+        "title": "An example SubsidyEligibility",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/SubsidyEligibility.jsonld"
+            ],
+            "SubsidyEligibility": true
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,93 @@
+{
+    "type": "SubsidyInformation",
+    "uri": "http://schema4i.org/SubsidyInformation",
+    "description": "SubsidyInformations are information that are needed to calculate a retirment income.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SubsidyInformation": "s4i:SubsidyInformation",
+             "ContributionType": {
+                "@id": "s4i:ContributionType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumContributionTypeeCode#"
+                }
+            },
+             "IncomePreviousYear": {
+                "@id": "schema:baseSalary",
+                "@type": "schema:MonetaryAmount"
+            },   
+             "OffsetModel": {
+                "@id": "s4i:OffsetModel",
+                "@type": "schema:Boolean"
+            },
+             "PartnerBasicSubsidy": {
+                "@id": "s4i:PartnerBasicSubsidy",
+                "@type": "schema:Boolean"
+            },
+             "PartnerIncomePreviousYear": {
+                "@id": "schema:baseSalary",
+                "@type": "schema:MonetaryAmount"
+            },
+            "SubsidyEligibility": {
+                "@id": "s4i:SubsidyEligibility",
+                "@type": "schema:Boolean"
+            }
+            
+        }
+    },
+    "playground": [{
+        "title": "A Sample SubsidyInformation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/PartnerBasicSubsidy.jsonld",
+                "http://schema4i.org/OffsetModel.jsonld",
+                "http://schema4i.org/ContributionType.jsonld",
+                "http://schema4i.org/ContributionType.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/SubsidyInformation.jsonld",
+                 "http://schema4i.org/SubsidyEligibility.jsonld"
+            ],
+            "@type": "SubsidyInformation",
+            "ContributionType": "min",
+            "IncomePreviousYear": {
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
+                "@type": "MonetaryAmount",
+                "Value": 1500,
+                "Currency": "EUR"
+            },
+            "OffsetModel": true,
+            "PartnerBasicSubsidy": false,
+            "PartnerIncomePreviousYear": {
+                "@context": {
+                    "UnitCode": {
+                        "@id": "http://schema.org/unitCode",
+                        "@type": "http://schema.org/Text"
+                    }
+                },
+                "@type": "MonetaryAmount",
+                "Value": 2500,
+                "Currency": "EUR"
+            },
+            "SubsidyEligibility": false
+        },
+        "context": {}
+    }
+    ]
+}

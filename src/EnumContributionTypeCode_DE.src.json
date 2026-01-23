@@ -1,0 +1,31 @@
+{
+    "type": "EnumDisabilityBenefitCode_DE",
+    "uri": "http://schema4i.org/EnumDisabilityBenefitCode_DE",
+    "description": "Beschreibt die Art des Eigenanteils an einem Versicherungsprodukt",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumDisabilityBenefitCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/SubsidyInformation#ContributionType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Minimal": "s4i:EnumContributionTypeCode#min",
+            "Maximal": "s4i:EnumContributionTypeCode#max",
+            "Individuell": "s4i:EnumContributionTypeCode#individuell"
+        }
+    }
+}

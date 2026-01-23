@@ -1,0 +1,37 @@
+{
+    "type": "OffsetModel",
+    "uri": "http://schema4i.org/OffsetModel",
+    "description": "Indicates the Subsidy offset of an product.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/SubsidyInformation#OffsetModel" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "OffsetModel": {
+                "@id": "s4i:OffsetModel",
+                "@type": "schema:Boolean" 
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample OffsetModel",
+        "tab": "tab-expanded",
+        "input":  {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/OffsetModel.jsonld"
+            ],
+            "OffsetModel": false
+        },
+        "context": {}
+    }]
+}
