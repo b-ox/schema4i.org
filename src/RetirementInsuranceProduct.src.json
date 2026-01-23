@@ -1,0 +1,46 @@
+{
+    "type": "RetirementInsuranceProduct",
+    "uri": "http://schema4i.org/RetirementInsuranceProduct",
+    "description": "A retirment insurance product like a pension.",
+    "links": [{
+        "url": "https://openontology.org",
+        "description": "OpenOntology.org"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/LifeInsuranceProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RetirementInsuranceProduct": "s4i:RetirementInsuranceProduct",
+            "OccupationalDisabilityProvision": {
+                "@id": "schema:validFrom",
+                "@type": "schema:OccupationalDisabilityProvision"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A real RetirementInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RetirementInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld"
+            ],
+            "@type": "RetirementInsuranceProduct",
+            "Offers": [{
+                "@type": "RetirementInsuranceProduct"
+            }]
+        },
+        "context": {}
+    }]
+}
