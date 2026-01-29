@@ -24,7 +24,7 @@
             },
              "IncomePreviousYear": {
                 "@id": "schema:baseSalary",
-                "@type": "schema:MonetaryAmount"
+                "@type": "s4i:MonetaryAmount"
             },   
              "OffsetModel": {
                 "@id": "s4i:OffsetModel",
@@ -36,7 +36,7 @@
             },
              "PartnerIncomePreviousYear": {
                 "@id": "schema:baseSalary",
-                "@type": "schema:MonetaryAmount"
+                "@type": "s4i:MonetaryAmount"
             },
             "SubsidyEligibility": {
                 "@id": "s4i:SubsidyEligibility",
