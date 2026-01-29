@@ -1,0 +1,24 @@
+{
+    "type": "EnumSalaryConversionStartCode_DE",
+    "uri": "http://schema4i.org/EnumSalaryConversionStartCode_DE",
+    "description": "ibt an, wann die Entgeltumwandlung im Rahmen einer betrieblichen Altersversorgung beginnt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumSalaryConversionStartCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/SalaryConversionStartCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Nicht Zeitversetzt": "s4i:EnumSalaryConversionStartCode#NichtZeitversetzt",
+            "Zeitversetzt": "s4i:EnumSalaryConversionStartCode#Zeitversetzt"
+        }
+    }
+}

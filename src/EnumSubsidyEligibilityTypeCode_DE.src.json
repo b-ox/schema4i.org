@@ -1,0 +1,26 @@
+{
+    "type": "EnumSubsidyEligibilityTypeCode_DE",
+    "uri": "http://schema4i.org/EnumSubsidyEligibilityTypeCode_DE",
+    "description": "Ein Code der den Typen  der die Förderberechtigung beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumSubsidyEligibilityTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/SubsidyEligibility" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Selbst": "s4i:EnumSubsidyEligibilityTypeCode#selbst",
+            "Partner": "s4i:EnumSubsidyEligibilityTypeCode#partner",
+            "Keine": "s4i:EnumSubsidyEligibilityTypeCode#keine",
+            "Noch nicht bekannt": "s4i:EnumSubsidyEligibilityTypeCode#nochNichtBekannt"
+        }
+    }
+}

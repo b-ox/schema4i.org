@@ -19,14 +19,20 @@
                 "@id": "s4i:Commitment",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "s4i:EnumCommitmentTypeeCode#"
+                    "@vocab": "s4i:EnumCommitmentTypeCode#"
                 }
             },
              "StartDate": {
                 "@id": "schema:baseSalary",
                 "@type": "schema:Date"
+            },
+            "SalaryConversionStart": {
+                "@id": "s4i:SalaryConversionStartCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSalaryConversionStartCode#"
+                }
             }
-            
         }
     },
     "playground": [{
@@ -36,12 +42,14 @@
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/CommitmentType.jsonld",
-                "http://schema4i.org/Commitment.jsonld"
+                "http://schema4i.org/Commitment.jsonld",
+                "http://schema4i.org/SalaryConversionStartCode.jsonld"
             ],
             "@type": "Commitment",
             "Identifier": "Zusagenummer",
             "IdentifierReference": "ZusagenummerAG",
-            "CommitmentType": "01"
+            "CommitmentType": "01",
+            "SalaryConversionStart": "1"
         },
         "context": {}
     }

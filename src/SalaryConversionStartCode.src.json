@@ -1,0 +1,36 @@
+{
+    "type": "SalaryConversionStartCode",
+    "uri": "http://schema4i.org/SalaryConversionStartCode",
+    "description": "Specifies when the salary conversion starts under an occupational pension commitment.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Commitment#SalaryConversionStartCode"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SalaryConversionStartCode": {
+                "@id": "s4i:SalaryConversionStartCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSalaryConversionStartCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample SalaryConversionStartCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "SalaryConversionStartCode": "1"
+        },
+        "context": {}
+    }]
+}

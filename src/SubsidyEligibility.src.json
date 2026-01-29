@@ -1,7 +1,7 @@
 {
     "type": "SubsidyEligibility",
     "uri": "http://schema4i.org/SubsidyEligibility",
-    "description": "Indicates whether the policyholder qualifies for subsidies",
+    "description": "Indicates if and how the policyholder qualifies for subsidies",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/SubsidyInformation#SubsidyEligibility" }
@@ -17,7 +17,10 @@
             "schema": "http://schema.org/",
             "SubsidyEligibility": {
                 "@id": "s4i:SubsidyEligibility",
-                "@type": "schema:Boolean" 
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSubsidyEligibilityTypeCode#"
+                }
             }
         }
     },
@@ -28,7 +31,7 @@
             "@context": [
                 "http://schema4i.org/SubsidyEligibility.jsonld"
             ],
-            "SubsidyEligibility": true
+            "SubsidyEligibility": "selbst"
         },
         "context": {}
     }]

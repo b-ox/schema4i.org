@@ -1,10 +1,10 @@
 {
-    "type": "EnumDisabilityBenefitCode_DE",
-    "uri": "http://schema4i.org/EnumDisabilityBenefitCode_DE",
+    "type": "EnumContributionTypeCode_DE",
+    "uri": "http://schema4i.org/EnumContributionTypeCode_DE",
     "description": "Beschreibt die Art des Eigenanteils an einem Versicherungsprodukt",
     "links": [
         {
-            "url": "http://schema4i.org/EnumDisabilityBenefitCode",
+            "url": "http://schema4i.org/EnumContributionTypeCode",
             "description": "Englische Dokumentation der Schlüsselwerte"
         }
     ],

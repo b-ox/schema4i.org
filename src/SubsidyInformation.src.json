@@ -19,7 +19,7 @@
                 "@id": "s4i:ContributionType",
                 "@type": "@vocab",
                 "@context": {
-                    "@vocab": "s4i:EnumContributionTypeeCode#"
+                    "@vocab": "s4i:EnumContributionTypeCode#"
                 }
             },
              "IncomePreviousYear": {
@@ -40,7 +40,10 @@
             },
             "SubsidyEligibility": {
                 "@id": "s4i:SubsidyEligibility",
-                "@type": "schema:Boolean"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSubsidyEligibilityTypeCode#"
+                }
             }
             
         }
@@ -85,7 +88,7 @@
                 "Value": 2500,
                 "Currency": "EUR"
             },
-            "SubsidyEligibility": false
+            "SubsidyEligibility": "selbst"
         },
         "context": {}
     }

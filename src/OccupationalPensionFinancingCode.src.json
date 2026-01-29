@@ -1,0 +1,36 @@
+{
+    "type": "OccupationalPensionFinancingCode",
+    "uri": "http://schema4i.org/OccupationalPensionFinancingCode",
+    "description": "A code that describes who finances the contributions to an occupational pension arrangement.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/OccupationalDisabilityProvision#OccupationalPensionFinancingCode"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "WaiverUnderinsurance": {
+                "@id": "s4i:OccupationalPensionFinancingCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOccupationalPensionFinancingCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample OccupationalPensionFinancingCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "OccupationalPensionFinancingCode": "Mischfinanzierung"
+        },
+        "context": {}
+    }]
+}
