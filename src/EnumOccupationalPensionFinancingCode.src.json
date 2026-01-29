@@ -1,9 +1,9 @@
 {
-    "type": "EnumOccupationalPensionFinancingTypeCode",
+    "type": "EnumOccupationalPensionFinancingCode",
     "uri": "http://schema4i.org/EnumOccupationalPensionFinancingCode",
     "description": "A code that describes who finances the contributions to an occupational pension arrangement.",
     "links": [{
-        "url": "http://schema4i.org/EnumOccupationalPensionFinancingTypeCode_DE",
+        "url": "http://schema4i.org/EnumOccupationalPensionFinancingCode_DE",
         "description": "Original German documentation"
     }],
     "parents": [
