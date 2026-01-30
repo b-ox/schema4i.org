@@ -1,0 +1,40 @@
+{
+    "type": "ContributionType",
+    "uri": "http://schema4i.org/ContributionType",
+    "description": "Describes way a contribution to an insurance product is given.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/schema4i#ContributionType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ContributionType": {
+                "@id": "s4i:ContributionType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumContributionTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ContributionType",
+        "tab": "tab-expanded",
+        "input":  {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/ContributionType.jsonld"
+            ],
+            "ContributionType": "min"
+        },
+        "context": {}
+    }]
+}

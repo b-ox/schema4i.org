@@ -1,0 +1,97 @@
+{
+    "type": "OccupationalDisabilityProvision",
+    "uri": "http://schema4i.org/OccupationalDisabilityProvision",
+    "description": "additional data needed to calculate a occupational disability provision",
+    "links": [],
+    "parents": [],
+     "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "OccupationalDisabilityProvision": "s4i:OccupationalDisabilityProvision",
+            "VestingType": {
+                "@id": "s4i:VestingType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumVestingTypeCode#"
+                }
+            },
+            "VestingDate": {
+                "@id": "schema:validFrom",
+                "@type": "schema:Date"
+            },
+            "Commitment": {
+                 "@id": "s4i:Commitment",
+                "@type": "s4i:Commitment"
+            },
+            "PensionSecurityFundObligatory": {
+                "@id": "s4i:PensionSecurityFundObligatory",
+                "@type": "schema:Boolean"
+            },
+             "PrivateContinuation": {
+                "@id": "s4i:PrivateContinuation",
+                "@type": "schema:Boolean"
+            },
+            "OccupationalPensionRoute": {
+                "@id": "s4i:OccupationalPensionRoute",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOccupationalPensionRouteCode#"
+                }
+            },
+            "OccupationalPensionFinancing": {
+                "@id": "s4i:OccupationalPensionFinancingCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOccupationalPensionFinancingCode#"
+                }
+            }
+            
+        }
+    },
+    "playground": [{
+        "title": "A maximal OccupationalDisabilityProvision",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RetirementInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/OccupationalDisabilityProvision.jsonld",
+                "http://schema4i.org/PensionSecurityFundObligatory.jsonld",
+                "http://schema4i.org/PrivateContinuation.jsonld",
+                "http://schema4i.org/OccupationalPensionRoute.jsonld"
+            ],
+            "@type": "OccupationalDisabilityProvision",
+            "VestingType": "gesetzlich",
+            "VestingDate": "2026-01-01",
+            "PensionSecurityFundObligatory": true,
+            "PrivateContinuation": false,
+            "OccupationalPensionRoute": "Unterstuetzungskasse",
+            "OccupationalPensionFinancing": "Mischfinanzierung",
+            "Commitment": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/CommitmentType.jsonld",
+                    "http://schema4i.org/Commitment.jsonld",
+                    "http://schema4i.org/SalaryConversionStartCode.jsonld"
+                ],
+                "@type": "Commitment",
+                "Identifier": "Zusagenummer",
+                "IdentifierReference": "ZusagenummerAG",
+                "CommitmentType": "01",
+                "SalaryConversionStart": "1"
+            }
+        },
+        "context": {}
+    }]
+}

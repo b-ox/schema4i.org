@@ -1,0 +1,31 @@
+{
+    "type": "EnumContributionTypeCode",
+    "uri": "http://schema4i.org/EnumContributionTypeCode",
+    "description": "Describes the types of contribution to an insurance product.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumContributionTypeCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/SubsidyInformation#ContributionType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Minimal": "s4i:EnumContributionTypeCode#min",
+            "Maximal": "s4i:EnumContributionTypeCode#max",
+            "Individuell": "s4i:EnumContributionTypeCode#individuell"
+        }
+    }
+}

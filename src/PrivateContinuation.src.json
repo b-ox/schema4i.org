@@ -1,0 +1,33 @@
+{
+    "type": "PrivateContinuation",
+    "uri": "http://schema4i.org/PrivateContinuation",
+    "description": "Indicates whether a contract originally established within an occupational pension scheme is continued privately.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/OccupationalDisabilityProvision#PrivateContinuation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PrivateContinuation": {
+                "@id": "s4i:PrivateContinuation",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum PrivateContinuation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "PrivateContinuation": true
+        },
+        "context": {}
+    }]
+}

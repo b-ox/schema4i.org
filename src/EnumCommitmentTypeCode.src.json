@@ -1,0 +1,25 @@
+{
+    "type": "EnumCommitmentTypeCode",
+    "uri": "http://schema4i.org/EnumCommitmentTypeCode",
+    "description": "A code that describes the type of occupational pension commitment",
+    "links": [{
+        "url": "http://schema4i.org/EnumCommitmentTypeCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Commitment#CommitmentType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Contribution Commitment with Minimum Benefit": "s4i:EnumCommitmentTypeCode#01",
+            "Contribution-Based Benefit": "s4i:EnumCommitmentTypeCode#02",
+            "Defined Benefit": "s4i:EnumCommitmentTypeCode#03"
+        }
+    }
+}

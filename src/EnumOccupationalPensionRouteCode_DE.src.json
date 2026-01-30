@@ -1,0 +1,28 @@
+{
+    "type": "EnumOccupationalPensionRouteCode_DE",
+    "uri": "http://schema4i.org/EnumOccupationalPensionRouteCode_DE",
+    "description": "Ein Code der den Typen  der die Förderberechtigung beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOccupationalPensionRouteCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/SubsidyEligibility" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Direktversicherung": "s4i:EnumOccupationalPensionImplementationRouteCode#Direktversicherung",
+            "Pensionsfonds": "s4i:EnumOccupationalPensionImplementationRouteCode#Pensionsfonds",
+            "Pensionskasse": "s4i:EnumOccupationalPensionImplementationRouteCode#Pensionskasse",
+            "Pensionszusage": "s4i:EnumOccupationalPensionImplementationRouteCode#Pensionszusage",
+            "Direktzusage": "s4i:EnumOccupationalPensionImplementationRouteCode#Direktzusage",
+            "Unterstuetzungskasse": "s4i:EnumOccupationalPensionImplementationRouteCode#Unterstuetzungskasse"
+        }
+    }
+}

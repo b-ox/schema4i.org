@@ -1,0 +1,79 @@
+{
+    "type": "RetirementInsuranceProduct",
+    "uri": "http://schema4i.org/RetirementInsuranceProduct",
+    "description": "A retirment insurance product like a pension.",
+    "links": [{
+        "url": "https://openontology.org",
+        "description": "OpenOntology.org"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/LifeInsuranceProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RetirementInsuranceProduct": "s4i:RetirementInsuranceProduct",
+            "OccupationalDisabilityProvision": {
+                "@id":  "s4i:OccupationalDisabilityProvision",
+                "@type": "s4i:OccupationalDisabilityProvision"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample RetirementInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/RetirementInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld"
+            ],
+            "@type": "RetirementInsuranceProduct",
+            "OccupationalDisabilityProvision":  {
+            "@context": [
+                "http://schema4i.org/RetirementInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/OccupationalDisabilityProvision.jsonld",
+                "http://schema4i.org/PensionSecurityFundObligatory.jsonld",
+                "http://schema4i.org/PrivateContinuation.jsonld",
+                "http://schema4i.org/OccupationalPensionRoute.jsonld"
+            ],
+            "@type": "OccupationalDisabilityProvision",
+            "VestingType": "gesetzlich",
+            "VestingDate": "2026-01-01",
+            "PensionSecurityFundObligatory": true,
+            "PrivateContinuation": false,
+            "OccupationalPensionRoute": "Unterstuetzungskasse",
+            "OccupationalPensionFinancing": "Mischfinanzierung",
+            "Commitment": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/CommitmentType.jsonld",
+                    "http://schema4i.org/Commitment.jsonld",
+                    "http://schema4i.org/SalaryConversionStartCode.jsonld"
+                ],
+                "@type": "Commitment",
+                "Identifier": "Zusagenummer",
+                "IdentifierReference": "ZusagenummerAG",
+                "CommitmentType": "01",
+                "SalaryConversionStart": "1"
+            }
+        },
+            "Offers": []
+        },
+        "context": {}
+    }]
+}

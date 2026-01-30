@@ -1,0 +1,36 @@
+{
+    "type": "OccupationalPensionRoute",
+    "uri": "http://schema4i.org/OccupationalPensionRoute",
+    "description": "Describes the legal and organizational implementation route of an occupational pension arrangement.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/OccupationalDisabilityProvision#OccupationalPensionRoute" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "OccupationalPensionRoute": {
+                "@id": "s4i:OccupationalPensionRoute",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOccupationalPensionRouteCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A example OccupationalPensionRoute",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "OccupationalPensionRoute": "Unterstuetzungskasse"
+        },
+        "context": {}
+    }]
+}

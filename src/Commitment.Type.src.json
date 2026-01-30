@@ -1,0 +1,38 @@
+{
+    "type": "CommitmentType",
+    "uri": "http://schema4i.org/CommitmentType",
+    "description": "Describes the type of commitmentType",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Consent#CommitmentType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "CommitmentType": {
+                "@id": "s4i:CommitmentType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumCommitmentTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample CommitmentType",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/CommitmentType.jsonld"
+            ],
+            "CommitmentType": "01"
+        },
+        "context": {}
+    }]
+}

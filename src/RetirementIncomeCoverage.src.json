@@ -17,19 +17,24 @@
             "DividendUsage": {
                 "@id": "s4i:DividendUsage",
                 "@type": "s4i:Dividend"
+            },
+            "SubsidyInformation": {
+                "@id": "s4i:SubsidyInformation",
+                "@type": "s4i:SubsidyInformation"
             }
         }
     },
     "playground": [{
-        "title": "RetirementIncomeCoverage with simple Risk",
+        "title": "An Example RetirementIncomeCoverage",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
                 "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/DisabilityCoverage.jsonld",
-                "http://schema4i.org/DisabilityRisk.jsonld"
+                "http://schema4i.org/RetirementIncomeCoverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/Risk.jsonld"
             ],
             "@type": "RetirementIncomeCoverage",
             "SumInsured": {
@@ -38,7 +43,7 @@
                 "Currency": "EUR"
             },
             "Covers": {
-                "@type": "LongevityRisk"
+                "@type": "Risk"
             }
         },
         "context": {}

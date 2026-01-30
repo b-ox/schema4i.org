@@ -1,0 +1,25 @@
+{
+    "type": "EnumCommitmentTypeCode_DE",
+    "uri": "http://schema4i.org/EnumCommitmentTypeCode_DE",
+    "description": "Ein Code der den Typen  der die Art der betrieblichen Altersversorgungszusage beschreibt.",
+    "links": [{
+        "url": "http://schema4i.org/EnumCommitmentTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Commitment#CommitmentType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Beitragszusage mit Mindestleistung": "s4i:EnumCommitmentTypeCode#01",
+            "Beitragsorientierte Leistungszusage": "s4i:EnumCommitmentTypeCode#02",
+            "Leistungszusage": "s4i:EnumCommitmentTypeCode#03"
+        }
+    }
+}

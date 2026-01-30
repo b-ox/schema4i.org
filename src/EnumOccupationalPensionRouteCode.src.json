@@ -1,0 +1,27 @@
+{
+    "type": "EnumOccupationalPensionRouteCode",
+    "uri": "http://schema4i.org/EnumOccupationalPensionRouteCode",
+    "description": "A code that describes the how one is Eligibility for a subsidy",
+    "links": [{
+        "url": "http://schema4i.org/EnumOccupationalPensionRouteCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/SubsidyEligibility" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "DirectInsurance": "s4i:EnumOccupationalPensionImplementationRouteCode#Direktversicherung",
+            "PensionFund": "s4i:EnumOccupationalPensionImplementationRouteCode#Pensionsfonds",
+            "PensionScheme": "s4i:EnumOccupationalPensionImplementationRouteCode#Pensionskasse",
+            "DirectCommitment": "s4i:EnumOccupationalPensionImplementationRouteCode#Pensionszusage",
+            "SupportFund": "s4i:EnumOccupationalPensionImplementationRouteCode#Unterstuetzungskasse"
+        }
+    }
+}

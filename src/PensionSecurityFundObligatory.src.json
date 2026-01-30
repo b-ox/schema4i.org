@@ -1,0 +1,33 @@
+{
+    "type": "PensionSecurityFundObligatory",
+    "uri": "http://schema4i.org/PensionSecurityFundObligatory",
+    "description": "Indicates whether the occupational pension commitment is subject to insolvency protection by the Pension Security Fund (PSV).",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/OccupationalDisabilityProvision#PensionSecurityFundObligatory"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PensionSecurityFundObligatory": {
+                "@id": "s4i:PensionSecurityFundObligatory",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample PensionSecurityFundObligatory",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "PensionSecurityFundObligatory": false
+        },
+        "context": {}
+    }]
+}

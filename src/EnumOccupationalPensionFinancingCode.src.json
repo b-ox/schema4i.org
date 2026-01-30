@@ -1,0 +1,26 @@
+{
+    "type": "EnumOccupationalPensionFinancingCode",
+    "uri": "http://schema4i.org/EnumOccupationalPensionFinancingCode",
+    "description": "A code that describes who finances the contributions to an occupational pension arrangement.",
+    "links": [{
+        "url": "http://schema4i.org/EnumOccupationalPensionFinancingCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/OccupationalPensionFinancingCode" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Employer funded": "s4i:EnumOccupationalPensionFinancingTypeCode#01",
+            "Employee funded": "s4i:EnumOccupationalPensionFinancingTypeCode#02",
+            "Mixed funding": "s4i:EnumOccupationalPensionFinancingTypeCode#03",
+            "Unknown": "s4i:EnumOccupationalPensionFinancingTypeCode#04"
+        }
+    }
+}
