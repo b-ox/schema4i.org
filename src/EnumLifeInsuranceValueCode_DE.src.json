@@ -1,0 +1,59 @@
+{
+    "type": "EnumLifeInsuranceValueCode_DE",
+    "uri": "http://schema4i.org/EnumLifeInsuranceValueCode_DE",
+    "description": "Beschreibt die verschiedenen Wertearten von Lebens- und Rentenversicherungsprodukten zu einem bestimmten Stichtag.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumLifeInsuranceValueCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/InsuranceBenefit#BenefitType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Beitragsfreie Erlebensfallleistung": "s4i:EnumLifeInsuranceValueCode#01",
+            "Beitragsfreie Rente": "s4i:EnumLifeInsuranceValueCode#02",
+            "Beitragsfreie Todesfallleistung": "s4i:EnumLifeInsuranceValueCode#03",
+            "Entnahmemöglichkeit": "s4i:EnumLifeInsuranceValueCode#04",
+            "Garantierte Erlebensfallleistung": "s4i:EnumLifeInsuranceValueCode#05",
+            "Garantierte Rente": "s4i:EnumLifeInsuranceValueCode#06",
+            "Garantierte Todesfallleistung": "s4i:EnumLifeInsuranceValueCode#07",
+            "Gesamte Erlebensfallleistung inkl. hochgerechneter Überschüsse und Wertentwicklung": "s4i:EnumLifeInsuranceValueCode#08",
+            "Gesamter Beleihungswert": "s4i:EnumLifeInsuranceValueCode#09",
+            "Gesamte Rente inkl. hochgerechneter Überschüsse und Wertentwicklung": "s4i:EnumLifeInsuranceValueCode#10",
+            "Gesamte Todesfallleistung inkl. hochgerechneter Überschüsse und Wertentwicklung": "s4i:EnumLifeInsuranceValueCode#11",
+            "Letzte erhaltene Zulage": "s4i:EnumLifeInsuranceValueCode#12",
+            "Letzte Sonderzuzahlung": "s4i:EnumLifeInsuranceValueCode#13",
+            "Rückkaufswert": "s4i:EnumLifeInsuranceValueCode#14",
+            "Summe erhaltene Zulagen": "s4i:EnumLifeInsuranceValueCode#15",
+            "Summe gezahlter Beiträge": "s4i:EnumLifeInsuranceValueCode#16",
+            "Summe der Sonderzuzahlungen": "s4i:EnumLifeInsuranceValueCode#17",
+            "Überschussguthaben": "s4i:EnumLifeInsuranceValueCode#18",
+            "Verfügbarer Beleihungswert": "s4i:EnumLifeInsuranceValueCode#19",
+            "Vertragswert": "s4i:EnumLifeInsuranceValueCode#20",
+            "Rückgewährsumme": "s4i:EnumLifeInsuranceValueCode#21",
+            "Ablaufleistung": "s4i:EnumLifeInsuranceValueCode#22",
+            "Kapitalertragssteuer": "s4i:EnumLifeInsuranceValueCode#23",
+            "Solidaritätszuschlag": "s4i:EnumLifeInsuranceValueCode#24",
+            "Rückkaufswert inklusive Bewertungsreserven": "s4i:EnumLifeInsuranceValueCode#25",
+            "Anteil an den Bewertungsreserven": "s4i:EnumLifeInsuranceValueCode#26",
+            "Fondsguthaben": "s4i:EnumLifeInsuranceValueCode#27",
+            "Rückkaufswert ohne Bewertungsreserven ohne Überschüsse": "s4i:EnumLifeInsuranceValueCode#28",
+            "Rückkaufswert ohne Bewertungsreserven mit Überschüsse": "s4i:EnumLifeInsuranceValueCode#29",
+            "Rückkaufswert mit Mindestbewertungsreserven": "s4i:EnumLifeInsuranceValueCode#30",
+            "Rückkaufswert mit gesamten Bewertungsreserven": "s4i:EnumLifeInsuranceValueCode#31"
+        }
+    }
+}

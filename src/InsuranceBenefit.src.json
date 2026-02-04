@@ -18,7 +18,7 @@
         "BenefitType": [
             { "@id": "http://schema4i.org/EnumInsuranceBenefitCode" },
             { "@id": "http://schema4i.org/EnumDisabilityBenefitCode" },
-             { "@id": "http://schema4i.org/EnumLifeInusaranceValueCode" }
+             { "@id": "http://schema4i.org/EnumLifeInsuranceValueCode" }
         ]
     },
     "context": {
@@ -124,14 +124,14 @@
         },
         "context": {}
     }, {
-        "title": "A sample InsuranceBenefit as EnumLifeInusaranceValueCode (Stichtagswert)",
+        "title": "A sample InsuranceBenefit as EnumLifeInsuranceValueCode (Stichtagswert)",
         "tab": "tab-expanded",
         "input": {
             "@context": [
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/InsuranceBenefit.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
-                "http://schema4i.org/EnumLifeInusaranceValueCode.jsonld",
+                "http://schema4i.org/EnumLifeInsuranceValueCode.jsonld",
                 {
                    "Value": {
                         "@id": "http://schema4i.org/SumInsured",
@@ -140,7 +140,7 @@
                     "BenefitType": {
                         "@id": "http://schema4i.org/BenefitType",
                         "@context": {
-                            "@vocab": "http://schema4i.org/EnumLifeInusaranceValueCode"
+                            "@vocab": "http://schema4i.org/EnumLifeInsuranceValueCode"
                         }
                     }
                 }

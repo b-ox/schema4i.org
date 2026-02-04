@@ -1,0 +1,59 @@
+{
+    "type": "EnumLifeInsuranceValueCode",
+    "uri": "http://schema4i.org/EnumLifeInsuranceValueCode",
+    "description": "Describes the different types of values of life and annuity insurance products as of a specific reference date.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumLifeInsuranceValueCode_DE",
+            "description": "Original German documentation"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/InsuranceBenefit#BenefitType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+           "Contribution-Free Maturity Benefit": "s4i:EnumLifeInsuranceValueCode#01",
+            "Contribution-Free Annuity": "s4i:EnumLifeInsuranceValueCode#02",
+            "Contribution-Free Death Benefit": "s4i:EnumLifeInsuranceValueCode#03",
+            "Withdrawal Option": "s4i:EnumLifeInsuranceValueCode#04",
+            "Guaranteed Maturity Benefit": "s4i:EnumLifeInsuranceValueCode#05",
+            "Guaranteed Annuity": "s4i:EnumLifeInsuranceValueCode#06",
+            "Guaranteed Death Benefit": "s4i:EnumLifeInsuranceValueCode#07",
+            "Total Maturity Benefit (Projected)": "s4i:EnumLifeInsuranceValueCode#08",
+            "Total Loan Value": "s4i:EnumLifeInsuranceValueCode#09",
+            "Total Annuity (Projected)": "s4i:EnumLifeInsuranceValueCode#10",
+            "Total Death Benefit (Projected)": "s4i:EnumLifeInsuranceValueCode#11",
+            "Last Received Allowance": "s4i:EnumLifeInsuranceValueCode#12",
+            "Last Special Contribution": "s4i:EnumLifeInsuranceValueCode#13",
+            "Surrender Value": "s4i:EnumLifeInsuranceValueCode#14",
+            "Total Received Allowances": "s4i:EnumLifeInsuranceValueCode#15",
+            "Total Paid Contributions": "s4i:EnumLifeInsuranceValueCode#16",
+            "Total Special Contributions": "s4i:EnumLifeInsuranceValueCode#17",
+            "Surplus Account": "s4i:EnumLifeInsuranceValueCode#18",
+            "Available Loan Value": "s4i:EnumLifeInsuranceValueCode#19",
+            "Contract Value": "s4i:EnumLifeInsuranceValueCode#20",
+            "Refund Amount": "s4i:EnumLifeInsuranceValueCode#21",
+            "Maturity Benefit": "s4i:EnumLifeInsuranceValueCode#22",
+            "Capital Gains Tax": "s4i:EnumLifeInsuranceValueCode#23",
+            "Solidarity Surcharge": "s4i:EnumLifeInsuranceValueCode#24",
+            "Surrender Value Including Valuation Reserves": "s4i:EnumLifeInsuranceValueCode#25",
+            "Share of Valuation Reserves": "s4i:EnumLifeInsuranceValueCode#26",
+            "Fund Value": "s4i:EnumLifeInsuranceValueCode#27",
+            "Surrender Value Without Valuation Reserves Without Surplus": "s4i:EnumLifeInsuranceValueCode#28",
+            "Surrender Value Without Valuation Reserves With Surplus": "s4i:EnumLifeInsuranceValueCode#29",
+            "Surrender Value With Minimum Valuation Reserves": "s4i:EnumLifeInsuranceValueCode#30",
+            "Surrender Value With Total Valuation Reserves": "s4i:EnumLifeInsuranceValueCode#31"
+        }
+    }
+}
