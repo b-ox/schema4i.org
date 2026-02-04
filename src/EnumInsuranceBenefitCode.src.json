@@ -18,6 +18,7 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
+            "Guaranteed Maturity Benefit":"s4i:EnumInsuranceBenefitCode#GarantierteAblaufleistung",
             "Total Maturity Benefit":"s4i:EnumInsuranceBenefitCode#GesamteAblaufleistung",
             "Guaranteed Pension":"s4i:EnumInsuranceBenefitCode#GarantierteRente",
             "Total Pension":"s4i:EnumInsuranceBenefitCode#GesamteRente",
