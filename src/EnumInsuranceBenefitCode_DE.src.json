@@ -18,6 +18,7 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
+            "Garantierte Ablaufleistung":"s4i:EnumInsuranceBenefitCode#GarantierteAblaufleistung",
             "Gesamte Ablaufleistung":"s4i:EnumInsuranceBenefitCode#GesamteAblaufleistung",
             "Garantierte Rente":"s4i:EnumInsuranceBenefitCode#GarantierteRente",
             "Gesamte Rente":"s4i:EnumInsuranceBenefitCode#GesamteRente",
