@@ -14,6 +14,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "OccupationalDisabilityProvision": "s4i:OccupationalDisabilityProvision",
+             "AffectedBy": {
+                "@id": "s4i:AffectedBy",
+                "@type": "s4i:Thing"
+            },
             "VestingType": {
                 "@id": "s4i:VestingType",
                 "@type": "@vocab",
@@ -78,6 +82,16 @@
             "PrivateContinuation": false,
             "OccupationalPensionRoute": "Unterstuetzungskasse",
             "OccupationalPensionFinancing": "Mischfinanzierung",
+            "AffectedBy": {
+                "@type": "HumanLifeCycleEvent",
+                "EndDate": "2025-01-01",
+                "Name": "Diensteintritt, Dienstaustritt",
+                "StartDate": "1985-01-01",
+                "Attendee": {
+                    "@type": "Person",
+                    "@id": "#vp1"
+                }
+            },
             "Commitment": {
                 "@context": [
                     "http://schema4i.org/Thing.jsonld",
