@@ -63,9 +63,11 @@
                     "http://schema4i.org/Thing.jsonld",
                     "http://schema4i.org/CommitmentType.jsonld",
                     "http://schema4i.org/Commitment.jsonld",
+                    "http://schema4i.org/CommitmentAction.jsonld",
+                    "http://schema4i.org/Action.jsonld",
                     "http://schema4i.org/SalaryConversionStartCode.jsonld"
                 ],
-                "@type": "Commitment",
+                "@type": "CommitmentAction",
                 "Identifier": "Zusagenummer",
                 "IdentifierReference": "ZusagenummerAG",
                 "CommitmentType": "01",

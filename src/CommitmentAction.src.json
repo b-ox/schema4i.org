@@ -1,28 +1,38 @@
 {
-    "type": "Commitment",
-    "uri": "http://schema4i.org/Commitment",
-    "description": "Describes the type of Commitment",
+    "type": "CommitmentAction",
+    "uri": "http://schema4i.org/CommitmentAction",
+    "description": "Details of the Commitment to a Insurance Benefit.",
     "links": [],
-    "parents": [
-        { "@id": "http://schema4i.org/Consent#Commitment" }
-    ],
+    "parents": [],
     "base": [
-        { "@id": "http://schema4i.org/Property" }
+        { "@id": "http://schema4i.org/Action" }
     ],
-    "multipletypes": {},
+    "multipletypes": {
+    },
     "context": {
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Commitment": {
+            "Commitment": "s4i:Commitmen",
+             "CommitmentType": {
                 "@id": "s4i:Commitment",
-                "@type": "s4i:Commitment"
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumCommitmentTypeCode#"
+                }
+            },
+            "SalaryConversionStart": {
+                "@id": "s4i:SalaryConversionStartCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumSalaryConversionStartCode#"
+                }
             }
         }
     },
     "playground": [{
-        "title": "Sample Commitment",
+        "title": "A Sample CommitmentAction",
         "tab": "tab-expanded",
         "input": {
             "@context": [
@@ -40,5 +50,6 @@
             "StartTime": "2026-01-01"
         },
         "context": {}
-    }]
+    }
+    ]
 }
