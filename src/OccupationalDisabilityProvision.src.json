@@ -30,7 +30,7 @@
                 "@type": "schema:Date"
             },
             "Commitment": {
-                 "@id": "s4i:Commitment",
+                 "@id": "s4i:CommitmentAction",
                 "@type": "s4i:Commitment"
             },
             "PensionSecurityFundObligatory": {
@@ -99,7 +99,7 @@
                     "http://schema4i.org/Commitment.jsonld",
                     "http://schema4i.org/SalaryConversionStartCode.jsonld"
                 ],
-                "@type": "Commitment",
+                "@type": "CommitmentAction",
                 "Identifier": "Zusagenummer",
                 "IdentifierReference": "ZusagenummerAG",
                 "CommitmentType": "01",
