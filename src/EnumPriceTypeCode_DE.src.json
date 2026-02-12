@@ -53,7 +53,7 @@
             "Sonstige gesetzliche Abgabe (Steuersatz)": "s4i:EnumPriceTypeCode#OTHER_TAX_RATE",
             "Tarifbeitrag ohne gesetzlichen Zuschlag gem. Zahlweise (PKV)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_BASE",
             "Bei fondsgebundenen Versicherungen der Beitragsanteil gem. Zahlweise, der in Investmentfonds eingezahlt wird": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_INVESTMENT_PORTION",
-            "'Bei fondsgebundenen Versicherungen der Beitragsanteil, der insgesamt (während der gesamten Beitragszahldauer) in die Investmentfonds eingezahlt wird": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_INVESTMENT_TOTAL",
+            "Bei fondsgebundenen Versicherungen der Beitragsanteil, der insgesamt (während der gesamten Beitragszahldauer) in die Investmentfonds eingezahlt wird": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_INVESTMENT_TOTAL",
             "Tarifbeitrag, Gesamtbeitrag Brutto ohne Überschussverrechnung (LV)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_GROSS_WITHOUT_SURPLUS",
             "Basisbeitrag, Beitrag ohne Prämienfaktor - der Ursprungsbeitrag zum Basisjahr (z.B. Wert 1914 in Mark bei Gebäude) (Komposit)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_BASE_HISTORICAL",
             "Steuerlich abzugsfähiger Sollbeitrag in der PKV (gem. Bürgerentlastungsgesetz)": "s4i:EnumPriceTypeCode#INSURANCE_PREMIUM_TAX_DEDUCTIBLE",
