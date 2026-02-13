@@ -30,7 +30,8 @@
             "Beitragsbefreiung und Rente bei Pflegebedürftigkeit": "s4i:EnumDisabilityBenefitCode#05",
             "Beitragsbefreiung bei Pflege eines Kindes": "s4i:EnumDisabilityBenefitCode#06",
             "Beitragsbefreiung bei Tod oder BU des Versorgers": "s4i:EnumDisabilityBenefitCode#07",
-            "Beitragsbefreiung bei Pflege des Kindes oder bei Tod oder BU des Versorgers": "s4i:EnumDisabilityBenefitCode#08"
+            "Beitragsbefreiung bei Pflege des Kindes oder bei Tod oder BU des Versorgers": "s4i:EnumDisabilityBenefitCode#08",
+            "Dienstunfaehgigkeit abgesichert": "s4i:EnumDisabilityBenefitCode#DU"
         }
     }
 }

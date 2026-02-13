@@ -35,6 +35,7 @@
                 "http://schema4i.org/BenefitType.jsonld",
                 "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                "http://schema4i.org/EnumDisabilityBenefitCode.jsonld",
                 {
                     "Value": {
                         "@id": "http://schema4i.org/SumInsured",
