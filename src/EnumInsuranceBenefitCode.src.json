@@ -204,7 +204,11 @@
             "Annual Salary":"s4i:EnumInsuranceBenefitCode#Jahresgehalt",
             "Full Outpatient Insurance":"s4i:EnumInsuranceBenefitCode#AmbulanteVollversicherung",
             "Full Inpatient Insurance":"s4i:EnumInsuranceBenefitCode#StationaereVollversicherung",
-            "Full Dental Insurance":"s4i:EnumInsuranceBenefitCode#ZahnVollversicherung"
+            "Full Dental Insurance":"s4i:EnumInsuranceBenefitCode#ZahnVollversicherung",
+            "Contribution refund in case of death before retirement":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiTod01",
+            "Contribution refund in case of death after retirement":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiTod02",
+            "Contribution refund in case of death":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiTod03",
+            "Contribution refund in case expiry":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiAblauf"
         }
     }
 }

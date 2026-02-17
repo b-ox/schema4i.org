@@ -206,7 +206,11 @@
             "Jahresgehalt":"s4i:EnumInsuranceBenefitCode#Jahresgehalt",
             "Ambulante Vollversicherung":"s4i:EnumInsuranceBenefitCode#AmbulanteVollversicherung",
             "Stationäre Vollversicherung":"s4i:EnumInsuranceBenefitCode#StationaereVollversicherung",
-            "Zahn Vollversicherung":"s4i:EnumInsuranceBenefitCode#ZahnVollversicherung"       
+            "Zahn Vollversicherung":"s4i:EnumInsuranceBenefitCode#ZahnVollversicherung"       ,
+            "Beitragsrückgewähr bei Tod vor Rentenbeginn":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiTod01",
+            "Beitragsrückgewähr bei Tod nach Rentenbeginn":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiTod02",
+            "Beitragsrückgewähr bei Tod":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiTod03",
+            "Beitragsrückgewähr bei Ablauf":"s4i:EnumInsuranceBenefitCode#BeitragsRueckgewaehrBeiAblauf"
 
         }
     }
