@@ -1,0 +1,49 @@
+{
+    "type": "OrderPartnerRole",
+    "uri": "http://schema4i.org/OrderPartnerRole",
+    "description": "A OrderPartnerRole describes relationship within an order",
+    "links": [{
+        "url": "http://schema.org/OrderPartnerRole",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Role" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "OrderPartnerRole": "schema:OrderPartnerRole",
+            "FileReference": {
+                "@id": "s4i:FileReference",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A example OrderPartnerRole with a third party right",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Person.jsonld",
+                "http://schema4i.org/Role.jsonld",
+                "http://schema4i.org/OrderPartnerRole.jsonld",
+                "http://schema4i.org/FileReference.jsonld",
+                {
+                    "RoleCode": {
+                        "@id": "s4i:RoleCode",
+                        "@type": "schema:Text"
+                    }
+                }
+            ],
+            "@type": "OrderPartnerRole",
+            "RoleCode": "006",
+            "FileReference": "4711"
+        },
+        "context": {}
+    }]
+}

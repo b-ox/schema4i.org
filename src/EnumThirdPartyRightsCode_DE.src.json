@@ -1,0 +1,29 @@
+{
+    "type": "EnumThirdPartyRightsCode_DE",
+    "uri": "http://schema4i.org/EnumThirdPartyRightsCode_DE",
+    "description": "Ein Code der die Art des Drittrechts beschreibt",
+    "links": [{
+        "url": "http://schema4i.org/EnumThirdPartyRightsCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#ProvidedConsent" },
+        { "@id": "http://schema4i.org/Organization#ProvidedConsent" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Abtretung": "s4i:EnumThirdPartyRightsCode#01",
+            "Verpfändung": "s4i:EnumThirdPartyRightsCode#02",
+            "Pfändung": "s4i:EnumThirdPartyRightsCode#03",
+            "Konkurs": "s4i:EnumThirdPartyRightsCode#04",
+            "Vergleich": "s4i:EnumThirdPartyRightsCode#05",
+            "Drittrecht vorhanden": "s4i:EnumThirdPartyRightsCode#99"
+        }
+    }
+}
