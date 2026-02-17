@@ -1,0 +1,29 @@
+{
+    "type": "EnumThirdPartyRightsCode",
+    "uri": "http://schema4i.org/EnumThirdPartyRightsCode",
+    "description": "A code that describes the tpye of right for a third party.",
+    "links": [{
+        "url": "http://schema4i.org/EnumThirdPartyRightsCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#ProvidedConsent" },
+        { "@id": "http://schema4i.org/Organization#ProvidedConsent" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Assignment": "s4i:EnumThirdPartyRightsCode#01",
+            "Pledge": "s4i:EnumThirdPartyRightsCode#02",
+            "Seizure": "s4i:EnumThirdPartyRightsCode#03",
+            "Insolvency": "s4i:EnumThirdPartyRightsCode#04",
+            "Settlement": "s4i:EnumThirdPartyRightsCode#05",
+            "Third-party rights exist": "s4i:EnumThirdPartyRightsCode#99"
+        }
+    }
+}
