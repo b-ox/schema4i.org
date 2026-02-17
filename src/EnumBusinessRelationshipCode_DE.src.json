@@ -24,7 +24,7 @@
             "Tochterunternehmen": "s4i:EnumBusinessRelationshipCode#24",
             "Firmenverbund": "s4i:EnumBusinessRelationshipCode#26",
             "Werksangehoeriger": "s4i:EnumBusinessRelationshipCode#27",
-            "Geschaeftsfuehrer": "s4i:EnumBusinessRelationshipCode#30",
+            "Geschäftsführer": "s4i:EnumBusinessRelationshipCode#30",
             "Gesellschafter": "s4i:EnumBusinessRelationshipCode#31",
             "Inhaber": "s4i:EnumBusinessRelationshipCode#32",
             "Autohaus": "s4i:EnumBusinessRelationshipCode#33",

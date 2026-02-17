@@ -14,6 +14,10 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "OccupationalDisabilityProvision": "s4i:OccupationalDisabilityProvision",
+             "AffectedBy": {
+                "@id": "s4i:AffectedBy",
+                "@type": "s4i:Thing"
+            },
             "VestingType": {
                 "@id": "s4i:VestingType",
                 "@type": "@vocab",
@@ -26,7 +30,7 @@
                 "@type": "schema:Date"
             },
             "Commitment": {
-                 "@id": "s4i:Commitment",
+                 "@id": "s4i:CommitmentAction",
                 "@type": "s4i:Commitment"
             },
             "PensionSecurityFundObligatory": {
@@ -78,6 +82,16 @@
             "PrivateContinuation": false,
             "OccupationalPensionRoute": "Unterstuetzungskasse",
             "OccupationalPensionFinancing": "Mischfinanzierung",
+            "AffectedBy": {
+                "@type": "HumanLifeCycleEvent",
+                "EndDate": "2025-01-01",
+                "Name": "Diensteintritt, Dienstaustritt",
+                "StartDate": "1985-01-01",
+                "Attendee": {
+                    "@type": "Person",
+                    "@id": "#vp1"
+                }
+            },
             "Commitment": {
                 "@context": [
                     "http://schema4i.org/Thing.jsonld",
@@ -85,7 +99,7 @@
                     "http://schema4i.org/Commitment.jsonld",
                     "http://schema4i.org/SalaryConversionStartCode.jsonld"
                 ],
-                "@type": "Commitment",
+                "@type": "CommitmentAction",
                 "Identifier": "Zusagenummer",
                 "IdentifierReference": "ZusagenummerAG",
                 "CommitmentType": "01",
