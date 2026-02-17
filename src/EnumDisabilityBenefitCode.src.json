@@ -30,7 +30,8 @@
             "Waiver and Annuity (Long Term Care)": "s4i:EnumDisabilityBenefitCode#05",
             "Waiver - Child Care": "s4i:EnumDisabilityBenefitCode#06",
             "Waiver - Provider Death or Disability": "s4i:EnumDisabilityBenefitCode#07",
-            "Waiver - Child Care or Provider Death or Disability": "s4i:EnumDisabilityBenefitCode#08"
+            "Waiver - Child Care or Provider Death or Disability": "s4i:EnumDisabilityBenefitCode#08",
+            "Unfitness for service insured": "s4i:EnumDisabilityBenefitCode#DU"
         }
     }
 }
