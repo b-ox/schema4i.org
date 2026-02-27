@@ -60,6 +60,17 @@
             "ModificationCode": {
                 "@id": "s4i:OrderModificationCode"
             },
+            "TerminationCode": {
+                "@id": "s4i:OrderTerminationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderTerminationCode#"
+                }
+            },
+            "TerminationDate": {
+                "@id": "s4i:TerminationDate",
+                "@type": "schema:Date"
+            },
             "OrderForm": {
                 "@id": "s4i:OrderForm",
                 "@type": "@vocab",

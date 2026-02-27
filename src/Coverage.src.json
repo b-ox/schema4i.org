@@ -72,6 +72,17 @@
                     "@vocab": "s4i:EnumTransactionCode#"
                 }
             },
+            "TerminationCode": {
+                "@id": "s4i:OrderTerminationCode",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumOrderTerminationCode#"
+                }
+            },
+            "TerminationDate": {
+                "@id": "s4i:TerminationDate",
+                "@type": "schema:Date"
+            },
             "WaitingPeriod": {
                 "@id": "s4i:WaitingPeriod",
                 "@type": "schema:Duration"

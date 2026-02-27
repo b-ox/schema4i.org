@@ -4,7 +4,9 @@
     "description": "The reason for the ending of an order (insurance contract), e.g. 1 = Termination by the customer to expire.",
     "links": [],
     "parents": [{
-        "@id": "http://schema4i.org/Order#TerminationCode"
+        "@id": "http://schema4i.org/Order#TerminationCode",
+        "@id": "http://schema4i.org/InsuranceProduct#TerminationCode",
+        "@id": "http://schema4i.org/Coverage#TerminationCode"
     }],
     "base": [
         { "@id": "http://schema4i.org/Property" }
