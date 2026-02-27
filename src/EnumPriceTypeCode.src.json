@@ -39,6 +39,7 @@
             "Claims/Salvage payment": "s4i:EnumPriceTypeCode#PROVENUE",
             "Discount": "s4i:EnumPriceTypeCode#DISCOUNT",
             "Surcharge": "s4i:EnumPriceTypeCode#SURCHARGE",
+            "Additonal Payment": "s4i:EnumPriceTypeCode#ADDITIONAL_PAYMENT",
             "Employee discount": "s4i:EnumPriceTypeCode#DISCOUNT_EMPLOYER_SPONSORED",
             "Group discount": "s4i:EnumPriceTypeCode#DISCOUNT_GROUP",
             "Value added tax": "s4i:EnumPriceTypeCode#VAT_TAX",
