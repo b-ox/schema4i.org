@@ -39,6 +39,7 @@
             "Schaden-/Provenuezahlung": "s4i:EnumPriceTypeCode#PROVENUE",
             "Abschlag": "s4i:EnumPriceTypeCode#DISCOUNT",
             "Zuschlag": "s4i:EnumPriceTypeCode#SURCHARGE",
+            "Zuzahlung": "s4i:EnumPriceTypeCode#ADDITIONAL_PAYMENT",
             "Mitarbeiter-Rabatt": "s4i:EnumPriceTypeCode#DISCOUNT_EMPLOYER_SPONSORED",
             "Gruppen-Rabatt": "s4i:EnumPriceTypeCode#DISCOUNT_GROUP",
             "Umsatzsteuer": "s4i:EnumPriceTypeCode#VAT_TAX",
