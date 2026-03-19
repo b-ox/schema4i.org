@@ -17,6 +17,10 @@
             "Age": {
                 "@id": "s4i:Age",
                 "@type": "schema:Number"
+            },
+            "EndAge": {
+                "@id": "s4i:Age",
+                "@type": "schema:Number"
             }
         }
     },
@@ -30,7 +34,8 @@
                 "http://schema4i.org/Role.jsonld"
             ],
             "@type": "InsuredPerson",
-            "Age": 65
+            "Age": 24,
+            "EndAge": 65
         },
         "context": {}
     }]
