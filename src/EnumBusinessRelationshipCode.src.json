@@ -33,7 +33,7 @@
             "co-owner": "s4i:EnumBusinessRelationshipCode#36",
             "carrier": "s4i:EnumBusinessRelationshipCode#37",
             "department": "s4i:EnumBusinessRelationshipCode#38",
-            "representitive": "s4i:EnumBusinessRelationshipCode#48",
+            "representative": "s4i:EnumBusinessRelationshipCode#48",
             "member": "s4i:EnumBusinessRelationshipCode#49"
         }
     }
