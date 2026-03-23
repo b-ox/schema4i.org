@@ -33,6 +33,10 @@
                 "@id": "s4i:AffectedBy",
                 "@type": "s4i:Thing"
             },
+            "Affects": {
+                "@id": "s4i:Affects",
+                "@type": "s4i:Thing"
+            },
             "BeneficialOwner": {
                 "@id": "s4i:BeneficialOwner"
             },
@@ -78,6 +82,7 @@
                     "CodingSystem": "ICD-10"
                 }
             }],
+            "Affects": [],
             "Irrevocable": false
         },
         "context": {}
