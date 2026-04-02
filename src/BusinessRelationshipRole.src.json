@@ -30,6 +30,10 @@
             },
             "BusinessRelationship": {
                 "@id": "s4i:BusinessRelationship"
+            },
+            "RoleBearerID": {
+                "@id": "s4i:RoleBearerID",
+                "@type": "s4i:ID"
             }
         }
     },
