@@ -18,6 +18,8 @@ const SKIP_TYPEOF_CHECKER = [
 const EXTENSIONS = {
     types: '.d.ts',
     util: '-util.ts',
+    guards: '-guards.ts',
+    enums: '-enums.ts',
     examples: '-examples.ts',
 }
 
@@ -77,7 +79,7 @@ function escape(identifier) {
 }
 
 const LANGUAGE = {
-        getFileName: (/** @type {Schema}*/ schema, /** @type {'types'|'util'|'examples'} */ purpose) => {
+        getFileName: (/** @type {Schema}*/ schema, /** @type {'types'|'util'|'guards'|'enums'|'examples'} */ purpose) => {
             return `${getFilenameComponent(schema)}${EXTENSIONS[purpose]}`;
         },
         writeTypes: ( /** @type {Schema}*/ schema, /** @type {boolean}*/ strict, /** @type {LangConfig} */ langConfig) => {
@@ -139,18 +141,14 @@ export type TypeByName<T extends string> = ${
 
         return output;
     },
-    writeOther: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
+    writeOthers: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;
         const enumDefinitions = typeDefinitions.filter(td => td.enumValues);
         const complexTypeDefinitions = typeDefinitions.filter(td => !td.simpleType);
-        let output = `
+        const ancestorsList = {};
+        const descendantsList = {};
+        let guards = `
 import * as s4i from './${getFilenameComponent(schema)}${langConfig.esm ? '.js' : ''}';
-
-const ENUMS = new Map<string, Map<string, string>>();
-
-const ANCESTORS = new Map<string, string[]>();
-
-const DESCENDANTS = new Map<string, string[]>();
 
 function isType(obj: any, type: string) {
 return typeof obj === 'object' && obj !== null && (Array.isArray(obj["@type"]) ? obj["@type"].indexOf(type) > -1 : obj["@type"] === type);
@@ -164,7 +162,7 @@ return typeof obj === 'object' && obj !== null && (Array.isArray(obj["@type"]) ?
             const descendants = typeDefinition.listDescendants(typeDefinitions);
 
             if (!SKIP_TYPEOF_CHECKER.some(t => t.test(typeDefinition.type))) {
-                output += `
+                guards += `
 /**
 * Checks if the given object is an instance of ${typeDefinition.type}.
 */
@@ -176,70 +174,78 @@ return isType(obj, '${typeDefinition.type}')${ childTypes.length > 0 ? ' || ' + 
             }
 
             if (ancestors.length > 0) {
-
-                output += `
-ANCESTORS.set('${typeDefinition.type}', ['${ joinWithLineBreaks(ancestors.map(a => a.type), `', '`, `',\n    '`) }']);
-`;
-
+                ancestorsList[typeDefinition.type] = ancestors.map(a => a.type);
             }
             if (descendants.length > 0) {
-
-                output += `
-DESCENDANTS.set('${typeDefinition.type}', ['${ joinWithLineBreaks(descendants.map(a => a.type), `', '`, `',\n    '`) }']);
-`;
-
+                descendantsList[typeDefinition.type] = descendants.map(a => a.type);
             }
         }
-        output += `
+        guards += `
+const ANCESTORS = {
+${Object.entries(ancestorsList).map(([type, ancestors]) => `'${type}': ['${joinWithLineBreaks(ancestors, `', '`, `',\n'`)}']`).join(',\n')}
+} as const;
 
+export function getAncestors(type: string): string[] {
+    return ANCESTORS[type]?.slice() ?? [];
+}
+
+const DESCENDANTS = {
+${Object.entries(descendantsList).map(([type, descendants]) => `'${type}': ['${joinWithLineBreaks(descendants, `', '`, `',\n'`)}']`).join(',\n')}
+} as const;
+
+export function getDescendants(type: string): string[] {
+    return DESCENDANTS[type]?.slice() ?? [];
+}
 `;
-        let enumCount = 0;
+        const enumsList = {};
         for (const enumDefinition of enumDefinitions) {
-            const count = enumCount++;
-            output += `
-const E${count} = new Map();
-ENUMS.set('${enumDefinition.type}', E${count});
-${Object.entries(enumDefinition.enumValues).map(([key, value]) => `E${count}.set('${key}', '${value.replace(/'/g, `\\'`)}');`).join('\n')}
-`;
+            enumsList[enumDefinition.type] = enumDefinition.enumValues;
         }
         const enumTypes = enumDefinitions.filter(td => !I18N_SUFFIXES.some(suffix => td.type.endsWith(suffix))).map(td => escape(td.type));
         const joinedEnumTypes = joinWithLineBreaks(enumTypes, `'|'`, `'|\n    '`);
-        output += `
+        const enums = `
 export type EnumTypes = '${joinedEnumTypes}';
 
+const ENUMS = {
+${Object.entries(enumsList).map(([type, values]) => {
+        const enumName = escape(type);
+        const enumEntries = Object.entries(values).map(([key, value]) => `'${key}': '${value.replace(/'/g, `\\'`)}'`).join(',\n');
+        return `'${enumName}': {
+${enumEntries}
+}`;
+    }).join(',\n')}
+} as const;
+
 export function mapEnum(type: EnumTypes, value: string, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): string {
-const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
-return ENUMS.get(enumName)?.get(value);
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    return ENUMS[enumName]?.[value];
 }
 
 export function listEnumKeys(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): string[] {
-const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
-const enumDef = ENUMS.get(enumName);
-return enumDef ? [...enumDef.keys()] : undefined;
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    const enumDef = ENUMS[enumName];
+    return enumDef ? Object.keys(enumDef) : undefined;
 }
 
 export function listEnumValues(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): string[] {
-const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
-const enumDef = ENUMS.get(enumName);
-return enumDef ? [...enumDef.values()] : undefined;
-}
-
-export function getAncestors(type: string): string[] {
-return ANCESTORS.get(type)?.slice() ?? [];
-}
-
-export function getDescendants(type: string): string[] {
-return DESCENDANTS.get(type)?.slice() ?? [];
-}
-
-export function listEnum(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): Record<string, any> {
     const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
-    const enumDef = ENUMS.get(enumName);
-    return enumDef ? Object.fromEntries(enumDef) : undefined;
+    const enumDef = ENUMS[enumName];
+    return enumDef ? Object.values(enumDef) : undefined;
+}
+
+export function listEnum(type: EnumTypes, lang: '${I18N_SUFFIXES.join(`'|'`)}' = '${DEFAULT_I18N_SUFFIX}'): Readonly<Record<string, any>> {
+    const enumName = lang !== '${DEFAULT_I18N_SUFFIX}' ? type + '_' + lang : type;
+    const enumDef = ENUMS[enumName];
+    return enumDef;
 }
 
 `;
-        return output;
+
+    const util = `export * from './${getFilenameComponent(schema)}${EXTENSIONS['guards'].replace('.ts', '')}';
+export * from './${getFilenameComponent(schema)}${EXTENSIONS['enums'].replace('.ts', '')}';
+`;
+
+        return {guards, enums, util};
     },
     writeExamples: (/** @type {Schema}*/ schema, /** @type {LangConfig} */ langConfig) => {
         const typeDefinitions = schema.types;

@@ -86,19 +86,20 @@ async function generateTypes(language, outputDir, options) {
             exampleOutput = languageProcessor.writeExamples(schema, langConfig);
         }
 
-        let otherOutput = '';
-        if (typeof languageProcessor.writeOther === 'function') {
-            otherOutput = languageProcessor.writeOther(schema, langConfig);
+        /** @type Record<string, string> */
+        let otherOutput = {};
+        if (typeof languageProcessor.writeOthers === 'function') {
+            otherOutput = languageProcessor.writeOthers(schema, langConfig);
         }
 
         const typeOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'types'));
         consoleLike.log(`Writing type definitions to ${typeOutputFile}`);
         await fs.writeFile(typeOutputFile, typeOutput, { encoding: 'utf-8' });
 
-        if (otherOutput) {
-            const otherOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, 'util'));
+        for (const [fileType, content] of Object.entries(otherOutput)) {
+            const otherOutputFile = path.resolve(outputDir, languageProcessor.getFileName(schema, fileType));
             consoleLike.log(`Writing additional code to ${otherOutputFile}`);
-            await fs.writeFile(otherOutputFile, otherOutput, { encoding: 'utf-8' });    
+            await fs.writeFile(otherOutputFile, content, { encoding: 'utf-8' });    
         }
 
         if (exampleOutput) {
