@@ -94,6 +94,10 @@
                 "@id": "schema:legalRepresentative",
                 "@type": "s4i:Person" 
             },
+            "Location": {
+                "@id": "schema:location",
+                "@type": "s4i:Place"
+            },
             "Logo": {
                 "@id": "schema:logo"
             },
