@@ -26,6 +26,10 @@
                 "http://schema4i.org/LossEvent.jsonld",
                 "http://schema4i.org/City.jsonld",
                 "http://schema4i.org/Damage.jsonld",
+                "http://schema4i.org/InsuranceClaim.jsonld",
+                "http://schema4i.org/ID.jsonld",
+                "http://schema4i.org/ClaimSettlement.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
                 "http://schema4i.org/Thing.jsonld"
             ],
             "@type": "LossEvent",
@@ -51,6 +55,21 @@
                     "@type": "MonetaryAmount",
                     "Currency": "EUR",
                     "Value": 20000
+                }
+            }, {
+                "@type": "InsuranceClaim",
+                "Name": "Insurance claim for liability damage",
+                "ClaimID": {
+                    "@type": "ID",
+                    "Value": "PD8734675"
+                },
+                "CauseOf": {
+                    "@type": "ClaimSettlement",
+                    "Amount": {
+                        "@type": "MonetaryAmount",
+                        "Currency": "EUR",
+                        "Value": 10000
+                    }
                 }
             }]
         },

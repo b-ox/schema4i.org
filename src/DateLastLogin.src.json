@@ -1,0 +1,33 @@
+{
+    "type": "DateLastLogin",
+    "uri": "http://schema4i.org/DateLastLogin",
+    "description": "The last date and time when the user logged in to the system. This property is used to track user activity and can be useful for security and analytics purposes.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/UserAccount#DateLastLogin"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "DateLastLogin": {
+                "@id": "s4i:DateLastLogin",
+                "@type": "schema:DateTime"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample DateLastLogin",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "DateLastLogin": "2026-01-15T14:30:00Z"
+        },
+        "context": {}
+    }]
+}

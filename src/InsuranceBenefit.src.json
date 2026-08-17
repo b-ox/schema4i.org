@@ -15,6 +15,10 @@
             { "@id": "http://schema4i.org/QuantitativeValue" },
             { "@id": "http://schema4i.org/MonetaryAmount" }
         ],
+        "MaximumBenefit": [
+            { "@id": "http://schema4i.org/QuantitativeValue" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
+        ],
         "BenefitType": [
             { "@id": "http://schema4i.org/EnumInsuranceBenefitCode" },
             { "@id": "http://schema4i.org/EnumDisabilityBenefitCode" },
@@ -74,7 +78,10 @@
                 "@type": "schema:DateTime"
             },
             "Value": {
-                "@id": "s4i:SumInsured"
+                "@id": "schema:value"
+            },
+            "MaximumBenefit": {
+                "@id": "s4i:MaximumBenefit"
             }
         }
     },

@@ -19,6 +19,7 @@
         { "@id": "http://schema4i.org/TrikeOrQuad" },
         { "@id": "http://schema4i.org/BusOrCoach" },
         { "@id": "http://schema4i.org/BusOrCoach" },
+        { "@id": "http://schema4i.org/Watercraft"},
         { "@id": "http://schema4i.org/Bicycle" }
 
     ],

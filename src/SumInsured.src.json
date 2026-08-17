@@ -3,9 +3,10 @@
     "uri": "http://schema4i.org/SumInsured",
     "description": "A sum insured describes the maximum amount of damage or cost covered by an insurance product. The preferred way is to use the type 'InsuranceBenefit'. In Deprecated Ways this might habe been a `MonetaryAmount` or a textual description of more complex coverage or a predefined Enum.",
     "links": [],
-    "parents": [{
-        "@id": "http://schema4i.org/Coverage#SumInsured"
-    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#SumInsured" },
+        { "@id": "http://schema4i.org/InsuranceProduct" }
+    ],
     "base": [
         { "@id": "http://schema4i.org/Property" }
     ],

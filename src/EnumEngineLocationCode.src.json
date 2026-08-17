@@ -1,0 +1,24 @@
+{
+    "type": "EnumEngineLocationCode",
+    "uri": "http://schema4i.org/EnumEngineLocationCode",
+    "description": "A code for the location of a motor on a Watercraft",
+    "links": [{
+        "url": "http://schema4i.org/EnumEngineLocationCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Watercraft#EngineLocation" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Outboarder": "s4i:EnumEngineLocationCode#01",
+            "Inboarder": "s4i:EnumEngineLocationCode#02"
+        }
+    }
+}

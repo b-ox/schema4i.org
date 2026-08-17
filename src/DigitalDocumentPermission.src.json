@@ -16,6 +16,12 @@
             { "@id": "http://schema4i.org/Organization" },
             { "@id": "http://schema4i.org/UserAccount" },
             { "@id": "http://schema4i.org/Credentials" }
+        ],
+        "Granter": [
+            { "@id": "http://schema4i.org/Person" },
+            { "@id": "http://schema4i.org/Organization" },
+            { "@id": "http://schema4i.org/UserAccount" },
+            { "@id": "http://schema4i.org/Credentials" }
         ]
     },
     "context": {
@@ -35,8 +41,7 @@
                 "@id": "schema:grantee"
             },
             "Granter": {
-                "@id": "s4i:Granter",
-                "@type": "s4i:Granter"
+                "@id": "s4i:Granter"
             }
         }
     },

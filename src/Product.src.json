@@ -54,6 +54,10 @@
             "PriorDamage": {
                 "@id": "s4i:PriorDamage",
                 "@type": "s4i:Damage"
+            },
+            "ProductionDate": {
+                "@id": "schema:productionDate",
+                "@type": "schema:Date"
             }
         }
     },

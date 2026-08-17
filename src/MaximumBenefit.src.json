@@ -1,0 +1,47 @@
+{
+    "type": "MaximumBenefit",
+    "uri": "http://schema4i.org/MaximumBenefit",
+    "description": "A Maximum for an Insurance.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/InsuranceBenefit#MaximumBenefit"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+        "MaximumBenefit": [
+            { "@id": "http://schema4i.org/MonetaryAmount" },
+            { "@id": "http://schema4i.org/InsuranceBenefit" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "MaximumBenefit": {
+                "@id": "s4i:MaximumBenefit"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample MaximumBenefit",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                {
+                    "PaymentInterval": {
+                        "@id": "http://schema4i.org/MaximumBenefit"
+                    }
+                }
+            ],
+            "@type": "MonetaryAmount",
+            "Currency": "EUR",
+            "Value": 10000000,
+            "PaymentInterval": 1
+        },
+        "context": {}
+    }]
+}

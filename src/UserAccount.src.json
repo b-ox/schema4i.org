@@ -52,8 +52,12 @@
                 "@type": "s4i:DigitalDocument"
             },
             "DateLastLogin": {
-                "@id": "schema:dateLastLogin",
+                "@id": "s4i:DateLastLogin",
                 "@type": "schema:DateTime"
+            },
+            "Owns": {
+                "@id": "schema:owns",
+                "@type": "s4i:Thing"
             }
         }
     },
@@ -72,6 +76,7 @@
                 "http://schema4i.org/Order",
                 "http://schema4i.org/CreativeWork",
                 "http://schema4i.org/DigitalDocument",
+                "http://schema4i.org/DigitalDocumentPermission",
                 "http://schema4i.org/Role.jsonld"
             ],
             "@type": "UserAccount",
@@ -122,7 +127,13 @@
                     "AuthenticationMethod": "UNP",
                     "Username": "mmuster@mail.de"
                 }
-            ]
+            ],
+            "DateLastLogin": "2024-01-01T12:00:00Z",
+            "Owns": [{
+                "@type": "DigitalDocumentPermission",
+                "Identifier": "extra-access",
+                "Name": "Zugriff auf zusätzliche Funktionen"
+            }]
         },
         "context": {}
     }]

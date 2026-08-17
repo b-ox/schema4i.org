@@ -44,33 +44,29 @@
                 "http://schema4i.org/Person.jsonld",
                 "http://schema4i.org/QuantitativeValue.jsonld",
                 {
-                    "Owner": {
-                        "@id": "s4i:Owner",
-                        "@type": "s4i:Person"
-                    },
                     "Category": {
                         "@type": "@vocab",
-                        "@vocab": "s4i:EnumMachineCategoryCode#"
+                        "@vocab": "http://schema4i.org/EnumMachineCategoryCode#"
                     }
                 }
             ],
-            "@type": "s4i:Machine",
+            "@type": "Machine",
             "Manufacturer": {
-                "@type": "s4i:Organization"
+                "@type": "Organization"
             },
             "ProductionDate": "2020-07-16",
             "Category": "1480",
             "Location": {
-                "@type": "s4i:PostalAddress"
+                "@type": "PostalAddress"
             },
             "Yield": {
                 "@context": {
                     "UnitCode": {
                         "@type": "@vocab",
-                        "@vocab":"s4i:EnumValueUnitCode#"
+                        "@vocab": "http://schema4i.org/EnumValueUnitCode#"
                     }
                 },
-                "@type": "s4i:QuantitativeValue",
+                "@type": "QuantitativeValue",
                 "Value": 1000,
                 "UnitCode": "70"
             }

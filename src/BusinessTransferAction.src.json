@@ -1,7 +1,7 @@
 {
     "type": "BusinessTransferAction",
     "uri": "http://schema4i.org/BusinessTransferAction",
-    "description": "An Action to transfer some form of business transaction. It is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.",
+    "description": "An Action to transfer some form of business transaction. It is usually triggered by a party involved in an insurance contract and represents an action that affects the insurance contract itself or third parties involved. This can e.g. deal with information about a claim, termination or change to the contract.\n\n The 'Delivery' property has been superseded by the 'InboundDelivery' property.",
     "links": [],
     "parents": [
         { "@id": "http://schema4i.org/MoneyTransferAction" }
@@ -30,13 +30,21 @@
             },
             "Copy": {
                 "@id": "s4i:Copy",
-                "@type": "s4i:Copy"
+                "@type": "schema:Boolean"
             },
             "DateCreated": {
                 "@id": "schema:dateCreated",
                 "@type": "schema:DateTime"
             },
             "Delivery": {
+                "@id": "s4i:BusinessTransactionDelivery",
+                "@type": "s4i:BusinessTransactionDelivery"
+            },
+            "InboundDelivery": {
+                "@id": "s4i:BusinessTransactionDelivery",
+                "@type": "s4i:BusinessTransactionDelivery"
+            },
+            "OutboundDelivery": {
                 "@id": "s4i:BusinessTransactionDelivery",
                 "@type": "s4i:BusinessTransactionDelivery"
             },
@@ -145,7 +153,7 @@
             "Category": "030",
             "Name": "Markus Heussen, Lindenstr. 48-52, 40233 Düsseldorf",
             "Description": "Policierung / Dokument erstellt",
-            "Delivery": {
+            "InboundDelivery": {
                 "@type": "BusinessTransactionDelivery",
                 "HasDeliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
                 "Provider": {

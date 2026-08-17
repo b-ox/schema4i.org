@@ -1,0 +1,51 @@
+{
+    "type": "SailSurfaceArea",
+    "uri": "http://schema4i.org/SailSurfaceArea",
+    "description": "The SailSurfaceArea of a Watercraft in meters squared",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Watercraft#SailSurfaceArea" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "SailSurfaceArea": {
+                "@id": "s4i:SailSurfaceArea",
+                "@type": "s4i:QuantitativeValue"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A realistic Watercraft",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/SailSurfaceArea.jsonld",
+                "http://schema4i.org/Watercraft.jsonld"
+            ],
+            "@type": "Watercraft",
+            "SailSurfaceArea": {
+                "@context": {
+                    "UnitCode": {
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumValueUnitCode#"
+                        }
+                    }
+                },
+                "@type": "QuantitativeValue",
+                "Value": 100,
+                "UnitCode": "sqm"
+            }
+
+
+        },
+        "context": {}
+    }]
+}

@@ -30,8 +30,8 @@
                 "@type": "schema:Date"
             },
             "Commitment": {
-                 "@id": "s4i:CommitmentAction",
-                "@type": "s4i:Commitment"
+                 "@id": "s4i:Commitment",
+                "@type": "s4i:CommitmentAction"
             },
             "PensionSecurityFundObligatory": {
                 "@id": "s4i:PensionSecurityFundObligatory",

@@ -1,0 +1,85 @@
+{
+    "type": "Watercraft",
+    "uri": "http://schema4i.org/Watercraft",
+    "description": "A Watercraft is a vehicle traveling through water for purposes of transportation, recreation, and exercise.",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Vehicle" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Watercraft": "s4i:Watercraft",
+            "Category": {
+                "@id": "s4i:Category",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumWatercraftCategoryCode"
+                }
+            },
+            "SailSurfaceArea": {
+                "@id": "s4i:SailSurfaceArea",
+                "@type": "s4i:QuantitativeValue"
+            },
+            "EngineSpecification": {
+                "@id": "s4i:EngineSpecification",
+                "@type": "s4i:EngineSpecification"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximal Watercraft",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Watercraft",
+                "http://schema4i.org/Vehicle"
+            ],
+            "@type": "Watercraft",
+            "Description": "Gazelle Classic R7T Wave 2022",
+            "SailSurfaceArea": {
+                "@context": {
+                    "UnitCode": {
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "http:schema4i.org/EnumValueUnitCode#"
+                        }
+                    }
+                },
+                "@type": "QuantitativeValue",
+                "Value": 100,
+                "UnitCode": "sqm"
+            },
+            "EngineSpecification": {
+                "@context": [
+                    "http://schema4i.org/EngineLocation.jsonld",
+                    {
+                        "EngineLocation": {
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumEngineLocationCode#"
+                            }
+                        }
+                    }
+                ],
+                "EngineLocation": "01",
+                "EnginePower": {
+                    "@context": {
+                        "UnitCode": {
+                            "@type": "@vocab",
+                            "@vocab": "http://schema4i.org/EnumValueUnitCode#"
+                        }
+                    },
+                    "@type": "QuantitativeValue",
+                    "Value": 1000,
+                    "UnitCode": "70"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,67 @@
+{
+    "type": "EngineSpecification",
+    "uri": "http://schema4i.org/EngineSpecification",
+    "description": "A collection of properties that describe the engine specifications of a vehicle",
+    "links": [{
+        "url": "http://schema.org/EngineSpecification",
+        "description": "Original Schema.org type"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/Watercraft#EngineSpecification" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/StructuredValue" }
+    ],
+    "multipletypes": [],
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "EngineSpecification": "schema:EngineSpecification",
+            "EnginePower": {
+                "@id": "schema:EnginePower",
+                "@type": "s4i:QuantitativeValue"
+            },
+            "EngineLocation": {
+                "@id": "s4i:EngineLocation",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumEngineLocationCode"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum EngineSpecification",
+        "tab": "tab-expanded",
+        "input": {
+            "EngineSpecification": {
+                "@context": [
+                    "http://schema4i.org/EngineLocation.jsonld",
+                    {
+                        "EngineLocation": {
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumEngineLocationCode#"
+                            }
+                        }
+                    }
+                ],
+                "EngineLocation": "01",
+                "EnginePower": {
+                    "@context": {
+                        "UnitCode": {
+                            "@type": "@vocab",
+                            "@vocab": "http://schema4i.org/EnumValueUnitCode#"
+                        }
+                    },
+                    "@type": "QuantitativeValue",
+                    "Value": 1000,
+                    "UnitCode": "70"
+                }
+            }
+        },
+        "context": {}
+    }]
+}

@@ -1,6 +1,6 @@
 {
     "type": "EnumVehicleOwnershipCode",
-    "uri": "http://schema4i.org/EnumVehicleOwnershipCode_DE",
+    "uri": "http://schema4i.org/EnumVehicleOwnershipCode",
     "description": "One-digit code for the legal role of ownership.",
     "links": [{
         "url": "http://schema4i.org/EnumVehicleOwnershipCode_DE",
