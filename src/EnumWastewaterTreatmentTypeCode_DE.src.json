@@ -1,0 +1,31 @@
+{
+    "type": "EnumWastewaterTreatmentTypeCode_DE",
+    "uri": "http://schema4i.org/EnumWastewaterTreatmentTypeCode_DE",
+    "description": "Zweistelliger Identifikationscode für die Art der Abwasserbehandlung",
+    "links": [ 
+        {
+            "url": "http://schema4i.org/EnumWastewaterTreatmentTypeCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/EnvironmentalRiskFactor#WastewaterTreatmentType#"}
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Direkteinleitung (Gewässer)": "s4i:EnumWastewaterTreatmentTypeCode#01",
+            "Indirekteinleitung (Kanalisation)": "s4i:EnumWastewaterTreatmentTypeCode#02",
+            "Vorfluter": "s4i:EnumWastewaterTreatmentTypeCode#03",
+            "Versickerung": "s4i:EnumWastewaterTreatmentTypeCode#04",
+            "Kläranlage": "s4i:EnumWastewaterTreatmentTypeCode#05",
+            "Emulsionsabscheider": "s4i:EnumWastewaterTreatmentTypeCode#06",
+            "Neutralisationsanlage": "s4i:EnumWastewaterTreatmentTypeCode#07"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "type": "EnvironmentalRiskFactor",
+    "uri": "http://schema4i.org/EnvironmentalRiskFactor",
+    "description": "Risk Factors for the Environment in specific Location.",
+    "links": [],
+    "parents": [],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Thing"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Location": "s4i:PostalAddress",
+            "WastewaterTreatmentType": {
+                "@id": "s4i:WastewaterTreatmentType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumWastewaterTreatmentTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "A simple EnvironmentalRiskFactor",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/PostalAddress.jsonld",
+                    {
+                        "WastewaterTreatmentType": {
+                            "@id": "s4i:WastewaterTreatmentType",
+                            "@type": "@vocab",
+                            "@context": {
+                                "@vocab": "s4i:EnumWastewaterTreatmentTypeCode#"
+                            }
+                        }
+                    }
+                ],
+                "Location": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Musterstrasse 1",
+                    "PostalCode": "12345",
+                    "AddressLocality": "Musterstadt",
+                    "AddressRegion": "Musterland"
+                },
+                "WastewaterTreatmentType": "01"
+            }
+        }
+    ]
+}   

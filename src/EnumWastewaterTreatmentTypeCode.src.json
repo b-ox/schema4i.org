@@ -1,0 +1,31 @@
+{
+    "type": "EnumWastewaterTreatmentTypeCode",
+    "uri": "http://schema4i.org/EnumWastewaterTreatmentTypeCode",
+    "description": "Two-digit identification code for the type of wastewater treatment",
+    "links": [ 
+        {
+            "url": "http://schema4i.org/EnumWastewaterTreatmentTypeCode_DE",
+            "description": "German documentation of key values"
+        }
+    ],
+    "parents": [
+        { "@id": "http://schema4i.org/EnvironmentalRiskFactor#WastewaterTreatmentType#"}
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Direct Discharge (Water Body)": "s4i:EnumWastewaterTreatmentTypeCode#01",
+            "Indirect Discharge (Sewer System)": "s4i:EnumWastewaterTreatmentTypeCode#02",
+            "Receiving Water Body": "s4i:EnumWastewaterTreatmentTypeCode#03",
+            "Seepage / Infiltration": "s4i:EnumWastewaterTreatmentTypeCode#04",
+            "Wastewater Treatment Plant": "s4i:EnumWastewaterTreatmentTypeCode#05",
+            "Emulsion Separator": "s4i:EnumWastewaterTreatmentTypeCode#06",
+            "Neutralization Plant": "s4i:EnumWastewaterTreatmentTypeCode#07"
+        }
+    }
+}
