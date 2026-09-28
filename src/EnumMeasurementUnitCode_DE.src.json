@@ -8,7 +8,7 @@
         }
     ],
     "parents": [
-        { "@id": "http://schema4i.org/QuantitativeValü#UnitCode" }
+        { "@id": "http://schema4i.org/QuantitativeValue#UnitCode" }
     ],
     "base": [
         { "@id": "http://schema4i.org/Enumeration" }
