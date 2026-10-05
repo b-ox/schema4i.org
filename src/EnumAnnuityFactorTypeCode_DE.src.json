@@ -1,0 +1,25 @@
+{
+    "type": "EnumAnnuityFactorTypeCode_DE",
+    "uri": "http://schema4i.org/EnumBeneficialOwnershipTypeCode_DE",
+    "description": "Ein Code der die die Art des Rentenfaktors beschreibt",
+    "links": [{
+        "url": "http://schema4i.org/EnumAnnuityFactorTypeCode",
+        "description": "Englische Dokumentation der Schlüsselwerte"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/LifeInsuranceBenefit#AnnuityFactorType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Vollständig garantierter Rentenfaktor": "s4i:EnumAnnuityFactorTypeCode#01",
+            "Nicht garantierter Rentenfaktor": "s4i:EnumAnnuityFactorTypeCode#02",
+            "Teilweise garantierter Rentenfaktor": "s4i:EnumAnnuityFactorTypeCode#03"
+        }
+    }
+}

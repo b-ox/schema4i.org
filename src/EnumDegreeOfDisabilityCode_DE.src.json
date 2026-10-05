@@ -17,15 +17,15 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Pflegestufe 0 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode00",
-            "Pflegestufe 1 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode01",
-            "Pflegestufe 2 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode02",
-            "Pflegestufe 3 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode03",
-            "Pflegegrad 1": "s4i:EnumDegreeOfDisabilityCode11",
-            "Pflegegrad 2": "s4i:EnumDegreeOfDisabilityCode12",
-            "Pflegegrad 3": "s4i:EnumDegreeOfDisabilityCode13",
-            "Pflegegrad 4": "s4i:EnumDegreeOfDisabilityCode14",
-            "Pflegegrad 5": "s4i:EnumDegreeOfDisabilityCode15"
+            "Pflegestufe 0 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode#00",
+            "Pflegestufe 1 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode#01",
+            "Pflegestufe 2 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode#02",
+            "Pflegestufe 3 (vor 1.1.2017)": "s4i:EnumDegreeOfDisabilityCode#03",
+            "Pflegegrad 1": "s4i:EnumDegreeOfDisabilityCode#11",
+            "Pflegegrad 2": "s4i:EnumDegreeOfDisabilityCode#12",
+            "Pflegegrad 3": "s4i:EnumDegreeOfDisabilityCode#13",
+            "Pflegegrad 4": "s4i:EnumDegreeOfDisabilityCode#14",
+            "Pflegegrad 5": "s4i:EnumDegreeOfDisabilityCode#15"
         }
     }
 }

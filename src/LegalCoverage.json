@@ -26,7 +26,7 @@
                 "http://schema4i.org/Coverage.jsonld",
                 "http://schema4i.org/LegalCoverage.jsonld",
                 "http://schema4i.org/Risk.jsonld",
-                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/LegalInsuranceBenefit.jsonld",
                 "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
 
                 {
@@ -48,7 +48,7 @@
                             "@type": "s4i:QuantitativeValue"
                         }
                     },
-                    "@type": "InsuranceBenefit"
+                    "@type": "LegelInsuranceBenefit"
                 }
             ],
             "Covers": {

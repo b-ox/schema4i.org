@@ -1,0 +1,86 @@
+{
+    "type": "LegalInsuranceBenefit",
+    "uri": "http://schema4i.org/LegalInsuranceBenefit",
+    "description": "This type can be used to represent sums or benefits of a legal insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#SumInsured" },
+        { "@id": "http://schema4i.org/InsuranceProduct#SumInsured" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceBenefit" }
+    ],
+    "multipletypes": { 
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LegalInsuranceBenefit": "schema:InsuranceBenefit"
+        }
+    },
+    "playground": [{
+        "title": "A sample LegalInsuranceBenefit",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/None.jsonld",
+                "http://schema4i.org/LegalInsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumLegalInsuranceBenefitCode.jsonld",
+                 "http://schema4i.org/EnumIntervalCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    },
+                    "MaxValue": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/None"
+                    },
+                    "BenefitType": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumLegalInsuranceBenefitCode"
+                        }
+                    }
+                }
+            ],
+            "@type": "LegalInsuranceBenefit",
+            "BenefitType": "08",
+            "ValidFrom": "2026-01-01",
+              "Value": {
+                "@context": {
+                "UnitCode": {
+                    "@id": "http://schema.org/unitCode",
+                    "@type": "http://schema.org/Text"
+                }
+                },
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "UnitCode": "M1",
+                "Value": 500000,
+                "MaxValue": {
+                    "@type": "None"
+                }
+            },
+            "MaximumBenefit": {
+                "@context": {
+                "PaymentInterval": {
+                    "@type": "@vocab",
+                    "@context": {
+                    "@vocab": "http://schema4i.org/EnumIntervalCode#"
+                    }
+                }
+                },
+                "@type": "MonetaryAmount",
+                "Value": 1500000,
+                "Currency": "EUR",
+                "PaymentInterval": 1
+            }
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,106 @@
+{
+    "type": "LifeInsuranceBenefit",
+    "uri": "http://schema4i.org/LifeInsuranceBenefit",
+    "description": "This type can be used to represent sums or benefits of a life insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Coverage#SumInsured" },
+        { "@id": "http://schema4i.org/LifeInsuranceProduct#SumInsured" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceBenefit" }
+    ],
+    "multipletypes": { },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+             "LifeInsuranceBenefit": "schema:InsuranceBenefit",
+            "GuaranteeType": {
+                "@id": "s4i:GuaranteeType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumGuaranteeTypeCode"
+                }
+            },
+            "HasBeneficialOwnership": {
+                "@id": "s4i:BeneficialOwnership",
+                "@type": "s4i:BeneficialOwnership"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample LifeInsuranceBenefit",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/LifeInsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumLifeInsuranceBenefitCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    },
+                    "BenefitType": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumLifeInsuranceBenefitCode"
+                        }
+                    },
+                    "HasBeneficialOwnership": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumBeneficialOwnershipTypeCode"
+                        }
+                    }
+                }
+            ],
+            "@type": "LifeInsuranceBenefit",
+            "AnnuityFactor": {
+                "@context": [
+                    "http://schema4i.org/Thing.jsonld",
+                    "http://schema4i.org/AnnuityFactor.jsonld",
+                    "http://schema4i.org/MonetaryAmount.jsonld",
+                    "http://schema4i.org/BettermentClause.jsonld",
+                    "http://schema4i.org/Waiver163VVG.jsonld",
+                    "http://schema4i.org/EnumInsuranceBenefitCode.jsonld",
+                    "http://schema4i.org/GuaranteeType.jsonld",
+                    "http://schema4i.org/BeneficialOwnership.jsonld",
+                    {
+                        "Value": {
+                            "@id": "http://schema4i.org/SumInsured",
+                            "@type": "http://schema4i.org/QuantitativeValue"
+                        }
+                    }
+                ],
+                "@type": "AnnuityFactor",
+                "AnnuityFactorType": "01",
+                "BettermentClause": false,
+                "Description": "Beschreibung weiterer Regelungen zum Rentenfaktor, die sich über die Attribute nicht abbilden lassen",
+                "Value": {
+                    "@type": "QuantitativeValue",
+                    "UnitText": "Höhe der monatlichen Rente pro 10.000 Währungseinheiten Vertragsguthaben",
+                    "Value": 0.42
+                },
+                "Waiver163VVG": true
+            },
+            "BenefitType": "11",
+            "BettermentClause": true,
+            "GuaranteeType": "1",
+            "HasBeneficialOwnership": {
+                 "@type": "BeneficialOwnership",
+                    "Type": "A"
+            },
+            "ValidFrom": "2026-01-01",
+            "Value": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 10.00
+            }
+        },
+        "context": {}
+    }]
+}

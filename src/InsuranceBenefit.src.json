@@ -37,39 +37,13 @@
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
             "InsuranceBenefit": "schema:InsuranceBenefit",
-            "BaseYear": {
-                "@id": "s4i:BaseYear",
-                "@type": "schema:Number"
-            },
             "BenefitType": {
                 "@id": "s4i:BenefitType"
             },
-            "DamageType": {
-                "@id": "s4i:DamageType",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumDamageCategoryCode"
-                }
+            "MaximumBenefit": {
+                "@id": "s4i:MaximumBenefit"
             },
-            "DegreeOfDisability": {
-                "@id": "s4i:DegreeOfDisability",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumDegreeOfDisabilityCode"
-                }
-            },
-            "PriceIndex": {
-                "@id": "s4i:PriceIndex", 
-                "@type": "schema:Number"
-            },
-            "TreatmentType": {
-                "@id": "s4i:TreatmentType",
-                "@type": "@vocab",
-                "@context": {
-                    "@vocab": "s4i:EnumTreatmentTypeCode#"
-                }
-            },
-             "ValidFrom": {
+               "ValidFrom": {
                 "@id": "schema:validFrom",
                 "@type": "schema:DateTime"
             },
@@ -80,8 +54,9 @@
             "Value": {
                 "@id": "schema:value"
             },
-            "MaximumBenefit": {
-                "@id": "s4i:MaximumBenefit"
+            "VATincluded": {
+                "@id": "s4i:VATincluded",
+                "@type": "schema:Boolean"
             }
         }
     },
@@ -109,6 +84,7 @@
             ],
             "@type": "InsuranceBenefit",
             "BenefitType": "GesamteTodesfallleistung",
+            "VATincluded": false,
             "Value": {
                 "@type": "MonetaryAmount",
                 "Currency": "EUR",

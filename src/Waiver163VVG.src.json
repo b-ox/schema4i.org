@@ -1,0 +1,33 @@
+{
+    "type": "Waiver163VVG",
+    "uri": "http://schema4i.org/Waiver163VVG",
+    "description": "Indicates whether the trustee clause pursuant to Section 163 VVG is waived for the guaranteed annuity factor.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/LifeInsuranceBenefit#Waiver163VVG"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Waiver163VVG": {
+                "@id": "s4i:Waiver163VVG",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Waiver163VVG",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "Waiver163VVG": true
+        },
+        "context": {}
+    }]
+}
