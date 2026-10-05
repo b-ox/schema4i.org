@@ -1,0 +1,33 @@
+{
+    "type": "BettermentClause",
+    "uri": "http://schema4i.org/BettermentClause",
+    "description": "Indicates whether more favorable actuarial bases result in a higher benefit for the customer.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/LifeInsuranceBenefit#BettermentClause"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BettermentClause": {
+                "@id": "s4i:BettermentClause",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BettermentClause",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "BettermentClause": true
+        },
+        "context": {}
+    }]
+}

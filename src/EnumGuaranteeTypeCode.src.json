@@ -1,0 +1,33 @@
+{
+    "type": "EnumGuaranteeTypeCode",
+    "uri": "http://schema4i.org/EnumGuaranteeTypeCode",
+    "description": "A code that describes the type of guarantee and the scope of the benefits.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumGuaranteeTypeCode_DE",
+            "description": "German documentation of keys and values"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/LifeInsuranceBenefit#GuaranteeType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Guaranteed benefits without future or already accrued surplus participation and without valuation reserves": "s4i:EnumGuaranteeTypeCode#1",
+            "Guaranteed benefits without future surplus participation, but including already accrued surplus shares and without valuation reserves": "s4i:EnumGuaranteeTypeCode#2",
+            "Total benefits including already accrued and expected future surplus shares and without valuation reserves": "s4i:EnumGuaranteeTypeCode#3",
+            "Total benefits including already accrued and expected future surplus shares, including minimum valuation reserves": "s4i:EnumGuaranteeTypeCode#4",
+            "Total benefits including already accrued and expected future surplus shares, including total valuation reserves": "s4i:EnumGuaranteeTypeCode#5"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "EnumAnnuityFactorTypeCode",
+    "uri": "http://schema4i.org/EnumAnnuityFactorTypeCode",
+    "description": "A code that describes the type of annuity factor.",
+    "links": [{
+        "url": "http://schema4i.org/EnumAnnuityFactorTypeCode_DE",
+        "description": "Original German documentation"
+    }],
+    "parents": [
+        { "@id": "http://schema4i.org/LifeInsuranceBenefit#AnnuityFactorType" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "FullyGuaranteedAnnuityFactor": "s4i:EnumAnnuityFactorTypeCode#01",
+            "NonGuaranteedAnnuityFactor": "s4i:EnumAnnuityFactorTypeCode#02",
+            "PartiallyGuaranteedAnnuityFactor": "s4i:EnumAnnuityFactorTypeCode#03"
+        }
+    }
+}

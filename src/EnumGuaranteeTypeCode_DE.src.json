@@ -1,0 +1,33 @@
+{
+    "type": "EnumGuaranteeTypeCode_DE",
+    "uri": "http://schema4i.org/EnumGuaranteeTypeCode_DE",
+    "description": "Ein Code, der die Art der Garantie anhand der berücksichtigten garantierten Leistungen beschreibt.",
+    "links": [
+        {
+            "url": "http://schema4i.org/EnumGuaranteeTypeCode",
+            "description": "Englische Dokumentation der Schlüsselwerte"
+        }
+    ],
+    "parents": [
+        {
+            "@id": "http://schema4i.org/LifeInsuranceBenefit#GuaranteeType"
+        }
+    ],
+    "base": [
+        {
+            "@id": "http://schema4i.org/Enumeration"
+        }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Garantierte Leistungen ohne zukünftige und ohne bereits verdiente Überschussbeteiligungen und ohne Bewertungsreserven": "s4i:EnumGuaranteeTypeCode#1",
+            "Garantierte Leistungen ohne zukünftige Überschussbeteiligungen, aber inklusive bereits verdienter Überschussanteile und ohne Bewertungsreserven": "s4i:EnumGuaranteeTypeCode#2",
+            "Gesamte Leistungen inklusive bereits verdienter und noch zu erwartender Überschussanteile und ohne Bewertungsreserven": "s4i:EnumGuaranteeTypeCode#3",
+            "Gesamte Leistungen inklusive bereits verdienter und noch zu erwartender Überschussanteile inklusive Mindestbewertungsreserven": "s4i:EnumGuaranteeTypeCode#4",
+            "Gesamte Leistungen inklusive bereits verdienter und noch zu erwartender Überschussanteile inklusive gesamter Bewertungsreserven": "s4i:EnumGuaranteeTypeCode#5"
+        }
+    }
+}
