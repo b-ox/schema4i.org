@@ -1,0 +1,44 @@
+{
+    "type": "LegalInsuranceProduct",
+    "uri": "http://schema4i.org/LegalInsuranceProduct",
+    "description": "A legal expense insurance product for persons or organizations",
+    "links": [],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceProduct" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "LegalInsuranceProduct": "s4i:LegalInsuranceProduct",
+            "VersionDate": {
+                "@id": "s4i:VersionDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A real LegalInsuranceProduct",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/LegalInsuranceProduct.jsonld",
+                "http://schema4i.org/FinancialProduct.jsonld",
+                "http://schema4i.org/InsuranceProduct.jsonld",
+                "http://schema4i.org/Service.jsonld",
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Offer.jsonld",
+                "http://schema4i.org/Coverage.jsonld"
+            ],
+            "@type": "LegalInsuranceProduct",
+            "Offers": [{
+                "@type": "LegalCoverage",
+                "VersionDate": "2018-01-01"
+            }]
+        },
+        "context": {}
+    }]
+}
