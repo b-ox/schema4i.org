@@ -31,12 +31,10 @@
                 "http://schema4i.org/Service.jsonld",
                 "http://schema4i.org/Thing.jsonld",
                 "http://schema4i.org/Offer.jsonld",
-                "http://schema4i.org/Coverage.jsonld",
-                "http://schema4i.org/HealthCoverage.jsonld",
-                "http://schema4i.org/HealthInsuranceType.jsonld"
+                "http://schema4i.org/Coverage.jsonld"
             ],
             "@type": "LegalInsuranceProduct",
-            "HealthInsuranceType": "1",
+            "VersionDate": "2018-01-01",
             "Offers": [{
                 "@type": "LegalCoverage"
             }]
