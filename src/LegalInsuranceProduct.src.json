@@ -34,9 +34,9 @@
                 "http://schema4i.org/Coverage.jsonld"
             ],
             "@type": "LegalInsuranceProduct",
+            "VersionDate": "2018-01-01",
             "Offers": [{
-                "@type": "LegalCoverage",
-                "VersionDate": "2018-01-01"
+                "@type": "LegalCoverage"
             }]
         },
         "context": {}
