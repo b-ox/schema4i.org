@@ -17,15 +17,15 @@
         "@context": {
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
-            "Degree 0 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode00",
-            "Degree 1 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode01",
-            "Degree 2 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode02",
-            "Degree 3 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode03",
-            "Degree 1": "s4i:EnumDegreeOfDisabilityCode11",
-            "Degree 2": "s4i:EnumDegreeOfDisabilityCode12",
-            "Degree 3": "s4i:EnumDegreeOfDisabilityCode13",
-            "Degree 4": "s4i:EnumDegreeOfDisabilityCode14",
-            "Degree 5": "s4i:EnumDegreeOfDisabilityCode15"
+            "Degree 0 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode#00",
+            "Degree 1 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode#01",
+            "Degree 2 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode#02",
+            "Degree 3 (before 2017.01.01)": "s4i:EnumDegreeOfDisabilityCode#03",
+            "Degree 1": "s4i:EnumDegreeOfDisabilityCode#11",
+            "Degree 2": "s4i:EnumDegreeOfDisabilityCode#12",
+            "Degree 3": "s4i:EnumDegreeOfDisabilityCode#13",
+            "Degree 4": "s4i:EnumDegreeOfDisabilityCode#14",
+            "Degree 5": "s4i:EnumDegreeOfDisabilityCode#15"
         }
     }
 }

@@ -1,0 +1,76 @@
+{
+    "type": "HealthInsuranceBenefit",
+    "uri": "http://schema4i.org/HealthInsuranceBenefit",
+    "description": "This type can be used to represent sums or benefits of a health insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/HealthCoverage#SumInsured" },
+        { "@id": "http://schema4i.org/HealthInsuranceProduct#SumInsured" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/InsuranceBenefit" }
+    ],
+    "multipletypes": {
+        "BenefitType": [
+            { "@id": "http://schema4i.org/EnumHealthInsuranceBenefitCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HealthInsuranceBenefit": "schema:InsuranceBenefit",
+            "DegreeOfDisability": {
+                "@id": "s4i:DegreeOfDisability",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumDegreeOfDisabilityCode"
+                }
+            },
+            "TreatmentType": {
+                "@id": "s4i:TreatmentType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumTreatmentTypeCode#"
+                }
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample HealthInsuranceBenefit",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/HealthInsuranceBenefit.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/EnumHealthInsuranceBenefitCode.jsonld",
+                "http://schema4i.org/EnumDegreeOfDisabilityCode.jsonld",
+                "http://schema4i.org/EnumTreatmentTypeCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/MonetaryAmount"
+                    },
+                    "BenefitType": {
+                        "@id": "http://schema4i.org/BenefitType",
+                        "@context": {
+                            "@vocab": "http://schema4i.org/EnumHealthInsuranceBenefitCode"
+                        }
+                    }
+                }
+            ],
+            "@type": "HealthInsuranceBenefit",
+            "BenefitType": "07",
+            "TreatmentType": "1",
+            "DegreeOfDisability": ["02", "12"],
+            "Value": {
+                "@type": "MonetaryAmount",
+                "Currency": "EUR",
+                "Value": 10.00
+            }
+        },
+        "context": {}
+    }]
+}

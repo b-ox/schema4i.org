@@ -1,0 +1,75 @@
+{
+    "type": "AnnuityFactor",
+    "uri": "http://schema4i.org/AnnuityFactor",
+    "description": "A factor used to determine a benefit.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/LifeInsuranceBenefit#HasAnnuityFactor" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {
+        "Value": [
+            { "@id": "http://schema4i.org/QuantitativeValue" },
+            { "@id": "http://schema4i.org/MonetaryAmount" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "AnnuityFactor": "s4i:AnnuityFactor",
+            "AnnuityFactorType": {
+                "@id": "http://schema4i.org/AnnuityFactorType",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "http://schema4i.org/EnumAnnuityFactorTypeCode"
+                }
+            },
+            "BettermentClause": {
+                "@id": "s4i:BettermentClause",
+                "@type": "schema:Boolean"
+            },
+            "Value": {
+                "@id": "schema:value"
+            },
+             "Waiver163VVG": {
+                "@id": "s4i:Waiver163VVG",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Rentfaktor as AnnuityFactor",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/AnnuityFactor.jsonld",
+                "http://schema4i.org/QuantitativeValue.jsonld",
+                "http://schema4i.org/BettermentClause.jsonld",
+                "http://schema4i.org/Waiver163VVG.jsonld",
+                "http://schema4i.org/EnumAnnuityFactorTypeCode.jsonld",
+                {
+                    "Value": {
+                        "@id": "http://schema4i.org/SumInsured",
+                        "@type": "http://schema4i.org/QuantitativeValue"
+                    }
+                }
+            ],
+            "@type": "AnnuityFactor",
+            "AnnuityFactorType": "01",
+            "BettermentClause": false,
+            "Description": "Beschreibung weiterer Regelungen zum Rentenfaktor, die sich über die Attribute nicht abbilden lassen.",
+            "Value": {
+                "@type": "QuantitativeValue",
+                "UnitText": "Höhe der monatlichen Rente pro 10.000 Währungseinheiten Vertragsguthaben",
+                "Value": 0.42
+            },
+            "Waiver163VVG": true
+        },
+        "context": {}
+    }]
+}

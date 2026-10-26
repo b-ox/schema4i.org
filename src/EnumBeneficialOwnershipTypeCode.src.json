@@ -29,7 +29,8 @@
             "Life partner": "s4i:EnumBeneficialOwnershipTypeCode#10",
             "Children": "s4i:EnumBeneficialOwnershipTypeCode#11",
             "§32 EStG (narrow definition of survivors according to BMF letter dated 31.03.10)": "s4i:EnumBeneficialOwnershipTypeCode#12",
-            "Beneficiaries according to § 3.63 EStG": "s4i:EnumBeneficialOwnershipTypeCode#13"
+            "Beneficiaries according to § 3.63 EStG": "s4i:EnumBeneficialOwnershipTypeCode#13",
+            "Grandchild": "s4i:EnumBeneficialOwnershipTypeCode#A"
         }
     }
 }

@@ -29,7 +29,8 @@
             "Lebensgefährte": "s4i:EnumBeneficialOwnershipTypeCode#10",
             "Kinder": "s4i:EnumBeneficialOwnershipTypeCode#11",
             "§32 EStG (enger Hinterbliebenenbegriff gemäß BMF-Schreiben 31.03.10)": "s4i:EnumBeneficialOwnershipTypeCode#12",
-            "Begünstigter Personenkreis gemäß § 3.63 EStG": "s4i:EnumBeneficialOwnershipTypeCode#13"
+            "Begünstigter Personenkreis gemäß § 3.63 EStG": "s4i:EnumBeneficialOwnershipTypeCode#13",
+            "Enkel": "s4i:EnumBeneficialOwnershipTypeCode#A"
         }
     }
 }

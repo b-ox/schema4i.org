@@ -1,0 +1,33 @@
+{
+    "type": "VATincluded",
+    "uri": "http://schema4i.org/VATincluded",
+    "description": "Indicates whether the value added tax is included.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/LifeInsuranceBenefit#VATincluded"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "VATincluded": {
+                "@id": "s4i:VATincluded",
+                "@type": "schema:Boolean"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample VATincluded",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "VATincluded": true
+        },
+        "context": {}
+    }]
+}
