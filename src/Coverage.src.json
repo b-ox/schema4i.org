@@ -94,6 +94,10 @@
             "License": {
                 "@id": "s4i:License",
                 "@type": "s4i:CreativeWork"
+            },
+            "CalculationBasedOn": {
+                "@id": "s4i:CalculationBasedOn",
+                "@type": "s4i:Thing"
             }
         }
     },
@@ -203,12 +207,17 @@
                     }
                 ],
                 "@type": "InsuranceBenefit",
+                "@id": "#Versicherungssumme",
                 "BenefitType": "DeckungssummeVermoegensschaden",
                 "Value": {
                     "@type": "MonetaryAmount",
                     "Currency": "EUR",
                     "Value": 32323.23
                 }
+            },
+            "CalculationBasedOn": {
+                "@type": "InsuranceBenefit",
+                "@id": "#Versicherungssumme"
             },
             "AffectedBy": [{
                 "@type": "Question",

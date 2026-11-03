@@ -1,0 +1,93 @@
+{
+    "type": "CalculationBasedOn",
+    "uri": "http://schema4i.org/CalculationBasedOn",
+    "description": "When calculating an insurance product with variable insurance sums, it is possible to base the calculation on either the desired premium or the desired benefits and then derive the other accordingly. This property determines which property serves as the basis for the calculation. The included object is usually an `InsuranceBenefit` or a `PriceSpecification`.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/InsuranceProduct#CalculationBasedOn"
+    }, {
+        "@id": "http://schema4i.org/Coverage#CalculationBasedOn"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Copy": {
+                "@id": "s4i:CalculationBasedOn",
+                "@type": "schema:Thing"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A sample coverage where the premium was calculated based on the desired benefits",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld"
+            ],
+            "@type": "Coverage",
+            "SumInsured": {
+                "@type": "InsuranceBenefit",
+                "@id": "#Versicherungssumme",
+                "BenefitType": "DeckungssummeVermoegensschaden",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 10000.00
+                }
+            },
+            "PriceComponent": {
+                "@type": "PriceSpecification",
+                "Price": 123.45,
+                "PriceCurrency": "EUR"
+            },
+            "CalculationBasedOn": {
+                "@type": "InsuranceBenefit",
+                "@id": "#Versicherungssumme"
+            }
+        },
+        "context": {}
+    }, {
+        "title": "A sample coverage where the sum insured was calculated based on the desired premium",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Coverage.jsonld",
+                "http://schema4i.org/MonetaryAmount.jsonld",
+                "http://schema4i.org/InsuranceBenefit.jsonld",
+                "http://schema4i.org/PriceSpecification.jsonld"
+            ],
+            "@type": "Coverage",
+            "SumInsured": {
+                "@type": "InsuranceBenefit",
+                "BenefitType": "DeckungssummeVermoegensschaden",
+                "Value": {
+                    "@type": "MonetaryAmount",
+                    "Currency": "EUR",
+                    "Value": 8978.50
+                }
+            },
+            "PriceComponent": {
+                "@type": "PriceSpecification",
+                "@id": "#Beitrag",
+                "Price": 100.00,
+                "PriceCurrency": "EUR"
+            },
+            "CalculationBasedOn": {
+                "@type": "PriceSpecification",
+                "@id": "#Beitrag"
+            }
+        },
+        "context": {}
+    }]
+}

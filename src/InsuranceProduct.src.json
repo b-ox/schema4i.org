@@ -96,6 +96,10 @@
             "ValidThrough": {
                 "@id": "schema:validThrough",
                 "@type": "schema:DateTime"
+            },
+            "CalculationBasedOn": {
+                "@id": "s4i:CalculationBasedOn",
+                "@type": "s4i:Thing"
             }
         }
     },
@@ -194,12 +198,17 @@
                     }
                 ],
                 "@type": "InsuranceBenefit",
+                "@id": "#Rente",
                 "BenefitType": "GesamteRente",
                 "Value": {
                     "@type": "MonetaryAmount",
                     "Currency": "EUR",
                     "Value": 3332.00
                 }
+            },
+            "CalculationBasedOn": {
+                "@type": "InsuranceBenefit",
+                "@id": "#Rente"
             },
             "Offers": [{
                 "@type": "Coverage",
