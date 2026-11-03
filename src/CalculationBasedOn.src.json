@@ -19,7 +19,7 @@
             "schema": "http://schema.org/",
             "CalculationBasedOn": {
                 "@id": "s4i:CalculationBasedOn",
-                "@type": "schema:Thing"
+                "@type": "s4i:Thing"
             }
         }
     },
