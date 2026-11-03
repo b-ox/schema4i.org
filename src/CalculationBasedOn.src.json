@@ -17,7 +17,7 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "Copy": {
+            "CalculationBasedOn": {
                 "@id": "s4i:CalculationBasedOn",
                 "@type": "schema:Thing"
             }
