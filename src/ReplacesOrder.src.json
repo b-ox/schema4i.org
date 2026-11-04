@@ -29,7 +29,17 @@
             "@type": "Order",
             "ReplacesOrder": {
                 "@type": "Order",
-                "ConfirmationNumber": "AZ-4711",
+                "ContractID": [
+                    {
+                        "@type": "ID",
+                        "Value": "AZ-4711",
+                        "EncodingFormat": "PrintOptimized",
+                        "Creator": {
+                            "@type": "Role",
+                            "RoleCode": "001"
+                        }
+                    }
+                ],
                 "Provider": {
                     "@type": "Organization",
                     "Identifier": 5312,
