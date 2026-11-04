@@ -169,9 +169,30 @@
             "DateCreated": "2020-08-01T13:00:12",
             "Result": {
                 "@type": "Order",
-                "ConfirmationNumber": [
-                    "4711",
-                    "VSNR 4711 / KFZ"
+                "ContractID": [
+                    {
+                        "@type": "ID",
+                        "Value": "VSNR 4711 / KFZ",
+                        "EncodingFormat": "PrintOptimized",
+                        "Creator": {
+                            "@type": "Role",
+                            "RoleCode": "001"
+                        }
+                    },
+                    {
+                        "@type": "ID",
+                        "Value": "V3.4711 / KFZ",
+                        "EncodingFormat": "PrintOptimized",
+                        "Creator": {
+                            "@type": "Role",
+                            "RoleCode": "004"
+                        },
+                        "ReplacesID": {
+                            "@type": "ID",
+                            "Value": "V2.4711 / KFZ",
+                            "Name": "Veraltete Vertragsnummer"
+                        }
+                    }
                 ],
                 "Customer": {
                     "@type": "Person",
