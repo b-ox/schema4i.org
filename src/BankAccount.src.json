@@ -19,15 +19,14 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "BankAccount": "schema:BankAccount",
             "BIC": {
-                "@id": "oo:bank-account/bic",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:BusinessIdentifierCode",
+                "@type": "schema:Text"
             },
             "IBAN": {
-                "@id": "oo:bank-account/iban",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:InternationalBankAccountNumber",
+                "@type": "schema:Text"
             },
             "Provider": {
                 "@id": "schema:provider",

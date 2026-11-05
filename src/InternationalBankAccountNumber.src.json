@@ -1,0 +1,33 @@
+{
+    "type": "InternationalBankAccountNumber",
+    "uri": "http://schema4i.org/InternationalBankAccountNumber",
+    "description": "International Bank Account Number (IBAN): a standardized international format (ISO 13616) that uniquely identifies a bank account, consisting of a country code, check digits and the national account identifier",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/BankOrCreditUnion#IBAN"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "IBAN": {
+                "@id": "s4i:IBAN",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample IBAN",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "IBAN": "DE02500240243379536601"
+        },
+        "context": {}
+    }]
+}
