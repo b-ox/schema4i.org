@@ -1,0 +1,34 @@
+{
+    "type": "ClaimFreeYears",
+    "uri": "http://schema4i.org/ClaimFreeYears",
+    "description": "Number of consecutive years without a claim, used to determine the no-claims discount level in motor insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/VehicleLiabilityCoverage#ClaimFreeYears" },
+        { "@id": "http://schema4i.org/FullyComprehensiveCoverage#ClaimFreeYears" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ClaimFreeYears": {
+                "@id": "s4i:ClaimFreeYears",
+                "@type": "schema:Integer"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ClaimFreeYears",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ClaimFreeYears": 7
+        },
+        "context": {}
+    }]
+}

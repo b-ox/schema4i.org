@@ -1,0 +1,34 @@
+{
+    "type": "NoClaimsDiscountLevel",
+    "uri": "http://schema4i.org/NoClaimsDiscountLevel",
+    "description": "Insurer-specific class or level of the no-claims discount, which determines the premium discount in motor insurance.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/VehicleLiabilityCoverage#NoClaimsDiscountLevel" },
+        { "@id": "http://schema4i.org/FullyComprehensiveCoverage#NoClaimsDiscountLevel" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NoClaimsDiscountLevel": {
+                "@id": "s4i:NoClaimsDiscountLevel",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample NoClaimsDiscountLevel",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "NoClaimsDiscountLevel": "7"
+        },
+        "context": {}
+    }]
+}

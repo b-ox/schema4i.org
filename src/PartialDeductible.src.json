@@ -1,0 +1,33 @@
+{
+    "type": "PartialDeductible",
+    "uri": "http://schema4i.org/PartialDeductible",
+    "description": "Deductible the policyholder bears in case of a claim under partially comprehensive motor insurance (Teilkasko).",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/FullyComprehensiveCoverage#PartialDeductible" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "PartialDeductible": {
+                "@id": "s4i:PartialDeductible",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample PartialDeductible",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "PartialDeductible": 150.00
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,59 @@
+{
+    "type": "Garage",
+    "uri": "http://schema4i.org/Garage",
+    "description": "A garage is a building or enclosed space used to park and protect a vehicle.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#Garage" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+        "Garage": [
+            { "@id": "http://schema.org/Boolean" },
+            { "@id": "http://schema4i.org/EnumGarageCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Garage": {
+                "@id": "s4i:Garage"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample Garage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {
+                "Garage": {
+                    "@id": "s4i:Garage",
+                    "@type": "schema:Boolean"
+                }
+            },
+            "Garage": true
+        },
+        "context": {}
+    },
+    {
+        "title": "Sample Garage with EnumGarageCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {
+                "Garage": {
+                    "@id": "s4i:Garage",
+                    "@type": "@vocab",
+                    "@context": {
+                        "@vocab": "s4i:EnumGarageCode#"
+                    }
+                }
+            },
+            "Garage": "03"
+        },
+        "context": {}
+    }]
+}

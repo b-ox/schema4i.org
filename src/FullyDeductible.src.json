@@ -1,0 +1,33 @@
+{
+    "type": "FullyDeductible",
+    "uri": "http://schema4i.org/FullyDeductible",
+    "description": "Deductible the policyholder bears in case of a claim under fully comprehensive motor insurance (Vollkasko).",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/FullyComprehensiveCoverage#FullyDeductible" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "FullyDeductible": {
+                "@id": "s4i:FullyDeductible",
+                "@type": "schema:Number"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample FullyDeductible",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "FullyDeductible": 500.00
+        },
+        "context": {}
+    }]
+}

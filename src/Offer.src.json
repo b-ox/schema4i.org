@@ -5,9 +5,6 @@
     "links": [{
         "url": "http://schema.org/Offer",
         "description": "Original Schema.org type"
-    }, {
-        "url": "http://openontology.org",
-        "description": "OpenOntology.org"
     }],
     "parents": [
         { "@id": "http://schema4i.org/Service#Offers" },
@@ -42,7 +39,6 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "Offer": "schema:Offer",
             "AcceptedPaymentMethod": {
                 "@id": "schema:acceptedPaymentMethod",

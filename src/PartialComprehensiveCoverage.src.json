@@ -2,10 +2,7 @@
     "type": "PartialComprehensiveCoverage",
     "uri": "http://schema4i.org/PartialComprehensiveCoverage",
     "description": "Provides coverage for a partial comprehensive insurance damage in the context of motor insurance.",
-    "links": [{
-        "url": "https://openontology.org",
-        "description": "OpenOntology.org"
-    }],
+    "links": [],
     "parents": [],
     "base": [
         { "@id": "http://schema4i.org/Coverage" }
@@ -16,11 +13,10 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "PartialComprehensiveCoverage": "s4i:PartialComprehensiveCoverage",
             "PartialDeductible": {
-                "@id": "oo:motor/product.motor.coverage.comprehensive.partial.deductible",
-                "@type": "oo:definitions/money"
+                "@id": "s4i:Deductible",
+                "@type": "schema:Integer"
             }
         }
     },

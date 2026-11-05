@@ -14,7 +14,6 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "Machine": "s4i:Machine",
             "Category": {
                 "@id": "schema:category",
