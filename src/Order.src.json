@@ -82,6 +82,10 @@
                 "@id": "schema:discount",
                 "@type": "schema:Number"
             },
+            "DiscountCode": {
+                "@id": "schema:discountCode",
+                "@type": "schema:Text"
+            },
             "DiscountCurrency": {
                 "@id": "schema:discountCurrency",
                 "@type": "schema:Text"
@@ -290,6 +294,7 @@
                 "TrackingNumber": "LID-4711"
             },
             "Discount": 100.00,
+            "DiscountCode": "SUMMER21",
             "DiscountCurrency": "EUR",
             "DateModified": "2020-08-24",
             "FileReferenceID": {
