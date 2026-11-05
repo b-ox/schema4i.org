@@ -1,0 +1,84 @@
+{
+    "type": "Household",
+    "uri": "http://schema4i.org/Household",
+    "description": "A household consists of one ore more people living in the same dwelling. Household members are often related or married, but may also be unrelated (e.g., roommates). Housholds represent the basic private economic unit of society.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Person#MemberOf" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Household": "s4i:Household",
+            "NumberOfMembers": {
+                "@id": "s4i:NumberOfMembers",
+                "@type": "schema:Number"
+            },
+            "Member": {
+                "@id": "schema:member",
+                "@type": "s4i:Person"
+            },
+            "NumberOfChildren": {
+                "@id": "schema:numChildren",
+                "@type": "schema:Number"
+            },
+            "NumberOfAdults": {
+                "@id": "schema:numAdults",
+                "@type": "schema:Number"
+            },
+            "Address": {
+                "@id": "schema:address",
+                "@type": "s4i:PostalAddress"
+            }
+        }
+    },
+    "playground": [
+        {
+            "title": "An example Household",
+            "tab": "tab-expanded",
+            "input": {
+                "@context": [
+                    "http://schema4i.org/Household.jsonld",
+                    "http://schema4i.org/Person.jsonld",
+                    "http://schema4i.org/PostalAddress.jsonld",
+                    "http://schema4i.org/Thing.jsonld"
+                ],
+                "@type": "Household",
+                "NumberOfMembers": 3,
+                "NumberOfChildren": 1,
+                "NumberOfAdults": 2,
+                "Member": [
+                    {
+                        "@type": "Person",
+                        "Name": "Mustermann",
+                        "GivenName": "Max"
+                    },
+                    {
+                        "@type": "Person",
+                        "Name": "Mustermann",
+                        "GivenName": "Martha"
+                    },
+                    {
+                        "@type": "Person",
+                        "Name": "Mustermann",
+                        "GivenName": "Mary"
+                    }
+                ],
+                "Address": {
+                    "@type": "PostalAddress",
+                    "StreetAddress": "Musterstraße 1",
+                    "PostalCode": "12345",
+                    "AddressLocality": "Musterstadt",
+                    "AddressCountry": "D"
+                }
+            },
+            "context": {}
+        }
+    ]
+}

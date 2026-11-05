@@ -10,7 +10,8 @@
         { "@id": "http://schema4i.org/Person#Address" },
         { "@id": "http://schema4i.org/Organization#Address" },
         { "@id": "http://schema4i.org/Order#BillingAddress" },
-        { "@id": "http://schema4i.org/EnvironmentalRiskFactor#Location" }
+        { "@id": "http://schema4i.org/EnvironmentalRiskFactor#Location" },
+        { "@id": "http://schema4i.org/Household#Address" }
     ],
     "base": [
         { "@id": "http://schema4i.org/ContactPoint" }
