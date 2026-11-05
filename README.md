@@ -28,7 +28,7 @@ Please also check out the [Schema4i.org Wiki](https://github.com/b-ox/schema4i.o
 
 ## Basic principle
 
-We use things that are already defined elsewhere to prevent reinventing the wheel. Our base vocabulary is [Schema.org](https://schema.org). We always search there for objects (types) like [schema.org/Person](https://schema.org/Person), attributes (properties) like [schema.org/givenName](https://schema.org/givenName)) or data types like [schema.org/Text](https://schema.org/Text)) before we add new things into our vocabulary. We also refer to parts of the [OpenOntology](https://openontology.org).
+We use things that are already defined elsewhere to prevent reinventing the wheel. Our base vocabulary is [Schema.org](https://schema.org). We always search there for objects (types) like [schema.org/Person](https://schema.org/Person), attributes (properties) like [schema.org/givenName](https://schema.org/givenName)) or data types like [schema.org/Text](https://schema.org/Text)) before we add new things into our vocabulary.
 
 Only those objects, attributes oder data types are "part of the Schema for insurances" that have been declared in our JSON-LD context files. Of cause you can use everything else in your data exchange by just adding an additional context to the JSON-LD document.
 
