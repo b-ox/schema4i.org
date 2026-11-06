@@ -2,10 +2,7 @@
     "type": "LifeInsuranceProduct",
     "uri": "http://schema4i.org/LifeInsuranceProduct",
     "description": "A life insurance product like a pension.",
-    "links": [{
-        "url": "https://openontology.org",
-        "description": "OpenOntology.org"
-    }],
+    "links": [],
     "parents": [],
     "base": [
         { "@id": "http://schema4i.org/InsuranceProduct" }

@@ -1,0 +1,77 @@
+{
+    "type": "RegistrationArea",
+    "uri": "http://schema4i.org/RegistrationArea",
+    "description": "A registration area is the country or region in which a vehicle is officially registered.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#RegistrationArea" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {
+        "RegistrationArea": [
+            { "@id": "http://schema.org/Text" },
+            { "@id": "http://schema4i.org/EnumCountryCode" },
+            { "@id": "http://schema4i.org/EnumISO3166alpha2CountryCode" }
+        ]
+    },
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "RegistrationArea": {
+                "@id": "s4i:RegistrationArea"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample RegistrationArea",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {
+                "RegistrationArea": {
+                    "@id": "s4i:RegistrationArea",
+                    "@type": "schema:Text"
+                }
+            },
+            "RegistrationArea": "Germany"
+        },
+        "context": {}
+    },
+    {
+        "title": "Sample RegistrationArea with EnumCountryCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {
+                "RegistrationArea": {
+                    "@id": "s4i:RegistrationArea",
+                    "@type": "@vocab",
+                    "@context": {
+                        "@vocab": "s4i:EnumCountryCode#"
+                    }
+                }
+            },
+            "RegistrationArea": "D"
+        },
+        "context": {}
+    },
+    {
+        "title": "Sample RegistrationArea with EnumISO3166alpha2CountryCode",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {
+                "RegistrationArea": {
+                    "@id": "s4i:RegistrationArea",
+                    "@type": "@vocab",
+                    "@context": {
+                        "@vocab": "s4i:EnumISO3166alpha2CountryCode#"
+                    }
+                }
+            },
+            "RegistrationArea": "DE"
+        },
+        "context": {}
+    }]
+}

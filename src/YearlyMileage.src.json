@@ -1,0 +1,33 @@
+{
+    "type": "YearlyMileage",
+    "uri": "http://schema4i.org/YearlyMileage",
+    "description": "The estimated annual mileage of a vehicle in kilometers.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#YearlyMileage" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ManufacturerKeyNumber": {
+                "@id": "s4i:YearlyMileage",
+                "@type": "schema:Integer"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample YearlyMileage",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "YearlyMileage": 35000
+        },
+        "context": {}
+    }]
+}

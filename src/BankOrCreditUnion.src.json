@@ -16,11 +16,10 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "BankOrCreditUnion": "schema:BankOrCreditUnion",
             "BIC": {
-                "@id": "oo:bank-account/bic",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:BusinessIdentifierCode",
+                "@type": "schema:Text"
             },
             "NationalBankCode": {
                 "@id": "s4i:NationalBankCode",

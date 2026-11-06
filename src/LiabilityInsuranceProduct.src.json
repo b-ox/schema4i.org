@@ -2,10 +2,7 @@
     "type": "LiabilityInsuranceProduct",
     "uri": "http://schema4i.org/LiabilityInsuranceProduct",
     "description": "An insurance product protecting against personal or commercial liability risks.",
-    "links": [{
-        "url": "https://openontology.org",
-        "description": "OpenOntology.org"
-    }],
+    "links": [],
     "parents": [],
     "base": [
         { "@id": "http://schema4i.org/InsuranceProduct" }

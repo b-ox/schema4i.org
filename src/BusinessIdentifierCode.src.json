@@ -1,0 +1,33 @@
+{
+    "type": "BusinessIdentifierCode",
+    "uri": "http://schema4i.org/BusinessIdentifierCode",
+    "description": "Business Identifier Code (BIC, also known as SWIFT code): a standardized international code (ISO 9362) that uniquely identifies a bank or financial institution, consisting of 8 or 11 characters (institution code, country code, location code and optional branch code)",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/BankOrCreditUnion#BIC"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "BIC": {
+                "@id": "s4i:BusinessIdentifierCode",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample BIC",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "BIC": "DUSSDEDDXXX"
+        },
+        "context": {}
+    }]
+}

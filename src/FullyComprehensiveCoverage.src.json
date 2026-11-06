@@ -2,10 +2,7 @@
     "type": "FullyComprehensiveCoverage",
     "uri": "http://schema4i.org/FullyComprehensiveCoverage",
     "description": "Provides coverage for a fully comprehensive insurance damage in the context of motor insurance.",
-    "links": [{
-        "url": "https://openontology.org",
-        "description": "OpenOntology.org"
-    }],
+    "links": [],
     "parents": [],
     "base": [
         { "@id": "http://schema4i.org/Coverage" }
@@ -16,27 +13,26 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "FullyComprehensiveCoverage": "s4i:FullyComprehensiveCoverage",
             "ClaimFreeYears": {
-                "@id": "oo:motor/product.motor.no-claims-discount-comprehensive.claim-free-years",
-                "@type": "oo:definitions/nonnegative-integer"
+                "@id": "s4i:ClaimFreeYears",
+                "@type": "schema:Integer"
             },
             "FullyDeductible": {
-                "@id": "oo:motor/product.motor.coverage.comprehensive.fully.deductible",
-                "@type": "oo:definitions/money"
+                "@id": "s4i:FullyDeductible",
+                "@type": "schema:Number"
             },
             "PartialDeductible": {
-                "@id": "oo:motor/product.motor.coverage.comprehensive.partial.deductible",
-                "@type": "oo:definitions/money"
+                "@id": "s4i:PartialDeductible",
+                "@type": "schema:Number"
             },
             "NoClaimsDiscount": {
                 "@id": "s4i:NoClaimsDiscount",
                 "@type": "schema:Number"
             },
             "NoClaimsDiscountLevel": {
-                "@id": "oo:motor/product.motor.no-claims-discount-comprehensive.level",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:NoClaimsDiscountLevel",
+                "@type": "schema:Text"
             }
         }
     },

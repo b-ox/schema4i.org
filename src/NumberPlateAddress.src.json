@@ -27,7 +27,8 @@
                 "http://schema4i.org/PostalAddress.jsonld",
                 "http://schema4i.org/NumberPlateAddress.jsonld"
             ],
-            "@type": "NumberPlateAddress"
+            "@type": "NumberPlateAddress",
+             "AddressCountry": "D"
         },
         "context": {}
     }]

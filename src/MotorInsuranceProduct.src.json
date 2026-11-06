@@ -2,10 +2,7 @@
     "type": "MotorInsuranceProduct",
     "uri": "http://schema4i.org/MotorInsuranceProduct",
     "description": "Motor insurance for cars, motorbikes, trucks, quads, etc.",
-    "links": [{
-        "url": "https://openontology.org",
-        "description": "OpenOntology.org"
-    }],
+    "links": [],
     "parents": [],
     "base": [
         { "@id": "http://schema4i.org/InsuranceProduct" }
@@ -35,9 +32,8 @@
                 "http://schema4i.org/VehicleLiabilityCoverage.jsonld",
                 "http://schema4i.org/FullyComprehensiveCoverage.jsonld",
                 {
-                    "oo": "https://schema.openontology.org/",
                     "SumInsured": {
-                        "@id": "oo:motor/product.motor.coverage.liability.sum-insured",
+                        "@id": "s4i:SumInsured",
                         "@type": "@vocab",
                         "@context": {
                             "@vocab": "s4i:EnumMotorInsuranceLiabilityCoverageCode#"

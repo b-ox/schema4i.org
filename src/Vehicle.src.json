@@ -5,9 +5,6 @@
     "links": [{
         "url": "http://schema.org/Vehicle",
         "description": "Original Schema.org type"
-    }, {
-        "url": "https://schema.openontology.org/vehicle",
-        "description": "OpenOntology.org type"
     }],
     "parents": [
         { "@id": "http://schema4i.org/Car" },
@@ -28,17 +25,13 @@
     ],
     "multipletypes": {
         "Garage": [
-            { "@id": "https://schema.openontology.org/definitions/boolean" },
+            { "@id": "http://schema.org/Boolean" },
             { "@id": "http://schema4i.org/EnumGarageCode" }
         ],
         "RegistrationArea": [
-            { "@id": "https://schema.openontology.org/definitions/string" },
+            { "@id": "http://schema.org/Text" },
             { "@id": "http://schema4i.org/EnumCountryCode" },
             { "@id": "http://schema4i.org/EnumISO3166alpha2CountryCode" }
-        ],
-        "VehicleType": [
-            { "@id": "https://schema.openontology.org/definitions/vehicle-type" },
-            { "@id": "http://schema4i.org/EnumVehicleRiskCode" }
         ]
     },
     "context": {
@@ -46,7 +39,6 @@
             "@version": 1.1,
             "s4i": "http://schema4i.org/",
             "schema": "http://schema.org/",
-            "oo": "https://schema.openontology.org/",
             "Vehicle": "schema:Vehicle",
             "DateHolderFirstRegistered": {
                 "@id": "s4i:DateHolderFirstRegistered",
@@ -61,27 +53,27 @@
                 "@type": "s4i:Person"
             },
             "Garage": {
-                "@id": "oo:vehicle/garage"
+                "@id": "s4i:Garage"
             },
             "Manufacturer": {
                 "@id": "schema:manufacturer",
                 "@type": "s4i:Organization"
             },
             "ManufacturerKeyNumber": {
-                "@id": "oo:vehicle/hsn",
-                "@type": "oo:definitions/string"
+               "@id": "s4i:ManufacturerKeyNumber",
+                "@type": "schema:Text"
             },
             "MileageFromOdometer": {
                 "@id": "schema:mileageFromOdometer",
                 "@type": "s4i:QuantitativeValue"
             },
             "ModelKeyNumber": {
-                "@id": "oo:vehicle/tsn",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:ModelKeyNumber",
+                "@type": "schema:Text"
             },
             "NumberPlate": {
-                "@id": "oo:vehicle/number-plate",
-                "@type": "oo:definitions/string"
+                "@id": "s4i:NumberPlate",
+                "@type": "schema:Text"
             },
             "NumberPlateAddress": {
                 "@id": "s4i:NumberPlateAddress",
@@ -95,7 +87,7 @@
                 }
             },
             "RegistrationArea": {
-                "@id": "oo:vehicle/registration-area"
+                "@id": "s4i:RegistrationArea"
             },
             "RiskCode": {
                 "@id": "s4i:VehicleRiskCode",
@@ -116,8 +108,8 @@
                 "@type": "schema:Text"
             },
             "YearlyMileage": {
-                "@id": "oo:motor/object.vehicle.yearly-mileage",
-                "@type": "oo:definitions/nonnegative-integer"
+                "@id": "schema:YearlyMileage",
+                "@type": "schema:Integer"
             }
         }
     },
@@ -164,7 +156,10 @@
             "Model": "",
             "ModelKeyNumber": "AJM",
             "NumberPlate": "D-TX 718",
-            "NumberPlateAddress": {},
+            "NumberPlateAddress": {
+                "@type": "NumberPlateAddress",
+                "AddressCountry": "D"
+            },
             "Owner": {
                 "@type": "Person",
                 "Name": "Mustermann",

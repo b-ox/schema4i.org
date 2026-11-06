@@ -1,0 +1,33 @@
+{
+    "type": "NumberPlate",
+    "uri": "http://schema4i.org/NumberPlate",
+    "description": "A number plate is an official registration mark attached to a vehicle, consisting of letters and digits that identify the vehicle within its registration area.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#NumberPlate" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "NumberPlate": {
+                "@id": "s4i:NumberPlate",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample NumberPlate",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "NumberPlate": "D-TX 718"
+        },
+        "context": {}
+    }]
+}

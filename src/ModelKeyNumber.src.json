@@ -1,0 +1,33 @@
+{
+    "type": "ModelKeyNumber",
+    "uri": "http://schema4i.org/ModelKeyNumber",
+    "description": "The German vehicle type code (Typschlüsselnummer) used to identify the model and type of a vehicle.",
+    "links": [],
+    "parents": [
+        { "@id": "http://schema4i.org/Vehicle#ModelKeyNumber" }
+    ],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "ModelKeyNumber": {
+                "@id": "s4i:ModelKeyNumber",
+                "@type": "schema:Text"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample ModelKeyNumber",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "ManufacturerCode": "AJM"
+        },
+        "context": {}
+    }]
+}
