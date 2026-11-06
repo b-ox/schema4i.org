@@ -108,7 +108,7 @@
                 "@type": "schema:Text"
             },
             "YearlyMileage": {
-                "@id": "schema:YearlyMileage",
+                "@id": "s4i:YearlyMileage",
                 "@type": "schema:Integer"
             }
         }
