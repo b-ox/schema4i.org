@@ -171,6 +171,14 @@
             "LifeCycle": {
                 "@id": "s4i:LifeCycle",
                 "@type": "s4i:HumanLifeCycleEvent"
+            },
+            "Height": {
+                "@id": "schema:height",
+                "@type": "s4i:QuantitativeValue"
+            },
+            "Weight": {
+                "@id": "schema:weight",
+                "@type": "s4i:QuantitativeValue"
             }
         }
     },
@@ -359,7 +367,17 @@
             ],
             "VATDeductible": false,
             "VATId": "123456789",
-            "WorksFor": {}
+            "WorksFor": {},
+            "Height": {
+                "@type": "QuantitativeValue",
+                "Value": 180,
+                "UnitCode": "CM"
+            },
+            "Weight": {
+                "@type": "QuantitativeValue",
+                "Value": 75,
+                "UnitCode": "KG"
+            }
         },
         "context": {}
     }, {
