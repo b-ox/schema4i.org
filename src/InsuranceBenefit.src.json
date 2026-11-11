@@ -57,6 +57,10 @@
             "VATincluded": {
                 "@id": "s4i:VATincluded",
                 "@type": "schema:Boolean"
+            },
+            "WaitingPeriod": {
+                "@id": "s4i:WaitingPeriod",
+                "@type": "schema:Duration"
             }
         }
     },
@@ -138,7 +142,8 @@
                 }
             ],
             "@type": "InsuranceBenefit",
-            "BenefitType": "01"
+            "BenefitType": "01",
+            "WaitingPeriod": "P1Y"
         },
         "context": {}
     }, {
