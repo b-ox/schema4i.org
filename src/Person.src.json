@@ -95,6 +95,10 @@
                 "@id": "schema:givenName",
                 "@type": "schema:Text"
             },
+            "HasEducation": {
+                "@id": "s4i:HasEducation",
+                "@type": "s4i:Education"
+            },
             "HasOccupation": {
                 "@id": "schema:hasOccupation",
                 "@type": "s4i:Occupation"
@@ -233,7 +237,11 @@
             "HasOccupation": {
                 "@type": "Occupation",
                 "Name": "CEO"
-            },        
+            },
+            "HasEducation": {
+                "@type": "Education",
+                "EducationalLevel": "06"
+            },
             "HonorificPrefix": "Dr.",
             "KnowsAbout": ["Insurances"],
             "MemberOf": {},
