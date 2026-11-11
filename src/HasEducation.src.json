@@ -1,0 +1,38 @@
+{
+    "type": "HasEducation",
+    "uri": "http://schema4i.org/HasEducation",
+    "description": "Indicates the educational background of a person.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Person#HasEducation"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Property" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "HasEducation": {
+                "@id": "s4i:HasEducation",
+                "@type": "s4i:Education"
+            }
+        }
+    },
+    "playground": [{
+        "title": "Sample HasEducation",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": {},
+            "HasEducation": {
+                "@type": "Education",
+                "EducationalLevel": "06",
+                "StartDate": "2010-06-01",
+                "EndDate": "2023-06-01"
+            }
+        },
+        "context": {}
+    }]
+}

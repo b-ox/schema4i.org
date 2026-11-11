@@ -1,0 +1,37 @@
+{
+    "type": "EnumEducationLevelCode_DE",
+    "uri": "http://schema4i.org/EnumEducationLevelCode_DE",
+    "description": "Ein Code der den akademischen Bildungsgrad einer formalen Ausbildung beschreibt",
+    "links": [{
+        "url": "http://schema4i.org/EnumEducationLevelCode",
+        "description": "Englische Übersetzung"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "Kein Abschluss": "s4i:EnumEducationLevelCode#01",
+            "Hauptschulabschluss": "s4i:EnumEducationLevelCode#02",
+            "Qualifizierter Hauptschulabschluss": "s4i:EnumEducationLevelCode#03",
+            "Mittlere Reife": "s4i:EnumEducationLevelCode#04",
+            "Fachabitur": "s4i:EnumEducationLevelCode#05",
+            "Abitur": "s4i:EnumEducationLevelCode#06",
+            "Bachelor (Fachhochschule)": "s4i:EnumEducationLevelCode#07",
+            "Bachelor (Universität)": "s4i:EnumEducationLevelCode#08",
+            "Master (Fachhochschule)": "s4i:EnumEducationLevelCode#09",
+            "Master (Universität)": "s4i:EnumEducationLevelCode#10",
+            "Diplom (Fachhochschule)": "s4i:EnumEducationLevelCode#11",
+            "Diplom, Magister": "s4i:EnumEducationLevelCode#12",
+            "Staatsexamen (Universität)": "s4i:EnumEducationLevelCode#13",
+            "Promotion": "s4i:EnumEducationLevelCode#14",
+            "Techniker": "s4i:EnumEducationLevelCode#15",
+            "Meister": "s4i:EnumEducationLevelCode#16",
+            "Fachschule": "s4i:EnumEducationLevelCode#17"
+        }
+    }
+}

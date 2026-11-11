@@ -1,0 +1,60 @@
+{
+    "type": "Education",
+    "uri": "http://schema4i.org/Education",
+    "description": "An education represents the formal educational background of an individual. This includes degrees, certifications, and other academic achievements.",
+    "links": [],
+    "parents": [{
+        "@id": "http://schema4i.org/Person#HasEducation"
+    }],
+    "base": [
+        { "@id": "http://schema4i.org/Thing" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "schema": "http://schema.org/",
+            "Education": "s4i:Education",
+            "EducationalLevel": {
+                "@id": "schema:educationalLevel",
+                "@type": "@vocab",
+                "@context": {
+                    "@vocab": "s4i:EnumEducationLevelCode"
+                }
+            },
+            "StartDate": {
+                "@id": "schema:startDate",
+                "@type": "schema:Date"
+            },
+            "EndDate": {
+                "@id": "schema:endDate",
+                "@type": "schema:Date"
+            }
+        }
+    },
+    "playground": [{
+        "title": "A maximum Education",
+        "tab": "tab-expanded",
+        "input": {
+            "@context": [
+                "http://schema4i.org/Thing.jsonld",
+                "http://schema4i.org/Education.jsonld",
+                {
+                    "EducationalLevel": {
+                        "@id": "schema:educationalLevel",
+                        "@type": "@vocab",
+                        "@context": {
+                            "@vocab": "s4i:EnumEducationLevelCode#"
+                        }
+                    }
+                }
+            ],
+            "@type": "Education",
+            "EducationalLevel": "06",
+            "StartDate": "2010-06-01",
+            "EndDate": "2023-06-01"
+        },
+        "context": {}
+    }]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "EnumEducationLevelCode",
+    "uri": "http://schema4i.org/EnumEducationLevelCode",
+    "description": "Code describing the academic level of a formal education",
+    "links": [{
+        "url": "http://schema4i.org/EnumEducationLevelCode_DE",
+        "description": "German translation"
+    }],
+    "parents": [],
+    "base": [
+        { "@id": "http://schema4i.org/Enumeration" }
+    ],
+    "multipletypes": {},
+    "context": {
+        "@context": {
+            "@version": 1.1,
+            "s4i": "http://schema4i.org/",
+            "No degree": "s4i:EnumEducationLevelCode#01",
+            "Secondard education": "s4i:EnumEducationLevelCode#02",
+            "Qualified secondary education": "s4i:EnumEducationLevelCode#03",
+            "Mittlere Reife (higher secondary education)": "s4i:EnumEducationLevelCode#04",
+            "Fachabitur (specialized higher secondary education)": "s4i:EnumEducationLevelCode#05",
+            "Abitur (Matura)": "s4i:EnumEducationLevelCode#06",
+            "Bachelor (vocational university)": "s4i:EnumEducationLevelCode#07",
+            "Bachelor (university)": "s4i:EnumEducationLevelCode#08",
+            "Master (vocational university)": "s4i:EnumEducationLevelCode#09",
+            "Master (university)": "s4i:EnumEducationLevelCode#10",
+            "Diploma (vocational university)": "s4i:EnumEducationLevelCode#11",
+            "Diploma, Magister degree": "s4i:EnumEducationLevelCode#12",
+            "State exam (university)": "s4i:EnumEducationLevelCode#13",
+            "Doctoral degree": "s4i:EnumEducationLevelCode#14",
+            "Technical degree": "s4i:EnumEducationLevelCode#15",
+            "Master (craftsmen)": "s4i:EnumEducationLevelCode#16",
+            "Specialized school": "s4i:EnumEducationLevelCode#17"
+        }
+    }
+}

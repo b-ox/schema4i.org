@@ -95,6 +95,10 @@
                 "@id": "schema:givenName",
                 "@type": "schema:Text"
             },
+            "HasEducation": {
+                "@id": "s4i:HasEducation",
+                "@type": "s4i:Education"
+            },
             "HasOccupation": {
                 "@id": "schema:hasOccupation",
                 "@type": "s4i:Occupation"
@@ -171,6 +175,14 @@
             "LifeCycle": {
                 "@id": "s4i:LifeCycle",
                 "@type": "s4i:HumanLifeCycleEvent"
+            },
+            "Height": {
+                "@id": "schema:height",
+                "@type": "s4i:QuantitativeValue"
+            },
+            "Weight": {
+                "@id": "schema:weight",
+                "@type": "s4i:QuantitativeValue"
             }
         }
     },
@@ -225,7 +237,11 @@
             "HasOccupation": {
                 "@type": "Occupation",
                 "Name": "CEO"
-            },        
+            },
+            "HasEducation": {
+                "@type": "Education",
+                "EducationalLevel": "06"
+            },
             "HonorificPrefix": "Dr.",
             "KnowsAbout": ["Insurances"],
             "MemberOf": {},
@@ -359,7 +375,17 @@
             ],
             "VATDeductible": false,
             "VATId": "123456789",
-            "WorksFor": {}
+            "WorksFor": {},
+            "Height": {
+                "@type": "QuantitativeValue",
+                "Value": 180,
+                "UnitCode": "CM"
+            },
+            "Weight": {
+                "@type": "QuantitativeValue",
+                "Value": 75,
+                "UnitCode": "KG"
+            }
         },
         "context": {}
     }, {
