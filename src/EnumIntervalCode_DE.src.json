@@ -28,7 +28,8 @@
             "einmalig": "s4i:EnumIntervalCode#6",
             "täglich": "s4i:EnumIntervalCode#7",
             "monatlich": "s4i:EnumIntervalCode#8",
-            "niemals": "s4i:EnumIntervalCode#9"
+            "niemals": "s4i:EnumIntervalCode#9",
+            "zweijährig": "s4i:EnumIntervalCode#A1"
         }
     }
 }

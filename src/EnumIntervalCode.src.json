@@ -28,7 +28,8 @@
             "one time": "s4i:EnumIntervalCode#6",
             "daily": "s4i:EnumIntervalCode#7",
             "monthly": "s4i:EnumIntervalCode#8",
-            "never": "s4i:EnumIntervalCode#9"
+            "never": "s4i:EnumIntervalCode#9",
+            "biannual": "s4i:EnumIntervalCode#A1"
         }
     }
 }
