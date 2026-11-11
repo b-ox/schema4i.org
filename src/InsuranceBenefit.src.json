@@ -61,6 +61,10 @@
             "WaitingPeriod": {
                 "@id": "s4i:WaitingPeriod",
                 "@type": "schema:Duration"
+            },
+            "Duration": {
+                "@id": "schema:duration",
+                "@type": "schema:Duration"
             }
         }
     },
@@ -143,7 +147,8 @@
             ],
             "@type": "InsuranceBenefit",
             "BenefitType": "01",
-            "WaitingPeriod": "P1Y"
+            "WaitingPeriod": "P1Y",
+            "Duration": "P20Y"
         },
         "context": {}
     }, {
